@@ -1,0 +1,11 @@
+#T[°C]  #rho[Kg/m³]
+21.00 0.99799e+03 ## Geschke
+30.00 0.99565e+03 ## Geschke
+33.00 0.99470e+03 ## Internet
+37.00 0.99333e+03 ## Internet
+41.00 0.99183e+03 ## Internet
+45.00 0.9902e+03  ## Geschke
+50.00 0.9880e+03  ## Geschke
+55.00 0.9857e+03  ## Geschke
+60.00 0.9832e+03  ## Geschke
+69.00 0.97833e+03 ## Internet

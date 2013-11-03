@@ -1,0 +1,2 @@
+# Elastzitätsmodul[N/m²] # Elastizitätsmodul_Unsicherheit[N/m²]
+  21.0e+10                 0.05e+10

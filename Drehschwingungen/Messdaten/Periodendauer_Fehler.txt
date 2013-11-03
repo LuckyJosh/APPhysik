@@ -1,0 +1,2 @@
+# Periodendauer_Unsicherheit[s]
+  0.001

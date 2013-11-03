@@ -1,0 +1,2 @@
+#l_arm[mm] #l_bein[mm] #l_torso[mm] #h_hopf[mm]
+134         147.4       98.1          75.5 

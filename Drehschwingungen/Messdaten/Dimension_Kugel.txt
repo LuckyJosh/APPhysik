@@ -1,0 +1,2 @@
+# Masse [g] # Massen_Unsicherheit[%] # Durchmesser[mm] # Massen_Unsicherheit[%] # Trägheitsmoment_Halterung[gcm²] 
+  512.5       0.04                     50.76             0.007                    22.5

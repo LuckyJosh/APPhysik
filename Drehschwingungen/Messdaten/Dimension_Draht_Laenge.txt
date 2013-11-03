@@ -1,0 +1,2 @@
+# Länge[cm] # Länge_Unsicherheit[cm]
+  62.7        0.1
