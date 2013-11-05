@@ -148,11 +148,11 @@ I_err *= 1e-02  # Prozent
 
   # Spulenstrom mit Fehler
 uI = ufloat(I, I * I_err)  # A
-
+print("Spulenstrom I:", uI)
   # Spulenmagentfeld mit Fehler
 B = helmholtz(N, uI, R)
 uB = ufloat(unp.nominal_values(B), unp.std_devs(B))  # T
-
+print("Magnetfeld B:", uB)
 
  ## Verarbeitung der Periodendauer
   # Lade Periodendauer T_m
@@ -170,8 +170,8 @@ uT_m_avr = np.mean(uT_m)
 uT_m_avr = ufloat(unp.nominal_values(uT_m_avr), unp.std_devs(uT_m_avr))
 
   ## Berechnung der magnetischen Moments um
-um = ((uI_ges)/(uB * uT_m_avr**2) -
-     ((const.pi * uG * (uR_D_avr)**4)/(2 * uL_D))/(uB))
+um = (4 * const.pi**2 * (uI_ges)/(uB * uT_m_avr**2) -
+     ((const.pi * uG * (uR_D_avr)**4)/(2 * uL_D*uB)))
 print("Magnetisches Moment m:", um)
 
 

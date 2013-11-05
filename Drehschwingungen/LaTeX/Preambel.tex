@@ -8,7 +8,7 @@
 
 \usepackage[ngerman]{babel}                                                         % Deutsche Rechtschreibung
 \usepackage[ngerman]{varioref}                                                      % Versieht Referenzen mit Bezeichnung des Objektes
-%\usepackage{lmodern}                                                                % Empfohlener T1-Font für deutsche Texte
+\usepackage{lmodern}                                                                % Empfohlener T1-Font für deutsche Texte
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -53,6 +53,7 @@
 \usepackage{textcomp}                                                               % Fügt extra Symbole hinzu   
 \usepackage[b]{esvect}                                                              % Fügt verbesserte Vektorpfeile hinzu \vv{<Vektorname>} 
 
+\usepackage{array}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{graphicx}                                                               % Ermöglicht das Einbinden Grafiken '\includegraphics[<Optionen>]{<Grafikpfad>}' und Veränderungen im Text, wie z.B. Schriftfarbe 
@@ -80,6 +81,8 @@
 %\setlength{\footnotesep}{2cm}
 \setlength{\skip\footins}{2cm}
 %\setlength{\itemsep}{7.5pt}
+
+\newcolumntype{C}{ >{\centering\arraybackslash} m{4cm}}
 
 
 \newcommand{\intd}[1]{\,\mathrm{d}#1}
