@@ -8,7 +8,7 @@
 
 \usepackage[ngerman]{babel}                                                         % Deutsche Rechtschreibung
 \usepackage[ngerman]{varioref}                                                      % Versieht Referenzen mit Bezeichnung des Objektes
-\usepackage{lmodern}                                                                % Empfohlener T1-Font für deutsche Texte
+%\usepackage{lmodern}                                                                % Empfohlener T1-Font für deutsche Texte
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -48,7 +48,8 @@
 \usepackage{siunitx}                                                                % Stellt eine verbesserte Formatierung von größen mit Einheiten zur Verfügung  
 \sisetup{locale = DE,prefixes-as-symbols = false}                                   % Setzt das 'Mal'-Zeichen auf \cdot und das Dezimaltrennzeichen auf ',' 
                                                                                     % und ersetzt Prefixe wie '\kilo' mit der entsprechenden Zehnerpotenz
-                                                                                    
+\sisetup{separate-uncertainty = true}                                               % Ermöglicht vereinfachtes eintragen von Unsicherheiten '42.6(4)' --> '42.6 +/- 0.4'                                                                                 
+
 \usepackage{textcomp}                                                               % Fügt extra Symbole hinzu   
 \usepackage[b]{esvect}                                                              % Fügt verbesserte Vektorpfeile hinzu \vv{<Vektorname>} 
 

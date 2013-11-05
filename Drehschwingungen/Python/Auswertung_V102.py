@@ -51,7 +51,9 @@ uI_K = ufloat(unp.nominal_values(I_K), unp.std_devs(I_K))  # kgm²
   # Gesamtträgheitsmoment mit Fehler
 I_ges = uI_K + I_H
 uI_ges = ufloat(unp.nominal_values(I_ges), unp.std_devs(I_ges))  # kgm²
-print(uI_ges, uI_K, I_H)
+print("Trägheitsmoment Kugel:", uI_K)
+print("Trägheitsmoment gesamt:", uI_ges)
+
 
 
  ## Bestimmung der gemittelten Periodendauer uT_avr
@@ -68,7 +70,7 @@ uT = unp.uarray(T, len(T)*[T_err])
   # gemittelte Periodendauer mit Fehler
 uT_avr = np.mean(uT)
 uT_avr = ufloat(unp.nominal_values(uT_avr), unp.std_devs(uT_avr))
-
+print("Mittlere Periodendauer ohne B:", uT_avr)
  ## Verarbeitung der Drahtdaten
 
   # Lade Drahtdurchmesser
@@ -88,6 +90,9 @@ uD_D = unp.uarray(D_D, len(D_D)*[D_D_err])
 uD_D_avr = np.mean(uD_D)
   # abweichung des Mittelwertes
 uD_D_avr = ufloat(unp.nominal_values(uD_D_avr), unp.std_devs(uD_D_avr))  # m
+uR_D_avr = uD_D_avr / 2
+uR_D_avr = ufloat(unp.nominal_values(uR_D_avr), unp.std_devs(uR_D_avr))
+print("Mittlerer Drahtradius:", uR_D_avr)
 
   # Lade Drahtlänge(+ Fehler)
 L_D, L_D_err = np.loadtxt("../Messdaten/Dimension_Draht_Laenge.txt",
@@ -102,7 +107,7 @@ uL_D = ufloat(L_D, L_D_err)  # m
 
 
  ## Bestimmung des Torsionsmoduls uG
-uG = (8 * const.pi * uL_D)/(uT_avr**2 * (uD_D_avr/2)**4) * uI_ges
+uG = (8 * const.pi * uL_D)/(uT_avr**2 * (uR_D_avr)**4) * uI_ges
 print("Torsionsmodul G:", uG)
 
 
@@ -166,7 +171,7 @@ uT_m_avr = ufloat(unp.nominal_values(uT_m_avr), unp.std_devs(uT_m_avr))
 
   ## Berechnung der magnetischen Moments um
 um = ((uI_ges)/(uB * uT_m_avr**2) -
-     ((const.pi * uG * (uD_D_avr / 2)**4)/(2 * uL_D))/(uB))
+     ((const.pi * uG * (uR_D_avr)**4)/(2 * uL_D))/(uB))
 print("Magnetisches Moment m:", um)
 
 
