@@ -20,15 +20,15 @@
 \renewcommand{\headrulewidth}{.5pt}                                                 % Dicke des Kopfzeilentrennstrichs
 \renewcommand{\footrulewidth}{.5pt}                                                 % Dicke des Fußzeilentrennstrichs
 
-\lhead{\textbf{}}                                                                   % Angabe Links-Oben
+\lhead{\textbf{\VNr\ \VN}}                                                                   % Angabe Links-Oben
 %\chead{}                                                                           % Angabe Mitte-Oben
-\rhead{\today}                                                                      % Angabe Rechts-Oben
+\rhead{\VD}                                                                      % Angabe Rechts-Oben
 %\lfoot{}                                                                           % Angabe Links-Unten
 \cfoot{\textbf{\thepage\ von \pageref{LastPage}}}                                   % Angabe Mitte-Unten
-\rfoot{}                                                                            % Angabe Rechts-Unten
+\rfoot{Johannes Schlüter\\ Joshua Luckey}                                           % Angabe Rechts-Unten
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\usepackage{scrdate}
 \usepackage{lastpage}                                                               % Macht die letzte Seitenzahl referenzierbar mit \pageref{Lastpage}
 %\usepackage{natbib}                                                                % Bessere BibTeX-Einträge
 %\usepackage{hyperref}                                                              % Ermöglicht Verlinkungen im Dokument
@@ -41,7 +41,7 @@
 \usepackage{amsfonts}                                                               % Fügt Font für Mathematikumgebung hinzu
 
 \usepackage{empheq}                                                                 % Stellt verbesserte Gleichungsumgebung bereit \begin{empheq}[<Aussehen>]{<Umgebungstyp>} ... \end{empheq}
-
+%test
 %\usepackage[version=3]{mhchem}                                                     % Stellt chemische Struktur und Summenformeln bereit \ce{<Summenformel>}
 %\usepackage{chemfig}                                                               % Stellt chemische Valenzstrichformeln fürganze Moleküle bereit \chemfig{<Molekül-Aufbau>}
 
@@ -85,3 +85,7 @@
 \newcommand{\im}{\ensuremath{\textsl{i}}}
 \newcommand{\e}{\ensuremath{\textsl{e\;\!}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\VNr}{V102}                                                             % Makro für die aktuelle Versuchsnummer
+\newcommand{\VN}{Drehschwingungen}                                                  % Makro für den aktuellen Versuchsnamen
+\newcommand{\VD}{31. Oktober 2013}                                                  % Makro für das Versuchsdatum
