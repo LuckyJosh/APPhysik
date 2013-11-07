@@ -4,8 +4,8 @@
 
   \section{Einleitung}
     Im Versuch Drehschwingungen V102 sind verschiedene Messungen durchzuführen und mit Hilfe 
-    derer die elastischen Konstanten eines Material zu bestimmen. Hierbei kann eine beliebige Metalllegierung 
-    untersucht werden - In diesem Fall ein Kupferdraht. 
+    derer die elastischen Konstanten eines Material zu bestimmen. Hierbei kann ein beliebiges Material 
+    untersucht werden - In diesem Fall ein Metalldraht. 
     Außerdem wird in einem zweiten Messgang noch das magnetische Moment eines Magneten durch 
     Drehschwingungen unter Einfluss eines homogenen Magnetfeldes, welches mit Hilfe von Helmholtzspulen erzeugt wird, untersucht.
 
@@ -38,7 +38,7 @@
     Der Zusammenhang dieser vier Größen lässt mit den Gleichungen \ref{EG} und \ref{EQ} beschreiben.
     
     \begin{empheq}{align}
-      E &= 2G(\mu + 1)\label{EG} \\
+      E &= 2G(\mu + 1) \label{EG} \\
       E &= 3Q(1 - 2\mu) \label{EQ}
     \end{empheq}
     
@@ -65,11 +65,11 @@
     Für die Bestimmung des magentischen Moments $m$ im zweiten Versuchsteil wird die durch
     
     \begin{empheq}{equation}
-      B = \mu_{0}\mu_{r}\frac{8}{\sqrt{125}}\frac{IN}{R}\cite{Schaaf08}
+      B = \mu_{0}\mu_{r}\frac{8}{\sqrt{125}}\frac{IN}{R}
       \label{B}
     \end{empheq}
     
-    berechenbare magnetische Flussdichte eines Helmholtzspulenpaares benötigt, für die somit
+    aus\,\cite{Schaaf08} berechenbare magnetische Flussdichte eines Helmholtzspulenpaares benötigt, für die somit
     die geometrischen Abmessungen der Spulen  und der durch diese fließende Strom $I$ benötigt werden.
     Auch in diesem Versuchsteil wird der Daht in harmonische Schwingungen versetzt deren Periodendauer
     \begin{empheq}{equation}
@@ -318,14 +318,29 @@
   
   \newpage
   \section{Diskussion}
-   Die aus den Versuchsergebnissen errechneten Werte für die elastischen Konstanten wirken auf den ersten Blick plausibel,
-   da die drei Spannungen, also Trosions-, Elastizitäts- und Kommpressionsmodul ungefähr von der gleichen Größenordnung sind.
-   Das einzig 
-  
-   Für die Bestimmung des magnetischen Moments wurde keine Regeression durchgefüht, da die Versuchsapparatur nur 
-   unzuverlässig funtionierte und es uns somit nicht möglich war Periodendauern für verschiedene magnetische 
-   Flussdichten zu messen. 
-  
+    Die aus den Versuchsergebnissen errechneten Werte für die elastischen Konstanten wirken auf den ersten Blick plausibel,
+    da die drei Spannungen, also Trosions-, Elastizitäts- und Kommpressionsmodul, wie für den mit diesen Größen weniger vertrauten
+    zu erwarten ist, ungefähr von der gleichen Größenordnung sind. Einzig die Negativität des Kompressionsmoduls ist auch für den 
+    unvertrauten wenig sinnvoll.\\
+    
+    Diese Eindücker werden im Vergleich mit den Literaturwerten aus\,\cite{Kuchling07} bestätigt. Ausgehend von dem Elastizitätsmodul,
+    welches nicht gemessen wurde sondern gegeben war, kommen für das Material des Drahtes Eisen und Baustahl in Betracht,
+    wobei Baustahl mit $E_{lit,Stahl} = \SI{210}{\giga Nm^{-2}}$, die genauste Übereinstimmung zeigt, 
+    Eisen mit $E_{lit,Fe} = \SI{211}{\giga Nm^{-2}}$ aber noch in der angegebenen Standatrdabweichung liegt.\\
+    Im Vergleich zu den Literaturwerten für den Baustahl zeigt sich für das Torsionsmodul $G_{lit,Stahl} =\SI{85}{\giga Nm^{-2}}$ eine 
+    geringere Abwiechung nach oben, wohingegen das Kompressionsmodul sehr stark vom Literaturwert $Q_{lit,Stahl} =\SI{167}{\giga Nm^{-2}}$
+    und außerdem noch das falsche Vorzeichen aufweist. Wie in \cite[S.189]{Kuchling07} gegeben gilt für die Poissonschen Querkontraktionzahlen
+    $\num{0,0} < \mu < \num{0,5} $, womit der in diesem Versuch bestimmte Wert allgemein und auch im Vergleich zu den gegebenen Literaturwert
+    für Baustahl $\mu_{lit,Stahl} =\num{0,28}$ zu hoch ist.\\
+    
+    Da alle dieser Abweichungen, außer die des Kompressionsmoduls nach oben handelt es sich hierbei um eine systematischen Fehler,
+    wobei die Abweichung des Kompressionsmoduls nach unten duch die Abweichung der Querkontraktionszahl zu begründen sind.
+    Die Quelle dieses systematischen Fehler liegt in der Art der Zeitmessung. Da die Versuchsapparatur nur mit unzureichender Verlässlichkeit
+    funktionierte ist anzunehmen, dass die erhaltenen Periodendauern nicht den tatsächlichen entsprechen.\\
+    
+    Aufgrund der bereits erwähnten Unzuverlässigkeit der Versuchapparatur war es nicht möglich die Periodendauer der
+    Schwingung im äußeren Magnetfeld für mehrere magnetische Flussdichten durchzuführen. Dadurch konnte für diesen
+    Teil keine Regression der Messwerte verwendet werden, um das magnetische Moment zu bestimmen.
   
   \newpage
   \begin{thebibliography}{9}
@@ -333,6 +348,9 @@
 
     \bibitem{Schaaf08} Schaaf, Peter und Große-Knetter, Jörn(2008): \emph{Das Physikalische Praktikum},\\
                        Universitätsverlag Göttingen.
+
+    \bibitem{Kuchling07} Kuchling, Horst(2007): \emph{Taschenbuch der Physik},
+                       19. Auflage,\\ Fachbuchverlag Leipzig im Carl Hanser Verlag München.
 
 
   \end{thebibliography}
