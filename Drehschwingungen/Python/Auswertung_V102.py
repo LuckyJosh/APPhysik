@@ -92,6 +92,7 @@ uD_D_avr = np.mean(uD_D)
 uD_D_avr = ufloat(unp.nominal_values(uD_D_avr), unp.std_devs(uD_D_avr))  # m
 uR_D_avr = uD_D_avr / 2
 uR_D_avr = ufloat(unp.nominal_values(uR_D_avr), unp.std_devs(uR_D_avr))
+print("Mittlerer Drahtdurchmesser:", uD_D_avr)
 print("Mittlerer Drahtradius:", uR_D_avr)
 
   # Lade Drahtlänge(+ Fehler)
@@ -168,7 +169,7 @@ uT_m = unp.uarray(T_m, len(T_m)*[T_m_err])
   # gemittelte Periodendauer mit Fehler
 uT_m_avr = np.mean(uT_m)
 uT_m_avr = ufloat(unp.nominal_values(uT_m_avr), unp.std_devs(uT_m_avr))
-
+print("Mittler Periodendauer mit B:", uT_m_avr)
   ## Berechnung der magnetischen Moments um
 um = (4 * const.pi**2 * (uI_ges)/(uB * uT_m_avr**2) -
      ((const.pi * uG * (uR_D_avr)**4)/(2 * uL_D*uB)))
