@@ -157,13 +157,15 @@ K_T_errs = np.zeros(dim)  # Fehler des Mittelwertes jeweils einer Schwingung
 for i in range(dim):
     K_T_avrs[i] = np.mean([K_T_1[i], K_T_2[i]])
     K_T_errs[i] = np.std([K_T_1[i], K_T_2[i]])/np.sqrt(dim)
-uK_T_avrs = unp.uarray(K_T_avrs, K_T_errs)  # Fehler behafteter MW je Schwingung
-uK_T_avr = np.mean(uK_T_avrs)
+#uK_T_avrs = unp.uarray(K_T_avrs, K_T_errs)  # Fehler behafteter MW je Schwingung
+K_T_avr = np.mean(K_T_avrs)
+K_T_err = np.std(K_T_avrs)/(len(K_T_avrs) - 1)
+uK_T_avr = ufloat(K_T_avr, K_T_err)
 print("Mittelwert Kugel", uK_T_avr)
 I_K = (uD * uK_T_avr**2) / (4 * const.pi)  # kgm²
-I_K -= I_D
-print(I_K) 
-print("Mittelwerte Kugel", uK_T_avrs)
+#I_K -= I_D
+print("Bestimmt I_K:", I_K) 
+print("Mittelwerte Kugel", K_T_avrs)
 
 
     ## Zylinder
@@ -172,13 +174,16 @@ Z_T_errs = np.zeros(dim)
 for i in range(dim):
     Z_T_avrs[i] = np.mean([Z_T_1[i], Z_T_2[i]])
     Z_T_errs[i] = np.std([Z_T_1[i], Z_T_2[i]])/np.sqrt(dim)
-uZ_T_avrs = unp.uarray(Z_T_avrs, Z_T_errs)
-uZ_T_avr  = np.mean(uZ_T_avrs)
+#uZ_T_avrs = unp.uarray(Z_T_avrs, Z_T_errs)
+Z_T_avr  = np.mean(Z_T_avrs)
+Z_T_err  = np.std(Z_T_avrs)/(len(Z_T_avrs) - 1 )
+uZ_T_avr  = ufloat(Z_T_avr, Z_T_err)
+
 print("Mittelwert Zylinder", uZ_T_avr)
 I_Z = (uD * uZ_T_avr**2) / (4 * const.pi)  # kgm²
-I_Z -= I_D
-print(I_Z)
-print("Mittelwerte Zylider", uZ_T_avrs)
+#I_Z -= I_D
+print("Bestimmtes I_Z:", I_Z)
+print("Mittelwerte Zylider", Z_T_avrs)
 
 #%%
 ## Berechnung Traegheitsmomente Koerper    
@@ -244,26 +249,34 @@ P1_T_errs = np.zeros(dim)  # Fehler des Mittelwertes jeweils einer Schwingung
 for i in range(dim):
     P1_T_avrs[i] = np.mean([P1_T_1[i], P1_T_2[i]])
     P1_T_errs[i] = np.std([P1_T_1[i], P1_T_2[i]])/np.sqrt(dim)
-uP1_T_avrs = unp.uarray(P1_T_avrs, P1_T_errs)  # Fehler behafteter MW je Schwingung
-uP1_T_avr = np.mean(uP1_T_avrs)
+#uP1_T_avrs = unp.uarray(P1_T_avrs, P1_T_errs)  # Fehler behafteter MW je Schwingung
+
+
+P1_T_avr = np.mean(P1_T_avrs)
+P1_T_err = np.std(P1_T_avrs)/(len(P1_T_avrs) -1)
+uP1_T_avr = ufloat(P1_T_avr, P1_T_err)
+
 print("MittelwertP1", uP1_T_avr)
 I_P1 = (uD * uP1_T_avr**2) / (4 * const.pi)  # kgm²
-I_P1 -= I_D
+#I_P1 -= I_D
 print("Pose1:", I_P1)
-print("MittelwerteP1", uP1_T_avrs)
+print("MittelwerteP1", P1_T_avrs)
     #Pose2
 P2_T_avrs = np.zeros(dim)  # Mittelwert jeweils einer Schwingung
 P2_T_errs = np.zeros(dim)  # Fehler des Mittelwertes jeweils einer Schwingung
 for i in range(dim):
     P2_T_avrs[i] = np.mean([P2_T_1[i], P2_T_2[i]])
     P2_T_errs[i] = np.std([P2_T_1[i], P2_T_2[i]])/np.sqrt(dim)
-uP2_T_avrs = unp.uarray(P2_T_avrs, P2_T_errs)  # Fehler behafteter MW je Schwingung
-uP2_T_avr = np.mean(uP2_T_avrs)
+#uP2_T_avrs = unp.uarray(P2_T_avrs, P2_T_errs)  # Fehler behafteter MW je Schwingung
+P2_T_avr = np.mean(P2_T_avrs)
+P2_T_err = np.std(P2_T_avrs)/(len(P2_T_avrs) -1)
+uP2_T_avr = ufloat(P2_T_avr, P2_T_err)
+
 print("MittelwertP2", uP2_T_avr)
 I_P2 = (uD * uP2_T_avr**2) / (4 * const.pi)  # kgm²
-I_P2 -= I_D
+#I_P2 -= I_D
 print("Pose2:", I_P2)
-print("MittelwerteP2", uP2_T_avrs)
+print("MittelwerteP2", P2_T_avrs)
 #%%
 ## Berechnung Traegheitsmomente Puppenteile
 
@@ -306,10 +319,10 @@ D_b_avr_err = np.std(D_b)/np.sqrt(len(D_b))
 D_t_avr_err = np.std(D_t)/np.sqrt(len(D_t))
 D_k_avr_err = np.std(D_k)/np.sqrt(len(D_k))
 
-uD_a = ufloat(D_a_avr, D_a_avr_err + err_2)
-uD_b = ufloat(D_b_avr, D_b_avr_err + err_2)
-uD_t = ufloat(D_t_avr, D_t_avr_err + err_2)
-uD_k = ufloat(D_k_avr, D_k_avr_err + err_2)
+uD_a = ufloat(D_a_avr, D_a_avr_err)
+uD_b = ufloat(D_b_avr, D_b_avr_err)
+uD_t = ufloat(D_t_avr, D_t_avr_err)
+uD_k = ufloat(D_k_avr, D_k_avr_err)
 
 uR_a = uD_a / 2  # m
 uR_b = uD_b / 2  # m
@@ -341,7 +354,7 @@ uM_b = V_b/V_P * uM_P
 uM_t = V_t/V_P * uM_P
 uM_k = V_k/V_P * uM_P
 #print(V_a/V_P*100, V_b/V_P*100, V_t/V_P*100, V_k/V_P*100)
-print("Massen", uM_a, uM_b, uM_t, uM_k)
+print("Massen", uM_k, uM_t, uM_a, uM_b)
 
 
 

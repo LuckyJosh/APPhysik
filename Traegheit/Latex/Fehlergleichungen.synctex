@@ -1,0 +1,414 @@
+SyncTeX Version:1
+Input:1:D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Traegheit\Latex\Fehlergleichungen.tex
+Input:2:D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Traegheit\Latex\Preambel.tex
+Input:3:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrartcl.cls
+Input:4:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrkbase.sty
+Input:5:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrbase.sty
+Input:6:C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+Input:7:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrlfile.sty
+Input:8:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\tocbasic.sty
+Input:9:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrsize12pt.clo
+Input:10:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\typearea.sty
+Input:11:C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+Input:12:C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
+Input:13:C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty
+Input:14:C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty
+Input:15:C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+Input:16:C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty
+Input:17:C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def
+Input:18:C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty
+Input:19:C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def
+Input:20:C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu
+Input:21:C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu
+Input:22:C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu
+Input:23:C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
+Input:24:C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg
+Input:25:C:\Program Files\MiKTeX 2.9\tex\generic\babel\ngermanb.ldf
+Input:26:C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def
+Input:27:C:\Program Files\MiKTeX 2.9\tex\latex\tools\varioref.sty
+Input:28:C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty
+Input:29:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
+Input:30:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrdate.sty
+Input:31:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\lastpage\lastpage.sty
+Input:32:C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+Input:33:C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+Input:34:C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+Input:35:C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+Input:36:C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+Input:37:C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+Input:38:C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+Input:39:C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty
+Input:40:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\mh\empheq.sty
+Input:41:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\mh\mhsetup.sty
+Input:42:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\mh\mathtools.sty
+Input:43:C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
+Input:44:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\siunitx\siunitx.sty
+Input:45:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\expl3.sty
+Input:46:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3names.sty
+Input:47:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3bootstrap.sty
+Input:48:C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty
+Input:49:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3basics.sty
+Input:50:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3expan.sty
+Input:51:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3tl.sty
+Input:52:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3seq.sty
+Input:53:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3int.sty
+Input:54:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3quark.sty
+Input:55:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3prg.sty
+Input:56:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3clist.sty
+Input:57:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3token.sty
+Input:58:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3prop.sty
+Input:59:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3msg.sty
+Input:60:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3file.sty
+Input:61:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3skip.sty
+Input:62:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3keys.sty
+Input:63:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3fp.sty
+Input:64:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3box.sty
+Input:65:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3coffins.sty
+Input:66:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3color.sty
+Input:67:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3luatex.sty
+Input:68:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3candidates.sty
+Input:69:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3packages\xparse\xparse.sty
+Input:70:C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty
+Input:71:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+Input:72:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\translator.sty
+Input:73:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\translator-language-mappings.tex
+Input:74:C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
+Input:75:C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def
+Input:76:C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
+Input:77:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\esvect\esvect.sty
+Input:78:C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+Input:79:C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+Input:80:C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+Input:81:C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg
+Input:82:C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def
+Input:83:C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+Input:84:C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
+Input:85:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\floatflt\floatflt.sty
+Input:86:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\tikz.sty
+Input:87:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
+Input:88:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrcs.sty
+Input:89:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-common.tex
+Input:90:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-latex.def
+Input:91:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
+Input:92:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfrcs.code.tex
+Input:93:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgfcore.sty
+Input:94:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\pgfsys.sty
+Input:95:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
+Input:96:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+Input:97:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
+Input:98:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgf.cfg
+Input:99:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+Input:100:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+Input:101:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+Input:102:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+Input:103:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Input:104:C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg
+Input:105:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
+Input:106:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.tex
+Input:107:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathcalc.code.tex
+Input:108:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.code.tex
+Input:109:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.code.tex
+Input:110:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex
+Input:111:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex
+Input:112:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex
+Input:113:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctions.random.code.tex
+Input:114:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex
+Input:115:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.tex
+Input:116:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.tex
+Input:117:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex
+Input:118:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.code.tex
+Input:119:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+Input:120:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+Input:121:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+Input:122:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+Input:123:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+Input:124:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+Input:125:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+Input:126:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+Input:127:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+Input:128:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+Input:129:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+Input:130:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+Input:131:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+Input:132:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+Input:133:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+Input:134:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+Input:135:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+Input:136:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+Input:137:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+Input:138:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+Input:139:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgffor.sty
+Input:140:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfkeys.sty
+Input:141:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+Input:142:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.code.tex
+Input:143:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+Input:144:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+Input:145:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+Input:146:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+Input:147:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryarrows.code.tex
+Input:148:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibraryarrows.code.tex
+Input:149:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\ulem\ulem.sty
+Input:150:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem.sty
+Input:151:D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Traegheit\Latex\Fehlergleichungen.aux
+Input:152:C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
+Input:153:C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd
+Input:154:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\dicts\translator-basic-dictionary\translator-basic-dictionary-English.dict
+Input:155:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\siunitx\config\siunitx-abbreviations.cfg
+Input:156:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+Input:157:C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd
+Input:158:C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd
+Input:159:C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd
+Input:160:C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd
+Input:161:C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+Input:162:C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+Input:163:C:\Users\JoshLaptop\AppData\Roaming\MiKTeX\2.9\tex\latex\esvect\uesvect.fd
+Input:164:C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd
+Input:165:C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd
+Output:pdf
+Magnification:1000
+Unit:1
+X Offset:0
+Y Offset:0
+Content:
+!14617
+{1
+[1,7:4736286,52546107:29760291,47809821,1235356
+h1,7:4736286,4736286:0,0,0
+[1,7:4661699,52546107:29834878,50497656,1235356
+[1,7:4661699,3883459:29834878,1835008,0
+(1,7:4661699,3883459:29834878,950271,0
+(1,7:4661699,3883459:29834878,950271,0
+(1,7:4661699,3883459:29834878,950271,0
+[1,7:4661699,3883459:29834878,950271,0
+(1,7:4661699,3598375:29834878,665187,285084
+(1,7:4661699,3598375:0,665187,285084
+[1,7:4661699,3598375:29834878,665187,285084
+(1,7:4661699,3598375:29834878,665187,285084
+h1,7:4661699,3598375:0,0,0
+x1,7:6656876,3598375
+g1,7:6951788,3598375
+x1,7:9628669,3598375
+x1,7:10095613,3598375
+x1,7:14210290,3598375
+r1,7:14212474,3598375:0,950271,285084
+k1,7:24354526,3598375:10142052
+k1,7:34496578,3598375:10142052
+)
+]
+k1,7:4661699,3598375:-29834878
+)
+g1,7:4661699,3598375
+[1,7:4661699,3598375:29834878,0,0
+(1,7:4661699,3598375:29834878,0,0
+k1,7:19579138,3598375:14917439
+h1,7:19579138,3598375:0,0,0
+g1,7:19579138,3598375
+k1,7:34496577,3598375:14917439
+)
+]
+g1,7:34496577,3598375
+(1,7:34496577,3598375:0,665187,285084
+k1,7:4661699,3598375:-29834878
+[1,7:4661699,3598375:29834878,665187,285084
+(1,7:4661699,3598375:29834878,665187,285084
+k1,7:28592885,3598375:23931186
+h1,7:28592885,3598375:0,0,0
+x1,7:29576840,3598375
+g1,7:29919079,3598375
+x1,7:32036732,3598375
+x1,7:32699806,3598375
+g1,7:32956485,3598375
+x1,7:34496577,3598375
+r1,7:34496577,3598375:0,950271,285084
+g1,7:34496577,3598375
+g1,7:34496577,3598375
+)
+]
+)
+)
+]
+)
+g1,7:34496577,3883459
+)
+)
+]
+[1,7:4661699,51366459:29834878,46057592,0
+(1,4:4661699,6095299:29834878,0,0
+h1,4:4661699,6095299:769860,0,0
+k1,4:34496577,6095299:29065018
+g1,4:34496577,6095299
+)
+(1,6:13910032,7482542:11338212,1321707,670605
+x1,6:14347708,7482542
+(1,6:14347708,7600506:712348,358263,88110
+x1,6:14589239,7600506
+(1,6:14589239,7688616:438049,268698,0
+x1,6:14981778,7688616
+)
+)
+g1,6:15278506,7482542
+x1,6:15877440,7482542
+g1,6:16095890,7482542
+(1,6:16095890,7482542:9152354,1321707,670605
+(1,6:16095890,6213261:655361,26213,1939886
+x1,6:16751251,6213261
+)
+[1,6:16751251,7482542:8496993,1321707,539454
+(1,6:16751251,7482542:8496993,1027266,539454
+(1,6:16751251,7482542:1318634,1027266,539454
+(1,6:16751251,7482542:1318634,1027266,539454
+h1,6:16751251,7482542:78643,0,0
+[1,6:16829894,7482542:1161348,1027266,539454
+(1,6:16829894,6950515:1161348,495239,0
+k1,6:17218057,6950515:388163
+x1,6:17603080,6950515
+k1,6:17991242,6950515:388162
+)
+(1,6:16829894,8021995:1161348,565062,0
+x1,6:17651729,8021995
+(1,6:17679946,7794804:311296,337871,0
+x1,6:17958474,7794804
+)
+)
+]
+h1,6:17991242,7482542:78643,0,0
+)
+)
+x1,6:18709238,7482542
+(1,6:18730628,7255351:311296,337871,0
+x1,6:19009156,7255351
+)
+x1,6:19493253,7482542
+(1,6:19600203,7255351:311296,337871,0
+x1,6:19878731,7255351
+)
+x1,6:20349175,7482542
+[1,6:20349175,7674776:434455,800986,0
+(1,6:20377392,7211661:311296,337871,0
+x1,6:20655920,7211661
+)
+(1,6:20349175,7674776:434455,358263,0
+x1,6:20673492,7674776
+)
+]
+g1,6:20958390,7482542
+x1,6:21557324,7482542
+g1,6:21732084,7482542
+(1,6:21732084,7482542:1703657,1027266,539454
+(1,6:21732084,7482542:1703657,1027266,539454
+h1,6:21732084,7482542:78643,0,0
+[1,6:21810727,7482542:1546371,1027266,539454
+(1,6:21810727,6950515:1546371,495239,0
+k1,6:22391401,6950515:580674
+x1,6:22776424,6950515
+k1,6:23357098,6950515:580674
+)
+(1,6:21810727,8021995:1546371,565062,0
+x1,6:23017585,8021995
+(1,6:23045802,7794804:311296,337871,0
+x1,6:23324330,7794804
+)
+)
+]
+h1,6:23357098,7482542:78643,0,0
+)
+)
+x1,6:23887070,7482542
+(1,6:23994020,7255351:311296,337871,0
+x1,6:24272548,7255351
+)
+x1,6:24742992,7482542
+[1,6:24742992,7674776:505252,800986,0
+(1,6:24771209,7211661:311296,337871,0
+x1,6:25049737,7211661
+)
+(1,6:24742992,7674776:505252,358263,0
+x1,6:25200002,7674776
+)
+]
+)
+]
+)
+)
+(1,7:4661699,8858798:29834878,0,0
+k1,7:34496577,8858798:29834878
+g1,7:34496577,8858798
+)
+]
+(1,7:4661699,52546107:29834878,665187,1235356
+(1,7:4661699,52546107:29834878,665187,1235356
+(1,7:4661699,52546107:29834878,665187,1235356
+[1,7:4661699,52546107:29834878,665187,1235356
+(1,7:4661699,52546107:29834878,665187,1235356
+(1,7:4661699,52546107:0,0,0
+[1,7:4661699,52546107:29834878,0,0
+(1,7:4661699,52546107:29834878,0,0
+h1,7:4661699,52546107:0,0,0
+k1,7:19579138,52546107:14917439
+k1,7:34496577,52546107:14917439
+)
+]
+k1,7:4661699,52546107:-29834878
+)
+g1,7:4661699,52546107
+[1,7:4661699,52546107:29834878,665187,285084
+(1,7:4661699,52546107:29834878,665187,285084
+k1,7:18153730,52546107:13492031
+h1,7:18153730,52546107:0,0,0
+x1,7:18596098,52546107
+g1,7:18891010,52546107
+x1,7:19357954,52546107
+x1,7:20267266,52546107
+g1,7:20562178,52546107
+x1,7:21004546,52546107
+h1,7:21004546,52546107:0,0,0
+r1,7:21004546,52546107:0,950271,285084
+g1,7:21004546,52546107
+k1,7:34496577,52546107:13492031
+)
+]
+g1,7:34496577,52546107
+(1,7:34496577,52546107:0,541752,1235356
+k1,7:4661699,52546107:-29834878
+[1,7:4661699,52546107:29834878,541752,1235356
+(1,7:4661699,52546107:29834878,541752,0
+k1,7:28385519,52546107:23723820
+h1,7:28385519,52546107:0,0,0
+x1,7:31480559,52546107
+g1,7:31737238,52546107
+x1,7:32507284,52546107
+x1,7:34496578,52546107
+g1,7:34496578,52546107
+g1,7:34496578,52546107
+)
+(1,7:4661699,53496379:29834878,665187,285084
+k1,7:29572827,53496379:24911128
+h1,7:29572827,53496379:0,0,0
+x1,7:31084980,53496379
+x1,7:31876430,53496379
+g1,7:32133109,53496379
+x1,7:33384288,53496379
+x1,7:33769319,53496379
+x1,7:34496578,53496379
+r1,7:34496578,53496379:0,950271,285084
+g1,7:34496578,53496379
+g1,7:34496578,53496379
+)
+]
+)
+)
+]
+)
+g1,7:34496577,52546107
+)
+)
+]
+]
+!5434
+}1
+Input:166:D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Traegheit\Latex\Fehlergleichungen.aux
+!107
+Postamble:
+Count:176
+!26
+Post scriptum:
