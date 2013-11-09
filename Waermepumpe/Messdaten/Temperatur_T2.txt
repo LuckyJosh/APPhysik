@@ -1,0 +1,18 @@
+# Temperatur T_2(Kalt) [°C]
+#21.4  # Wird nicht verwendet. falsches Zeitintervall
+17.4
+16.5
+15.1
+13.9
+12.7
+11.9
+10.9
+9.8
+8.9
+8.0
+7.2
+6.5
+5.9
+5.4
+4.9
+4.4

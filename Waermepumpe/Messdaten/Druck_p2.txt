@@ -1,0 +1,18 @@
+# Druck p_2\p_a (Kalt) [1e05*Pa]
+#4.4  # Wird nicht verwendet falsches Zeitintervall
+4.6
+4.6
+4.4
+4.2
+4.1
+4.0
+4.0
+3.9
+3.9
+3.8
+3.6
+3.6
+3.6
+3.6
+3.6
+3.5

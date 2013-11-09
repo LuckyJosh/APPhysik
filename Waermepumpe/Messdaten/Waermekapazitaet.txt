@@ -1,0 +1,2 @@
+# Wärmekapazität der Anlage [J/K]
+750

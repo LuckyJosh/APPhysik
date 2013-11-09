@@ -1,0 +1,2 @@
+# Temperatur_Fehler [°C]
+0.1  

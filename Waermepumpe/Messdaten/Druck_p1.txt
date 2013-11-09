@@ -1,0 +1,18 @@
+# Druck p_1/p_b [1e05*Pa]
+#6.0  # Wird nicht verwendet falsches Zeitintervall
+7.0
+7.5
+7.9
+8.0
+8.5
+9.0
+9.0
+9.5
+10.0
+10.0
+10.5
+11.0
+11.0
+11.5
+12.0
+12.0

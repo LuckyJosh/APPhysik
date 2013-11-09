@@ -1,0 +1,18 @@
+# Temperatur T_1(Warm) [°C]  
+#21.9   # Wird nicht verwendet. falsches Zeitintervall
+26.6
+28.0
+30.1
+32.1
+34.0
+35.2
+37.0
+38.6
+40.2
+41.7
+43.1
+44.5
+45.8
+46.6
+47.9
+49.0
