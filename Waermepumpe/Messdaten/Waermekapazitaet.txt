@@ -1,2 +1,2 @@
-# Wärmekapazität der Anlage [J/K]
-750
+# Wärmekapazität der Anlage [J/K]  #spezifische Wärmekapazität des Wassers[kJ/Kg*K]
+750                                 4.182 

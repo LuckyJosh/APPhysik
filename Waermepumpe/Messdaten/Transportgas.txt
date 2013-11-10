@@ -1,0 +1,2 @@
+# rho_0 [g/dm³] bei T = 0°C und p = 1 bar  # k   #Molare Masse[kg/mol]
+ 5.51                                       1.14  0.120
