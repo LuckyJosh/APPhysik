@@ -68,22 +68,42 @@ Aus den Regressionskurven für die Temperaturverläufe lassen sich nun deren Dif
 bestimmen, durch die, die gesuchten Apparaturgrößen berechnet werden können. Die Differntialqoutienten $\od{T_{1}}{t}$ und die 
 berechneten, idealen und realen, Güteziffern sowie deren relativer Unterschied sind in \autoref{tab:Güte}, die 
 Differnetialquotienten $\od{T_{2}}{t}$ und der daraus bestimmte Massendurchsatz des Transportgases $\tfrac{\Delta m}{\Delta t}$
-in \autoref{tab:Masse} zu finden
- 	
-
-\begin{table}
-	\begin{tabular}{|c|c|c|c|c|}
-		\hline
-		Zeit& Differentialquotient& reale Güteziffer& ideale Güteziffer& relativer Unterschied\\
-		$t\,[\si{s}]$& $\od{T_{2}}{t}\,[Ks^{-1}]$&$ \nu_{real}\,[1]$ & $\nu_{id}\,[1]$& $\frac{\nu_{id} - \nu_{real}}{\nu_{id}}$ \\ \hline \hline
-		180& &&&\\
-		360&&&&\\
-		540&&&&\\
-		720&&&&\\
-		\hline
-	\end{tabular}
-\end{table}
+in \autoref{tab:Masse} zu finden.
 
 Die Berechnung der idealen Güteziffer erfolgt nach \eqref{eq:vid} durch einsetzen der Temperaturen $T_{1}$ und $T_{2}$ zu den entsprechnden
-Zeiten.
+Zeiten. 	
 
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		    Zeit      &    Differentialquotient    & reale Güteziffer  & ideale Güteziffer &     relativer Unterschied     \\
+		$t\,[\si{s}]$ & $\od{T_{1}}{t}\,[Ks^{-1}]$ & $\nu_{real}\,[1]$ &  $\nu_{id}\,[1]$  & $\frac{\nu_{real}}{\nu_{id}}$ \\ \hline\hline
+		     180      &        \num{0.021}         & \num{2.879(115)}  & \num{20.217(186)} &          \num{0.142}          \\
+		     360      &        \num{0.019}         & \num{2.684(107)}  & \num{14.420(093)} &          \num{0.186}          \\
+		     540      &        \num{0.018}         & \num{2.490(100)}  & \num{11.883(062)} &          \num{0.210}          \\
+		     720      &        \num{0.017}         & \num{2.296(092)}  & \num{10.011(043)} &          \num{0.229}          \\ \hline
+	\end{tabular}
+	\caption{Reale und ideale Güteziffer im Verhältnis}
+	\label{tab:Güte}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		    Zeit      &    Differentialquotient    &               Massendurchsatz                & Mechanische Leistung \\
+		$t\,[\si{s}]$ & $\od{T_{2}}{t}\,[Ks^{-1}]$ & $\tfrac{\Delta m}{\Delta t}\,[\si{gs^{-1}}]$ & $P_{mech}\,[\si{W}]$ \\ \hline\hline
+		     180      &        \num{-0.013}        &               \num{1.479(39)}                &  \num{15.075(396)}   \\
+		     360      &        \num{-0.012}        &               \num{1.336(35)}                &  \num{16.976(446)}   \\
+		     540      &        \num{-0.011}        &               \num{1.193(31)}                &  \num{16.843(443)}   \\
+		     720      &        \num{-0.010}        &               \num{1.050(28)}                &  \num{17.234(453)}   \\ \hline
+	\end{tabular}
+	\caption{Massendurchsatz des Transportgases}
+	\label{tab:Masse}
+\end{table}
+
+
+
+
+		

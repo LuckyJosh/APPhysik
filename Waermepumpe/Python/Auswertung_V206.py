@@ -56,7 +56,9 @@ V_H2O = np.loadtxt("../Messdaten/Fuellmenge.txt")
 C_APP, C_SPEZ_H2O = np.loadtxt("../Messdaten/Waermekapazitaet.txt")
 C_SPEZ_H2O *= 1e03  # J/K*kg
 # Laden der Leistung
-P_APP = np.loadtxt("../Messdaten/Leistung.txt")
+P_APP, P_APP_ERR = np.loadtxt("../Messdaten/Leistung.txt")
+uP_APP = ufloat(P_APP, P_APP_ERR)
+
 
 # Laden der Cl2F2C ("Gas") Daten
 RHO_0_GAS, K_GAS, M_MOL_GAS = np.loadtxt("../Messdaten/Transportgas.txt")
@@ -65,6 +67,7 @@ RHO_0_GAS, K_GAS, M_MOL_GAS = np.loadtxt("../Messdaten/Transportgas.txt")
 RHO_H2O_T1, RHO_H2O_T2 = np.loadtxt("../Messdaten/Wasserdichten.txt",
                                     unpack=True)
 
+RHO_H2O_21C = 0.997994  # kg/dm³
 ## Laden der Messungen
 
 # Laden der Temperaturen
@@ -137,7 +140,7 @@ plt.errorbar(t, noms(uT_1), yerr=stds(uT_1), fmt="rx",
              label="Messwerte $T_{1}$")
 
     # Plots der Fit-Kurven
-plt.plot(x, T_FitI(x, *poptI_T1), color="grey", 
+plt.plot(x, T_FitI(x, *poptI_T1), color="grey",
          label="Regression-Kurve $T_{1}$")
 #plt.plot(x, T_FitII(x, *poptII_T1), "k-", label="Fit2 $T_{1}$")
 #plt.plot(x, T_FitIII(x, *poptIII_T1), "k-", label="Fit3 $T_{1}$")
@@ -171,7 +174,7 @@ plt.errorbar(t, noms(uT_2), yerr=stds(uT_2), fmt="bx",
              label="Messwerte $T_{2}$")
 
     # Plots der Fit-Kurven
-plt.plot(x, T_FitI(x, *poptI_T2), color="grey", 
+plt.plot(x, T_FitI(x, *poptI_T2), color="grey",
          label="Regression-Kurve $T_{2}$")
 #plt.plot(x, T_FitII(x, *poptII_T2), "k-", label="Fit2 $T_{2}$")
 #plt.plot(x, T_FitIII(x, *poptIII_T2), "k-", label="Fit3 $T_{2}$")
@@ -197,12 +200,19 @@ for i in range(4):
 
 
     # Güteziffer
-Nu_id = np.zeros(4)
-for i in range(4):
-    Nu_id[i] = (noms(uT_1[(i + 1) * 2])/(noms(uT_1[(i + 1) * 2])
-                - noms(uT_2[(i + 1) * 2])))
 
-M_H2O_T1 = V_H2O * RHO_H2O_T1[0]
+
+uNu_id1 = (uT_1[2] / (uT_1[2] - uT_2[2]))
+uNu_id2 = (uT_1[4] / (uT_1[4] - uT_2[4]))
+uNu_id3 = (uT_1[6] / (uT_1[6] - uT_2[6]))
+uNu_id4 = (uT_1[8] / (uT_1[8] - uT_2[8]))
+
+uNu_id = unp.uarray([noms(uNu_id1), noms(uNu_id2), noms(uNu_id3),
+                     noms(uNu_id4)], [stds(uNu_id1), stds(uNu_id2),
+                    stds(uNu_id3), stds(uNu_id4)])
+
+
+M_H2O_T1 = V_H2O * RHO_H2O_21C
 
 C_H2O_T1 = C_SPEZ_H2O * M_H2O_T1
 
@@ -211,13 +221,15 @@ for i in range(len(dT_1)):
     dQ_1[i] = (C_H2O_T1 + C_APP) * dT_1[i]
 
 
-Nu_real = dQ_1/P_APP
+uNu_real = dQ_1/uP_APP
 
+relDiff_nu = (Nu_id - Nu_real)/Nu_id
+relNu = uNu_real/uNu_id
 
     # Massendurchsatz
 
 
-M_H2O_T2 = V_H2O * RHO_H2O_T2[0]
+M_H2O_T2 = V_H2O * RHO_H2O_21C
 
 C_H2O_T2 = C_SPEZ_H2O * M_H2O_T2
 print(C_H2O_T2)
@@ -243,9 +255,11 @@ plt.plot(1/noms(uT_1), P_Fit(noms(uT_1), *popt_P), "k-", label="Messwerte")
 
 plt.show()
 
-L = popt_P[1] * (const.gas_constant) * (-1)
+uOpt = ufloat(popt_P[1], error_P[1])
+L = uOpt * (const.gas_constant)
+uL = ufloat(noms(L), stds(L))
 
-print(L)
+
 dm_mol = dQ_2 / L
 dm = dm_mol * M_MOL_GAS
 
@@ -259,14 +273,14 @@ def aux(var):
     return (var + 1) * 2
 
 
-N_App = np.zeros(4)
+N_App = unp.uarray(np.zeros(4), np.zeros(4))
 X = 1/(K_GAS - 1)
 x = (1/K_GAS)
 for j in range(4):
     P_b = P_1[aux(j)]
     P_a = P_2[aux(j)]
     W_P = (P_a/P_b)**x
-    K = P_a - P_b * W_P
+    K = P_b * W_P -P_a 
     N_App[j] = X * (dm[j]/rho_gas[aux(j)]) * (K)
 
 
@@ -287,11 +301,13 @@ print("Parameter:\n", "Fit1:\n", poptI_T2, "\n", "Fit2:\n", poptII_T2, "\n",
       "Fit3:\n", poptIII_T2)
 print("Fehler:\n", "T_1:\n", errorI_T1, "\n", "T_2:\n", errorI_T2)
 print("Ableitungen von T_1:\n", dT_1, "\n", "Ableitungen von T_2:\n", dT_2)
-print("Güteziffer:\n", "-ideal:\n", Nu_id, "\n", "-real:\n", Nu_real)
+print("Güteziffer:\n", "-ideal:\n", uNu_id, "\n", "-real:\n", uNu_real, "\n",
+      "Relativer Unterschied:\n", relDiff_nu, "\n", "Quotient:\n", relNu)
 #print("Masse Wasser:\n", M_H2O)
 #print("Wärmekapazität Wasser:\n", C_H2O)
 #print("Wärmeänderung dQ_1:\n", dQ_1)
 print("Wärmeänderung dQ_2:\n", dQ_2)
 print("Fit-Parameter P-Fit:\n", *popt_P)
+print("Verdampfungswärme:\n", uL)
 print("Massendurchsatz:\n", dm)
 print("Mechanische Leistung:\n", N_App)

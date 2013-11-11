@@ -1,2 +1,2 @@
-# Leistung des Kompressors[W]
-125
+# Leistung des Kompressors[W]  # Fehler der Leistung 
+  125                            5
