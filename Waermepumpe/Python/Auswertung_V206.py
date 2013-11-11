@@ -200,16 +200,13 @@ for i in range(4):
     Nu_id[i] = (noms(uT_1[(i + 1) * 2])/(noms(uT_1[(i + 1) * 2])
                 - noms(uT_2[(i + 1) * 2])))
 
-
-M_H2O_T1 = np.zeros(len(RHO_H2O_T1))
-for i in range(len(RHO_H2O_T1)):
-    M_H2O_T1[i] = V_H2O * RHO_H2O_T1[i]
+M_H2O_T1 = V_H2O * RHO_H2O_T1[0]
 
 C_H2O_T1 = C_SPEZ_H2O * M_H2O_T1
 
 dQ_1 = np.zeros(len(dT_1))
 for i in range(len(dT_1)):
-    dQ_1[i] = (C_H2O_T1[(i + 1) * 2] + C_APP) * dT_1[i]
+    dQ_1[i] = (C_H2O_T1 + C_APP) * dT_1[i]
 
 
 Nu_real = dQ_1/P_APP
@@ -217,15 +214,15 @@ Nu_real = dQ_1/P_APP
 
     # Massendurchsatz
 
-M_H2O_T2 = np.zeros(len(RHO_H2O_T2))
-for i in range(len(RHO_H2O_T2)):
-    M_H2O_T2[i] = V_H2O * RHO_H2O_T2[i]
+
+M_H2O_T2 = V_H2O * RHO_H2O_T2[0]
 
 C_H2O_T2 = C_SPEZ_H2O * M_H2O_T2
 print(C_H2O_T2)
+
 dQ_2 = np.zeros(len(dT_2))
 for i in range(len(dT_2)):
-    dQ_2[i] = (C_H2O_T2[(i + 1) * 2] + C_APP) * dT_2[i]
+    dQ_2[i] = (C_H2O_T2 + C_APP) * dT_2[i]
 
         # Regerssion von (P_2, T_2)
 
