@@ -53,9 +53,10 @@
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
+      <file>numeric-verb.bbx</file>
       <file>numeric.bbx</file>
       <file>standard.bbx</file>
-      <file>numeric.cbx</file>
+      <file>numeric-verb.cbx</file>
       <file>biblatex.cfg</file>
       <file>ngerman.lbx</file>
       <file>german.lbx</file>
@@ -78,6 +79,9 @@
     </provides>
     <requires type="dynamic">
       <file>Protokoll.bcf</file>
+    </requires>
+    <requires type="editable">
+      <file>Latex/Literatur.bib</file>
     </requires>
   </external>
 </requests>
