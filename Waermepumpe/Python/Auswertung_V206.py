@@ -137,7 +137,8 @@ plt.errorbar(t, noms(uT_1), yerr=stds(uT_1), fmt="rx",
              label="Messwerte $T_{1}$")
 
     # Plots der Fit-Kurven
-plt.plot(x, T_FitI(x, *poptI_T1), "k-", label="Quadratische Regression $T_{1}$")
+plt.plot(x, T_FitI(x, *poptI_T1), color="grey", 
+         label="Regression-Kurve $T_{1}$")
 #plt.plot(x, T_FitII(x, *poptII_T1), "k-", label="Fit2 $T_{1}$")
 #plt.plot(x, T_FitIII(x, *poptIII_T1), "k-", label="Fit3 $T_{1}$")
 
@@ -170,7 +171,8 @@ plt.errorbar(t, noms(uT_2), yerr=stds(uT_2), fmt="bx",
              label="Messwerte $T_{2}$")
 
     # Plots der Fit-Kurven
-plt.plot(x, T_FitI(x, *poptI_T2), "k-", label="Quadratische Regression $T_{2}$")
+plt.plot(x, T_FitI(x, *poptI_T2), color="grey", 
+         label="Regression-Kurve $T_{2}$")
 #plt.plot(x, T_FitII(x, *poptII_T2), "k-", label="Fit2 $T_{2}$")
 #plt.plot(x, T_FitIII(x, *poptIII_T2), "k-", label="Fit3 $T_{2}$")
 
@@ -281,6 +283,8 @@ print("Drücke:\n", "-Warm:\n", uP_1, "\n", "-Kalt:\n", uP_2)
 print("Zeiten:\n", t)
 print("Parameter:\n", "Fit1:\n", poptI_T1, "\n", "Fit2:\n", poptII_T1, "\n",
       "Fit3:\n", poptIII_T1)
+print("Parameter:\n", "Fit1:\n", poptI_T2, "\n", "Fit2:\n", poptII_T2, "\n",
+      "Fit3:\n", poptIII_T2)
 print("Fehler:\n", "T_1:\n", errorI_T1, "\n", "T_2:\n", errorI_T2)
 print("Ableitungen von T_1:\n", dT_1, "\n", "Ableitungen von T_2:\n", dT_2)
 print("Güteziffer:\n", "-ideal:\n", Nu_id, "\n", "-real:\n", Nu_real)
