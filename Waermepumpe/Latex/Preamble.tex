@@ -34,7 +34,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{scrdate}
 \usepackage{lastpage}                                                               % Macht die letzte Seitenzahl referenzierbar mit \pageref{Lastpage}
-%\usepackage{natbib}                                                                % Bessere BibTeX-Einträge
 \usepackage{hyperref}
 \hypersetup{hidelinks}                                                              % Ermöglicht Verlinkungen im Dokument
 
@@ -47,7 +46,7 @@
 
 \usepackage{empheq}                                                                 % Stellt verbesserte Gleichungsumgebung bereit \begin{empheq}[<Aussehen>]{<Umgebungstyp>} ... \end{empheq}
 %test
-%\usepackage[version=3]{mhchem}                                                     % Stellt chemische Struktur und Summenformeln bereit \ce{<Summenformel>}
+\usepackage[version=3]{mhchem}                                                     % Stellt chemische Struktur und Summenformeln bereit \ce{<Summenformel>}
 %\usepackage{chemfig}                                                               % Stellt chemische Valenzstrichformeln fürganze Moleküle bereit \chemfig{<Molekül-Aufbau>}
 
 \usepackage{siunitx}                                                                % Stellt eine verbesserte Formatierung von größen mit Einheiten zur Verfügung  
@@ -57,7 +56,7 @@
 
 \usepackage{textcomp}                                                               % Fügt extra Symbole hinzu   
 \usepackage[b]{esvect}                                                              % Fügt verbesserte Vektorpfeile hinzu \vv{<Vektorname>} 
-
+\usepackage{xfrac}
 \usepackage{array}
 \usepackage{commath}																% Fügt Differentialoperatoren und -quotienten ein 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,6 +105,4 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\VNr}{V102}                                                             % Makro für die aktuelle Versuchsnummer
-\newcommand{\VN}{Drehschwingungen}                                                  % Makro für den aktuellen Versuchsnamen
-\newcommand{\VD}{31. Oktober 2013}                                                  % Makro für das Versuchsdatum
+
