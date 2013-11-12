@@ -20,8 +20,7 @@ from sympy import *
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 
-from colorama import Fore, Back, Style
-print(Fore.RED + 'some red text')
+
 
 def error(f, err_vars=None):
     from sympy import Symbol, latex
@@ -39,8 +38,10 @@ def error(f, err_vars=None):
 
 
 
-T, D = var("T D")
+T, D, b = var("T D b")
 
-I_D = T**2 * D / (4 * const.pi**2)
+I_D = b * D / (4 * const.pi**2)
 print("EigenTrägheitsmoment", error(I_D))
 
+I = T**2 * D / (4 * const.pi**2)
+print("allgTrägheitsmoment", error(I))
