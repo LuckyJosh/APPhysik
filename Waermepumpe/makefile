@@ -2,6 +2,7 @@ Protokoll.pdf: Protokoll.tex  Latex/*.tex Latex/Literatur.bib Plots/*.pdf
 	pdflatex Protokoll.tex
 	biber Protokoll
 	pdflatex Protokoll.tex
+	pdflatex Protokoll.tex
 	
 Plots/*.pdf: *.py Messdaten/*.txt	
 	python *.py

@@ -75,7 +75,8 @@
 %\usepackage{slashbox}                                                              % Ermöglicht das Einfügen mehrerer Einträge in eine Tabellenzelle, getrennt von einem '\' \backslashbox{<Eintrag unten-links>}{<Eintrag oben-rechts>} TIPP: Leerzeichen
 
 \usepackage[font=small,labelfont=bf]{caption}
-
+\usepackage{pifont}																    % Fußnoten mit Zahlen in Kreisen
+\renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{} 

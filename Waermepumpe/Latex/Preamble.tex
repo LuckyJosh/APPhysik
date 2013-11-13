@@ -64,7 +64,7 @@
 \usepackage{graphicx}                                                               % Ermöglicht das Einbinden Grafiken '\includegraphics[<Optionen>]{<Grafikpfad>}' und Veränderungen im Text, wie z.B. Schriftfarbe 
 \usepackage{floatflt}                                                         % Fügt Möglichkeit für text umflossende Grafiken und Tabellen hinzu \begin{floating<figure/table>}[option]{width} ... \caption ... \end{floatingfigure}
 %\usepackage{subfig}                                                                % Ermöglicht das Hinzufügen von Unterabbildung zu einer Abbildung
-
+\usepackage{wrapfig}
 \usepackage{tikz}                                                                   % Ermöglicht Zeichnungen im Dokument \begin{tikzpicture} ... \end{tikzpicture}
 \usetikzlibrary{arrows}                                                             % Fügt zusätzlichen Pfeilspitzen hinzu
 %\usepackage{booktabs}
@@ -75,7 +75,8 @@
 %\usepackage{slashbox}                                                              % Ermöglicht das Einfügen mehrerer Einträge in eine Tabellenzelle, getrennt von einem '\' \backslashbox{<Eintrag unten-links>}{<Eintrag oben-rechts>} TIPP: Leerzeichen
 
 \usepackage[font=small,labelfont=bf]{caption}
-
+\usepackage{pifont}
+\renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{} 

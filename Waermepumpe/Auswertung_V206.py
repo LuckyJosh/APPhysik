@@ -312,8 +312,9 @@ print("Drücke:\n", "-Warm:\n", uP_1, "\n", "-Kalt:\n", uP_2)
 print("Zeiten:\n", t)
 print("ParameterT1:\n", "Fit1:\n", poptI_T1, "\n", "Fit2:\n", poptII_T1, "\n",
       "Fit3:\n", poptIII_T1)
-print("ParameterT2:\n", "Fit1:\n", poptI_T2, "\n", "Fit2:\n", poptII_T2, "\n",
-      "Fit3:\n", poptIII_T2)
+print("ParameterT2:\n", "Fit1:\n", poptI_T2, "\n")
+#      "Fit2:\n", poptII_T2, "\n",
+#      "Fit3:\n", poptIII_T2)
 print("Fehler:\n", "T_1:\n", errorI_T1, "\n", "T_2:\n", errorI_T2)
 print("Ableitungen von T_1:\n", dT_1, "\n", "Ableitungen von T_2:\n", dT_2)
 print("Güteziffer:\n", "-ideal:\n", uNu_id, "\n", "-real:\n", uNu_real, "\n",

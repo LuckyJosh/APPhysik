@@ -34,11 +34,12 @@ $T_{1}\ \text{und}\ T_{2}$, die Drücke $p_{b}\ \text{und}\ p_{a}$, sowie die Ze
 
 In \autoref{fig:T1} und \ref{fig:T2} sind die Temperaturverläufe für $T_{1}$ und $T_{2}$ jeweils mit der entsprechenden 
 Regressionskurve dargestellt.
-Die mit Hilfe der Python Bibliothek \emph{SciPy} bestimmten Regressionsparameter für die Kurven der Form
-$T(t) = At^{2} + Bt + C$ sind in \autoref{tab:Param} gelistet.
+Die mit Hilfe der Python Bibliothek \emph{SciPy}\cite{SciPy} bestimmten Regressionsparameter für die Kurven der Form
+$T(t) = At^{2} + Bt + C$ sind in \autoref{tab:param} gelistet.\\
 
 \begin{table}[!h]
   	\centering
+  
    	\begin{tabular}{|c||c|c|c|}
    		\hline
    		Funktion & A& B& C\\ \hline \hline
@@ -46,8 +47,7 @@ $T(t) = At^{2} + Bt + C$ sind in \autoref{tab:Param} gelistet.
     		$T_{2}$& \num{3.59(20)e-06}& \num{-1.47(3)e-02}& \num{290.76(9)}\\
     		\hline
    	\end{tabular}
-   	\label{tab:Param}
-   	\caption{Parameter der Regression mit $T(t) = At^{2} + Bt + C$ }
+   	\caption{Parameter der Regression mit $T(t) = At^{2} + Bt + C$ \label{tab:param}}
 \end{table}
 	
 \begin{figure}[!h]
@@ -63,11 +63,12 @@ $T(t) = At^{2} + Bt + C$ sind in \autoref{tab:Param} gelistet.
 	\caption{Temperaturverlauf mit Regressionskurve von $T_{2}$}
 	\label{fig:T2}
 \end{figure}
-
-Aus den Regressionskurven für die Temperaturverläufe lassen sich nun deren Differentialquotienten $\od{T_{1}}{t}$ und $\tod{T_{2}}{t}$
-bestimmen, durch die, die gesuchten Apparaturgrößen berechnet werden können. Die Differntialqoutienten $\od{T_{1}}{t}$ und die 
+\newpage
+Aus den Regressionskurven für die Temperaturverläufe lassen sich nun deren Differentialquotienten 
+$\od{T_{1}}{t}$ und $\tod{T_{2}}{t}$
+bestimmen, durch die, die gesuchten Apparaturgrößen berechnet werden können. Die Differenzialquotienten $\od{T_{1}}{t}$ und die 
 berechneten, idealen und realen, Güteziffern sowie deren Verältnis sind in \autoref{tab:Güte} und die 
-Differnetialquotienten $\od{T_{2}}{t}$ und der daraus bestimmte Massendurchsatz des Transportgases $\od{m}{t}$
+Differenzialquotienten $\od{T_{2}}{t}$ und der daraus bestimmte Massendurchsatz des Transportgases $\od{m}{t}$
 in \autoref{tab:Masse} zu finden.
 
 	\subsection{Güteziffern}
@@ -77,12 +78,12 @@ Die reale Güteziffer errechnet sich aus durch Einsetzen von \eqref{eq:dQ1} in \
 $\tfrac{\Delta T_{1}}{\Delta t}$ durch den Differentialquotienten $\od{T_{1}}{t}$ sodass man 
 
 \begin{empheq}{equation}
-	\nu_{real} = \dfrac{(m_{1}c_{w} + m_{k}c_{k})}{P} \dod{T_{1}}{t}
+	\nu_{real} = \dfrac{(m_{1}c_{w} + m_{k}c_{k})}{P} \dod{T_{1}}{t} 
 	\label{eq:vreal2}
 \end{empheq}
 erhält. Dabei ist $m_{1}c_{w}$ die Wärmekapazität des Wassers in Reservoir 1, die sich aus dem Produkt der Masse $m_{1}$ und der spezifischen Wärmekapazität $c_{w}$ des Wassers ergibt.
-Mit $c_{w} = \SI{4.182}{kJkg^{-1}K^{-1}}$ und $m_{1} = V_{1}\rho_{w} = \SI{3.992}{kg}$, wobei $V_{1} = \SI{3}{dm^{3}}$ das Volumen und $\rho_{w} = \SI{0.998}{gcm^{-3}}$ 
-die Dichte des Wassers bei $\SI{21}{°C}$ sind. Die Wärmekapazität der Apparatur ist gegeben durch $m_{k}c_{k} = \SI{750}{JK^{-1}}$ und die gemessene Leistung $P = \SI{125(5)}{W}$.\\
+Mit $c_{w} = \SI{4.182}{kJkg^{-1}K^{-1}}$ \cite{Kuchling07} und $m_{1} = V_{1}\rho_{w} = \SI{3.992}{kg}$, wobei $V_{1} = \SI{4}{dm^{3}}$ das Volumen und $\rho_{w} = \SI{0.998}{gcm^{-3}}$ 
+die Dichte des Wassers bei $\SI{21}{°C}$ \cite{Kuchling07} sind. Die Wärmekapazität der Apparatur ist gegeben durch $m_{k}c_{k} = \SI{750}{JK^{-1}}$ und die gemessene Leistung ist $P = \SI{125(5)}{W}$.\\
 
 \begin{table}[!h]
 	\centering
@@ -100,16 +101,16 @@ die Dichte des Wassers bei $\SI{21}{°C}$ sind. Die Wärmekapazität der Apparat
 \end{table} 
 
 	\subsection{Massendurchsatz und mechanische Leistung}
-Die Berechnung des Massendurchsatzes $\od{m}{t}$ erfolgt durch Einsetzen von \eqref{dQ2} in \eqref{eq:dM} (mit Differentialquotienten), wodurch man die Gleichung 
+Die Berechnung des Massendurchsatzes $\od{m}{t}$ erfolgt durch Einsetzen von \eqref{eq:dQ2} in \eqref{eq:dM} (mit Differentialquotienten), wodurch man die Gleichung 
 
 \begin{empheq}{equation}
-(m_{2}c_{w} + m_{k}c_{k})\od{T_{2}}{t} = L \od{m}{t}
+(m_{2}c_{w} + m_{k}c_{k})\dod{T_{2}}{t} = L \dod{m}{t}
 \label{eq:dm2}
 \end{empheq}
 erhält.
 
 Zur Bestimmung der Verdampfungswärme $L$ wurden in \autoref{fig:pT} die Messwerte für $ p_{b} $ halb-logarithmisch gegen die reziproken Temperaturen $\tfrac{1}{T_{1}}$ auf getragen. 
-Aus \cite{V203} kann entnommen werden das zwischen $ p $ und $ T $ der exponentielle Zusammenhang
+Aus \cite{V203} kann entnommen werden das zwischen $p$ und $T$ der exponentielle Zusammenhang
 
 \begin{empheq}{equation}
  	p(T) = p_{0}\exp(\dfrac{-L}{RT})   
@@ -129,7 +130,7 @@ besteht. Durch die halb-logarithmische Skalierung und dem Aufragen gegen den Keh
 	\label{fig:pT}
 \end{figure}
 
-Durch die mit \emph{Scipy} durchgeführte lineare Regression erhält man die Geradensteigung 
+Durch die mit \emph{Scipy}\cite{SciPy} durchgeführte lineare Regression erhält man die Geradensteigung 
 \[   
 	\tfrac{-L}{R} = \SI{-2276.72(5981)}{K} 
 \] 
@@ -138,23 +139,32 @@ und daraus mit der allgemeinen Gaskonstante $R = \SI{8.315}{Jmol^{-1}K^{-1}}$\ci
 \begin{empheq}{equation*}
  	L = \SI{1.89(5)e04}{Jmol^{-1}} .
 \end{empheq}
-Durch Einsetzen dieses Wertes und der Werte $m_{2}c_{w} = \SI{3.992}{kg}$ und $m_{k}c_{k} = \SI{750}{JK^{-1}}$ in \eqref{eq:dm2} 
+Durch Einsetzen dieses Wertes und der Werte $m_{2}c_{w} = \SI{16694,44}{JK^{-1}}$ und\\
+ $m_{k}c_{k} = \SI{750}{JK^{-1}}$ in \eqref{eq:dm2} 
 ergibt sich jeweils der gesuchte Massendurchsatz.\\
 
-Durch den Massendurchsatz kann unter Verwendung von \eqref{eq:Pmech} die mechanische Leistung des Kompressors bestimmt werden.
+Bei Betrachtung der Einheiten
+\begin{empheq}{align*}
+	\si{Js^{-1}} &= \si{Jmol^{-1}} \cdot \left[ \od{m}{t}  \right] \\\Leftrightarrow\; \si{mols^{-1}} &= \left[ \od{m}{t}  \right]  
+\end{empheq} 
+ist festzustellen, dass sich dieser Massendurchsatz auf ein Mol des gesuchten Stoffes bezieht. Durch Multiplikation des erhaltenen Massendurchsatzes mit der molaren Masse von
+Dichlordifluormethan $M_{\ce{Cl2F2C}} = \SI{120}{gmol^{-1}}$\footnote{Berechnet aus den molaren Massen der Komponenten \cite{Kuchling07}} erhält man den in \autoref{tab:Masse} aufgeführten
+Massendurchsatz. 
+
+Durch diesen kann unter Verwendung von \eqref{eq:Pmech} die mechanische Leistung des Kompressors bestimmt werden.
 Das $\rho$ in \eqref{eq:Pmech} ist dabei durch die allgemeine Gasgleichung
 \begin{empheq}{equation}
 	pV = nRT
 	\label{eq:Gas}
 \end{empheq} 
-den gegebenen Größen des verwendeten Gas (\ce{Cl2F2C}), Dichte unter Normalbedingungen\footnote{ $T_{0} = \SI{0}{°C}$ und $p_{0} = \SI{1}{bar}$} 
-$\rho_{0} = \SI{5.51}{gl^{-1}}$ und dem Adiabatenexponent $\kappa = \num{1.14}$  und den vorliegenden Zustandsgrößen $T_{2}$ und $p_{a}$ zu berechnen. 
+den gegebenen Größen\cite{V206} des verwendeten Gases (\ce{Cl2F2C}), Dichte unter Normalbedingungen\footnote{ $T_{0} = \SI{0}{°C}$ und $p_{0} = \SI{1}{bar}$} 
+$\rho_{0} = \SI{5.51}{gl^{-1}}$ und dem Adiabatenexponent $\kappa = \num{1.14}$ und den vorliegenden Zustandsgrößen $T_{2}$ und $p_{a}$ zu berechnen. 
 Man erhält damit die Gleichung 
 \begin{empheq}{equation}
 	\rho = \dfrac{T_{2}p_{0}}{p_{a}T_{0}\rho_{0}}.
 	\label{eq:Rho}
 \end{empheq} 
-Durch Einsetzen von \eqref{eq:Rho} in \eqref{Pmech} erhält man
+Durch Einsetzen von \eqref{eq:Rho} in \eqref{eq:Pmech} erhält man
 \begin{empheq}{equation}
 	P_{mech} = \dfrac{1}{\kappa - 1}\left(p_{b}\sqrt[\kappa]{\dfrac{p_{a}}{p_{b}}} - p_{a} \right) \dfrac{p_{a}T_{0}\rho_{0}}{T_{2}p_{0}} \dod{m}{t}
 	\label{eq:Pmech2}
@@ -167,10 +177,10 @@ womit die gesuchte mechanische Leistung aus den gegebenen Größen berechnen kan
 		\hline
 		    Zeit      &    Differentialquotient    &       Massendurchsatz       & Mechanische Leistung \\
 		$t\,[\si{s}]$ & $\od{T_{2}}{t}\,[Ks^{-1}]$ & $\od{m}{t}\,[\si{gs^{-1}}]$ & $P_{mech}\,[\si{W}]$ \\ \hline\hline
-		     270      &        \num{-0.0134(2)}        &       \num{1.479(50)}       &  \num{15.075}   \\
-		     450      &        \num{-0.0121(3)}        &       \num{1.336(49)}       &  \num{16.976}   \\
-		     630      &        \num{-0.0108(3)}        &       \num{1.193(49)}       &  \num{16.843}   \\
-		     810      &        \num{-0.0095(4)}        &       \num{1.050(51)}       &  \num{17.234}   \\ \hline
+		     270      &      \num{-0.0134(2)}      &       \num{1.479(50)}       &     \num{15.075}     \\
+		     450      &      \num{-0.0121(3)}      &       \num{1.336(49)}       &     \num{16.976}     \\
+		     630      &      \num{-0.0108(3)}      &       \num{1.193(49)}       &     \num{16.843}     \\
+		     810      &      \num{-0.0095(4)}      &       \num{1.050(51)}       &     \num{17.234}     \\ \hline
 	\end{tabular}
 	\caption{Massendurchsatz und mechanische Leistung des Transportgases}
 	\label{tab:Masse}

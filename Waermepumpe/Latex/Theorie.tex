@@ -1,0 +1,48 @@
+Aus dem ersten Hauptsatz der Thermodynamik geht hervor, dass die innere Energie, die Summe 
+Wärmeänderung und der verrichteten Arbeit ist.
+\begin{empheq}{equation}
+	dU = \delta Q + \delta W
+\end{empheq}
+Sobald dem kälteren Reservoir die Wärmemenge $Q_2$ abgezogen wird, wird die Wärmemenge $Q_1$ 
+dem wärmeren Reservoir zu geführt, dies geschieht nur mit der verrichteten Arbeit $A$:
+\begin{empheq}{equation}	
+	Q_1 = Q_2 + A
+\end{empheq}
+Die Güteziffer $\nu$ gibt an wie \enquote{gut}, also wie gering der Verlust ist. 
+Sie sagt aus, dass bei kleiner Temperaturdifferenz 
+weniger Arbeitsaufwand geleistet werden muss.
+\begin{empheq}{equation}
+	\nu_{ideal} = \dfrac {Q_1}{A} = \frac{T_1}{T_1-T_2}
+	\label{eq:vid}
+\end{empheq}
+Da das System nicht vollständig isoliert ist, gibt es Abweichungen von $\nu_{ideal}$ und der Vorgang ist somit auch nicht reversibel unter realen Voraussetzungen, daher folgt:
+\begin{empheq}{equation}	
+	\nu_{real} < \dfrac{T_1}{T_1-T_2}
+\end{empheq}
+Berechnen lässt sich die reale Güteziffer durch die aufgenommene elektrische Leistung $P$ und der Änderung der Wärmemenge 
+$Q_{1}$, welche sich wiederum aus der Änderung der Temperatur $T_{1}$ bestimmen lässt. Man bedarf demnach der zwei Gleichungen
+\begin{empheq}{align}
+	\label{eq:dQ1}
+	\dfrac{\Delta Q_{1}}{\Delta t} &= (m_{1}c_{w} + m_{k}c_{k}) \dfrac{\Delta T_{1}}{\Delta t} \\
+	\label{eq:vreal}
+	\dfrac{1}{P} \dfrac{\Delta Q_{1}}{\Delta t} &= \nu_{real}. 
+\end{empheq}  
+
+Der Massendurchsatz des Transportgases, jene Größe die beschreibt wie viel Masse des Transportgases pro Zeiteinheit
+durch das Drosselventil \emph{D} strömen. \\
+Dieser lässt sich vergleichbar zur realen Güteziffer mit den Gleichungen 
+\begin{empheq}{align}
+	\label{eq:dQ2}
+	\dfrac{\Delta Q_{2}}{\Delta t} &= (m_{2}c_{w} + m_{k}c_{k}) \dfrac{\Delta T_{2}}{\Delta t} \\
+	\label{eq:dM}
+	\dfrac{1}{L} \dfrac{\Delta Q_{2}}{\Delta t}  &= \dfrac{\Delta m}{\Delta t} 
+\end{empheq}  
+bestimmen, wobei $L$ die Verdampfungswärme des verwendeten Gases darstellt.
+
+Mit Hilfe des Massendurchsatzes ist nun die mechanische Leistung des Kompressor durch
+\begin{empheq}{equation}
+	P_{mech} = \dfrac{1}{\kappa - 1}\left(p_{b}\sqrt[\kappa]{\dfrac{p_{a}}{p_{b}}} - p_{a} \right) \dfrac{1}{\rho} 
+	\dfrac{\Delta m}{\Delta t}
+	\label{eq:Pmech}
+\end{empheq}
+ berechnen. Dabei ist $\kappa$ der Adiabatenexponent und $\rho$ die Dichte des verwendeten Gases. 
