@@ -113,6 +113,7 @@ ub = ufloat(popt[1], error[1])
 I_D = (uD * ub) / (4 * const.pi**2)  # kg * m²
 print(I_D.error_components().items())
 print("Trägheitsmoment", I_D)
+np.savetxt("Test.txt", [I_D], fmt=str("%r"))
 
 #%%
     # Plot a² -> T²
@@ -165,7 +166,7 @@ print("--Mittelwert Kugel", uK_T_avr)
 I_K = (uD * uK_T_avr**2) / (const.pi**2 * 4)   # kgm²
 
 #I_K -= I_D
-print("--Bestimmt I_K:", I_K) 
+print("--Bestimmt I_K:", I_K*1e03) 
 print("Mittelwerte Kugel", K_T_avrs)
 
 
@@ -183,7 +184,7 @@ print("--Mittelwert Zylinder", uZ_T_avr)
 I_Z = (uD * uZ_T_avr**2) / (4 * const.pi**2)  # kgm²
 
 #I_Z -= I_D
-print("--Bestimmtes I_Z:", I_Z)
+print("--Bestimmtes I_Z:", I_Z*1e03)
 print("Mittelwerte Zylider", Z_T_avrs)
 
 #%%
@@ -223,6 +224,7 @@ print("--Trägheitsmoment Zylinder", uI_Z)
 print("Masse Zylinder", uM_Z)
 print("Radius Zylinder", uR_Z)
 #%%
+
 
 ## Speichern der Tägheitsmomente
 np.savetxt("Ausgabe/Traegheitsmoment_Koerper_Kugel.txt", [I_K, uI_K],
@@ -276,6 +278,7 @@ I_P2 = (uD * uP2_T_avr**2) / (4 * const.pi**2)  # kgm²
 #I_P2 -= I_D
 print("Pose2:", I_P2)
 print("MittelwerteP2", P2_T_avrs)
+
 #%%
 ## Berechnung Traegheitsmomente Puppenteile
 
@@ -367,7 +370,7 @@ def I_Z_h(m, h, r):
 
 
 def I_Steiner(I, a, m):
-    return I + m * a**2
+    return I + (m * a**2)
 
 # I mit vertikaler Drehachse
 I_a_v = I_Z_v(uM_a, uR_a)
@@ -396,6 +399,13 @@ I_ges_P1 = (I_t_v + I_k_v + 2 * I_Steiner(I_a_h, P1_a, uM_a) +
 I_ges_P2 = (I_t_v + I_k_v + 2 * I_Steiner(I_a_h, P2_a, uM_a) +
             2 * I_Steiner(I_b_h, P2_b, uM_b))
 
+I_P2_test = unp.uarray(np.zeros(3), np.zeros(3))
+I_P2_test[0] = I_t_v + I_k_v 
+I_P2_test[1] = 2* (I_a_h + (uM_a * P2_a**2)) 
+I_P2_test[2] = 2* (I_b_h + (uM_b * P2_b**2))
+
+print("TEST-1:", P2_b, "=", uL_b/2, "+", uR_t)
+print("TEST", I_P2_test)
 print("Vertikale Momente", I_k_v, I_t_v, I_a_v, I_b_v)
 print("Horizontale Momente", I_a_h, I_b_h)
 print(I_ges_P1, I_ges_P2)
@@ -409,7 +419,15 @@ np.savetxt("Ausgabe/Trageheitsmoment_Puppe_Pose2.txt",
            [I_P2, I_ges_P2], fmt=str("%r"),
            header="Gemessen [kgm²] \nBerechnet [kgm²]")
 
+## Relative Fehler
+r_K = (uI_K.n - I_Z.n)/uI_K.n
+r_Z = (uI_Z.n - I_Z.n)/uI_Z.n
+r_P1 = (I_ges_P1.n - I_P1.n)/I_ges_P1.n
+r_P2 = (I_ges_P2.n - I_P2.n)/I_ges_P2.n
 
+
+print("realtive Unterschiede:", r_K, r_Z, r_P1, r_P2)
+print("mittel der Unteschiede:",np.mean([r_K, r_Z, r_P1, r_P2]))
 
 
 

@@ -38,10 +38,20 @@ def error(f, err_vars=None):
 
 
 
-T, D, b = var("T D b")
+T, D, b, m, R, h = var("T D b m R h")
 
 I_D = b * D / (4 * const.pi**2)
 print("EigenTrägheitsmoment", error(I_D))
 
 I = T**2 * D / (4 * const.pi**2)
 print("allgTrägheitsmoment", error(I))
+
+
+I_K = 0.5 * m * R**2
+print("Kugel:\n", error(I_K))
+
+I_H = m * (R**2/4 + h**2/12)
+print("Zy,H:\n", error(I_H))
+
+
+

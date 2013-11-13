@@ -10,9 +10,9 @@
 \usepackage[utf8]{inputenc}                                                         % Legt Zeichenkodierung fest
 
 \usepackage[ngerman]{babel}                                                         % Deutsche Rechtschreibung
-\usepackage[ngerman]{varioref}                                                      % Versieht Referenzen mit Bezeichnung des Objektes
+%\usepackage[ngerman]{varioref}                                                      % Versieht Referenzen mit Bezeichnung des Objektes
 \usepackage{lmodern}                                                                % Empfohlener T1-Font für deutsche Texte
-\usepackage{biblatex}
+\usepackage[backend=biber, style=numeric-verb]{biblatex}
 \usepackage[babel,german=quotes]{csquotes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -29,13 +29,13 @@
 \rhead{\VD}                                                                      % Angabe Rechts-Oben
 %\lfoot{}                                                                           % Angabe Links-Unten
 \cfoot{\textbf{\thepage\ von \pageref{LastPage}}}                                   % Angabe Mitte-Unten
-\rfoot{Johannes Schlüter\\ Joshua Luckey}                                           % Angabe Rechts-Unten
+\rfoot{\Namen}                                           % Angabe Rechts-Unten
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{scrdate}
 \usepackage{lastpage}                                                               % Macht die letzte Seitenzahl referenzierbar mit \pageref{Lastpage}
-%\usepackage{natbib}                                                                % Bessere BibTeX-Einträge
-%\usepackage{hyperref}                                                              % Ermöglicht Verlinkungen im Dokument
+\usepackage{hyperref}
+\hypersetup{hidelinks}                                                              % Ermöglicht Verlinkungen im Dokument
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -46,7 +46,7 @@
 
 \usepackage{empheq}                                                                 % Stellt verbesserte Gleichungsumgebung bereit \begin{empheq}[<Aussehen>]{<Umgebungstyp>} ... \end{empheq}
 %test
-%\usepackage[version=3]{mhchem}                                                     % Stellt chemische Struktur und Summenformeln bereit \ce{<Summenformel>}
+\usepackage[version=3]{mhchem}                                                     % Stellt chemische Struktur und Summenformeln bereit \ce{<Summenformel>}
 %\usepackage{chemfig}                                                               % Stellt chemische Valenzstrichformeln fürganze Moleküle bereit \chemfig{<Molekül-Aufbau>}
 
 \usepackage{siunitx}                                                                % Stellt eine verbesserte Formatierung von größen mit Einheiten zur Verfügung  
@@ -56,8 +56,9 @@
 
 \usepackage{textcomp}                                                               % Fügt extra Symbole hinzu   
 \usepackage[b]{esvect}                                                              % Fügt verbesserte Vektorpfeile hinzu \vv{<Vektorname>} 
-
+\usepackage{xfrac}
 \usepackage{array}
+\usepackage{commath}																% Fügt Differentialoperatoren und -quotienten ein 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{graphicx}                                                               % Ermöglicht das Einbinden Grafiken '\includegraphics[<Optionen>]{<Grafikpfad>}' und Veränderungen im Text, wie z.B. Schriftfarbe 
@@ -66,17 +67,20 @@
 
 \usepackage{tikz}                                                                   % Ermöglicht Zeichnungen im Dokument \begin{tikzpicture} ... \end{tikzpicture}
 \usetikzlibrary{arrows}                                                             % Fügt zusätzlichen Pfeilspitzen hinzu
+%\usepackage{booktabs}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[normalem]{ulem}                                                         % Fügt verbesserte Unterschtreichungen hinzu, z.B. doppelt, gezackt, gewellt, etc.
 \usepackage{enumitem}                                                               % Ermöglicht detailierte Einstellungen an Aufzählungssymbolen
 %\usepackage{slashbox}                                                              % Ermöglicht das Einfügen mehrerer Einträge in eine Tabellenzelle, getrennt von einem '\' \backslashbox{<Eintrag unten-links>}{<Eintrag oben-rechts>} TIPP: Leerzeichen
 
+\usepackage[font=small,labelfont=bf]{caption}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{} 
 \author{} 
-
+\addbibresource{Latex/Literatur.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagestyle{fancy}                                                                   % Anwenden des Erweiterten Seitenlayouts
@@ -86,14 +90,19 @@
 \setlength{\skip\footins}{2cm}                                                      % Abstand zwischen Text und Fußnoten
 %\setlength{\itemsep}{7.5pt}
 
-\newcolumntype{C}{ >{\centering\arraybackslash} m{4.2cm}}
+\newcolumntype{C}{ >{\centering\arraybackslash} m{2.5 cm}}
 
 
-\newcommand{\intd}[1]{\,\mathrm{d}#1}
-\newcommand{\im}{\ensuremath{\textsl{i}}}
-\newcommand{\e}{\ensuremath{\textsl{e\;\!}}}
+
+\renewcommand{\i}{\ensuremath{\textsl{i}}}
+\newcommand{\e}{\ensuremath{\textsl{e}}}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\renewcommand{\Re}{\mathrm{Re}\,}
+
+
+%\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\mean}{\langle}{\rangle}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\VNr}{V102}                                                             % Makro für die aktuelle Versuchsnummer
-\newcommand{\VN}{Drehschwingungen}                                                  % Makro für den aktuellen Versuchsnamen
-\newcommand{\VD}{31. Oktober 2013}                                                  % Makro für das Versuchsdatum
+

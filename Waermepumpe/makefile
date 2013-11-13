@@ -10,7 +10,9 @@ clean:
 	rm -f Latex/*.aux
 	rm -f *.aux
 	rm -f Latex/*.synctex
-	rm -f *.synctex
+	rm -f *.synctex	
+	rm -f Latex/*.synctex.gz
+	rm -f *.synctex.gz
 	rm -f Latex/*.bbl
 	rm -f *.bbl
 	rm -f Latex/*.bcf
