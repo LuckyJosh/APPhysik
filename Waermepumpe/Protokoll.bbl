@@ -1,0 +1,69 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{nty}
+    \entry{Kuchling07}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=bbbaa048600aa66c82c8b6d12560aaaa}{Kuchling}{K\bibinitperiod}{Horst}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=bbbaa048600aa66c82c8b6d12560aaaa}{Kuchling}{K\bibinitperiod}{Horst}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Fachbuchverlag Leibzig im Carl Hanser Verlag München}%
+      }
+      \strng{namehash}{bbbaa048600aa66c82c8b6d12560aaaa}
+      \strng{fullhash}{bbbaa048600aa66c82c8b6d12560aaaa}
+      \field{sortinit}{K}
+      \field{labeltitle}{Taschenbuch der Physik}
+      \field{title}{Taschenbuch der Physik}
+      \field{volume}{19}
+      \field{year}{2007}
+    \endentry
+    \entry{SciPy}{misc}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{SciPy}
+      \field{title}{SciPy}
+      \verb{url}
+      \verb http://docs.scipy.org/doc/
+      \endverb
+    \endentry
+    \entry{V203}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V203 Verdampfungswärme und Dampfdruck-Kurve}
+      \field{title}{Versuchsanleitung}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V203.pdf
+      \endverb
+    \endentry
+    \entry{V206}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V206 Wärmepumpe}
+      \field{title}{Versuchsanleitung}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V206.pdf
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

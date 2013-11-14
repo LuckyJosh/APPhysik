@@ -25,17 +25,17 @@
     
     
   \section{Theorie}
-    Bei den im erseten Versuchsteil zu bestimmenden Größen, handelt es sich um sogenannte \emph{elastische Konstanten},
+    Bei den im ersten Versuchsteil zu bestimmenden Größen, handelt es sich um sogenannte \emph{elastische Konstanten},
     die im allgemeinen ein Maß für die relative Form- und Volumenveränderung eines Materials sind, welches äußeren Kräften
-    ausgesetzt ist. Sind diese Veränderungen elastisch, also reversibel so nennt man den Zusammenhang zwischen Kraft und 
+    ausgesetzt ist. Sind diese Veränderungen elastisch, also reversibel, so nennt man den Zusammenhang zwischen Kraft und 
     relativer Veränderung Hooksches Gesetz. 
-    Kräfte die dabei auf die Oberfläche eines Matrials einwirken wie beispielsweise der Druck, werden
-    im allgemeinen Spannungen genannt. Die Anzahl der zur Beschreibung eines Materials nötigen elastischen Konstanten, 
-    hängt vorallem von der inneren Struktur des Materials ab und reicht von einem Maximum von $36$ Konstanten zu einem
-    Minimum von $2$ Konstanten für isotrope Materialien wie sie auch in diesm Versuch untersucht werden.
+    Kräfte die dabei auf die Oberfläche eines Materials einwirken wie beispielsweise der Druck, werden
+    im Allgemeinen Spannungen genannt. Die Anzahl der zur Beschreibung eines Materials nötigen elastischen Konstanten 
+    hängt vor allem von der inneren Struktur des Materials ab und reicht von einem Maximum von 36 Konstanten zu einem
+    Minimum von 2 Konstanten für isotrope Materialien wie sie auch in diesem Versuch untersucht werden.
     Zu den zwei benötigten Konstanten, dem Torsionsmodul $G$ und dem Kompressionsmodul $Q$ kommen in diesem Versuch
     noch zwei weitere, das Elastizitätsmodul $E$ und die Poissonsche Querkontraktionszahl $\mu$ hinzu.
-    Der Zusammenhang dieser vier Größen lässt mit den Gleichungen \ref{EG} und \ref{EQ} beschreiben.
+    Der Zusammenhang dieser vier Größen lassen mit den Gleichungen \eqref{EG} und \eqref{EQ} beschreiben.
     
     \begin{empheq}{align}
       E &= 2G(\mu + 1) \label{EG} \\
@@ -43,12 +43,12 @@
     \end{empheq}
     
     
-    Die Bestimmung des Torsionsmoduls erflogt in diesem Versuch mit Hilfe einer dynamischen Methode, d.h. die 
+    Die Bestimmung des Torsionsmoduls erfolgt in diesem Versuch mit Hilfe einer dynamischen Methode, d.h.  
     auf den hier zu untersuchenden Draht wirken periodisch zeitabhängige Spannungen. Dies ist der statischen
     Methode gegenüber vorteilhafter, da keine elastischen Nachwirkungen auftreten, durch die das Material 
     nur verzögert in seinen Ausgangszustand zurück geht.
     Für die hier verwendete dynamische Methode, wird der zu untersuchende Draht in harmonische Drehschwingungen
-    Mit der Periodendauert
+    mit der Periodendauer
     \begin{empheq}{equation}
       T = 2\pi \sqrt{\frac{J}{D}} 
       \label{T}
@@ -61,17 +61,17 @@
     \end{empheq} 
     beschrieben wird. Dabei ist $L$ die Länge des Drahtes und $R$ dessen Radius.\\
     
-    \newpage
-    Für die Bestimmung des magentischen Moments $m$ im zweiten Versuchsteil wird die durch
+    Für die Bestimmung des magnetischen Moments $m$ im zweiten Versuchsteil wird die durch
     
     \begin{empheq}{equation}
       B = \mu_{0}\mu_{r}\frac{8}{\sqrt{125}}\frac{IN}{R}
       \label{B}
-    \end{empheq}
-    
+    \end{empheq} 
     aus\,\cite{Schaaf08} berechenbare magnetische Flussdichte eines Helmholtzspulenpaares benötigt, für die somit
-    die geometrischen Abmessungen der Spulen  und der durch diese fließende Strom $I$ benötigt werden.
-    Auch in diesem Versuchsteil wird der Daht in harmonische Schwingungen versetzt deren Periodendauer
+    der Radius $R$ und die Windungszahl $N$ der Spulen, sowie der durch diese fließende Strom $I$ benötigt werden.
+    Für die Permeabilitätskonstante gilt nach\,\cite{Kuchling07}\\ $\mu_{0} = \SI{4\pi e10}{VsA^{-1}m^{-1}}$ und da 
+    die Spulen keinen Kern (aus z.B. Eisen) besitzen ist die relative Permeabilitätszahl $\mu_{r} = \mu_{Luft} \approx 1$.  
+    Auch in diesem Versuchsteil wird der Draht in harmonische Schwingungen versetzt, deren Periodendauer
     \begin{empheq}{equation}
       T_{m} =2 \pi \sqrt{\frac{J}{mB + D}} 
       \label{Tm}
@@ -83,10 +83,10 @@
     
     Der Versuchsaufbau entspricht dem in Abbildung \ref{Aufbau} mit dem Zusatz, dass links von der Apparatur 
     noch eine Glühlampe mit Blende und Fokussierlinse steht und um etwa 90° versetzt ein 
-    Photodiode, welcher ein H-Signal weitergibt, wenn diese von dem Lichtstrahl über den Spiegel 
+    \textcolor{red}{Photodiode, welcher ein H-Signal weitergibt}, wenn diese von dem Lichtstrahl über den Spiegel 
     getroffen wird.
-    Als erstes ist gefordert eine Stoppuhr mit einer Logikschaltung selber zu erstellen, diese soll 4 
-    Phasen haben:
+   \textcolor{red}{Als erstes ist gefordert eine Stoppuhr mit einer Logikschaltung selber zu erstellen, diese soll 4 
+    Phasen haben:}
     
     \begin{enumerate}
       \item{Start der Stoppuhr} 
@@ -94,12 +94,14 @@
       \item{Stopp der Stoppuhr} 
       \item{Reset der Stoppuhr} 
     \end{enumerate}
-
-   
+    \textcolor{red}{\textbf{Kommentar}: Die Photodiode ist ein analoges Bauteil. \enquote{Nichts} ist eine Phase?  
+    Das lässt sich besser formulieren.}
+    
     Sobald der Lichtstrahl vom Spiegel reflektiert wird und dieser in die Photodiode trifft, gibt 
-    diese ein Signal auf die Schaltung, dann geht die Stoppuhr in Phase 1, beim zweiten Mal in 
-    Phase 2 usw..
-    Danach wird noch die Dicke des Drahtes an 4 verschiedenen Stellen vermessen und 
+    diese ein Signal auf die Schaltung, dann geht die Stoppuhr in \textcolor{red}{Phase 1}, beim zweiten Mal in 
+    \textcolor{red}{Phase 2} usw..
+  
+    Danach wird die Dicke des Drahtes an 4 verschiedenen Stellen vermessen und 
     andere feste Größen an der Apparatur abgelesen.
     Durch das Justierrad mit Klemmschraube wird der Spiegel so ausgerichtet, dass der 
     Lichtstrahl neben der Photodiode auf der dort justierten Mattscheibe zu sehen ist, danach wird 
@@ -108,37 +110,36 @@
     Schlussendlich werden nun die Helmholtzspulen eingeschaltet, damit ein homogenes 
     Magnetfeld erzeugt wird, um dann die Messungen noch einmal auszuführen.
     \begin{figure}[b]
-      \centering
-      \includegraphics*[scale = 0.75]{Grafik/Versuchsaufbau.jpg}%
-      \caption{Skizze des Versuchsaufbaus}
-      \label{Aufbau}%
-    \end{figure}
-   
-   
-  \newpage
+          \centering
+          \includegraphics*[scale = 0.75]{Grafik/Versuchsaufbau.jpg}%
+          \caption{Skizze des Versuchsaufbaus}
+          \label{Aufbau}%
+    \end{figure}    
+
+
   \section{Auswertung}
     \label{Auswertung}
-    Im folgenden sind die aufgenommenen Messwerte, sowie die aus diesen berechneten Werte
+    Im Folgenden sind die aufgenommenen Messwerte, sowie die aus diesen berechneten Werte
     aufgeführt. An entsprechenden Stellen sind Erläuterungen zu den Berechnungen gegeben.
-    Der nachflogenden Abschnitt \ref{Fehlerrechnung} enthält die Fehlergleichungen für die hier
+    Der nach folgende Abschnitt \ref{Fehlerrechnung} enthält die Fehlergleichungen für die hier
     aufgeführten Größen.
     
+    \subsection{Bestimmung der elastischen Konstanten}
     In den Tabellen \ref{Draht} bis \ref{Spule} sind für die noch folgenden Rechnungen benötigten
     Apparaturgößen angegeben.
-    
-    
-    
+  
+   
     \begin{table}[h]% Drahtdaten
         \centering
-        \begin{tabular}{|C|C|}
+        \begin{tabular}{|D|C|}
           \hline
           Durchmesser & Länge \\
-          $d[\si{mm}]$ & $L[\si{cm}]$\\ \hline\hline
+          $d\,[\si{mm}]$ & $L\,[\si{cm}]$\\ \hline\hline
            \num{0,195(1)}            & \num{62,7(1)} \\ 
            \num{0,198(1)} & \\
            \num{0,201(1)} & \\
            \num{0,196(1)} & \\ \cline{1-1}
-           $\overline{d} = \num{0,1975(5)} $& \\
+           $\langle d \rangle = \SI{0,1975(5)}{mm} $& \\
           \hline
         \end{tabular}
         \caption{Messgrößen des Drahtes}
@@ -187,7 +188,7 @@
           \num{18,359(1)} & \num{18,320(1)}\\ 
           \num{18,346(1)} & \num{18,342(1)}\\   
           \num{18,349(1)} & \\ \hline
-          \multicolumn{2}{|c|}{$\overline{T} = \num{18.3469(3)}$}\\
+          \multicolumn{2}{|c|}{$\langle T \rangle = \SI{18.347(2)}{s}$}\\
           \hline
         \end{tabular}
         \centering
@@ -196,9 +197,9 @@
       \end{table}
       
       
-    Mit Hilfe der Gleichung \ref{T} für die theoretische Periodendauer dieser harmonischen Schwingung,
+    Mit Hilfe der Gleichung \eqref{T} für die theoretische Periodendauer dieser harmonischen Schwingung,
     mit $J = J_{K} + J_{H}$, da sich das Gesamtträgheitsmoment aus dem 
-    der Kugel und dem der Halterung zusammensetzt und der Gleichung \ref{D} erhält man mit den Werten aus
+    der Kugel und dem der Halterung zusammensetzt und der Gleichung \eqref{D} erhält man mit den Werten aus
     Tabelle \ref{Draht} und der mittleren Periodendauer $\overline{T}$ aus Tabelle \ref{T_ohne} das Torsionsmodul $G$.
     \begin{empheq}{equation}
       G = \frac{8\pi L}{\overline{T}^{2} R^{4}} (J_{K} + J_{H}) 
@@ -210,8 +211,8 @@
       G = \SI{6,61(7)e10}{Nm^{-2}} .
     \end{empheq}
     
-    Daraus lassen sich mit dem gegebenen Elastizitätsmodul $E = \SI{21,00(5)e11}{Nm^{-2}}$,
-    die beiden noch überigen elastischen Konstanten aus den Gleichungen \ref{EG} und \ref{EQ} bestimmen.
+    Daraus lassen sich mit dem gegebenen Elastizitätsmodul $E = \SI{21,00(5)e10}{Nm^{-2}}$,
+    die beiden noch übrigen elastischen Konstanten aus den Gleichungen \eqref{EG} und \eqref{EQ} bestimmen.
     Man erhält die Poissonsche Querkontraktionszahl 
     \begin{empheq}{equation*}
       \mu = \SI{0,588(17)}{}
@@ -221,9 +222,9 @@
       Q = \SI{-4,0(8)e11}{Nm^{-2}} .
     \end{empheq}
     
+    \subsection{Bestimmung des magnetischen Moments}
     
-    
-    In Tabelle \ref{T_mit} sind die Periodendauern der Schwingung mit dem äußerem Magnetdfeld der Helmholtzspulen
+    In Tabelle \ref{T_mit} sind die Periodendauern der Schwingung mit dem äußerem Magnetfeld der Helmholtzspulen
     eingetragen.\\
     
     
@@ -238,7 +239,7 @@
           \num{4,937(1)} & \num{4,538(1)}\\ 
           \num{4,897(1)} & \num{4,628(1)}\\ 
           \num{4,838(1)} & \num{4,594(1)}\\ \hline
-          \multicolumn{2}{|c|}{$\overline{T_{m}} = \num{4.7498(3)}$}\\
+          \multicolumn{2}{|c|}{$\langle T_{m}\rangle = \num{4.750(21)}$}\\
           \hline
         \end{tabular}
         \centering
@@ -249,12 +250,12 @@
     
     
     Mit der Spulenstromstärke $I = \SI{1,00(2)}{A}$ und den Werten aus Tabelle \ref{Spule} ergibt sich die 
-    magentische Flussdichte des Spulenpaares aus der Gleichung \ref{B} zu
+    magnetische Flussdichte des Spulenpaares aus der Gleichung \eqref{B} zu
     \begin{empheq}{equation*}
       B = \SI{4,50(7)}{T} .
     \end{empheq}
     
-    Eine Gleichung für das magnetische Moment $m$ erhält man aus den Gleichungen \ref{Tm} und \ref{D} durch umformen.
+    Eine Gleichung für das magnetische Moment $m$ erhält man aus den Gleichungen \eqref{Tm} und \eqref{D} durch umformen.
     \begin{empheq}{equation}
       m = \frac{4\pi^{2} (J_{K} + J_{H})}{\overline{T_{m}}^{2} B} - \frac{\pi G R^{4}}{2LB} 
       \label{m}
@@ -274,11 +275,11 @@
       
      
       
-
+\newpage
   \subsection{Fehlerrechnung}
     \label{Fehlerrechnung}
     
-    Im Flogenden sind die mittels Gaußscher Fehrlerfortpflanzung bestimmten Gleichungen für die Fehler
+    Im Folgenden sind die mittels Gaußscher Fehlerfortpflanzung bestimmten Gleichungen für die Fehler
     der in Abschnitt \ref{Auswertung} berechneten Größen.\\
     
     Der Fehler des Trägheitmoments der Kugel $J_{K}$ ergibt sich aus: 
@@ -286,28 +287,28 @@
       \sigma_{J_{K}} =\sqrt{0.16 \sigma_{m_{K}}^{2} r_{K}^{4} + 0.64 \sigma_{r_{K}}^{2} m_{K}^{2} r_{K}^{2}}
     \]
     
-    Den Fehler der für das Torsionsmodul aus Gleichung \ref{G} erhält man durch:
+    Den Fehler der für das Torsionsmodul aus Gleichung \eqref{G} erhält man durch:
     \[
       \sigma_{G} = \sqrt{\frac{64 \pi^{2} L^{2} \sigma_{J_{K}}^{2}}{R^{8} T^{4}} + \frac{256 \pi^{2} L^{2} \sigma_{T}^{2}}{R^{8} T^{6}} \left(J_{H} + J_{K}\right)^{2} +
       \frac{1024 \pi^{2} L^{2} \sigma_{R}^{2}}{R^{10} T^{4}} \left(J_{H} + J_{K}\right)^{2} + \frac{64 \pi^{2} \sigma_{L}^{2}}{R^{8} T^{4}} \left(J_{H} + J_{K}\right)^{2}}
     \]
   
-    Für die Poissonsche Querkontraktionszahl aus Gleichung \ref{EG} erhält man den Fehler:
+    Für die Poissonsche Querkontraktionszahl aus Gleichung \eqref{EG} erhält man den Fehler:
     \[
       \sigma_{\mu} = \sqrt{\frac{E^{2} \sigma_{G}^{2}}{4 G^{4}} + \frac{\sigma_{E}^{2}}{4 G^{2}}}
     \]
   
-    Der Fehler des Kompressionsmoduls $Q$ nach Gleichung \ref{EQ} ist:
+    Der Fehler des Kompressionsmoduls $Q$ nach Gleichung \eqref{EQ} ist:
     \[
       \sigma_{Q} = \sqrt{\frac{36 E^{2} \sigma_{\mu}^{2}}{\left(- 6 \mu + 3\right)^{4}} + \frac{\sigma_{E}^{2}}{\left(- 6 \mu + 3\right)^{2}}}
     \]
  
-     Der Fehler der magnetischen Flussdichte $B$ der Helmholtzspulen nach Gleichung \ref{B} ergibt sich zu:
+     Der Fehler der magnetischen Flussdichte $B$ der Helmholtzspulen nach Gleichung \eqref{B} ergibt sich zu:
     \[
       \sigma_{B} = \sqrt{\frac{I^{2} N^{2}}{R^{4}} \frac{64}{125}\mu_{0}^{2} \sigma_{R}^{2} + \frac{I^{2} \sigma_{N}^{2}}{R^{2}}\frac{64}{125}\mu_{0}^{2}+ \frac{N^{2} \sigma_{I}^{2}}{R^{2}} \frac{64}{125}\mu_{0}^{2}}
     \]
   
-    Für den Fehler des magnatischen Moments $m$ nach der Gleichung \ref{m} erhält man:\\
+    Für den Fehler des magnetischen Moments $m$ nach der Gleichung \eqref{m} erhält man:\\
   
     $\sigma_{m} = \sqrt{\sigma_{B}^{2} \left(\frac{\pi G R^{4}}{2 B^{2} L} - \frac{ 4\pi^{2} }{B^{2} T^{2}} \left(I_{H} + I_{K}\right)\right)^{2} + \frac{4\pi^{2} G^{2} R^{6} \sigma_{R}^{2}}{B^{2} L^{2}} + 
      \frac{\pi^{2} G^{2} R^{8} \sigma_{L}^{2}}{4 B^{2} L^{4}} + \frac{16\pi^{4} \sigma_{I_{K}}^{2}}{B^{2} T^{4}} +
@@ -319,26 +320,25 @@
   \newpage
   \section{Diskussion}
     Die aus den Versuchsergebnissen errechneten Werte für die elastischen Konstanten wirken auf den ersten Blick plausibel,
-    da die drei Spannungen, also Trosions-, Elastizitäts- und Kommpressionsmodul, wie für den mit diesen Größen weniger vertrauten
-    zu erwarten ist, ungefähr von der gleichen Größenordnung sind. Einzig die Negativität des Kompressionsmoduls ist auch für den 
-    unvertrauten wenig sinnvoll.\\
+    da Trosions-, Elastizitäts- und Kommpressionsmodul, wie zu erwarten ist, in etwa die gleiche Größenordnung haben. Dennoch 
+    ist das negative Vorzeichen des Kommpressionsmoduls nicht sinnvoll und entspricht, wie im Weiteren erläutert, auch nicht der Realität.\\
     
-    Diese Eindücker werden im Vergleich mit den Literaturwerten aus\,\cite{Kuchling07} bestätigt. Ausgehend von dem Elastizitätsmodul,
+    Diese Einschätzungen werden durch den Vergleich mit den Literaturwerten aus\,\cite{Kuchling07} bestätigt. Ausgehend von dem Elastizitätsmodul,
     welches nicht gemessen wurde sondern gegeben war, kommen für das Material des Drahtes Eisen und Baustahl in Betracht,
     wobei Baustahl mit $E_{lit,Stahl} = \SI{210}{\giga Nm^{-2}}$, die genauste Übereinstimmung zeigt, 
-    Eisen mit $E_{lit,Fe} = \SI{211}{\giga Nm^{-2}}$ aber noch in der angegebenen Standatrdabweichung liegt.\\
+    Eisen mit $E_{lit,Fe} = \SI{211}{\giga Nm^{-2}}$ aber noch in der angegebenen Standardabweichung liegt.\\
     Im Vergleich zu den Literaturwerten für den Baustahl zeigt sich für das Torsionsmodul $G_{lit,Stahl} =\SI{85}{\giga Nm^{-2}}$ eine 
-    geringere Abwiechung nach oben, wohingegen das Kompressionsmodul sehr stark vom Literaturwert $Q_{lit,Stahl} =\SI{167}{\giga Nm^{-2}}$
+    geringere Abweichung nach oben, wohingegen das Kompressionsmodul sehr stark vom Literaturwert $Q_{lit,Stahl} =\SI{167}{\giga Nm^{-2}}$
     und außerdem noch das falsche Vorzeichen aufweist. Wie in \cite[S.189]{Kuchling07} gegeben gilt für die Poissonschen Querkontraktionzahlen
     $\num{0,0} < \mu < \num{0,5} $, womit der in diesem Versuch bestimmte Wert allgemein und auch im Vergleich zu den gegebenen Literaturwert
     für Baustahl $\mu_{lit,Stahl} =\num{0,28}$ zu hoch ist.\\
     
-    Da alle dieser Abweichungen, außer die des Kompressionsmoduls nach oben handelt es sich hierbei um eine systematischen Fehler,
-    wobei die Abweichung des Kompressionsmoduls nach unten duch die Abweichung der Querkontraktionszahl zu begründen sind.
+    Da alle Größen, außer dem Kompressionsmodul, nach oben abweichen, handelt es sich hierbei um eine systematischen Fehler.
+    Die Abweichung des Kompressionsmoduls nach unten kann jedoch durch die Abweichung der Querkontraktionszahl nach oben begründet werden.\\
     Die Quelle dieses systematischen Fehler liegt in der Art der Zeitmessung. Da die Versuchsapparatur nur mit unzureichender Verlässlichkeit
     funktionierte ist anzunehmen, dass die erhaltenen Periodendauern nicht den tatsächlichen entsprechen.\\
     
-    Aufgrund der bereits erwähnten Unzuverlässigkeit der Versuchapparatur war es nicht möglich die Periodendauer der
+    Aufgrund der bereits erwähnten Unzuverlässigkeit der Versuchsapparatur war es nicht möglich die Periodendauer der
     Schwingung im äußeren Magnetfeld für mehrere magnetische Flussdichten durchzuführen. Dadurch konnte für diesen
     Teil keine Regression der Messwerte verwendet werden, um das magnetische Moment zu bestimmen.
   
