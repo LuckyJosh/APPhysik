@@ -1,0 +1,2 @@
+# Fehler der Massen [g] 	#Fehler der Spannungen 8[mV]
+0.1							0.01

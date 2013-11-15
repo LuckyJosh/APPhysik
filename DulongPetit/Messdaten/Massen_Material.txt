@@ -1,0 +1,2 @@
+#Alublock[g]	#Kupferblock[g] 	#WasserI + Becher[g]	#WasserII + Becher[g]	
+254.6			378.3				836.7					837.2

@@ -1,0 +1,2 @@
+#Faden&Deckel_Cu[g]		#Faden&Deckel_Al[g]		#Becherglas[g] 		#Kalorimeter[g]
+140.05					140.50					262.6				851.6
