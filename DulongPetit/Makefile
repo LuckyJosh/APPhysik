@@ -1,10 +1,11 @@
-Protokoll.pdf: Protokoll.tex  Latex/*.tex Latex/Literatur.bib Plots/*.pdf
+
+Protokoll.pdf: Protokoll.tex  Latex/*.tex Latex/Literatur.bib 
 	pdflatex Protokoll.tex
 	biber Protokoll
 	pdflatex Protokoll.tex
-	
-Plots/*.pdf: *.py Messdaten/*.txt	
-	python *.py
+
+		
+
 	
 clean:  
 	rm -f Latex/*.aux
@@ -33,3 +34,7 @@ clean:
 	rm -f *.toc	
 	rm -f Latex/*.tmp	
 	rm -f *.tmp	
+	
+all: 
+	make Protokoll.pdf
+	make clean
