@@ -25,18 +25,18 @@ from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 # Umrechenung der Termoelementspannung in Temperatur
 def TensToTemp(U):
     if isinstance(U, (float, int)):
-        return 25.157 * U + 0.19* U**2
-    
+        return 25.157 * U - 0.19* U**2
+
     elif all(isinstance(i, float) for i in U):
-        return 25.157 * U + 0.19* U**2
-        
+        return 25.157 * U - 0.19* U**2
+
 # Ermöglicht die Benutzung von ufloats als Funktionsparameter
 uTensToTemp = unc.wrap(TensToTemp)
 
 
 # Variable zu Steuerung der Aufgabe, True => Ausgabe, False => keine Ausgabe
 PRINT = True
-
+#PRINT = False
 
 ### Laden der Messdaten
 
@@ -48,7 +48,7 @@ M_ERR *= 1e-03  # kg
 
 
 ##  Geräte Massen: Deckel_Al, Deckel_Cu, Becherglas, Kalorimeter
-M_D_AL, M_D_CU, M_BG, M_KM =  np.loadtxt("Messdaten/Massen_Geraete.txt")
+M_D_AL, M_D_CU, M_BG, M_KM = np.loadtxt("Messdaten/Massen_Geraete.txt")
 
 # Umrechnung in SI-Einheiten
 M_D_AL *= 1e-03  # kg
@@ -67,7 +67,7 @@ M_W_2 *= 1e-03  # kg
 
 # Korrektion der Werte durch Abziehen der Gerätemassen
 M_AL -= M_D_AL
-M_CU -= M_D_CU 
+M_CU -= M_D_CU
 M_W_1 -= M_BG
 M_W_2 -= M_BG
 
@@ -82,7 +82,7 @@ uM_W_avr = ufloat(M_W_avr, M_ERR)
 
 
 ## Material Dichten in g/cm³: Aluminium, Kupfer, Wasser
-RHO_AL, RHO_CU, RHO_W, C_W = np.loadtxt("Messdaten/Daten_Material.txt")  
+RHO_AL, RHO_CU, RHO_W, C_W = np.loadtxt("Messdaten/Daten_Material.txt")
 
 # Umrechnung in SI-Einheiten
 C_W *=1e03  # J/kgK
@@ -103,7 +103,7 @@ uU_AL_H = unp.uarray(U_AL_H, len(U_AL_H)*[U_ERR])
 uU_AL_M = unp.uarray(U_AL_M, len(U_AL_M)*[U_ERR])
 
 # Erstellen von 3x3 Matrizen für die Werte von Cu und Al
-# Spalte entspricht einer Versuchsreihe, Zeile: Entspricht einer Größe 
+# Spalte entspricht einer Versuchsreihe, Zeile: Entspricht einer Größe
 
 uU_CU = unp.matrix([uU_CU_C, uU_CU_H, uU_CU_M])
 uU_AL = unp.matrix([uU_AL_C, uU_AL_H, uU_AL_M])
@@ -122,7 +122,7 @@ M_W_C, M_W_H, M_W_M, U_W_C, U_W_H, U_W_M = np.loadtxt("Messdaten/Messung_Kalorim
 
 # Umrechnung in SI-Einheiten
 
-M_W_C *= 1e-03  # kg 
+M_W_C *= 1e-03  # kg
 M_W_H *= 1e-03  # kg
 M_W_M *= 1e-03  # kg
 
@@ -138,12 +138,12 @@ uU_W_C = unp.uarray(U_W_C, len(U_W_C)*[U_ERR])
 uU_W_H = unp.uarray(U_W_H, len(U_W_C)*[U_ERR])
 uU_W_M = unp.uarray(U_W_M, len(U_W_C)*[U_ERR])
 
-# Erstellen der 
+# Erstellen der
 
 
 
 # Erstellen der 3x3 Messwert-Matrix
-# Spalte entspricht einer Versuchsreihe, Zeile: Entspricht einer Größe 
+# Spalte entspricht einer Versuchsreihe, Zeile: Entspricht einer Größe
 uM_W = unp.matrix([uM_W_C, uM_W_H, uM_W_M])
 uU_W = unp.matrix([uU_W_C, uU_W_H, uU_W_M])
 
@@ -163,8 +163,8 @@ for i in range(len(uU_W_C)):
     dT_mx = uT_W[2,i] - uT_W[0,i]
     cm_wy = C_W * uM_W[1,i]
     cm_wx = C_W * uM_W[0,i]
-    uCM_KM[i] =(cm_wy * dT_ym - cm_wx * dT_mx) / (dT_mx)  
-        
+    uCM_KM[i] =(cm_wy * dT_ym - cm_wx * dT_mx) / (dT_mx)
+
 
 ### Berechnung der spez. Wärmekapazität der Metalle
 
@@ -174,32 +174,41 @@ uC_AL_K = unp.uarray(np.zeros(3), np.zeros(3))
 for i in range(3):
     cm_ww = C_W * uM_W_avr
     cm_gg =  uCM_KM[0]
-    dT_mw = uT_AL[2,i] - uT_AL[1,i]
-    dT_km = uT_AL[0,i] - uT_AL[2,i]
+    dT_mw = uT_AL[2,i] - uT_AL[0,i]
+    dT_km = uT_AL[1,i] - uT_AL[2,i]
     uC_AL_K[i] = (cm_ww + cm_gg)*dT_mw/(uM_AL*dT_km)
+
+print(uT_AL[2, 0])
+print(uT_AL[1, 0])
+print(uT_AL[0, 0])
+
+
+
+
 
 ## Kupfer
 
 
-## Print Funktionen 
+
+
+## Print Funktionen
 if PRINT:
    print("\n Spannungsmatrizen:",
          "\n -Kupfer:\n", uU_CU,
          "\n\n -Aluminium:\n", uU_AL,
          "\n\n - Wasser:\n", uU_W)
-         
+
    print("\n Temperaturmatrizen:",
-         "\n\n -Kupfer:\n", uT_CU, 
+         "\n\n -Kupfer:\n", uT_CU,
          "\n\n -Aluminium:\n", uT_AL,
          "\n\n -Wasser:\n", uT_W)
-         
+
    print("\n Massenmatrix:\n",
          "\n Wasser:\n", uM_W)
-         
-   print("\n Wärmekapazität des Kalorimeters:\n", uC_KM)
-   
+
+   print("\n Wärmekapazität des Kalorimeters:\n", uCM_KM)
+
    print("\n spez. Wärmekapazität:",
          "\n -Aluminium:\n", uC_AL_K)
-   
-   
-   
+
+
