@@ -35,6 +35,16 @@ def TensToTemp(U):
 uTensToTemp = unc.wrap(TensToTemp)
 
 
+# Umrechnung von Wärmekapazität bei Konstantem Druck zu bei konstantem Volumen
+def CpToCv(c, a, k, v, t):
+    if isinstance(c, (float, int)):
+        return c - (9 * a**2 * k * v * t)
+
+    elif all(isinstance(i, float) for i in c):
+        return c - (9 * a**2 * k * v * t)
+uCpToCv = unc.wrap(CpToCv)
+
+
 # Variable zu Steuerung der Ausgabe, True => Ausgabe, False => keine Ausgabe
 PRINT = True
 #PRINT = False
@@ -45,6 +55,12 @@ PRINT = True
 SI = False
 
 ### Laden der Messdaten
+
+
+## Linearer Ausdenhungskoeffizient und Kompressionsmodul A, Q
+A_CU, Q_CU, A_AL, Q_AL = np.loadtxt("Messdaten/Konstanten_Material.txt")
+
+
 
 ## Messfehler: Massen[g], Spannungen[mV]
 M_ERR, U_ERR = np.loadtxt("Messdaten/Messfehler.txt")
@@ -189,7 +205,7 @@ uC_AL_K = unp.uarray(np.zeros(3), np.zeros(3))
 
 for i in range(3):
     cm_ww = C_W * uM_W_avr
-    cm_gg = uCM_KM_avr #uCM_KM[0]
+    cm_gg = uCM_KM_avr 
     dT_mw = uT_AL[2, i] - uT_AL[0, i]
     dT_km = uT_AL[1, i] - uT_AL[2, i]
     uC_AL_K[i] = (cm_ww + cm_gg) * dT_mw / (uM_AL * dT_km)
@@ -200,7 +216,7 @@ uC_CU_K = unp.uarray(np.zeros(3), np.zeros(3))
 
 for i in range(3):
     cm_ww = C_W * uM_W_avr
-    cm_gg = uCM_KM_avr #uCM_KM[0]
+    cm_gg = uCM_KM_avr  
     dT_mw = uT_CU[2, i] - uT_CU[0, i]
     dT_km = uT_CU[1, i] - uT_CU[2, i]
     uC_CU_K[i] = (cm_ww + cm_gg)*dT_mw/(uM_CU*dT_km)
@@ -209,6 +225,11 @@ for i in range(3):
 ### Berechnung der spezifischen Wärmekapazität pro Mol
 uC_CU_P = uC_CU_K * mM_CU
 uC_AL_P = uC_AL_K * mM_AL
+
+TODO:
+    ### Berechnung der spezifischen Wärmekapazität Cv pro Mol
+    #uC_CU_V = uCpToCv(uC_CU_P, A_CU, Q_CU, )
+    #uC_AL_V = uCpToCv(uC_AL_P,)
 
 
 ## Print Funktionen
@@ -236,3 +257,7 @@ if PRINT:
     print("\n spez. Wärmekapazität Cp pro Mol:",
           "\n\n -Aluminium:\n", uC_AL_P,
           "\n\n -Kupfer: \n", uC_CU_P)
+
+    print("\n spez. Wärmekapazität Cv pro Mol:",
+          "\n\n -Aluminium:\n", uC_AL_V,
+          "\n\n -Kupfer: \n", uC_CU_V)
