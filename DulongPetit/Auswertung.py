@@ -226,10 +226,10 @@ for i in range(3):
 uC_CU_P = uC_CU_K * mM_CU
 uC_AL_P = uC_AL_K * mM_AL
 
-TODO:
-    ### Berechnung der spezifischen Wärmekapazität Cv pro Mol
-    #uC_CU_V = uCpToCv(uC_CU_P, A_CU, Q_CU, )
-    #uC_AL_V = uCpToCv(uC_AL_P,)
+# TODO: Cv berechnen
+### Berechnung der spezifischen Wärmekapazität Cv pro Mol
+#uC_CU_V = uCpToCv(uC_CU_P, A_CU, Q_CU, )
+#uC_AL_V = uCpToCv(uC_AL_P,)
 
 
 ## Print Funktionen
