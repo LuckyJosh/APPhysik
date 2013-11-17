@@ -1,2 +1,2 @@
-# Cu :#linearer Ausdehnungskoeffiient[1/K] # Kompressionsmodul[N/m²] Al: #linearer Ausdehnungskoeffiient[1/K] # Kompressionsmodul[N/m²]
-16.8e-06                                     136e09                      23.5e-06                               75e09
+# Cu :#linearer Ausdehnungskoeffiient[1/K] # Kompressionsmodul[N/cm²] Al: #linearer Ausdehnungskoeffiient[1/K] # Kompressionsmodul[N/cm²]
+16.8e-06                                     136e05                     23.5e-06                               75e05

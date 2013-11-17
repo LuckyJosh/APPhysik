@@ -22,6 +22,9 @@ from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
+umean = unc.wrap(np.mean)
+
+
 
 # Umrechenung der Termoelementspannung in Temperatur
 def TensToTemp(U):
@@ -105,14 +108,18 @@ M_CU -= M_D_CU
 M_W_1 -= M_BG
 M_W_2 -= M_BG
 
-# Errechnen des Mittelwerts der Wassermasse
-M_W_avr = np.mean([M_W_1, M_W_2])
-
 # Erstellen der Fehlerbehafteten Massen
 uM_AL = ufloat(M_AL, M_ERR)
 uM_CU = ufloat(M_CU, M_ERR)
-uM_W_avr = ufloat(M_W_avr, M_ERR)
 
+uM_W_1 = ufloat(M_W_1, M_ERR)
+uM_W_2 = ufloat(M_W_2, M_ERR)
+
+
+# Errechnen des Mittelwerts der Wassermasse
+uM_W_avr = umean([uM_W_1, uM_W_2])
+
+print(uM_W_avr)
 
 ## Material Dichten in g/cm³: Aluminium, Kupfer, Wasser
 RHO_AL, RHO_CU, RHO_W, C_W = np.loadtxt("Messdaten/Daten_Material.txt")
@@ -181,7 +188,7 @@ uT_W = TensToTemp(uU_W)
 ### Berechnung der Wärmekapazität des Kalorimeters
 uCM_KM = unp.uarray(np.zeros(3), np.zeros(3))
 
-##### Erinnerung: print(uU_W[Zeile, Spalte]), von 0 gezählt!
+##### TIPP: print(uU_W[Zeile, Spalte]), von 0 gezählt!
 
 
 for j in range(3):
@@ -195,6 +202,7 @@ for j in range(3):
 CM_KM_avr = np.mean(noms(uCM_KM))
 CM_KM_std = np.std(noms(uCM_KM))/(len(uCM_KM)-1)
 uCM_KM_avr = ufloat(CM_KM_avr, CM_KM_std)
+
 
 
 
@@ -226,11 +234,22 @@ for i in range(3):
 uC_CU_P = uC_CU_K * mM_CU
 uC_AL_P = uC_AL_K * mM_AL
 
+
 # TODO: Cv berechnen
 ### Berechnung der spezifischen Wärmekapazität Cv pro Mol
-#uC_CU_V = uCpToCv(uC_CU_P, A_CU, Q_CU, )
-#uC_AL_V = uCpToCv(uC_AL_P,)
 
+
+uC_CU_V = unp.uarray(np.zeros(3), np.zeros(3))
+uC_AL_V = unp.uarray(np.zeros(3), np.zeros(3))
+
+
+for i in range(3):
+    uC_CU_V[i] = uC_CU_P[i] - 9*(A_CU**2 * Q_CU * (mM_CU / RHO_CU) * uT_CU[2, i])
+    uC_AL_V[i] = uC_AL_P[i] - 9*(A_AL**2 * Q_AL * (mM_AL / RHO_AL) * uT_AL[2, i])
+
+
+print(mM_CU / RHO_CU)
+print(mM_AL / RHO_AL)
 
 ## Print Funktionen
 if PRINT:
@@ -250,7 +269,7 @@ if PRINT:
     print("\n Wärmekapazität des Kalorimeters:\n", uCM_KM,
           "\n\n Mittelwert:\n", uCM_KM_avr)
 
-    print("\n spez. Wärmekapazität pro kg:",
+    print("\n spez. Wärmekapazität pro g\kg:",
           "\n\n -Aluminium:\n", uC_AL_K,
           "\n\n -Kupfer: \n", uC_CU_K)
 
