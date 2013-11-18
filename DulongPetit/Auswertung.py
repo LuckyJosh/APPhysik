@@ -64,7 +64,6 @@ SI = False
 A_CU, Q_CU, A_AL, Q_AL = np.loadtxt("Messdaten/Konstanten_Material.txt")
 
 
-
 ## Messfehler: Massen[g], Spannungen[mV]
 M_ERR, U_ERR = np.loadtxt("Messdaten/Messfehler.txt")
 
@@ -213,7 +212,7 @@ uC_AL_K = unp.uarray(np.zeros(3), np.zeros(3))
 
 for i in range(3):
     cm_ww = C_W * uM_W_avr
-    cm_gg = uCM_KM_avr 
+    cm_gg = uCM_KM_avr
     dT_mw = uT_AL[2, i] - uT_AL[0, i]
     dT_km = uT_AL[1, i] - uT_AL[2, i]
     uC_AL_K[i] = (cm_ww + cm_gg) * dT_mw / (uM_AL * dT_km)
@@ -224,7 +223,7 @@ uC_CU_K = unp.uarray(np.zeros(3), np.zeros(3))
 
 for i in range(3):
     cm_ww = C_W * uM_W_avr
-    cm_gg = uCM_KM_avr  
+    cm_gg = uCM_KM_avr
     dT_mw = uT_CU[2, i] - uT_CU[0, i]
     dT_km = uT_CU[1, i] - uT_CU[2, i]
     uC_CU_K[i] = (cm_ww + cm_gg)*dT_mw/(uM_CU*dT_km)
@@ -248,8 +247,16 @@ for i in range(3):
     uC_AL_V[i] = uC_AL_P[i] - 9*(A_AL**2 * Q_AL * (mM_AL / RHO_AL) * uT_AL[2, i])
 
 
-print(mM_CU / RHO_CU)
-print(mM_AL / RHO_AL)
+### Berechnung der relativen Abweichung von 3R
+R = const.gas_constant
+
+
+def relError(c):
+    return -(3 * R - c) / (3 * R)
+
+C_CU_rel_err = relError(noms(uC_CU_V))
+C_AL_rel_err = relError(noms(uC_AL_V))
+
 
 ## Print Funktionen
 if PRINT:
@@ -280,3 +287,8 @@ if PRINT:
     print("\n spez. Wärmekapazität Cv pro Mol:",
           "\n\n -Aluminium:\n", uC_AL_V,
           "\n\n -Kupfer: \n", uC_CU_V)
+
+    print("\n Relative Abweichungen:",
+          "\n\n -Aluminium:\n", C_AL_rel_err,
+          "\n\n -Kupfer: \n", C_CU_rel_err)
+
