@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  14 NOV 2013 23:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  18 NOV 2013 23:02
 entering extended mode
 **Protokoll.tex
 
@@ -1697,85 +1697,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--63
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 85.
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2]
-<Grafik/Versuchsaufbau.jpg, id=23, 240.14719pt x 482.55281pt>
+<Grafik/Versuchsaufbau.jpg, id=16, 240.14719pt x 482.55281pt>
 File: Grafik/Versuchsaufbau.jpg Graphic file (type jpg)
 
 <use Grafik/Versuchsaufbau.jpg>
-Package pdftex.def Info: Grafik/Versuchsaufbau.jpg used on input line 113.
-(pdftex.def)             Requested size: 180.10992pt x 361.91371pt.
+Package pdftex.def Info: Grafik/Versuchsaufbau.jpg used on input line 86.
+(pdftex.def)             Requested size: 120.07329pt x 241.2758pt.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 91.
 
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Drehsch
+wingungen/Grafik/Versuchsaufbau.jpg>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--177
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
 
  []
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [3]
-Overfull \hbox (3.79094pt too wide) in paragraph at lines 213--218
+Overfull \hbox (3.79094pt too wide) in paragraph at lines 205--210
 []\T1/lmr/m/n/12 Daraus las-sen sich mit dem ge-ge-be-nen Elas-ti-zi-t�ts-mo-du
 l $\OML/lmm/m/it/12 E \OT1/lmr/m/n/12 = [] []$\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--228
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
 
  []
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 281--283
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
 
  []
 
 
-Overfull \hbox (25.45418pt too wide) detected at line 293
+Overfull \hbox (25.45418pt too wide) detected at line 285
 \OML/lmm/m/it/12 [] \OT1/lmr/m/n/12 = []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
 
-Overfull \hbox (66.76793pt too wide) in paragraph at lines 312--315
+Overfull \hbox (66.76793pt too wide) in paragraph at lines 304--307
 []$\OML/lmm/m/it/12 [] \OT1/lmr/m/n/12 = []$ 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 321--324
+Underfull \hbox (badness 10000) in paragraph at lines 313--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--334
+Underfull \hbox (badness 10000) in paragraph at lines 317--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--339
+Underfull \hbox (badness 10000) in paragraph at lines 327--331
 
  []
 
 [7] 
 AED: lastpage setting LastPage
-[8] [9 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Drehs
-chwingungen/Grafik/Versuchsaufbau.jpg>]
+[8]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Drehschwing
 ungen\Protokoll.aux") ) 
 Here is how much of TeX's memory you used:
- 24360 strings out of 493921
- 470407 string characters out of 3147286
- 521651 words of memory out of 3000000
- 27149 multiletter control sequences out of 15000+200000
+ 24354 strings out of 493921
+ 470319 string characters out of 3147286
+ 523651 words of memory out of 3000000
+ 27143 multiletter control sequences out of 15000+200000
  64231 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 67i,24n,71p,825b,962s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,24n,71p,825b,966s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
 c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/
@@ -1791,9 +1794,9 @@ pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/lm/lmsy8.pfb>
-Output written on Protokoll.pdf (9 pages, 236821 bytes).
+Output written on Protokoll.pdf (8 pages, 234411 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  24 words of extra memory for PDF output out of 10000 (max. 10000000)
 
