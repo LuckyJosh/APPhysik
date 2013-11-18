@@ -26,16 +26,16 @@
     
   \section{Theorie}
     Bei den im ersten Versuchsteil zu bestimmenden Größen, handelt es sich um sogenannte \emph{elastische Konstanten},
-    die im allgemeinen ein Maß für die relative Form- und Volumenveränderung eines Materials sind, welches äußeren Kräften
+    die im Allgemeinen ein Maß für die relative Form- und Volumenveränderung eines Materials sind, welches äußeren Kräften
     ausgesetzt ist. Sind diese Veränderungen elastisch, also reversibel, so nennt man den Zusammenhang zwischen Kraft und 
-    relativer Veränderung Hooksches Gesetz. 
-    Kräfte die dabei auf die Oberfläche eines Materials einwirken wie beispielsweise der Druck, werden
-    im Allgemeinen Spannungen genannt. Die Anzahl der zur Beschreibung eines Materials nötigen elastischen Konstanten 
-    hängt vor allem von der inneren Struktur des Materials ab und reicht von einem Maximum von 36 Konstanten zu einem
-    Minimum von 2 Konstanten für isotrope Materialien wie sie auch in diesem Versuch untersucht werden.
+    relativer Veränderung: Hooksches Gesetz. 
+    Kräfte die dabei auf die Oberfläche eines Materials einwirken, wie beispielsweise der Druck, werden
+    im Allgemeinen Spannungen genannt. Die Anzahl, der zur Beschreibung eines Materials nötigen, elastischen Konstanten 
+    hängt vor allem von der inneren Struktur des Materials ab und reicht von einem Maximum von 36 Konstanten, zu einem
+    Minimum von 2 Konstanten für isotrope Materialien, wie sie auch in diesem Versuch untersucht werden.
     Zu den zwei benötigten Konstanten, dem Torsionsmodul $G$ und dem Kompressionsmodul $Q$ kommen in diesem Versuch
-    noch zwei weitere, das Elastizitätsmodul $E$ und die Poissonsche Querkontraktionszahl $\mu$ hinzu.
-    Der Zusammenhang dieser vier Größen lassen mit den Gleichungen \eqref{EG} und \eqref{EQ} beschreiben.
+    noch zwei weitere hinzu: das Elastizitätsmodul $E$ und die Poissonsche Querkontraktionszahl $\mu$.
+    Der Zusammenhang dieser vier Größen lässt sich mit den Gleichungen \eqref{EG} und \eqref{EQ} beschreiben.
     
     \begin{empheq}{align}
       E &= 2G(\mu + 1) \label{EG} \\
@@ -68,9 +68,9 @@
       \label{B}
     \end{empheq} 
     aus\,\cite{Schaaf08} berechenbare magnetische Flussdichte eines Helmholtzspulenpaares benötigt, für die somit
-    der Radius $R$ und die Windungszahl $N$ der Spulen sowie der durch diese fließende Strom $I$ benötigt werden.
+    der Radius $R$ und die Windungszahl $N$ der Spulen, sowie der durch diese fließende Strom $I$ benötigt werden.
     Für die Permeabilitätskonstante gilt nach\,\cite{Kuchling07}\\ $\mu_{0} = \SI{4\pi e-07}{VsA^{-1}m^{-1}}$ und da 
-    die Spulen keinen Kern (aus z.B. Eisen) besitzen ist die relative Permeabilitätszahl $\mu_{r} = \mu_{Luft} \approx 1$.  
+    die Spulen keinen Kern (aus z.B. Eisen) besitzen, ist die relative Permeabilitätszahl $\mu_{r} = \mu_{Luft} \approx 1$.  
     Auch in diesem Versuchsteil wird der Draht in harmonische Schwingungen versetzt, deren Periodendauer
     \begin{empheq}{equation}
       T_{m} =2 \pi \sqrt{\frac{J}{mB + D}} 
@@ -82,24 +82,14 @@
   \section{Durchführung}
     
     Der Versuchsaufbau entspricht dem in Abbildung \ref{Aufbau} mit dem Zusatz, dass links von der Apparatur 
-    noch eine Glühlampe mit Blende und Fokussierlinse steht und um etwa 90° versetzt ein 
-    \textcolor{red}{Photodiode, welcher ein H-Signal weitergibt}, wenn diese von dem Lichtstrahl über den Spiegel 
+    noch eine Glühlampe mit Blende und Fokussierlinse steht und um etwa 90° versetzt eine 
+   Photodiode, welche ein analoges Signal weitergibt, wenn diese von dem Lichtstrahl über den Spiegel 
     getroffen wird.
-   \textcolor{red}{Als erstes ist gefordert eine Stoppuhr mit einer Logikschaltung selber zu erstellen, diese soll 4 
-    Phasen haben:}
-    
-    \begin{enumerate}
-      \item{\textcolor{red}{Start der Stoppuhr}} 
-      \item{\textcolor{red}{\enquote{Nichts}}} 
-      \item{\textcolor{red}{Stopp der Stoppuhr}} 
-      \item{\textcolor{red}{Reset der Stoppuhr} }
-    \end{enumerate}
-    \textcolor{red}{\textbf{Kommentar}: Die Photodiode ist ein analoges Bauteil. \enquote{Nichts} ist eine Phase? Das lässt sich besser formulieren.}
-    
-    Sobald der Lichtstrahl vom Spiegel reflektiert wird und dieser in die Photodiode trifft, gibt 
-    diese ein Signal auf die Schaltung, dann geht die Stoppuhr in \textcolor{red}{Phase 1}, beim zweiten Mal in 
-    \textcolor{red}{Phase 2} usw..
-  
+   Als erstes wird eine Stoppuhr mit einer Logikschaltung selber erstellt, diese soll beim ersten Signal ausgelöst werden, 
+   beim zweiten Überstreichen wird durch die RS-Flipflops in der Schaltung lediglich ein H-Signal gespeichert, 
+   beim dritten Auslösen ist die Periode abgeschlossen, die Uhr stoppt und kann abgelesen werden 
+   und nach weiterem überstreichen wird die Stoppuhr zurückgesetzt.
+   
     Danach wird die Dicke des Drahtes an 4 verschiedenen Stellen vermessen und 
     andere feste Größen an der Apparatur abgelesen.
     Durch das Justierrad mit Klemmschraube wird der Spiegel so ausgerichtet, dass der 
@@ -118,9 +108,9 @@
 
   \section{Auswertung}
     \label{Auswertung}
-    Im Folgenden sind die aufgenommenen Messwerte sowie die aus diesen berechneten Werte
+    Im Folgenden sind die aufgenommenen Messwerte, sowie die aus diesen berechneten Werte
     aufgeführt. An entsprechenden Stellen sind Erläuterungen zu den Berechnungen gegeben.
-    Der nach folgende Abschnitt \ref{Fehlerrechnung} enthält die Fehlergleichungen für die hier
+    Der nachfolgende Abschnitt \ref{Fehlerrechnung} enthält die Fehlergleichungen für die hier
     aufgeführten Größen.
     
     \subsection{Bestimmung der elastischen Konstanten}
@@ -323,11 +313,11 @@
     ist das negative Vorzeichen des Kommpressionsmoduls nicht sinnvoll und entspricht, wie im Weiteren erläutert, auch nicht der Realität.\\
     
     Diese Einschätzungen werden durch den Vergleich mit den Literaturwerten aus\,\cite{Kuchling07} bestätigt. Ausgehend von dem Elastizitätsmodul,
-    welches nicht gemessen wurde sondern gegeben war, kommen für das Material des Drahtes Eisen und Baustahl in Betracht,
+    welches nicht gemessen wurde, sondern gegeben war, kommen für das Material des Drahtes Eisen und Baustahl in Betracht,
     wobei Baustahl mit $E_{lit,Stahl} = \SI{210}{\giga Nm^{-2}}$, die genauste Übereinstimmung zeigt, 
     Eisen mit $E_{lit,Fe} = \SI{211}{\giga Nm^{-2}}$ aber noch in der angegebenen Standardabweichung liegt.\\
     Im Vergleich zu den Literaturwerten für den Baustahl zeigt sich für das Torsionsmodul $G_{lit,Stahl} =\SI{85}{\giga Nm^{-2}}$ eine 
-    geringere Abweichung nach oben, wohingegen das Kompressionsmodul sehr stark vom Literaturwert $Q_{lit,Stahl} =\SI{167}{\giga Nm^{-2}}$
+    geringere Abweichung nach oben, wohingegen das Kompressionsmodul sehr stark vom Literaturwert $Q_{lit,Stahl} =\SI{167}{\giga Nm^{-2}}$ abweicht
     und außerdem noch das falsche Vorzeichen aufweist. Wie in \cite[S.189]{Kuchling07} gegeben gilt für die Poissonschen Querkontraktionzahlen
     $\num{0,0} < \mu < \num{0,5} $, womit der in diesem Versuch bestimmte Wert allgemein und auch im Vergleich zu den gegebenen Literaturwert
     für Baustahl $\mu_{lit,Stahl} =\num{0,28}$ zu hoch ist.\\
@@ -335,7 +325,7 @@
     Da alle Größen, außer dem Kompressionsmodul, nach oben abweichen, handelt es sich hierbei um eine systematischen Fehler.
     Die Abweichung des Kompressionsmoduls nach unten kann jedoch durch die Abweichung der Querkontraktionszahl nach oben begründet werden.\\
     Die Quelle dieses systematischen Fehler liegt in der Art der Zeitmessung. Da die Versuchsapparatur nur mit unzureichender Verlässlichkeit
-    funktionierte ist anzunehmen, dass die erhaltenen Periodendauern nicht den tatsächlichen entsprechen.\\
+    funktionierte, ist anzunehmen, dass die erhaltenen Periodendauern nicht den tatsächlichen entsprechen.\\
     
     Aufgrund der bereits erwähnten Unzuverlässigkeit der Versuchsapparatur war es nicht möglich die Periodendauer der
     Schwingung im äußeren Magnetfeld für mehrere magnetische Flussdichten durchzuführen. Dadurch konnte für diesen
