@@ -37,8 +37,15 @@ def error(f, err_vars=None):
 
 
 
+U = var("U")
+T = 25.157 * U - 0.19 * U**2
+print("Fehler von T:\n", "\sigma_{T} =", error(T))
 
+cw, mw, cgmg, Tm, Tw, mk, Tk = var(r"c_\ce{H2O} m_\ce{H2O} c_g*m_g \vartheta_m \vartheta_c m_k \vartheta_h")
 
+c_k = (cw*mw + cgmg) * (Tm - Tw)/(mk* (Tk - Tm))
+print("Fehler der Wärmekapazität des Kalorimeters:\n", "\sigma_{c_k} =",
+      error(c_k, (mw, cgmg, Tm, Tw, mk, Tk)))
 
 
 
