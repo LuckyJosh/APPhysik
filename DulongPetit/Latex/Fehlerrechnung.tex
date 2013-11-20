@@ -1,3 +1,23 @@
+In diesem Unterabschnitt sind die, für die Berechnung der in \autoref{sec:Auswertung} gegebenen Fehler, 
+benötigten Fehlergleichungen aufgestellt. Für jede dieser Gleichungen wurde die Gaußsche Fehlerfortpflanzung 
+verwendet.\\
+
+Der Fehler der Temperatur T, aus \eqref{eq:ThermoSpannung} ergibt sich aus der Gleichung:
+\begin{empheq}{equation*}
+\sigma_{T} = \sqrt{\sigma_{U}^{2} \left(- 0.38 U + 25.157\right)^{2}}
+\end{empheq}
+\newpage
+Für die Wärmekapazität des Kalorimeters nach \eqref{eq:CM_Kalorimeter} lassen sich die Fehler bestimmen durch radizieren von:
 \begin{empheq}{multline*}
- \sigma_{c_k}^{2} = \frac{c_{\ce{H2O}}^{2} \sigma_{m_{\ce{H2O}}}^{2} \left(- \vartheta_{c} + \vartheta_{m}\right)^{2}}{m_{k}^{2} \left(\vartheta_{h} - \vartheta_{m}\right)^{2}} + \frac{\sigma_{\vartheta_{c}}^{2} \left(c_{\ce{H2O}} m_{\ce{H2O}} + c\right)^{2}}{m_{k}^{2} \left(\vartheta_{h} - \vartheta_{m}\right)^{2}}\\ + \frac{\sigma_{\vartheta_{h}}^{2} \left(- \vartheta_{c} + \vartheta_{m}\right)^{2}}{m_{k}^{2} \left(\vartheta_{h} - \vartheta_{m}\right)^{4}} \left(c_{\ce{H2O}} m_{\ce{H2O}} + c\right)^{2}\\ + \sigma_{\vartheta_{m}}^{2} \left(\frac{1}{m_{k} \left(\vartheta_{h} - \vartheta_{m}\right)^{2}} \left(- \vartheta_{c} + \vartheta_{m}\right) \left(c_{\ce{H2O}} m_{\ce{H2O}} + c\right) + \frac{c_{\ce{H2O}} m_{\ce{H2O}} + c}{m_{k} \left(\vartheta_{h} - \vartheta_{m}\right)}\right)^{2} \\+ \frac{\sigma_{c}^{2} \left(- \vartheta_{c} + \vartheta_{m}\right)^{2}}{m_{k}^{2} \left(\vartheta_{h} - \vartheta_{m}\right)^{2}} + \frac{\sigma_{m_{k}}^{2} \left(- \vartheta_{c} + \vartheta_{m}\right)^{2}}{m_{k}^{4} \left(\vartheta_{h} - \vartheta_{m}\right)^{2}} \left(c_{\ce{H2O}} m_{\ce{H2O}} + c \right)^{2}
+\sigma_{c_gm_g}^2 = \frac{c_{\ce{H2O}}^{2} \sigma_{T_{h}}^{2} m_{h}^{2}}{\left(T_{m} - t_{c}\right)^{2}} + c_{\ce{H2O}}^{2} \sigma_{m_{c}}^{2} + \frac{c_{\ce{H2O}}^{2} \sigma_{m_{h}}^{2} 
+\left(T_{h} - T_{m}\right)^{2}}{\left(T_{m} - t_{c}\right)^{2}} \\+ 2 \sigma_{T_{m}}^{2} \left(\frac{- c_{\ce{H2O}} m_{c} - c_{\ce{H2O}} m_{h}}{T_{m} - t_{c}} -
+ \frac{1}{\left(T_{m} - t_{c}\right)^{2}} \left(- c_{\ce{H2O}} m_{c} \left(T_{m} - t_{c}\right) + c_{\ce{H2O}} m_{h} \left(T_{h} - T_{m}\right)\right)\right)^{2} \\+ 
+\sigma_{t_{c}}^{2} \left(\frac{c_{\ce{H2O}} m_{c}}{T_{m} - t_{c}} + \frac{1}{\left(T_{m} - t_{c}\right)^{2}} \left(- c_{\ce{H2O}} m_{c} \left(T_{m} - t_{c}\right) + c_{\ce{H2O}} 
+m_{h} \left(T_{h} - T_{m}\right)\right)\right)^{2}
+\end{empheq}
+
+
+Den Fehler der spezifischen Wärmekapazitäten nach \eqref{eq:C_Metall} erhält man  als Wurzel aus:  
+\begin{empheq}{multline*}
+ \sigma_{c_k}^{2} = \frac{c_{\ce{H2O}}^{2} \sigma_{m_{\ce{H2O}}}^{2} \left(- T_{c} + T_{m}\right)^{2}}{m_{k}^{2} \left(T_{h} - T_{m}\right)^{2}} + \frac{\sigma_{T_{c}}^{2} \left(c_{\ce{H2O}} m_{\ce{H2O}} + c\right)^{2}}{m_{k}^{2} \left(T_{h} - T_{m}\right)^{2}}\\ + \frac{\sigma_{T_{h}}^{2} \left(- T_{c} + T_{m}\right)^{2}}{m_{k}^{2} \left(T_{h} - T_{m}\right)^{4}} \left(c_{\ce{H2O}} m_{\ce{H2O}} + c\right)^{2}\\ + \sigma_{T_{m}}^{2} \left(\frac{1}{m_{k} \left(T_{h} - T_{m}\right)^{2}} \left(- T_{c} + T_{m}\right) \left(c_{\ce{H2O}} m_{\ce{H2O}} + c\right) + \frac{c_{\ce{H2O}} m_{\ce{H2O}} + c}{m_{k} \left(T_{h} - T_{m}\right)}\right)^{2} \\+ \frac{\sigma_{c}^{2} \left(- T_{c} + T_{m}\right)^{2}}{m_{k}^{2} \left(T_{h} - T_{m}\right)^{2}} + \frac{\sigma_{m_{k}}^{2} \left(- T_{c} + T_{m}\right)^{2}}{m_{k}^{4} \left(T_{h} - T_{m}\right)^{2}} \left(c_{\ce{H2O}} m_{\ce{H2O}} + c \right)^{2}
 \end{empheq}

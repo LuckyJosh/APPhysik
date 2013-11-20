@@ -29,12 +29,12 @@ verwenden zu können.
 			   3    &  \num{0.92(1)}  &  \num{4.09(1)}   &  \num{2.27(1)}  \\ \hline\hline
 			        &     \multicolumn{3}{c|}{Temperaturen\,[\si{°C}]}     \\ \cline{2-4}
 			Messung &      Kalt       &       Heiß       &      Misch      \\
-			  Nr.   & $\vartheta_{c}$ & $ \vartheta_{h}$ & $\vartheta_{m}$ \\ \hline\hline
+			  Nr.   & $T_{c}$ & $ T_{h}$ & $T_{m}$ \\ \hline\hline
 			   1    & \num{21.38(25)} & \num{96.49(24)}  & \num{54.76(25)} \\
 			   2    & \num{21.64(24)} & \num{97.52(24)}  & \num{52.76(24)} \\
 			   3    & \num{21.88(25)} & \num{97.23(24)}  & \num{54.00(24)} \\ \hline
 		\end{tabular}
-		\caption{Messwerte der \fbox{Kalorimetermessung} \label{tab:DataII}}
+		\caption{Messwerte zur Bestimmung der Wärmekapazität des Kalorimeters \label{tab:DataII}}
 	\end{table}    
 
 	Unter Verwendung der Messwerte aus \autoref{tab:DataII} erhält man durch \eqref{eq:CM_Kalorimeter}
@@ -52,7 +52,7 @@ verwenden zu können.
 			3& \num{453(28)}   \\
 			\hline
 		\end{tabular}
-		\caption{Errechnete Wärmekapazitäten des Kalorimeters}
+		\caption{Errechnete Wärmekapazitäten des Kalorimeters \label{tab:CM_Kalorimeter}}
 	\end{table}
 	
 	Für die Auswertung in \autoref{sec:C_Metalle} wird das Mittel
@@ -66,8 +66,8 @@ verwenden zu können.
 	Die Messwerte der Messungen für die Berechnung der Wärmekapazitäten 
 	von Kupfer (\ce{Cu}) und Aluminium (\ce{Al}) sind in \autoref{tab:DataI_Cu}
 	und \ref{tab:DataI_Al} zu finden. Dabei ist die jeweilig angegebene Temperatur
-	$\vartheta_{c}$, die des Wassers im Kalorimeter, $\vartheta_{h}$, die des
-	entsprechenden Metallzylinders und $\vartheta_{m}$ die des Wassers nach dem
+	$T_{c}$, die des Wassers im Kalorimeter, $T_{h}$, die des
+	entsprechenden Metallzylinders und $T_{m}$ die des Wassers nach dem
 	eintauchen des Zylinders.    
 	
 	\begin{table}[!h]
@@ -82,7 +82,7 @@ verwenden zu können.
 			   3    &  \num{0.93(1)}  &  \num{4.08(1)}   &  \num{1.10(1)}  \\ \hline\hline
 			        &     \multicolumn{3}{c|}{Temperaturen\,[\si{°C}]}     \\ \cline{2-4}
 			Messung &      Kalt       &       Heiß       &      Misch      \\
-			  Nr.   & $\vartheta_{c}$ & $ \vartheta_{h}$ & $\vartheta_{m}$ \\ \hline\hline
+			  Nr.   & $T_{c}$ & $ T_{h}$ & $T_{m}$ \\ \hline\hline
 			   1    & \num{18.61(25)} & \num{97.65(24)}  & \num{22.67(25)} \\
 			   2    & \num{22.82(24)} & \num{97.85(24)}  & \num{27.62(24)} \\
 			   3    & \num{22.33(25)} & \num{97.91(24)}  & \num{26.38(25)} \\ \hline
@@ -102,7 +102,7 @@ verwenden zu können.
 				   3    &  \num{0.95(1)}  &  \num{4.09(1)}   &  \num{1.06(1)}  \\ \hline\hline
 				        &     \multicolumn{3}{c|}{Temperaturen\,[\si{°C}]}     \\ \cline{2-4}
 				Messung &      Kalt       &       Heiß       &      Misch      \\
-				  Nr.   & $\vartheta_{c}$ & $ \vartheta_{h}$ & $\vartheta_{m}$ \\ \hline
+				  Nr.   & $T_{c}$ & $ T_{h}$ & $T_{m}$ \\ \hline
 				   1    & \num{20.37(25)} & \num{97.51(24)}  & \num{25.32(25)} \\
 				   2    & \num{21.39(24)} & \num{98.31(24)}  & \num{22.31(24)} \\
 				   3    & \num{22.86(25)} & \num{98.16(24)}  & \num{25.54(25)} \\ \hline
@@ -112,7 +112,7 @@ verwenden zu können.
 
 		
 
-
+\newpage
 	Da das Wasser im Kalorimeter einmal ausgewechselt wurde, wird im weiteren der Mittelwert
 	der verwendeten Volumina  $\mean{V_{\ce{H2O}}} = \SI{574.35(7)}{cm^{3}} $ verwendet. 
 	Durch wiegen wurden die Massen des Kupfer- und des Aluminiumzylinders zu $m_{\ce{Cu}} = \SI{378.3(1)}{g}$
@@ -120,7 +120,7 @@ verwenden zu können.
 
 	Aus den Werten in \autoref{tab:DataI_Cu} und \ref{tab:DataI_Al}, der Wärmekapazität des Kalorimeters $\mean{c_{g}m_{g}} = \SI{450(60)}{JK^{-1}}$
 	aus \autoref{sec:CM_Kalorimeter}, den Massen der Metallzylinder und der spezifischen Wärmekapazität von Wasser $c_{\ce{H2O}} = \SI{4.18}{Jg^{-1}K^{-1}}$ \cite{V201},
-	lassen sich nun mit Hilfe von \eqref{eq:C_Metalle} die spezifischen Wärmekapazitäten der beiden Metalle bestimmen.
+	lassen sich nun mit Hilfe von \eqref{eq:C_Metall} die spezifischen Wärmekapazitäten der beiden Metalle bestimmen.
 	In \autoref{tab:Cp_Metalle} sind sowohl die spezifische Wärmekapazität bezogen auf ein Gramm als auch mit Bezug auf ein Mol angegeben, wobei zur Umrechnung
 	die molaren Massen aus \autoref{tab:Konstanten} verwendet wurden. 
 	
@@ -147,15 +147,15 @@ verwenden zu können.
 	
 	
 	Durch \eqref{eq:Cp_Cv} erhält man, aus den Wärmekapazitäten bei konstantem Druck in \autoref{tab:Cp_Metalle}, die gesuchten 
-	Wärmekapazitäten bei konstantem Volumen. Die für diese Umrechnung benötigten Konstanten des Kupfers und des Aluminium sind 
+	Wärmekapazitäten bei konstantem Volumen. Die für diese Umrechnung benötigten Konstanten des Kupfers und des Aluminiums sind 
 	in \autoref{tab:Konstanten} zu finden. Die Molvolumen der Metalle wurden dabei aus ihrer molaren Masse und der jeweiligen Dichte
-	bestimmt. Als Temperatur wurden die Mischtemperaturen $\vartheta_{m}$ aus \autoref{tab:DataI_Cu} und \ref{tab:DataI_Al} verwendet.
+	bestimmt. Als Temperatur wurden die Mischtemperaturen $T_{m}$ aus \autoref{tab:DataI_Cu} und \ref{tab:DataI_Al} verwendet.
 	\begin{table}[!h]
 		\centering
 		\begin{tabular}{|c||c|c|}
 			\hline
 			           Material-            & Kupfer (\ce{Cu}) & Aluminium (\ce{Al}) \\
-			konstanten\cite{Mende09, V206}  &                  &  \\ \hline\hline
+			konstanten\cite{Mende09, V201}  &                  &  \\ \hline\hline
 			            Dichte              &                  &  \\
 			    $\rho\,[\si{gcm^{-3}}]$     &    \num{8.96}    &     \num{2.70}      \\ \hline
 			           Molmassen            &                  &  \\
@@ -198,5 +198,5 @@ verwenden zu können.
 		\end{tabular}
 		\caption{Vergleich der Wärmekapazitäten von Kupfer und Aluminium \label{tab:Cv_Metalle}}
 	\end{table}
-	
-	
+
+

@@ -1,4 +1,4 @@
-\documentclass[12pt]{scrartcl}                                                      % 'Artikel' Dokumentenklasse und Standardschriftgröße  
+\documentclass[12pt]{article}                                                      % 'Artikel' Dokumentenklasse und Standardschriftgröße  
 \usepackage[paper=a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}  % Setzt das Papierformat und den Rand auf 2.5cm
 
 
@@ -18,7 +18,7 @@
 
 \usepackage{fancyhdr}                                                               % Ermöglicht detailierte Bearbeitung der Kopf- und Fußzeile
 \fancyhf{} 	                                                                        % Setzt Kopf und Fußzeile zurück 
-\setlength{\headheight}{28.0pt}                                                     % Höhe der Kopfzeile
+\setlength{\headheight}{28.0 pt}                                                     % Höhe der Kopfzeile
 \setlength{\footskip}{18.0pt}                                                       % Höhe der Fußzeile
 
 \renewcommand{\headrulewidth}{.5 pt}                                                 % Dicke des Kopfzeilentrennstrichs
@@ -64,7 +64,7 @@
 \usepackage{graphicx}                                                               % Ermöglicht das Einbinden Grafiken '\includegraphics[<Optionen>]{<Grafikpfad>}' und Veränderungen im Text, wie z.B. Schriftfarbe 
 \usepackage{floatflt}                                                         % Fügt Möglichkeit für text umflossende Grafiken und Tabellen hinzu \begin{floating<figure/table>}[option]{width} ... \caption ... \end{floatingfigure}
 %\usepackage{subfig}                                                                % Ermöglicht das Hinzufügen von Unterabbildung zu einer Abbildung
-
+\usepackage{wrapfig}
 \usepackage{tikz}                                                                   % Ermöglicht Zeichnungen im Dokument \begin{tikzpicture} ... \end{tikzpicture}
 \usetikzlibrary{arrows}                                                             % Fügt zusätzlichen Pfeilspitzen hinzu
 %\usepackage{booktabs}
@@ -105,5 +105,3 @@
 \DeclarePairedDelimiter{\mean}{\langle}{\rangle}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-

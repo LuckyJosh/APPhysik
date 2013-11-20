@@ -1,6 +1,6 @@
 Die Kernaussage des Dulong-Petitschen Gesetzes ist:
 \begin{empheq}{equation} 
-C_v = (\frac{dQ}{dT})_v = (\frac{dU}{dT})_v
+C_v = \biggl(\frac{dQ}{dT}\biggr)_v = \biggl(\frac{dU}{dT}\biggr)_v
 \end{empheq}
 Für das klassische System geht dann hervor, dass
 \begin{empheq}{equation} 
@@ -16,25 +16,28 @@ was für die Gültigkeit des, aus der klassischen Physik hergeleiteten, Gesetzes
 Weiterhin benötigen wir $C_p$, dies kann bestimmt werden aus:
 \begin{empheq}{equation} 
 C_p - C_v = 9\alpha ^2\kappa V_0T
-\label{Cp_Cv}
+\label{eq:Cp_Cv}
 \end{empheq}
-Mit dem linearen Ausdehnungskoeffizienten $\alpha$, dem Kompressionsmodul $\kappa$ und $V_0$ dem Molvolumen, des untersuchten Materials.\\
+Mit dem linearen Ausdehnungskoeffizienten $\alpha$, dem Kompressionsmodul $\kappa$ und $V_0$ dem Molvolumen, des 
+untersuchten Materials.\\
 
 Um nun die spezifische Wärmekapazität der Probekörper bestimmen zu können gilt:
 \begin{empheq}{equation} 
-c_k = \frac{(c_wm_w + c_gm_g)(T_m - T_w)}{m_k(T_k - T_m)}
-\label{C_Metalle}
+c_k = \frac{(c_{\ce{H2O}}m_{\ce{H2O}} + c_gm_g)(T_m - T_c)}{m_k(T_h - T_m)}
+\label{eq:C_Metall}
 \end{empheq}
-$c_g$ und $m_g$ ist Wärmekapazität und Masse des Kalorimeters, Index $w$ für das Wasser und Index $k$ für den Probekörper.
+$c_gm_g$ ist dabei die Wärmekapazität des Kalorimeters, Index $\ce{H2O}$  steht für das Wasser und Index $k$ für den Probekörper.
+Die Temperaturen $T$ mit den Indizes $c$ (\enquote{cold}) und $h$ (\enquote{hot}) stehen in dieser Reihenfolge für die Temperatur des Wassers und des Probekörpers. 
 Für das Kalorimeter gilt:
 \begin{empheq}{equation} 
-c_gm_g = \frac{c_wm_y(T_y - T'_m) - c_wm_x(T'_m - T_x)}{T'_m - T_x}
-\label{7}
+c_gm_g = \dfrac{c_{\ce{H2O}} m_h(T_h - T'_m) - c_{\ce{H2O}}m_c(T'_m - T_c)}{T'_m - T_c}
+\label{eq:CM_Kalorimeter}
 \end{empheq}
-$m_x$ und $m_y$ sind die Massen der beiden Wassermengen, die im zweiten Versuchsteil zusammen gemischt werden sollen und $T_x$, $T_y$ die dazu gehörigen Temperaturen, wobei gilt $T_x < T_y$. \\
-$T'_m$ ist die Mischtemperatur der beiden Wassermengen $T_x$, $T_y$.
+$m_c$ und $m_h$ sind die Massen der beiden Wassermengen, die im zweiten Versuchsteil zusammen gemischt werden sollen und $T_c$, $T_h$ die dazu gehörigen Temperaturen, wobei gilt $T_c < T_h$. 
+$T'_m$ ist die Mischtemperatur der beiden Wassermengen $m_{c}$, $m_{h}$.
 Um die Temperatur aus der ausgegebenen Spannung des Digitalvoltmeters bestimmen zu können gilt:
 \begin{empheq}{equation} 
-T = \num{25.157}\, U_{th} - \num{0.19}\,U_{th}^2
-
+T = \num{25.157}\, U_{\vartheta} - \num{0.19}\,U_{\vartheta}^2
+\label{eq:ThermoSpannung}
 \end{empheq}
+

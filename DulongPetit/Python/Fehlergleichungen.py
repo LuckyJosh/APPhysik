@@ -47,8 +47,9 @@ c_k = (cw*mw + cgmg) * (Tm - Tw)/(mk* (Tk - Tm))
 print("Fehler der Wärmekapazität des Kalorimeters:\n", "\sigma_{c_k} =",
       error(c_k, (mw, cgmg, Tm, Tw, mk, Tk)))
 
+my, mx, Ty, Tx = var("m_h m_c T_h t_c")
 
-
-
+c = (cw*my*(Ty-Tm) - cw*mx*(Tm - Tx))/(Tm - Tx)
+print("\n\n\n:", error(c, (my,Ty,Tm,mx,Tm,Tx)))
 
 
