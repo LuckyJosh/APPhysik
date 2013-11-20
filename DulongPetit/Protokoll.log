@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.23)  20 NOV 2013 21:46
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.23)  20 NOV 2013 22:10
 entering extended mode
 **Protokoll.tex
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Protokoll.tex"
@@ -2154,163 +2154,96 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Einleitun
 g.tex")
-("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Aufgaben.
-tex")
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Theorie.t
-ex")
-("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Durchfüh
-rung.tex")
-("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Auswertun
-g.tex"
+ex"
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
-LaTeX Warning: Reference `eq:ThermoSpannung' on page 1 undefined on input line 
-11.
-
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 30.
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-
-LaTeX Warning: Reference `eq:CM_Kalorimeter' on page 1 undefined on input line 
-40.
-
-
-LaTeX Warning: Reference `tab:CM_Kalorimeter' on page 1 undefined on input line
- 41.
+ []
 
 [1{C:/Users/JoshLaptop/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-]
+])
+("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Durchfüh
+rung.tex"
+
+LaTeX Warning: Reference `fig:Aufbau' on page 2 undefined on input line 1.
+
+)
+("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Auswertun
+g.tex"
+
+LaTeX Warning: Reference `eq:ThermoSpannung' on page 2 undefined on input line 
+11.
+
+[2]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 30.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Warning: Reference `eq:CM_Kalorimeter' on page 3 undefined on input line 
+40.
+
+
+LaTeX Warning: Reference `tab:CM_Kalorimeter' on page 3 undefined on input line
+ 41.
+
+[3]
+
+LaTeX Warning: Citation 'V201' on page 4 undefined on input line 122.
+
+
+LaTeX Warning: Reference `eq:C_Metalle' on page 4 undefined on input line 123.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Citation 'V201' on page 2 undefined on input line 122.
+LaTeX Warning: Reference `eq:Cp_Cv' on page 4 undefined on input line 149.
 
 
-LaTeX Warning: Reference `eq:C_Metalle' on page 2 undefined on input line 123.
-
-[2]
-
-LaTeX Warning: Reference `eq:Cp_Cv' on page 3 undefined on input line 149.
+LaTeX Warning: Citation 'Mende09' on page 4 undefined on input line 158.
 
 
-LaTeX Warning: Citation 'Mende09' on page 3 undefined on input line 158.
-
-
-LaTeX Warning: Citation 'V206' on page 3 undefined on input line 158.
+LaTeX Warning: Citation 'V206' on page 4 undefined on input line 158.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 174.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 174.
+[4]
+
+LaTeX Warning: Citation 'SciPy' on page 5 undefined on input line 178.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Citation 'SciPy' on page 3 undefined on input line 178.
-
-[3])
-("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Fehlerrec
-hnung.tex"
-
-! Package keyval Error: multiline undefined.
-
-See the keyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \begin{empheq}{multiline}
-                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Runaway argument?
- 
-! Paragraph ended before \empheq was complete.
-<to be read again> 
-                   \par 
-l.2 
-    
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.4  \sigma
-           _{c_k}^{2} = \frac{c_{\ce{H2O}}^{2} \sigma_{m_{\ce{H2O}}}^{2} \le...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! Package empheq Error: You are using the old syntax!
-(empheq)                The `empheq' environment takes a mandatory argument now
-.
-(empheq)                You need to exit and change your source file..
-
-See the empheq package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \end{empheq}
-                
-It won't work, trustme. Press `X' now.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.5 \end{empheq}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 )
-Overfull \hbox (46.42497pt too wide) in paragraph at lines 4--25
-$\OT1/lmr/m/n/12 + [] [][] + \OML/lmm/m/it/12 [] [][] [] $
- []
-
-[4]
+("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Fehlerrec
+hnung.tex" [5]) [6]
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Latex/Diskussio
 n.tex"
 
-LaTeX Warning: Reference `eq:C_Metall' on page 5 undefined on input line 16.
+LaTeX Warning: Reference `eq:C_Metall' on page 7 undefined on input line 16.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--30
 
  []
 
-) [5]
+) [7]
 
 LaTeX Warning: Empty bibliography on input line 31.
 
 
 AED: lastpage setting LastPage
-
-! LaTeX Error: \begin{empheq} on input line 1 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 \end{document}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\DulongPetit\Protokoll.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: EE4F8B863925B3F5285013C9466BE866;552.
+(rerunfilecheck)             Checksum: AD8778C21F54B34A91DEAE818B62A68E;495.
 
 LaTeX Warning: There were undefined references.
 
@@ -2320,38 +2253,34 @@ Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 1 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 34439 strings out of 493921
- 654238 string characters out of 3148871
- 1080052 words of memory out of 3000000
+ 34444 strings out of 493921
+ 654112 string characters out of 3148871
+ 1085008 words of memory out of 3000000
  37030 multiletter control sequences out of 15000+200000
  87612 words of font info for 84 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 67i,22n,71p,1178b,1534s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{
-C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/
-MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/
-dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
-c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
-mex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
-sy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on Protokoll.pdf (5 pages, 252410 bytes).
+ 67i,31n,71p,1166b,1392s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fon
+ts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
+mssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on Protokoll.pdf (7 pages, 262539 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 185 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
+ 77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
