@@ -24,7 +24,7 @@ from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
 umean = unc.wrap(np.mean)
 
-
+#TEST = False
 
 # Umrechenung der Termoelementspannung in Temperatur
 def TensToTemp(U):
@@ -153,6 +153,17 @@ uU_AL = unp.matrix([uU_AL_C, uU_AL_H, uU_AL_M])
 uT_CU = TensToTemp(uU_CU)
 uT_AL = TensToTemp(uU_AL)
 
+TEST = True
+if TEST:
+    for i in range(3):
+        for j in range(3):
+            uT_CU[i,j] = ufloat(noms(uT_CU[i,j]), stds(uT_CU[i,j]))
+
+if TEST:
+    for i in range(3):
+        for j in range(3):
+            uT_AL[i,j] = ufloat(noms(uT_AL[i,j]), stds(uT_AL[i,j]))
+
 ## Versuchsergebnisse der Kalorimetermessung:M_c, M_h, M_m, U_c, U_h, U_m
 M_W_C, M_W_H, M_W_M, U_W_C, U_W_H, U_W_M = np.loadtxt("Messdaten/Messung_Kalorimeter.txt",
                                                       unpack=True)
@@ -183,6 +194,10 @@ uU_W = unp.matrix([uU_W_C, uU_W_H, uU_W_M])
 # Umrechnung der Spannungen zu Temperaturen
 uT_W = TensToTemp(uU_W)
 
+if TEST:
+    for i in range(3):
+        for j in range(3):
+            uT_W[i,j] = ufloat(noms(uT_W[i,j]), stds(uT_W[i,j]))
 
 ### Berechnung der Wärmekapazität des Kalorimeters
 uCM_KM = unp.uarray(np.zeros(3), np.zeros(3))
@@ -257,6 +272,27 @@ def relError(c):
 C_CU_rel_err = relError(noms(uC_CU_V))
 C_AL_rel_err = relError(noms(uC_AL_V))
 
+
+### Nebenrechnungen
+
+C_CU_lit = 0.383 
+C_AL_lit = 0.896 
+C_CU_lit *= mM_CU
+C_AL_lit *= mM_AL
+
+print(C_CU_lit)
+print(C_AL_lit)
+
+### Vergleich 
+C_CU_lit_err = uC_CU_V /  C_CU_lit
+C_AL_lit_err = uC_AL_V / C_AL_lit
+
+
+print(C_AL_lit_err)
+print(C_CU_lit_err)
+
+
+#PRINT = False
 
 ## Print Funktionen
 if PRINT:

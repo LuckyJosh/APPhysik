@@ -107,7 +107,7 @@ verwenden zu können.
 				   2    & \num{21.39(24)} & \num{98.31(24)}  & \num{22.31(24)} \\
 				   3    & \num{22.86(25)} & \num{98.16(24)}  & \num{25.54(25)} \\ \hline
 		\end{tabular}
-		\caption{Messwerte der Messung mit Kupfer \label{tab:DataI_Al}}
+		\caption{Messwerte der Messung mit Aluminium \label{tab:DataI_Al}}
 	\end{table} 
 
 		
@@ -144,6 +144,8 @@ verwenden zu können.
 		\caption{Spezifische Wärmekapazitäten von Kupfer und Aluminium \label{tab:Cp_Metalle}}
 	\end{table}
 	
+	
+	
 	Durch \eqref{eq:Cp_Cv} erhält man, aus den Wärmekapazitäten bei konstantem Druck in \autoref{tab:Cp_Metalle}, die gesuchten 
 	Wärmekapazitäten bei konstantem Volumen. Die für diese Umrechnung benötigten Konstanten des Kupfers und des Aluminium sind 
 	in \autoref{tab:Konstanten} zu finden. Die Molvolumen der Metalle wurden dabei aus ihrer molaren Masse und der jeweiligen Dichte
@@ -153,7 +155,7 @@ verwenden zu können.
 		\begin{tabular}{|c||c|c|}
 			\hline
 			           Material-            & Kupfer (\ce{Cu}) & Aluminium (\ce{Al}) \\
-			          konstanten            &                  &  \\ \hline\hline
+			konstanten\cite{Mende09, V206}  &                  &  \\ \hline\hline
 			            Dichte              &                  &  \\
 			    $\rho\,[\si{gcm^{-3}}]$     &    \num{8.96}    &     \num{2.70}      \\ \hline
 			           Molmassen            &                  &  \\
@@ -164,31 +166,37 @@ verwenden zu können.
 			$\alpha\,[\si{10^{-6}K^{-1}}]$  &    \num{16.8}    &     \num{23.5}      \\ \hline
 			       Kompressionsmodul        &                  &  \\
 			$\kappa\,[\si{10^{9} Nm^{-2}}]$ &    \num{136}     &      \num{75}       \\ \hline
+			spez. Wärmekapazität Literatur & &\\
+			$c_{lit}\,[\si{\joule\per\mol\per\kelvin}]$ & \num{24.3205} & \num{24.192} \\ \hline
 		\end{tabular}
 		\caption{Materialkonstanten von Kupfer und Aluminium \label{tab:Konstanten}}
 	\end{table}
 	\footnotetext{linearer Ausdehnungskoeffizient}
 
-	Die daraus erhaltenen Werte sowie deren \fbox{Abweichung} von dem, durch das Dulong-Petitsche Gesetz vorhergesagte Wert $C_{V} = 3R$,
-	wobei $R = \SI{8.314}{\joule\per\mol\per\kelvin}$ \cite{SciPy} ist, sind in \autoref{tab:Cv_Metalle} zu finden.
+	Die daraus erhaltenen Werte, der Vergleich zwischen diesen und dem Literaturwert aus \autoref{tab:Konstanten}
+	sowie die relative Abweichung der Messwerte von dem, durch das Dulong-Petitsche Gesetz vorhergesagte Wert
+	$C_{V} = 3R$, wobei $R = \SI{8.314}{\joule\per\mol\per\kelvin}$ \cite{SciPy} ist, 
+	sind in \autoref{tab:Cv_Metalle} zu finden.
 	
 	\begin{table}[!h]
 		\centering
-		\begin{tabular}{|c|c|c|}
+		\begin{tabular}{|c|c|c|c|}
 			\hline
-			Messung & spezifische Wärmekapazität & Relative Abweichung \\
-			Nr.		& $ C_{V,\ce{Cu}}\,[\si{\joule\per\mol\per\kelvin}]  $ &$ \frac{C_{V,\ce{Cu}}-3R}{3R}$ \\ \hline \hline
-			1 &\num{35.7(37)}& \num{0.43} \\
-			2 &\num{45.3(40)}& \num{0.82} \\
-		    3 &\num{36.7(39)}& \num{0.47}\\ \hline \hline
-	    	Messung & spezifische Wärmekapazität & Relative Abweichung \\
-   			Nr.		& $ C_{V,\ce{Al}}\,[\si{\joule\per\mol\per\kelvin}]  $ & $ \frac{3R - C_{V,\ce{Al}}}{3R}$ \\ \hline \hline
-   			1 &\num{46.0(35)}& \num{0.47}\\
-   			2 &\num{-0.2(30)}& \num{1.01}\\
-	   	    3 &\num{15.3(33)}& \num{0.39}\\ \hline
+			Messung & spezifische Wärmekapazität & Relative Abweichung & Literaturvergleich  \\
+			Nr.		& $ C_{V,\ce{Cu}}\,[\si{\joule\per\mol\per\kelvin}]  $ &$ \frac{\envert{C_{V,\ce{Cu}}-3R}}{3R}$ & 
+			$\frac{ C_{V,\ce{Cu}}}{C_{V,lit}}$\\ \hline \hline
+			1 &\num{35.7(37)}& \num{0.43}& \num{1.47} \\
+			2 &\num{45.3(40)}& \num{0.82}& \num{1.86} \\
+		    3 &\num{36.7(39)}& \num{0.47}& \num{1.51} \\ \hline \hline
+	    	Messung & spezifische Wärmekapazität & Relative Abweichung & Literaturvergleich \\
+   			Nr.		& $ C_{V,\ce{Al}}\,[\si{\joule\per\mol\per\kelvin}]  $ & $ \frac{ \envert{C_{V,\ce{Al}} - 3R}}{3R}$ &
+   			$\frac{ C_{V,\ce{Cu}}}{C_{V,lit}}$\\ \hline \hline
+   			1 &\num{36.6(34)}& \num{0.47}& \num{1.51} \\
+   			2 &\num{-0.2(30)}& \num{1.01}& \num{-0.01}\\
+	   	    3 &\num{15.3(33)}& \num{0.39}& \num{0.63} \\ \hline
 		    
 		\end{tabular}
-		\caption{Spezifische Wärmekapazitäten im Vergleich zu 3R \label{tab:Cv_Metalle}}
+		\caption{Vergleich der Wärmekapazitäten von Kupfer und Aluminium \label{tab:Cv_Metalle}}
 	\end{table}
 	
 	
