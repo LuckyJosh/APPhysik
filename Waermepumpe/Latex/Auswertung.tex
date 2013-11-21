@@ -34,7 +34,7 @@ $T_{1}\ \text{und}\ T_{2}$, die Drücke $p_{b}\ \text{und}\ p_{a}$, sowie die Ze
 
 In \autoref{fig:T1} und \ref{fig:T2} sind die Temperaturverläufe für $T_{1}$ und $T_{2}$ jeweils mit der entsprechenden 
 Regressionskurve dargestellt.
-Die mit Hilfe der Python Bibliothek \emph{SciPy}\cite{SciPy} bestimmten Regressionsparameter für die Kurven der Form
+Die mit Hilfe der Python Bibliothek \emph{SciPy} \cite{SciPy} bestimmten Regressionsparameter für die Kurven der Form
 $T(t) = At^{2} + Bt + C$ sind in \autoref{tab:param} gelistet.\\
 
 \begin{table}[!h]
@@ -42,7 +42,7 @@ $T(t) = At^{2} + Bt + C$ sind in \autoref{tab:param} gelistet.\\
   
    	\begin{tabular}{|c||c|c|c|}
    		\hline
-   		Funktion & A& B& C\\ \hline \hline
+   		Funktion & $A\,[\si{\kelvin\per\second\squared}]$ & $B\,[\si{\kelvin\per\second}]$& $C\,[\si{\kelvin}]$\\ \hline \hline
    		$T_{1}$& \num{-3.87(29)e-06}& \num{2.20(4)e-04}& \num{299.49(12)}\\
     		$T_{2}$& \num{3.59(20)e-06}& \num{-1.47(3)e-02}& \num{290.76(9)}\\
     		\hline
@@ -67,9 +67,10 @@ $T(t) = At^{2} + Bt + C$ sind in \autoref{tab:param} gelistet.\\
 Aus den Regressionskurven für die Temperaturverläufe lassen sich nun deren Differentialquotienten 
 $\od{T_{1}}{t}$ und $\tod{T_{2}}{t}$
 bestimmen, durch die, die gesuchten Apparaturgrößen berechnet werden können. Die Differenzialquotienten $\od{T_{1}}{t}$ und die 
-berechneten, idealen und realen, Güteziffern sowie deren Verältnis sind in \autoref{tab:Güte} und die 
+berechneten, idealen und realen, Güteziffern sowie deren Verhältnis sind in \autoref{tab:Güte} und die 
 Differenzialquotienten $\od{T_{2}}{t}$ und der daraus bestimmte Massendurchsatz des Transportgases $\od{m}{t}$
-in \autoref{tab:Masse} zu finden.
+in \autoref{tab:Masse} zu finden. Die angegebenen Fehler wurde dabei, durch die jeweils referenzierte Gleichung (römische Nummerierung)
+berechnet, die in \autoref{sec:Fehlerrechnung} zu finden ist.
 
 	\subsection{Güteziffern}
 Die Berechnung der idealen Güteziffer erfolgt nach \eqref{eq:vid} durch einsetzen der Temperaturen $T_{1}$ und $T_{2}$ zu den entsprechenden
@@ -90,11 +91,11 @@ die Dichte des Wassers bei $\SI{21}{°C}$ \cite{Kuchling07} sind. Die Wärmekapa
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
 		    Zeit      &    Differentialquotient    & reale Güteziffer  & ideale Güteziffer &     relativer Unterschied     \\
-		$t\,[\si{s}]$ & $\od{T_{1}}{t}\,[Ks^{-1}]$ & $\nu_{real}\,[1]$ &  $\nu_{id}\,[1]$  & $\frac{\nu_{real}}{\nu_{id}}$ \\ \hline\hline
-		     270      &        \num{0.0206(4)}         & \num{2.879(115)}  & \num{20.217(186)} &          \num{0.142}          \\
-		     450      &        \num{0.0192(5)}         & \num{2.684(107)}  & \num{14.420(093)} &          \num{0.186}          \\
-		     630      &        \num{0.0178(5)}         & \num{2.490(100)}  & \num{11.883(062)} &          \num{0.210}          \\
-		     810      &        \num{0.0165(6)}         & \num{2.296(092)}  & \num{10.011(043)} &          \num{0.229}          \\ \hline
+		$t\,[\si{s}]$ & $\od{T_{1}}{t}\,[Ks^{-1}]$ & $\nu_{real}\,\eqref{eq:Err_vreal}$ &  $\nu_{id}\,\eqref{eq:Err_vid}$ & $\frac{\nu_{real}}{\nu_{id}}$ \\ \hline\hline
+		     270      &        \num{0.0206(4)}         & \num{2.9(1)}  & \num{20.2(2)} &          \num{0.142}          \\
+		     450      &        \num{0.0192(5)}         & \num{2.7(1)}  & \num{14.42(09)} &          \num{0.186}          \\
+		     630      &        \num{0.0178(5)}         & \num{2.5(1)}  & \num{11.88(06)} &          \num{0.210}          \\
+		     810      &        \num{0.0165(6)}         & \num{2.30(09)}  & \num{10.01(04)} &          \num{0.229}          \\ \hline
 	\end{tabular}
 	\caption{Reale und ideale Güteziffer im Verhältnis}
 	\label{tab:Güte}
@@ -130,16 +131,16 @@ besteht. Durch die halb-logarithmische Skalierung und dem Aufragen gegen den Keh
 	\label{fig:pT}
 \end{figure}
 
-Durch die mit \emph{Scipy}\cite{SciPy} durchgeführte lineare Regression erhält man die Geradensteigung 
+Durch die mit \emph{Scipy} \cite{SciPy} durchgeführte lineare Regression erhält man die Geradensteigung 
 \[   
-	\tfrac{-L}{R} = \SI{-2276.72(5981)}{K} 
+	\tfrac{-L}{R} = \SI{-2277(60)}{K} 
 \] 
 und daraus mit der allgemeinen Gaskonstante $R = \SI{8.315}{Jmol^{-1}K^{-1}}$\cite{SciPy} die Verdampfungswärme zu
 
 \begin{empheq}{equation*}
- 	L = \SI{1.89(5)e04}{Jmol^{-1}} .
+ 	L = \SI{1.89(5)e04}{Jmol^{-1}} 
 \end{empheq}
-Durch Einsetzen dieses Wertes und der Werte $m_{2}c_{w} = \SI{16694,44}{JK^{-1}}$ und\\
+wobei der angegebene Fehler mit \eqref{eq:Err_L} berechnet wurde. Durch Einsetzen dieses Wertes und der Werte $m_{2}c_{w} = \SI{16694,44}{JK^{-1}}$ und
  $m_{k}c_{k} = \SI{750}{JK^{-1}}$ in \eqref{eq:dm2} 
 ergibt sich jeweils der gesuchte Massendurchsatz.\\
 
@@ -157,7 +158,7 @@ Das $\rho$ in \eqref{eq:Pmech} ist dabei durch die allgemeine Gasgleichung
 	pV = nRT
 	\label{eq:Gas}
 \end{empheq} 
-den gegebenen Größen\cite{V206} des verwendeten Gases (\ce{Cl2F2C}), Dichte unter Normalbedingungen\footnote{ $T_{0} = \SI{0}{°C}$ und $p_{0} = \SI{1}{bar}$} 
+den gegebenen Größen \cite{V206} des verwendeten Gases (\ce{Cl2F2C}), Dichte unter Normalbedingungen\footnote{ $T_{0} = \SI{0}{°C}$ und $p_{0} = \SI{1}{bar}$} 
 $\rho_{0} = \SI{5.51}{gl^{-1}}$ und dem Adiabatenexponent $\kappa = \num{1.14}$ und den vorliegenden Zustandsgrößen $T_{2}$ und $p_{a}$ zu berechnen. 
 Man erhält damit die Gleichung 
 \begin{empheq}{equation}
@@ -176,11 +177,11 @@ womit die gesuchte mechanische Leistung aus den gegebenen Größen berechnen kan
 	\begin{tabular}{|c|c|c|c|}
 		\hline
 		    Zeit      &    Differentialquotient    &       Massendurchsatz       & Mechanische Leistung \\
-		$t\,[\si{s}]$ & $\od{T_{2}}{t}\,[Ks^{-1}]$ & $\od{m}{t}\,[\si{gs^{-1}}]$ & $P_{mech}\,[\si{W}]$ \\ \hline\hline
-		     270      &      \num{-0.0134(2)}      &       \num{1.479(50)}       &     \num{15.075}     \\
-		     450      &      \num{-0.0121(3)}      &       \num{1.336(49)}       &     \num{16.976}     \\
-		     630      &      \num{-0.0108(3)}      &       \num{1.193(49)}       &     \num{16.843}     \\
-		     810      &      \num{-0.0095(4)}      &       \num{1.050(51)}       &     \num{17.234}     \\ \hline
+		$t\,[\si{s}]$ & $\od{T_{2}}{t}\,[Ks^{-1}]$\,\eqref{eq:Err_dT} & $\od{m}{t}\,[\si{gs^{-1}}]\,$\eqref{eq:Err_dm} & $P_{mech}\,[\si{W}]$ \\ \hline\hline
+		     270      &      \num{-0.0134(2)}      &       \num{1.48(5)}       &     \num{15.075}     \\
+		     450      &      \num{-0.0121(3)}      &       \num{1.37(5)}       &     \num{16.976}     \\
+		     630      &      \num{-0.0108(3)}      &       \num{1.19(5)}       &     \num{16.843}     \\
+		     810      &      \num{-0.0095(4)}      &       \num{1.05(5)}       &     \num{17.234}     \\ \hline
 	\end{tabular}
 	\caption{Massendurchsatz und mechanische Leistung des Transportgases}
 	\label{tab:Masse}

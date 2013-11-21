@@ -1,24 +1,38 @@
+
 Im Folgende sind die, mit Hilfe der Gaußschen Fehlerfortpflanzung bestimmten 
 Gleichungen für die Fehler der zu bestimmenden Größen. Lediglich von der Angabe 
 eines Fehler für $P_{mech}$ wurde abgesehen, da die entsprechende Fehlergleichung 
 eine zu hohe Komplexität aufwiese.\\
 
 Der Fehler der realen Güteziffer $\nu_{real}(\od{T_{1}}{t}, P)$ er gibt sich aus:
-\[ 
+\begin{empheq}{equation}
 	\sigma_{\nu_{real}} = \left(c_{k} m_{k} + c_{w} m_{1}\right)  \sqrt{\dfrac{\sigma_{\dif{T_{1}}}^{2}}{P^{2}} + \dfrac{\dif{T_{1}}^{2} \sigma_{P}^{2}}{P^{4}}}
-\]
-
+	\label{eq:Err_vreal}
+\end{empheq}
+	
  Für den Fehler der idealen Güteziffer $\nu_{id}(T_{1},T_{2})$ erhält man, wegen $\sigma_{T_{1}} = \sigma_{T_{2}} = \sigma_{T}$ die Gleichung:
- \[
- 	\sigma_{\nu_{ideal}} = \sigma_{T} \sqrt{\frac{T_{1}^{2}}{\left(T_{1} - T_{2}\right)^{4}} + \left(- \frac{T_{1}}{\left(T_{1} - T_{2}\right)^{2}} + \frac{1}{T_{1} - T_{2}}\right)^{2}}
- \]
+\begin{empheq}{equation}
+	\sigma_{\nu_{ideal}} = \sigma_{T} \sqrt{\frac{T_{1}^{2}}{\left(T_{1} - T_{2}\right)^{4}} + \left(- \frac{T_{1}}{\left(T_{1} - T_{2}\right)^{2}} + \frac{1}{T_{1} - T_{2}}\right)^{2}}
+	\label{eq:Err_vid}
+\end{empheq}
+ 	
+Den Fehler der Differentialquotienten $\od{T_{1}}{t}$ und $\od{T_{2}}{t}$ erhält man, mit den jeweiligen Werten, durch die Gleichung:
+\begin{empheq}{equation}
+	\sigma_{\od{T}{t}} = \sqrt{4 \sigma_{A}^{2} t^{2} + \sigma_{B}^{2}}
+	\label{eq:Err_dT}
+\end{empheq}
+
  
  Der Fehler des Massendurchsatzes $\od{m}{t}(\od{T_{2}}{t}, L)$ erhält man analog zu $\sigma_{\nu_{real}}$ aus:
- \[
- 	\sigma_{\nu_{real}} = \left(c_{k} m_{k} + c_{w} m_{2}\right)  \sqrt{\dfrac{\sigma_{\dif{T_{2}}}^{2}}{L^{2}} + \dfrac{\dif{T_{2}}^{2} \sigma_{L}^{2}}{L^{4}}}
- \] 
+\begin{empheq}{equation}
+ 	\sigma_{\od{m}{t}} = \left(c_{k} m_{k} + c_{w} m_{2}\right)  \sqrt{\dfrac{\sigma_{\dif{T_{2}}}^{2}}{L^{2}} + \dfrac{\dif{T_{2}}^{2} \sigma_{L}^{2}}{L^{4}}}
+ 	\label{eq:Err_dm}
+\end{empheq}
  
  Der Fehler der Verdampfungswärme $L$ ergibt sich vereinfacht aus:
- \[
+\begin{empheq}{equation}
  	\sigma_{L} = R \sigma_{\sfrac{L}{R}}
- \] 
+ 	\label{eq:Err_L}
+\end{empheq}
+
+

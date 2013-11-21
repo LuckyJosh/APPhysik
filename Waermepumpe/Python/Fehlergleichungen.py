@@ -49,9 +49,11 @@ print("\n ideal:\n", error(Nu_id))
 
 dm = (m*c + M*C)/L * dT1
 
-print("\n Massendurchsatz:\n", error(dm,(L,dT1)))
+print("\n Massendurchsatz:\n", error(dm, (L, dT1)))
 
-
+A, B, T = var("A B t")
+dT = 2*A*T + B
+print("\n Temperaturdifferentialquotient:\n", error(dT, (A, B)))
 
 
 
