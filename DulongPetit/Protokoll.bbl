@@ -1,0 +1,61 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{nty}
+    \entry{Mende09}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=d9b5d1cc313e3d56430176f478f309df}{Dietmar\bibnamedelima Mende}{D\bibinitperiod\bibinitdelim M\bibinitperiod}{Günther\bibnamedelima Simon}{G\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=d9b5d1cc313e3d56430176f478f309df}{Dietmar\bibnamedelima Mende}{D\bibinitperiod\bibinitdelim M\bibinitperiod}{Günther\bibnamedelima Simon}{G\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Fachbuchverlag Leibzig im Carl Hanser Verlag München}%
+      }
+      \strng{namehash}{d9b5d1cc313e3d56430176f478f309df}
+      \strng{fullhash}{d9b5d1cc313e3d56430176f478f309df}
+      \field{sortinit}{D}
+      \field{labeltitle}{Physik}
+      \field{edition}{16}
+      \field{subtitle}{Gleichungen und Tabellen}
+      \field{title}{Physik}
+      \field{year}{2009}
+    \endentry
+    \entry{SciPy}{misc}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{SciPy}
+      \field{title}{SciPy}
+      \verb{url}
+      \verb http://docs.scipy.org/doc/
+      \endverb
+    \endentry
+    \entry{V201}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V206 Wärmepumpe}
+      \field{title}{Versuchsanleitung}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V201.pdf
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
