@@ -1,2 +1,2 @@
-# Temperatur_1[°C]	# Druck_1_1[mbar] # Druck_1_2[mbar]	# Temperatur_2[°C]	# Druck_2[bar]
-1					1				  10				0.1					0.01
+# Temperatur_1[Â°C]	# Druck_1_1[mbar](bis 82Â°C, dann 2)	# Temperatur_2[Â°C]	# Druck_2[bar]
+1					1			                      0.1					0.01
