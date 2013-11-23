@@ -54,3 +54,7 @@ def toTable(cols, col_titles=None, col_units=None, cap=None, label=None):
                 rows += row
     return begin + header + rows + end
 
+a = np.array([1, 2])
+b = np.array([3, 4])
+
+print(toTable([a, b], ["Test", "Test2"], ["s", "K"], cap="Test", label="test", ))

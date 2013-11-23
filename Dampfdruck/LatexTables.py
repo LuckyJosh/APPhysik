@@ -4,8 +4,10 @@ Created on Fri Nov 22 10:28:37 2013
 
 @author: JoshLaptop
 """
-
+from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 import numpy as np
+
+
 def temp(a, b):
     if a == b[-1]:
         return r"\\"
@@ -19,19 +21,19 @@ def temp2(a, b):
         return " & "
 
 
-def toTable(cols, col_titles=None, col_units=None, cap=None, label=None):
+def toTable(cols, col_titles=None, col_syms=None, col_units=None, cap=None, label=None):
     begin = (r"\begin{table}" + "\n\t" + r"\centering" "\n\t" +
              r"\begin{tabular}{}" + "\n" + "\t\t" + r"\hline" + "\n")
     header = "\t"     
-    if not col_titles is None:
+    if not col_syms is None:
         if not col_units is None:
-            for i in range(len(col_titles)):
-                headers = (r"{}\,[\si{{{}}}]".format(col_titles[i], col_units[i])
-                           + temp2(i ,(len(col_titles)-1)))
+            for i in range(len(col_syms)):
+                headers = (r"{}\,[\si{{{}}}]".format(col_syms[i], col_units[i])
+                           + temp2(i ,(len(col_syms)-1)))
                 header += headers 
         else:
             for i in range(len(col_titles)):
-                headers = ("{}".format(col_titles[i]))
+                headers = ("{}".format(col_syms[i]))
                 header += headers
     else: 
         header = ""
@@ -49,8 +51,7 @@ def toTable(cols, col_titles=None, col_units=None, cap=None, label=None):
             for k in cols:
                 row = "\t\t"
                 for i in k:
-                    row += r"\num{{{}}} ".format(i) + temp(i, k)
+                    row += r"\num{{{}({})}} ".format(noms(i), int(stds(i))) + temp(i, k)
                 row += "\n"
                 rows += row
     return begin + header + rows + end
-

@@ -17,9 +17,12 @@ import numpy as np
 import scipy.constants as const
 from scipy.optimize import curve_fit
 from sympy import *
+import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
+import LatexTables
+
 
 # Definierte Makros:
 PRINT = True
@@ -27,9 +30,6 @@ SI = True
 
 # Physikalische Konstanten
 R = const.gas_constant
-
-
-
 
 ### Laden der Messdaten
 
@@ -54,8 +54,7 @@ uT1 = unp.uarray(T1, len(T1)*[T1_err])
 up11 = unp.uarray(p1[0:11], p1_err)
 up12 = unp.uarray(p1[11:], p2_err)
 up1 = np.append(up11, up12)
-print(np.where(T1==355.15))
-print(up1)
+
 ## Versuchsreihe 2: T und p
 T2, p2 = np.loadtxt("Messdaten/Messung_Tp_2.txt", unpack=True)
 
@@ -108,6 +107,18 @@ plt.savefig("Grafiken/Messreihe_1.pdf")
 uL = -1 * uParam_B * R
 uL = ufloat(noms(uL), stds(uL))
 
+## Berechnung der äußeren Verdampfungswärme L_a = RT
+T = 373  # K
+L_a = R * T
+
+
+## Berechnung der inneren Verdampfungswäreme L_i = L - L_a
+uL_i = uL - L_a
+uL_i = ufloat(noms(uL_i), stds(uL_i))
+
+# Pro Molekül in eV
+uL_i_N = uL_i / const.Avogadro 
+uL_i_eV = uL_i_N / const.electron_volt
 
 ### Plot der 2. Messreihe
 
@@ -154,15 +165,62 @@ uParam_F = ufloat(popt2[3], error2[3])
 
 def dP(T):
     return 3 * noms(uParam_C) * T**2 + 2 * noms(uParam_D) * T + noms(uParam_E)
+udP = unc.wrap(dP)
 
 
 def L(dp, Vd, Vf, T):
-    return dP(T) * (Vd - Vf) * T
+    return dp * (Vd - Vf) * T
+uL = unc.wrap(L)
+
+## Volumen des Dampf
+Usqrt = unc.wrap(np.sqrt)
+a = 0.9  # J m³/ mol²
+V_D_1 = (R * T2 / (2 * p2)) + Usqrt((R * T2 / (2 * p2))**2 - (a / p2))
+V_D_2 = (R * T2 / (2 * p2)) - Usqrt((R * T2 / (2 * p2))**2 - (a / p2))
+# Bei unserem Versuchsaufbau ist das (Kleinere) Volumen V_D_2 realistischer
+# da das größere Volumen mit bspw. 29 Literen nicht in den Kolben gepasst hätte
+
+
+## Berechnung von L
+
+
+def pg2(x, G, H, I):
+    return G*x**2 + H*x + I
+
+uL_2 = uL(udP(uT2), V_D_2, 0, uT2)
+uL_2 = unp.uarray(noms(uL_2), stds(uL_2))
+
+popt3, pcov3 = curve_fit(pg2, noms(uT2), noms(uL_2), sigma=stds(uL_2))
+error3 = np.sqrt(np.diag(pcov3))
+
+T = np.linspace(200, 600)
+# Plot der Verdampfungswärme
+plt.clf()
+plt.grid()
+plt.xlim(300, 500)
+plt.ylim(-500, 4000)
+plt.xlabel(r"Temperatur $T\,[\mathrm{K}]$")
+plt.ylabel(r"Verdampfungswärme $L\,[\mathrm{\frac{J}{mol}}]$")
+plt.plot(noms(uT2), noms(uL_2), "rx", label="Werte")
+plt.plot(T, pg2(T, *popt3), color="grey", label="Werte")
+plt.plot()
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig("Grafiken/Verlauf_LT.pdf")
+
+# Erstellen der fehlerbehafteten Parameter
+uParam_G = ufloat(popt3[0], error3[0])
+uParam_H = ufloat(popt3[1], error3[1])
+uParam_I = ufloat(popt3[2], error3[2])
 
 
 ### Print Funktionen
 
 
+#print(toTable("Temperatur- und Druckmesswerte der ersten Versuchsreihe",
+#              "DataI", [T1, p1]))
+#print(np.where(T1 == 355.15))
+#print(up1)
 
 #PRINT = False
 
@@ -179,10 +237,27 @@ if PRINT:
           "A =", uParam_A, "\n",
           "B =", uParam_B)
 
-    print("\ngemittelte Verdampfungswärme:\n", uL)
+    print("\nVerdampfungswärmen:\n",
+          "\ngemittelte Verdampfungswärme:\n", uL,
+          "\näußere Verdampfungswärme:\n", L_a,
+          "\ninnere Verdampfungswärme:\n", uL_i,
+          "\ninnere pro Molekül und in eV:\n", uL_i_eV,
+          "\nTemperaturabhängige:\n", uL_2)
 
     print("\nFit-Parameter:\n",
           "C =", uParam_C, "\n",
           "D =", uParam_D, "\n",
           "E =", uParam_E, "\n",
           "F =", uParam_F, "\n")
+
+    print("\nDampfvolumen 1:\n", V_D_1, "unsinnvoll",
+          "\nDampfvolumen 2:\n", V_D_2, "sinnvoll")
+
+    print("\nFit-Parameter:\n",
+          "G =", uParam_G, "\n",
+          "H =", uParam_H, "\n",
+          "I =", uParam_I, "\n")
+
+    print("\n" + toTable([uT1, up1*1e-02], ["T", "D"],
+          [r"\kelvin", r"\bar"], cap="Messwerte der 1. Messung",
+          label="DataI"))
