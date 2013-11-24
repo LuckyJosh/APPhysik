@@ -21,7 +21,9 @@ import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
-import LatexTables
+
+#sys.path.append("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Versuchsvorlage\Python")
+#import LatexTables as tab
 
 
 # Definierte Makros:
@@ -44,7 +46,7 @@ T1, p1 = np.loadtxt("Messdaten/Messung_Tp_1.txt", unpack=True)
 
 # Umrechnung in SI-Einheiten:
 if SI:
-    T1 += 273.15  # K
+    T1 += 273  # K
     p1 *= 1e02  # Pa
 
 # Erstellen der Fehlerbahafteten Größen
@@ -61,7 +63,7 @@ T2, p2 = np.loadtxt("Messdaten/Messung_Tp_2.txt", unpack=True)
 
 # Umrechnung in SI-Einheiten:
 if SI:
-    T2 += 273.15  # K
+    T2 += 273.15 # K
     p2 *= 1e05  # Pa
 
 # Erstellen der Fehler behafteten Größen
@@ -170,7 +172,7 @@ udP = unc.wrap(dP)
 
 def L(dp, Vd, Vf, T):
     return dp * (Vd - Vf) * T
-uL = unc.wrap(L)
+uLFunc = unc.wrap(L)
 
 ## Volumen des Dampf
 Usqrt = unc.wrap(np.sqrt)
@@ -187,7 +189,7 @@ V_D_2 = (R * T2 / (2 * p2)) - Usqrt((R * T2 / (2 * p2))**2 - (a / p2))
 def pg2(x, G, H, I):
     return G*x**2 + H*x + I
 
-uL_2 = uL(udP(uT2), V_D_2, 0, uT2)
+uL_2 = uLFunc(udP(uT2), V_D_2, 0, uT2)
 uL_2 = unp.uarray(noms(uL_2), stds(uL_2))
 
 popt3, pcov3 = curve_fit(pg2, noms(uT2), noms(uL_2), sigma=stds(uL_2))
@@ -219,7 +221,7 @@ uParam_I = ufloat(popt3[2], error3[2])
 
 #print(toTable("Temperatur- und Druckmesswerte der ersten Versuchsreihe",
 #              "DataI", [T1, p1]))
-#print(np.where(T1 == 355.15))
+#print(np.where(T1 == 355))
 #print(up1)
 
 #PRINT = False
@@ -234,8 +236,10 @@ if PRINT:
           "\n\nDruck 2:\n", up2)
 
     print("\nFit-Parameter 1:\n",
-          "A =", uParam_A, "\n",
-          "B =", uParam_B)
+          "A =", uParam_A*1e-05, "\n",
+          np.log(popt1[0]*1e-05), ulog(error[0]*1e-05),"\n",
+          "B =", uParam_B*1e-05, "\n",
+          popt1[1]*1e-05, error[1]*1e-05)
 
     print("\nVerdampfungswärmen:\n",
           "\ngemittelte Verdampfungswärme:\n", uL,
@@ -258,6 +262,10 @@ if PRINT:
           "H =", uParam_H, "\n",
           "I =", uParam_I, "\n")
 
-    print("\n" + toTable([uT1, up1*1e-02], ["T", "D"],
-          [r"\kelvin", r"\bar"], cap="Messwerte der 1. Messung",
-          label="DataI"))
+#    print("\n" +
+#          tab.toTable([uT1, up1*1e-02],
+#          ["Temperatur", "Druck"],
+#          ["T", "D"],
+#          [r"\kelvin", r"\bar"],
+#          cap="Messwerte der 1. Messung",
+#          label="DataI"))

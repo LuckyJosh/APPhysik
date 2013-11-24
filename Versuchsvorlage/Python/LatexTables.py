@@ -6,35 +6,46 @@ Created on Fri Nov 22 10:28:37 2013
 """
 
 import numpy as np
-def temp(a, b):
+from uncertainties.unumpy import (nominal_values as n,
+                                  std_devs as s)
+def _aux(a, b):
     if a == b[-1]:
         return r"\\"
     else:
         return " & "
         
-def temp2(a, b):
+def _aux2(a, b):
     if a == b:
         return r"\\" + r" \hline\hline" + "\n"
     else:
         return " & "
 
+def _detStd(i):
+    for i in 
 
-def toTable(cols, col_titles=None, col_units=None, cap=None, label=None):
+
+def toTable(cols, col_titles=None, col_syms=None ,col_units=None, cap=None, label=None):
     begin = (r"\begin{table}" + "\n\t" + r"\centering" "\n\t" +
              r"\begin{tabular}{}" + "\n" + "\t\t" + r"\hline" + "\n")
-    header = "\t"     
+    titles = "\t\t"
+    headers = "\t\t"     
     if not col_titles is None:
+        for t in col_titles: 
+            title =("{}".format(t)) + _aux(t, col_titles) 
+            titles += title
+        titles += "\n"
+    if not col_syms is None:
         if not col_units is None:
-            for i in range(len(col_titles)):
-                headers = (r"{}\,[\si{{{}}}]".format(col_titles[i], col_units[i])
-                           + temp2(i ,(len(col_titles)-1)))
-                header += headers 
+            for i in range(len(col_syms)):
+                header = (r"{}\,[\si{{{}}}]".format(col_syms[i], col_units[i])
+                           + _aux2(i ,(len(col_syms)-1)))
+                headers += header 
         else:
-            for i in range(len(col_titles)):
-                headers = ("{}".format(col_titles[i]))
-                header += headers
+            for i in range(len(col_syms)):
+                headers = ("{}".format(col_syms[i]))
+                headers += header
     else: 
-        header = ""
+        headers = ""
     
     end = ("\t\t" + r"\hline" + "\n\t" + r"\end{tabular}" + "\n\t"
            r"\caption{{{} \label{{tab:{}}}}}".format(cap, label) +
@@ -49,8 +60,8 @@ def toTable(cols, col_titles=None, col_units=None, cap=None, label=None):
             for k in cols:
                 row = "\t\t"
                 for i in k:
-                    row += r"\num{{{}}} ".format(i) + temp(i, k)
+                    row += r"\num{{{}()}} ".format(n(i), _detStd(i)) + _aux(i, k)
                 row += "\n"
                 rows += row
-    return begin + header + rows + end
+    return begin + titles + headers + rows + end
 
