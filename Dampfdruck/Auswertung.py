@@ -22,8 +22,8 @@ from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
-#sys.path.append("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Versuchsvorlage\Python")
-#import LatexTables as tab
+sys.path.append("..\Versuchsvorlage\Python")
+import LatexTables as tab
 
 
 # Definierte Makros:
@@ -119,7 +119,7 @@ uL_i = uL - L_a
 uL_i = ufloat(noms(uL_i), stds(uL_i))
 
 # Pro Molekül in eV
-uL_i_N = uL_i / const.Avogadro 
+uL_i_N = uL_i / const.Avogadro
 uL_i_eV = uL_i_N / const.electron_volt
 
 ### Plot der 2. Messreihe
@@ -135,7 +135,9 @@ def P(T, C, D, E, F):
     return C * T**3 + D * T**2 + E * T + F
 
 
-popt2, pcov2 = curve_fit(P, noms(uT2), noms(up2), sigma=stds(up2))
+
+
+popt2, pcov2 = curve_fit(P, noms(uT2[6::]), noms(up2[6::]), sigma=stds(up2[6::]))
 error2 = np.sqrt(np.diag(pcov2))
 
 t = np.linspace(300, 500, num=1000)
@@ -145,11 +147,12 @@ plt.grid()
 plt.ylim(0, 16e05)
 plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x, _: float(x * 1e-05)))
 plt.xlabel("Temperatur $T\,[\mathrm{K}]$")
-plt.xlabel("Druck $p\,[\mathrm{bar}]$")
+plt.ylabel("Druck $p\,[\mathrm{bar}]$")
 
-plt.errorbar(noms(uT2), noms(up2), xerr=stds(uT2), yerr=stds(up2), fmt="rx", 
+plt.errorbar(noms(uT2[6::]), noms(up2[6::]), xerr=stds(uT2[6::]), yerr=stds(up2[6::]), fmt="rx",
              label="Messwerte")
 plt.plot(t, P(t, *popt2), color="grey", label="Regressionspolynom 3.Grades")
+
 
 plt.legend(loc="best")
 plt.tight_layout()
@@ -177,8 +180,22 @@ uLFunc = unc.wrap(L)
 ## Volumen des Dampf
 Usqrt = unc.wrap(np.sqrt)
 a = 0.9  # J m³/ mol²
-V_D_1 = (R * T2 / (2 * p2)) + Usqrt((R * T2 / (2 * p2))**2 - (a / p2))
-V_D_2 = (R * T2 / (2 * p2)) - Usqrt((R * T2 / (2 * p2))**2 - (a / p2))
+
+_vdp = (R * uT2[6::] / (2 * up2[6::]))
+_vdd = (R * uT2[6::] / (2 * up2[6::]))**2 - (a / up2[6::])
+
+uV_D_1 = unp.uarray(np.zeros(len(_vdd)), np.zeros(len(_vdd)))
+for i in range(len(_vdd)):
+    uV_D_1[i] = _vdp[i] + Usqrt(_vdd[i])
+
+
+uV_D_2 = unp.uarray(np.zeros(len(_vdd)), np.zeros(len(_vdd)))
+for i in range(len(_vdd)):
+    uV_D_2[i] = _vdp[i] - Usqrt(_vdd[i])
+
+#V_D_1= (R * T2[6::] / (2 * p2[6::])) + Usqrt((R * T2[6::] / (2 * p2[6::]))**2 - (a / p2[6::]))
+#V_D_2 = (R * T2[6::] / (2 * p2[6::])) - Usqrt((R * T2[6::] / (2 * p2[6::]))**2 - (a / p2[6::]))
+
 # Bei unserem Versuchsaufbau ist das (Kleinere) Volumen V_D_2 realistischer
 # da das größere Volumen mit bspw. 29 Literen nicht in den Kolben gepasst hätte
 
@@ -189,10 +206,10 @@ V_D_2 = (R * T2 / (2 * p2)) - Usqrt((R * T2 / (2 * p2))**2 - (a / p2))
 def pg2(x, G, H, I):
     return G*x**2 + H*x + I
 
-uL_2 = uLFunc(udP(uT2), V_D_2, 0, uT2)
+uL_2 = uLFunc(udP(uT2[6::]), V_D_2, 0, uT2[6::])
 uL_2 = unp.uarray(noms(uL_2), stds(uL_2))
 
-popt3, pcov3 = curve_fit(pg2, noms(uT2), noms(uL_2), sigma=stds(uL_2))
+popt3, pcov3 = curve_fit(pg2, noms(uT2[6::]), noms(uL_2), sigma=stds(uL_2))
 error3 = np.sqrt(np.diag(pcov3))
 
 T = np.linspace(200, 600)
@@ -203,10 +220,11 @@ plt.xlim(300, 500)
 plt.ylim(-500, 4000)
 plt.xlabel(r"Temperatur $T\,[\mathrm{K}]$")
 plt.ylabel(r"Verdampfungswärme $L\,[\mathrm{\frac{J}{mol}}]$")
-plt.plot(noms(uT2), noms(uL_2), "rx", label="Werte")
+plt.errorbar(noms(uT2[6::]), noms(uL_2), xerr=stds(uT2[6::]),
+             yerr=stds(uL_2), fmt="rx", label="Werte")
 plt.plot(T, pg2(T, *popt3), color="grey", label="Werte")
 plt.plot()
-plt.legend(loc="best")
+plt.legend(loc="lower right")
 plt.tight_layout()
 plt.savefig("Grafiken/Verlauf_LT.pdf")
 
@@ -254,8 +272,11 @@ if PRINT:
           "E =", uParam_E, "\n",
           "F =", uParam_F, "\n")
 
-    print("\nDampfvolumen 1:\n", V_D_1, "unsinnvoll",
-          "\nDampfvolumen 2:\n", V_D_2, "sinnvoll")
+#    print("\nDampfvolumen 1:\n", V_D_1, "unsinnvoll",
+#          "\nDampfvolumen 2:\n", V_D_2, "sinnvoll")
+
+    print("\nDampfvolumen 1:\n", uV_D_1, "unsinnvoll",
+          "\nDampfvolumen 2:\n", uV_D_2, "sinnvoll")
 
     print("\nFit-Parameter:\n",
           "G =", uParam_G, "\n",
@@ -269,3 +290,27 @@ if PRINT:
 #          [r"\kelvin", r"\bar"],
 #          cap="Messwerte der 1. Messung",
 #          label="DataI"))
+
+#    print("\n" +
+#          tab.toTable([uT2[6::], up2[6::]*1e-05],
+#          ["Temperatur", "Druck"],
+#          ["T", "D"],
+#          [r"\kelvin", r"\bar"],
+#          cap="Werte der Messung bei $1 \leq p \leq 15 \si{bar}$",
+#          label="DataII"))
+
+#    print("\n" +
+#          tab.toTable([uV_D_1, uV_D_2],
+#          ["Volumen", "Volumen"],
+#          ["V_{D_{1}}(+)}", "V_{D_{2}}(-)"],
+#          [r"\meter\cubed", r"\meter\cubed"],
+#          cap=r"Mögliche Dampfvolumina nach \eqref{eq:Vd}",
+#          label="Vd"))
+
+    print("\n" +
+          tab.toTable([udP(uT2[6::])*1e-02, uL_2],
+          ["Differentialquotient","Verdampungswärme"],
+          ["\od{p}{T}", "L"],
+          [r"\bar\per\kelvin", r"\joule\mole"],
+          cap=r"Differntialquotient und Temperaturabhängige Verdampungswärme",
+          label="L_dpdT"))

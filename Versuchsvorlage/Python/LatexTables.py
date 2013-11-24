@@ -13,17 +13,17 @@ def _aux(a, b):
         return r"\\"
     else:
         return " & "
-        
+       
 def _aux2(a, b):
     if a == b:
         return r"\\" + r" \hline\hline" + "\n"
     else:
         return " & "
 
-def _detStd(i):
-    for i in 
+#def _detStd(i):
+#    for i in 
 
-
+## TODO: improve uncertainties
 def toTable(cols, col_titles=None, col_syms=None ,col_units=None, cap=None, label=None):
     begin = (r"\begin{table}" + "\n\t" + r"\centering" "\n\t" +
              r"\begin{tabular}{}" + "\n" + "\t\t" + r"\hline" + "\n")
@@ -37,7 +37,7 @@ def toTable(cols, col_titles=None, col_syms=None ,col_units=None, cap=None, labe
     if not col_syms is None:
         if not col_units is None:
             for i in range(len(col_syms)):
-                header = (r"{}\,[\si{{{}}}]".format(col_syms[i], col_units[i])
+                header = (r"${}\,[\si{{{}}}]$".format(col_syms[i], col_units[i])
                            + _aux2(i ,(len(col_syms)-1)))
                 headers += header 
         else:
@@ -60,7 +60,7 @@ def toTable(cols, col_titles=None, col_syms=None ,col_units=None, cap=None, labe
             for k in cols:
                 row = "\t\t"
                 for i in k:
-                    row += r"\num{{{}()}} ".format(n(i), _detStd(i)) + _aux(i, k)
+                    row += r"\num{{{}({})}} ".format(n(i), s(i)) + _aux(i, k)
                 row += "\n"
                 rows += row
     return begin + titles + headers + rows + end
