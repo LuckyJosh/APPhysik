@@ -237,7 +237,7 @@ if PRINT:
 
     print("\nFit-Parameter 1:\n",
           "A =", uParam_A*1e-05, "\n",
-          np.log(popt1[0]*1e-05), ulog(error[0]*1e-05),"\n",
+          np.log(popt1[0]*1e-05), log(error[0]*1e-05),"\n",
           "B =", uParam_B*1e-05, "\n",
           popt1[1]*1e-05, error[1]*1e-05)
 

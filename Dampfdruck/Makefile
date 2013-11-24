@@ -1,10 +1,10 @@
-Protokoll.pdf: Protokoll.tex  Latex/*.tex Latex/Literatur.bib Plots/*.pdf
+Protokoll.pdf: Protokoll.tex  Latex/*.tex Latex/Literatur.bib Grafiken/*.pdf
 	pdflatex Protokoll.tex
 	biber Protokoll
 	pdflatex Protokoll.tex
-	
-Plots/*.pdf: *.py Messdaten/*.txt	
-	python *.py
+	open Protokoll.pdf
+Plots/*.pdf: Auswertung.py Messdaten/*.txt	
+	python Auswertung.py
 	
 clean:  
 	rm -f Latex/*.aux
