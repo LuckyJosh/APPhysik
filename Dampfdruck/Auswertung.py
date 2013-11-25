@@ -89,15 +89,15 @@ uParam_B = ufloat(popt1[1], error[1])
 t = np.linspace(300, 500)
 
 plt.clf()
-plt.xlim(2.65e-03, 3.05e-03)
-plt.ylim(1e04, 1e05)
+plt.xlim(2.7e-03, 2.9e-03)
+plt.ylim(1e04, 2e05)
 plt.grid(which="both")
 plt.yscale("log")
 plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x, _: float(x * 1e2)))
 plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x, _: float(x * 1e-05)))
 plt.xlabel("reziproke Temperatur $T^{-1}\,10^{-2}[\mathrm{K^{-1}}]$")
 plt.ylabel("Druck $p\,[\mathrm{bar}]$")
-plt.errorbar(noms(1/uT1), noms(up1), xerr=stds(1/uT1),
+plt.errorbar(noms(1/uT1), noms(up1), xerr=stds(1e-02/uT1),
              yerr=stds(up1), fmt="rx", label="Messwerte")
 plt.plot(1/t, p(noms(t), *popt1), color="grey",
          label="Regessionsgerade")
@@ -193,8 +193,8 @@ uV_D_2 = unp.uarray(np.zeros(len(_vdd)), np.zeros(len(_vdd)))
 for i in range(len(_vdd)):
     uV_D_2[i] = _vdp[i] - Usqrt(_vdd[i])
 
-#V_D_1= (R * T2[6::] / (2 * p2[6::])) + Usqrt((R * T2[6::] / (2 * p2[6::]))**2 - (a / p2[6::]))
-#V_D_2 = (R * T2[6::] / (2 * p2[6::])) - Usqrt((R * T2[6::] / (2 * p2[6::]))**2 - (a / p2[6::]))
+V_D_1= (R * T2[6::] / (2 * p2[6::])) + Usqrt((R * T2[6::] / (2 * p2[6::]))**2 - (a / p2[6::]))
+V_D_2 = (R * T2[6::] / (2 * p2[6::])) - Usqrt((R * T2[6::] / (2 * p2[6::]))**2 - (a / p2[6::]))
 
 # Bei unserem Versuchsaufbau ist das (Kleinere) Volumen V_D_2 realistischer
 # da das größere Volumen mit bspw. 29 Literen nicht in den Kolben gepasst hätte
@@ -307,10 +307,10 @@ if PRINT:
 #          cap=r"Mögliche Dampfvolumina nach \eqref{eq:Vd}",
 #          label="Vd"))
 
-    print("\n" +
-          tab.toTable([udP(uT2[6::])*1e-02, uL_2],
-          ["Differentialquotient","Verdampungswärme"],
-          ["\od{p}{T}", "L"],
-          [r"\bar\per\kelvin", r"\joule\mole"],
-          cap=r"Differntialquotient und Temperaturabhängige Verdampungswärme",
-          label="L_dpdT"))
+#    print("\n" +
+#          tab.toTable([udP(uT2[6::])*1e-02, uL_2],
+#          ["Differentialquotient","Verdampungswärme"],
+#          ["\od{p}{T}", "L"],
+#          [r"\bar\per\kelvin", r"\joule\mole"],
+#          cap=r"Differntialquotient und Temperaturabhängige Verdampungswärme",
+#          label="L_dpdT"))

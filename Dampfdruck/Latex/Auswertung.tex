@@ -3,6 +3,7 @@ berechneten Größen tabellarisch dargestellt. An entsprechender Stelle sind Erk
 zu den zu den Werten und Rechnungen gegeben.\\
 
 \subsection{Bestimmung der Verdampfungswärme\\ bei Drücken unter einem bar}
+\label{sec:gemittelte Verdampfungswärme}
 	In \autoref{tab:DataI} sind die, für diese Auswertung verwendeten, Messwerte für Temperatur und 
 	Druck dieses Teilversuches zu finden. Dabei sind die angegebenen Messunsicherheiten der Temperaturen
 	durch die Einteilung Skala des Thermometers und die Unsicherheiten der Drücke durch die Anzeigegenauigkeit 
@@ -16,16 +17,20 @@ zu den zu den Werten und Rechnungen gegeben.\\
 				\hline
 				    Temperatur      &       Druck       &      Temperatur      &       Druck       \\
 				$T\,[\si{\kelvin}]$ & $p\,[\si{mbar}] $ & $ T\,[\si{\kelvin}]$ & $ p\,[\si{mbar}]$ \\ \hline\hline
-				   \num{333(1)}     &   \num{244(1)}    &     \num{353(1)}     &   \num{467(1)}    \\
-				   \num{335(1)}     &   \num{260(1)}    &     \num{355(1)}     &   \num{506(10)}   \\
-				   \num{337(1)}     &   \num{275(1)}    &     \num{357(1)}     &   \num{553(10)}   \\
-				   \num{339(1)}     &   \num{291(1)}    &     \num{359(1)}     &   \num{591(10)}   \\
-				   \num{341(1)}     &   \num{310(1)}    &     \num{361(1)}     &   \num{643(10)}   \\
-				   \num{343(1)}     &   \num{332(1)}    &     \num{363(1)}     &   \num{694(10)}   \\
-				   \num{345(1)}     &   \num{349(1)}    &     \num{365(1)}     &   \num{747(10)}   \\
-				   \num{347(1)}     &   \num{374(1)}    &     \num{367(1)}     &   \num{796(10)}   \\
-				   \num{349(1)}     &   \num{400(1)}    &     \num{368(1)}     &   \num{821(10)}   \\
-				   \num{351(1)}     &   \num{429(1)}    &     \num{369(1)}     &   \num{851(10)}   \\ \hline
+				   %\num{333(1)}     &   \num{244(1)}    & 
+				   %\num{335(1)}     &   \num{260(1)}    &    
+				   %\num{337(1)}     &   \num{275(1)}    &     
+				   %\num{339(1)}     &   \num{291(1)}    &     
+				   %\num{341(1)}     &   \num{310(1)}    
+				   %\num{343(1)}     &   \num{332(1)}    
+				   %\num{345(1)}     &   \num{349(1)}    
+				   %\num{347(1)}     &   \num{374(1)}    
+				   \num{349(1)}     &   \num{400(1)}    &    \num{361(1)}     &   \num{643(10)}   \\ 
+				   \num{351(1)}     &   \num{429(1)}    &    \num{363(1)}     &   \num{694(10)}   \\
+				   \num{353(1)}     &   \num{467(1)}    &    \num{365(1)}     &   \num{747(10)}   \\
+				   \num{355(1)}     &   \num{506(10)}   &    \num{367(1)}     &   \num{796(10)}   \\
+				   \num{357(1)}     &   \num{553(10)}   &    \num{368(1)}     &   \num{821(10)}   \\
+				   \num{359(1)}     &   \num{591(10)}   &    \num{369(1)}     &   \num{851(10)}   \\ \hline
 			\end{tabular}
 			\caption{Werte der Messung bei $p < \SI{1}{bar}$ \label{tab:DataI}}
 		\end{table}
@@ -50,9 +55,9 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	\begin{subequations}
 		\begin{empheq}{align}
 			\label{eq:A}
-			A &= \SI{-0.040(1)}{\bar\kelvin}\\
+			A &= \SI{-0.0491(5)}{\bar\kelvin}\\
 			\label{eq:B}
-			B &= \SI{11(9)}{\bar}
+			B &= \SI{13(11)}{\bar}
 		\end{empheq}
 	\end{subequations} 
 	
@@ -61,11 +66,12 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	 
 	\begin{empheq}{equation*}
 	 		\label{eq:L}
-	 		L = \SI{3.31(8)e04}{\joule\per\mole}
+	 		L = \SI{4.09(4)e04}{\joule\per\mole}
 	\end{empheq}
 	berechnen.
 	
 	\subsection{Bestimmung der inneren Verdampfungswärme}
+	\label{sec:innereVerdampfungswärme}
 	Für die äußere Verdampfungswärme $L_{a}$ erhält man unter Verwendung der allgemeinen
 	Gasgleichung \eqref{eq:allgGas} und der Annahme $V_{F} << V_{D} $ die Näherung
 	\begin{empheq}{equation}
@@ -82,11 +88,12 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	$N_{A} = \SI{6.022e23}{\per\mole}$ \cite{SciPy} und Umrechnung in $\si{\eV}$\footnote{$\SI{1}{\eV} = \SI{1.602e-19}{\joule}$ \cite{SciPy}},
 	erhält man die für die Verdampfung eins einzelnen Wassermoleküls benötigte Energie
 	\begin{empheq}{equation*}
-			 	L_{i} =  \SI{0.331(8)}{\eV}\;.
+			 	L_{i} =  \SI{0.391(4)}{\eV}\;.
 	\end{empheq} 
 	
 	
 \subsection{Bestimmung der Temperaturabhängigkeit\\ der Verdampfungswärme}
+\label{sec:TAbhängig}
 	Die für die folgende Auswertung verwendeten Werte für Druck und Temperatur der zweiten Messung, sind in
 	\autoref{tab:DataII} dargestellt. 
 	
@@ -157,6 +164,8 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	
 	Zur Berechnung des Dampfvolumen $V_{D}$ wird mit \eqref{eq:vanderWaals} eine im Vergleich zur allgemeinen Gasgleichung
 	\eqref{eq:allgGas} bessere Näherung verwendet. Durch Auflösen dieser Gleichung nach $V_{D}$ erhält man Mittels \emph{pq-Formel} 
+	und mit der Konstanten 
+	$ a = \SI{0.9}{\joule\cubic\meter\per\mole\squared}$ \cite{V203} 
 	die zwei möglichen Volumina:
 	\begin{empheq}{equation}
 		V_{D_{1,2}} = \dfrac{RT}{2p} \pm \sqrt{\del{\dfrac{RT}{2p}}^{2} - \dfrac{a}{p}}
@@ -244,4 +253,4 @@ zu den zu den Werten und Rechnungen gegeben.\\
 		\includegraphics[scale=0.75]{Grafiken/Verlauf_LT.pdf}
 		\label{fig:L_T}
 	\end{figure}
-	 
+\newpage
