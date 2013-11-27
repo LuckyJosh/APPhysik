@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.23)  26 NOV 2013 20:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.23)  27 NOV 2013 16:55
 entering extended mode
 **Protokoll.tex
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dampfdruck\Protokoll.tex"
@@ -1932,7 +1932,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * \marginparwidth=44.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=71.13188pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -2120,12 +2120,6 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 3.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dampfdruck\Protokoll.toc")
-\tf@toc=\write6
-
-[1{C:/Users/JoshLaptop/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-]
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dampfdruck\Latex/Einleitung
 .tex")
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dampfdruck\Latex/Aufgaben.t
@@ -2147,26 +2141,24 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 35.
 
-LaTeX Warning: Reference `eq:pT_exp' on page 2 undefined on input line 38.
+LaTeX Warning: Reference `eq:pT_exp' on page 1 undefined on input line 38.
 
 
-LaTeX Warning: Reference `eq:pT_ln' on page 2 undefined on input line 40.
+LaTeX Warning: Reference `eq:pT_ln' on page 1 undefined on input line 40.
 
-<Grafiken/Messreihe_1.pdf, id=68, 578.16pt x 431.81326pt>
+<Grafiken/Messreihe_1.pdf, id=48, 578.16pt x 431.81326pt>
 File: Grafiken/Messreihe_1.pdf Graphic file (type pdf)
 
 <use Grafiken/Messreihe_1.pdf>
 Package pdftex.def Info: Grafiken/Messreihe_1.pdf used on input line 44.
 (pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
+ [1{C:/Users/JoshLaptop/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
+]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `eq:allgGas' on page 2 undefined on input line 77.
 
-[2]
-
-LaTeX Warning: Reference `eq:allgGas' on page 3 undefined on input line 77.
-
-[3pdfTeX warning (ext4): destination with the same identifier (name{equation.5.
+[2pdfTeX warning (ext4): destination with the same identifier (name{equation.5.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2181,7 +2173,7 @@ l.81 	\end{empheq}
                    <D:/Eigene Dateien/Studium/Physik/AP/PraktikumRepo/Dampfdruc
 k/Grafiken/Messreihe_1.pdf>]
 
-LaTeX Warning: Reference `eq:L_i' on page 4 undefined on input line 87.
+LaTeX Warning: Reference `eq:L_i' on page 3 undefined on input line 87.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 89.
@@ -2191,118 +2183,132 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 96.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 		\end{empheq}
+l.143 		\end{empheq}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{equation.5.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 		\end{empheq}
+l.143 		\end{empheq}
                     
-<Grafiken/Messreihe_2.pdf, id=197, 578.16pt x 431.81326pt>
+<Grafiken/Messreihe_2.pdf, id=182, 578.16pt x 431.81326pt>
 File: Grafiken/Messreihe_2.pdf Graphic file (type pdf)
 
 <use Grafiken/Messreihe_2.pdf>
-Package pdftex.def Info: Grafiken/Messreihe_2.pdf used on input line 147.
+Package pdftex.def Info: Grafiken/Messreihe_2.pdf used on input line 148.
 (pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `eq:Clausius' on page 3 undefined on input line 153.
 
-
-LaTeX Warning: Reference `eq:Clausius' on page 4 undefined on input line 152.
-
-[4pdfTeX warning (ext4): destination with the same identifier (name{equation.5.
+[3pdfTeX warning (ext4): destination with the same identifier (name{equation.5.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.156 	\end{empheq}
+l.157 	\end{empheq}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{equation.5.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.156 	\end{empheq}
+l.157 	\end{empheq}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{equation.5.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.156 	\end{empheq}
-                   ] [5 <D:/Eigene Dateien/Studium/Physik/AP/PraktikumRepo/Damp
+l.157 	\end{empheq}
+                   ] [4 <D:/Eigene Dateien/Studium/Physik/AP/PraktikumRepo/Damp
 fdruck/Grafiken/Messreihe_2.pdf>]
 
-LaTeX Warning: Reference `eq:vanderWaals' on page 6 undefined on input line 166
+LaTeX Warning: Reference `eq:vanderWaals' on page 5 undefined on input line 167
 .
 
 
-LaTeX Warning: Reference `eq:allgGas' on page 6 undefined on input line 167.
+LaTeX Warning: Reference `eq:allgGas' on page 5 undefined on input line 168.
 
-[6pdfTeX warning (ext4): destination with the same identifier (name{equation.5.
+[5pdfTeX warning (ext4): destination with the same identifier (name{equation.5.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.208 
+l.209 
       ]
-Overfull \hbox (3.62894pt too wide) in paragraph at lines 211--233
+Overfull \hbox (3.62894pt too wide) in paragraph at lines 212--234
  [][] 
  []
 
 
-Package caption Warning: \label without proper \caption on input line 255.
+Package caption Warning: \label without proper \caption on input line 256.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:L_T' on page 7 undefined on input line 236.
+LaTeX Warning: Reference `fig:L_T' on page 6 undefined on input line 237.
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.249 		\end{empheq}
+l.250 		\end{empheq}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{equation.5.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.249 		\end{empheq}
+l.250 		\end{empheq}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{equation.5.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.249 		\end{empheq}
-                     <Grafiken/Verlauf_LT.pdf, id=360, 578.16pt x 431.81326pt>
+l.250 		\end{empheq}
+                     <Grafiken/Verlauf_LT.pdf, id=347, 578.16pt x 431.81326pt>
 File: Grafiken/Verlauf_LT.pdf Graphic file (type pdf)
 
 <use Grafiken/Verlauf_LT.pdf>
-Package pdftex.def Info: Grafiken/Verlauf_LT.pdf used on input line 254.
-(pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7pdfTeX warning (ext4): destination with the same identifier (name{equation.5.
-7}) has been already used, duplicate ignored
+Package pdftex.def Info: Grafiken/Verlauf_LT.pdf used on input line 255.
+(pdftex.def)             Requested size: 289.07928pt x 215.9061pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{equation.5
+.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.257 \newpage
+l.258 \newpage
               ])
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dampfdruck\Latex/Fehlerrech
-nung.tex") [8 <D:/Eigene Dateien/Studium/Physik/AP/PraktikumRepo/Dampfdruck/Gra
-fiken/Verlauf_LT.pdf>]
+nung.tex"pdfTeX warning (ext4): destination with the same identifier (name{equa
+tion.5.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.12 \end{empheq}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{equation.5.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.18 \end{empheq}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{equation.5.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.24 \end{empheq}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{equation.5.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 \end{empheq}
+                 ) [7 <D:/Eigene Dateien/Studium/Physik/AP/PraktikumRepo/Dampfd
+ruck/Grafiken/Verlauf_LT.pdf>]
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dampfdruck\Latex/Diskussion
 .tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--7
 
  []
+
+
+LaTeX Warning: Reference `sec:gemittelte Verdampfungsw\IeC {\"a}rme' on page 8 
+undefined on input line 8.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--28
@@ -2314,20 +2320,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--38
 
  []
 
-) [9]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 34.
+) [8]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 32.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 AED: lastpage setting LastPage
-[10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
-
-("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dampfdruck\Protokoll.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
+ ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dampfdruck\Protokoll.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 33.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 33.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
 (rerunfilecheck)             Checksum: FD27472D253D7A57A1ED1D001DF77E37;678.
 
@@ -2338,12 +2343,12 @@ Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  33676 strings out of 493921
- 640735 string characters out of 3148871
- 1052057 words of memory out of 3000000
- 36246 multiletter control sequences out of 15000+200000
+ 640670 string characters out of 3148871
+ 1053279 words of memory out of 3000000
+ 36251 multiletter control sequences out of 15000+200000
  102663 words of font info for 94 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 67i,22n,71p,868b,1411s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,24n,71p,868b,1392s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
@@ -2363,9 +2368,9 @@ eX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on Protokoll.pdf (10 pages, 425003 bytes).
+Output written on Protokoll.pdf (9 pages, 425817 bytes).
 PDF statistics:
- 584 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
+ 575 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
  108 words of extra memory for PDF output out of 10000 (max. 10000000)
 
