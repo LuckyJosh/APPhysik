@@ -1,0 +1,41 @@
+Die allgemeine Gasgleichung ist eine fundamentale Gleichung der Thermodynamik 
+mit:
+\begin{empheq}{equation}
+pV = RT
+\label{eq:allgGas}
+\end{empheq}
+R ist die allgemeine Gaskonstante.\\
+Für die Auswertung der temperaturabhängigen Verdampfungswärme
+wird eine Vereinfachte Form der van-der-Waalsschen Zustandsgleichung 
+\begin{empheq}{equation}
+	\left(p + \frac{a}{V^2}\right)V = RT
+	\label{eq:vanderWaals}
+\end{empheq}
+mit einer stoffspezifischen Konstante $a$ verwendet,
+mit der eine, im Vergleich zur allgemeinen Gasgleichung,
+bessere Beschreibung von realen Gasen möglich ist. 
+
+Die Clausius-Clapeyronische Gleichung 
+\begin{empheq}{equation}
+(V_D - V_F)dp = \frac{L}{T}\cdot dT
+\label{eq:Clausius}
+\end{empheq}
+wird verwendet um Dampfdruckkurve eines Stoffes zu ermitteln,
+weiterhin lässt sich sagen, dass die Gleichung nur schwer integrierbar ist, da alle Variablen kompliziert von T abhängen.
+Für manche Temperaturbereiche ist die Integration jedoch vereinfacht möglich, damit folgt:
+\begin{empheq}{equation}
+ln(p) = -\frac{L}{R}\cdot\frac{1}{T} + const.
+\label{eq:pT_ln}
+\end{empheq}
+bzw.
+\begin{empheq}{equation}
+p = p_0 \cdot e^{-\frac{L}{R}\cdot\frac{1}{T}}
+\label{eq:pT_exp}
+\end{empheq}
+Für die Auswertung wird 
+\begin{empheq}{equation}
+L_i := L - L_a
+\label{eq:L_i}
+\end{empheq}
+definiert, wobei $L_a$ die Verdampfungswärme ist, 
+die benötigt wird, um das Volumen $V_F$ der Flüssigkeit auf das Volumen des Dampfes $V_D$ auszudehnen. 

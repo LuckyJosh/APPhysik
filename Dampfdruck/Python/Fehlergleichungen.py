@@ -37,10 +37,14 @@ def error(f, err_vars=None):
 
 
 
+#
+#t, a, b, c = var("T A B C")
+#dp = 3 * a * t**2 + 2*b*t + c
+#print(r"\sigma{\od{p}{T}}=", error(dp))
 
-
-
-
+dp, vd, T = var("\diff{p} V_{D} T")
+L = dp * vd * T 
+print(r"\sigma_{L}=", error(L)  )
 
 
 

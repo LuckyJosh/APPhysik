@@ -1,0 +1,30 @@
+
+\renewcommand{\theequation}{\Roman{equation}}
+\setcounter{equation}{0}
+
+Nachfolgend sind die, Mittels Gaußscher Fehlerfortpflanzung bestimmten, Fehlergleichungen aufgelistet, die für die 
+in \autoref{sec:Auswertung} angegebenen Fehler verwendet wurden.
+
+Den Fehler der in \autoref{sec:gemittelteVerdampfungswärme} bestimmten mittleren Verdampfungswärme $L$, erhält man vereinfacht durch:
+\begin{empheq}{equation}
+	\sigma_{L} = R\cdot\sigma_{A}
+	\label{eq:std_L}
+\end{empheq}
+
+Der Fehler der inneren Verdampfungswärme pro Molekül $L_{i}$ aus \autoref{sec:innereVerdampfungswärme} berechnet sich durch:
+\begin{empheq}{equation}
+	\sigma_{L_{i}} = \dfrac{L_{a} \cdot \sigma_{L}}{N_{A} \cdot \SI{1.602e-19}{\joule\per\eV}}
+	\label{eq:std_Li}
+\end{empheq}
+
+Für die in \autoref{tab:L_dpdT} angegebenen Differentialquotienten $\od{p}{T} =: \dif{p}$ berechnet sich der Fehler aus:
+\begin{empheq}{equation}
+	\sigma_{\dif{p}}= \sqrt{9 T^{4} \sigma_{A}^{2} + 4 T^{2} \sigma_{B}^{2} + \sigma_{C}^{2} + \sigma_{T}^{2} \left(6 A T + 2 B\right)^{2}}
+	\label{eq:std_dp}
+\end{empheq}  
+
+Die temperaturabhängige Verdampfungswärme aus \autoref{tab:L_dpdT} hat den Fehler:
+\begin{empheq}{equation}
+	\sigma_{L(T)}= \sqrt{T^{2} V_{D}^{2} \sigma_{\dif{p}}^{2} + V_{D}^{2} \dif{p}^{2} \sigma_{T}^{2}}
+	\label{eq:std_LT}
+\end{empheq}

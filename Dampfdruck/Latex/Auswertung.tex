@@ -3,7 +3,7 @@ berechneten Größen tabellarisch dargestellt. An entsprechender Stelle sind Erk
 zu den zu den Werten und Rechnungen gegeben.\\
 
 \subsection{Bestimmung der Verdampfungswärme\\ bei Drücken unter einem bar}
-\label{sec:gemittelte Verdampfungswärme}
+\label{sec:gemittelteVerdampfungswärme}
 	In \autoref{tab:DataI} sind die, für diese Auswertung verwendeten, Messwerte für Temperatur und 
 	Druck dieses Teilversuches zu finden. Dabei sind die angegebenen Messunsicherheiten der Temperaturen
 	durch die Einteilung Skala des Thermometers und die Unsicherheiten der Drücke durch die Anzeigegenauigkeit 
@@ -11,7 +11,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	musste im Verlauf des Versuchs angepasste werden, da sich die Fluktuation der auf dem Barometer angezeigten
 	Messwerte vergrößerte.  
 	
-		\begin{table}[!h]
+		\begin{table}
 			\centering
 			\begin{tabular}{|c|c||c|c|}
 				\hline
@@ -39,7 +39,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	aufgetragen, die wegen der halblogarithmischen Skalierung und der Definition $x := \tfrac{1}{T}$ eine Gerade 
 	der Form \eqref{eq:pT_ln} darstellt.
 
-	\begin{figure}[!h]
+	\begin{figure}
 		\centering
 		\includegraphics[scale=0.75]{Grafiken/Messreihe_1.pdf}
 		\caption{Halblogarithmische Darstellung der Messwerte mit Regressionsfunktion}
@@ -69,7 +69,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	 		\label{eq:L}
 	 		L = \SI{4.09(4)e04}{\joule\per\mole}
 	\end{empheq}
-	berechnen.
+	berechnen. Der angegebene Fehler wurde dabei über \eqref{eq:std_L} bestimmt. 
 	
 	\subsection{Bestimmung der inneren Verdampfungswärme}
 	\label{sec:innereVerdampfungswärme}
@@ -89,16 +89,16 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	$N_{A} = \SI{6.022e23}{\per\mole}$ \cite{SciPy} und Umrechnung in $\si{\eV}$\footnote{$\SI{1}{\eV} = \SI{1.602e-19}{\joule}$ \cite{SciPy}},
 	erhält man die für die Verdampfung eins einzelnen Wassermoleküls benötigte Energie
 	\begin{empheq}{equation*}
-			 	L_{i} =  \SI{0.391(4)}{\eV}\;.
+			 	L_{i} =  \SI{0.391(4)}{\eV}\;
 	\end{empheq} 
-	
+	deren Fehler mit Hilfe von \eqref{eq:std_Li} berechnet wurde.
 	
 \subsection{Bestimmung der Temperaturabhängigkeit\\ der Verdampfungswärme}
-\label{sec:TAbhängig}
+\label{sec:Auswertung_TempAbhängigkeit}
 	Die für die folgende Auswertung verwendeten Werte für Druck und Temperatur der zweiten Messung, sind in
 	\autoref{tab:DataII} dargestellt. 
 	
-	\begin{table}[!h]
+	\begin{table}
 		\centering
 		\begin{tabular}{|c|c||c|c|}
 			\hline
@@ -142,7 +142,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 		\end{empheq}
 	\end{subequations}
 	
-	\begin{figure}[!h]
+	\begin{figure}
 		\centering
 		\includegraphics[scale=0.75]{Grafiken/Messreihe_2.pdf}
 		\caption{Messwerte und Regressionspolynom der Form $f(x) = Ax^{3} + Bx^{2} + Cx + D$ \label{fig:pT2}}
@@ -176,7 +176,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	aufgelistet. Dabei sind für die Volumina keine Fehler angegeben, da diese für das relevante Volumen $V_{D_{2}}$ von der Größenordnung
 	\num{1e-08} sind.
 	
-	\begin{table}[!h]
+	\begin{table}
 		\centering
 		\begin{tabular}{|c|c||c|c|}
 			\hline
@@ -206,13 +206,13 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	Mit dem Volumen $V_{D} := V_{D_{2}}$,den Temperaturen \autoref{tab:DataII}, den entsprechenden Differntialquotienten \eqref{eq:dpdT} und der Näherung $V_{F} << V_{D}$ erhält man 
 	aus \eqref{eq:L_dpdT} die neben den Differntialquotienten in \autoref{tab:L_dpdT} dargestellten Werte für die Verdampfungswärme $L$.
 	
-	\begin{table}[!h]
+	\begin{table}
 		\centering
 		\begin{tabular}{|c|c||c|c|}
 			\hline
-			Differentialquotient & Verdampungswärme & Differentialquotient & Verdampungswärme\\
-			$\od{p}{T}\,[\si[prefixes-as-symbols = true]{\milli\bar\per\kelvin}]$ & 
-			$L\,[\si{\joule\per\mole}]$ & $\od{p}{T}\,[\si[prefixes-as-symbols = true]{\milli\bar\per\kelvin}]$ & 
+			Differentialquotient & Verdampfungswärme & Differentialquotient & Verdampungswärme\\
+			$\od{p}{T}\,[\si[prefixes-as-symbols = true]{\milli\bar\per\kelvin}]$\eqref{eq:std_dp} & 
+			$L\,[\si{\joule\per\mole}]$\eqref{eq:std_LT} & $\od{p}{T}\,[\si[prefixes-as-symbols = true]{\milli\bar\per\kelvin}]$ & 
 			$L\,[\si{\joule\per\mole}]$\\ \hline\hline
 				\num{18.8(1)}  & \num{205(1)} & \num{71.0(3)}  & \num{783(3)} \\
 				\num{13.1(1)}  & \num{142(1)} & \num{85.6(3)}  & \num{946(4)} \\
@@ -230,7 +230,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 				\num{57.8(3)}  & \num{636(3)} & & \\
 			\hline
 		\end{tabular}
-		\caption{Differntialquotient und Temperaturabhängige Verdampungswärme \label{tab:L_dpdT}}
+		\caption{Differntialquotient und Temperaturabhängige Verdampfungswärme \label{tab:L_dpdT}}
 	\end{table}
 	
 	In \autoref{fig:L_T} sind die berechneten Verdampfungswärmen aus \autoref{tab:L_dpdT} zusammen mit 
@@ -249,7 +249,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 		\end{empheq}
 	\end{subequations} 
 	
-	\begin{figure}[!h]
+	\begin{figure}
 		\centering
 		\includegraphics[scale=0.75]{Grafiken/Verlauf_LT.pdf}
 		\label{fig:L_T}
