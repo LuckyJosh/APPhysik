@@ -15,6 +15,9 @@
 \usepackage{lmodern}                                                                % Empfohlener T1-Font für deutsche Texte
 \usepackage[backend=biber, style=numeric-verb]{biblatex}
 \usepackage[babel,german=quotes]{csquotes}
+
+\clubpenalty = 10000 % schliesst Schusterjungen aus
+\widowpenalty = 10000 \displaywidowpenalty = 10000% schliesst Hurenkinder aus 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{fancyhdr}                                                               % Ermöglicht detailierte Bearbeitung der Kopf- und Fußzeile
@@ -25,12 +28,12 @@
 \renewcommand{\headrulewidth}{.5 pt}                                                 % Dicke des Kopfzeilentrennstrichs
 \renewcommand{\footrulewidth}{.5 pt}                                                 % Dicke des Fußzeilentrennstrichs
 
-\lhead{\textbf{\VNr\ \VN}}                                                                   % Angabe Links-Oben
+\lhead{\textbf{Anfängerpraktikum Physik\\ \VNr\ \VN}}                                                                   % Angabe Links-Oben
 %\chead{}                                                                           % Angabe Mitte-Oben
 \rhead{\VD}                                                                      % Angabe Rechts-Oben
-%\lfoot{}                                                                           % Angabe Links-Unten
+\lfoot{\Namen}                                                                           % Angabe Links-Unten
 \cfoot{\textbf{\thepage\ von \pageref{LastPage}}}                                   % Angabe Mitte-Unten
-\rfoot{\Namen}                                           % Angabe Rechts-Unten
+\rfoot{\Emails}                                           % Angabe Rechts-Unten
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -45,6 +48,9 @@
 \usepackage{amssymb}                                                                % Fügt Symbole wie z.B. Zahlenmengen wie $\mathbb{R}$ hinzu 
 \usepackage{amsthm}                                                                 
 \usepackage{amsfonts}                                                               % Fügt Font für Mathematikumgebung hinzu
+
+
+
 
 \usepackage{empheq}                                                                 % Stellt verbesserte Gleichungsumgebung bereit \begin{empheq}[<Aussehen>]{<Umgebungstyp>} ... \end{empheq}
 %test
@@ -107,6 +113,9 @@
 \DeclarePairedDelimiter{\mean}{\langle}{\rangle}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[ngerman]{cleveref}
+\crefformat{equation}{(#2#1#3)}
+\crefrangeformat{equation}{(#3#1#4) bis~(#5#2#6)}
 
 %\usepackage{subeqn}
 %\renewcommand{\thesubequation}{\arabic{mainequation}.\arabic{equation}}

@@ -11,7 +11,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	musste im Verlauf des Versuchs angepasste werden, da sich die Fluktuation der auf dem Barometer angezeigten
 	Messwerte vergrößerte.  
 	
-		\begin{table}
+		\begin{table}[!h]
 			\centering
 			\begin{tabular}{|c|c||c|c|}
 				\hline
@@ -39,7 +39,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	aufgetragen, die wegen der halblogarithmischen Skalierung und der Definition $x := \tfrac{1}{T}$ eine Gerade 
 	der Form \eqref{eq:pT_ln} darstellt.
 
-	\begin{figure}
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=0.75]{Grafiken/Messreihe_1.pdf}
 		\caption{Halblogarithmische Darstellung der Messwerte mit Regressionsfunktion}
@@ -52,7 +52,6 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	\end{empheq}
 	sind:
 	\addtocounter{equation}{-1}
-	
 	\begin{subequations}
 		\begin{empheq}{align}
 			\label{eq:A}
@@ -71,34 +70,36 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	\end{empheq}
 	berechnen. Der angegebene Fehler wurde dabei über \eqref{eq:std_L} bestimmt. 
 	
-	\subsection{Bestimmung der inneren Verdampfungswärme}
-	\label{sec:innereVerdampfungswärme}
-	Für die äußere Verdampfungswärme $L_{a}$ erhält man unter Verwendung der allgemeinen
-	Gasgleichung \eqref{eq:allgGas} und der Annahme $V_{F} << V_{D} $ die Näherung
-	\begin{empheq}{equation}
-	 	\label{eq:L_a}
-	 	L_{a} = RT.
-	\end{empheq}
-	Bei der gegebenen Temperatur $T = \SI{373}{\kelvin}$ ergibt sich damit die notwendige 
-	Energie, um das Volumen $V_{F}$ auf $V_{D}$ zu vergrößern zu
-	\begin{empheq}{equation*}
-		 	L_{a} =  \SI{3101}{\joule\per\mole}\;.
-    \end{empheq}  
-	Aus der gesamten $L$ und  äußeren Verdampfungswärme $L_{a}$ lässt sich mit \eqref{eq:L_i}
-	die innere Verdampfungswärme bestimmen. Durch Skalierung mit der Avogadro-Konstante 
-	$N_{A} = \SI{6.022e23}{\per\mole}$ \cite{SciPy} und Umrechnung in $\si{\eV}$\footnote{$\SI{1}{\eV} = \SI{1.602e-19}{\joule}$ \cite{SciPy}},
-	erhält man die für die Verdampfung eins einzelnen Wassermoleküls benötigte Energie
-	\begin{empheq}{equation*}
-			 	L_{i} =  \SI{0.391(4)}{\eV}\;
-	\end{empheq} 
-	deren Fehler mit Hilfe von \eqref{eq:std_Li} berechnet wurde.
+\subsection{Bestimmung der inneren Verdampfungswärme}
+\label{sec:innereVerdampfungswärme}
+Für die äußere Verdampfungswärme $L_{a}$ erhält man unter Verwendung der allgemeinen
+Gasgleichung \eqref{eq:allgGas} und der Annahme $V_{F} << V_{D} $ die Näherung
+\begin{empheq}{equation}
+ 	\label{eq:L_a}
+ 	L_{a} = RT.
+\end{empheq}
+Bei der gegebenen Temperatur $T = \SI{373}{\kelvin}$ ergibt sich damit die notwendige 
+Energie, um das Volumen $V_{F}$ auf $V_{D}$ zu vergrößern zu
+\begin{empheq}{equation*}
+	 	L_{a} =  \SI{3101}{\joule\per\mole}\;.
+\end{empheq}  
+Aus der gesamten $L$ und  äußeren Verdampfungswärme $L_{a}$ lässt sich mit \eqref{eq:L_i}
+die innere Verdampfungswärme bestimmen.
+
+Durch Skalierung mit der Avogadro-Konstante 
+$N_{A} = \SI{6.022e23}{\per\mole}$ \cite{SciPy} und Umrechnung in $\si{\eV}$\footnote{$\SI{1}{\eV} = \SI{1.602e-19}{\joule}$ \cite{SciPy}},
+erhält man die für die Verdampfung eins einzelnen Wassermoleküls benötigte Energie
+\begin{empheq}{equation*}
+		 	L_{i} =  \SI{0.391(4)}{\eV}\;
+\end{empheq} 
+deren Fehler mit Hilfe von \eqref{eq:std_Li} berechnet wurde.
 	
 \subsection{Bestimmung der Temperaturabhängigkeit\\ der Verdampfungswärme}
 \label{sec:Auswertung_TempAbhängigkeit}
 	Die für die folgende Auswertung verwendeten Werte für Druck und Temperatur der zweiten Messung, sind in
 	\autoref{tab:DataII} dargestellt. 
 	
-	\begin{table}
+	\begin{table}[!h]
 		\centering
 		\begin{tabular}{|c|c||c|c|}
 			\hline
@@ -142,7 +143,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 		\end{empheq}
 	\end{subequations}
 	
-	\begin{figure}
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=0.75]{Grafiken/Messreihe_2.pdf}
 		\caption{Messwerte und Regressionspolynom der Form $f(x) = Ax^{3} + Bx^{2} + Cx + D$ \label{fig:pT2}}
@@ -155,7 +156,7 @@ zu den zu den Werten und Rechnungen gegeben.\\
 		\label{eq:L_dpdT}
 	\end{empheq}
 	zu erhalten.  Der in dieser Gleichung auftretende Differentialquotient kann durch Differentiation des 
-	Regressionsploynoms \eqref{eq:Reg_Pg3} mit den Parametern \eqref{eq:Reg_Pg3a} bis \eqref{eq:Reg_Pg3d}  
+	Regressionsploynoms \eqref{eq:Reg_Pg3} mit den Parametern \crefrange{eq:Reg_Pg3a}{eq:Reg_Pg3c} 
 	zu
 	\begin{empheq}{equation}
 		 \dod{p}{T} = 3AT^{2} + 2BT + C
@@ -174,9 +175,9 @@ zu den zu den Werten und Rechnungen gegeben.\\
 	\end{empheq} 
 	Die Mittels \eqref{eq:Vd} berechneten Volumina für die Temperaturen und Drücke aus \autoref{tab:DataII} sind in \autoref{tab:Vd}
 	aufgelistet. Dabei sind für die Volumina keine Fehler angegeben, da diese für das relevante Volumen $V_{D_{2}}$ von der Größenordnung
-	\num{1e-08} sind.
+	\num{e-08} sind.
 	
-	\begin{table}
+	\begin{table}[!h]
 		\centering
 		\begin{tabular}{|c|c||c|c|}
 			\hline
@@ -201,12 +202,30 @@ zu den zu den Werten und Rechnungen gegeben.\\
 		\caption{Mögliche Dampfvolumina nach \eqref{eq:Vd} \label{tab:Vd}}
 	\end{table}
 	
-	Daraus ist ersichtlich, dass $V_{D_{1}}$ zwar Lösungen der Gleichung \eqref{eq:Vd} sind, jedoch nicht zu dem Verwendeten Versuchsaufbau
+	Daraus ist ersichtlich, dass $V_{D_{1}}$ zwar Lösungen der Gleichung \eqref{eq:Vd} sind, jedoch nicht zu dem verwendeten Versuchsaufbau
 	passen, da der genutzten Stahlbolzen nicht das nötige Volumen hatte um mehrere Liter Wasserdampf zu fassen.\\
 	Mit dem Volumen $V_{D} := V_{D_{2}}$,den Temperaturen \autoref{tab:DataII}, den entsprechenden Differntialquotienten \eqref{eq:dpdT} und der Näherung $V_{F} << V_{D}$ erhält man 
 	aus \eqref{eq:L_dpdT} die neben den Differntialquotienten in \autoref{tab:L_dpdT} dargestellten Werte für die Verdampfungswärme $L$.
 	
-	\begin{table}
+
+	In \autoref{fig:L_T} sind die berechneten Verdampfungswärmen aus \autoref{tab:L_dpdT} zusammen mit 
+	einem Regressionspolynom 2. Grades der Form 
+	\begin{empheq}{equation}
+		f(x) = Ax^{2} + Bx + C
+	\end{empheq} 
+	gegen die Temperaturen aus \autoref{tab:DataII} aufgetragen.
+	Die mit SciPy bestimmten Regressionsparamter für dieses Polynom sind:
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{align}
+				A &= \SI{0.334(2)}{\joule\per\mole\per\kelvin\squared}\\
+				B &= \SI{-244(2)}{\joule\per\mole\per\kelvin}\\
+				C &= \SI{4.47(4)e04}{\joule\per\mole}
+		\end{empheq}
+	\end{subequations} 
+	
+	\vspace{2cm}
+	\begin{table}[!h]
 		\centering
 		\begin{tabular}{|c|c||c|c|}
 			\hline
@@ -232,26 +251,11 @@ zu den zu den Werten und Rechnungen gegeben.\\
 		\end{tabular}
 		\caption{Differntialquotient und Temperaturabhängige Verdampfungswärme \label{tab:L_dpdT}}
 	\end{table}
+
 	
-	In \autoref{fig:L_T} sind die berechneten Verdampfungswärmen aus \autoref{tab:L_dpdT} zusammen mit 
-	einem Regressionspolynom 2. Grades der Form 
-	\begin{empheq}{equation}
-		f(x) = Ax^{2} + Bx + C
-	\end{empheq} 
-	gegen die Temperaturen aus \autoref{tab:DataII} aufgetragen.
-	Die mit SciPy bestimmten Regressionsparamter für dieses Polynom sind:
-	\addtocounter{equation}{-1}
-	\begin{subequations}
-		\begin{empheq}{align}
-				A &= \SI{0.334(2)}{\joule\per\mole\per\kelvin\squared}\\
-				B &= \SI{-244(2)}{\joule\per\mole\per\kelvin}\\
-				C &= \SI{4.47(4)e04}{\joule\per\mole}
-		\end{empheq}
-	\end{subequations} 
-	
-	\begin{figure}
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=0.75]{Grafiken/Verlauf_LT.pdf}
+		\caption{Verlauf der Verdampfungswärme unter hohen Temperaturen und Drücken}
 		\label{fig:L_T}
 	\end{figure}
-\newpage
