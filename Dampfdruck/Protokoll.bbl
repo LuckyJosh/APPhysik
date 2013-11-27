@@ -33,9 +33,30 @@
       \strng{fullhash}{bbbaa048600aa66c82c8b6d12560aaaa}
       \field{sortinit}{K}
       \field{labeltitle}{Taschenbuch der Physik}
+      \field{edition}{19}
       \field{title}{Taschenbuch der Physik}
-      \field{volume}{19}
       \field{year}{2007}
+    \endentry
+    \entry{Mende09}{book}{}
+      \name{labelname}{2}{}{%
+        {{hash=8ae97d7606c7939ef3459d24d7950f8a}{Mende}{M\bibinitperiod}{Dietmar}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=50d64b99576dad61584268db5157a169}{Simon}{S\bibinitperiod}{Günther}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=8ae97d7606c7939ef3459d24d7950f8a}{Mende}{M\bibinitperiod}{Dietmar}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=50d64b99576dad61584268db5157a169}{Simon}{S\bibinitperiod}{Günther}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Fachbuchverlag Leibzig im Carl Hanser Verlag München}%
+      }
+      \strng{namehash}{f6d167fadb4d6ae48222c2ae12751dbe}
+      \strng{fullhash}{f6d167fadb4d6ae48222c2ae12751dbe}
+      \field{sortinit}{M}
+      \field{labeltitle}{Physik}
+      \field{edition}{16}
+      \field{subtitle}{Gleichungen und Tabellen}
+      \field{title}{Physik}
+      \field{year}{2009}
     \endentry
     \entry{SciPy}{misc}{}
       \field{sortinit}{S}
@@ -45,9 +66,16 @@
       \verb http://docs.scipy.org/doc/
       \endverb
     \endentry
+    \entry{V203}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V203 Verdampfungswärme und Dampfdruck-Kurve}
+      \field{title}{Versuchsanleitung}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V203.pdf
+      \endverb
+    \endentry
   \endsortlist
-  \missing{Mende09}
-  \missing{V203}
 \endrefsection
 \endinput
 
