@@ -1,0 +1,4 @@
+# Abgleich Widerstände R2 [Ohm]		# Potentiometer Widerstand R3
+332									421
+664									266
+1000								195

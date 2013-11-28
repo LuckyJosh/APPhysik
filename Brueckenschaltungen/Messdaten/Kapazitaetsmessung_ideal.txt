@@ -1,0 +1,4 @@
+#Abgleich C2[nF]	#Potentiometer Widerstand R3[Ohm] 
+994					705
+750					640
+597					689

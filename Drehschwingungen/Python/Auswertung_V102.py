@@ -70,7 +70,7 @@ uT = unp.uarray(T, len(T)*[T_err])
   # gemittelte Periodendauer mit Fehler
 uT_avr = np.mean(uT)
 T_avr = np.mean(T)
-T_std = np.std(T)/(len(T)-1)
+T_std = np.std(T)/(len(T))
 UT_avr = ufloat(T_avr, T_std)
 uT_avr = ufloat(unp.nominal_values(uT_avr), unp.std_devs(uT_avr))
 print("Mittlere Periodendauer ohne B:", uT_avr, UT_avr)

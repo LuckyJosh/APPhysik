@@ -1,0 +1,109 @@
+\documentclass[12pt]{scrartcl}                                                      % 'Artikel' Dokumentenklasse und Standardschriftgröße  
+\usepackage[paper=a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}  % Setzt das Papierformat und den Rand auf 2.5cm
+
+
+%setlength{\parindent}{0mm}                                                         % Setzt die Einrückung von Absätzen auf gegebenen Abstand
+\usepackage[onehalfspacing]{setspace}                                               % Legt Zeilenabstand fest
+
+
+\usepackage[T1]{fontenc}                                                            % Legt FontKodierung fest
+\usepackage[utf8]{inputenc}                                                         % Legt Zeichenkodierung fest
+
+\usepackage[ngerman]{babel}                                                         % Deutsche Rechtschreibung
+%\usepackage[ngerman]{varioref}                                                      % Versieht Referenzen mit Bezeichnung des Objektes
+\usepackage{lmodern}                                                                % Empfohlener T1-Font für deutsche Texte
+\usepackage[backend=biber, style=numeric-verb]{biblatex}
+\usepackage[babel,german=quotes]{csquotes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}                                                               % Ermöglicht detailierte Bearbeitung der Kopf- und Fußzeile
+\fancyhf{} 	                                                                        % Setzt Kopf und Fußzeile zurück 
+\setlength{\headheight}{28.0pt}                                                     % Höhe der Kopfzeile
+\setlength{\footskip}{18.0pt}                                                       % Höhe der Fußzeile
+
+\renewcommand{\headrulewidth}{.5 pt}                                                 % Dicke des Kopfzeilentrennstrichs
+\renewcommand{\footrulewidth}{.5 pt}                                                 % Dicke des Fußzeilentrennstrichs
+
+\lhead{\textbf{\VNr\ \VN}}                                                                   % Angabe Links-Oben
+%\chead{}                                                                           % Angabe Mitte-Oben
+\rhead{\VD}                                                                      % Angabe Rechts-Oben
+%\lfoot{}                                                                           % Angabe Links-Unten
+\cfoot{\textbf{\thepage\ von \pageref{LastPage}}}                                   % Angabe Mitte-Unten
+\rfoot{\Namen}                                           % Angabe Rechts-Unten
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{scrdate}
+\usepackage{lastpage}                                                               % Macht die letzte Seitenzahl referenzierbar mit \pageref{Lastpage}
+\usepackage{hyperref}
+\hypersetup{hidelinks}                                                              % Ermöglicht Verlinkungen im Dokument
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[sumlimits,intlimits,namelimits]{amsmath}                                % Fügt mathematische Symbole hinzu, setzt Grenzen, Limiten und Indizes unter das Symbol und nicht dahinter
+\usepackage{amssymb}                                                                % Fügt Symbole wie z.B. Zahlenmengen wie $\mathbb{R}$ hinzu 
+\usepackage{amsthm}                                                                 
+\usepackage{amsfonts}                                                               % Fügt Font für Mathematikumgebung hinzu
+
+\usepackage{empheq}                                                                 % Stellt verbesserte Gleichungsumgebung bereit \begin{empheq}[<Aussehen>]{<Umgebungstyp>} ... \end{empheq}
+%test
+\usepackage[version=3]{mhchem}                                                     % Stellt chemische Struktur und Summenformeln bereit \ce{<Summenformel>}
+%\usepackage{chemfig}                                                               % Stellt chemische Valenzstrichformeln fürganze Moleküle bereit \chemfig{<Molekül-Aufbau>}
+
+\usepackage{siunitx}                                                                % Stellt eine verbesserte Formatierung von größen mit Einheiten zur Verfügung  
+\sisetup{locale = DE,prefixes-as-symbols = false}                                   % Setzt das 'Mal'-Zeichen auf \cdot und das Dezimaltrennzeichen auf ',' 
+                                                                                    % und ersetzt Prefixe wie '\kilo' mit der entsprechenden Zehnerpotenz
+\sisetup{separate-uncertainty = true}                                               % Ermöglicht vereinfachtes eintragen von Unsicherheiten '42.6(4)' --> '42.6 +/- 0.4'                                                                                 
+
+\usepackage{textcomp}                                                               % Fügt extra Symbole hinzu   
+\usepackage[b]{esvect}                                                              % Fügt verbesserte Vektorpfeile hinzu \vv{<Vektorname>} 
+\usepackage{xfrac}
+\usepackage{array}
+\usepackage{commath}																% Fügt Differentialoperatoren und -quotienten ein 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}                                                               % Ermöglicht das Einbinden Grafiken '\includegraphics[<Optionen>]{<Grafikpfad>}' und Veränderungen im Text, wie z.B. Schriftfarbe 
+\usepackage{floatflt}                                                         % Fügt Möglichkeit für text umflossende Grafiken und Tabellen hinzu \begin{floating<figure/table>}[option]{width} ... \caption ... \end{floatingfigure}
+%\usepackage{subfig}                                                                % Ermöglicht das Hinzufügen von Unterabbildung zu einer Abbildung
+\usepackage{wrapfig}
+\usepackage{tikz}                                                                   % Ermöglicht Zeichnungen im Dokument \begin{tikzpicture} ... \end{tikzpicture}
+\usetikzlibrary{arrows}                                                             % Fügt zusätzlichen Pfeilspitzen hinzu
+%\usepackage{booktabs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[normalem]{ulem}                                                         % Fügt verbesserte Unterschtreichungen hinzu, z.B. doppelt, gezackt, gewellt, etc.
+\usepackage{enumitem}                                                               % Ermöglicht detailierte Einstellungen an Aufzählungssymbolen
+%\usepackage{slashbox}                                                              % Ermöglicht das Einfügen mehrerer Einträge in eine Tabellenzelle, getrennt von einem '\' \backslashbox{<Eintrag unten-links>}{<Eintrag oben-rechts>} TIPP: Leerzeichen
+
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{pifont}																    % Fußnoten mit Zahlen in Kreisen
+\renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{} 
+\author{} 
+\addbibresource{Latex/Literatur.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}                                                                   % Anwenden des Erweiterten Seitenlayouts
+
+%\renewcommand{\thefootnote}{}
+%\setlength{\footnotesep}{2cm}
+\setlength{\skip\footins}{2cm}                                                      % Abstand zwischen Text und Fußnoten
+%\setlength{\itemsep}{7.5pt}
+
+\newcolumntype{C}{ >{\centering\arraybackslash} m{2.5 cm}}
+
+
+
+\renewcommand{\i}{\ensuremath{\textsl{i}}}
+\newcommand{\e}{\ensuremath{\textsl{e}}}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\renewcommand{\Re}{\mathrm{Re}\,}
+
+
+%\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\mean}{\langle}{\rangle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+

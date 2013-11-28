@@ -1,0 +1,2 @@
+# Stellglied R2[Ohm] 	#Stellkapazität C4[nF]		#Potentiometer R3[Ohm]
+1000					994							210
