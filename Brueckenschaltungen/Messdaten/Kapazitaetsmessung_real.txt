@@ -1,4 +1,4 @@
-#Abgleich C2[nF]	#Potentiometer Widerstand	#Stellglied R2 [Ohm]
-994					632							500
+#Abgleich C2[nF]	#Potentiometer Widerstan
+994					632						
 750					586
 597					561

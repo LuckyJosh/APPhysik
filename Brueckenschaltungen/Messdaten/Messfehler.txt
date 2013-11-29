@@ -1,0 +1,2 @@
+#Potentiometer R3/R4[%] #Kapazitätsmessung R2[%] #Maxwell R3 & R4[%] #Frequenzgen[Hz] #Spannungen[V]
+0.5						3						 3       0.1              0.001

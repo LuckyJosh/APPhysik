@@ -1,5 +1,5 @@
-#Quellfrequenz[Hz]	# Brückenspannung[V]	#Quellspannung[V]	#Theoretische Eigenfrequenz f0
-20.30				1.438					4.250				1141
+#Quellfrequenz[Hz]	# BrÃ¼ckenspannung[V]		#Theoretische Eigenfrequenz f0
+20.30				1.438								#1141
 350.4				0.944
 670.3				0.469
 800.3				0.319

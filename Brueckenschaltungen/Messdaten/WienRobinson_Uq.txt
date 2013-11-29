@@ -1,0 +1,2 @@
+#Quellspannung[V]
+4.250

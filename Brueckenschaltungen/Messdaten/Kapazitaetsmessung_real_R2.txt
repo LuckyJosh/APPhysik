@@ -1,0 +1,2 @@
+#Stellglied R2 [Ohm]
+500

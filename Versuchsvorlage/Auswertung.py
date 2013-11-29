@@ -17,6 +17,7 @@ import numpy as np
 import scipy.constants as const
 from scipy.optimize import curve_fit
 from sympy import *
+import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
