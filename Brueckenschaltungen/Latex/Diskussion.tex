@@ -1,0 +1,46 @@
+In diesem Abschnitt werden die in \cref{sec:Auswertung} berechneten 
+Größen abschließend diskutiert und auf deren Genauigkeit beziehungsweise
+Plausibilität hin untersucht, wobei auch auf die verwendeten
+Versuchsaufbauten Bezug genommen wird.\\
+
+Die mit Hilfe der Messbrücken in \cref{sec:Auswertung_Wheatstone} und \cref{sec:Auswertung_Kapazitaet} 
+berechneten Größen des ohmschen Widerstandes, der ideale Kapazität und der Kapazität mit Wirkwiderstand,
+sind aufgrund der relativ geringen Abweichungen vom Mittelwert als plausible anzusehen. 
+Die vorliegenden Abweichungen  sind zum einen durch die Toleranzen der verwendeten Bauteile 
+und zum anderen dadurch zu begründen, dass es aufgrund der in \cref{sec:Auswertung_Klirrfaktor} untersuchten
+\enquote{Unreinheit} der vom Generator erzeugten Frequenzen nicht möglich ist, die Brückenspannung exakt 
+auf Null abzustimmen.  
+Hier zeigt sich wiederum der Vorteil der Brückenschaltungen, da nur eine Spannung gemessen werden muss
+bleiben die Abweichung die durch die Messinstrumente verursacht werden gering und man erhält schon  
+mit 3 Messungen ein Ergebnis mit hoher Genauigkeit.\\
+  
+Für die Messung der Induktivität mit Wirkwiderstand in \cref{sec:Auswertung_Induktivität_Messbrücke}
+gelten die zu vor angesprochen Vorteile der Brückenschaltung im gleichen Maße, auch wenn die
+Abweichung bei dieser Messung größer ausfallen als bei den vorherigen Messungen. Ein Grund dafür ist  
+die zwar nur um einen, dennoch geringer Anzahl an Messungen, da \enquote{Ausreißer} in den Messwerten,
+bei weniger Messungen eine größere Gewichtung erhalten.  
+Die Messung in \cref{sec:Auswertung_Induktivität_Maxwell} mit Hilfe der Maxwell-Brücke ist jedoch
+ein sehr ungenau und liefert ein unplausibles Ergebnis. Dieser Eindruck entsteht nicht durch die Abweichungen der
+erhaltenen Werte, denn auch diese sind eher gering, sondern durch eine Vergleich mit den in
+\cref{sec:Auswertung_Induktivität_Messbrücke} erhaltenen Werte. So unterscheiden sich die berechneten Induktivitäten
+$\mean{L_{x}}$ in \cref{eq:LxRx_Brücke} und $L_{x}$ in \cref{eq:LxRx_Maxwell} um einen Faktor $> 10$, was in Anbetracht der 
+Tatsache, dass in beiden Fällen die selbe Spule vermessen wurde ein sehr unrealistisches Ergebnis darstellt.
+Ein Grund für diese große Abweichung ist wiederum die einmalige Durchführung der Messung, da durch eine mehrmalige
+Messung neben der schon angesprochene Genauigkeit, auch das Vermögen stiege eine Aussage über den Ursprung dieses Fehlers zu 
+machen. Bei der einen vorliegenden großen Abweichung, ist es jedoch unmöglich zu bestimmen ob es sich bei
+dem Grund für diese Abweichung um einen zufälligen, einen systematischen oder einen groben Fehler handelt.\\
+\pagebreak
+
+Zu der Bestimmung der Frequenzabhängigkeit der Wien-Robinson-Brücke \cref{sec:Auswertung_Frequenz} ist zusagen, dass
+der gemessene Wert der Frequenz bei der die Brückenspannung minimal wird mit einer relativen Abweichung 
+von $\tfrac{\envert{\nu_{0,theo} - \nu_{0}}}{\nu_{0, theo}} = \SI{2.3}{\percent}$ zur theoretisch bestimmten 
+Frequenz ein genaues und plausibles Ergebnis darstellt.
+Dies Genauigkeit, spiegelt sich auch in der \cref{fig:WienRobinson} wider, so folgen die Messwerte dem 
+theoretischen Verlauf mit großer Übereinstimmung für Frequenzverhältnisse $\frac{\nu}{\nu_{0}} < 2$. 
+Der veränderte Verlauf der Messwerte für größere Frequenzen und vor allem das erneute Abfallen der Messwerte 
+für die höchsten gemessenen Frequenzen, sind auf den im Versuchsaufbau verwendeten Tiefpass zurückzuführen,
+der vor den Eingang des Oszilloskops geschaltet wurde.\\
+% % % TODO: Klirrfaktor 
+
+Abschließend lässt sich sagen, das Brückenschaltungen, bis auf \enquote{Ausreißer}, eine sehr genaue und gute Methode
+darstellen, den Widerstand eines elektrischen Bauteils zu bestimmen. 

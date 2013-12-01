@@ -130,4 +130,4 @@ def toTable(cols, col_titles=None, col_syms=None,
                 row += "\n"
                 rows += row
 
-    return begin + titles + headers + rows + end
+    return (begin + titles + headers + rows + end).encode("UTF-8")

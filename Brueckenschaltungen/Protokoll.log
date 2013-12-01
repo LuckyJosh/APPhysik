@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  1 DEC 2013 04:24
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  1 DEC 2013 22:12
 entering extended mode
 **Protokoll.tex
 
@@ -2200,12 +2200,11 @@ LaTeX Warning: Reference `eq:R4' on page 1 undefined on input line 30.
 LaTeX Warning: Reference `eq:Kapazitaet_C' on page 1 undefined on input line 32
 .
 
+[1{C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
+]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Brueckensch
-altungen\Daten/Tabelle_Kapazitaet_ideal.tex" [1{C:/Users/Josh/AppData/Local/MiK
-TeX/2.9/pdftex/config/pdftex.map}
-
-])
+altungen\Daten/Tabelle_Kapazitaet_ideal.tex")
 
 LaTeX Warning: Reference `eq:Kapazitaet_C' on page 1 undefined on input line 47
 .
@@ -2228,38 +2227,91 @@ LaTeX Warning: Reference `eq:Induktivitaet_L' on page 1 undefined on input line
 LaTeX Warning: Reference `eq:Induktivitaet_R' on page 1 undefined on input line
  70.
 
-
+[2]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Brueckensch
-altungen\Daten/Tabelle_Induktivitaet_Bruecke.tex" [2])
+altungen\Daten/Tabelle_Induktivitaet_Bruecke.tex")
 
-LaTeX Warning: Reference `eq:R4' on page 1 undefined on input line 85.
+LaTeX Warning: Reference `eq:R4' on page 1 undefined on input line 86.
 
 
 LaTeX Warning: Reference `eq:Induktivitaet_Maxwell_L' on page 1 undefined on in
-put line 87.
+put line 88.
 
 
 LaTeX Warning: Reference `eq:Induktivitaet_Maxwell_R' on page 1 undefined on in
-put line 87.
+put line 88.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 106.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 106.
+
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Brueckensch
+altungen\Daten/Tabelle_Frequenz.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
+
+LaTeX Warning: Reference `eq:Frequenz_0' on page 1 undefined on input line 115.
+
+
+
+LaTeX Warning: Reference `eq:UBr_US' on page 1 undefined on input line 121.
+
+[3] <Grafiken/WienRobinson.pdf, id=131, 578.16pt x 431.81326pt>
+File: Grafiken/WienRobinson.pdf Graphic file (type pdf)
+
+<use Grafiken/WienRobinson.pdf>
+Package pdftex.def Info: Grafiken/WienRobinson.pdf used on input line 125.
+(pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
+
+
+LaTeX Warning: Reference `eq:Klirrfaktor' on page 1 undefined on input line 134
+.
+
+[4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Brueckens
+chaltungen/Grafiken/WienRobinson.pdf>]
+
+LaTeX Warning: Reference `eq:UBr_BS' on page 1 undefined on input line 145.
+
+) [5]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Brueckensch
-altungen\Latex/Fehlerrechnung.tex")
+altungen\Latex/Fehlerrechnung.tex") [6]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Brueckensch
-altungen\Latex/Diskussion.tex") 
+altungen\Latex/Diskussion.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 1--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--16
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 34--44
+
+ []
+
+)
+
+LaTeX Warning: Empty bibliography on input line 31.
+
+
 AED: lastpage setting LastPage
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
+[8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
 
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Brueckensch
 altungen\Protokoll.aux"
 Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: 601C2F3B142FD5EB67E3AD48056B5B25;1303.
+(rerunfilecheck)             Checksum: AE4A698AC871F2F8D1FBAC57CC8514BC;1295.
 
 
 LaTeX Warning: There were undefined references.
@@ -2267,29 +2319,35 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 35814 strings out of 493921
- 685867 string characters out of 3147286
- 1109747 words of memory out of 3000000
- 38394 multiletter control sequences out of 15000+200000
- 68666 words of font info for 66 fonts, out of 3000000 for 9000
+ 35911 strings out of 493921
+ 687452 string characters out of 3147286
+ 1116349 words of memory out of 3000000
+ 38454 multiletter control sequences out of 15000+200000
+ 103431 words of font info for 96 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,16n,71p,868b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.en
-c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmsy10.pfb>
-Output written on Protokoll.pdf (3 pages, 225294 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
+thsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program 
+Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/lm/lmbsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmm
+i6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmmib10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lms
+y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on Protokoll.pdf (8 pages, 317812 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 369 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

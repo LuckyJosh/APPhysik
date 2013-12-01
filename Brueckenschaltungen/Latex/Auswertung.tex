@@ -14,12 +14,12 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 	\input{Daten/Tabelle_Wheatstone.tex}
 	
 	Der Mittelwert der errechneten Werte für $R_{x}$ ergibt sich aus den Messwerten zu:
-	\begin{empheq}{equation*}
+	\begin{empheq}{equation}
 		\mean{R_{x}} = \SI{240.4(7)}{\ohm}
 	\end{empheq}
 	
 \subsection{Bestimmung von Kapazitäten mit einer Kapazitätsmessbrücke}
-\label{sec:Auswertung_Kapazität}
+\label{sec:Auswertung_Kapazitaet}
 	In den zwei nachfolgenden Abschnitten werden die Kapazitäten einer 
 	idealen und einer realen Kapazität mit Hilfe einer Kapazitätsmessbrücke
 	bestimmt.
@@ -34,7 +34,7 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 		\input{Daten/Tabelle_Kapazitaet_ideal.tex}	
 	
 		Als Mittelwert der unbekannten Kapazität $C_{x}$ erhält man hieraus:
-		\begin{empheq}{equation*}
+		\begin{empheq}{equation}
 			\mean{C_{x}} = \SI{242(1)}{\nano\farad}
 		\end{empheq} 
 	
@@ -51,7 +51,7 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 		\input{Daten/Tabelle_Kapazitaet_real.tex}
 		
 		Die Mittelwerte der unbekannten Größen $C_{x}$ und $R_{x}$ ergeben sich somit zu:
-		\begin{empheq}{equation*}
+		\begin{empheq}{equation}
 				\mean{C_{x}} = \SI{529(2)}{\nano\farad} \quad\ \text{und}\ \quad \mean{R_{x}} = \SI{730(2)}{\ohm}
 		\end{empheq}  
 	
@@ -73,7 +73,8 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 		\input{Daten/Tabelle_Induktivitaet_Bruecke.tex}
 		
 		Die aus diesen Werten bestimmten Mittelwerte der Unbekannten Größen sind:
-		\begin{empheq}{equation*}
+		\begin{empheq}{equation}
+				\label{eq:LxRx_Brücke}
 				\mean{L_{x}} = \SI{10.86(4)}{\milli\henry} \quad\ \text{und}\ \quad \mean{R_{x}} = \SI{454(14)}{\ohm}
 		\end{empheq}		
 		
@@ -82,18 +83,67 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 	\label{sec:Auswertung_Induktivität_Maxwell}
 		
 		Bei der Bestimmung der Induktivität $L_{x}$ und deren Wirkwiderstand $R_{x}$ werden 
-		nur der am Potentiometer eingestellte Widerstand $R_{3}= \SI{210}{\ohm} $, der mit \cref{eq:R4} 
-		daraus bestimmte Widerstand $R_{4} = \SI{793}{\ohm}$ und die verwendete Kapazität $C_{4} = 
+		nur der am Potentiometer eingestellte Widerstand $R_{3}= \SI{210(6)}{\ohm} $, der mit \cref{eq:R4} 
+		daraus bestimmte Widerstand $R_{4} = \SI{793(30)}{\ohm}$ und die verwendete Kapazität $C_{4} = 
 		\SI{994}{\nano\farad}$  benötigt. Mit \cref{eq:Induktivitaet_Maxwell_L} und \cref{eq:Induktivitaet_Maxwell_R}
-		und dem Stellglied $R_{2}$ erhält man:
-		\begin{empheq}{equation*}
-				{L_{x}} = \SI{0.209(6)}{\henry} \quad\ \text{und}\ \quad {R_{x}} = \SI{265(11)}{\ohm}
+		sowie dem Stellglied $R_{2}$ erhält man:
+		\begin{empheq}{equation}
+				\label{eq:LxRx_Maxwell}
+				{L_{x}} = \SI{0.209(9)}{\henry} \quad\ \text{und}\ \quad {R_{x}} = \SI{265(15)}{\ohm}
 		\end{empheq}
 		
 		
-		
-\subsection{Bestimmung der Nullfrequenz einer frequenzabhängigen Messbrücke}
+\subsection{Bestimmung der Frequenzabhängigkeit der Brückenspannung}
 \label{sec:Auswertung_Frequenz}
+	
+	Für die Durchführung dieses Versuches wurde eine Wien-Robinson-Brücke, mit folgenden Bauteilen
+	verwendet:
+	\begin{empheq}{align*}
+			R'&= \SI{500}{\ohm}\\
+			R &= \SI{332}{\ohm} \\
+			C &= \mean{C_{x}} \footnotemark = \SI{242(1)}{\nano\farad}
+	\end{empheq}		
+\footnotetext{Aus \cref{sec:Auswertung_Kapazität_ideal}}		
+	
+	Die eingestellten Generatorfrequenzen $\nu$ sind zusammen mit den jeweils gemessenen, doppelten Amplituden der, 
+	Brückenspannungen $U_{Br}$ in \cref{tab:Frequenz} zu finden. Die doppelte Amplitude der Generatorspannung wurde zu
+	$_{S} = \SI{4.250(1)}{\volt}$ gemessen. 
+	
+	\input{Daten/Tabelle_Frequenz.tex}
+	
+	Dabei sind die hervorgehobenen Werte die Frequenz $\nu_{0} = \SI{1110.3(1)}{\hertz}$ bei der die minimale Spannung
+	$U_{0} = \SI{0.033(1)}{\volt}$ gemessen wurde. Die durch Division von \cref{eq:Frequenz_0} durch $2\pi$ theoretisch 
+	bestimmte Frequenz bei der die 
+	Brückenspannung verschwindet ist $\nu_{0,theo} = \SI{1137(3)}{\hertz}$.     
+	
+	In \cref{fig:WienRobinson} ist der Quotient $\frac{U_{Br}}{U_{S}}$ gegen 
+	den Quotienten  $\Omega = \frac{\nu}{\nu_{0}}$ halblogarithmisch aufgetragen, wobei die Zähler dieser Quotienten,
+	jeweils die Werte aus \cref{tab:Frequenz} darstellen. Des Weiteren ist noch die Theoriekurve dieses Verlaufes, bestimmt durch radizieren von \cref{eq:UBr_US} eingezeichnet.  
+		
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.75]{Grafiken/WienRobinson.pdf}
+		\caption{Messwerte und Theoriekurve der Spannungs- und Frequenzverhältnisse}
+		\label{fig:WienRobinson}
+	\end{figure}
 
 \subsubsection{Bestimmung des Klirrfaktors eins Frequenzgenerators}
-\label{sec:Auswertung_Klirrfaktor}
+\label{sec:Auswertung_Klirrfaktor} 
+	
+	Den Klirrfaktor eines Frequenzgenetrators erhält, unter der Annahme $\displaystyle U_{2}^{2} = \sum_{i=2}^{n} U_{i}^{2}$,
+	nach \cref{eq:Klirrfaktor}, durch die Gleichung:
+	\begin{empheq}{equation}
+		k = \dfrac{U_{2}}{U_{1}}
+		\label{eq:Klirrfaktor2}
+	\end{empheq}     
+	
+	Wobei sich die doppelte Amplitude der ersten Oberschwingung $U_{2}$ durch
+	\begin{empheq}{equation}
+		U_{2} = \dfrac{U_{Br}}{f(2)}\footnotemark
+		\label{eq:Oberwelle}
+	\end{empheq}
+\footnotetext{Wobei $f(\Omega)$ der radizierten Gleichung \cref{eq:UBr_BS} entspricht}
+	
+	Damit ist die doppelte Amplitude der ersten Oberwelle $U_{2} = \SI{0.221(7)}{\volt}$,
+	woraus sich der  Klirrfaktor  $k = \num{6.7(3)}$ ergibt.
+	

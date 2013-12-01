@@ -41,6 +41,8 @@ R_max = np.loadtxt("Messdaten/Potentiometer.txt")
 def R4(r):
     return (R_max - r)
 
+
+uR4 = unc.wrap(R4)
 ### Wheatstonebrücke (1)
 
 ## Abgleichwiderstände R2 und Potentiometerwiderstand R3
@@ -177,15 +179,15 @@ R4_5_err *= 1e-02  # [1]
 R2_5, C4_5, R3_5 = np.loadtxt("Messdaten/Maxwell.txt")
 
 # Fehlerbehafteter Widerstand
-uR3_5 = ufloat(R3_5, R3_5_err)
+uR3_5 = ufloat(R3_5, R3_5*R3_5_err)
 
 uR2_5 = ufloat(R2_5, R2_5*R2_err)
 
 ## Berechnen der R4 aus den R3
-R4_5 = R4(R3_5)
+uR4_5 = uR4(uR3_5)
 
 # Fehlerbehafteter Widerstand
-uR4_5 = ufloat(R4_5, R4_5 * R4_5_err)
+uR4_5 = ufloat(noms(uR4_5), stds(uR4_5) + noms(uR4_5) * R4_5_err)
 
 
 ## Berechnung der unbekannten Induktivität
@@ -222,6 +224,10 @@ uf_min = uf[(np.where(min(uU) == uU)[0])[0]]
 f_0 = 1/(2 * const.pi * 332 * uCx_2_avr)*1e09
 
 
+## Abweichung von der Theorie
+
+df = abs(noms(uf_min) - noms(f_0))/noms(f_0)
+
 ## Plot von U/Uq gegen f/f0
 def TKurve(O):
     return np.sqrt((O**2 - 1)**2 / (9*(1 - O**2)**2 + 81 * O**2))
@@ -238,7 +244,15 @@ plt.xscale("log")
 plt.xlim(1e-02,1e02)
 plt.ylim(0, 0.4)
 
-plt.plot(noms(uf)/noms(uf_min), noms(uU)/noms(uUq), "rx", label="Messwerte" )
+X = uf/uf_min
+Y = uU/uUq
+
+uX = unp.uarray(noms(X), stds(X))
+uY = unp.uarray(noms(Y), stds(Y))
+
+plt.errorbar(noms(uX), noms(uY),
+             xerr=stds(uX), yerr=stds(uY), 
+             fmt="rx", label="Messwerte" )
 plt.plot(x, TKurve(x), color="grey",
          label="Theoriekurve")
 
@@ -253,7 +267,7 @@ plt.savefig("Grafiken/WienRobinson.pdf")
 ## Bestimmung der Oberwellenamplitude
 uU2 = min(uU)/TKurve(2)
 uU2 = ufloat(noms(uU2), stds(uU2))
-
+print(TKurve(2))
 ## Bestimmung des Klirrfaktors
 uk = uU2/min(uU)
 
@@ -294,7 +308,8 @@ if PRINT:
     print("\n-Berechne Kapazität:\n", uLx_5*1e-09)
     print("\n-Berechner Widerstand:\n", uRx_5)
 
-    print("\n Theoretische Minimalspanungsfrequenz:\n", f_0)
+    print("\nTheoretische Minimalspanungsfrequenz:\n", f_0,
+          "\nAbweichung von der Theorie:\n", df)
 
 
 # Tabellen:
@@ -340,3 +355,13 @@ if PRINT:
 #                 "mit einer Induktivitätsmessbrücke",
 #                 label="Induktivitaets_Bruecke"))
 #    f4.close()
+
+#    f5 = open("Daten/Tabelle_Frequenz.tex", "w")
+#    f5.write(tab([uf, uU],
+#                 ["Frequenz", "Brückenspannung"],
+#                 [r"\nu", "U_{Br}"],
+#                 [r"\hertz", r"\volt"],
+#                 ["c", "c"],
+#                 cap="Generatorfrequenzen und gemessene Brückenspannungen",
+#                 label="tab:Frequenz"))
+#    f5.close()
