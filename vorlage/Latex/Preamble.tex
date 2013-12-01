@@ -24,12 +24,12 @@
 \renewcommand{\headrulewidth}{.5 pt}                                                 % Dicke des Kopfzeilentrennstrichs
 \renewcommand{\footrulewidth}{.5 pt}                                                 % Dicke des Fußzeilentrennstrichs
 
-\lhead{\textbf{\VNr\\ \VN}}                                                                   % Angabe Links-Oben
+\lhead{\textbf{\VNr\ \VN}}                                                                   % Angabe Links-Oben
 %\chead{}                                                                           % Angabe Mitte-Oben
 \rhead{\VD}                                                                      % Angabe Rechts-Oben
-\lfoot{\Namen}                                                                           % Angabe Links-Unten
+%\lfoot{}                                                                           % Angabe Links-Unten
 \cfoot{\textbf{\thepage\ von \pageref{LastPage}}}                                   % Angabe Mitte-Unten
-\rfoot{\Emails}                                            % Angabe Rechts-Unten
+\rfoot{\Namen}                                           % Angabe Rechts-Unten
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{scrdate}
@@ -50,9 +50,7 @@
 %\usepackage{chemfig}                                                               % Stellt chemische Valenzstrichformeln fürganze Moleküle bereit \chemfig{<Molekül-Aufbau>}
 
 \usepackage{siunitx}                                                                % Stellt eine verbesserte Formatierung von größen mit Einheiten zur Verfügung  
-\sisetup{locale = DE%
-%,prefixes-as-symbols = false %
-}                                   % Setzt das 'Mal'-Zeichen auf \cdot und das Dezimaltrennzeichen auf ',' 
+\sisetup{locale = DE,prefixes-as-symbols = false}                                   % Setzt das 'Mal'-Zeichen auf \cdot und das Dezimaltrennzeichen auf ',' 
                                                                                     % und ersetzt Prefixe wie '\kilo' mit der entsprechenden Zehnerpotenz
 \sisetup{separate-uncertainty = true}                                               % Ermöglicht vereinfachtes eintragen von Unsicherheiten '42.6(4)' --> '42.6 +/- 0.4'                                                                                 
 
@@ -107,8 +105,5 @@
 \DeclarePairedDelimiter{\mean}{\langle}{\rangle}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[ngerman]{cleveref}
-\crefformat{equation}{(#2#1#3)}
-\crefrangeformat{equation}{(#3#1#4) bis~(#5#2#6)}
 
 

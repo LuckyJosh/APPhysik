@@ -1,3 +1,3 @@
 new:
 	mkdir $(filter-out $@,$(MAKECMDGOALS))
-	cp -r Versuchsvorlage/.  $(filter-out $@,$(MAKECMDGOALS))
+	cp -r vorlage/.  $(filter-out $@,$(MAKECMDGOALS))

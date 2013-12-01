@@ -1,0 +1,99 @@
+Im Folgenden sind die aufgenommenen Messwerte und die aus diesen
+berechneten Größen vorwiegend tabellarisch aufgetragen. An entsprechender 
+Stelle sind Erklärungen zu den Werten und Rechnungen gegeben. 
+
+\subsection{Bestimmung eines Widerstandes mit der Wheatstonebrücke}
+\label{sec:Auswertung_Wheatstone}
+
+	Bei dieser Messung wurde der unbekannte Widerstand \emph{Wert 10} vermessen.
+	Der am Potentiometer eingestellte Widerstand $R_{3}$, der Quotient aus diesen und den nach \cref{eq:R4} berechneten
+	Widerständen $R_{4}$, die jeweiligen
+	Abgleichwiderstände $R_{2}$ und die mit Hilfe von \cref{eq:Wheatstone_R} aus diesen
+	berechneten Werte für $R_{x}$ sind in \cref{tab:Wheatstone} zu finden.
+	
+	\input{Daten/Tabelle_Wheatstone.tex}
+	
+	Der Mittelwert der errechneten Werte für $R_{x}$ ergibt sich aus den Messwerten zu:
+	\begin{empheq}{equation*}
+		\mean{R_{x}} = \SI{240.4(7)}{\ohm}
+	\end{empheq}
+	
+\subsection{Bestimmung von Kapazitäten mit einer Kapazitätsmessbrücke}
+\label{sec:Auswertung_Kapazität}
+	In den zwei nachfolgenden Abschnitten werden die Kapazitäten einer 
+	idealen und einer realen Kapazität mit Hilfe einer Kapazitätsmessbrücke
+	bestimmt.
+	
+	\subsubsection{Bestimmung einer idealen Kapazität}
+	\label{sec:Auswertung_Kapazität_ideal}
+		Aus den in \cref{tab:Kapazitaet_ideal} gelisteten Messwerten für die Abgleichkapazitäten
+		$C_{2}$, den am Potentiometer eingestellten Widerständen $R_{3}$ und den mit \cref{eq:R4} 
+		aus diesen bestimmten $R_{4}$ wurden die ebenfalls in \cref*{tab:Kapazitaet_ideal} dargestellten
+		unbekannten Kapazitäten $C_{x}$ (\emph{Wert 3}) unter Verwendung von \cref{eq:Kapazitaet_C} bestimmt. 
+		
+		\input{Daten/Tabelle_Kapazitaet_ideal.tex}	
+	
+		Als Mittelwert der unbekannten Kapazität $C_{x}$ erhält man hieraus:
+		\begin{empheq}{equation*}
+			\mean{C_{x}} = \SI{242(1)}{\nano\farad}
+		\end{empheq} 
+	
+	\subsubsection{Bestimmung einer realen Kapazität}
+	\label{sec:Auswertung_Kapazität_real}
+		
+		Für die Bestimmung einer realen Kapazität (\emph{Wert 9}) wird, anderes als bei der einer idealen Kapazität, ein
+		Stellglied $R_{2} = \SI{500(15)}{\ohm}$ benötigt. Die anderen bekannten Größen sind analog zu
+		 \cref{sec:Auswertung_Kapazität_ideal} zusammen mit den aus diesen 
+		berechneten unbekannten Größen, die Kapazität $C_{x}$ bestimmt durch \cref{eq:Kapazitaet_C} und deren
+		 Wirkwiderstand $R_{x}$ bestimmt durch \cref{eq:Kapaziaet_R} in 
+		\cref{tab:Kapazitaet_real} eingetragen. 
+	
+		\input{Daten/Tabelle_Kapazitaet_real.tex}
+		
+		Die Mittelwerte der unbekannten Größen $C_{x}$ und $R_{x}$ ergeben sich somit zu:
+		\begin{empheq}{equation*}
+				\mean{C_{x}} = \SI{529(2)}{\nano\farad} \quad\ \text{und}\ \quad \mean{R_{x}} = \SI{730(2)}{\ohm}
+		\end{empheq}  
+	
+\subsection{Bestimmung von Induktivitäten}
+\label{sec:Auswertung_Induktivität}
+
+	Nachfolgend wird eine reale Induktivität (\emph{Wert 16}) zunächst mit Hilfe einer Induktivitätsmessbrücke
+	und anschließend mit einer Maxwellbrücke vermessen. Bei beiden Untersuchungen wird 
+	ein Stellglied $R_{2} = \SI{1000}{\ohm}$ verwendet.
+	
+	\subsubsection{Bestimmung Mittels einer Induktivitätsmessbrücke}
+	\label{sec:Auswertung_Induktivität_Messbrücke}
+	
+		Die verwendeten Abgleichinduktivitäten $L_{2}$, der am Potentiometer eingestellten Widerstand
+		$R_{3}$ sowie die Quotienten aus diesen und den nach \cref{eq:R4} berechneten Widerständen $R4$
+		und die mit Hilfe von \cref{eq:Induktivitaet_L} und \cref{eq:Induktivitaet_R} berechneten unbekannten $L_{x}$
+		 und $R_{x}$ sind in \cref{tab:Induktivitaet_Bruecke} zu finden.    
+		
+		\input{Daten/Tabelle_Induktivitaet_Bruecke.tex}
+		
+		Die aus diesen Werten bestimmten Mittelwerte der Unbekannten Größen sind:
+		\begin{empheq}{equation*}
+				\mean{L_{x}} = \SI{10.86(4)}{\milli\henry} \quad\ \text{und}\ \quad \mean{R_{x}} = \SI{454(14)}{\ohm}
+		\end{empheq}		
+		
+		
+	\subsubsection{Bestimmung Mittels einer Maxwellbrücke}
+	\label{sec:Auswertung_Induktivität_Maxwell}
+		
+		Bei der Bestimmung der Induktivität $L_{x}$ und deren Wirkwiderstand $R_{x}$ werden 
+		nur der am Potentiometer eingestellte Widerstand $R_{3}= \SI{210}{\ohm} $, der mit \cref{eq:R4} 
+		daraus bestimmte Widerstand $R_{4} = \SI{793}{\ohm}$ und die verwendete Kapazität $C_{4} = 
+		\SI{994}{\nano\farad}$  benötigt. Mit \cref{eq:Induktivitaet_Maxwell_L} und \cref{eq:Induktivitaet_Maxwell_R}
+		und dem Stellglied $R_{2}$ erhält man:
+		\begin{empheq}{equation*}
+				{L_{x}} = \SI{0.209(6)}{\henry} \quad\ \text{und}\ \quad {R_{x}} = \SI{265(11)}{\ohm}
+		\end{empheq}
+		
+		
+		
+\subsection{Bestimmung der Nullfrequenz einer frequenzabhängigen Messbrücke}
+\label{sec:Auswertung_Frequenz}
+
+\subsubsection{Bestimmung des Klirrfaktors eins Frequenzgenerators}
+\label{sec:Auswertung_Klirrfaktor}

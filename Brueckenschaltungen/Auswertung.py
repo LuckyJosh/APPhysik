@@ -21,6 +21,9 @@ import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
+# Eigene Funktionen
+sys.path.append("..\globales\python")
+from latextables import toTable as tab
 
 ### Uncertianties Funktionen
 umean = unc.wrap(np.mean)
@@ -28,6 +31,7 @@ umean = unc.wrap(np.mean)
 
 # Steuermakros
 PRINT = True
+TABS = True
 
 # Maximalwiderstand des Potentiometers
 R_max = np.loadtxt("Messdaten/Potentiometer.txt")
@@ -100,6 +104,7 @@ R2_3 = np.loadtxt("Messdaten/Kapazitaetsmessung_real_R2.txt")
 
 # Fehlerbehaftetes Stellglied
 uR2_3 = ufloat(R2_3, R2_3*R2_err)
+print(uR2_3)
 
 ## Bestimmung der R4 aus den R3
 R4_3 = R4(R3_3)
@@ -247,15 +252,19 @@ plt.savefig("Grafiken/WienRobinson.pdf")
 
 ## Bestimmung der Oberwellenamplitude
 uU2 = min(uU)/TKurve(2)
+uU2 = ufloat(noms(uU2), stds(uU2))
 
 ## Bestimmung des Klirrfaktors
 uk = uU2/min(uU)
 
 print(uU2)
+print(min(uU))
 print(uk)
 
+
+
 ## Print Funktionen
-PRINT = False
+#PRINT = False
 if PRINT:
     print("\nWheatstone:")
     print("\n-Widerstandsquotient:\n", uR34_1)
@@ -282,7 +291,52 @@ if PRINT:
     print("\t-Mittelwert:", uRx_4_avr)
 
     print("\nInduktivitätsmessung real:")
-    print("\n-Berechne Kapazität:\n", uLx_5)
+    print("\n-Berechne Kapazität:\n", uLx_5*1e-09)
     print("\n-Berechner Widerstand:\n", uRx_5)
 
     print("\n Theoretische Minimalspanungsfrequenz:\n", f_0)
+
+
+# Tabellen:
+#if TABS:
+#    f1 = open("Daten/Tabelle_Wheatstone.tex", "w")
+#    f1.write(tab([R2_1, R3_1, uR34_1, uRx_1],
+#                 ["Widerstand", " ", " ", " "],
+#                 ["R_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "R_{x}"],
+#                 [r"\ohm", r"\ohm", r"\ohm", r"\ohm"],
+#                 ["c", "c", "c", "c"],
+#                 cap="Werte der Messung an der Wheatstonebrücke",
+#                 label="tab:Wheatstone"))
+#    f1.close()
+#
+#    f2 = open("Daten/Tabelle_Kapazitaet_ideal.tex", "w")
+#    f2.write(tab([C2_2, R3_2, uR34_2, uCx_2],
+#                 ["Kapazität", "Widerstand", "Wider", "Widers"],
+#                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}"],
+#                 [r"\nano\farad", r"\ohm", r"\ohm", r"\nano\farad"],
+#                 ["c", "c", "c", "c"],
+#                 cap="Werte der Messung einer idealen Kapazität" +
+#                 "an der Kapazitätsmessbrücke",
+#                 label="Kapazitaet_ideal"))
+#    f2.close()
+#
+#    f3 = open("Daten/Tabelle_Kapazitaet_real.tex", "w")
+#    f3.write(tab([C2_3, R3_3, uR34_3, uCx_3, uRx_3],
+#                 ["Kapazität", "Widerstand", "Widerstan", "Kapazitä"],
+#                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}"],
+#                 [r"\nano\farad", r"\ohm", r"\ohm", r"\nano\farad"],
+#                 ["c", "c", "c", "c"],
+#                 cap="Werte der Messung einer idealen Kapazität" +
+#                 "an der Kapazitätsmessbrücke",
+#                 label="Kapazitaet_real"))
+#    f3.close()
+#    f4 = open("Daten/Tabelle_Induktivitaet_Bruecke.tex", "w")
+#    f4.write(tab([L2_4, R3_4, uR34_4, uLx_4, uRx_4],
+#                 ["Induktivität", "Widerstand", "Widerstan", "Induktivitä", "Widersta"],
+#                 ["L_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "L_{x}", "R_{x}"],
+#                 [r"\milli\henry", r"\ohm", r"\ohm", r"\milli\henry", r"\ohm"],
+#                 ["c", "c", "c", "c", "c"],
+#                 cap="Werte der Messung einer realen Induktivität" +
+#                 "mit einer Induktivitätsmessbrücke",
+#                 label="Induktivitaets_Bruecke"))
+#    f4.close()
