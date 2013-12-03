@@ -1,0 +1,28 @@
+% Standard 'fancy' Pagestyle
+	\fancyhf{} 	                          % Setzt Kopf und Fußzeile zurück 
+	\setlength{\headheight}{28.0 pt}      % Höhe der Kopfzeile
+	\setlength{\footskip}{18.0 pt}        % Höhe der Fußzeile
+
+	\renewcommand{\headrulewidth}{.5 pt}  % Dicke des Kopfzeilentrennstrichs
+	\renewcommand{\footrulewidth}{.5 pt}  % Dicke des Fußzeilentrennstrichs
+
+	\lhead{\textbf{\VNr\\ \VN}}           % Angabe Links-Oben
+	\rhead{\VD}                           % Angabe Rechts-Oben
+	\rfoot{\Namen}                        % Angabe Links-Unten
+	\cfoot{\textbf{\thepage\ von \pageref{LastPage}}}  % Angabe Mitte-Unten
+                      
+
+% Pagestyle 'bib', mit Emails in der Fußleiste
+\fancypagestyle{bib}{%
+	\fancyhf{}%
+	\setlength{\headheight}{28.0 pt}% 
+	\setlength{\footskip}{18.0 pt}%
+	\renewcommand{\headrulewidth}{.5 pt}% 
+	\renewcommand{\footrulewidth}{.5 pt}% 
+
+	\lhead{\textbf{\VNr\\ \VN}}%
+	\rhead{\VD}% 
+	\rfoot{\Namen}%
+	\cfoot{\textbf{\thepage\ von \pageref{LastPage}}}  % 
+	\lfoot{\Emails}}
+	
