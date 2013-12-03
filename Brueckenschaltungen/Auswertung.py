@@ -325,55 +325,55 @@ if PRINT:
 
 
 
-if TABS:
-    f1 = open("Daten/Tabelle_Wheatstone.tex", "w")
-    f1.write(tab([uR2_1, R3_1, uR34_1, uRx_1],
-                 ["Widerstand", "Widerstan ", "Quotient", " Widersta"],
-                 ["R_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "R_{x}"],
-                 [r"\ohm", r"\ohm", "", r"\ohm"],
-                 ["c", "c", "c", "c"],
-                 cap="Werte der Messung an der Wheatstonebrücke",
-                 label="Wheatstone"))
-    f1.close()
-
-    f2 = open("Daten/Tabelle_Kapazitaet_ideal.tex", "w")
-    f2.write(tab([uC2_2, R3_2, uR34_2, uCx_2],
-                 ["Kapazität", "Widerstand", "Quotient", "Widers"],
-                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}"],
-                 [r"\nano\farad", r"\ohm", "", r"\nano\farad"],
-                 ["c", "c", "c", "c"],
-                 cap="Werte der Messung einer idealen Kapazität" +
-                 "an der Kapazitätsmessbrücke",
-                 label="Kapazitaet_ideal"))
-    f2.close()
-
-    f3 = open("Daten/Tabelle_Kapazitaet_real.tex", "w")
-    f3.write(tab([uC2_3, R3_3, uR34_3, uCx_3, uRx_3],
-                 ["Kapazität", "Widerstand", "Quotient", "Kapazitä", "Widersta"],
-                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}", "R_{x}"],
-                 [r"\nano\farad", r"\ohm", "", r"\nano\farad", r"\ohm"],
-                 ["c", "c", "c", "c", "c"],
-                 cap="Werte der Messung einer idealen Kapazität" +
-                 "an der Kapazitätsmessbrücke",
-                 label="Kapazitaet_real"))
-    f3.close()
-    f4 = open("Daten/Tabelle_Induktivitaet_Bruecke.tex", "w")
-    f4.write(tab([uL2_4, R3_4, uR34_4, uLx_4, uRx_4],
-                 ["Induktivität", "Widerstand", "Quotient", "Induktivitä", "Widersta"],
-                 ["L_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "L_{x}", "R_{x}"],
-                 [r"\milli\henry", r"\ohm", "", r"\milli\henry", r"\ohm"],
-                 ["c", "c", "c", "c", "c"],
-                 cap="Werte der Messung einer realen Induktivität" +
-                 "mit einer Induktivitätsmessbrücke",
-                 label="Induktivitaets_Bruecke"))
-    f4.close()
-
-    f5 = open("Daten/Tabelle_Frequenz.tex", "w")
-    f5.write(tab([uf, uU],
-                 ["Frequenz", "Brückenspannung"],
-                 [r"\nu", "U_{Br}"],
-                 [r"\hertz", r"\volt"],
-                 ["c", "c"],
-                 cap="Generatorfrequenzen und gemessene Brückenspannungen",
-                 label="Frequenz"))
-    f5.close()
+#if TABS:
+#    f1 = open("Daten/Tabelle_Wheatstone.tex", "w")
+#    f1.write(tab([uR2_1, R3_1, uR34_1, uRx_1],
+#                 ["Widerstand", "Widerstan ", "Quotient", " Widersta"],
+#                 ["R_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "R_{x}"],
+#                 [r"\ohm", r"\ohm", "", r"\ohm"],
+#                 ["c", "c", "c", "c"],
+#                 cap="Werte der Messung an der Wheatstonebrücke",
+#                 label="Wheatstone"))
+#    f1.close()
+#
+#    f2 = open("Daten/Tabelle_Kapazitaet_ideal.tex", "w")
+#    f2.write(tab([uC2_2, R3_2, uR34_2, uCx_2],
+#                 ["Kapazität", "Widerstand", "Quotient", "Widers"],
+#                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}"],
+#                 [r"\nano\farad", r"\ohm", "", r"\nano\farad"],
+#                 ["c", "c", "c", "c"],
+#                 cap="Werte der Messung einer idealen Kapazität" +
+#                 "an der Kapazitätsmessbrücke",
+#                 label="Kapazitaet_ideal"))
+#    f2.close()
+#
+#    f3 = open("Daten/Tabelle_Kapazitaet_real.tex", "w")
+#    f3.write(tab([uC2_3, R3_3, uR34_3, uCx_3, uRx_3],
+#                 ["Kapazität", "Widerstand", "Quotient", "Kapazitä", "Widersta"],
+#                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}", "R_{x}"],
+#                 [r"\nano\farad", r"\ohm", "", r"\nano\farad", r"\ohm"],
+#                 ["c", "c", "c", "c", "c"],
+#                 cap="Werte der Messung einer idealen Kapazität" +
+#                 "an der Kapazitätsmessbrücke",
+#                 label="Kapazitaet_real"))
+#    f3.close()
+#    f4 = open("Daten/Tabelle_Induktivitaet_Bruecke.tex", "w")
+#    f4.write(tab([uL2_4, R3_4, uR34_4, uLx_4, uRx_4],
+#                 ["Induktivität", "Widerstand", "Quotient", "Induktivitä", "Widersta"],
+#                 ["L_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "L_{x}", "R_{x}"],
+#                 [r"\milli\henry", r"\ohm", "", r"\milli\henry", r"\ohm"],
+#                 ["c", "c", "c", "c", "c"],
+#                 cap="Werte der Messung einer realen Induktivität" +
+#                 "mit einer Induktivitätsmessbrücke",
+#                 label="Induktivitaets_Bruecke"))
+#    f4.close()
+#
+#    f5 = open("Daten/Tabelle_Frequenz.tex", "w")
+#    f5.write(tab([uf, uU],
+#                 ["Frequenz", "Brückenspannung"],
+#                 [r"\nu", "U_{Br}"],
+#                 [r"\hertz", r"\volt"],
+#                 ["c", "c"],
+#                 cap="Generatorfrequenzen und gemessene Brückenspannungen",
+#                 label="Frequenz"))
+#    f5.close()
