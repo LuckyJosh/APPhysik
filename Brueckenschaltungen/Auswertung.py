@@ -27,7 +27,7 @@ from latextables import toTable as tab
 
 ### Uncertianties Funktionen
 umean = unc.wrap(np.mean)
-
+usqrt = unc.wrap(np.sqrt)
 
 # Steuermakros
 PRINT = True
@@ -35,7 +35,8 @@ TABS = True
 
 # Maximalwiderstand des Potentiometers
 R_max = np.loadtxt("Messdaten/Potentiometer.txt")
-
+X2_err = np.loadtxt("Messdaten/Messfehler.txt", usecols=(5, 5))[0]  # [%]
+X2_err *= 1e-02  # [1] 
 
 # Funktion zur Berechnung von R4 aus R3
 def R4(r):
@@ -47,6 +48,9 @@ uR4 = unc.wrap(R4)
 
 ## Abgleichwiderstände R2 und Potentiometerwiderstand R3
 R2_1, R3_1 = np.loadtxt("Messdaten/Wheatstone.txt", unpack=True)
+
+#Fehlerbehaftetes  R2
+uR2_1 = unp.uarray(R2_1, R2_1 * X2_err)
 
 ## Fehler des Quotienten R3/R4
 R34_err = np.loadtxt("Messdaten/Messfehler.txt", usecols=(0, 0))[0]  # [%]
@@ -62,7 +66,7 @@ R34_1 = R3_1/R4_1
 uR34_1 = unp.uarray(R34_1, R34_1 * R34_err)
 
 ## Berechnung des Unbekannten Widerstands
-uRx_1 = R2_1 * uR34_1
+uRx_1 = uR2_1 * uR34_1
 
 # Mittlewert für Rx
 uRx_1_avr = umean(uRx_1)
@@ -75,6 +79,9 @@ uRx_1_avr = umean(uRx_1)
 ## Abgleichkapazitäten und Potntiometerwiderstände
 C2_2, R3_2 = np.loadtxt("Messdaten/Kapazitaetsmessung_ideal.txt", unpack=True)
 
+#Fehlerbehaftetes  C2
+uC2_2 = unp.uarray(C2_2, C2_2 * X2_err)
+
 ## Berechnung von R4 aus R3
 R4_2 = R4(R3_2)
 
@@ -85,7 +92,7 @@ R34_2 = R3_2/R4_2
 uR34_2 = unp.uarray(R34_2, R34_2 * R34_err)
 
 ## Berechnug der Unbekannten Kapazität Cx
-uCx_2 = C2_2 / (uR34_2)
+uCx_2 = uC2_2 / (uR34_2)
 
 # Mittelwert für Cx
 uCx_2_avr = umean(uCx_2)
@@ -95,6 +102,8 @@ uCx_2_avr = umean(uCx_2)
 ## Abgleichkapazität, Potentiometerwiderstand
 C2_3, R3_3 = np.loadtxt("Messdaten/Kapazitaetsmessung_real.txt",
                         usecols=(0, 1), unpack=True)
+#Fehlerbehaftetes  C2
+uC2_3 = unp.uarray(C2_3, C2_3 * X2_err)
 
 ## Fehler des Stellgliedes R2
 R2_err = np.loadtxt("Messdaten/Messfehler.txt", usecols=(1, 1))[0]  # [%]
@@ -119,7 +128,7 @@ R34_3 = R3_3 / R4_3
 uR34_3 = unp.uarray(R34_3, R34_3 * R34_err)
 
 ## Bestimmung der unbekannten Kapazität
-uCx_3 = C2_3 / uR34_3
+uCx_3 = uC2_3 / uR34_3
 
 # Bestimmung des Mittelwertes von uCx_3
 uCx_3_avr = umean(uCx_3)
@@ -137,6 +146,9 @@ uRx_3_avr = umean(uRx_3)
 L2_4, R3_4 = np.loadtxt("Messdaten/Induktivitaet.txt", usecols=(0, 1),
                         unpack=True)
 
+#Fehlerbehaftetes  L2
+uL2_4 = unp.uarray(L2_4, L2_4 * X2_err)
+
 ## Stellglied R2
 R2_4 = np.loadtxt("Messdaten/Induktivitaet_R2.txt")
 
@@ -153,7 +165,7 @@ R34_4 = R3_4/R4_4
 uR34_4 = unp.uarray(R34_4, R34_4 * R34_err)
 
 ## Berechnung der unbekannten Induktivität Lx
-uLx_4 = L2_4 * uR34_4
+uLx_4 = uL2_4 * uR34_4
 
 # Berechnung  des Mittelwertes
 uLx_4_avr = umean(uLx_4)
@@ -230,7 +242,7 @@ df = abs(noms(uf_min) - noms(f_0))/noms(f_0)
 
 ## Plot von U/Uq gegen f/f0
 def TKurve(O):
-    return np.sqrt((O**2 - 1)**2 / (9*(1 - O**2)**2 + 81 * O**2))
+    return usqrt((O**2 - 1)**2 / (9*((1 - O**2)**2 + 9 * O**2)))
 
 x = np.linspace(1e-03, 1e03,
                 num = 1000000)
@@ -269,7 +281,7 @@ uU2 = min(uU)/TKurve(2)
 uU2 = ufloat(noms(uU2), stds(uU2))
 print(TKurve(2))
 ## Bestimmung des Klirrfaktors
-uk = uU2/min(uU)
+uk = uU2/uUq
 
 print(uU2)
 print(min(uU))
@@ -312,56 +324,56 @@ if PRINT:
           "\nAbweichung von der Theorie:\n", df)
 
 
-# Tabellen:
-#if TABS:
-#    f1 = open("Daten/Tabelle_Wheatstone.tex", "w")
-#    f1.write(tab([R2_1, R3_1, uR34_1, uRx_1],
-#                 ["Widerstand", " ", " ", " "],
-#                 ["R_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "R_{x}"],
-#                 [r"\ohm", r"\ohm", r"\ohm", r"\ohm"],
-#                 ["c", "c", "c", "c"],
-#                 cap="Werte der Messung an der Wheatstonebrücke",
-#                 label="tab:Wheatstone"))
-#    f1.close()
-#
-#    f2 = open("Daten/Tabelle_Kapazitaet_ideal.tex", "w")
-#    f2.write(tab([C2_2, R3_2, uR34_2, uCx_2],
-#                 ["Kapazität", "Widerstand", "Wider", "Widers"],
-#                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}"],
-#                 [r"\nano\farad", r"\ohm", r"\ohm", r"\nano\farad"],
-#                 ["c", "c", "c", "c"],
-#                 cap="Werte der Messung einer idealen Kapazität" +
-#                 "an der Kapazitätsmessbrücke",
-#                 label="Kapazitaet_ideal"))
-#    f2.close()
-#
-#    f3 = open("Daten/Tabelle_Kapazitaet_real.tex", "w")
-#    f3.write(tab([C2_3, R3_3, uR34_3, uCx_3, uRx_3],
-#                 ["Kapazität", "Widerstand", "Widerstan", "Kapazitä"],
-#                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}"],
-#                 [r"\nano\farad", r"\ohm", r"\ohm", r"\nano\farad"],
-#                 ["c", "c", "c", "c"],
-#                 cap="Werte der Messung einer idealen Kapazität" +
-#                 "an der Kapazitätsmessbrücke",
-#                 label="Kapazitaet_real"))
-#    f3.close()
-#    f4 = open("Daten/Tabelle_Induktivitaet_Bruecke.tex", "w")
-#    f4.write(tab([L2_4, R3_4, uR34_4, uLx_4, uRx_4],
-#                 ["Induktivität", "Widerstand", "Widerstan", "Induktivitä", "Widersta"],
-#                 ["L_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "L_{x}", "R_{x}"],
-#                 [r"\milli\henry", r"\ohm", r"\ohm", r"\milli\henry", r"\ohm"],
-#                 ["c", "c", "c", "c", "c"],
-#                 cap="Werte der Messung einer realen Induktivität" +
-#                 "mit einer Induktivitätsmessbrücke",
-#                 label="Induktivitaets_Bruecke"))
-#    f4.close()
 
-#    f5 = open("Daten/Tabelle_Frequenz.tex", "w")
-#    f5.write(tab([uf, uU],
-#                 ["Frequenz", "Brückenspannung"],
-#                 [r"\nu", "U_{Br}"],
-#                 [r"\hertz", r"\volt"],
-#                 ["c", "c"],
-#                 cap="Generatorfrequenzen und gemessene Brückenspannungen",
-#                 label="tab:Frequenz"))
-#    f5.close()
+if TABS:
+    f1 = open("Daten/Tabelle_Wheatstone.tex", "w")
+    f1.write(tab([uR2_1, R3_1, uR34_1, uRx_1],
+                 ["Widerstand", "Widerstan ", "Quotient", " Widersta"],
+                 ["R_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "R_{x}"],
+                 [r"\ohm", r"\ohm", "", r"\ohm"],
+                 ["c", "c", "c", "c"],
+                 cap="Werte der Messung an der Wheatstonebrücke",
+                 label="Wheatstone"))
+    f1.close()
+
+    f2 = open("Daten/Tabelle_Kapazitaet_ideal.tex", "w")
+    f2.write(tab([uC2_2, R3_2, uR34_2, uCx_2],
+                 ["Kapazität", "Widerstand", "Quotient", "Widers"],
+                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}"],
+                 [r"\nano\farad", r"\ohm", "", r"\nano\farad"],
+                 ["c", "c", "c", "c"],
+                 cap="Werte der Messung einer idealen Kapazität" +
+                 "an der Kapazitätsmessbrücke",
+                 label="Kapazitaet_ideal"))
+    f2.close()
+
+    f3 = open("Daten/Tabelle_Kapazitaet_real.tex", "w")
+    f3.write(tab([uC2_3, R3_3, uR34_3, uCx_3, uRx_3],
+                 ["Kapazität", "Widerstand", "Quotient", "Kapazitä", "Widersta"],
+                 ["C_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "C_{x}", "R_{x}"],
+                 [r"\nano\farad", r"\ohm", "", r"\nano\farad", r"\ohm"],
+                 ["c", "c", "c", "c", "c"],
+                 cap="Werte der Messung einer idealen Kapazität" +
+                 "an der Kapazitätsmessbrücke",
+                 label="Kapazitaet_real"))
+    f3.close()
+    f4 = open("Daten/Tabelle_Induktivitaet_Bruecke.tex", "w")
+    f4.write(tab([uL2_4, R3_4, uR34_4, uLx_4, uRx_4],
+                 ["Induktivität", "Widerstand", "Quotient", "Induktivitä", "Widersta"],
+                 ["L_{2}", "R_{3}", r"\frac{R_{3}}{R_{4}}", "L_{x}", "R_{x}"],
+                 [r"\milli\henry", r"\ohm", "", r"\milli\henry", r"\ohm"],
+                 ["c", "c", "c", "c", "c"],
+                 cap="Werte der Messung einer realen Induktivität" +
+                 "mit einer Induktivitätsmessbrücke",
+                 label="Induktivitaets_Bruecke"))
+    f4.close()
+
+    f5 = open("Daten/Tabelle_Frequenz.tex", "w")
+    f5.write(tab([uf, uU],
+                 ["Frequenz", "Brückenspannung"],
+                 [r"\nu", "U_{Br}"],
+                 [r"\hertz", r"\volt"],
+                 ["c", "c"],
+                 cap="Generatorfrequenzen und gemessene Brückenspannungen",
+                 label="Frequenz"))
+    f5.close()

@@ -66,7 +66,7 @@ def toTable(cols, col_titles=None, col_syms=None,
             col_units=None, fmt=None, cap=None, label=None):
     # initialization of the variable containing the \begin statement of
     # the latex table-enviornment and the latex formatting of columns
-    begin = (r"\begin{table}" + "\n\t" + r"\centering" "\n\t" +
+    begin = (r"\begin{table}[!h]" + "\n\t" + r"\centering" "\n\t" +
              r"\begin{tabular}" + "{{{}}}".format(formatFmt(fmt))
              + "\n" + "\t\t" + r"\hline" + "\n")
 

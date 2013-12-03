@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  1 DEC 2013 22:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  3 DEC 2013 20:00
 entering extended mode
 **Protokoll.tex
 
@@ -2182,10 +2182,6 @@ LaTeX Warning: Reference `eq:Wheatstone_R' on page 1 undefined on input line 11
 .
 
 
-LaTeX Warning: Reference `tab:Wheatstone' on page 1 undefined on input line 12.
-
-
-
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Brueckensch
 altungen\Daten/Tabelle_Wheatstone.tex"
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 6.
@@ -2226,6 +2222,10 @@ LaTeX Warning: Reference `eq:Induktivitaet_L' on page 1 undefined on input line
 
 LaTeX Warning: Reference `eq:Induktivitaet_R' on page 1 undefined on input line
  70.
+
+
+LaTeX Warning: Reference `tab:Induktivitaet_Bruecke' on page 1 undefined on inp
+ut line 71.
 
 [2]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Brueckensch
@@ -2290,7 +2290,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--16
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 34--44
+Underfull \hbox (badness 10000) in paragraph at lines 34--46
 
  []
 
@@ -2319,10 +2319,10 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 35911 strings out of 493921
- 687452 string characters out of 3147286
- 1116349 words of memory out of 3000000
- 38454 multiletter control sequences out of 15000+200000
+ 35914 strings out of 493921
+ 687516 string characters out of 3147286
+ 1116448 words of memory out of 3000000
+ 38456 multiletter control sequences out of 15000+200000
  103431 words of font info for 96 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,16n,71p,868b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2345,9 +2345,9 @@ eX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lms
 y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on Protokoll.pdf (8 pages, 317812 bytes).
+Output written on Protokoll.pdf (8 pages, 318523 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
