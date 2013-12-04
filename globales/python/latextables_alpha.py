@@ -33,11 +33,11 @@ def entryFmt(x):
         return fmtr.format("{0:.3f}", x)
 
 
-def formatFmt(arr, b):
+def formatFmt(arr):
     frmt = "|"
-    for i in arr:
-        frmt += i
-        frmt += "|" if not b else "||"
+    for i in range(len(arr)):
+        frmt += arr[i]
+        frmt += "|"   
     return frmt
 
 
@@ -47,7 +47,7 @@ def toTable(cols, col_titles=None, col_syms=None,
     # initialization of the variable containing the \begin statement of
     # the latex table-enviornment and the latex formatting of columns
     begin = (r"\begin{table}[!h]" + "\n\t" + r"\centering" "\n\t" +
-             r"\begin{tabular}" + "{{{}}}".format(formatFmt(fmt, doubleTab))
+             r"\begin{tabular}" + "{{{}}}".format(formatFmt(fmt))
              + "\n" + "\t\t" + r"\hline" + "\n")
 
     # initialization of the variable containing the \end statement of
