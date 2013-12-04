@@ -2,7 +2,7 @@
 \usepackage[paper=a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}  % Setzt das Papierformat und den Rand auf 2.5cm
 
 
-\setlength{\parindent}{0.5 em}                                                         % Setzt die Einrückung von Absätzen auf gegebenen Abstand
+\setlength{\parindent}{1 em}                                                         % Setzt die Einrückung von Absätzen auf gegebenen Abstand
 \usepackage[onehalfspacing]{setspace}                                               % Legt Zeilenabstand fest
 
 
@@ -14,6 +14,8 @@
 \usepackage{lmodern}                                                                % Empfohlener T1-Font für deutsche Texte
 \usepackage[backend=biber, style=numeric-verb]{biblatex}
 \usepackage[babel,german=quotes]{csquotes}
+\clubpenalty=1000000
+\widowpenalty=1000000
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{fancyhdr}                                                               % Ermöglicht detailierte Bearbeitung der Kopf- und Fußzeile
@@ -27,9 +29,9 @@
 \lhead{\textbf{\VNr\\ \VN}}                                                                   % Angabe Links-Oben
 %\chead{}                                                                           % Angabe Mitte-Oben
 \rhead{\VD}                                                                      % Angabe Rechts-Oben
-\lfoot{\Namen}                                                                           % Angabe Links-Unten
+                                                                          % Angabe Links-Unten
 \cfoot{\textbf{\thepage\ von \pageref{LastPage}}}                                   % Angabe Mitte-Unten
-\rfoot{\Emails}                                            % Angabe Rechts-Unten
+\rfoot{\Namen}                                            % Angabe Rechts-Unten
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{scrdate}
@@ -113,3 +115,16 @@
 
 \usepackage{xcolor}
 
+\fancypagestyle{bib}{%
+	\fancyhf{}%
+	\setlength{\headheight}{28.0 pt}% 
+	\setlength{\footskip}{18.0 pt}%
+	\renewcommand{\headrulewidth}{.5 pt}% 
+	\renewcommand{\footrulewidth}{.5 pt}% 
+
+	\lhead{\textbf{\VNr\\ \VN}}%
+	\rhead{\VD}% 
+	\rfoot{\Namen}%
+	\cfoot{\textbf{\thepage\ von \pageref{LastPage}}}  % 
+	\lfoot{\Emails}}
+	
