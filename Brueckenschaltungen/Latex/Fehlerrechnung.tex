@@ -1,0 +1,50 @@
+
+In diesem Abschnitt sind die, mit Hilfe der Gaußschen 
+Fehlerfortpflanzung, bestimmten Gleichungen gelistet,
+mit denen die in der Auswertung angegebenen Fehler berechnet werden können.\\
+
+Der allgemeine Fehler, des Mittelwerts $\mathbb{M}(x_{i})\, \text{mit}\, i \in \{1, \dots, n\}$ durch Gaußsche Fortpflanzung ergibt sich aus der Gleichung:
+\begin{empheq}{equation}
+	\sigma_{\mathbb{M}} = \dfrac{1}{n} \sqrt{\sum_{i = 1}^{n} \sigma_{x_{i}}^{2}}
+	\label{std:Mittel}
+\end{empheq}  
+
+Den Fehler von Gleichungen der Form $f(X, r_{X}) = X r_{X}$ erhält man durch die Gleichung:
+\begin{empheq}{equation}
+	\sigma_{f} =  \sqrt{X^{2} \sigma_{r_{X}}^{2} + \sigma_{X}^{2} r_{X}^{2}}
+	\label{std:Quotient}
+\end{empheq}  
+
+Der Fehler der, durch \cref{eq:Induktivitaet_Maxwell_L}, errechneten Induktivität ist:
+\begin{empheq}{equation}
+\sigma_{L_{x}} =  \sqrt{C_{4}^{2} R_{2}^{2} \sigma_{R_{3}}^{2} + C_{4}^{2} R_{3}^{2} 				\sigma_{R_{2}}^{2} + R_{2}^{2} R_{3}^{2} \sigma_{C_{4}}^{2}}
+\label{std:Maxwell_L}
+\end{empheq}  
+
+Der Fehler des entsprechenden Wirkwiderstandes aus \cref{eq:Induktivitaet_Maxwell_R},
+ergibt sich nach:
+\begin{empheq}{equation}
+\sigma_{R_{x}} =  \sqrt{\frac{R_{2}^{2} R_{3}^{2}}{R_{4}^{4}} \sigma_{R_{4}}^{2} + \frac{R_{2}^{2} \sigma_{R_{3}}^{2}}{R_{4}^{2}} + \frac{R_{3}^{2} \sigma_{R_{2}}^{2}}{R_{4}^{2}}} 			
+\label{std:Maxwell_R}
+\end{empheq} 
+
+Der Fehler der theoretische Frequenz $\nu_{0,theo}$ nach \cref{eq:Frequenz_0}berechnet sich durch:
+\begin{empheq}{equation}
+\sigma_{\nu_{0,theo}} = \sqrt{\frac{\sigma_{R}^{2}}{C^{2} R^{4}} + \frac{\sigma_{C}^{2}}{C^{4} R^{2}}}			
+\label{std:Frequenz_0}
+\end{empheq} 
+
+Der Fehler der doppelten Amplitude der ersten Oberwelle \cref{eq:Oberwelle}
+ergibt sich vereinfacht aus:
+\begin{empheq}{equation}
+\sigma_{U_{2}} = \frac{\sigma_{U_{Br}}}{f(2)}		
+\label{std:Oberwelle}
+\end{empheq} 
+
+Und den Fehler des Klirrfaktors aus \cref{eq:Klirrfaktor2} erhält man mit:
+\begin{empheq}{equation}
+\sigma_{k} = \sqrt{\frac{\sigma_{U_{2}}^{2}}{U_{1}^{2}} + \frac{U_{2}^{2} \sigma_{U_{1}}^{2}}{U_{1}^{4}}}
+\label{std:Klirrfaktor}
+\end{empheq}  
+ 
+ 

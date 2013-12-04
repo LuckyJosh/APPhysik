@@ -1,6 +1,7 @@
 Im Folgenden sind die aufgenommenen Messwerte und die aus diesen
-berechneten Größen vorwiegend tabellarisch aufgetragen. An entsprechender 
-Stelle sind Erklärungen zu den Werten und Rechnungen gegeben. 
+berechneten Größen vorwiegend tabellarisch aufgetragen. Die jeweiligen Fehler der berechneten Werte, wurden mit den angegebenen, in römischen Zahlen nummerierten Fehlergleichung nach Gauß bestimmt, welche sich in 
+\cref{sec:Fehlerrechnung} befinden.
+An entsprechender Stelle sind Erklärungen zu den Werten und Rechnungen gegeben. 
 
 \subsection{Bestimmung eines Widerstandes mit der Wheatstonebrücke}
 \label{sec:Auswertung_Wheatstone}
@@ -13,10 +14,11 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 	
 	\input{Daten/Tabelle_Wheatstone.tex}
 	
-	Der Mittelwert der errechneten Werte für $R_{x}$ ergibt sich aus den Messwerten zu:
+	Der Mittelwert der errechneten Werte für $R_{x}$ ergibt sich aus den Messwerten zu,
 	\begin{empheq}{equation}
 		\mean{R_{x}} = \SI{240.4(7)}{\ohm}
 	\end{empheq}
+	wobei der Fehler mit \cref{std:Mittel} bestimmt wurde.
 	
 \subsection{Bestimmung von Kapazitäten mit einer Kapazitätsmessbrücke}
 \label{sec:Auswertung_Kapazitaet}
@@ -33,11 +35,12 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 		
 		\input{Daten/Tabelle_Kapazitaet_ideal.tex}	
 	
-		Als Mittelwert der unbekannten Kapazität $C_{x}$ erhält man hieraus:
+		Als Mittelwert der unbekannten Kapazität $C_{x}$ erhält man hieraus,
 		\begin{empheq}{equation}
-			\mean{C_{x}} = \SI{242(1)}{\nano\farad}
+			\mean{C_{x}} = \SI{422(1)}{\nano\farad}
 		\end{empheq} 
-	
+		mit dem Fehler nach \cref{std:Mittel}.
+		
 	\subsubsection{Bestimmung einer realen Kapazität}
 	\label{sec:Auswertung_Kapazität_real}
 		
@@ -54,7 +57,7 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 		\begin{empheq}{equation}
 				\mean{C_{x}} = \SI{529(2)}{\nano\farad} \quad\ \text{und}\ \quad \mean{R_{x}} = \SI{730(2)}{\ohm}
 		\end{empheq}  
-	
+		Der Fehler wurde jeweils mit Hilfe von \cref{std:Mittel} bestimmt.
 \subsection{Bestimmung von Induktivitäten}
 \label{sec:Auswertung_Induktivität}
 
@@ -72,10 +75,10 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 		
 		\input{Daten/Tabelle_Induktivitaet_Bruecke.tex}
 		
-		Die aus diesen Werten bestimmten Mittelwerte der Unbekannten Größen sind:
+		Die aus diesen Werten bestimmten Mittelwerte der Unbekannten Größen, mit den Fehlern nach \cref{std:Mittel} sind:
 		\begin{empheq}{equation}
 				\label{eq:LxRx_Brücke}
-				\mean{L_{x}} = \SI{10.86(4)}{\milli\henry} \quad\ \text{und}\ \quad \mean{R_{x}} = \SI{454(14)}{\ohm}
+				\mean{L_{x}} = \SI{10.86(4)}{\milli\henry} \quad\ \text{und}\ \quad \mean{R_{x}} = \SI{454(10)}{\ohm}
 		\end{empheq}		
 		
 		
@@ -91,7 +94,8 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 				\label{eq:LxRx_Maxwell}
 				{L_{x}} = \SI{0.209(9)}{\henry} \quad\ \text{und}\ \quad {R_{x}} = \SI{265(15)}{\ohm}
 		\end{empheq}
-		
+		Die Fehler dieser beiden Größen wurden dabei mit \cref{std:Maxwell_L}
+		beziehungsweise \cref{std:Maxwell_R} bestimmt.
 		
 \subsection{Bestimmung der Frequenzabhängigkeit der Brückenspannung}
 \label{sec:Auswertung_Frequenz}
@@ -113,8 +117,8 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 	
 	Dabei sind die hervorgehobenen Werte die Frequenz $\nu_{0} = \SI{1110.3(1)}{\hertz}$ bei der die minimale Spannung
 	$U_{0} = \SI{0.033(1)}{\volt}$ gemessen wurde. Die durch Division von \cref{eq:Frequenz_0} durch $2\pi$ theoretisch 
-	bestimmte Frequenz bei der die 
-	Brückenspannung verschwindet ist $\nu_{0,theo} = \SI{1137(3)}{\hertz}$.     
+	bestimmte Frequenz, bei der die 
+	Brückenspannung verschwindet beziehungsweise minimal wird ist $\nu_{0,theo} = \SI{1137(3)}{\hertz}$ mit dem Fehler nach \cref{std:Frequenz_0}.     
 	
 	In \cref{fig:WienRobinson} ist der Quotient $\frac{U_{Br}}{U_{S}}$ gegen 
 	den Quotienten  $\Omega = \frac{\nu}{\nu_{0}}$ halblogarithmisch aufgetragen, wobei die Zähler dieser Quotienten,
@@ -144,9 +148,10 @@ Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 	\end{empheq}
 \footnotetext{Wobei $f(\Omega)$ der radizierten Gleichung \cref{eq:UBr_BS} entspricht}
 	
-	Damit ist die doppelte Amplitude der ersten Oberwelle $U_{2} = \SI{0.221(7)}{\volt}$,
-	woraus sich der  Klirrfaktor ergibt.
+	ergibt. Damit ist die doppelte Amplitude der ersten Oberwelle $U_{2} = \SI{0.221(7)}{\volt}$ mit dem Fehler nach \cref{std:Oberwelle},
+	woraus sich der Klirrfaktor
 	\begin{empheq}{equation}
 		\label{eq:Klirrfaktor_Wert}
 		k = \num{0.052(2)}
 	\end{empheq}	
+	ergibt, dessen Fehler unter Verwendung von \cref{std:Klirrfaktor} berechnet wurde.
