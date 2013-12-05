@@ -1,0 +1,54 @@
+In der Elektrotechnik sind die Kirchhoff'schen Gesetze essentiell.
+\begin{empheq}{equation}
+\sum_k I_k = 0
+\end{empheq}
+lautet die Knotenregel und sagt aus, dass der Betrag aller Ströme, die in einen Punkt laufen gleich dem Betrag der Herauslaufenden sein muss. \\
+\\ Die Maschenregel
+\begin{empheq}{equation}
+\sum_k E_k = \sum_k I_kR_k
+\end{empheq}
+sagt aus, dass die Summe der Energie, innerhalb einer Masche, gleich der Summe aus Strömen und Widerständen ist.
+Weiterhin wichtig für die Wheatstone'sche-, \\ 
+die Kapazitätsmess-, die Induktivitätsmess- und die Maxwell-Brücke ist die Gleichung:
+\begin{empheq}{equation}
+R_x = R_2\dfrac{R_3}{R_4}
+\label{eq:Rx}
+\end{empheq}
+um den Betrag des unbekannten Widerstandes zu ermitteln.\\
+Speziell für die Kapazitätsbrücke, um den Wert des unbekannten Kondensators zu berechnen:
+\begin{empheq}{equation}
+C_x = C_2\dfrac{R_4}{R_3}
+\label{eq:Kapazitaet_C}
+\end{empheq}
+Analog dazu für die Induktivitätsmessbrücke:
+\begin{empheq}{equation}
+L_x = L_2\dfrac{R_3}{R_4}
+\label{eq:Induktivitaet_L}
+\end{empheq}
+Da die Maxwell-Brücke nicht analog zu den vorherigen Brücken aufgebaut ist, verändert sich dem entsprechend auch die Gleichung zur Bestimmung der Unbekannten.
+\begin{empheq}{equation}
+L_x = R_2R_3C_4
+\label{eq:Induktivitaet_Maxwell_L}
+\end{empheq}
+Bei der Wien-Robinson-Brücke sind nun alle Teile bekannt und die Frequenz ist veränderlich so ergibt sich für die Brückenspannung $\mathfrak{u}_{Br}$ und die Eingangsspannung $\mathfrak{u}_{S}$:
+\begin{empheq}{equation}
+\envert{\dfrac{\mathfrak{u}_{Br}}{\mathfrak{u}_{S}}}^2 = \dfrac{1}{9}\dfrac{(\Omega^2 - 1)^2}{(1-\Omega^2)^2+9\Omega^2} = f(\Omega)^{2}
+\label{eq:UBr_US}
+\end{empheq}
+Die theoretische Kreisfrequenz $ \omega_{0,theo} $ ergibt sich aus den Bauteilen der Wien-Robinson-Brücke zu:
+\begin{empheq}{equation}
+	\omega_{0,theo} = \dfrac{1}{RC}
+	\label{eq:Frequenz_0}
+\end{empheq} 
+
+Um den Klirrfaktor $k$ zu bestimmen, welcher ein Bewertungskriterium für den Sinusgenerator ist, benötigen wir:
+\begin{empheq}{equation}
+k := \dfrac{\sqrt{U_2^2 + U_3^2 + \dots + U_{n}^{2\textsl{}}}}{U_1}
+\label{eq:Klirrfaktor}
+\end{empheq}
+Um die Spannung $U_2$ am Ausgang des Generators zu errechnen, benötigt man zusätzlich noch:
+\begin{empheq}{equation}
+U_2 = \frac{U_{Br}}{f(\Omega)}  
+\label{eq:U2} 
+\end{empheq}
+(mit $\Omega$ = 2).

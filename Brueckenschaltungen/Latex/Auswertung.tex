@@ -1,7 +1,15 @@
 Im Folgenden sind die aufgenommenen Messwerte und die aus diesen
 berechneten Größen vorwiegend tabellarisch aufgetragen. Die jeweiligen Fehler der berechneten Werte, wurden mit den angegebenen, in römischen Zahlen nummerierten Fehlergleichung nach Gauß bestimmt, welche sich in 
 \cref{sec:Fehlerrechnung} befinden.
-An entsprechender Stelle sind Erklärungen zu den Werten und Rechnungen gegeben. 
+An entsprechender Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.\\
+
+In den Abschnitten \ref{sec:Auswertung_Wheatstone} bis \ref{sec:Auswertung_Induktivität_Maxwell} wird, wie in \cref{sec:Durchführung}
+beschrieben ein Potentiometer verwendet, um den Widerstand $R_{3}$ einzustellen. Mit dem Maximalwiderstand \\$R_{max} = \SI{1003}{\ohm}$
+des Potentiometers, erhält man den Widerstand $R_{4}$ als:
+\begin{empheq}{equation}
+	\label{eq:R4}
+	R_{4} = R_{max} - R_{3} = \SI{1003}{\ohm} - R_{3}
+\end{empheq}
 
 \subsection{Bestimmung eines Widerstandes mit der Wheatstonebrücke}
 \label{sec:Auswertung_Wheatstone}
@@ -9,11 +17,11 @@ An entsprechender Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 	Bei dieser Messung wurde der unbekannte Widerstand \emph{Wert 10} vermessen.
 	Der am Potentiometer eingestellte Widerstand $R_{3}$, der Quotient aus diesen und den nach \cref{eq:R4} berechneten
 	Widerständen $R_{4}$, die jeweiligen
-	Abgleichwiderstände $R_{2}$ und die mit Hilfe von \cref{eq:Wheatstone_R} aus diesen
+	Abgleichwiderstände $R_{2}$ und die mit Hilfe von \cref{eq:Rx} aus diesen
 	berechneten Werte für $R_{x}$ sind in \cref{tab:Wheatstone} zu finden.
 	
 	\input{Daten/Tabelle_Wheatstone.tex}
-	
+
 	Der Mittelwert der errechneten Werte für $R_{x}$ ergibt sich aus den Messwerten zu,
 	\begin{empheq}{equation}
 		\mean{R_{x}} = \SI{240.4(7)}{\ohm}
@@ -48,11 +56,11 @@ An entsprechender Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 		Stellglied $R_{2} = \SI{500(15)}{\ohm}$ benötigt. Die anderen bekannten Größen sind analog zu
 		 \cref{sec:Auswertung_Kapazität_ideal} zusammen mit den aus diesen 
 		berechneten unbekannten Größen, die Kapazität $C_{x}$ bestimmt durch \cref{eq:Kapazitaet_C} und deren
-		 Wirkwiderstand $R_{x}$ bestimmt durch \cref{eq:Kapaziaet_R} in 
+		 Wirkwiderstand $R_{x}$ bestimmt durch \cref{eq:Rx} in 
 		\cref{tab:Kapazitaet_real} eingetragen. 
 	
 		\input{Daten/Tabelle_Kapazitaet_real.tex}
-		
+
 		Die Mittelwerte der unbekannten Größen $C_{x}$ und $R_{x}$ ergeben sich somit zu:
 		\begin{empheq}{equation}
 				\mean{C_{x}} = \SI{529(2)}{\nano\farad} \quad\ \text{und}\ \quad \mean{R_{x}} = \SI{730(2)}{\ohm}
@@ -70,7 +78,7 @@ An entsprechender Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 	
 		Die verwendeten Abgleichinduktivitäten $L_{2}$, der am Potentiometer eingestellten Widerstand
 		$R_{3}$ sowie die Quotienten aus diesen und den nach \cref{eq:R4} berechneten Widerständen $R4$
-		und die mit Hilfe von \cref{eq:Induktivitaet_L} und \cref{eq:Induktivitaet_R} berechneten unbekannten $L_{x}$
+		und die mit Hilfe von \cref{eq:Induktivitaet_L} und \cref{eq:Rx} berechneten unbekannten $L_{x}$
 		 und $R_{x}$ sind in \cref{tab:Induktivitaet_Bruecke} zu finden.    
 		
 		\input{Daten/Tabelle_Induktivitaet_Bruecke.tex}
@@ -88,7 +96,7 @@ An entsprechender Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 		Bei der Bestimmung der Induktivität $L_{x}$ und deren Wirkwiderstand $R_{x}$ werden 
 		nur der am Potentiometer eingestellte Widerstand $R_{3}= \SI{210(6)}{\ohm} $, der mit \cref{eq:R4} 
 		daraus bestimmte Widerstand $R_{4} = \SI{793(30)}{\ohm}$ und die verwendete Kapazität $C_{4} = 
-		\SI{994}{\nano\farad}$  benötigt. Mit \cref{eq:Induktivitaet_Maxwell_L} und \cref{eq:Induktivitaet_Maxwell_R}
+		\SI{994}{\nano\farad}$  benötigt. Mit \cref{eq:Induktivitaet_Maxwell_L} und \cref{eq:Rx}
 		sowie dem Stellglied $R_{2}$ erhält man:
 		\begin{empheq}{equation}
 				\label{eq:LxRx_Maxwell}
@@ -118,11 +126,11 @@ An entsprechender Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 	Dabei sind die hervorgehobenen Werte die Frequenz $\nu_{0} = \SI{1110.3(1)}{\hertz}$ bei der die minimale Spannung
 	$U_{0} = \SI{0.033(1)}{\volt}$ gemessen wurde. Die durch Division von \cref{eq:Frequenz_0} durch $2\pi$ theoretisch 
 	bestimmte Frequenz, bei der die 
-	Brückenspannung verschwindet beziehungsweise minimal wird ist $\nu_{0,theo} = \SI{1137(3)}{\hertz}$ mit dem Fehler nach \cref{std:Frequenz_0}.     
+	Brückenspannung verschwindet beziehungsweise minimal wird ist $\nu_{0,theo} = \SI{1137(3)}{\hertz}$ mit dem Fehler nach \cref{std:Frequenz_0}.\\     
 	
 	In \cref{fig:WienRobinson} ist der Quotient $\frac{U_{Br}}{U_{S}}$ gegen 
 	den Quotienten  $\Omega = \frac{\nu}{\nu_{0}}$ halblogarithmisch aufgetragen, wobei die Zähler dieser Quotienten,
-	jeweils die Werte aus \cref{tab:Frequenz} darstellen. Des Weiteren ist noch die Theoriekurve dieses Verlaufes, bestimmt durch radizieren von \cref{eq:UBr_US} eingezeichnet.  
+	jeweils die Werte aus \cref{tab:Frequenz} darstellen. Des Weiteren ist noch die Theoriekurve dieses Verlaufes, bestimmt durch radizieren von \cref{eq:UBr_US}, eingezeichnet.  
 		
 	\begin{figure}[!h]
 		\centering
@@ -141,14 +149,8 @@ An entsprechender Stelle sind Erklärungen zu den Werten und Rechnungen gegeben.
 		\label{eq:Klirrfaktor2}
 	\end{empheq}     
 	
-	Wobei sich die doppelte Amplitude der ersten Oberschwingung $U_{2}$ durch
-	\begin{empheq}{equation}
-		U_{2} = \dfrac{U_{Br}}{f(2)}\footnotemark
-		\label{eq:Oberwelle}
-	\end{empheq}
-\footnotetext{Wobei $f(\Omega)$ der radizierten Gleichung \cref{eq:UBr_BS} entspricht}
-	
-	ergibt. Damit ist die doppelte Amplitude der ersten Oberwelle $U_{2} = \SI{0.221(7)}{\volt}$ mit dem Fehler nach \cref{std:Oberwelle},
+	Wobei sich die doppelte Amplitude der ersten Oberschwingung $U_{2}$ durch \cref{eq:U2} ergibt.
+    Damit ist die doppelte Amplitude der ersten Oberwelle $U_{2} = \SI{0.221(7)}{\volt}$ mit dem Fehler nach \cref{std:Oberwelle},
 	woraus sich der Klirrfaktor
 	\begin{empheq}{equation}
 		\label{eq:Klirrfaktor_Wert}
