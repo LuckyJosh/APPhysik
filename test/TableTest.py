@@ -47,14 +47,14 @@ uB = unp.uarray(b, b_err)
 #
 
 
-print(tabalpha([uA[:len(uA)/2:], uB[:len(uB)/2:], uA[len(uA)/2::], uB[len(uB)/2::]],
-          col_titles=["Spannung", "Zeit", "Temperatur"],
-          col_syms=["U", "t", "T"],
-          col_units=["V", "s", r"\kelvin"],
-          fmt=["c", "c", "c"],
-          cap="table to test function toTable",
-          label="Test",
-          doubleTab=True))
+#print(tabalpha([uA[:len(uA)/2:], uB[:len(uB)/2:], uA[len(uA)/2::], uB[len(uB)/2::]],
+#          col_titles=["Spannung", "Zeit", "Temperatur"],
+#          col_syms=["U", "t", "T"],
+#          col_units=["V", "s", r"\kelvin"],
+#          fmt=["c", "c", "c"],
+#          cap="table to test function toTable",
+#          label="Test",
+#          doubleTab=True))
 
 f = open("Daten/Table2.tex", "w")
 
@@ -67,6 +67,14 @@ f.write(tabalpha([uA, uB, c],
         label="Test"))
 
 f.close()
+
+print(tab([uA, uB, c],
+        col_titles=["Spannung", "Zeit", "Temperatur"],
+        col_syms=["U", "t", "T"],
+        col_units=["V", "s", r"\kelvin"],
+        fmt=["c", "c", "c"],
+        cap="table to test function toTable",
+        label="Test"))
 
 #text = ["Spannung", "Zeit", "Temperatur"]
 #

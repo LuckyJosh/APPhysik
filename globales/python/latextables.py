@@ -33,21 +33,26 @@ def entryFmt(x):
         return fmtr.format("{0:.3f}", x)
 
 
-def formatFmt(arr, b):
+def formatFmt(arr):
     frmt = "|"
     for i in arr:
         frmt += i
-        frmt += "|" if not b else "||"
+        frmt += "|"
     return frmt
+
+#
+#def ownTranspose(mat):
+#    rows = np.alen(mat)
+#    cols = np.alen()
 
 
 
 def toTable(cols, col_titles=None, col_syms=None,
-            col_units=None, fmt=None, cap=None, label=None, doubleTab=False):
+            col_units=None, fmt=None, cap=None, label=None):
     # initialization of the variable containing the \begin statement of
     # the latex table-enviornment and the latex formatting of columns
     begin = (r"\begin{table}[!h]" + "\n\t" + r"\centering" "\n\t" +
-             r"\begin{tabular}" + "{{{}}}".format(formatFmt(fmt, doubleTab))
+             r"\begin{tabular}" + "{{{}}}".format(formatFmt(fmt))
              + "\n" + "\t\t" + r"\hline" + "\n")
 
     # initialization of the variable containing the \end statement of
@@ -104,6 +109,7 @@ def toTable(cols, col_titles=None, col_syms=None,
             print "cols must to be an ndarray-Type"
         else:
             cols = np.transpose(cols)
+            print(cols)
             for k in cols:
                 row = "\t\t"
                 for i in range(len(k)):
@@ -113,3 +119,29 @@ def toTable(cols, col_titles=None, col_syms=None,
                 rows += row
 
     return (begin + titles + headers + rows + end).encode("UTF-8")
+
+
+
+import uncertainties.unumpy as unp
+
+
+a = np.array([1.589, 15.477, 3.789, 9.784, 184.1589746, 31.4])
+b = np.array([0.00456, 0.1111234, 123.342, 1.34, 9.0004, 12.1])
+c = np.array([789.15, 0.4534442, 234.203, 89.0923, 10.745769])
+
+a_err = np.array([0.046, 0.54, 0.001, 1e-05, 1.4, 4])
+b_err = np.array([0.01, 0.002, 1.5, 0.01452, 1.455, 1])
+
+uA = unp.uarray(a, a_err)
+uB = unp.uarray(b, b_err)
+
+
+
+
+print(toTable([uA, uB, c],
+        col_titles=["Spannung", "Zeit", "Temperatur"],
+        col_syms=["U", "t", "T"],
+        col_units=["V", "s", r"\kelvin"],
+        fmt=["c", "c", "c"],
+        cap="table to test function toTable",
+        label="Test"))

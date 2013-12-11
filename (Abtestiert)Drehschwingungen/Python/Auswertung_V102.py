@@ -17,6 +17,7 @@ import scipy.constants as const
 from scipy.optimize import curve_fit
 import sympy as sp
 from uncertainties import ufloat
+import uncertainties 
 import uncertainties.unumpy as unp
 
 
@@ -68,11 +69,12 @@ T_err = np.loadtxt("../Messdaten/Periodendauer_Fehler.txt")
 uT = unp.uarray(T, len(T)*[T_err])
 
   # gemittelte Periodendauer mit Fehler
+umean =  uncertainties.wrap(np.mean)
 uT_avr = np.mean(uT)
 T_avr = np.mean(T)
-T_std = np.std(T)/(len(T))
+T_std = np.std(T)/(len(T)-1)
 UT_avr = ufloat(T_avr, T_std)
-uT_avr = ufloat(unp.nominal_values(uT_avr), unp.std_devs(uT_avr))
+#uT_avr = ufloat(unp.nominal_values(uT_avr), unp.std_devs(uT_avr))
 print("Mittlere Periodendauer ohne B:", uT_avr, UT_avr)
  ## Verarbeitung der Drahtdaten
 
