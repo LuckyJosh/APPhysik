@@ -105,12 +105,12 @@ def toTable(cols, col_titles=None, col_syms=None,
             print "cols must to be an ndarray-Type"
         else:
             cols = np.transpose(cols)
-            print(len(cols))
-            for k in cols:
-                row = "\t\t"
-                for i in range(len(k)):
-                    row += r"\num{{{}}} ".format(entryFmt(k[i]))
-                    row += r"\\" if i == (len(col_titles)-1) else " & "
+#            for k in cols:
+#                row = "\t\t"
+#                for i in range(len(k)):
+#                    row += r"\num{{{}}} ".format(entryFmt(k[i]))
+#                    row += r"\\" if i == (len(col_titles)-1) else " & "
+            
                 row += "\n"
                 rows += row
 
