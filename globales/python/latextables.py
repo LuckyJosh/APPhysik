@@ -39,8 +39,13 @@ def formatFmt(arr):
         frmt += i
         frmt += "|"
     return frmt
-
-
+# TODO:
+def ownTranspose(mat):
+    cols = len(mat)
+    rows = len(mat[0])
+    np.array(np.zeros(rows))
+    np.array(np.zeros(cols))
+    for i in range()
 
 
 def toTable(cols, col_titles=None, col_syms=None,
@@ -83,7 +88,7 @@ def toTable(cols, col_titles=None, col_syms=None,
         if not col_units is None:
             for i in range(len(col_syms)):
                 header = r"${}\,[\si{{{}}}]$".format(col_syms[i], col_units[i])
-                header += r"\\" if i == (len(col_titles)-1) else " & "                
+                header += r"\\" if i == (len(col_titles)-1) else " & "
                 headers += header
                 if headers.endswith(r"\\"):
                     headers += r"\hline\hline" + "\n"
@@ -104,16 +109,19 @@ def toTable(cols, col_titles=None, col_syms=None,
         if not all(isinstance(i, np.ndarray) for i in cols):
             print "cols must to be an ndarray-Type"
         else:
-            cols = np.transpose(cols)
+            #cols = np.transpose(cols)
 #            for k in cols:
 #                row = "\t\t"
 #                for i in range(len(k)):
 #                    row += r"\num{{{}}} ".format(entryFmt(k[i]))
 #                    row += r"\\" if i == (len(col_titles)-1) else " & "
-            
+            for k in cols:
+                row = "\t\t"
+                for i in range(len(cols)):
+                    row += r"\num{{{}}} ".format(entryFmt(k[i]))
+                    row += r"\\" if i == (len(col_titles)-1) else " & "
                 row += "\n"
                 rows += row
-
     return (begin + titles + headers + rows + end).encode("UTF-8")
 
 
