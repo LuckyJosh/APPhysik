@@ -35,21 +35,15 @@ def entryFmt(x):
 
 def formatFmt(arr):
     frmt = "|"
-    for i in arr:
-        frmt += i
-        frmt += "|"
+    for i in range(len(arr)):
+        frmt += arr[i]
+        frmt += "|"   
     return frmt
-# TODO:
-def ownTranspose(mat):
-    cols = len(mat)
-    rows = len(mat[0])
-    np.array(np.zeros(rows))
-    np.array(np.zeros(cols))
-    for i in range()
+
 
 
 def toTable(cols, col_titles=None, col_syms=None,
-            col_units=None, fmt=None, cap=None, label=None):
+            col_units=None, fmt=None, cap=None, label=None, doubleTab=False):
     # initialization of the variable containing the \begin statement of
     # the latex table-enviornment and the latex formatting of columns
     begin = (r"\begin{table}[!h]" + "\n\t" + r"\centering" "\n\t" +
@@ -88,7 +82,7 @@ def toTable(cols, col_titles=None, col_syms=None,
         if not col_units is None:
             for i in range(len(col_syms)):
                 header = r"${}\,[\si{{{}}}]$".format(col_syms[i], col_units[i])
-                header += r"\\" if i == (len(col_titles)-1) else " & "
+                header += r"\\" if i == (len(col_titles)-1) else " & "                
                 headers += header
                 if headers.endswith(r"\\"):
                     headers += r"\hline\hline" + "\n"
@@ -109,43 +103,13 @@ def toTable(cols, col_titles=None, col_syms=None,
         if not all(isinstance(i, np.ndarray) for i in cols):
             print "cols must to be an ndarray-Type"
         else:
-            #cols = np.transpose(cols)
-#            for k in cols:
-#                row = "\t\t"
-#                for i in range(len(k)):
-#                    row += r"\num{{{}}} ".format(entryFmt(k[i]))
-#                    row += r"\\" if i == (len(col_titles)-1) else " & "
+            cols = np.transpose(cols)
             for k in cols:
                 row = "\t\t"
-                for i in range(len(cols)):
+                for i in range(len(k)):
                     row += r"\num{{{}}} ".format(entryFmt(k[i]))
                     row += r"\\" if i == (len(col_titles)-1) else " & "
                 row += "\n"
                 rows += row
+
     return (begin + titles + headers + rows + end).encode("UTF-8")
-
-
-
-import uncertainties.unumpy as unp
-
-
-a = np.array([1.589, 15.477, 3.789, 9.784, 184.1589746, 31.4])
-b = np.array([0.00456, 0.1111234, 123.342, 1.34, 9.0004, 12.1])
-c = np.array([789.15, 0.4534442, 234.203, 89.0923, 10.745769])
-
-a_err = np.array([0.046, 0.54, 0.001, 1e-05, 1.4, 4])
-b_err = np.array([0.01, 0.002, 1.5, 0.01452, 1.455, 1])
-
-uA = unp.uarray(a, a_err)
-uB = unp.uarray(b, b_err)
-
-
-
-
-print(toTable([uA, uB, c],
-        col_titles=["Spannung", "Zeit", "Temperatur"],
-        col_syms=["U", "t", "T"],
-        col_units=["V", "s", r"\kelvin"],
-        fmt=["c", "c", "c"],
-        cap="table to test function toTable",
-        label="Test"))
