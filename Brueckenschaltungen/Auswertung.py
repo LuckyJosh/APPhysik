@@ -261,7 +261,11 @@ plt.ylim(0, 0.4)
 X = uf/uf_min
 Y = uU/uUq
 
-uX = unp.uarray(noms(X), stds(X))
+uX = unp.uarray(noms(X), stds(X))def FWHM(x, y):
+    hm = max(y)/2
+    x1, x2 = np.where(y==hm)[0]
+    fw = sign(sign(x1) - sign(x2))
+    return fw
 uY = unp.uarray(noms(Y), stds(Y))
 
 plt.errorbar(noms(uX), noms(uY),
