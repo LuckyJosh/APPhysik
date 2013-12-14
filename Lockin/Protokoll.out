@@ -3,4 +3,8 @@
 \BOOKMARK [1][-]{section.3}{Durchf\374hrung}{}% 3
 \BOOKMARK [1][-]{section.4}{Auswertung}{}% 4
 \BOOKMARK [2][-]{subsection.4.1}{Fehlerrechnung}{section.4}% 5
-\BOOKMARK [1][-]{section.5}{Diskussion}{}% 6
+\BOOKMARK [2][-]{subsection.4.2}{Aufbau der Schaltung}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Messung ohne Noise-Generator}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Messung mit Noise-Generator}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{Messung der Intensit\344t einer LED in Abh\344ngigkeit des Abstands}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Diskussion}{}% 10

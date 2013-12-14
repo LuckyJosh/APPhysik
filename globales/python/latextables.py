@@ -39,13 +39,13 @@ def formatFmt(arr):
         frmt += i
         frmt += "|"
     return frmt
-# TODO:
-def ownTranspose(mat):
-    cols = len(mat)
-    rows = len(mat[0])
-    np.array(np.zeros(rows))
-    np.array(np.zeros(cols))
-    for i in range()
+## TODO:
+#def ownTranspose(mat):
+#    cols = len(mat)
+#    rows = len(mat[0])
+#    np.array(np.zeros(rows))
+#    np.array(np.zeros(cols))
+#    for i in range()
 
 
 def toTable(cols, col_titles=None, col_syms=None,
@@ -109,43 +109,47 @@ def toTable(cols, col_titles=None, col_syms=None,
         if not all(isinstance(i, np.ndarray) for i in cols):
             print "cols must to be an ndarray-Type"
         else:
-            #cols = np.transpose(cols)
-#            for k in cols:
-#                row = "\t\t"
-#                for i in range(len(k)):
-#                    row += r"\num{{{}}} ".format(entryFmt(k[i]))
-#                    row += r"\\" if i == (len(col_titles)-1) else " & "
+            cols = np.transpose(cols)
             for k in cols:
                 row = "\t\t"
-                for i in range(len(cols)):
+                for i in range(len(k)):
                     row += r"\num{{{}}} ".format(entryFmt(k[i]))
                     row += r"\\" if i == (len(col_titles)-1) else " & "
+#            for k in cols:
+#                print("hier", len(k))
+#                row = "\t\t"
+#                count = 0
+#                for i in k:
+#                    count += 1
+#                    row += r"\num{{{}}} ".format(entryFmt(i))
+#                    row += r"\\" if count % len(col_titles) == 0 else " & "
                 row += "\n"
                 rows += row
     return (begin + titles + headers + rows + end).encode("UTF-8")
 
-
-
-import uncertainties.unumpy as unp
-
-
-a = np.array([1.589, 15.477, 3.789, 9.784, 184.1589746, 31.4])
-b = np.array([0.00456, 0.1111234, 123.342, 1.34, 9.0004, 12.1])
-c = np.array([789.15, 0.4534442, 234.203, 89.0923, 10.745769])
-
-a_err = np.array([0.046, 0.54, 0.001, 1e-05, 1.4, 4])
-b_err = np.array([0.01, 0.002, 1.5, 0.01452, 1.455, 1])
-
-uA = unp.uarray(a, a_err)
-uB = unp.uarray(b, b_err)
-
-
-
-
-print(toTable([uA, uB, c],
-        col_titles=["Spannung", "Zeit", "Temperatur"],
-        col_syms=["U", "t", "T"],
-        col_units=["V", "s", r"\kelvin"],
-        fmt=["c", "c", "c"],
-        cap="table to test function toTable",
-        label="Test"))
+#### Example for testing purposes
+TEST = False
+if TEST:
+    import uncertainties.unumpy as unp
+    
+    
+    a = np.array([1.589, 15.477, 3.789, 9.784, 184.1589746, 31.4])
+    b = np.array([0.00456, 0.1111234, 123.342, 1.34, 9.0004, 12.1])
+    c = np.array([789.15, 0.4534442, 234.203, 89.0923, 10.745769, 5])
+    
+    a_err = np.array([0.046, 0.54, 0.001, 1e-05, 1.4, 4])
+    b_err = np.array([0.01, 0.002, 1.5, 0.01452, 1.455, 1])
+    
+    uA = unp.uarray(a, a_err)
+    uB = unp.uarray(b, b_err)
+    
+    
+    
+    
+    print(toTable([uA, uB, c],
+            col_titles=["Spannung", "Zeit", "Temperatur"],
+            col_syms=["U", "t", "T"],
+            col_units=["V", "s", r"\kelvin"],
+            fmt=["c", "c", "c"],
+            cap="table to test function toTable",
+            label="Test"))

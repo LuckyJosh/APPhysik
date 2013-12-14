@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  4 DEC 2013 00:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  15 DEC 2013 00:31
 entering extended mode
 **Protokoll.tex
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Pro
-tokoll.tex"
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Prot
+okoll.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -1851,8 +1851,8 @@ LaTeX Font Info:    Try loading font information for U+psy on input line 64.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 )))
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Lat
-ex/VersuchDaten.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
+x/VersuchDaten.tex")
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
 
@@ -1867,8 +1867,8 @@ File: german.lbx 2013/10/26 v2.8 biblatex localization (PK/JW/AB)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Pro
-tokoll.aux")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Prot
+okoll.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
@@ -1934,8 +1934,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Protokoll.bbl' found.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Pro
-tokoll.bbl")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Prot
+okoll.bbl")
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 
@@ -2030,10 +2030,10 @@ LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Pro
-tokoll.out")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Pro
-tokoll.out")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Prot
+okoll.out")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Prot
+okoll.out")
 \@outlinefile=\write5
  ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
@@ -2091,54 +2091,174 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 3.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Lat
-ex/Einleitung.tex")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Lat
-ex/Theorie.tex")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Lat
-ex/Durchführung.tex")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Lat
-ex/Auswertung.tex") [1{C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdf
-tex.map}
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
+x/Einleitung.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
+x/Theorie.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
+x/Durchführung.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
+x/Fehlerrechnung.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
+x/Auswertung.tex"
 
-]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Lat
-ex/Fehlerrechnung.tex") [2]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Lat
-ex/Diskussion.tex") [3]
+LaTeX Warning: Reference `fig:AufbauSig1' on page 1 undefined on input line 8.
 
-LaTeX Warning: Empty bibliography on input line 34.
 
+LaTeX Warning: Reference `fig:AufbauSig2' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Reference `fig:Phase1' on page 1 undefined on input line 27.
+
+
+LaTeX Warning: Reference `fig:Phase5' on page 1 undefined on input line 27.
+
+
+LaTeX Warning: Reference `fig:Phase1' on page 1 undefined on input line 28.
+
+LaTeX Font Info:    Calculating math sizes for size <8.39996> on input line 28.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8.39996> on input line 28.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.87994> on input line 28.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <4.19998> on input line 28.
+
+LaTeX Font Warning: Font shape `U/esvect/m/n' in size <4.19998> not available
+(Font)              size <5> substituted on input line 28.
+
+<Grafiken/IntegrierteSpannung.jpg, id=48, 642.4pt x 481.8pt>
+File: Grafiken/IntegrierteSpannung.jpg Graphic file (type jpg)
+
+<use Grafiken/IntegrierteSpannung.jpg>
+Package pdftex.def Info: Grafiken/IntegrierteSpannung.jpg used on input line 71
+.
+(pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 72.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Date
+n/Tabelle_ohneNoise.tex"
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 6.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+
+LaTeX Warning: Reference `eq:Uout' on page 1 undefined on input line 81.
+
+
+LaTeX Warning: Reference `eq:Uout' on page 1 undefined on input line 82.
+
+<Grafiken/OhneNoise.pdf, id=51, 578.16pt x 431.81326pt>
+File: Grafiken/OhneNoise.pdf Graphic file (type pdf)
+
+<use Grafiken/OhneNoise.pdf>
+Package pdftex.def Info: Grafiken/OhneNoise.pdf used on input line 91.
+(pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1{C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+] [2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/
+Grafiken/IntegrierteSpannung.jpg>]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Date
+n/Tabelle_mitNoise.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) <Grafiken/MitNoise.pdf, id=91, 578.16pt x 431.81326pt>
+File: Grafiken/MitNoise.pdf Graphic file (type pdf)
+
+<use Grafiken/MitNoise.pdf>
+Package pdftex.def Info: Grafiken/MitNoise.pdf used on input line 131.
+(pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 135.
+
+
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Date
+n/Tabelle_Abstand.tex" [3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/
+PraktikumRepo/Lockin/Grafiken/OhneNoise.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+
+LaTeX Warning: Reference `fig:Abstand' on page 1 undefined on input line 144.
+
+[4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Gr
+afiken/MitNoise.pdf>]) [5]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
+x/Diskussion.tex") [6]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 35.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\vorlage\Pro
-tokoll.aux"
-Package cleveref Info: loaded `ngerman' language definitions on input line 24.
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Prot
+okoll.aux"
+Package cleveref Info: loaded `ngerman' language definitions on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: F48E8469A38BF8AFB39FA42DABA1BAE8;296.
+(rerunfilecheck)             Checksum: DE3EF649CBA27D07E18D9EB77FEDA797;639.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 2.90001pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34418 strings out of 493921
- 659968 string characters out of 3147286
- 1061008 words of memory out of 3000000
- 37047 multiletter control sequences out of 15000+200000
- 59493 words of font info for 55 fonts, out of 3000000 for 9000
+ 34826 strings out of 493921
+ 667889 string characters out of 3147286
+ 1073987 words of memory out of 3000000
+ 37395 multiletter control sequences out of 15000+200000
+ 150667 words of font info for 137 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 67i,11n,71p,880b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
-mr12.pfb>
-Output written on Protokoll.pdf (3 pages, 75186 bytes).
+ 67i,16n,71p,880b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
+c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Protokoll.pdf (7 pages, 384936 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
 

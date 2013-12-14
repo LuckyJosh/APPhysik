@@ -16,5 +16,18 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \sortlist{entry}{nty}
+    \entry{SciPy}{misc}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{SciPy}
+      \field{title}{SciPy}
+      \verb{url}
+      \verb http://docs.scipy.org/doc/
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
 
