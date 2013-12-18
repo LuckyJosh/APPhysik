@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  18 DEC 2013 18:08
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.2)  18 DEC 2013 23:46
 entering extended mode
 **Protokoll.tex
 
@@ -2091,97 +2091,126 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 3.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\globales\la
+tex\Deckblatt.tex" [1
+
+{C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
 x/Einleitung.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
 x/Theorie.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
-x/Durchführung.tex")
+x/Durchführung.tex"pdfTeX warning (ext4): destination with the same identifier
+ (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 
+     [1] <Grafiken/V303Schema.jpg, id=79, 405.76593pt x 118.19156pt>
+File: Grafiken/V303Schema.jpg Graphic file (type jpg)
+
+<use Grafiken/V303Schema.jpg>
+Package pdftex.def Info: Grafiken/V303Schema.jpg used on input line 6.
+(pdftex.def)             Requested size: 324.61317pt x 94.55338pt.
+
+<Grafiken/V303Aufbau1.jpg, id=84, 511.9125pt x 194.22563pt>
+File: Grafiken/V303Aufbau1.jpg Graphic file (type jpg)
+
+<use Grafiken/V303Aufbau1.jpg>
+Package pdftex.def Info: Grafiken/V303Aufbau1.jpg used on input line 20.
+(pdftex.def)             Requested size: 409.53056pt x 155.3807pt.
+ [2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/G
+rafiken/V303Schema.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Pr
+aktikumRepo/Lockin/Grafiken/V303Aufbau1.jpg>]
+<Grafiken/V303Aufbau2.jpg, id=99, 517.18219pt x 166.37157pt>
+File: Grafiken/V303Aufbau2.jpg Graphic file (type jpg)
+
+<use Grafiken/V303Aufbau2.jpg>
+Package pdftex.def Info: Grafiken/V303Aufbau2.jpg used on input line 38.
+(pdftex.def)             Requested size: 413.7463pt x 133.09741pt.
+)
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
-x/Fehlerrechnung.tex")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
-x/Auswertung.tex" <Grafiken/Signalspannung.jpg, id=51, 642.4pt x 481.8pt>
+x/Auswertung.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 3--7
+
+ []
+
+[3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Gr
+afiken/V303Aufbau2.jpg>]
+<Grafiken/Signalspannung.jpg, id=114, 642.4pt x 481.8pt>
 File: Grafiken/Signalspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Signalspannung.jpg>
-Package pdftex.def Info: Grafiken/Signalspannung.jpg used on input line 15.
-(pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
+Package pdftex.def Info: Grafiken/Signalspannung.jpg used on input line 24.
+(pdftex.def)             Requested size: 224.84337pt x 168.63252pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 16.
+(Font)              <10.95> on input line 25.
 
-<Grafiken/Referenzspannung.jpg, id=52, 642.4pt x 481.8pt>
+<Grafiken/Referenzspannung.jpg, id=115, 642.4pt x 481.8pt>
 File: Grafiken/Referenzspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Referenzspannung.jpg>
-Package pdftex.def Info: Grafiken/Referenzspannung.jpg used on input line 22.
-(pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Font Info:    Calculating math sizes for size <8.39996> on input line 30.
+Package pdftex.def Info: Grafiken/Referenzspannung.jpg used on input line 31.
+(pdftex.def)             Requested size: 224.84337pt x 168.63252pt.
+LaTeX Font Info:    Calculating math sizes for size <8.39996> on input line 39.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8.39996> on input line 30.
+(Font)              <8.39996> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.87994> on input line 30.
+(Font)              <5.87994> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <4.19998> on input line 30.
+(Font)              <4.19998> on input line 39.
+
 
 LaTeX Font Warning: Font shape `U/esvect/m/n' in size <4.19998> not available
-(Font)              size <5> substituted on input line 30.
+(Font)              size <5> substituted on input line 39.
 
-[1{C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
- <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Graf
-iken/Signalspannung.jpg>] <Grafiken/Phase_1.jpg, id=76, 642.4pt x 481.8pt>
+[4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Gr
+afiken/Signalspannung.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum
+/PraktikumRepo/Lockin/Grafiken/Referenzspannung.jpg>]
+<Grafiken/Phase_1.jpg, id=130, 642.4pt x 481.8pt>
 File: Grafiken/Phase_1.jpg Graphic file (type jpg)
-
-<use Grafiken/Phase_1.jpg>
-Package pdftex.def Info: Grafiken/Phase_1.jpg used on input line 34.
+ <use Grafiken/Phase_1.jpg>
+Package pdftex.def Info: Grafiken/Phase_1.jpg used on input line 43.
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
- <Grafiken/Phase_2.jpg, id=77, 642.4pt x 481.8pt>
+
+<Grafiken/Phase_2.jpg, id=131, 642.4pt x 481.8pt>
 File: Grafiken/Phase_2.jpg Graphic file (type jpg)
-
-<use Grafiken/Phase_2.jpg>
-Package pdftex.def Info: Grafiken/Phase_2.jpg used on input line 41.
+ <use Grafiken/Phase_2.jpg>
+Package pdftex.def Info: Grafiken/Phase_2.jpg used on input line 50.
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Grafiken/Phase_3.jpg, id=78, 642.4pt x 481.8pt>
+<Grafiken/Phase_3.jpg, id=132, 642.4pt x 481.8pt>
 File: Grafiken/Phase_3.jpg Graphic file (type jpg)
  <use Grafiken/Phase_3.jpg>
-Package pdftex.def Info: Grafiken/Phase_3.jpg used on input line 48.
+Package pdftex.def Info: Grafiken/Phase_3.jpg used on input line 57.
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Phase_4.jpg, id=79, 642.4pt x 481.8pt>
+<Grafiken/Phase_4.jpg, id=133, 642.4pt x 481.8pt>
 File: Grafiken/Phase_4.jpg Graphic file (type jpg)
  <use Grafiken/Phase_4.jpg>
-Package pdftex.def Info: Grafiken/Phase_4.jpg used on input line 55.
+Package pdftex.def Info: Grafiken/Phase_4.jpg used on input line 64.
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Phase_5.jpg, id=80, 642.4pt x 481.8pt>
+<Grafiken/Phase_5.jpg, id=134, 642.4pt x 481.8pt>
 File: Grafiken/Phase_5.jpg Graphic file (type jpg)
  <use Grafiken/Phase_5.jpg>
-Package pdftex.def Info: Grafiken/Phase_5.jpg used on input line 62.
+Package pdftex.def Info: Grafiken/Phase_5.jpg used on input line 71.
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/IntegrierteSpannung.jpg, id=82, 642.4pt x 481.8pt>
+<Grafiken/IntegrierteSpannung.jpg, id=136, 642.4pt x 481.8pt>
 File: Grafiken/IntegrierteSpannung.jpg Graphic file (type jpg)
 
 <use Grafiken/IntegrierteSpannung.jpg>
-Package pdftex.def Info: Grafiken/IntegrierteSpannung.jpg used on input line 73
+Package pdftex.def Info: Grafiken/IntegrierteSpannung.jpg used on input line 82
 .
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
 
@@ -2200,63 +2229,61 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 
-LaTeX Warning: Reference `eq:Uout' on page 1 undefined on input line 83.
+LaTeX Warning: Reference `eq:Uout' on page 1 undefined on input line 92.
 
+[5 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Gr
+afiken/Phase_1.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Prakti
+kumRepo/Lockin/Grafiken/Phase_2.jpg>]
 
-LaTeX Warning: Reference `eq:Uout' on page 1 undefined on input line 84.
+LaTeX Warning: Text page 6 contains only floats.
 
-[2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Gr
-afiken/Referenzspannung.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktik
-um/PraktikumRepo/Lockin/Grafiken/Phase_1.jpg>]
-
-LaTeX Warning: Text page 3 contains only floats.
-
-[3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Gr
-afiken/Phase_2.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Prakti
-kumRepo/Lockin/Grafiken/Phase_3.jpg> <D:/Eigene Dateien/Studium/Physik/Anfänge
-rPraktikum/PraktikumRepo/Lockin/Grafiken/Phase_4.jpg>]
-
-LaTeX Warning: Text page 4 contains only floats.
-
-[4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Gr
-afiken/Phase_5.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Prakti
-kumRepo/Lockin/Grafiken/IntegrierteSpannung.jpg>]
-<Grafiken/OhneNoise.pdf, id=111, 578.16pt x 431.81326pt>
+[6 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Gr
+afiken/Phase_3.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Prakti
+kumRepo/Lockin/Grafiken/Phase_4.jpg> <D:/Eigene Dateien/Studium/Physik/Anfänge
+rPraktikum/PraktikumRepo/Lockin/Grafiken/Phase_5.jpg>]
+<Grafiken/OhneNoise.pdf, id=159, 578.16pt x 433.62pt>
 File: Grafiken/OhneNoise.pdf Graphic file (type pdf)
 
 <use Grafiken/OhneNoise.pdf>
-Package pdftex.def Info: Grafiken/OhneNoise.pdf used on input line 93.
-(pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
- [5 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/G
-rafiken/OhneNoise.pdf>]
+Package pdftex.def Info: Grafiken/OhneNoise.pdf used on input line 102.
+(pdftex.def)             Requested size: 433.61893pt x 325.2142pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/Gr
+afiken/IntegrierteSpannung.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Date
-n/Tabelle_mitNoise.tex")
-<Grafiken/MitNoise.pdf, id=202, 578.16pt x 431.81326pt>
+n/Tabelle_mitNoise.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) <Grafiken/MitNoise.pdf, id=176, 578.16pt x 433.62pt>
 File: Grafiken/MitNoise.pdf Graphic file (type pdf)
 
 <use Grafiken/MitNoise.pdf>
-Package pdftex.def Info: Grafiken/MitNoise.pdf used on input line 133.
-(pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+Package pdftex.def Info: Grafiken/MitNoise.pdf used on input line 142.
+(pdftex.def)             Requested size: 433.61893pt x 325.2142pt.
+ [8 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin/G
+rafiken/OhneNoise.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 137.
+(hyperref)                removing `\\' on input line 146.
 
 
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Date
-n/Tabelle_Abstand.tex"
+n/Tabelle_Abstand.tex" [9 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/
+PraktikumRepo/Lockin/Grafiken/MitNoise.pdf>])
+<Grafiken/Abstand.pdf, id=341, 578.16pt x 433.62pt>
+File: Grafiken/Abstand.pdf Graphic file (type pdf)
+ <use Grafiken/Abstand.pdf>
+Package pdftex.def Info: Grafiken/Abstand.pdf used on input line 176.
+(pdftex.def)             Requested size: 433.61893pt x 325.2142pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-)
-
-LaTeX Warning: Reference `fig:Abstand' on page 1 undefined on input line 146.
-
-[6] [7 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Locki
-n/Grafiken/MitNoise.pdf>]) [8]
+) [10]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Late
 x/Diskussion.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--4
@@ -2265,30 +2292,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
 
 Overfull \hbox (7.90976pt too wide) in paragraph at lines 16--19
-[]\T1/lmr/m/n/12 Ansonsten zei-gen auch die in Ab-schnitt []4.5[] ge-mes-se-nen
+[]\T1/lmr/m/n/12 Ansonsten zei-gen auch die in Ab-schnitt []4.4[] ge-mes-se-nen
  Wer-te, dass der Lock-In-Verst�rker
  []
 
-) [9]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 35.
+) [11 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Lockin
+/Grafiken/Abstand.pdf>]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 34.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 AED: lastpage setting LastPage
-[10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
 
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Lockin\Prot
 okoll.aux"
 Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
-Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: DE3EF649CBA27D07E18D9EB77FEDA797;639.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 
+
+Package rerunfilecheck Warning: File `Protokoll.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Protokoll.out':
+(rerunfilecheck)             Before: F0C7034DAA269A0A133843FA3F1F109F;805
+(rerunfilecheck)             After:  840E6A29A861E0AE020F135CB48F771F;804.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.90001pt have occurred.
@@ -2299,32 +2333,34 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34883 strings out of 493921
- 669056 string characters out of 3147286
- 1075793 words of memory out of 3000000
- 37435 multiletter control sequences out of 15000+200000
- 145077 words of font info for 135 fonts, out of 3000000 for 9000
+ 34943 strings out of 493921
+ 670076 string characters out of 3147286
+ 1074331 words of memory out of 3000000
+ 37479 multiletter control sequences out of 15000+200000
+ 156680 words of font info for 139 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 67i,16n,71p,880b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,16n,71p,1044b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts
-1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX 2.9/fon
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
+c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
 m/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmm
-i8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Protokoll.pdf (10 pages, 994499 bytes).
+i6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.
+pfb>
+Output written on Protokoll.pdf (13 pages, 1151689 bytes).
 PDF statistics:
- 384 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 486 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

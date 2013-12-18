@@ -1,7 +1,16 @@
+\setcounter{equation}{0}
+\renewcommand{\theequation}{\Roman{equation}}
 In Folgenden sind die während des Versuchs aufgenommenen Daten tabellarisch dargestellt und die 
 mit Hilfe des digitalen Oszilloskops aufgenommenen Bilder, zur Veranschaulichung der angezeigten Signale,
-eingebunden. An entsprechender Stelle sind Erklärungen zu den Messwerten und Rechnungen gegeben.   
+eingebunden. An entsprechender Stelle sind Erklärungen zu den Messwerten und Rechnungen gegeben.
+Die in \cref{sec:ohneNoise} und \ref{tab:mitNoise} berechneten Fehler wurden über die Gleichung\\
 
+\begin{empheq}{equation}
+	\label{std:U0}
+	\sigma_{U_{0}} = \dfrac{\pi}{2} \sigma_{U_{out}} \sin(\phi).
+\end{empheq}
+\setcounter{equation}{3}
+\renewcommand{\theequation}{\arabic{equation}}   
 \subsection{Aufbau der Schaltung}
 	\cref{fig:AufbauSig1} und \ref{fig:AufbauSig2}, sowie die in den nachfolgendem \cref{sec:ohneNoise} befindlichen Abbildungen zeigen die Veränderung des, vom Oszilloskop angezeigten Signals 
 	beim sukzessiven Aufbau der Schaltung und Durchführung des Versuchs.
@@ -12,14 +21,14 @@ eingebunden. An entsprechender Stelle sind Erklärungen zu den Messwerten und Re
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[scale=0.4]{Grafiken/Signalspannung.jpg}
+		\includegraphics[scale=0.35]{Grafiken/Signalspannung.jpg}
 		\caption{Verstärkte Signalspannung $U_{sig}$}
 		\label{fig:AufbauSig1}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[scale=0.4]{Grafiken/Referenzspannung.jpg}
+		\includegraphics[scale=0.35]{Grafiken/Referenzspannung.jpg}
 		\caption{Referenzspannung $U_{ref}$}
 		\label{fig:AufbauSig2}
 	\end{figure}
@@ -81,7 +90,7 @@ eingebunden. An entsprechender Stelle sind Erklärungen zu den Messwerten und Re
 	
 	An der grafischen Darstellung dieser Messwerte in \cref{fig:ohneNoise} ist festzustellen, das die aufgenommene Messwerte nicht dem
 	durch die Theorie prognostiziertem Verlauf von \cref{eq:Uout}, mit der Proportionalität zu $\cos(\phi)$ folgen, sondern Proportional 
-	zu $\sin(\phi)$ verlaufen. Daher wird für die weitere Bearbeitung dieser Messwerte anstelle von \cref{eq:Uout} die Gleichung 
+	zu $\sin(\phi)$ verlaufen. Daher wird für die weitere Bearbeitung dieser Messwerte anstelle von \cref{eq:out} die Gleichung 
 	\begin{empheq}{equation}
 			U_{out} = \frac{2}{\pi}U_{0}\sin(\phi)
 			\label{eq:Uout_sin}
@@ -161,3 +170,10 @@ eingebunden. An entsprechender Stelle sind Erklärungen zu den Messwerten und Re
 	 	S = \dfrac{P}{4\pi r^{2}} \propto \dfrac{1}{r^{2}}
 	\end{empheq} 
 	
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.75]{Grafiken/Abstand.pdf}
+		\caption{Verlauf der Intensität in Abhängigkeit vom Abstand mit Ausgleichskurve}
+		\label{fig:Abstand}
+	\end{figure}

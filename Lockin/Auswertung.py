@@ -183,6 +183,8 @@ r = np.linspace(1e-02,100 ,num=1000)
 
 plt.ylim(0, 2e-02)
 plt.xlim(0, 50)
+#plt.xticks((0, 1, 4, 9, 16, 25, 36, 49), 
+#           ("0", "1", "4", "9", "16", "25", "36", "49"))
 plt.errorbar(noms(R3), noms(uU3), yerr=stds(uU3), fmt="rx", label="Messwerte")
 plt.plot(r, F(r, *popt3), color="gray", label="Ausgleichskurve")
 plt.legend(loc="best")
