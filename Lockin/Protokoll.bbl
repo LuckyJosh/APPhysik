@@ -22,7 +22,9 @@
     \entry{SciPy}{misc}{}
       \field{sortinit}{S}
       \field{labeltitle}{SciPy}
+      \field{month}{12}
       \field{title}{SciPy}
+      \field{year}{2013}
       \verb{url}
       \verb http://docs.scipy.org/doc/
       \endverb

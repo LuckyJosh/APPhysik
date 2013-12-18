@@ -1,66 +1,68 @@
-\textsc{\color{green}Einleitung nicht Vergessen}  
+In Folgenden sind die während des Versuchs aufgenommenen Daten tabellarisch dargestellt und die 
+mit Hilfe des digitalen Oszilloskops aufgenommenen Bilder, zur Veranschaulichung der angezeigten Signale,
+eingebunden. An entsprechender Stelle sind Erklärungen zu den Messwerten und Rechnungen gegeben.   
 
 \subsection{Aufbau der Schaltung}
-%	\cref{fig:AufbauSig1} und \ref{fig:AufbauSig2} zeigen die Veränderung des, vom Oszilloskop angezeigten Signals 
-%	beim sukzessiven Aufbau der Schaltung.
+	\cref{fig:AufbauSig1} und \ref{fig:AufbauSig2}, sowie die in den nachfolgendem \cref{sec:ohneNoise} befindlichen Abbildungen zeigen die Veränderung des, vom Oszilloskop angezeigten Signals 
+	beim sukzessiven Aufbau der Schaltung und Durchführung des Versuchs.
 	Das Signal $U_{sig}$ aus dem \emph{Oscillator Output} ist in seiner Amplitude variabel, wohingegen das Referenzsignal $U_{ref}$ 
 	aus dem \emph{Reference Output} mit $\hat{U}_{ref} = \SI{6.6(1)}{\volt} $ eine konstante Amplitude.   
 	\cref{fig:AufbauSig1} zeigt das durch den Vorverstärker (mit Gain: 1) verstärkte Signal $U_{sig}$  und \cref{fig:AufbauSig2} 
 	zeigt das Referenzsignal $U_{ref}$.
 	
-%	\begin{figure}[!h]
-%		\centering
-%		\includegraphics[scale=0.4]{Grafiken/Signalspannung.jpg}
-%		\caption{Verstärkte Signalspannung $U_{sig}$}
-%		\label{fig:AufbauSig1}
-%	\end{figure}
-%	
-%	\begin{figure}[!h]
-%		\centering
-%		\includegraphics[scale=0.4]{Grafiken/Referenzspannung.jpg}
-%		\caption{Referenzspannung $U_{ref}$}
-%		\label{fig:AufbauSig2}
-%	\end{figure}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.4]{Grafiken/Signalspannung.jpg}
+		\caption{Verstärkte Signalspannung $U_{sig}$}
+		\label{fig:AufbauSig1}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.4]{Grafiken/Referenzspannung.jpg}
+		\caption{Referenzspannung $U_{ref}$}
+		\label{fig:AufbauSig2}
+	\end{figure}
 
 	Die durch die Mischung von $U_{sig}$ und $U_{ref}$ veränderten Signalformen sind im folgenden \cref{sec:ohneNoise} dargestellt.
 \subsection{Messung ohne Noise-Generator}\label{sec:ohneNoise}
 	In den \crefrange{fig:Phase1}{fig:Phase5} sind die am Oszilloskop zu beobachtenden Signale zu sehen, wobei die Phasendifferenz
 	bei \cref{fig:Phase1} $\phi = 0$ ist und zur jeweils nächsten Abbildung um $\sfrac{\pi}{6}$ erhöht wird.
 	
-%		\begin{figure}[!h]
-%			\centering
-%			\includegraphics[scale=0.4]{Grafiken/Phase_1.jpg}
-%			\caption{Mischungssignal mit $\phi = 0$}
-%			\label{fig:Phase1}
-%		\end{figure}
-%		
-%		\begin{figure}[!h]
-%			\centering
-%			\includegraphics[scale=0.4]{Grafiken/Phase_2.jpg}
-%			\caption{Mischungssignal mit $\phi = \frac{\pi}{6}$}
-%			\label{fig:Phase2}
-%		\end{figure}
-%		
-%		\begin{figure}[!h]
-%			\centering
-%			\includegraphics[scale=0.4]{Grafiken/Phase_3.jpg}
-%			\caption{Mischungssignal mit $\phi = \frac{\pi}{3}$}
-%			\label{fig:Phase3}
-%		\end{figure}
-%
-%		\begin{figure}[!h]
-%			\centering
-%			\includegraphics[scale=0.4]{Grafiken/Phase_4.jpg}
-%			\caption{Mischungssignal mit $\phi = \frac{\pi}{2}$}
-%			\label{fig:Phase4}
-%		\end{figure}
-%
-%		\begin{figure}[!h]
-%			\centering
-%			\includegraphics[scale=0.4]{Grafiken/Phase_5.jpg}
-%			\caption{Mischungssignal mit $\phi = \frac{2\pi}{3}$}
-%			\label{fig:Phase5}
-%		\end{figure}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_1.jpg}
+			\caption{Mischungssignal mit $\phi = 0$}
+			\label{fig:Phase1}
+		\end{figure}
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_2.jpg}
+			\caption{Mischungssignal mit $\phi = \frac{\pi}{6}$}
+			\label{fig:Phase2}
+		\end{figure}
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_3.jpg}
+			\caption{Mischungssignal mit $\phi = \frac{\pi}{3}$}
+			\label{fig:Phase3}
+		\end{figure}
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_4.jpg}
+			\caption{Mischungssignal mit $\phi = \frac{\pi}{2}$}
+			\label{fig:Phase4}
+		\end{figure}
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_5.jpg}
+			\caption{Mischungssignal mit $\phi = \frac{2\pi}{3}$}
+			\label{fig:Phase5}
+		\end{figure}
 
 	Durch die Integration des Signals durch den Tiefpass erhält man eine konstante Gleichspannung $U_{out}$,
 	deren Form am Beispiel für $\phi = 0$ in \cref{fig:Uout} dargestellt.
@@ -110,7 +112,7 @@
 	wobei für den angegebene Fehler die Abweichung vom Mittelwert berechnet und keine Fehlerfortpflanzung verwand wurde, da dieser 
 	Fehler klein gegen über der angegebenen Abweichung ist.
 	 
-\subsection{Messung mit Noise-Generator}
+\subsection{Messung mit Noise-Generator} \label{sec:mitNoise}
 	Die Messwerte der Messung mit zwischengeschaltetem Noise-Generator sind in \cref{tab:mitNoise} zusammen mit denen aus diesen
 	Werten berechneten Signalspannungsamplituden $U_{0}$ eingetragen.
 	
@@ -132,7 +134,7 @@
 		\caption{Verlauf der Messwerte mit Rauschen mit Ausgleichskurve}
 		\label{fig:mitNoise}
 	\end{figure} 
-\subsection{Messung der Intensität einer LED in Abhängigkeit  \\des Abstands}
+\subsection{Messung der Intensität einer LED in Abhängigkeit  \\des Abstands} \label{sec:Abstand}
 	Die Messwerte für den Abstand und der am Lock-In-Verstärker abgelesenen Spannung als Maß der Lichtintensität
 	sind in \cref{tab:Abstand} zu finden. 
 	
@@ -144,5 +146,18 @@
 	Die Messwerte sind in \cref{fig:Abstand} grafisch dargestellt und durch eine Ausgleichskurve ergänzt, die 
 	die Form $U = U_{0}r^{-2}$ mit $U_{0}= \SI{0.13(1)}{\volt}$ hat. Die Antiproportionalität zu $r^{2}$, ist an
 	zunehmen, da es sich bei der LED um eine Punktquelle von elektromagnetischer Strahlung handelt, für deren Intensität
-	diese Proportionalität gilt.
-
+	diese Proportionalität gilt. Dies sei hier kurz gezeigt:
+	
+	Bezeichnetet $S$ die Intensität einer elektromagnetischen Kugelwelle, so ist die Strahlungsleistung $P$ gegeben durch
+	\begin{empheq}{equation*}
+		P = \int{S}\dif A
+	\end{empheq}    
+	Betrachtet man des Flächenelement einer Kugeloberfläche $\dif A = r^{2} \sin(\theta) \dif\phi \dif\theta$ ergibt das Integral:
+	\begin{empheq}{equation*}
+	 	P =  4\pi r^{2} \cdot S
+	\end{empheq}  
+	woraus folgt
+	\begin{empheq}{equation*}
+	 	S = \dfrac{P}{4\pi r^{2}} \propto \dfrac{1}{r^{2}}
+	\end{empheq} 
+	
