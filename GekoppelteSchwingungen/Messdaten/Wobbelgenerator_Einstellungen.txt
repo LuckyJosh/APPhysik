@@ -1,0 +1,2 @@
+# Skala X  # Skala Y  # Wobbel f_i [kHz] # Wobbel f_f [kHz]  # Zeit [s]
+5e-03		0.5			20					50					0.02
