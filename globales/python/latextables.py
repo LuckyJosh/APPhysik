@@ -39,13 +39,6 @@ def formatFmt(arr):
         frmt += i
         frmt += "|"
     return frmt
-## TODO:
-#def ownTranspose(mat):
-#    cols = len(mat)
-#    rows = len(mat[0])
-#    np.array(np.zeros(rows))
-#    np.array(np.zeros(cols))
-#    for i in range()
 
 
 def toTable(cols, col_titles=None, col_syms=None,
@@ -128,8 +121,8 @@ def toTable(cols, col_titles=None, col_syms=None,
     return (begin + titles + headers + rows + end).encode("UTF-8")
 
 #### Example for testing purposes
-TEST = False
-if TEST:
+DEBUG = False
+if DEBUG:
     import uncertainties.unumpy as unp
     
     

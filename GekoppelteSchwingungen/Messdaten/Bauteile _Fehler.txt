@@ -1,2 +1,0 @@
-# Kapazität C [nF]  # Induktivität L [mH]	
-5e-05					0.05			

@@ -1,0 +1,43 @@
+Im Folgenden sind die während des Versuchs aufgenommenen Messwert 
+und die aus diesen berechneten Größen tabellarisch aufgeführt.
+An entsprechender Stelle sind Erklärungen zu den Rechnungen und
+Messwerten gegeben.     
+
+\subsection{Messung des Frequenzverhältnisses}\label{sec:Auswertung_FrequenzVerhältnis}
+
+	Die durch Abzählen bestimmte Anzahl der Schwingungamplituden $A_{1}$ pro 
+	Schwebungsamplitude, das entsprechende Verhältnis sind in 
+	\cref{tab:Schwebung} mit der jeweiligen Kapazität eingetragen dargestellt.  
+	
+	\input{Daten/Tabelle_Schwebung.tex}
+	
+	Mit Hilfe von \cref{eq:f+} und \cref{eq:f-} können die Fundamentalfrequenzen
+	$ \nu^{+} \text{und}\, \nu^{-}$ aus den gegebenen Größen
+	\begin{subequations}
+		\begin{empheq}{align}
+			C &= \SI{0.79320(5)}{\nano\farad} \\
+			C_{sp} &= \SI{0.028}{\nano\farad} \\
+			L &= \SI{23.95(5)}{\milli\henry}
+		\end{empheq}
+	\end{subequations}
+	bestimmt werden. Diese Frequenzen sind in \cref{tab:Fundamental_Freqs} zu finden,
+	in der auch das unter Verwendung von \cref{eq:SchwebungsFreq} und \cref{eq:SchwingungsFreq}
+	jeweils bestimmte Verhältnis $\tfrac{2(\nu^{-} - \nu^{+})}{\nu^{-} + \nu^{+}}$ eingetragen 
+	ist.
+	
+	\input{Daten/Tabelle_Fundamental.tex}
+	
+	Die relativen Abweichungen der gemessenen von den berechneten Werten des Frequenzverhältnisses
+	$ N_{t} := \tfrac{2(\nu^{-} - \nu^{+})}{\nu^{-} + \nu^{+}}$ und $N_{m} := \tfrac{1}{A_{1}}$ sind in \cref{tab:FrequenzVerhältnis} enthalten.
+	
+	\input{Daten/Tabelle_FrequenzVerhältnis.tex}
+	
+\subsection{Messung der Fundamentalfrequenzen}\label{sec:Auswertung_FundamentalFrequenz}
+	
+	Die gemessenen Fundamentalfrequenzen der gekoppelten Schwingkreise
+	sind in \cref{tab:Fundamental_Messung} zusammen mit den berechneten
+	Fundamentalfrequenzen aus \cref{tab:Fundamental_Freqs}  zu finden.
+	Neben diesen sind dort auch die Verhältnisse von gemessener zu 
+	berechneter Frequenz angegeben. 
+	
+	\input{Daten/Tabelle_FundamentalMessung.tex}
