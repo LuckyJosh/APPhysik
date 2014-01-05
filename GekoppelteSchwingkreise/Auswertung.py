@@ -150,7 +150,7 @@ def Strom(u, w, c, ck, r, l):
 C3, X_p, Y_p, X_m, Y_m = np.loadtxt("Messdaten/Wobbelgenerator.txt",
                                     unpack=True)
 
-R = 78
+R = 78  # [Ohm]
 
 # Fehlerbehaftete Kapazitäten
 uC3 = unp.uarray(C3, (len(C3) * [C_err]) * C3)
@@ -174,7 +174,8 @@ uX_m += f_min
 uY_p *= dy
 uY_m *= dy
 
-I = Strom(1, uX_p * const.pi, uC , uC3, R, uL)
+Ip = Strom(12, uX_p * const.pi, uC, uC3, R, uL)
+Im = Strom(12, uX_m * const.pi, uC, uC3, R, uL)
 U = R * I
 
 ## Print Funktionen
