@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  5 JAN 2014 23:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  6 JAN 2014 21:15
 entering extended mode
 **Protokoll.tex
 
@@ -2121,16 +2121,49 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 45.
 
-) [2]
+<Grafiken/Kondensator2.jpg, id=80, 256.96pt x 192.72pt>
+File: Grafiken/Kondensator2.jpg Graphic file (type jpg)
+
+<use Grafiken/Kondensator2.jpg>
+Package pdftex.def Info: Grafiken/Kondensator2.jpg used on input line 53.
+(pdftex.def)             Requested size: 256.95937pt x 192.71951pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 54.
+ [2]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/Fehlerrechnung.tex") [3]
+chwingkreise\Daten/Tabelle_WobbelVerlauf.tex"
+Overfull \hbox (3.01622pt too wide) in paragraph at lines 3--16
+ [][] 
+ []
+
+)
+
+LaTeX Warning: Reference `tab:WobbleVerlauf' on page 1 undefined on input line 
+63.
+
+
+LaTeX Warning: Reference `eq:I2' on page 1 undefined on input line 67.
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 68.
+(D:\Programme\MiKTeX\tex\latex\amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
+chwingkreise\Daten/Tabelle_Strom2.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)) [3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekopp
+elteSchwingkreise/Grafiken/Kondensator2.jpg>]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
+chwingkreise\Latex/Fehlerrechnung.tex") [4]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
 chwingkreise\Latex/Diskussion.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--5
 
  []
 
-) [4]
+) [5]
 
 LaTeX Warning: Empty bibliography on input line 35.
 
@@ -2158,28 +2191,29 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34628 strings out of 493921
- 657698 string characters out of 3150494
- 1077784 words of memory out of 3000000
- 37210 multiletter control sequences out of 15000+200000
- 165265 words of font info for 150 fonts, out of 3000000 for 9000
+ 34688 strings out of 493921
+ 659231 string characters out of 3150494
+ 1079105 words of memory out of 3000000
+ 37250 multiletter control sequences out of 15000+200000
+ 173338 words of font info for 162 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,20n,71p,880b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{D:/Programme/MiKTeX/fonts/
-enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
+{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fo
+nts/enc/dvips/lm/lm-rm.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
 c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<D:/Programme/MiKTeX/fonts/
-type1/public/lm/lmbx10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx12.pf
-b><D:/Programme/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><D:/Programme/MiKTeX/f
-onts/type1/public/lm/lmmi12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi
-6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><D:/Programme/MiKTeX
-/fonts/type1/public/lm/lmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr
-12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr6.pfb><D:/Programme/MiKTeX
-/fonts/type1/public/lm/lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy
-10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><D:/Programme/MiKTe
-X/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Protokoll.pdf (5 pages, 226597 bytes).
+type1/public/amsfonts/euler/eufm10.pfb><D:/Programme/MiKTeX/fonts/type1/public/
+lm/lmbx10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><D:/Program
+me/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/pu
+blic/lm/lmmi10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><D:/Pr
+ogramme/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><D:/Programme/MiKTeX/fonts/type1
+/public/lm/lmmi8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/P
+rogramme/MiKTeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiKTeX/fonts/type
+1/public/lm/lmr6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr8.pfb><D:/Pr
+ogramme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/MiKTeX/fonts/type
+1/public/lm/lmsy6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Protokoll.pdf (6 pages, 273129 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

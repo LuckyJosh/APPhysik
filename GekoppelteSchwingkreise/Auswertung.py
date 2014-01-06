@@ -141,14 +141,25 @@ Ticks_df = t / dx
 f_Ticks = df / Ticks_df
 
 
+def Z(w, l, c, ck):
+    return ((w * l) - (1/c + 1/ck)/w)
+
+
 def Strom(u, w, c, ck, r, l):
-    return (u/(4 * w**2 * ck**2 * r**2 * (w * l - (1/c + 1/c)/w)**2 +
-           (1/(w*ck) - w * ck * (w * l - (1/c + 1/c)/w)**2 +
-            w * r**2 * ck)**2))
+    return (u/(4 * w**2 * ck**2 * r**2 * Z(w, l, c, ck)**2 +
+           (1/(w*ck) - w * ck * Z(w, l, c, ck)**2 +
+            w * r**2 * ck)**2)**(0.5))
+
+
 
 # Laden der Wobbelgenerator Messung (aus den Grafiken bestimmt)
 C3, X_p, Y_p, X_m, Y_m = np.loadtxt("Messdaten/Wobbelgenerator.txt",
                                     unpack=True)
+
+
+# Skalierung
+C3 *= 1e-09  # [F]
+
 
 R = 78  # [Ohm]
 
@@ -174,11 +185,21 @@ uX_m += f_min
 uY_p *= dy
 uY_m *= dy
 
-Ip = Strom(12, uX_p * const.pi, uC, uC3, R, uL)
-Im = Strom(12, uX_m * const.pi, uC, uC3, R, uL)
-U = R * I
+Xrange = np.arange(f_min, 2 * f_max, 200)
+
+Ip = Strom(12, uX_p * 2 * const.pi, uC, uC3, R, uL)
+#Ip = Strom(12, uX_p * const.pi, uC, uC3, R, uL)
+Im = Strom(12, uX_m * 2 * const.pi, uC, uC3, R, uL)
+Ip_calc = uY_p/R
+Im_calc = uY_m/R
+
+for c in uC3:
+    plt.plot(Xrange, noms(Strom(4, Xrange * 2 * const.pi, uC, c, R, uL)))
+
 
 ## Print Funktionen
+
+
 #f = open("Daten/Tabelle_Schwebung.tex", "w")
 #
 #f.write(lxtabs.toTable([uC1*1e09, Amps, Amps_rel],
@@ -243,4 +264,29 @@ U = R * I
 #            "Verhältnis",
 #        label="Fundamental_Messung"))
 #
+#f.close()
+
+#f = open("Daten/Tabelle_WobbelVerlauf.tex", "w")
+#f.write(lxtabs.toTable([uC3 * 1e09, uX_p * 1e-03, uX_m * 1e-03,
+#                        uY_p, uY_m],
+#        col_titles=["Kapazitäten", "Fundamentalfrequenz",
+#                    "Fundamentalfrequenz", "Spannung", "Spannung"],
+#        col_syms=["C_{K}", r"\nu^{+}", r"\nu^{-}",
+#                  "U^{+}", "U^{-}"],
+#        col_units=[r"\nano\farad", r"\kilo\hertz", r"\kilo\hertz",
+#                   r"\volt", r"\volt"],
+#        fmt=["c", "c", "c", "c", "c"],
+#        cap="Fundamentalfrequenzen und jeweilige Spannungsspitzen",
+#        label="WobbelVerlauf"))
+#f.close()
+
+#f = open("Daten/Tabelle_Strom2.tex", "w")
+#f.write(lxtabs.toTable([Ip, Im, Ip_calc, Im_calc],
+#        col_titles=["Stromstärke", "Stromstärke",
+#                    "Stromstärke", "Stromstärke"],
+#        col_syms=["I^{+}", "I^{-}", "I^{+}", "I^{-}"],
+#        col_units=[r"\ampere", r"\ampere", r"\ampere", r"\ampere"],
+#        fmt=["c", "c", "c", "c"],
+#        cap="Theoretisch bestimmte und gemessene Stromstärken",
+#        label="I2"))
 #f.close()
