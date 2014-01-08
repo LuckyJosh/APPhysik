@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  6 JAN 2014 21:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  8 JAN 2014 20:35
 entering extended mode
 **Protokoll.tex
 
@@ -2043,9 +2043,54 @@ tex\Deckblatt.tex" [1
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
 chwingkreise\Latex/Einleitung.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/Theorie.tex")
+chwingkreise\Latex/Theorie.tex"
+<Grafiken/V355Abb1.jpg, id=56, 548.0475pt x 340.27126pt>
+File: Grafiken/V355Abb1.jpg Graphic file (type jpg)
+
+<use Grafiken/V355Abb1.jpg>
+Package pdftex.def Info: Grafiken/V355Abb1.jpg used on input line 3.
+(pdftex.def)             Requested size: 274.02307pt x 170.13521pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.31 \begin{equation}
+                      [1 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/P
+raktikumRepo/GekoppelteSchwingkreise/Grafiken/V355Abb1.jpg>]
+LaTeX Font Info:    Try loading font information for U+euf on input line 32.
+
+(D:\Programme\MiKTeX\tex\latex\amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+))
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/Durchführung.tex")
+chwingkreise\Latex/Durchführung.tex"
+<Grafiken/V355Abb2.jpg, id=78, 431.36156pt x 484.05844pt>
+File: Grafiken/V355Abb2.jpg Graphic file (type jpg)
+
+<use Grafiken/V355Abb2.jpg>
+Package pdftex.def Info: Grafiken/V355Abb2.jpg used on input line 14.
+(pdftex.def)             Requested size: 215.68025pt x 242.02863pt.
+
+<Grafiken/V355Abb3.jpg, id=79, 747.54282pt x 388.45125pt>
+File: Grafiken/V355Abb3.jpg Graphic file (type jpg)
+
+<use Grafiken/V355Abb3.jpg>
+Package pdftex.def Info: Grafiken/V355Abb3.jpg used on input line 20.
+(pdftex.def)             Requested size: 373.7705pt x 194.22514pt.
+
+<Grafiken/V355Abb4.jpg, id=80, 747.54282pt x 429.10312pt>
+File: Grafiken/V355Abb4.jpg Graphic file (type jpg)
+
+<use Grafiken/V355Abb4.jpg>
+Package pdftex.def Info: Grafiken/V355Abb4.jpg used on input line 26.
+(pdftex.def)             Requested size: 373.7705pt x 214.55103pt.
+) [2]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekoppelt
+eSchwingkreise/Grafiken/V355Abb2.jpg> <D:/Eigene Dateien/Studium/Physik/Anfäng
+erPraktikum/PraktikumRepo/GekoppelteSchwingkreise/Grafiken/V355Abb3.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
 chwingkreise\Latex/Auswertung.tex"
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
@@ -2062,39 +2107,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Warning: Font shape `U/esvect/m/n' in size <4.19998> not available
 (Font)              size <5> substituted on input line 6.
 
-)
-
-LaTeX Warning: Reference `eq:f+' on page 1 undefined on input line 14.
-
-
-LaTeX Warning: Reference `eq:f-' on page 1 undefined on input line 14.
-
-
-LaTeX Warning: Reference `eq:SchwebungsFreq' on page 1 undefined on input line 
-24.
-
-
-LaTeX Warning: Reference `eq:SchwingungsFreq' on page 1 undefined on input line
- 24.
-
-
+) [4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekoppe
+lteSchwingkreise/Grafiken/V355Abb4.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Daten/Tabelle_Fundamental.tex"
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-)
+chwingkreise\Daten/Tabelle_Fundamental.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Daten/Tabelle_FrequenzVerhältnis.tex"
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.42 
-      [1]
+chwingkreise\Daten/Tabelle_FrequenzVerhältnis.tex") [5]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
 chwingkreise\Daten/Tabelle_FundamentalMessung.tex"
 Overfull \hbox (5.2211pt too wide) in paragraph at lines 3--20
@@ -2121,15 +2139,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 45.
 
-<Grafiken/Kondensator2.jpg, id=80, 256.96pt x 192.72pt>
-File: Grafiken/Kondensator2.jpg Graphic file (type jpg)
 
-<use Grafiken/Kondensator2.jpg>
-Package pdftex.def Info: Grafiken/Kondensator2.jpg used on input line 53.
-(pdftex.def)             Requested size: 256.95937pt x 192.71951pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 54.
- [2]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
 chwingkreise\Daten/Tabelle_WobbelVerlauf.tex"
 Overfull \hbox (3.01622pt too wide) in paragraph at lines 3--16
@@ -2137,33 +2147,25 @@ Overfull \hbox (3.01622pt too wide) in paragraph at lines 3--16
  []
 
 )
-
-LaTeX Warning: Reference `tab:WobbleVerlauf' on page 1 undefined on input line 
-63.
-
-
-LaTeX Warning: Reference `eq:I2' on page 1 undefined on input line 67.
-
-LaTeX Font Info:    Try loading font information for U+euf on input line 68.
-(D:\Programme\MiKTeX\tex\latex\amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Daten/Tabelle_Strom2.tex"
+chwingkreise\Daten/Tabelle_Strom2.tex" [6])
+<Grafiken/Kondensator2.jpg, id=138, 256.96pt x 192.72pt>
+File: Grafiken/Kondensator2.jpg Graphic file (type jpg)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-)) [3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekopp
-elteSchwingkreise/Grafiken/Kondensator2.jpg>]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/Fehlerrechnung.tex") [4]
+<use Grafiken/Kondensator2.jpg>
+Package pdftex.def Info: Grafiken/Kondensator2.jpg used on input line 68.
+(pdftex.def)             Requested size: 205.56827pt x 154.1762pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 69.
+) [7 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekoppe
+lteSchwingkreise/Grafiken/Kondensator2.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
 chwingkreise\Latex/Diskussion.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--5
 
  []
 
-) [5]
+) [8]
 
 LaTeX Warning: Empty bibliography on input line 35.
 
@@ -2179,41 +2181,40 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: 19DF86F0C5705C59ED77BE7D8D98422B;548.
+(rerunfilecheck)             Checksum: A026401F9060493310E6F089A7AFC11E;598.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.90001pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34688 strings out of 493921
- 659231 string characters out of 3150494
- 1079105 words of memory out of 3000000
- 37250 multiletter control sequences out of 15000+200000
- 173338 words of font info for 162 fonts, out of 3000000 for 9000
+ 34742 strings out of 493921
+ 659849 string characters out of 3150494
+ 1084762 words of memory out of 3000000
+ 37289 multiletter control sequences out of 15000+200000
+ 176170 words of font info for 174 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,20n,71p,880b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fo
 nts/enc/dvips/lm/lm-rm.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
-c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<D:/Programme/MiKTeX/fonts/
-type1/public/amsfonts/euler/eufm10.pfb><D:/Programme/MiKTeX/fonts/type1/public/
-lm/lmbx10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><D:/Program
-me/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/pu
-blic/lm/lmmi10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><D:/Pr
-ogramme/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><D:/Programme/MiKTeX/fonts/type1
-/public/lm/lmmi8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/P
-rogramme/MiKTeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiKTeX/fonts/type
-1/public/lm/lmr6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr8.pfb><D:/Pr
-ogramme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/MiKTeX/fonts/type
-1/public/lm/lmsy6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Protokoll.pdf (6 pages, 273129 bytes).
+c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{D:/Programme/MiKTeX/fo
+nts/enc/dvips/lm/lm-ec.enc}<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/eul
+er/eufm10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><D:/Program
+me/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fonts/type1/pub
+lic/lm/lmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmex10.pfb><D:/Pr
+ogramme/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><D:/Programme/MiKTeX/fonts/type
+1/public/lm/lmmi12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><D:
+/Programme/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><D:/Programme/MiKTeX/fonts/ty
+pe1/public/lm/lmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr12.pfb><D
+:/Programme/MiKTeX/fonts/type1/public/lm/lmr6.pfb><D:/Programme/MiKTeX/fonts/ty
+pe1/public/lm/lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D
+:/Programme/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><D:/Programme/MiKTeX/fonts/t
+ype1/public/lm/lmsy8.pfb>
+Output written on Protokoll.pdf (9 pages, 524831 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

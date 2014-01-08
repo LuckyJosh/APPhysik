@@ -1,7 +1,8 @@
 Im Folgenden sind die während des Versuchs aufgenommenen Messwert 
 und die aus diesen berechneten Größen tabellarisch aufgeführt.
 An entsprechender Stelle sind Erklärungen zu den Rechnungen und
-Messwerten gegeben.     
+Messwerten gegeben. Die Gleichungen zur Berechnung der angegebenen
+Fehler sind Aufgrund ihrer hohen Komplexität nicht angegeben.     
 
 \subsection{Messung des Frequenzverhältnisses}\label{sec:Auswertung_FrequenzVerhältnis}
 
@@ -12,7 +13,7 @@ Messwerten gegeben.
 	\input{Daten/Tabelle_Schwebung.tex}
 	
 	Mit Hilfe von \cref{eq:f+} und \cref{eq:f-} können die Fundamentalfrequenzen
-	$ \nu^{+} \text{und}\, \nu^{-}$ aus den gegebenen Größen
+	$ \nu^{+}\, \text{und}\, \nu^{-}$ aus den gegebenen Größen
 	\begin{subequations}
 		\begin{empheq}{align}
 			C &= \SI{0.79320(5)}{\nano\farad} \\
@@ -21,9 +22,8 @@ Messwerten gegeben.
 		\end{empheq}
 	\end{subequations}
 	bestimmt werden. Diese Frequenzen sind in \cref{tab:Fundamental_Freqs} zu finden,
-	in der auch das unter Verwendung von \cref{eq:SchwebungsFreq} und \cref{eq:SchwingungsFreq}
-	jeweils bestimmte Verhältnis $\tfrac{2(\nu^{-} - \nu^{+})}{\nu^{-} + \nu^{+}}$ eingetragen 
-	ist.
+	in der auch das jeweilige  Verhältnis $\tfrac{2(\nu^{-} - \nu^{+})}{\nu^{-} + \nu^{+}}$
+	der Schwebungs- zur Schwingungsfrequenz eingetragen ist.
 	
 	\input{Daten/Tabelle_Fundamental.tex}
 	
@@ -31,7 +31,7 @@ Messwerten gegeben.
 	$ N_{t} := \tfrac{2(\nu^{-} - \nu^{+})}{\nu^{-} + \nu^{+}}$ und $N_{m} := \tfrac{1}{A_{1}}$ sind in \cref{tab:FrequenzVerhältnis} enthalten.
 	
 	\input{Daten/Tabelle_FrequenzVerhältnis.tex}
-	
+\newpage	
 \subsection{Messung der Fundamentalfrequenzen}\label{sec:Auswertung_FundamentalFrequenz}
 	
 	Die gemessenen Fundamentalfrequenzen der gekoppelten Schwingkreise
@@ -42,29 +42,31 @@ Messwerten gegeben.
 	
 	\input{Daten/Tabelle_FundamentalMessung.tex}
 	
-\subsection{Messung des Verlauf des Stroms $I_{2}$}
+\subsection{Messung des Verlauf des Stroms $I_{2}$} \label{sec:Auswertung_Wobbel}
 	
 	Der auf dem Oszilloskop angezeigte Verlauf der Spannung in Abhängigkeit von der Frequenz, ist für jeden 
 	Koppelkondensator $C_{K}$ ähnlich zu dem in \cref{fig:WobbelVerlauf} für den Kondensator mit 
 	$C_{K} = \SI{2.19(7)}{\nano\farad}$ dargestellten.
 	
-	\begin{figure}
-		\centering
-		\includegraphics{Grafiken/Kondensator2.jpg}
-		\caption{Beispielhafter Verlauf der Spannung für $C_{K} = \SI{2.19(7)}{\nano\farad}$ }
-		\label{fig:WobbelVerlauf}
-	\end{figure}
 
 	Die aus diesen Bildern bestimmten Messwerte für die Fundamentalfrequenzen und die zugehörigen Spannungen
 	sind in \cref{tab:WobbelVerlauf} aufgeführt.  
 
 	\input{Daten/Tabelle_WobbelVerlauf.tex}
 	
-	Die zu untersuchende Stromstärke lässt sich aus den Spannungen in \cref{tab:WobbleVerlauf} mit Hilfe von
+	Die zu untersuchende Stromstärke lässt sich aus den Spannungen in \cref{tab:WobbelVerlauf} mit Hilfe von
 	\begin{empheq}{equation}
 		I =  \dfrac{U}{R}
 	\end{empheq}  
 	berechnen. Zusammen mit den Mittels \cref{eq:I2} berechneten Werten für diese Stromstärke, sind diese in
-	\cref{tab:I2} eingetragen. Für die Berechnung der Stromstärken, wurde die Generatorspannung $\envert{\mathfrak{u}} = \SI{12}{\volt}$ verwendet. 
+	\cref{tab:I2} eingetragen. Für die Berechnung der Stromstärken, wurde die Generatorspannung $\envert{\mathfrak{U}} = \SI{12}{\volt}$ verwendet. 
 	
-	\input{Daten/Tabelle_Strom2.tex}
+	\input{Daten/Tabelle_Strom2.tex}	
+	
+	\begin{figure}
+			\centering
+			\includegraphics[scale=0.8]{Grafiken/Kondensator2.jpg}
+			\caption{Beispielhafter Verlauf der Spannung für $C_{K} = \SI{2.19(7)}{\nano\farad}$ }
+			\label{fig:WobbelVerlauf}
+	\end{figure}
+	
