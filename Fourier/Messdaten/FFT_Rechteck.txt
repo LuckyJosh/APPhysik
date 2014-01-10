@@ -1,0 +1,8 @@
+# Nur ungrade n : v1, v3, v5, ...
+# Amplituden [V]
+1.8
+0.6
+0.34
+0.25
+0.19
+0.14
