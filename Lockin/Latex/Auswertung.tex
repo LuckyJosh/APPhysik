@@ -2,15 +2,16 @@
 \renewcommand{\theequation}{\Roman{equation}}
 In Folgenden sind die während des Versuchs aufgenommenen Daten tabellarisch dargestellt und die 
 mit Hilfe des digitalen Oszilloskops aufgenommenen Bilder, zur Veranschaulichung der angezeigten Signale,
-eingebunden. An entsprechender Stelle sind Erklärungen zu den Messwerten und Rechnungen gegeben.
-Die in \cref{sec:ohneNoise} und \ref{tab:mitNoise} berechneten Fehler wurden über die Gleichung\\
+eingebunden. An entsprechender Stelle sind Erklärungen zu den Messwerten und Rechnungen gegeben.\\
+Die in \cref{sec:ohneNoise} und \ref{sec:mitNoise} berechneten Fehler wurden über die Gleichung\\
 
 \begin{empheq}{equation}
 	\label{std:U0}
-	\sigma_{U_{0}} = \dfrac{\pi}{2} \sigma_{U_{out}} \sin(\phi).
+	\sigma_{U_{0}} = \dfrac{\pi}{2} \sigma_{U_{out}} \sin(\phi)
 \end{empheq}
 \setcounter{equation}{3}
 \renewcommand{\theequation}{\arabic{equation}}   
+bestimmt.
 \subsection{Aufbau der Schaltung}
 	\cref{fig:AufbauSig1} und \ref{fig:AufbauSig2}, sowie die in den nachfolgendem \cref{sec:ohneNoise} befindlichen Abbildungen zeigen die Veränderung des, vom Oszilloskop angezeigten Signals 
 	beim sukzessiven Aufbau der Schaltung und Durchführung des Versuchs.
@@ -34,6 +35,7 @@ Die in \cref{sec:ohneNoise} und \ref{tab:mitNoise} berechneten Fehler wurden üb
 	\end{figure}
 
 	Die durch die Mischung von $U_{sig}$ und $U_{ref}$ veränderten Signalformen sind im folgenden \cref{sec:ohneNoise} dargestellt.
+\newpage
 \subsection{Messung ohne Noise-Generator}\label{sec:ohneNoise}
 	In den \crefrange{fig:Phase1}{fig:Phase5} sind die am Oszilloskop zu beobachtenden Signale zu sehen, wobei die Phasendifferenz
 	bei \cref{fig:Phase1} $\phi = 0$ ist und zur jeweils nächsten Abbildung um $\sfrac{\pi}{6}$ erhöht wird.
