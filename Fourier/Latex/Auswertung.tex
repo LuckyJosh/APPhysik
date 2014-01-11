@@ -1,7 +1,64 @@
+Im Folgenden sind die während des Versuchs aufgenommenen Messwerte tabellarisch dargestellt.
+Die für den Versuch benötigten Fourierkoeffizienten der drei untersuchten Spannungen sind:
+
+\begin{subequations}
+	\begin{empheq}{align}
+	\label{eq:Koeff_Recht}
+	\text{Rechteck:}\qquad b_{n} &= \dfrac{4A}{n\pi}\quad, n\mod{2} \neq 0 \\
+	\label{eq:Koeff_Drei}
+	\text{Dreieck:}\qquad		b_{n} &= \dfrac{4A}{(n\pi)^{2}}\quad, n\mod{2} \neq 0\\
+	\label{eq:Koeff_Säge}
+	\text{Sägezahn:}\qquad		b_{n} &= \dfrac{2A}{n\pi}\quad, \forall n
+	\end{empheq}
+\end{subequations}
+
+   
+
 \subsection{Fourier-Analyse}
-
-
+In \cref{tab:Analyse1} befinden sich sowohl die im Versuch gemessenen, 
+als auch die aus den 
+Koeffizienten \cref{eq:Koeff_Recht} bis \cref{eq:Koeff_Säge} berechneten Amplituden der ersten 
+Oberschwingungen, aus denen sich das jeweilige Signal mit der Frequenz $\nu_{1} = \SI{100}{\hertz}$ 
+und der Amplitude $\hat{U} = \SI{2}{\volt}$ zusammensetzt. 
+  
+\input{Daten/Tabelle_Analyse1.tex}
 
 
 
 \subsection{Fourier-Synthese}
+
+Die für die Fourier-Synthese benötigten Amplituden wurden aus den Koeffizienten \cref{eq:Koeff_Recht} bis \cref{eq:Koeff_Säge}
+bestimmt. Wobei die Amplitude $A$ der zu erzeugenden Spannung jeweils aus der Amplitude der ersten Oberwelle $b_{1} = \SI{0.8}{\volt}$
+berechnet wurde. Man erhält somit die Amplituden $A$:
+  \begin{subequations}
+  	\begin{empheq}{align*}
+  	\text{Rechteck:}\qquad A_{r} &= \SI{0.2}{\volt} \cdot \pi \\
+  	\text{Dreieck:}\qquad  A_{d} &= \SI{0.2}{\volt} \cdot \pi^{2}\\
+  	\text{Sägezahn:}\qquad A_{s} &= \SI{0.4}{\volt} \cdot \pi
+  	\end{empheq}
+  \end{subequations}
+
+Die aus diesen berechneten Amplituden der Oberwellen sind in \cref{tab:Synthese} zu finden.
+
+%\input{Daten/Tabelle_Synthese.tex}  
+
+Durch Einstellen der Amplituden aus \cref{tab:Synthese} und der Phasen zwischen den Oberwellen am Oberwellengenerator
+erhält man die in \crefrange{fig:Recht}{fig:Säge} dargestellten Spannungsverläufe.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1.0]{Grafiken/Rechteckspannung.jpg}
+	\label{fig:Recht}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1.0]{Grafiken/Dreieckspannung.jpg}
+	\label{fig:Drei}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1.0]{Grafiken/Saegezahnspannung.jpg}
+	\label{fig:Säge}
+\end{figure}

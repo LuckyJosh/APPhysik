@@ -27,7 +27,7 @@ import latextables as lxtabs
 
 
 PRINT = True
-
+TABS = True
 
 def NullFilter(arr):
     i = 0
@@ -138,11 +138,16 @@ Amps_saw = np.loadtxt("Messdaten/FFT_Sägezahn.txt", unpack=True)
 # Relative Abweichung der Messung von der Theorie
 
 ## Rechteck
-Amps_rect_rel = np.abs(1 - amps_rect/Amps_rect)
+Amps_rect_rel = np.abs(1 - Amps_rect/amps_rect)
 ## Dreieck
-Amps_tri_rel = np.abs(1 - amps_tri/Amps_tri)
+Amps_tri_rel = np.abs(1 - Amps_tri/amps_tri)
 ## Sägezahn
-Amps_saw_rel = np.abs(1 - amps_saw/Amps_saw)
+Amps_saw_rel = np.abs(1 - Amps_saw/amps_saw)
+
+# Ungerade Frequenzen
+F = 100 # [Hz]
+freqs = np.array([1, 3, 5, 7, 9, 11])
+freqs *= F
 
 
 
@@ -169,3 +174,25 @@ if PRINT:
     print("\t...Rechteck:\n\t{}\n\t".format(Amps_rect_rel) +
           "...Dreieck:\n\t{}\n\t".format(Amps_tri_rel) +
           "...Sägezahn:\n\t{}".format(Amps_saw_rel))
+
+#if TABS:
+#    f = open("Daten/Tabelle_Analyse1.tex", "w")
+#    f.write(lxtabs.toTable([freqs, Amps_rect, amps_rect,
+#                            Amps_tri, amps_tri],
+#        col_titles=["Frequenzen",
+#                    "Gemessene Amplitude",
+#                    "Berechnete Amplitude",
+#                    "Gemessene Amplitude",
+#                    "Berechnete Amplitude"],
+#        col_syms=[r"\nu", r"b_{n}", r"b_{n}", r"b_{n}", r"b_{n}"],
+#        col_units=[r"\hertz", r"\volt", r"\volt", r"\volt", r"\volt"],
+#        fmt=["c", "c", "c", "c", "c"],
+#        cap="Gemessene und Berechnete Amplituden der Oberschwingung für " +
+#        "Recht- und Dreieckspannung",
+#        label="Analyse1"))
+#
+#    f.close()
+#
+
+
+
