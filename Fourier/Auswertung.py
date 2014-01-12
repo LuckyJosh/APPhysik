@@ -101,7 +101,7 @@ for n in range(10):
         amps_rect_syn[n] = bn_rect(A_rect, n)
 
 # Filtern der Nullen
-amps_rect_syn = NullFilter(amps_rect_syn)
+#amps_rect_syn = NullFilter(amps_rect_syn)
 
 ## Dreieck
 amps_tri_syn = np.zeros(10)
@@ -111,7 +111,7 @@ for n in range(10):
         amps_tri_syn[n] = bn_tri(A_tri, n)
 
 # Filtern der Nullen
-amps_tri_syn = NullFilter(amps_tri_syn)
+#amps_tri_syn = NullFilter(amps_tri_syn)
 
 ## Sägezahn
 amps_saw_syn = np.zeros(11)
@@ -120,7 +120,9 @@ for n in range(10):
     amps_saw_syn[n] = bn_saw(A_saw, n)
 
 # Filtern der Nullen
-amps_saw_syn = NullFilter(amps_saw_syn)
+#amps_saw_syn = NullFilter(amps_saw_syn)
+
+
 
 
 # Laden der Messdaten
@@ -145,12 +147,12 @@ Amps_tri_rel = np.abs(1 - Amps_tri/amps_tri)
 Amps_saw_rel = np.abs(1 - Amps_saw/amps_saw)
 
 # Ungerade Frequenzen
-F = 100 # [Hz]
+F = 100  # [Hz]
 freqs = np.array([1, 3, 5, 7, 9, 11])
 freqs *= F
 
-
-
+# Die N's
+N = np.arange(1, 11, 1)
 
 
 ## Print Funktionen
@@ -193,6 +195,19 @@ if PRINT:
 #
 #    f.close()
 #
-
+#    f = open("Daten/Tabelle_Synthese.tex", "w")
+#    f.write(lxtabs.toTable([np.append(amps_rect_syn, 0),
+#                            np.append(amps_tri_syn, 0),
+#                            amps_saw_syn],
+#        col_titles=["Rechteck Amplitude",
+#                    "Dreieck Amplitude",
+#                    "Sägezahn Amplitude"],
+#        col_syms=[r"b_{n,r}", r"b_{n,d}", r"b_{n,s}"],
+#        col_units=[r"\volt", r"\volt", r"\volt"],
+#        fmt=["c", "c", "c"],
+#        cap="Zur Synthese verwandte Amplituden der ersten 10 Oberwellen",
+#        label="Synthese"))
+#
+#    f.close()
 
 

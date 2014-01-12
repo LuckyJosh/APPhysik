@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  11 JAN 2014 19:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  12 JAN 2014 20:51
 entering extended mode
 **Protokoll.tex
 
@@ -2047,66 +2047,66 @@ ex/Durchführung.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
 ex/Auswertung.tex"
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
-en/Tabelle_Analyse1.tex"
+en/Tabelle_Analyse1.tex")pdfTeX warning (ext4): destination with the same ident
+ifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.25 \newpage
+              [1]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
+en/Tabelle_Analyse2.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
+en/Tabelle_Analyse3.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
+en/Tabelle_Synthese.tex"
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-)
-
-LaTeX Warning: Reference `tab:Synthese' on page 1 undefined on input line 41.
-
-
-LaTeX Warning: Reference `tab:Synthese' on page 1 undefined on input line 45.
-
-<Grafiken/Rechteckspannung.jpg, id=55, 401.5pt x 240.9pt>
+) <Grafiken/Rechteckspannung.jpg, id=72, 401.5pt x 240.9pt>
 File: Grafiken/Rechteckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Rechteckspannung.jpg>
-Package pdftex.def Info: Grafiken/Rechteckspannung.jpg used on input line 50.
-(pdftex.def)             Requested size: 401.49901pt x 240.8994pt.
+Package pdftex.def Info: Grafiken/Rechteckspannung.jpg used on input line 53.
+(pdftex.def)             Requested size: 321.20042pt x 192.72025pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Dreieckspannung.jpg, id=56, 401.5pt x 240.9pt>
+<Grafiken/Dreieckspannung.jpg, id=73, 401.5pt x 240.9pt>
 File: Grafiken/Dreieckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Dreieckspannung.jpg>
-Package pdftex.def Info: Grafiken/Dreieckspannung.jpg used on input line 56.
-(pdftex.def)             Requested size: 401.49901pt x 240.8994pt.
+Package pdftex.def Info: Grafiken/Dreieckspannung.jpg used on input line 60.
+(pdftex.def)             Requested size: 321.20042pt x 192.72025pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Saegezahnspannung.jpg, id=57, 401.5pt x 240.9pt>
+<Grafiken/Saegezahnspannung.jpg, id=74, 401.5pt x 240.9pt>
 File: Grafiken/Saegezahnspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Saegezahnspannung.jpg>
-Package pdftex.def Info: Grafiken/Saegezahnspannung.jpg used on input line 62.
-(pdftex.def)             Requested size: 401.49901pt x 240.8994pt.
+Package pdftex.def Info: Grafiken/Saegezahnspannung.jpg used on input line 67.
+(pdftex.def)             Requested size: 321.20042pt x 192.72025pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.24 	\newpage
-               [1]
+) [2]
+
+LaTeX Warning: Text page 3 contains only floats.
+
+[3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/G
+rafiken/Rechteckspannung.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPrakti
+kum/PraktikumRepo/Fourier/Grafiken/Dreieckspannung.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
-ex/Fehlerrechnung.tex") [2]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
-ex/Diskussion.tex") [3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Pra
-ktikumRepo/Fourier/Grafiken/Rechteckspannung.jpg> <D:/Eigene Dateien/Studium/Ph
-ysik/AnfängerPraktikum/PraktikumRepo/Fourier/Grafiken/Dreieckspannung.jpg>]
+ex/Diskussion.tex") [4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Pra
+ktikumRepo/Fourier/Grafiken/Saegezahnspannung.jpg>]
 
 LaTeX Warning: Empty bibliography on input line 34.
 
 
 AED: lastpage setting LastPage
-[4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/G
-rafiken/Saegezahnspannung.jpg>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
 
@@ -2117,18 +2117,14 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: AB50622AA46FEC5E596FC41F4B96A475;427.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: E8DEF9AF3716F5E9EECF234E7647453B;363.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34511 strings out of 493921
- 654364 string characters out of 3150494
- 1078793 words of memory out of 3000000
- 37107 multiletter control sequences out of 15000+200000
+ 34528 strings out of 493921
+ 655075 string characters out of 3150494
+ 1077134 words of memory out of 3000000
+ 37116 multiletter control sequences out of 15000+200000
  78608 words of font info for 67 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,16n,71p,880b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2143,9 +2139,9 @@ eX/fonts/type1/public/lm/lmmi6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
 mmi8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/Programme/MiK
 TeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/
 lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Protokoll.pdf (5 pages, 279176 bytes).
+Output written on Protokoll.pdf (5 pages, 286064 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 92 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 143 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

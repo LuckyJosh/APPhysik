@@ -22,6 +22,9 @@ Oberschwingungen, aus denen sich das jeweilige Signal mit der Frequenz $\nu_{1} 
 und der Amplitude $\hat{U} = \SI{2}{\volt}$ zusammensetzt. 
   
 \input{Daten/Tabelle_Analyse1.tex}
+\newpage
+\input{Daten/Tabelle_Analyse2.tex}
+\input{Daten/Tabelle_Analyse3.tex}
 
 
 
@@ -37,28 +40,31 @@ berechnet wurde. Man erhält somit die Amplituden $A$:
   	\text{Sägezahn:}\qquad A_{s} &= \SI{0.4}{\volt} \cdot \pi
   	\end{empheq}
   \end{subequations}
+Die aus diesen berechneten Amplituden der Oberwellen sind in \cref{tab:Synthese} zu finden, wobei nicht auftretende
+Amplituden durch \enquote{-} dargestellt sind. 
 
-Die aus diesen berechneten Amplituden der Oberwellen sind in \cref{tab:Synthese} zu finden.
-
-%\input{Daten/Tabelle_Synthese.tex}  
+\input{Daten/Tabelle_Synthese.tex}  
 
 Durch Einstellen der Amplituden aus \cref{tab:Synthese} und der Phasen zwischen den Oberwellen am Oberwellengenerator
 erhält man die in \crefrange{fig:Recht}{fig:Säge} dargestellten Spannungsverläufe.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=1.0]{Grafiken/Rechteckspannung.jpg}
+	\includegraphics[scale=0.8]{Grafiken/Rechteckspannung.jpg}
+	\caption{Synthetisierte Rechteckspannung}
 	\label{fig:Recht}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=1.0]{Grafiken/Dreieckspannung.jpg}
+	\includegraphics[scale=0.8]{Grafiken/Dreieckspannung.jpg}
+	\caption{Synthetisierte Dreieckspannung}
 	\label{fig:Drei}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=1.0]{Grafiken/Saegezahnspannung.jpg}
+	\includegraphics[scale=0.8]{Grafiken/Saegezahnspannung.jpg}
+	\caption{Synthetisierte Sägezahnspannung}	
 	\label{fig:Säge}
 \end{figure}
