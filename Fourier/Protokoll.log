@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  12 JAN 2014 20:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  16 JAN 2014 00:19
 entering extended mode
 **Protokoll.tex
 
@@ -2041,38 +2041,32 @@ tex\Deckblatt.tex" [1
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
 ex/Einleitung.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
-ex/Theorie.tex")
+ex/Theorie.tex")pdfTeX warning (ext4): destination with the same identifier (na
+me{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.16 \newpage
+              [1]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
 ex/Durchführung.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
-ex/Auswertung.tex"
+ex/Auswertung.tex" [2]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
-en/Tabelle_Analyse1.tex")pdfTeX warning (ext4): destination with the same ident
-ifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.25 \newpage
-              [1]
+en/Tabelle_Analyse1.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
 en/Tabelle_Analyse2.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
-en/Tabelle_Analyse3.tex")
+en/Tabelle_Analyse3.tex") [3]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
-en/Tabelle_Synthese.tex"
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) <Grafiken/Rechteckspannung.jpg, id=72, 401.5pt x 240.9pt>
+en/Tabelle_Synthese.tex")
+<Grafiken/Rechteckspannung.jpg, id=97, 401.5pt x 240.9pt>
 File: Grafiken/Rechteckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Rechteckspannung.jpg>
 Package pdftex.def Info: Grafiken/Rechteckspannung.jpg used on input line 53.
 (pdftex.def)             Requested size: 321.20042pt x 192.72025pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Grafiken/Dreieckspannung.jpg, id=73, 401.5pt x 240.9pt>
+<Grafiken/Dreieckspannung.jpg, id=98, 401.5pt x 240.9pt>
 File: Grafiken/Dreieckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Dreieckspannung.jpg>
@@ -2082,7 +2076,7 @@ Package pdftex.def Info: Grafiken/Dreieckspannung.jpg used on input line 60.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Saegezahnspannung.jpg, id=74, 401.5pt x 240.9pt>
+<Grafiken/Saegezahnspannung.jpg, id=99, 401.5pt x 240.9pt>
 File: Grafiken/Saegezahnspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Saegezahnspannung.jpg>
@@ -2092,16 +2086,23 @@ Package pdftex.def Info: Grafiken/Saegezahnspannung.jpg used on input line 67.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [2]
-
-LaTeX Warning: Text page 3 contains only floats.
-
-[3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/G
-rafiken/Rechteckspannung.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPrakti
-kum/PraktikumRepo/Fourier/Grafiken/Dreieckspannung.jpg>]
+) [4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier
+/Grafiken/Rechteckspannung.jpg>] [5 <D:/Eigene Dateien/Studium/Physik/Anfänger
+Praktikum/PraktikumRepo/Fourier/Grafiken/Dreieckspannung.jpg> <D:/Eigene Dateie
+n/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/Grafiken/Saegezahnspa
+nnung.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
-ex/Diskussion.tex") [4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Pra
-ktikumRepo/Fourier/Grafiken/Saegezahnspannung.jpg>]
+ex/Diskussion.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 1--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--27
+
+ []
+
+) [6]
 
 LaTeX Warning: Empty bibliography on input line 34.
 
@@ -2117,31 +2118,32 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: E8DEF9AF3716F5E9EECF234E7647453B;363.
+(rerunfilecheck)             Checksum: 7C3DE30F1FDE4FF10513E0310B72A521;494.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34528 strings out of 493921
- 655075 string characters out of 3150494
- 1077134 words of memory out of 3000000
- 37116 multiletter control sequences out of 15000+200000
+ 34542 strings out of 493921
+ 655303 string characters out of 3150494
+ 1076279 words of memory out of 3000000
+ 37122 multiletter control sequences out of 15000+200000
  78608 words of font info for 67 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,16n,71p,880b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{D:/Programme/MiKTeX/fonts/
-enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
-c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{D:/Programme/MiKTeX/fonts/
-enc/dvips/lm/lm-mathsy.enc}<D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
+c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{D:/Programme/MiKTeX/fo
+nts/enc/dvips/lm/lm-rm.enc}<D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fo
 nts/type1/public/lm/lmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmex
 10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><D:/Programme/MiKT
 eX/fonts/type1/public/lm/lmmi6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
 mmi8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/Programme/MiK
 TeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/
-lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Protokoll.pdf (5 pages, 286064 bytes).
+lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/Mi
+KTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Protokoll.pdf (7 pages, 305770 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 84 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 182 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
