@@ -1,0 +1,17 @@
+\begin{equation} 
+f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty (a_n cos(n\frac{2\pi}{T}t) + b_n sin(n\frac{2\pi}{T}t)) 
+\end{equation}
+Mithilfe von Fourier-Reihen (1) lassen sich periodische Funktionen sehr gut approximieren. Eine Einschränkung ist hierbei das Gibb'sche Phänomen, es tritt an Unstetigkeiten der ursprünglichen Funktion auf. An diesen Stellen tritt eine endlich große Abweichung auf, welche durch erhöhte Anzahl der Polynome auch nicht verschwindet. \\
+Für die Fourier-Koeffizienten gilt:
+\begin{equation}
+a_n = \frac{T}{2}\int_{0}^{T} f(t) cos(n\frac{2\pi}{T}t) dt
+\end{equation}
+und
+\begin{equation}
+b_n = \frac{T}{2}\int_{0}^{T} f(t) sin(n\frac{2\pi}{T}t) dt
+\end{equation}
+Weiterhin erwähnenswert ist die Fourier-Transformation.
+\begin{equation}
+g(v) = \int_{-\infty}^{\infty} f(t) e^{ivt} dt
+\end{equation}
+Mithilfe der Transformation lässt sich das Frequenzspektrum der Funktion direkt bestimmen. Dabei erhält man für eine bestimme Frequenz $v$ die entsprechende Amplitude.
