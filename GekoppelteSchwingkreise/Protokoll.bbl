@@ -16,5 +16,22 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \sortlist{entry}{nty}
+    \entry{V355}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V355 Gekoppelte Schwingkreise}
+      \field{title}{Versuchsanleitung}
+      \field{urlday}{16}
+      \field{urlmonth}{01}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V355.pdf
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
 

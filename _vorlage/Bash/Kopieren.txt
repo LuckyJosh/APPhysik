@@ -1,0 +1,2 @@
+$ find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec cp '{}' Bilder/
+\;

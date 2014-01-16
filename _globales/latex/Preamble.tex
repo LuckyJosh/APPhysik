@@ -1,0 +1,161 @@
+\documentclass[12pt]{article}                                                      % 'Artikel' Dokumentenklasse und Standardschriftgröße  
+\usepackage[paper=a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}  % Setzt das Papierformat und den Rand auf 2.5cm
+
+
+\setlength{\parindent}{0.5\parindent}                                                         % Setzt die Einrückung von Absätzen auf gegebenen Abstand
+\usepackage[onehalfspacing]{setspace}                                               % Legt Zeilenabstand fest
+
+
+\usepackage[T1]{fontenc}                                                            % Legt FontKodierung fest
+\usepackage[utf8]{inputenc}                                                         % Legt Zeichenkodierung fest
+
+\usepackage[ngerman]{babel}                                                         % Deutsche Rechtschreibung
+%\usepackage[ngerman]{varioref}                                                     % Versieht Referenzen mit Bezeichnung des Objektes
+\usepackage{lmodern}                                                                % Empfohlener T1-Font für deutsche Texte
+\usepackage[backend=biber, style=numeric-verb]{biblatex}							% Ermöglicht das Einbinden von Literaturverzeichnissen 	
+\usepackage[babel,german=quotes]{csquotes}
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% 
+%	Seiten Layout
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\usepackage{fancyhdr}                                                               % Ermöglicht detailierte Bearbeitung der Kopf- und Fußzeile
+\input{../_globales/latex/SeitenLayout.tex}
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% 
+%	Mathematik & Naturwissenschaft
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\usepackage[sumlimits,intlimits,namelimits]{amsmath}                                % Fügt mathematische Symbole hinzu, setzt Grenzen, Limiten und Indizes unter das Symbol und nicht dahinter
+
+\usepackage{amssymb}                                                                % Fügt Symbole wie z.B. Zahlenmengen wie $\mathbb{R}$ hinzu 
+
+\usepackage{amsthm}                                                                 
+
+\usepackage{amsfonts}                                                               % Fügt Font für Mathematikumgebung hinzu
+
+\usepackage{empheq}                                                                 % Stellt verbesserte Gleichungsumgebung bereit \begin{empheq}[<Aussehen>]{<Umgebungstyp>} ... \end{empheq}
+%test
+
+\usepackage[version=3]{mhchem}                                                     % Stellt chemische Struktur und Summenformeln bereit \ce{<Summenformel>}
+%\usepackage{chemfig}                                                               % Stellt chemische Valenzstrichformeln fürganze Moleküle bereit \chemfig{<Molekül-Aufbau>}
+
+\usepackage{siunitx}                                                                % Stellt eine verbesserte Formatierung von größen mit Einheiten zur Verfügung  
+	\sisetup{locale = DE%
+	%,prefixes-as-symbols = false %
+	}                                   % Setzt das 'Mal'-Zeichen auf \cdot und das Dezimaltrennzeichen auf ',' 
+                                                                                    % und ersetzt Prefixe wie '\kilo' mit der entsprechenden Zehnerpotenz
+	\sisetup{separate-uncertainty = true}                                           % Ermöglicht vereinfachtes eintragen von Unsicherheiten '42.6(4)' --> '42.6 +/- 0.4'                                                                                 
+                                   
+\usepackage[b]{esvect}                                                              % Fügt verbesserte Vektorpfeile hinzu \vv{<Vektorname>} 
+
+\usepackage{xfrac}
+
+\usepackage{array}
+
+\usepackage{commath}																% Fügt Differentialoperatoren und -quotienten ein 
+
+ 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% 
+% Referenzen 
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\usepackage{scrdate}
+
+
+
+\usepackage{lastpage}                                                               % Macht die letzte Seitenzahl referenzierbar mit \pageref{LastPage}
+
+\usepackage{hyperref}																% Ermöglicht (automatische) Verlinkungen im Dokument
+	\hypersetup{hidelinks}                                                          % Entfernt farbige Markierung der Links  
+	
+\usepackage[ngerman]{cleveref}														% Umfangreiche Referenzierungsmöglichkeiten, inkl. Beschriftung mit ref. Typ
+\crefformat{equation}{(#2#1#3)}														% \cref{} Einstellung: Gleichungen bekommen
+\crefrangeformat{equation}{(#3#1#4) bis~(#5#2#6)}									%  nicht den Text 'Gleichung' vorgesetzt
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% 
+% Grafiken, Tabellen und Zeichnungen 
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\usepackage{graphicx}                                                               % Ermöglicht das Einbinden Grafiken '\includegraphics[<Optionen>]{<Grafikpfad>}' und Veränderungen im Text, wie z.B. Schriftfarbe 
+                                                        
+%\usepackage{subfig}                                                                % Ermöglicht das Hinzufügen von Unterabbildung zu einer Abbildung
+
+\usepackage{wrapfig}
+
+\usepackage{tikz}                                                                   % Ermöglicht Zeichnungen im Dokument \begin{tikzpicture} ... \end{tikzpicture}
+	\usetikzlibrary{arrows}                                                         % Fügt zusätzlichen Pfeilspitzen hinzu
+%\usepackage{booktabs}
+%\usepackage{slashbox}                                                              % Ermöglicht das Einfügen mehrerer Einträge in eine Tabellenzelle, getrennt von einem '\' \backslashbox{<Eintrag unten-links>}{<Eintrag oben-rechts>} TIPP: Leerzeichen
+
+\usepackage[font=small,labelfont=bf]{caption} 										% Ermöglicht Einstellung der caption von floats
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%
+% Zeichenerweiterung, Textbezogenen Veränderungen
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\usepackage[normalem]{ulem}                                                         % Fügt verbesserte Unterschtreichungen hinzu, z.B. doppelt, gezackt, gewellt, etc.
+
+\usepackage{xcolor}
+
+\usepackage{enumitem}                                                               % Ermöglicht detailierte Einstellungen an Aufzählungssymbolen
+
+
+\usepackage{textcomp}  																% Fügt extra Symbole hinzu  
+\usepackage{pifont}																    % Fügt neue Symbole und Zeichen ein
+\renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}                      % Fußnoten mit Zahlen in Kreisen
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%
+% Steuerelemente 
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\title{} 
+\author{} 
+\addbibresource{../globales/latex/Literatur.bib}
+\pagestyle{fancy} 																    % Anwenden des Erweiterten Seitenlayouts
+%\renewcommand{\thefootnote}{}
+%\setlength{\footnotesep}{2cm}
+\setlength{\skip\footins}{2cm}                                                      % Abstand zwischen Text und Fußnoten
+%\setlength{\itemsep}{7.5pt}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%
+% Eigenen Definitionen
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+                                                                 
+% Mathematik
+
+\renewcommand{\i}{\ensuremath{\textsc{i}}}
+\newcommand{\e}{\ensuremath{\textsl{e}}}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\renewcommand{\Re}{\mathrm{Re}\,}
+
+\newcolumntype{C}{ >{\centering\arraybackslash} m{2.5 cm}}
+%\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\mean}{\langle}{\rangle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Verbesserungen hervorheben
+
+
+

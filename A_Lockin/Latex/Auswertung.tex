@@ -1,0 +1,181 @@
+\setcounter{equation}{0}
+\renewcommand{\theequation}{\Roman{equation}}
+In Folgenden sind die während des Versuchs aufgenommenen Daten tabellarisch dargestellt und die 
+mit Hilfe des digitalen Oszilloskops aufgenommenen Bilder, zur Veranschaulichung der angezeigten Signale,
+eingebunden. An entsprechender Stelle sind Erklärungen zu den Messwerten und Rechnungen gegeben.\\
+Die in \cref{sec:ohneNoise} und \ref{sec:mitNoise} berechneten Fehler wurden über die Gleichung\\
+
+\begin{empheq}{equation}
+	\label{std:U0}
+	\sigma_{U_{0}} = \dfrac{\pi}{2} \sigma_{U_{out}} \sin(\phi)
+\end{empheq}
+\setcounter{equation}{3}
+\renewcommand{\theequation}{\arabic{equation}}   
+bestimmt, die mit Hilfe der gaußschen Fehlerfortpflanzung berechnet wurde.
+\subsection{Aufbau der Schaltung}
+	\cref{fig:AufbauSig1} und \ref{fig:AufbauSig2}, sowie die in den nachfolgendem \cref{sec:ohneNoise} befindlichen Abbildungen zeigen die Veränderung des, vom Oszilloskop angezeigten Signals 
+	beim sukzessiven Aufbau der Schaltung und Durchführung des Versuchs.
+	Das Signal $U_{sig}$ aus dem \emph{Oscillator Output} ist in seiner Amplitude variabel, wohingegen das Referenzsignal $U_{ref}$ 
+	aus dem \emph{Reference Output} mit $\hat{U}_{ref} = \SI{6.6(1)}{\volt} $ eine konstante Amplitude.   
+	\cref{fig:AufbauSig1} zeigt das durch den Vorverstärker (mit Gain: 1) verstärkte Signal $U_{sig}$  und \cref{fig:AufbauSig2} 
+	zeigt das Referenzsignal $U_{ref}$.
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.35]{Grafiken/Signalspannung.jpg}
+		\caption{Verstärkte Signalspannung $U_{sig}$}
+		\label{fig:AufbauSig1}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.35]{Grafiken/Referenzspannung.jpg}
+		\caption{Referenzspannung $U_{ref}$}
+		\label{fig:AufbauSig2}
+	\end{figure}
+
+	Die durch die Mischung von $U_{sig}$ und $U_{ref}$ veränderten Signalformen sind im folgenden \cref{sec:ohneNoise} dargestellt.
+\newpage
+\subsection{Messung ohne Noise-Generator}\label{sec:ohneNoise}
+	In den \crefrange{fig:Phase1}{fig:Phase5} sind die am Oszilloskop zu beobachtenden Signale zu sehen, wobei die Phasendifferenz
+	bei \cref{fig:Phase1} $\phi = 0$ ist und zur jeweils nächsten Abbildung um $\sfrac{\pi}{6}$ erhöht wird.
+	
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_1.jpg}
+			\caption{Mischungssignal mit $\phi = 0$}
+			\label{fig:Phase1}
+		\end{figure}
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_2.jpg}
+			\caption{Mischungssignal mit $\phi = \frac{\pi}{6}$}
+			\label{fig:Phase2}
+		\end{figure}
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_3.jpg}
+			\caption{Mischungssignal mit $\phi = \frac{\pi}{3}$}
+			\label{fig:Phase3}
+		\end{figure}
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_4.jpg}
+			\caption{Mischungssignal mit $\phi = \frac{\pi}{2}$}
+			\label{fig:Phase4}
+		\end{figure}
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/Phase_5.jpg}
+			\caption{Mischungssignal mit $\phi = \frac{2\pi}{3}$}
+			\label{fig:Phase5}
+		\end{figure}
+
+	Durch die Integration des Signals durch den Tiefpass erhält man eine konstante Gleichspannung $U_{out}$,
+	deren Form am Beispiel für $\phi = 0$ in \cref{fig:Uout} dargestellt.
+	 
+	
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{Grafiken/IntegrierteSpannung.jpg}
+			\caption{Integriertes Ausgabesignal für $\phi = 0$}
+			\label{fig:Uout}
+		\end{figure} 
+	
+	Die Messwerte für diese Ausgabespannung $U_{out}$ sind zusammen mit der entsprechenden Phase in \cref{tab:ohneNoise} eingetragen. 
+
+	\input{Daten/Tabelle_ohneNoise.tex}
+	
+	An der grafischen Darstellung dieser Messwerte in \cref{fig:ohneNoise} ist festzustellen, das die aufgenommene Messwerte nicht dem
+	durch die Theorie prognostiziertem Verlauf von \cref{eq:Uout}, mit der Proportionalität zu $\cos(\phi)$ folgen, sondern Proportional 
+	zu $\sin(\phi)$ verlaufen. Daher wird für die weitere Bearbeitung dieser Messwerte anstelle von \cref{eq:out} die Gleichung 
+	\begin{empheq}{equation}
+			U_{out} = \frac{2}{\pi}U_{0}\sin(\phi)
+			\label{eq:Uout_sin}
+	\end{empheq}     
+	verwendet.   
+	
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.75]{Grafiken/OhneNoise.pdf}
+			\caption{Verlauf der Messwerte ohne Rauschen mit Ausgleichskurve}
+			\label{fig:ohneNoise}
+		\end{figure} 
+	
+	Die in \cref{fig:ohneNoise} dargestellte Theoriekurve hat dabei die Form $U(\phi) = U_{0} \sin{\phi}$ mit 
+	der Amplitude $U_{0} = \SI{0.0135(8)}{\volt}$, welche mit Hilfe der Python-Bibliothek SciPy \cite{SciPy} bestimmt wurde.
+	
+	Durch Umstellen von \cref{eq:Uout_sin} erhält man die ebenfalls in \cref{tab:ohneNoise} eingetragenen Werte für die 
+	Amplitude der Signalspannung $U_{0}$ nach der Gleichung
+	\begin{empheq}{equation}
+			U_{0} = \frac{\pi}{2}\frac{U_{out}}{\sin(\phi)}.
+			\label{eq:U0}
+	\end{empheq}  
+	Der Mittelwert dieser Werte ergibt sich zu 
+	\begin{empheq}{equation}
+			\mean{U_{0}} = \SI{0.022(1)}{V},
+			\label{eq:U0_mean}
+	\end{empheq}  	
+	wobei für den angegebene Fehler die Abweichung vom Mittelwert berechnet und keine Fehlerfortpflanzung verwand wurde, da dieser 
+	Fehler klein gegen über der angegebenen Abweichung ist.
+	 
+\subsection{Messung mit Noise-Generator} \label{sec:mitNoise}
+	Die Messwerte der Messung mit zwischengeschaltetem Noise-Generator sind in \cref{tab:mitNoise} zusammen mit denen aus diesen
+	Werten berechneten Signalspannungsamplituden $U_{0}$ eingetragen.
+	
+	\input{Daten/Tabelle_mitNoise.tex} 
+	
+	Als Mittelwert der berechneten Signalspannungsamplituden erhält man
+	\begin{empheq}{equation}
+			\mean{U_{0}} = \SI{-0.092(6)}{V}
+			\label{eq:U0Noise_mean}
+	\end{empheq}	
+	und auch hier ist der angegeben Fehler die Abweichung vom Mittelwert.
+	
+	In \cref{fig:mitNoise} sind die Messwerte zusammen mit einer Ausgleichskurve der Form $U(\phi) = U_{0} \sin{\phi}$ mit 
+	$U_{0} = \SI{-0.0063(3)}{\volt}$ aufgetragen.
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.75]{Grafiken/MitNoise.pdf}
+		\caption{Verlauf der Messwerte mit Rauschen mit Ausgleichskurve}
+		\label{fig:mitNoise}
+	\end{figure} 
+\subsection{Messung der Intensität einer LED in Abhängigkeit  \\des Abstands} \label{sec:Abstand}
+	Die Messwerte für den Abstand und der am Lock-In-Verstärker abgelesenen Spannung als Maß der Lichtintensität
+	sind in \cref{tab:Abstand} zu finden. 
+	
+	\input{Daten/Tabelle_Abstand.tex}
+	
+	Dabei wurden während der Messungen zwischen $r = \SI{0.226(1)}{\meter}$ und $r_{max} = \SI{0.401}{\meter}$ 
+	noch Veränderungen der Spannung festgestellt, die jedoch kleiner als der Ablesefehler waren und somit nicht bestimmt
+	werden konnten. Bei Abständen $r > r_{max}$ konnten keine Spannungsveränderungen mehr festgestellt werden.
+	Die Messwerte sind in \cref{fig:Abstand} grafisch dargestellt und durch eine Ausgleichskurve ergänzt, die 
+	die Form $U = U_{0}r^{-2}$ mit $U_{0}= \SI{0.13(1)}{\volt}$ hat. Die Antiproportionalität zu $r^{2}$, ist an
+	zunehmen, da es sich bei der LED um eine Punktquelle von elektromagnetischer Strahlung handelt, für deren Intensität
+	diese Proportionalität gilt. Dies sei hier kurz gezeigt:
+	
+	Bezeichnetet $S$ die Intensität einer elektromagnetischen Kugelwelle, so ist die Strahlungsleistung $P$ gegeben durch
+	\begin{empheq}{equation*}
+		P = \int{S}\dif A
+	\end{empheq}    
+	Betrachtet man des Flächenelement einer Kugeloberfläche $\dif A = r^{2} \sin(\theta) \dif\phi \dif\theta$ ergibt das Integral:
+	\begin{empheq}{equation*}
+	 	P =  4\pi r^{2} \cdot S
+	\end{empheq}  
+	woraus folgt
+	\begin{empheq}{equation*}
+	 	S = \dfrac{P}{4\pi r^{2}} \propto \dfrac{1}{r^{2}}.
+	\end{empheq} 
+	
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.75]{Grafiken/Abstand.pdf}
+		\caption{Verlauf der Intensität in Abhängigkeit vom Abstand mit Ausgleichskurve}
+		\label{fig:Abstand}
+	\end{figure}
