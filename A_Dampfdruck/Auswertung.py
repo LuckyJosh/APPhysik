@@ -22,8 +22,8 @@ from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
-sys.path.append("..\Versuchsvorlage\Python")
-import LatexTables as tab
+#sys.path.append("..\Versuchsvorlage\Python")
+#import LatexTables as tab
 
 
 # Definierte Makros:
