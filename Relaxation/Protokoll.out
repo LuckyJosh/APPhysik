@@ -2,5 +2,10 @@
 \BOOKMARK [1][-]{section.2}{Theorie}{}% 2
 \BOOKMARK [1][-]{section.3}{Durchf\374hrung}{}% 3
 \BOOKMARK [1][-]{section.4}{Auswertung}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Fehlerrechnung}{section.4}% 5
-\BOOKMARK [1][-]{section.5}{Diskussion}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Messung der Zeitkonstante durch Entladung des Kondensators}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Messung der Frequenzabh\344ngigkeit der \040Kondensatorspannungsamplitude}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Messung der Frequenzabh\344ngigkeit der Phasendifferenz zwischen Generator- und Kondensatorspannung}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Darstellung der Kondensatorspannungsamplitude in Abh\344ngigkeit der Frequenz und der Phasendifferenz }{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{Das RC-Glied als Integrator}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.6}{Fehlerrechnung}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{Diskussion}{}% 11

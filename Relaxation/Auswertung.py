@@ -27,19 +27,19 @@ import latextables as lxtabs
 
 
 def H(x, a, b):
-    return a*np.exp(b * x)
+    return a*np.exp(-b * x)
 
 
 def A(x, RC):
-    return 1/np.sqrt(1 + 4*const.pi**2 * x**2 * RC**2)
+    return 1/np.sqrt(1 + 4 * const.pi**2 * x**2 * RC**2)
 
 
 def P(x, RC):
-    return np.arctan(- RC * 2 * const.pi * x)
+    return np.arctan(RC * 2 * const.pi * x)
 
 
-def Ap(x, p, RC):
-    return - np.sin(p)/(x * RC)
+def Ap(p, RC):
+    return np.cos(p)/(RC)
 
 Ulog = unc.wrap(np.log)
 
@@ -63,10 +63,10 @@ popt1, pcov1 = curve_fit(H, t_ent, noms(uU_ent))
 # Fehler der Parameter
 errors1 = np.sqrt(np.diag(pcov1))
 um1 = ufloat(popt1[1], errors1[1])
-ub1 = Ulog(ufloat(popt1[0], errors1[0]))
+ub1 = ufloat(popt1[0], errors1[0])
 
 # Berechnung der Zeitkonstante
-RC1 = - 1/m1
+RC1 =  1/um1
 
 # Plot der Messwerte und Reressionskurve
 t = np.linspace(-0.0001, 0.0009, num=1000)
@@ -82,6 +82,7 @@ plt.yscale("log")
 plt.errorbar(t_ent, noms(uU_ent), yerr=stds(uU_ent),
              fmt="rx", label="Messdaten")
 plt.plot(t, H(t, *popt1), color="gray", label="Regressionsgerade")
+
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Entladung.pdf")
@@ -111,6 +112,10 @@ f = np.concatenate((f1, f2))
 popt2, pcov2 = curve_fit(A, f, noms(uAmps_U0), sigma=stds(uAmps_U0))
 F = np.linspace(0, 1e05, num=100000)
 
+# Fehler
+errors2 = np.sqrt(np.diag(pcov2))
+uc2 = ufloat(popt2[0], errors2[0])
+
 # Plot der Messwerte und Reressionskurve
 
 plt.clf()
@@ -137,10 +142,14 @@ b = 1/f3
 
 # Berechnung der Phasendifferenz
 p = 2 * const.pi * a/b
-
+p_grad = 360 * a/b
 # Regeression der Messwerte
 popt3, pcov3 = curve_fit(P, f3, p)
 F = np.linspace(0, 1e06, num=1000000)
+
+# Fehler
+errors3 = np.sqrt(np.diag(pcov3))
+ud3 = ufloat(popt3[0], errors3[0])
 
 # Plot der Messwerte und Reressionskurve
 t = np.linspace(-0.0001, 0.0009, num=1000)
@@ -174,11 +183,13 @@ Amps_U0 = np.array([noms(uAmps_U0[4]), noms(uAmps_U0[5]),
                     noms(uAmps_U0[14]), noms(uAmps_U0[15]),
                     noms(uAmps_U0[16]), noms(uAmps_U0[18])])
 
-P = np.array([p[0], p[2], p[4], p[5], p[7], p[9], p[10], p[12], p[14], p[15]])
+Phi = np.array([p[0], p[2], p[4], p[5], p[7], p[9], p[10], p[12], p[14], p[15]])
 
-
+Ph = np.linspace(0, const.pi/2)
+freqs = np.linspace(1, 1e02, num=1e02)
 
 plt.clf()
+
 
 
 
@@ -194,11 +205,48 @@ plt.clf()
 #plt.xlabel("Frequenz $f\,[\mathrm{Hz}]$")
 #plt.ylabel(r"Phasendifferenz ${\varphi}$")
 
-plt.polar(P, Amps_U0, "rx", label="Messdaten")
-#plt.polar(P, Ap(, *popt3), color="gray", label="Regressionskurve")
-plt.legend(loc="lower left")
+plt.polar(Phi, Amps_U0, "rx", label="Messdaten")
+plt.polar(Ph, np.cos(Ph), color="gray", label="Theoriekurve")
+
+plt.legend(loc="upper left")
 plt.tight_layout()
+plt.savefig("Grafiken/Amplitude_Polar.pdf")
 
 
+#f =  open("Daten/Tabelle_Entladen.tex", "w")
+#
+#f.write(lxtabs.toTable([t_ent * 1e03, uU_ent],
+#        col_titles=["Zeit", "Kondensatorspannung"],
+#        col_syms=[r"t", r"{U_{C}}"],
+#        col_units=[r"\milli\second", r"\volt"],
+#        fmt=["c", "c"],
+#        cap="Kondensatorspannung zur Zeit $t$ nach Beginn der Entladung",
+#        label="Auswertung_Entladen"))
+#
+#f.close()
 
-## Print Funktionen
+#File = open("Daten/Tabelle_Amplituden.tex", "w")
+#
+#File.write(lxtabs.toTable([f, uAmps, uAmps_U0],
+#        col_titles=["Frequenz", "Amplitude", "normierte Amplitude"],
+#        col_syms=[r"f", r"A(f)", r"\tfrac{A(f)}{U_{0}}"],
+#        col_units=[r"\hertz", r"\volt", r""],
+#        fmt=["c", "c", "c"],
+#        cap="Amplitude und normierte Amplitude der Kondensatorspannung in" +
+#            " Abhängikeit der Frequenz",
+#        label="Auswertung_Amplitude"))
+#
+#File.close()
+
+#File = open("Daten/Tabelle_Phasendifferenz.tex", "w")
+#
+#File.write(lxtabs.toTable([f3, p_grad],
+#        col_titles=["Frequenz", "Phasendifferenz"],
+#        col_syms=[r"f", r"\varphi(f)"],
+#        col_units=[r"\hertz", r"\degree"],
+#        fmt=["c", "c"],
+#        cap="Phasendifferenz der Kondensator- und Generatorspannung in" +
+#            " Abhängikeit der Frequenz",
+#        label="Auswertung_Phasendifferenz"))
+#
+#File.close()

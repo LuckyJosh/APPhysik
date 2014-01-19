@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  16 JAN 2014 23:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  19 JAN 2014 02:37
 entering extended mode
 **Protokoll.tex
 
@@ -2046,21 +2046,180 @@ Latex/Theorie.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
 Latex/Durchführung.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
-Latex/Auswertung.tex")pdfTeX warning (ext4): destination with the same identifi
-er (name{page.1}) has been already used, duplicate ignored
+Latex/Auswertung.tex"
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 6.
+
+<Grafiken/Entladen.jpg, id=62, 256.96pt x 192.72pt>
+File: Grafiken/Entladen.jpg Graphic file (type jpg)
+
+<use Grafiken/Entladen.jpg>
+Package pdftex.def Info: Grafiken/Entladen.jpg used on input line 13.
+(pdftex.def)             Requested size: 256.95937pt x 192.71951pt.
+
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
+Daten/Tabelle_Entladen.tex"
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 15.
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 	\newpage
-               [1]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
-Latex/Fehlerrechnung.tex") [2]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
-Latex/Diskussion.tex") [3]
+l.24 	\end{empheq}
+                   [1 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Prak
+tikumRepo/Relaxation/Grafiken/Entladen.jpg>]
+<Grafiken/Entladung.pdf, id=79, 578.16pt x 431.81326pt>
+File: Grafiken/Entladung.pdf Graphic file (type pdf)
 
-LaTeX Warning: Empty bibliography on input line 34.
+<use Grafiken/Entladung.pdf>
+Package pdftex.def Info: Grafiken/Entladung.pdf used on input line 38.
+(pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
 
+
+LaTeX Warning: Reference `eq:Theorie_Entladung' on page 1 undefined on input li
+ne 47.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 48.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 48.
+[2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxatio
+n/Grafiken/Entladung.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 57.
+
+
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
+Daten/Tabelle_Amplituden.tex")
+<Grafiken/Amplitude.pdf, id=163, 578.16pt x 431.81326pt>
+File: Grafiken/Amplitude.pdf Graphic file (type pdf)
+
+<use Grafiken/Amplitude.pdf>
+Package pdftex.def Info: Grafiken/Amplitude.pdf used on input line 70.
+(pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `eq:Theorie_Amplitude' on page 1 undefined on input li
+ne 88.
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{equation.0.
+4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.92 		\end{empheq}
+                   ]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 95.
+
+
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
+Daten/Tabelle_Phasendifferenz.tex"
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 6.
+ (D:\Programme\MiKTeX\tex\latex\lm\ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) <Grafiken/Phasendifferenz.pdf, id=178, 578.16pt x 431.81326pt>
+File: Grafiken/Phasendifferenz.pdf Graphic file (type pdf)
+
+<use Grafiken/Phasendifferenz.pdf>
+Package pdftex.def Info: Grafiken/Phasendifferenz.pdf used on input line 104.
+(pdftex.def)             Requested size: 433.61893pt x 323.85915pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxatio
+n/Grafiken/Amplitude.pdf>]
+
+LaTeX Warning: Reference `eq:Theorie_Phasendiffernez' on page 1 undefined on in
+put line 123.
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{equation.0.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.126 		\end{empheq}
+                     <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Prakt
+ikumRepo/Relaxation/Grafiken/Phasendifferenz.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 130.
+
+
+LaTeX Warning: Reference `eq:Theorie_Amplitude' on page 1 undefined on input li
+ne 133.
+
+
+LaTeX Warning: Reference `eq:Theorie_Phasendiffernz' on page 1 undefined on inp
+ut line 133.
+
+
+LaTeX Warning: Reference `eq:Theorie_Amplitude_Phase' on page 1 undefined on in
+put line 133.
+
+<Grafiken/Amplitude_Polar.pdf, id=337, 578.16pt x 431.81326pt>
+File: Grafiken/Amplitude_Polar.pdf Graphic file (type pdf)
+
+<use Grafiken/Amplitude_Polar.pdf>
+Package pdftex.def Info: Grafiken/Amplitude_Polar.pdf used on input line 151.
+(pdftex.def)             Requested size: 289.07928pt x 215.9061pt.
+
+Overfull \hbox (9.23454pt too wide) in paragraph at lines 158--160
+\T1/lmr/m/n/12 In den fol-gen-den Ab-bil-dun-gen sind die auf-ge-nom-men Span-n
+ungs-ver-l�u-fe der Sinus-, Dreieck-
+ []
+
+[6 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxatio
+n/Grafiken/Amplitude_Polar.pdf>]
+<Grafiken/Integrator_Sinus.jpg, id=381, 256.96pt x 192.72pt>
+File: Grafiken/Integrator_Sinus.jpg Graphic file (type jpg)
+
+<use Grafiken/Integrator_Sinus.jpg>
+Package pdftex.def Info: Grafiken/Integrator_Sinus.jpg used on input line 163.
+(pdftex.def)             Requested size: 179.87076pt x 134.90306pt.
+
+<Grafiken/Integrator_Dreieck.jpg, id=382, 256.96pt x 192.72pt>
+File: Grafiken/Integrator_Dreieck.jpg Graphic file (type jpg)
+
+<use Grafiken/Integrator_Dreieck.jpg>
+Package pdftex.def Info: Grafiken/Integrator_Dreieck.jpg used on input line 170
+.
+(pdftex.def)             Requested size: 179.87076pt x 134.90306pt.
+
+<Grafiken/Integrator_Rechteck.jpg, id=383, 256.96pt x 192.72pt>
+File: Grafiken/Integrator_Rechteck.jpg Graphic file (type jpg)
+
+<use Grafiken/Integrator_Rechteck.jpg>
+Package pdftex.def Info: Grafiken/Integrator_Rechteck.jpg used on input line 17
+7.
+(pdftex.def)             Requested size: 179.87076pt x 134.90306pt.
+) [7 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxat
+ion/Grafiken/Integrator_Sinus.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerP
+raktikum/PraktikumRepo/Relaxation/Grafiken/Integrator_Dreieck.jpg> <D:/Eigene D
+ateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxation/Grafiken/Inte
+grator_Rechteck.jpg>]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
+Latex/Fehlerrechnung.tex") [8]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
+Latex/Diskussion.tex") [9]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 34.
+ (D:\Programme\MiKTeX\tex\latex\lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 
 AED: lastpage setting LastPage
+[10]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
 
@@ -2071,23 +2230,39 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: F48E8469A38BF8AFB39FA42DABA1BAE8;296.
+(rerunfilecheck)             Checksum: 444C0ACCD6CC27CB8BE995D60430B16E;907.
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34429 strings out of 493921
- 652807 string characters out of 3150494
- 1062161 words of memory out of 3000000
- 37057 multiletter control sequences out of 15000+200000
- 59526 words of font info for 55 fonts, out of 3000000 for 9000
+ 34841 strings out of 493921
+ 661404 string characters out of 3150494
+ 1076964 words of memory out of 3000000
+ 37378 multiletter control sequences out of 15000+200000
+ 115382 words of font info for 101 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 67i,11n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<D:/Programme/MiKTeX/fonts/
-type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmcsc10.p
-fb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
-Output written on Protokoll.pdf (4 pages, 87096 bytes).
+ 67i,22n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{D:/Programme/MiKTeX/fonts/
+enc/dvips/lm/lm-ts1.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{D:/P
+rogramme/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{D:/Programme/MiKTeX/fonts/enc
+/dvips/lm/lm-mathsy.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<
+D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><D:/Programme/MiKTeX/fonts
+/type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmcsc10.
+pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmex10.pfb><D:/Programme/MiKTeX/
+fonts/type1/public/lm/lmmi10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmm
+i12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><D:/Programme/MiKT
+eX/fonts/type1/public/lm/lmr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
+mr12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr6.pfb><D:/Programme/MiKT
+eX/fonts/type1/public/lm/lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lm
+ri12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/Mi
+KTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm
+/lmtt12.pfb><D:/Programme/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on Protokoll.pdf (11 pages, 803445 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 482 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

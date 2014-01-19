@@ -1,0 +1,180 @@
+Im Folgenden sind die während des Versuchs aufgenommenen Messwerte tabellarisch und 
+durch Grafiken dargestellt. An entsprechender Stelle sind Anmerkungen und Erklärungen zu
+den Messwerten und den vollzogenen Rechnungen gegeben.  
+
+
+\subsection{Messung der Zeitkonstante durch Entladung des\\ Kondensators}
+	
+	Die in \cref{tab:Auswertung_Entladen} gelisteten Messwerte sind aus dem in \cref{fig:Auswertung_Entladen}
+	dargestellten zeitlichen Verlauf der Kondensatorspannung $ U_{C}(t) $ entnommen.
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=1]{Grafiken/Entladen.jpg}
+		\caption{Zeitlicher Verlauf der Kondensatorspannung bei Entladung}
+		\label{fig:Auswertung_Entladen}
+	\end{figure}
+    \input{Daten/Tabelle_Entladen.tex}
+	
+	Durch Regression der in \cref{fig:Auswertung_EntladungLog} halb-logarithmisch
+	aufgetragenen Messwerte, unter Verwendung der Python Bibliothek \emph{SciPy} \cite{SciPy}, ergeben sich 
+	die Parameter $ a $ und $ b $ der angesetzten Regressionsfunktion
+	\begin{empheq}{equation}
+		f(t) = at + b
+	\end{empheq}
+	zu
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{align}
+		\label{eq:Auswertung_Entladung_Steigung}
+			a &= \SI{-2127(84)}{\per\second} \\
+		\label{eq:Auswertung_Entladung_Achsenabschnitt}
+			b &= \SI{125(3)}{}.
+		\end{empheq}		
+	\end{subequations}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.75]{Grafiken/Entladung.pdf}
+		\caption{Messwerte des Entladungsvorgangs mit entsprechender Regressionsgeraden}
+		\label{fig:Auswertung_EntladungLog}
+	\end{figure}
+	 
+	Mit der theoretischen Form dieser Regressionsgeraden 
+	\begin{empheq}{equation}
+		\ln\del{\dfrac{U(t)}{U(0)}}  = -\dfrac{t}{RC}, 
+	\end{empheq}
+	die man durch logarithmieren von \cref{eq:Theorie_Entladung}
+	\footnote{Da $ U = qE $ gilt sind zeitlicher Verlauf von Spannung und Ladung äquivalent} erhält
+	lässt sich zeigen, dass die reziproke Steigung dieser Geraden der Zeitkonstante $ RC $  entspricht.
+	Diese hat, mit der Steigung \cref{eq:Auswertung_Entladung_Steigung} somit den Wert
+	\begin{empheq}{equation}
+		 RC =  \dfrac{1}{a} = \SI{4.7(2)e-04}{\second}
+	\end{empheq}
+	 
+	 
+	 
+\subsection{Messung der Frequenzabhängigkeit der \\ Kondensatorspannungsamplitude}
+
+	In \cref{tab:Auswertung_Amplitude} sind die, in Abhängigkeit der Frequenz $ f_{G} $ der angelegten 
+	Sinusspannung gemessenen, Amplituden der Kondensatorspannung $A(f)$ und die mit $ U_{0} = \SI{80}{\volt} $
+	normierten Amplituden $ \tfrac{A(f)}{U_{0}} $ eingetragen. 
+	
+	\input{Daten/Tabelle_Amplituden.tex}
+	
+	In \cref{fig:Auswertung_Amplitude} sind die normierten Amplituden gegen die Frequenzen halb-logarithmisch 
+	aufgetragen. 
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.75]{Grafiken/Amplitude.pdf}
+		\caption{Normierte Amplituden in Abhängigkeit von der Frequenz mit\\\hspace*{2.6cm} entsprechender Regressionskurve}
+		\label{fig:Auswertung_Amplitude}
+	\end{figure}
+	
+	Durch Regression der Messwerte für die normierte Amplitude in \cref{fig:Auswertung_Amplitude} mit eine Funktion der Form
+	\begin{empheq}{equation}
+		A(f) = \dfrac{1}{\sqrt{1 + c^{2} (2\pi f)^{2}}},
+	\end{empheq} 
+	ergibt sich der Regressionsparameter zu
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{equation}
+		\label{eq:Auswertung_Amplitude_Param}
+			c = \SI{8.1(2)e-04}{\second}
+		\end{empheq} 
+	\end{subequations}
+	
+	Der theoretische Verlauf der Amplitude in Abhängigkeit der Frequenz \cref{eq:Theorie_Amplitude} zeigt,
+	dass mit \cref{eq:Auswertung_Amplitude_Param} für die Zeitkonstante $ RC $ des RC-Gliedes  
+		\begin{empheq}{equation}
+			RC = c = \SI{8.1(2)e-04}{\second}
+		\end{empheq}	
+	gilt.
+	
+\subsection{Messung der Frequenzabhängigkeit der Phasendifferenz\\ zwischen Generator- und Kondensatorspannung}
+
+	Die in Abhängigkeit von der Frequenz aufgenommenen Messwerte für die Phasendifferenz zwischen Generator-
+	und Kondensatorspannung $ U_{G}(t)\ \text{bzw.}\ U_{C}(t) $ sind in \cref{tab:Auswertung_Phasendifferenz}
+	zu finden.
+	
+	\input{Daten/Tabelle_Phasendifferenz.tex}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.75]{Grafiken/Phasendifferenz.pdf}
+		\caption{Phasendifferenz in Abhängigkeit der Frequenz mit entsprechender Regressionskurve}
+		\label{fig:Auswertung_Phasendifferenz}
+	\end{figure}
+	
+	Die mit einer Funktion der Form
+	\begin{empheq}{equation}
+		\varphi(f) = \arctan(d\cdot 2\pi f)
+	\end{empheq}
+	durchgeführte Regression der in \cref{fig:Auswertung_Phasendifferenz} dargestellten Messwerte
+	liefert den Regressionsparameter
+	\addtocounter{equation}{-1}
+ 	\begin{subequations}
+		\begin{empheq}{equation}
+			d =\SI{8.2(8)e-04}{\second}.
+		\end{empheq}
+ 	\end{subequations}
+	
+	Aus diesem lässt sich wiederum, durch Vergleich mit dem theoretischen Verlauf der Phasendifferenz 
+	\cref{eq:Theorie_Phasendiffernez} die Zeitkonstante $ RC $ des RC-Gliedes zu
+		\begin{empheq}{equation}
+			RC = d =\SI{8.2(8)e-04}{\second}.
+		\end{empheq}
+	
+	
+	
+\subsection{Darstellung der Kondensatorspannungsamplitude in\\ Abhängigkeit der Frequenz und der Phasendifferenz }
+
+	Durch das Einsetzten der Gleichungen für die Frequenzabhängigkeit der Amplitude und Phasendifferenz 
+	\cref{eq:Theorie_Amplitude} bzw. \cref{eq:Theorie_Phasendiffernz} in \cref{eq:Theorie_Amplitude_Phase}
+	ergibt sich der Zusammenhang zwischen normierter Amplitude und Phasendifferenz zu:
+	\begin{empheq}{align}
+		\dfrac{A(\omega)}{U_{0}} &= -\dfrac{\sin(\arctan(-\omega RC))}{\omega RC} \nonumber\\
+		 &= \dfrac{\sin(\arctan(\omega RC))}{\omega RC} \nonumber\\
+		 &= \dfrac{\omega RC}{\sqrt{1 + (\omega RC)^{2}} \omega RC} \nonumber\\
+		 &= \dfrac{1}{\sqrt{1 + (\omega RC)^{2}}} \nonumber\\
+		 &= \cos(\arctan(-\omega RC)) \nonumber\\
+		 \label{eq:Auswertung_Amplitude_Phase}
+		\dfrac{A(\omega)}{U_{0}} &= \cos(\varphi(\omega))  
+	\end{empheq}
+	 
+	Mit dieser Gleichung erhält man den in \cref{fig:Auswertung_Amplitude_Phase} dargestellten Verlauf.
+	Die ebenso eingezeichneten Messwerte sind \cref{tab:Auswertung_Amplitude} und 
+	\ref{tab:Auswertung_Phasendifferenz} entnommen.
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.5]{Grafiken/Amplitude_Polar.pdf}
+		\caption{Verlauf der normierten Amplitude in Abhängigkeit von der Phasendifferenz}
+		\label{fig:Auswertung_Amplitude_Phase}
+	\end{figure}
+	 
+\subsection{Das RC-Glied als Integrator}
+	
+	In den folgenden Abbildungen sind die aufgenommen Spannungsverläufe der Sinus-, Dreieck- und Rechteckspannung
+	und dem jeweiligen Spannungsverlauf $U_{C}$ der Kondensatorspannung dargestellt.
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/Integrator_Sinus.jpg}
+		\caption{Integration des Sinusspannung}
+		\label{fig:Auswertung_Integrator_Sinus}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/Integrator_Dreieck.jpg}
+		\caption{Integration des Dreieckspannung}
+		\label{fig:Auswertung_Integrator_Dreieck}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/Integrator_Rechteck.jpg}
+		\caption{Integration der Rechteckspannung}
+		\label{fig:Auswertung_Integrator_Rechteck}
+	\end{figure}
