@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.constants as const
 from scipy.optimize import curve_fit
+from scipy import signal
 from sympy import *
 import uncertainties as unc
 from uncertainties import ufloat
@@ -210,4 +211,52 @@ if PRINT:
 #
 #    f.close()
 
+### Erstellen der Spannungsbilder
 
+
+plt.clf()
+plt.grid()
+plt.xlim(-2, 2)
+plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
+plt.yticks((-1, 0, 1), ("-A", "0", "A"))
+plt.ylim(-2, 2)
+t = np.linspace(-10, 10, 1000, endpoint=False)
+plt.plot(t, signal.square(np.pi * t), label="Rechteckspannung $f_{r}(t)$")
+plt.legend(loc="best")
+plt.tight_layout()
+
+plt.savefig("Grafiken/RechteckSpannung.pdf")
+#
+plt.clf()
+plt.grid()
+plt.xlim(-2, 2)
+plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
+plt.yticks((-1, 0, 1), ("-A", "0", "A"))
+plt.ylim(-2, 2)
+t05 = np.linspace(-2, -1.5, 1000)
+t1 = np.linspace(-1.5, -0.5, 1000)
+t2 = np.linspace(-0.5, 0.5, 1000)
+t3 = np.linspace(0.5, 1.5, 1000)
+t4 = np.linspace(1.5, 2, 1000)
+plt.plot(t05, 4 + (2 * t05), color="blue")
+plt.plot(t1, -2 - (2 * t1), color="blue")
+plt.plot(t2, 2*t2, color="blue", label="Dreieckspannung $f_{d}(t)$")
+plt.plot(t3, 2-(2 * t3), color="blue")
+plt.plot(t4, 2 * t4 - 4, color="blue")
+plt.legend(loc="best")
+plt.tight_layout()
+
+plt.savefig("Grafiken/DreieckSpannung.pdf")
+#
+#plt.clf()
+#plt.grid()
+#plt.xlim(-2, 2)
+#plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
+#plt.yticks((-1, 0, 1), ("-A", "0", "A"))
+#plt.ylim(-2, 2)
+#t = np.linspace(-10, 10, 1000, endpoint=False)
+#plt.plot(t, signal.sawtooth(np.pi * t + np.pi), label="Sägezahnspannung $f_{s}(t)$")
+#plt.legend(loc="best")
+#plt.tight_layout()
+#
+#plt.savefig("Grafiken/SaegezahnSpannung.pdf")

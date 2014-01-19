@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  19 JAN 2014 02:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  19 JAN 2014 15:15
 entering extended mode
 **Protokoll.tex
 
@@ -2062,8 +2062,26 @@ Package pdftex.def Info: Grafiken/Entladen.jpg used on input line 13.
 Daten/Tabelle_Entladen.tex"
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 15.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+)
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.24 	\end{empheq}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.24 	\end{empheq}
@@ -2084,6 +2102,23 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 48.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 48.
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.53 	\end{empheq}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxatio
 n/Grafiken/Entladung.pdf>]
 
@@ -2106,6 +2141,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Reference `eq:Theorie_Amplitude' on page 1 undefined on input li
 ne 88.
+
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.92 		\end{empheq}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [3pdfTeX warning (ext4): destination with the same identifier (name{equation.0.
 4}) has been already used, duplicate ignored
@@ -2138,11 +2190,45 @@ Package pdftex.def Info: Grafiken/Phasendifferenz.pdf used on input line 104.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.119 		\end{empheq}
+                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxatio
 n/Grafiken/Amplitude.pdf>]
 
 LaTeX Warning: Reference `eq:Theorie_Phasendiffernez' on page 1 undefined on in
 put line 123.
+
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.126 		\end{empheq}
+                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [5pdfTeX warning (ext4): destination with the same identifier (name{equation.0.
 6}) has been already used, duplicate ignored
@@ -2180,6 +2266,23 @@ Overfull \hbox (9.23454pt too wide) in paragraph at lines 158--160
 ungs-ver-l�u-fe der Sinus-, Dreieck-
  []
 
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.160 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [6 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxatio
 n/Grafiken/Amplitude_Polar.pdf>]
 <Grafiken/Integrator_Sinus.jpg, id=381, 256.96pt x 192.72pt>
@@ -2204,21 +2307,92 @@ File: Grafiken/Integrator_Rechteck.jpg Graphic file (type jpg)
 Package pdftex.def Info: Grafiken/Integrator_Rechteck.jpg used on input line 17
 7.
 (pdftex.def)             Requested size: 179.87076pt x 134.90306pt.
-) [7 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxat
-ion/Grafiken/Integrator_Sinus.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerP
-raktikum/PraktikumRepo/Relaxation/Grafiken/Integrator_Dreieck.jpg> <D:/Eigene D
-ateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxation/Grafiken/Inte
-grator_Rechteck.jpg>]
+)
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.24 	\newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxatio
+n/Grafiken/Integrator_Sinus.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPra
+ktikum/PraktikumRepo/Relaxation/Grafiken/Integrator_Dreieck.jpg> <D:/Eigene Dat
+eien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxation/Grafiken/Integr
+ator_Rechteck.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
-Latex/Fehlerrechnung.tex") [8]
+Latex/Fehlerrechnung.tex")
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.28 	\newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
-Latex/Diskussion.tex") [9]
+Latex/Diskussion.tex")
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.32 	\newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 34.
  (D:\Programme\MiKTeX\tex\latex\lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 AED: lastpage setting LastPage
+! Undefined control sequence.
+<argument> \VN \,\VNz 
+                      
+l.35 \end{document}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (28.0pt): 
+ Make it at least 38.43546pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [10]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
@@ -2240,7 +2414,7 @@ Package logreq Info: Writing requests to 'Protokoll.run.xml'.
 Here is how much of TeX's memory you used:
  34841 strings out of 493921
  661404 string characters out of 3150494
- 1076964 words of memory out of 3000000
+ 1076972 words of memory out of 3000000
  37378 multiletter control sequences out of 15000+200000
  115382 words of font info for 101 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
@@ -2260,7 +2434,7 @@ eX/fonts/type1/public/lm/lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lm
 ri12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/Mi
 KTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm
 /lmtt12.pfb><D:/Programme/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on Protokoll.pdf (11 pages, 803445 bytes).
+Output written on Protokoll.pdf (11 pages, 803444 bytes).
 PDF statistics:
  482 PDF objects out of 1000 (max. 8388607)
  49 named destinations out of 1000 (max. 500000)

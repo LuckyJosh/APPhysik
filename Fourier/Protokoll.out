@@ -1,9 +1,13 @@
 \BOOKMARK [1][-]{section.1}{Einleitung}{}% 1
 \BOOKMARK [1][-]{section.2}{Theorie}{}% 2
-\BOOKMARK [1][-]{section.3}{Durchf\374hrung}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Fourier-Analyse}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Fourier-Synthese}{section.3}% 5
-\BOOKMARK [1][-]{section.4}{Auswertung}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Fourier-Analyse}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Fourier-Synthese}{section.4}% 8
-\BOOKMARK [1][-]{section.5}{Diskussion}{}% 9
+\BOOKMARK [1][-]{section.3}{Berechnung der Fourierkoeffizienten}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Rechteckspannung}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Dreieckspannung}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{S\344gezahnspannung}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Durchf\374hrung}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{Fourier-Analyse}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.2}{Fourier-Synthese}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Auswertung}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Fourier-Analyse}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{Fourier-Synthese}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Diskussion}{}% 13

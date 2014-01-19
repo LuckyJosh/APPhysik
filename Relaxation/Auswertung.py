@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.constants as const
 from scipy.optimize import curve_fit
+from scipy import signal
 from sympy import *
 import uncertainties as unc
 from uncertainties import ufloat
@@ -250,3 +251,7 @@ plt.savefig("Grafiken/Amplitude_Polar.pdf")
 #        label="Auswertung_Phasendifferenz"))
 #
 #File.close()
+
+
+
+

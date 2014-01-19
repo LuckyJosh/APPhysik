@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  16 JAN 2014 00:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  19 JAN 2014 20:23
 entering extended mode
 **Protokoll.tex
 
@@ -16,8 +16,8 @@ ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\globales\la
-tex\Preamble.tex" (D:\Programme\MiKTeX\tex\latex\base\article.cls
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_globales\l
+atex\Preamble.tex" (D:\Programme\MiKTeX\tex\latex\base\article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (D:\Programme\MiKTeX\tex\latex\base\size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
@@ -622,8 +622,8 @@ Package csquotes Info: Redefining alias 'german' -> 'german/quotes'.
 \f@ncyO@olf=\skip59
 \f@ncyO@orf=\skip60
 )
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\globales\la
-tex\SeitenLayout.tex") (D:\Programme\MiKTeX\tex\latex\amsmath\amsmath.sty
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_globales\l
+atex\SeitenLayout.tex") (D:\Programme\MiKTeX\tex\latex\amsmath\amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip61
 
@@ -2034,8 +2034,8 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 3.
 (D:\Programme\MiKTeX\tex\latex\lm\ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\globales\la
-tex\Deckblatt.tex" [1
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_globales\l
+atex\Deckblatt.tex" [1
 
 {C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
@@ -2045,28 +2045,69 @@ ex/Theorie.tex")pdfTeX warning (ext4): destination with the same identifier (na
 me{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.16 \newpage
+l.10 \newpage
               [1]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
+ex/Aufgaben.tex"
+<Grafiken/RechteckSpannung.pdf, id=85, 470.65837pt x 308.05087pt>
+File: Grafiken/RechteckSpannung.pdf Graphic file (type pdf)
+
+<use Grafiken/RechteckSpannung.pdf>
+Package pdftex.def Info: Grafiken/RechteckSpannung.pdf used on input line 6.
+(pdftex.def)             Requested size: 235.3286pt x 154.02505pt.
+
+<Grafiken/DreieckSpannung.pdf, id=86, 470.65837pt x 308.05087pt>
+File: Grafiken/DreieckSpannung.pdf Graphic file (type pdf)
+
+<use Grafiken/DreieckSpannung.pdf>
+Package pdftex.def Info: Grafiken/DreieckSpannung.pdf used on input line 13.
+(pdftex.def)             Requested size: 235.3286pt x 154.02505pt.
+
+<Grafiken/SaegezahnSpannung.pdf, id=87, 470.65837pt x 308.05087pt>
+File: Grafiken/SaegezahnSpannung.pdf Graphic file (type pdf)
+
+<use Grafiken/SaegezahnSpannung.pdf>
+Package pdftex.def Info: Grafiken/SaegezahnSpannung.pdf used on input line 21.
+(pdftex.def)             Requested size: 235.3286pt x 154.02505pt.
+ [2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/
+Grafiken/RechteckSpannung.pdf> <D:/Eigene Dateien/Studium/Physik/AnfängerPrakt
+ikum/PraktikumRepo/Fourier/Grafiken/DreieckSpannung.pdf
+
+pdfTeX warning: pdflatex.exe (file D:/Eigene Dateien/Studium/Physik/AnfängerPr
+aktikum/PraktikumRepo/Fourier/Grafiken/DreieckSpannung.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/Gr
+afiken/SaegezahnSpannung.pdf
+
+pdfTeX warning: pdflatex.exe (file D:/Eigene Dateien/Studium/Physik/AnfängerPr
+aktikum/PraktikumRepo/Fourier/Grafiken/SaegezahnSpannung.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
+Overfull \hbox (25.28288pt too wide) in paragraph at lines 74--74
+[] 
+ []
+
+[3]) [4]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
 ex/Durchführung.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
-ex/Auswertung.tex" [2]
+ex/Auswertung.tex" [5]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
 en/Tabelle_Analyse1.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
 en/Tabelle_Analyse2.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
-en/Tabelle_Analyse3.tex") [3]
+en/Tabelle_Analyse3.tex") [6]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
 en/Tabelle_Synthese.tex")
-<Grafiken/Rechteckspannung.jpg, id=97, 401.5pt x 240.9pt>
+<Grafiken/Rechteckspannung.jpg, id=258, 401.5pt x 240.9pt>
 File: Grafiken/Rechteckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Rechteckspannung.jpg>
 Package pdftex.def Info: Grafiken/Rechteckspannung.jpg used on input line 53.
 (pdftex.def)             Requested size: 321.20042pt x 192.72025pt.
 
-<Grafiken/Dreieckspannung.jpg, id=98, 401.5pt x 240.9pt>
+<Grafiken/Dreieckspannung.jpg, id=259, 401.5pt x 240.9pt>
 File: Grafiken/Dreieckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Dreieckspannung.jpg>
@@ -2076,7 +2117,7 @@ Package pdftex.def Info: Grafiken/Dreieckspannung.jpg used on input line 60.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Saegezahnspannung.jpg, id=99, 401.5pt x 240.9pt>
+<Grafiken/Saegezahnspannung.jpg, id=260, 401.5pt x 240.9pt>
 File: Grafiken/Saegezahnspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Saegezahnspannung.jpg>
@@ -2086,8 +2127,8 @@ Package pdftex.def Info: Grafiken/Saegezahnspannung.jpg used on input line 67.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier
-/Grafiken/Rechteckspannung.jpg>] [5 <D:/Eigene Dateien/Studium/Physik/Anfänger
+) [7 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier
+/Grafiken/Rechteckspannung.jpg>] [8 <D:/Eigene Dateien/Studium/Physik/Anfänger
 Praktikum/PraktikumRepo/Fourier/Grafiken/Dreieckspannung.jpg> <D:/Eigene Dateie
 n/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/Grafiken/Saegezahnspa
 nnung.jpg>]
@@ -2102,48 +2143,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--27
 
  []
 
-) [6]
+) [9]
 
-LaTeX Warning: Empty bibliography on input line 34.
+LaTeX Warning: Empty bibliography on input line 31.
 
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
 
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Pro
 tokoll.aux"
 Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: 7C3DE30F1FDE4FF10513E0310B72A521;494.
+(rerunfilecheck)             Checksum: 3CF142E1BEDD8AAFC251EB8BB0882FB6;769.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34542 strings out of 493921
- 655303 string characters out of 3150494
- 1076279 words of memory out of 3000000
- 37122 multiletter control sequences out of 15000+200000
+ 34596 strings out of 493921
+ 656536 string characters out of 3150494
+ 1085695 words of memory out of 3000000
+ 37151 multiletter control sequences out of 15000+200000
  78608 words of font info for 67 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 67i,16n,71p,880b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{D:/Programme/MiKTeX/fonts/
+ 67i,18n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{D:/Programme/MiKTeX/fonts/
 enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
-c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{D:/Programme/MiKTeX/fo
-nts/enc/dvips/lm/lm-rm.enc}<D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{D:/Programme/MiKTeX/fonts/
+enc/dvips/lm/lm-mathex.enc}<D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fo
 nts/type1/public/lm/lmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmex
 10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><D:/Programme/MiKT
 eX/fonts/type1/public/lm/lmmi6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
 mmi8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/Programme/MiK
 TeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/
-lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/Mi
-KTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Protokoll.pdf (7 pages, 305770 bytes).
+lmr6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr8.pfb><D:/Programme/MiKT
+eX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/
+lmsy8.pfb>
+Output written on Protokoll.pdf (10 pages, 381792 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 100 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 147 words of extra memory for PDF output out of 10000 (max. 10000000)
 
