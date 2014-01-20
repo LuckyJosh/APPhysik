@@ -23,7 +23,7 @@ from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
-sys.path.append("..\globales\python")
+sys.path.append("..\_globales\python")
 import latextables as lxtabs
 
 
@@ -233,30 +233,26 @@ plt.xlim(-2, 2)
 plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
 plt.yticks((-1, 0, 1), ("-A", "0", "A"))
 plt.ylim(-2, 2)
-t05 = np.linspace(-2, -1.5, 1000)
-t1 = np.linspace(-1.5, -0.5, 1000)
-t2 = np.linspace(-0.5, 0.5, 1000)
-t3 = np.linspace(0.5, 1.5, 1000)
-t4 = np.linspace(1.5, 2, 1000)
-plt.plot(t05, 4 + (2 * t05), color="blue")
-plt.plot(t1, -2 - (2 * t1), color="blue")
-plt.plot(t2, 2*t2, color="blue", label="Dreieckspannung $f_{d}(t)$")
-plt.plot(t3, 2-(2 * t3), color="blue")
-plt.plot(t4, 2 * t4 - 4, color="blue")
+t1 = np.linspace(-2, -1, 1000)
+t2 = np.linspace(-1, 1, 1000)
+t3= np.linspace(1, 2, 1000)
+plt.plot(t1, -3 - 2 * t1, color="blue")
+plt.plot(t2, 1- 2 * np.abs(t2), color="blue", label="Dreieckspannung $f_{d}(t)$")
+plt.plot(t3, -3 + 2 * t3, color="blue")
 plt.legend(loc="best")
 plt.tight_layout()
 
 plt.savefig("Grafiken/DreieckSpannung.pdf")
-#
-#plt.clf()
-#plt.grid()
-#plt.xlim(-2, 2)
-#plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
-#plt.yticks((-1, 0, 1), ("-A", "0", "A"))
-#plt.ylim(-2, 2)
-#t = np.linspace(-10, 10, 1000, endpoint=False)
-#plt.plot(t, signal.sawtooth(np.pi * t + np.pi), label="Sägezahnspannung $f_{s}(t)$")
-#plt.legend(loc="best")
-#plt.tight_layout()
-#
-#plt.savefig("Grafiken/SaegezahnSpannung.pdf")
+
+plt.clf()
+plt.grid()
+plt.xlim(-2, 2)
+plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
+plt.yticks((-1, 0, 1), ("-A", "0", "A"))
+plt.ylim(-2, 2)
+t = np.linspace(-10, 10, 1000, endpoint=False)
+plt.plot(t, signal.sawtooth(np.pi * t + np.pi), label="Sägezahnspannung $f_{s}(t)$")
+plt.legend(loc="best")
+plt.tight_layout()
+
+plt.savefig("Grafiken/SaegezahnSpannung.pdf")

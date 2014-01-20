@@ -3,14 +3,14 @@ der in den Abbildungen \ref{fig:Aufgaben_Rechteck} bis \ref{fig:Aufgaben_Sägeza
 berechnet.
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[scale=0.5]{Grafiken/RechteckSpannung.pdf}
+		\includegraphics[scale=0.35]{Grafiken/RechteckSpannung.pdf}
 		\caption{Für die Berechnung genutzte Rechteckspannung}
 		\label{fig:Aufgaben_Rechteck}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[scale=0.5]{Grafiken/DreieckSpannung.pdf}
+		\includegraphics[scale=0.35]{Grafiken/DreieckSpannung.pdf}
 		\caption{Für die Berechnung genutzte Dreieckspannung}
 		\label{fig:Aufgaben_Dreieck}
 	\end{figure}
@@ -18,7 +18,7 @@ berechnet.
 
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[scale=0.5]{Grafiken/SaegezahnSpannung.pdf}
+		\includegraphics[scale=0.35]{Grafiken/SaegezahnSpannung.pdf}
 		\caption{Für die Berechnung genutzte Sägezahnspannung}
 		\label{fig:Aufgaben_Sägezahn}
 	\end{figure}
@@ -53,29 +53,25 @@ berechnet.
 		Die Fourierkoeffizienten der in \cref{fig:Aufgaben_Dreieck} dargestellten Spannung
 		mit der Definition
 		\begin{empheq}{equation}
-			f_{d}(t) = \begin{cases}
-						\dfrac{2A}{T}t \ &, \ - \frac{T}{2} < t < \frac{T}{2}\\ 	
-						2A - \dfrac{2A}{T}t \ &, \ - T < t < -\frac{T}{2} \wedge \frac{T}{2} < t < T 
-					\end{cases}
+			f_{d}(t) = A - \dfrac{2A}{T} \envert{t}\ , \ -T < t < T
 		\end{empheq} 
 		berechnen sich zu:
 		\begin{empheq}{align}
-			a_{0} &= \dfrac{1}{T} \int\limits_{-T}^{T} f(t) \dif t = 0,\ \text{da}\ f(t)\ \text{ungerade}\\
-			a_{n} &= \dfrac{1}{T} \int\limits_{-T}^{T} f(t) \cdot \cos(\frac{n\pi}{T} t) \dif t = 0,\ \text{da}\ f(t)\ \text{ungerade}
+			a_{0} &= \dfrac{1}{T} \int\limits_{-T}^{T} f(t) \dif t = 0,\ \text{in \cref{fig:Aufgaben_Dreieck} ersichtlich}\\
+			b_{n} &= \dfrac{1}{T} \int\limits_{-T}^{T} f(t) \cdot \sin(\frac{n\pi}{T} t) \dif t = 0,\ \text{da}\ f(t)\ \text{gerade} 
 		\end{empheq}
 		\begin{empheq}{align*}
-			b_{n} &= \dfrac{1}{T} \int\limits_{-T}^{T} f(t) \cdot \sin(\frac{n\pi}{T} t) \dif t \nonumber\\
-		    &= \dfrac{2}{T} \int\limits_{0}^{T} f(t) \cdot \sin(\frac{n\pi}{T} t) \dif t \nonumber\\
-			&= \dfrac{2}{T}\del{ \dfrac{2A}{T} \int\limits_{0}^{\frac{T}{2}} t \cdot \sin(\frac{n\pi}{T} t)\dif t
-			         + 2A \int\limits_{\frac{T}{2}}^{T} \sin(\frac{n\pi}{T} t) \dif t 
-			         - \dfrac{2A}{T}\int\limits_{\frac{T}{2}}^{T} t \cdot \sin(\frac{n\pi}{T} t) \dif t}\nonumber\\
-			&= \dfrac{2}{T}\del{\dfrac{2A}{T}\del{\dfrac{T^{2}}{n\pi}\cos(n\pi) - \dfrac{T^{2}}{n\pi}\cos\!\del{\frac{n\pi}{2}} + \dfrac{2T^{2}}{(n\pi)^{2}}\sin\!\del{\frac{n\pi}{2}}} + \dfrac{2AT}{n\pi}\del{\cos\!\del{\frac{n\pi}{2}} - \cos(n\pi)}} \nonumber \\
-			&= \dfrac{8A}{(n\pi)^{2}}\sin\!\del{\frac{n\pi}{2}}  \\
+			a_{n} &= \dfrac{1}{T} \int\limits_{-T}^{T}  \del{A - \dfrac{2A}{T} \envert{t}} \cdot \cos(\frac{n\pi}{T} t) \dif t \nonumber\\
+			&= \dfrac{2}{T} \int\limits_{0}^{T}  \del{A - \dfrac{2A}{T} t} \cdot \cos(\frac{n\pi}{T} t) \dif t \nonumber\\
+			&= \dfrac{2A}{T} \del{ \underbrace{\int\limits_{0}^{T} \cos\!\del{\frac{n\pi}{T}t} \dif t}_{= 0}} - \dfrac{4A}{T^{2}} \del{  \int\limits_{0}^{T} t \cos\!\del{\frac{n\pi}{T}t}\dif t}  \nonumber\\      
+			&= - \dfrac{4A}{T^{2}} \del{\underbrace{\sbr{\dfrac{Tt}{n\pi}\sin\!\del{\frac{n\pi}{T}t} }_{0}^{T}}_{= 0} - \dfrac{T}{n\pi} \int\limits_{0}^{T}  \sin\!\del{\frac{n\pi}{T}t}\dif t}  \nonumber\\      
+			&= - \dfrac{4A}{T^{2}} \del{- \dfrac{T^{2}}{(n\pi)^{2}} \sbr{-\cos\!\del{\frac{n\pi}{T}t}}_{0}^{T}}  \nonumber\\      
+			&= - \dfrac{4A}{(n\pi)^{2}} \del{\cos\!\del{n\pi} - 1}  \nonumber\\      
 			\end{empheq}
 			
 			\begin{empheq}{align}
-			b_{n} &=  \begin{cases}
-					\dfrac{8A}{(n\pi)^{2}}\ &,\ n \mod{2} \neq 0\ (\text{alternierendes Vorzeichen})\\
+			a_{n} &=  \begin{cases}
+					\dfrac{8A}{(n\pi)^{2}}\ &,\ n \mod{2} \neq 0\ \\
 					0 &,\ n \mod{2} = 0 \\
 				\end{cases}   
 		\end{empheq}

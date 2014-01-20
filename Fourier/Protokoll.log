@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  19 JAN 2014 20:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  20 JAN 2014 00:53
 entering extended mode
 **Protokoll.tex
 
@@ -2048,27 +2048,26 @@ me{page.1}) has been already used, duplicate ignored
 l.10 \newpage
               [1]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
-ex/Aufgaben.tex"
-<Grafiken/RechteckSpannung.pdf, id=85, 470.65837pt x 308.05087pt>
+ex/Aufgaben.tex" <Grafiken/RechteckSpannung.pdf, id=85, 578.16pt x 433.62pt>
 File: Grafiken/RechteckSpannung.pdf Graphic file (type pdf)
 
 <use Grafiken/RechteckSpannung.pdf>
 Package pdftex.def Info: Grafiken/RechteckSpannung.pdf used on input line 6.
-(pdftex.def)             Requested size: 235.3286pt x 154.02505pt.
+(pdftex.def)             Requested size: 202.35902pt x 151.76927pt.
 
-<Grafiken/DreieckSpannung.pdf, id=86, 470.65837pt x 308.05087pt>
+<Grafiken/DreieckSpannung.pdf, id=86, 578.16pt x 433.62pt>
 File: Grafiken/DreieckSpannung.pdf Graphic file (type pdf)
 
 <use Grafiken/DreieckSpannung.pdf>
 Package pdftex.def Info: Grafiken/DreieckSpannung.pdf used on input line 13.
-(pdftex.def)             Requested size: 235.3286pt x 154.02505pt.
+(pdftex.def)             Requested size: 202.35902pt x 151.76927pt.
 
-<Grafiken/SaegezahnSpannung.pdf, id=87, 470.65837pt x 308.05087pt>
+<Grafiken/SaegezahnSpannung.pdf, id=87, 578.16pt x 433.62pt>
 File: Grafiken/SaegezahnSpannung.pdf Graphic file (type pdf)
 
 <use Grafiken/SaegezahnSpannung.pdf>
 Package pdftex.def Info: Grafiken/SaegezahnSpannung.pdf used on input line 21.
-(pdftex.def)             Requested size: 235.3286pt x 154.02505pt.
+(pdftex.def)             Requested size: 202.35902pt x 151.76927pt.
  [2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/
 Grafiken/RechteckSpannung.pdf> <D:/Eigene Dateien/Studium/Physik/AnfängerPrakt
 ikum/PraktikumRepo/Fourier/Grafiken/DreieckSpannung.pdf
@@ -2082,32 +2081,27 @@ afiken/SaegezahnSpannung.pdf
 pdfTeX warning: pdflatex.exe (file D:/Eigene Dateien/Studium/Physik/AnfängerPr
 aktikum/PraktikumRepo/Fourier/Grafiken/SaegezahnSpannung.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
->]
-Overfull \hbox (25.28288pt too wide) in paragraph at lines 74--74
-[] 
- []
-
-[3]) [4]
+>] [3] [4]) [5]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
 ex/Durchführung.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
-ex/Auswertung.tex" [5]
+ex/Auswertung.tex" [6]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
 en/Tabelle_Analyse1.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
 en/Tabelle_Analyse2.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
-en/Tabelle_Analyse3.tex") [6]
+en/Tabelle_Analyse3.tex") [7]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Dat
 en/Tabelle_Synthese.tex")
-<Grafiken/Rechteckspannung.jpg, id=258, 401.5pt x 240.9pt>
+<Grafiken/Rechteckspannung.jpg, id=278, 401.5pt x 240.9pt>
 File: Grafiken/Rechteckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Rechteckspannung.jpg>
 Package pdftex.def Info: Grafiken/Rechteckspannung.jpg used on input line 53.
 (pdftex.def)             Requested size: 321.20042pt x 192.72025pt.
 
-<Grafiken/Dreieckspannung.jpg, id=259, 401.5pt x 240.9pt>
+<Grafiken/Dreieckspannung.jpg, id=279, 401.5pt x 240.9pt>
 File: Grafiken/Dreieckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Dreieckspannung.jpg>
@@ -2117,7 +2111,7 @@ Package pdftex.def Info: Grafiken/Dreieckspannung.jpg used on input line 60.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Saegezahnspannung.jpg, id=260, 401.5pt x 240.9pt>
+<Grafiken/Saegezahnspannung.jpg, id=280, 401.5pt x 240.9pt>
 File: Grafiken/Saegezahnspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Saegezahnspannung.jpg>
@@ -2127,8 +2121,8 @@ Package pdftex.def Info: Grafiken/Saegezahnspannung.jpg used on input line 67.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [7 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier
-/Grafiken/Rechteckspannung.jpg>] [8 <D:/Eigene Dateien/Studium/Physik/Anfänger
+) [8 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier
+/Grafiken/Rechteckspannung.jpg>] [9 <D:/Eigene Dateien/Studium/Physik/Anfänger
 Praktikum/PraktikumRepo/Fourier/Grafiken/Dreieckspannung.jpg> <D:/Eigene Dateie
 n/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/Grafiken/Saegezahnspa
 nnung.jpg>]
@@ -2143,7 +2137,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--27
 
  []
 
-) [9]
+) [10]
 
 LaTeX Warning: Empty bibliography on input line 31.
 
@@ -2163,29 +2157,28 @@ Package rerunfilecheck Info: File `Protokoll.out' has not changed.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34596 strings out of 493921
- 656536 string characters out of 3150494
- 1085695 words of memory out of 3000000
+ 34597 strings out of 493921
+ 656543 string characters out of 3150494
+ 1086700 words of memory out of 3000000
  37151 multiletter control sequences out of 15000+200000
  78608 words of font info for 67 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 67i,18n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{D:/Programme/MiKTeX/fonts/
-enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
-c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{D:/Programme/MiKTeX/fonts/
-enc/dvips/lm/lm-mathex.enc}<D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+ 67i,24n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fo
+nts/enc/dvips/lm/lm-mathsy.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.en
+c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{D:/Programme/MiKTeX/fo
+nts/enc/dvips/lm/lm-rm.enc}<D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fo
 nts/type1/public/lm/lmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmex
 10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><D:/Programme/MiKT
 eX/fonts/type1/public/lm/lmmi6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
 mmi8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/Programme/MiK
 TeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/
-lmr6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr8.pfb><D:/Programme/MiKT
-eX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/
-lmsy8.pfb>
-Output written on Protokoll.pdf (10 pages, 381792 bytes).
+lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/Mi
+KTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Protokoll.pdf (11 pages, 370143 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 367 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
  147 words of extra memory for PDF output out of 10000 (max. 10000000)
 
