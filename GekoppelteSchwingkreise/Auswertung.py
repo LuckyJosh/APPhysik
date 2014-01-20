@@ -22,7 +22,7 @@ from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
-sys.path.append("..\globales\python")
+sys.path.append("..\_globales\python")
 import latextables as lxtabs
 
 
@@ -185,7 +185,7 @@ uX_m += f_min
 uY_p *= dy
 uY_m *= dy
 
-Xrange = np.arange(f_min, 2 * f_max, 200)
+Xrange = np.arange(f_min, 2 * f_max, 20)
 
 Ip = Strom(12, uX_p * 2 * const.pi, uC, uC3, R, uL)
 #Ip = Strom(12, uX_p * const.pi, uC, uC3, R, uL)
@@ -193,8 +193,26 @@ Im = Strom(12, uX_m * 2 * const.pi, uC, uC3, R, uL)
 Ip_calc = uY_p/R
 Im_calc = uY_m/R
 
+n = 1
 for c in uC3:
-    plt.plot(Xrange, noms(Strom(4, Xrange * 2 * const.pi, uC, c, R, uL)))
+    plt.clf()
+    plt.xlabel("Frequenz $f\,[\mathrm{kHz}]$")
+    plt.xlim(2e04, 6e04)
+    plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                       (lambda x, _: float(x * 1e-03)))
+    plt.ylabel("Stromstärke $I\,[\mathrm{A}]$")
+    plt.plot(Xrange, noms(Strom(12, Xrange * 2 * const.pi, uC, c, R, uL)))
+    plt.savefig("Grafiken/Stromverlauf{}.pdf".format(str(n)))
+    n += 1
+
+plt.clf()
+plt.xlabel("Frequenz $f\,[\mathrm{kHz}]$")
+plt.xlim(2e04, 6e04)
+plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                    (lambda x, _: float(x * 1e-03)))
+plt.ylabel("Stromstärke $I\,[\mathrm{A}]$")
+plt.plot(Xrange, noms(Strom(12, Xrange * 2 * const.pi, uC, uC3[0], R, uL)))
+
 
 
 ## Print Funktionen

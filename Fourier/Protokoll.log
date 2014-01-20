@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  20 JAN 2014 00:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  20 JAN 2014 16:58
 entering extended mode
 **Protokoll.tex
 
@@ -2098,14 +2098,17 @@ en/Tabelle_Synthese.tex")
 File: Grafiken/Rechteckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Rechteckspannung.jpg>
-Package pdftex.def Info: Grafiken/Rechteckspannung.jpg used on input line 53.
+Package pdftex.def Info: Grafiken/Rechteckspannung.jpg used on input line 61.
 (pdftex.def)             Requested size: 321.20042pt x 192.72025pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <Grafiken/Dreieckspannung.jpg, id=279, 401.5pt x 240.9pt>
 File: Grafiken/Dreieckspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Dreieckspannung.jpg>
-Package pdftex.def Info: Grafiken/Dreieckspannung.jpg used on input line 60.
+Package pdftex.def Info: Grafiken/Dreieckspannung.jpg used on input line 68.
 (pdftex.def)             Requested size: 321.20042pt x 192.72025pt.
 
 
@@ -2115,17 +2118,21 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Grafiken/Saegezahnspannung.jpg Graphic file (type jpg)
 
 <use Grafiken/Saegezahnspannung.jpg>
-Package pdftex.def Info: Grafiken/Saegezahnspannung.jpg used on input line 67.
+Package pdftex.def Info: Grafiken/Saegezahnspannung.jpg used on input line 75.
 (pdftex.def)             Requested size: 321.20042pt x 192.72025pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [8 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier
-/Grafiken/Rechteckspannung.jpg>] [9 <D:/Eigene Dateien/Studium/Physik/Anfänger
-Praktikum/PraktikumRepo/Fourier/Grafiken/Dreieckspannung.jpg> <D:/Eigene Dateie
-n/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/Grafiken/Saegezahnspa
-nnung.jpg>]
+) [8]
+
+LaTeX Warning: Text page 9 contains only floats.
+
+[9 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/G
+rafiken/Rechteckspannung.jpg> <D:/Eigene Dateien/Studium/Physik/AnfängerPrakti
+kum/PraktikumRepo/Fourier/Grafiken/Dreieckspannung.jpg> <D:/Eigene Dateien/Stud
+ium/Physik/AnfängerPraktikum/PraktikumRepo/Fourier/Grafiken/Saegezahnspannung.
+jpg>]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Fourier\Lat
 ex/Diskussion.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--5
@@ -2159,7 +2166,7 @@ Package logreq Info: Writing requests to 'Protokoll.run.xml'.
 Here is how much of TeX's memory you used:
  34597 strings out of 493921
  656543 string characters out of 3150494
- 1086700 words of memory out of 3000000
+ 1086697 words of memory out of 3000000
  37151 multiletter control sequences out of 15000+200000
  78608 words of font info for 67 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
@@ -2176,7 +2183,7 @@ mmi8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/Programme/MiK
 TeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/
 lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/Mi
 KTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Protokoll.pdf (11 pages, 370143 bytes).
+Output written on Protokoll.pdf (11 pages, 370419 bytes).
 PDF statistics:
  367 PDF objects out of 1000 (max. 8388607)
  52 named destinations out of 1000 (max. 500000)

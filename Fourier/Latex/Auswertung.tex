@@ -31,8 +31,16 @@ und der Amplitude $\hat{U} = \SI{2}{\volt}$ zusammensetzt.
 \subsection{Fourier-Synthese}\label{sec:Auswertung_Synthese}
 
 Die für die Fourier-Synthese benötigten Amplituden wurden aus den Koeffizienten \cref{eq:Koeff_Recht} bis \cref{eq:Koeff_Säge}
-bestimmt. Wobei die Amplitude $A$ der zu erzeugenden Spannung jeweils aus der Amplitude der ersten Oberwelle $b_{1} = \SI{0.8}{\volt}$
-berechnet wurde. Man erhält somit die Amplituden $A$:
+bestimmt. Wobei die Amplitude $A$ der zu erzeugenden Spannung jeweils aus dem Koeffizienten der ersten Oberwelle $b_{1} = \SI{0.8}{\volt}$
+berechnet wurde. Die Berechnung sei beispielhaft an der Rechteckspannung gezeigt:   
+\begin{empheq}{align*}
+	b_{n} &= \dfrac{4A_{r}}{n\pi}\ ,\ n = 1\\
+	b_{1}&= \dfrac{4A_{r}}{\pi}\\
+	A_{r} &= b_{1}\dfrac{\pi}{4}\ , \ b_{1} = \SI{0.8}{\volt} \\
+	A_{r} &= \SI{0.2}{\volt}\cdot\pi
+\end{empheq}
+
+Damit ergeben sich die Amplituden $A$ der Koeffizienten zu:
   \begin{subequations}
   	\begin{empheq}{align*}
   	\text{Rechteck:}\qquad A_{r} &= \SI{0.2}{\volt} \cdot \pi \\
