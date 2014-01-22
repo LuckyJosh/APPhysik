@@ -4,7 +4,7 @@ den Messwerten und den vollzogenen Rechnungen gegeben.
 
 
 \subsection{Messung der Zeitkonstante durch Entladung des\\ Kondensators}
-	
+	\label{sec:Auswertung_Entladung}
 	Die in \cref{tab:Auswertung_Entladen} gelisteten Messwerte sind aus dem in \cref{fig:Auswertung_Entladen}
 	dargestellten zeitlichen Verlauf der Kondensatorspannung $ U_{C}(t) $ entnommen.
 	
@@ -49,13 +49,15 @@ den Messwerten und den vollzogenen Rechnungen gegeben.
 	lässt sich zeigen, dass die reziproke Steigung dieser Geraden der Zeitkonstante $ RC $  entspricht.
 	Diese hat, mit der Steigung \cref{eq:Auswertung_Entladung_Steigung} somit den Wert
 	\begin{empheq}{equation}
-		 RC =  \dfrac{1}{a} = \SI{4.7(2)e-04}{\second}
+		 RC =  \dfrac{1}{a} = \SI{4.7(2)e-04}{\second}.
+		 \footnotemark
+		 \label{eq:Auswertung_RC1}
 	\end{empheq}
-	 
+ \footnotetext{Dabei wurde der Fehler mittels \cref{std:RC1} bestimmt.	}
 	 
 	 
 \subsection{Messung der Frequenzabhängigkeit der \\ Kondensatorspannungsamplitude}
-
+\label{sec:Auswertung_Amplitude}
 	In \cref{tab:Auswertung_Amplitude} sind die, in Abhängigkeit der Frequenz $ f_{G} $ der angelegten 
 	Sinusspannung gemessenen, Amplituden der Kondensatorspannung $A(f)$ und die mit $ U_{0} = \SI{80}{\volt} $
 	normierten Amplituden $ \tfrac{A(f)}{U_{0}} $ eingetragen. 
@@ -89,11 +91,12 @@ den Messwerten und den vollzogenen Rechnungen gegeben.
 	dass mit \cref{eq:Auswertung_Amplitude_Param} für die Zeitkonstante $ RC $ des RC-Gliedes  
 		\begin{empheq}{equation}
 			RC = c = \SI{8.1(2)e-04}{\second}
+			\label{eq:Auswertung_RC2}
 		\end{empheq}	
 	gilt.
 	
 \subsection{Messung der Frequenzabhängigkeit der Phasendifferenz\\ zwischen Generator- und Kondensatorspannung}
-
+\label{sec:Auswertung_Phasendifferenz}
 	Die in Abhängigkeit von der Frequenz aufgenommenen Messwerte für die Phasendifferenz zwischen Generator-
 	und Kondensatorspannung $ U_{G}(t)\ \text{bzw.}\ U_{C}(t) $ sind in \cref{tab:Auswertung_Phasendifferenz}
 	zu finden.
@@ -123,12 +126,13 @@ den Messwerten und den vollzogenen Rechnungen gegeben.
 	\cref{eq:Theorie_Phasendiffernez} die Zeitkonstante $ RC $ des RC-Gliedes zu
 		\begin{empheq}{equation}
 			RC = d =\SI{8.2(8)e-04}{\second}.
+			\label{eq:Auswertung_RC3}
 		\end{empheq}
 	
 	
 	
 \subsection{Darstellung der Kondensatorspannungsamplitude in\\ Abhängigkeit der Frequenz und der Phasendifferenz }
-
+\label{sec:Auswertung_Amplitude_Polar}
 	Durch das Einsetzten der Gleichungen für die Frequenzabhängigkeit der Amplitude und Phasendifferenz 
 	\cref{eq:Theorie_Amplitude} bzw. \cref{eq:Theorie_Phasendiffernz} in \cref{eq:Theorie_Amplitude_Phase}
 	ergibt sich der Zusammenhang zwischen normierter Amplitude und Phasendifferenz zu:
@@ -148,33 +152,55 @@ den Messwerten und den vollzogenen Rechnungen gegeben.
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[scale=0.5]{Grafiken/Amplitude_Polar.pdf}
+		\includegraphics[scale=0.6]{Grafiken/Amplitude_Polar.pdf}
 		\caption{Verlauf der normierten Amplitude in Abhängigkeit von der Phasendifferenz}
 		\label{fig:Auswertung_Amplitude_Phase}
 	\end{figure}
 	 
 \subsection{Das RC-Glied als Integrator}
-	
+\label{sec:Auswertung_Integrator}
 	In den folgenden Abbildungen sind die aufgenommen Spannungsverläufe der Sinus-, Dreieck- und Rechteckspannung
 	und dem jeweiligen Spannungsverlauf $U_{C}$ der Kondensatorspannung dargestellt.
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[scale=0.7]{Grafiken/Integrator_Sinus.jpg}
+		\includegraphics[scale=0.8]{Grafiken/Integrator_Sinus.jpg}
 		\caption{Integration des Sinusspannung}
 		\label{fig:Auswertung_Integrator_Sinus}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[scale=0.7]{Grafiken/Integrator_Dreieck.jpg}
+		\includegraphics[scale=0.8]{Grafiken/Integrator_Dreieck.jpg}
 		\caption{Integration des Dreieckspannung}
 		\label{fig:Auswertung_Integrator_Dreieck}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[scale=0.7]{Grafiken/Integrator_Rechteck.jpg}
+		\includegraphics[scale=0.8]{Grafiken/Integrator_Rechteck.jpg}
 		\caption{Integration der Rechteckspannung}
 		\label{fig:Auswertung_Integrator_Rechteck}
 	\end{figure}
+	
+	Durch Integration der Spannungsverläufe ergeben sich die Spannungen:
+	\begin{empheq}{align*}
+		\text{Sinusspannung:} &\int \sin(t) \dif t = cos(t) + C\\
+		\text{Dreieckspannung\footnotemark:} &\int A - \dfrac{2A}{T} \envert{t}  \dif t = \begin{cases}
+			At - \dfrac{A}{T}t^{2} + C\ &,\ -T < t < 0\\    
+			At + \dfrac{A}{T}t^{2} + C\ &,\ 0 < t < T\\    
+		\end{cases} \\ 
+		\addtocounter{footnote}{-1}
+		\text{Rechteckspannung\footnotemark:} &\int \begin{cases}
+							A\ &,\ -T < t < 0\\    
+							-A \ &,\ 0 < t < T\\    
+						\end{cases} \dif t 	=  
+				 \begin{cases}
+					At + C\ &,\ -T < t < 0\\    
+					-At + C\ &,\ 0 < t < T\\   
+				\end{cases} \\
+	\end{empheq}
+\footnotetext{Die Definition gilt für Werte von $t$ mit $-T < t < T$}
+	 
+ 
+	

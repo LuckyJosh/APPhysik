@@ -187,31 +187,61 @@ uY_m *= dy
 
 Xrange = np.arange(f_min, 2 * f_max, 20)
 
-Ip = Strom(12, uX_p * 2 * const.pi, uC, uC3, R, uL)
+Ip = Strom(4, uX_p * 2 * const.pi, uC, uC3, R, uL)
 #Ip = Strom(12, uX_p * const.pi, uC, uC3, R, uL)
-Im = Strom(12, uX_m * 2 * const.pi, uC, uC3, R, uL)
+Im = Strom(4, uX_m * 2 * const.pi, uC, uC3, R, uL)
 Ip_calc = uY_p/R
 Im_calc = uY_m/R
 
 n = 1
 for c in uC3:
     plt.clf()
-    plt.xlabel("Frequenz $f\,[\mathrm{kHz}]$")
+    plt.grid()
+    plt.tick_params("both", labelsize=16)
+    plt.xlabel("Frequenz $f\,[\mathrm{kHz}]$", fontsize=16)
     plt.xlim(2e04, 6e04)
     plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
                                        (lambda x, _: float(x * 1e-03)))
-    plt.ylabel("Stromstärke $I\,[\mathrm{A}]$")
-    plt.plot(Xrange, noms(Strom(12, Xrange * 2 * const.pi, uC, c, R, uL)))
+    plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                       (lambda x, _: float(x * 1e03)))
+    plt.ylabel("Stromstärke $I\,[\mathrm{mA}]$", fontsize=16)
+    plt.plot(Xrange, noms(Strom(4, Xrange * 2 * const.pi, uC, c, R, uL)))
     plt.savefig("Grafiken/Stromverlauf{}.pdf".format(str(n)))
     n += 1
 
 plt.clf()
+plt.grid()
 plt.xlabel("Frequenz $f\,[\mathrm{kHz}]$")
 plt.xlim(2e04, 6e04)
 plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
                                     (lambda x, _: float(x * 1e-03)))
 plt.ylabel("Stromstärke $I\,[\mathrm{A}]$")
-plt.plot(Xrange, noms(Strom(12, Xrange * 2 * const.pi, uC, uC3[0], R, uL)))
+plt.plot(Xrange, noms(Strom(4, Xrange * 2 * const.pi, uC, uC3[0], R, uL)))
+
+
+### Noch ein paar Plots
+plt.clf()
+CAP = np.linspace(1e-20, 14e-09, num=1e02)
+plt.grid()
+plt.tick_params("both", labelsize=14)
+plt.ylim(20e03, 1e05)
+plt.xlabel(r"Koppelkondensatoren $C_{K}\ [\mathrm{nF}]$", fontsize=14, font= "Computer Modern Sans serif")
+plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x, _: float(x * 1e09)))
+plt.ylabel(r"Frequenz $f\ [\mathrm{kHz}]$", fontsize=14)
+plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x, _: float(x * 1e-03)))
+plt.plot(CAP, len(CAP)*[resFreq_plus(noms(uC), C_sp, noms(uL))], color="blue",
+         label="Theoretischer Kurve $v^{+}(C_{K})$")
+
+plt.errorbar(noms(uC1), noms(uf_p), yerr=stds(uf_p), fmt="bo",
+             label="Messwerte $v^{+}(C_{K})$")
+
+plt.plot(CAP, resFreq_minus(noms(uC), CAP, C_sp, noms(uL)), color="green",
+         label="Theoretischer Kurve $v^{-}(C_{K})$")
+plt.errorbar(noms(uC1), noms(uf_m), yerr=stds(uf_m), fmt="go",
+             label="Messwerte $v^{-}(C_{K})$")
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig("Grafiken/Frequenz_CK.pdf")
 
 
 

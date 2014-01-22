@@ -1,0 +1,16 @@
+\renewcommand{\theequation}{\Roman{equation}}
+\setcounter{equation}{0}
+In folgendem Abschnitt sind die, für die Fehlerberechnung verwendeten Gleichungen
+aufgeführt. Diese Gleichungen sind dabei mittels gaußscher Fehlerfortpflanzung bestimmt.\\
+
+Der Fehler der Zeitkonstante \cref{eq:Auswertung_RC1} ergibt sich vereinfacht aus:
+\begin{empheq}{equation}
+	\label{std:RC1}
+	\sigma_{RC} = \dfrac{RC}{a} \sigma_{a}	
+\end{empheq} 
+
+Der Fehler der normierten Amplituden in \cref{tab:Auswertung_Amplitude} folgt aus:
+\begin{empheq}{equation}
+		\label{std:normierteAmplituden}
+		\sigma_{\sfrac{A}{U_{0}}} = \dfrac{1}{U_{0}} \sigma_{A}
+\end{empheq} 

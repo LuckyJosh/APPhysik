@@ -213,6 +213,59 @@ plt.legend(loc="upper left")
 plt.tight_layout()
 plt.savefig("Grafiken/Amplitude_Polar.pdf")
 
+## RC als Integrator
+
+
+def Int_tri(t):
+    res = np.zeros(len(t))
+    for i in range(len(t)):
+        if t[i] > 0:
+            res[i] = 4*t[i] - 4*t[i]**2
+        elif t[i] < 0:
+            res[i] = 4*t[i] + 4*t[i]**2
+    return res
+
+def Int_rect(t):
+    res = np.zeros(len(t))
+    for i in range(len(t)):
+        if t[i] > 0:
+            res[i] = 2 * t[i] - 1
+        elif t[i] < 0:
+            res[i] = -2 * t[i] - 1
+    return res
+
+T = np.linspace(-1, 1, num=200)
+plt.clf()
+plt.grid()
+plt.xlabel(r"Zeit $t$")
+plt.ylabel(r"Spannung $V$")
+plt.plot(T, 1 - 2 * np.abs(T), label="Dreieckspannung")
+plt.plot(T, Int_tri(T), label="Integrierte Spannung")
+plt.legend(loc="best", fontsize=12)
+plt.tight_layout()
+plt.savefig("Grafiken/IntegratorDreieck.pdf")
+
+plt.clf()
+plt.grid()
+plt.xlabel(r"Zeit $t$")
+plt.ylabel(r"Spannung $V$")
+plt.plot(T, np.sin(const.pi * T), label="Sinusspannung")
+plt.plot(T, np.cos(const.pi * T), label="Integrierte Spannung")
+plt.legend(loc="upper left", fontsize=12)
+plt.tight_layout()
+plt.savefig("Grafiken/IntegratorSinus.pdf")
+
+plt.clf()
+plt.grid()
+plt.xlabel(r"Zeit $t$")
+plt.ylabel(r"Spannung $V$")
+plt.ylim(-2, 2)
+plt.plot(T, np.sign(np.sin(const.pi * T)), label="Sinusspannung")
+plt.plot(T, Int_rect(T), label="Integrierte Spannung")
+plt.legend(loc="upper left", fontsize=12)
+plt.tight_layout()
+plt.savefig("Grafiken/IntegratorRechteck.pdf")
+
 
 #f =  open("Daten/Tabelle_Entladen.tex", "w")
 #

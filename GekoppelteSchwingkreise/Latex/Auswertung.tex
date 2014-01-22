@@ -42,7 +42,19 @@ Fehler sind Aufgrund ihrer hohen Komplexität nicht angegeben.
 	
 	\input{Daten/Tabelle_FundamentalMessung.tex}
 	
-\subsection{Messung des Verlauf des Stroms $I_{2}$} \label{sec:Auswertung_Wobbel}
+	In \cref{fig:Auswertung_FundamentalKurven} sind die gemessenen Fundamentalfrequenzen $\nu^{+}\ \text{und}\ \nu^{-}$ 
+	in Abhängigkeit von der Kapazität des Koppelkondensators $C_{K}$ zusammen mit dem theoretischen Verlauf dieser 
+	Abhängigkeit aufgetragen.
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/Frequenz_CK.pdf}
+		\caption{Darstellung der gemessenen Fundamentalfrequenzen und deren Theoriekurven}
+		\label{fig:Auswertung_FundamentalKurven}
+	\end{figure}  
+	
+	
+\subsection{Messung des Verlaufs des Stroms $I_{2}$} \label{sec:Auswertung_Wobbel}
 	
 	Der auf dem Oszilloskop angezeigte Verlauf der Spannung in Abhängigkeit von der Frequenz, ist für jeden 
 	Koppelkondensator $C_{K}$ ähnlich zu dem in \cref{fig:WobbelVerlauf} für den Kondensator mit 
@@ -59,7 +71,7 @@ Fehler sind Aufgrund ihrer hohen Komplexität nicht angegeben.
 		I =  \dfrac{U}{R}
 	\end{empheq}  
 	berechnen. Zusammen mit den Mittels \cref{eq:I2} berechneten Werten für diese Stromstärke, sind diese in
-	\cref{tab:I2} eingetragen. Für die Berechnung der Stromstärken, wurde die Generatorspannung $\envert{\mathfrak{U}} = \SI{12}{\volt}$ verwendet. 
+	\cref{tab:I2} eingetragen. Für die Berechnung der Stromstärken, wurde die Generatorspannung $\envert{\mathfrak{U}} = \SI{4}{\volt}$ verwendet. 
 	
 	\input{Daten/Tabelle_Strom2.tex}	
 	
@@ -72,41 +84,45 @@ Fehler sind Aufgrund ihrer hohen Komplexität nicht angegeben.
 	
 	Die in \cref{fig:C1} bis \ref{fig:C7} dargestellten Graphen zeigen den theoretischen Verlauf der Stromstärke nach 
 	\cref{eq:I2}, für eine Auswahl der verwendeten Koppelkondensatoren.
-	
-	\begin{figure}[!h]
-		\centering
-    	\includegraphics[scale=0.7]{Grafiken/Stromverlauf1.pdf}
-		\caption{Stromverläufe unter Verwendung von $C_{K} = \SI{2.19(7)}{\nano\farad}$}
-		\label{fig:C1} 
-	\end{figure}
+
+
+%	\begin{figure}[!h]
+%		\centering
+%    	\includegraphics[scale=0.7]{Grafiken/Stromverlauf1.pdf}
+%		\caption{Stromverläufe unter Verwendung von $C_{K} = \SI{2.19(7)}{\nano\farad}$}
+%		\label{fig:C1} 
+%	\end{figure}
+%		
+%	\begin{figure}[]
+%		\centering
+%    	\includegraphics[scale=0.7]{Grafiken/Stromverlauf3.pdf}
+%		\caption{Stromverläufe unter Verwendung von $C_{K} = \SI{4.7(1)}{\nano\farad}$}
+%		\label{fig:C3} 
+%	\end{figure}
+%	
+%	\begin{figure}[]
+%		\centering
+%    	\includegraphics[scale=0.7]{Grafiken/Stromverlauf5.pdf}
+%		\caption{Stromverläufe unter Verwendung von $C_{K} = \SI{8.2(2)}{\nano\farad}$}
+%		\label{fig:C5} 
+%	\end{figure}	
+%	
+%	\begin{figure}[]
+%		\centering
+%    	\includegraphics[scale=0.7]{Grafiken/Stromverlauf7.pdf}
+%		\caption{Stromverläufe unter Verwendung von $C_{K} = \SI{12.0(4)}{\nano\farad}$}
+%		\label{fig:C7} 
+%	\end{figure}
 		
-	\begin{figure}[!h]
-		\centering
-    	\includegraphics[scale=0.7]{Grafiken/Stromverlauf3.pdf}
-		\caption{Stromverläufe unter Verwendung von $C_{K} = \SI{4.7(1)}{\nano\farad}$}
-		\label{fig:C3} 
-	\end{figure}
+\begin{figure}
+		\subfloat[$C_{K} = \SI{2.19(7)}{\nano\farad}$\label{fig:C1}] {\includegraphics[scale=0.4]{Grafiken/Stromverlauf1.pdf}}
+%		\subfloat[$C_{K} = \SI{2.19(7)}{\nano\farad}$\label{fig:C2}] {\includegraphics[scale=0.4]{Grafiken/Stromverlauf2.pdf}}\\
+		\subfloat[$C_{K} = \SI{4.7(1)}{\nano\farad}$\label{fig:C3}] {\includegraphics[scale=0.4]{Grafiken/Stromverlauf3.pdf}}\\
+%		\subfloat[$C_{K} = \SI{8.2(2)}{\nano\farad}$\label{fig:C4}] {\includegraphics[scale=0.4]{Grafiken/Stromverlauf4.pdf}}\\
+		\subfloat[$C_{K} = \SI{8.2(2)}{\nano\farad}$\label{fig:C5}] {\includegraphics[scale=0.4]{Grafiken/Stromverlauf5.pdf}}
+		\subfloat[$C_{K} = \SI{12.0(4)}{\nano\farad}$\label{fig:C7}] {\includegraphics[scale=0.4]{Grafiken/Stromverlauf7.pdf}}
+		\caption{Stromverläufe unter Verwendung verschiedener Koppelkondensatoren $C_{K}$}
+		\label{fig:Auswertung_I2_Theo}
+\end{figure}
 	
-	\begin{figure}[!h]
-		\centering
-    	\includegraphics[scale=0.7]{Grafiken/Stromverlauf5.pdf}
-		\caption{Stromverläufe unter Verwendung von $C_{K} = \SI{8.2(2)}{\nano\farad}$}
-		\label{fig:C5} 
-	\end{figure}	
-	
-	\begin{figure}[!h]
-		\centering
-    	\includegraphics[scale=0.7]{Grafiken/Stromverlauf7.pdf}
-		\caption{Stromverläufe unter Verwendung von $C_{K} = \SI{12.0(4)}{\nano\farad}$}
-		\label{fig:C7} 
-	\end{figure}	
-%	
-%%		\subfloat[$C_{K} = \SI{2.86(9)}{\nano\farad}$\label{fig:C2}] {\includegraphics[scale=0.4]{Grafiken/Stromverlauf2.pdf}}\\
-%		\subfloat[$C_{K} = \SI{4.7(1)}{\nano\farad}$\label{fig:C3}] {\includegraphics[scale=0.5]{Grafiken/Stromverlauf3.pdf}}\\
-%%		\subfloat[$C_{K} = \SI{6.9(2)}{\nano\farad}$\label{fig:C4}] {\includegraphics[scale=0.4]{Grafiken/Stromverlauf4.pdf}}\\
-%		\subfloat[$C_{K} = \SI{8.2(2)}{\nano\farad}$\label{fig:C5}] {\includegraphics[scale=0.5]{Grafiken/Stromverlauf5.pdf}}
-%%		\subfloat[$C_{K} = \SI{10.0(3)}{\nano\farad}$\label{fig:C6}] {\includegraphics[scale=0.4]{Grafiken/Stromverlauf6.pdf}}\
-%		\subfloat[$C_{K} = \SI{12.0(4)}{\nano\farad}$\label{fig:C7}] {\includegraphics[scale=0.5]{Grafiken/Stromverlauf7.pdf}}
-%
-%	
 	
