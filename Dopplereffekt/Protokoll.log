@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  22 JAN 2014 23:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  16 JAN 2014 23:26
 entering extended mode
 **Protokoll.tex
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Protokoll.tex"
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
+otokoll.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -1493,45 +1493,10 @@ LaTeX Info: Redefining \labelcref on input line 2163.
 LaTeX Info: Redefining \labelcpageref on input line 2163.
 Package cleveref Info: `amsthm' support loaded on input line 2583.
 )
-(D:\Programme\MiKTeX\tex\latex\subfig\subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
-
-(D:\Programme\MiKTeX\tex\latex\caption\caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
-
-(D:\Programme\MiKTeX\tex\latex\caption\caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen196
-\captionmargin@=\dimen197
-\captionwidth=\dimen198
-\caption@tempdima=\dimen199
-\caption@indent=\dimen200
-\caption@parindent=\dimen201
-Normal \dimen register pool exhausted, switching to extended pool.
-\caption@hangindent=\dimen256
-)
-\c@ContinuedFloat=\count337
-Package caption Info: hyperref package is loaded.
-)
-\c@KVtest=\count338
-\sf@farskip=\skip98
-\sf@captopadj=\dimen257
-\sf@capskip=\skip99
-\sf@nearskip=\skip100
-\c@subfigure=\count339
-\c@subfigure@save=\count340
-\c@lofdepth=\count341
-\c@subtable=\count342
-\c@subtable@save=\count343
-\c@lotdepth=\count344
-\sf@top=\skip101
-\sf@bottom=\skip102
-)
 (D:\Programme\MiKTeX\tex\latex\wrapfig\wrapfig.sty
-\wrapoverhang=\dimen258
-\WF@size=\dimen259
-\c@WF@wrappedlines=\count345
+\wrapoverhang=\dimen196
+\WF@size=\dimen197
+\c@WF@wrappedlines=\count337
 \WF@box=\box54
 \WF@everypar=\toks43
 Package: wrapfig 2003/01/31  v 3.6
@@ -1565,20 +1530,21 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 (D:\Programme\MiKTeX\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks47
 ))
-\pgf@x=\dimen260
-\pgf@y=\dimen261
-\pgf@xa=\dimen262
-\pgf@ya=\dimen263
-\pgf@xb=\dimen264
-\pgf@yb=\dimen265
-\pgf@xc=\dimen266
-\pgf@yc=\dimen267
+\pgf@x=\dimen198
+\pgf@y=\dimen199
+\pgf@xa=\dimen200
+\pgf@ya=\dimen201
+Normal \dimen register pool exhausted, switching to extended pool.
+\pgf@xb=\dimen256
+\pgf@yb=\dimen257
+\pgf@xc=\dimen258
+\pgf@yc=\dimen259
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count346
-\c@pgf@countb=\count347
-\c@pgf@countc=\count348
-\c@pgf@countd=\count349
+\c@pgf@counta=\count338
+\c@pgf@countb=\count339
+\c@pgf@countc=\count340
+\c@pgf@countd=\count341
 
 (D:\Programme\MiKTeX\tex\generic\pgf\systemlayer\pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -1593,8 +1559,8 @@ File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
 (D:\Programme\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
-\pgfsyssoftpath@smallbuffer@items=\count350
-\pgfsyssoftpath@bigbuffer@items=\count351
+\pgfsyssoftpath@smallbuffer@items=\count342
+\pgfsyssoftpath@bigbuffer@items=\count343
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -1623,8 +1589,8 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathcalc.code.tex
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathutil.code.tex)
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen268
-\pgfmath@count=\count352
+\pgfmath@dimen=\dimen260
+\pgfmath@count=\count344
 \pgfmath@box=\box56
 \pgfmath@toks=\toks48
 \pgfmath@stack@operand=\toks49
@@ -1639,51 +1605,51 @@ ex) (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.random.code.tex)
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.round.code.tex)
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex)))
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count353
+\c@pgfmathroundto@lastzeros=\count345
 ))
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen269
-\pgf@picmaxx=\dimen270
-\pgf@picminy=\dimen271
-\pgf@picmaxy=\dimen272
-\pgf@pathminx=\dimen273
-\pgf@pathmaxx=\dimen274
-\pgf@pathminy=\dimen275
-\pgf@pathmaxy=\dimen276
-\pgf@xx=\dimen277
-\pgf@xy=\dimen278
-\pgf@yx=\dimen279
-\pgf@yy=\dimen280
-\pgf@zx=\dimen281
-\pgf@zy=\dimen282
+\pgf@picminx=\dimen261
+\pgf@picmaxx=\dimen262
+\pgf@picminy=\dimen263
+\pgf@picmaxy=\dimen264
+\pgf@pathminx=\dimen265
+\pgf@pathmaxx=\dimen266
+\pgf@pathminy=\dimen267
+\pgf@pathmaxy=\dimen268
+\pgf@xx=\dimen269
+\pgf@xy=\dimen270
+\pgf@yx=\dimen271
+\pgf@yy=\dimen272
+\pgf@zx=\dimen273
+\pgf@zy=\dimen274
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen283
-\pgf@path@lasty=\dimen284
+\pgf@path@lastx=\dimen275
+\pgf@path@lasty=\dimen276
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen285
-\pgf@shorten@start@additional=\dimen286
+\pgf@shorten@end@additional=\dimen277
+\pgf@shorten@start@additional=\dimen278
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box57
 \pgf@hbox=\box58
 \pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count354
+\pgf@picture@serial@count=\count346
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen287
+\pgflinewidth=\dimen279
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen288
-\pgf@pt@y=\dimen289
-\pgf@pt@temp=\dimen290
+\pgf@pt@x=\dimen280
+\pgf@pt@y=\dimen281
+\pgf@pt@temp=\dimen282
 ) (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
@@ -1697,8 +1663,8 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen291
-\pgf@sys@shading@range@num=\count355
+\pgf@max=\dimen283
+\pgf@sys@shading@range@num=\count347
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
@@ -1725,8 +1691,8 @@ File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
 (D:\Programme\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen292
-\pgf@nodesepend=\dimen293
+\pgf@nodesepstart=\dimen284
+\pgf@nodesepend=\dimen285
 )
 (D:\Programme\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
@@ -1736,8 +1702,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 (D:\Programme\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex))
 (D:\Programme\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen294
-\pgffor@skip=\dimen295
+\pgffor@iter=\dimen286
+\pgffor@skip=\dimen287
 \pgffor@stack=\toks51
 \pgffor@toks=\toks52
 ))
@@ -1746,28 +1712,28 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
 (D:\Programme\MiKTeX\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
-\pgf@plot@mark@count=\count356
-\pgfplotmarksize=\dimen296
+\pgf@plot@mark@count=\count348
+\pgfplotmarksize=\dimen288
 )
-\tikz@lastx=\dimen297
-\tikz@lasty=\dimen298
-\tikz@lastxsaved=\dimen299
-\tikz@lastysaved=\dimen300
-\tikzleveldistance=\dimen301
-\tikzsiblingdistance=\dimen302
+\tikz@lastx=\dimen289
+\tikz@lasty=\dimen290
+\tikz@lastxsaved=\dimen291
+\tikz@lastysaved=\dimen292
+\tikzleveldistance=\dimen293
+\tikzsiblingdistance=\dimen294
 \tikz@figbox=\box62
 \tikz@tempbox=\box63
-\tikztreelevel=\count357
-\tikznumberofchildren=\count358
-\tikznumberofcurrentchild=\count359
-\tikz@fig@count=\count360
+\tikztreelevel=\count349
+\tikznumberofchildren=\count350
+\tikznumberofcurrentchild=\count351
+\tikz@fig@count=\count352
 (D:\Programme\MiKTeX\tex\generic\pgf\modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
-\pgfmatrixcurrentrow=\count361
-\pgfmatrixcurrentcolumn=\count362
-\pgf@matrix@numberofcolumns=\count363
+\pgfmatrixcurrentrow=\count353
+\pgfmatrixcurrentcolumn=\count354
+\pgf@matrix@numberofcolumns=\count355
 )
-\tikz@expandcount=\count364
+\tikz@expandcount=\count356
 
 (D:\Programme\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryto
 paths.code.tex
@@ -1779,27 +1745,45 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
 
 (D:\Programme\MiKTeX\tex\generic\pgf\libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
-\arrowsize=\dimen303
+\arrowsize=\dimen295
 ))
+(D:\Programme\MiKTeX\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(D:\Programme\MiKTeX\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen296
+\captionmargin@=\dimen297
+\captionwidth=\dimen298
+\caption@tempdima=\dimen299
+\caption@indent=\dimen300
+\caption@parindent=\dimen301
+\caption@hangindent=\dimen302
+)
+\c@ContinuedFloat=\count357
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
 (D:\Programme\MiKTeX\tex\latex\ulem\ulem.sty
 \UL@box=\box64
 \UL@hyphenbox=\box65
-\UL@skip=\skip103
+\UL@skip=\skip98
 \UL@hook=\toks53
-\UL@height=\dimen304
-\UL@pe=\count365
-\UL@pixel=\dimen305
+\UL@height=\dimen303
+\UL@pe=\count358
+\UL@pixel=\dimen304
 \ULC@box=\box66
 Package: ulem 2012/05/18
-\ULdepth=\dimen306
+\ULdepth=\dimen305
 )
 (D:\Programme\MiKTeX\tex\latex\enumitem\enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip104
-\enit@outerparindent=\dimen307
+\labelindent=\skip99
+\enit@outerparindent=\dimen306
 \enit@toks=\toks54
 \enit@inbox=\box67
-\enitdp@description=\count366
+\enitdp@description=\count359
 )
 (D:\Programme\MiKTeX\tex\latex\psnfss\pifont.sty
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
@@ -1813,12 +1797,11 @@ LaTeX Font Info:    Try loading font information for U+psy on input line 64.
 (D:\Programme\MiKTeX\tex\latex\psnfss\upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 )))
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/VersuchDaten.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
+tex/VersuchDaten.tex")
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
-
-(D:\Programme\MiKTeX\tex\latex\biblatex\lbx\ngerman.lbx
+ (D:\Programme\MiKTeX\tex\latex\biblatex\lbx\ngerman.lbx
 File: ngerman.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
@@ -1829,29 +1812,29 @@ File: german.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Protokoll.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 4.
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
+otokoll.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 3.
  (D:\Programme\MiKTeX\tex\latex\base\ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 4.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1896,23 +1879,22 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Protokoll.bbl' found.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Protokoll.bbl")
-Package biblatex Info: Reference section=0 on input line 4.
-Package biblatex Info: Reference segment=0 on input line 4.
-
-(D:\Programme\MiKTeX\tex\context\base\supp-pdf.mkii
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
+otokoll.bbl")
+Package biblatex Info: Reference section=0 on input line 3.
+Package biblatex Info: Reference segment=0 on input line 3.
+ (D:\Programme\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count367
-\scratchdimen=\dimen308
+\scratchcounter=\count360
+\scratchdimen=\dimen307
 \scratchbox=\box68
-\nofMPsegments=\count368
-\nofMParguments=\count369
+\nofMPsegments=\count361
+\nofMParguments=\count362
 \everyMPshowfont=\toks55
-\MPscratchCnt=\count370
-\MPscratchDim=\dimen309
-\MPnumerator=\count371
-\makeMPintoPDFobject=\count372
+\MPscratchCnt=\count363
+\MPscratchDim=\dimen308
+\MPnumerator=\count364
+\makeMPintoPDFobject=\count365
 \everyMPtoPDFconversion=\toks56
 )
 (D:\Programme\MiKTeX\tex\latex\beamer\base\translator\dicts\translator-basic-di
@@ -1976,80 +1958,78 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 4.
+(lastpage)             ! on input line 3.
 \AtBeginShipoutBox=\box69
-Package hyperref Info: Link coloring OFF on input line 4.
+Package hyperref Info: Link coloring OFF on input line 3.
 (D:\Programme\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (D:\Programme\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count373
+\c@section@level=\count366
 )
-LaTeX Info: Redefining \ref on input line 4.
-LaTeX Info: Redefining \pageref on input line 4.
-LaTeX Info: Redefining \nameref on input line 4.
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Protokoll.out")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Protokoll.out")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
+otokoll.out")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
+otokoll.out")
 \@outlinefile=\write5
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
-Package caption Info: wrapfig package is loaded.
-Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
-\c__siunitx_mathsf_int=\count374
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 4.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\c__siunitx_mathsf_int=\count367
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 4.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 4.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 4.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 4.
+(Font)              <12> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 4.
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+(Font)              <6> on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+esvect on input line 4.
+LaTeX Font Info:    Try loading font information for U+esvect on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\esvect\uesvect.fd
 File: uesvect.fd 
 )
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 4.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\lm\ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\c__siunitx_mathtt_int=\count375
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 4.
+\c__siunitx_mathtt_int=\count368
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\lm\ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2058,249 +2038,55 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 atex\Deckblatt.tex" [1
 
 {C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/Einleitung.tex")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/Theorie.tex"
-<Grafiken/V355Abb1.jpg, id=56, 548.0475pt x 340.27126pt>
-File: Grafiken/V355Abb1.jpg Graphic file (type jpg)
-
-<use Grafiken/V355Abb1.jpg>
-Package pdftex.def Info: Grafiken/V355Abb1.jpg used on input line 3.
-(pdftex.def)             Requested size: 274.02307pt x 170.13521pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
+tex/Einleitung.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
+tex/Theorie.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
+tex/Durchführung.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
+tex/Auswertung.tex")pdfTeX warning (ext4): destination with the same identifier
+ (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 \begin{equation}
-                      [1 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/P
-raktikumRepo/GekoppelteSchwingkreise/Grafiken/V355Abb1.jpg>]
-LaTeX Font Info:    Try loading font information for U+euf on input line 32.
+l.24 	\newpage
+               [1]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
+tex/Fehlerrechnung.tex") [2]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
+tex/Diskussion.tex") [3]
 
-(D:\Programme\MiKTeX\tex\latex\amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-))
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/Durchführung.tex"
-<Grafiken/V355Abb2.jpg, id=81, 431.36156pt x 484.05844pt>
-File: Grafiken/V355Abb2.jpg Graphic file (type jpg)
+LaTeX Warning: Empty bibliography on input line 34.
 
-<use Grafiken/V355Abb2.jpg>
-Package pdftex.def Info: Grafiken/V355Abb2.jpg used on input line 14.
-(pdftex.def)             Requested size: 215.68025pt x 242.02863pt.
-
-<Grafiken/V355Abb3.jpg, id=84, 747.54282pt x 388.45125pt>
-File: Grafiken/V355Abb3.jpg Graphic file (type jpg)
-
-<use Grafiken/V355Abb3.jpg>
-Package pdftex.def Info: Grafiken/V355Abb3.jpg used on input line 20.
-(pdftex.def)             Requested size: 373.7705pt x 194.22514pt.
-
-<Grafiken/V355Abb4.jpg, id=87, 747.54282pt x 429.10312pt>
-File: Grafiken/V355Abb4.jpg Graphic file (type jpg)
-
-<use Grafiken/V355Abb4.jpg>
-Package pdftex.def Info: Grafiken/V355Abb4.jpg used on input line 26.
-(pdftex.def)             Requested size: 373.7705pt x 214.55103pt.
-) [2]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekoppelt
-eSchwingkreise/Grafiken/V355Abb2.jpg> <D:/Eigene Dateien/Studium/Physik/Anfäng
-erPraktikum/PraktikumRepo/GekoppelteSchwingkreise/Grafiken/V355Abb3.jpg>]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/Auswertung.tex"
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Daten/Tabelle_Schwebung.tex"
-LaTeX Font Info:    Calculating math sizes for size <8.39996> on input line 6.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8.39996> on input line 6.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.87994> on input line 6.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <4.19998> on input line 6.
-
-
-LaTeX Font Warning: Font shape `U/esvect/m/n' in size <4.19998> not available
-(Font)              size <5> substituted on input line 6.
-
-) [4 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekoppe
-lteSchwingkreise/Grafiken/V355Abb4.jpg>]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Daten/Tabelle_Fundamental.tex")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Daten/Tabelle_FrequenzVerhältnis.tex") [5]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Daten/Tabelle_FundamentalMessung.tex"
-Overfull \hbox (5.2211pt too wide) in paragraph at lines 3--20
- [][] 
- []
-
-) <Grafiken/Frequenz_CK.pdf, id=132, 578.16pt x 431.81326pt>
-File: Grafiken/Frequenz_CK.pdf Graphic file (type pdf)
-
-<use Grafiken/Frequenz_CK.pdf>
-Package pdftex.def Info: Grafiken/Frequenz_CK.pdf used on input line 51.
-(pdftex.def)             Requested size: 404.70924pt x 302.26721pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 57.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 57.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 57.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 57.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
-
-[6 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekoppelt
-eSchwingkreise/Grafiken/Frequenz_CK.pdf>]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Daten/Tabelle_WobbelVerlauf.tex"
-Overfull \hbox (3.01622pt too wide) in paragraph at lines 3--16
- [][] 
- []
-
-)
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Daten/Tabelle_Strom2.tex")
-<Grafiken/Kondensator2.jpg, id=236, 256.96pt x 192.72pt>
-File: Grafiken/Kondensator2.jpg Graphic file (type jpg)
-
-<use Grafiken/Kondensator2.jpg>
-Package pdftex.def Info: Grafiken/Kondensator2.jpg used on input line 80.
-(pdftex.def)             Requested size: 205.56827pt x 154.1762pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 81.
-
-<Grafiken/Stromverlauf1.pdf, id=240, 578.16pt x 431.81326pt>
-File: Grafiken/Stromverlauf1.pdf Graphic file (type pdf)
-
-<use Grafiken/Stromverlauf1.pdf>
-Package pdftex.def Info: Grafiken/Stromverlauf1.pdf used on input line 118.
-(pdftex.def)             Requested size: 231.2599pt x 172.72223pt.
-
-<Grafiken/Stromverlauf3.pdf, id=241, 578.16pt x 431.81326pt>
-File: Grafiken/Stromverlauf3.pdf Graphic file (type pdf)
-
-<use Grafiken/Stromverlauf3.pdf>
-Package pdftex.def Info: Grafiken/Stromverlauf3.pdf used on input line 120.
-(pdftex.def)             Requested size: 231.2599pt x 172.72223pt.
-
-<Grafiken/Stromverlauf5.pdf, id=242, 578.16pt x 431.81326pt>
-File: Grafiken/Stromverlauf5.pdf Graphic file (type pdf)
-
-<use Grafiken/Stromverlauf5.pdf>
-Package pdftex.def Info: Grafiken/Stromverlauf5.pdf used on input line 122.
-(pdftex.def)             Requested size: 231.2599pt x 172.72223pt.
-
-<Grafiken/Stromverlauf7.pdf, id=243, 578.16pt x 431.81326pt>
-File: Grafiken/Stromverlauf7.pdf Graphic file (type pdf)
-
-<use Grafiken/Stromverlauf7.pdf>
-Package pdftex.def Info: Grafiken/Stromverlauf7.pdf used on input line 123.
-(pdftex.def)             Requested size: 231.2599pt x 172.72223pt.
-
-Overfull \hbox (7.2757pt too wide) in paragraph at lines 118--124
-[][][][] 
- []
-
-
-Overfull \hbox (7.2757pt too wide) in paragraph at lines 118--124
-[][][][] 
- []
-
-) [7] [8 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gek
-oppelteSchwingkreise/Grafiken/Kondensator2.jpg> <D:/Eigene Dateien/Studium/Phys
-ik/AnfängerPraktikum/PraktikumRepo/GekoppelteSchwingkreise/Grafiken/Stromverla
-uf1.pdf> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gek
-oppelteSchwingkreise/Grafiken/Stromverlauf3.pdf
-
-pdfTeX warning: pdflatex.exe (file D:/Eigene Dateien/Studium/Physik/AnfängerPr
-aktikum/PraktikumRepo/GekoppelteSchwingkreise/Grafiken/Stromverlauf3.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekoppelte
-Schwingkreise/Grafiken/Stromverlauf5.pdf
-
-pdfTeX warning: pdflatex.exe (file D:/Eigene Dateien/Studium/Physik/AnfängerPr
-aktikum/PraktikumRepo/GekoppelteSchwingkreise/Grafiken/Stromverlauf5.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Gekoppelte
-Schwingkreise/Grafiken/Stromverlauf7.pdf
-
-pdfTeX warning: pdflatex.exe (file D:/Eigene Dateien/Studium/Physik/AnfängerPr
-aktikum/PraktikumRepo/GekoppelteSchwingkreise/Grafiken/Stromverlauf7.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Latex/Diskussion.tex"
-Underfull \hbox (badness 10000) in paragraph at lines 1--5
-
- []
-
-) [9]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 35.
- (D:\Programme\MiKTeX\tex\latex\lm\t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 
 AED: lastpage setting LastPage
-[10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\GekoppelteS
-chwingkreise\Protokoll.aux"
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
+otokoll.aux"
 Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: 2D1C8BAA45181A33395E8682594587F0;599.
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 2.90001pt have occurred.
-
+(rerunfilecheck)             Checksum: F48E8469A38BF8AFB39FA42DABA1BAE8;296.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 35115 strings out of 493921
- 666312 string characters out of 3150494
- 1083651 words of memory out of 3000000
- 37637 multiletter control sequences out of 15000+200000
- 192708 words of font info for 180 fonts, out of 3000000 for 9000
+ 34428 strings out of 493921
+ 652748 string characters out of 3150494
+ 1061147 words of memory out of 3000000
+ 37056 multiletter control sequences out of 15000+200000
+ 59526 words of font info for 55 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 67i,20n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{D:/Programme/MiKTeX/fonts/
-enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{D
-:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/Programme/MiKTeX/fonts/
-enc/dvips/lm/lm-mathex.enc}<D:/Programme/MiKTeX/fonts/type1/public/amsfonts/eul
-er/eufm10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><D:/Program
-me/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fonts/type1/pub
-lic/lm/lmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmex10.pfb><D:/Pr
-ogramme/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><D:/Programme/MiKTeX/fonts/type
-1/public/lm/lmmi12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><D:
-/Programme/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><D:/Programme/MiKTeX/fonts/ty
-pe1/public/lm/lmmi8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D
-:/Programme/MiKTeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiKTeX/fonts/t
-ype1/public/lm/lmr6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr8.pfb><D:
-/Programme/MiKTeX/fonts/type1/public/lm/lmri12.pfb><D:/Programme/MiKTeX/fonts/t
-ype1/public/lm/lmsy10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy6.pfb>
-<D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Programme/MiKTeX/fonts
-/type1/public/lm/lmtt12.pfb>
-Output written on Protokoll.pdf (11 pages, 684081 bytes).
+ 67i,11n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<D:/Programme/MiKTeX/fonts/
+type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmcsc10.p
+fb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
+Output written on Protokoll.pdf (4 pages, 88726 bytes).
 PDF statistics:
- 550 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 70 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

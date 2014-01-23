@@ -22,7 +22,7 @@ from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
-sys.path.append("..\globales\python")
+sys.path.append("..\_globales\python")
 import latextables as lxtabs
 
 

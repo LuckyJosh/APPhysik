@@ -1961,17 +1961,9 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">../_globales/latex/Literatur.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">../globales/latex/Literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">V355</bcf:citekey>
-    <bcf:citekey order="2">V355</bcf:citekey>
-    <bcf:citekey order="3">V355</bcf:citekey>
-    <bcf:citekey order="4">V355</bcf:citekey>
-    <bcf:citekey order="5">V355</bcf:citekey>
-    <bcf:citekey order="6">V355</bcf:citekey>
-    <bcf:citekey order="7">V355</bcf:citekey>
-    <bcf:citekey order="8">V355</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="nty">
   <bcf:sorting>
