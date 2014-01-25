@@ -52,7 +52,7 @@ ul = unp.uarray(l, [l_err]*len(l))
 
 ### Mittelwert
 ul_avr = Umean(ul)
-ul_avr = ufloat(noms(uL), stds(uL))
+ul_avr = ufloat(noms(ul_avr), stds(ul_avr))
 ul_avr *= 1e-02  # [cm] --> [m]
 
 ## Laden der Zeiten in den verschiedenen Gängen
@@ -85,18 +85,22 @@ for g in G:
 uv_h = ul_avr / uT_h_avr
 uv_r = ul_avr / uT_r_avr
 
-
+## alle Geschwindigkeiten mit Vorzeichen
+uv = np.concatenate((uv_h, -uv_r))
 
 
 # Bestimmung der Schalgeschwindigkeit in Luft bei Raumtemperatur
 ## Bestimmen der Grundfrequenz f0
 ### Laden der Grundfrequenzen
 f0 = np.loadtxt("Messdaten/Ruhefrequenzen.txt", unpack=True)
+f_err = np.loadtxt("Messdaten/Fehler_Frequenz.txt")
+
+uf0 = uarray(f0, [f_err]*len(f0))
 
 #### Bestimmung des Mittlewerts
-f0_avr = np.mean(f)
+f0_avr = np.mean(f0)
 ##### Abweichung vom Mittelwert
-f0_std = np.std(f)/(np.sqrt(len(f)))
+f0_std = np.std(f0)/(np.sqrt(len(f0)))
 
 ##### Fehlerbeahfteter Mittelwert
 uf0_avr = ufloat(f0_avr, f0_std)
@@ -104,7 +108,7 @@ uf0_avr = ufloat(f0_avr, f0_std)
 
 ## Bestimmung der Wellenlänge
 ### Laden der Messdaten
-s0, s1, k = np.loadtxt("Messdaten/Wellenlaengen.txt", unpack=True)
+s0, s1, n = np.loadtxt("Messdaten/Wellenlaengen.txt", unpack=True)
 s_err = np.loadtxt("Messdaten/Fehler_Wellenlaengen.txt")
 
 #### Fehlerbehaftete Messwerte
@@ -113,20 +117,30 @@ us1 = uarray(s1, s_err)
 
 us0 *= 1e-02  # [cm]-->[m]
 us1 *= 1e-02  # [cm]-->[m]
+us = us1 + us0
+
 
 ### Berechnung der Wellenlänge
-uk = (us0 + us1)/k
+uk = (us0 + us1)/n
+uk_inv = 1/uk
 
+uk_inv_avr = Umean(uk_inv)
 
 ## Berechnung der Schallgeschwindigkeit
 uc = uk * uf0_avr
 
 ### Bestimmung des Mittlewertes
-uc_avr = Umean(uC)
+uc_avr = Umean(uc)
 #### Abweichung vom Mittelwert
-c_std = np.std(noms(uc))/np.sqrt(len(uC))
+c_std = np.std(noms(uc))/np.sqrt(len(uc))
 
 uc_avr = ufloat(noms(uc_avr), c_std)
+
+#### Berechnung der Inversenwellenlänge
+#uk_inv_avr = uf0_avr/uc_avr
+
+# Abweichung von (2) und (5)
+d_gln = uf0_avr * (max(uv_h)/uc_avr)**2
 
 
 # Messung der Frequenz
@@ -142,7 +156,6 @@ uf_r1 = unp.uarray(f_r1, [f_err]*len(f_r1))
 uf_r2 = unp.uarray(f_r2, [f_err]*len(f_r2))
 
 ### Mittelwerte der Zeiten
-
 uF_h_avr = unp.uarray(np.zeros(len(G)), np.zeros(len(G)))
 for g in G:
     uF_h_avr[gearToIndex(g)] = Umean([uf_h1[gearToIndex(g)],
@@ -162,12 +175,14 @@ for g in G:
 udf_h = uF_h_avr - uf0_avr
 udf_r = uF_r_avr - uf0_avr
 
+#### alle Frequenzänderungen mit Vorzeichen
+udf = np.concatenate((udf_h, udf_r))
 
 # Messung der  Frequenzänderung durch Schwebung
 
 ## Laden der Frequenzen in den verschiedenen Gängen
 G, df_h1, df_h2, df_r1, df_r2 = np.loadtxt("Messdaten/Schwebung.txt",
-                                       unpack=True)
+                                           unpack=True)
 df_err = np.loadtxt("Messdaten/Fehler_Frequenz.txt")
 
 ### Fehlerbehaftete Messwerte
@@ -191,20 +206,161 @@ for g in G:
                                       udf_r2[gearToIndex(g)]])
     udF_r_avr[gearToIndex(g)] = (ufloat(noms(udF_r_avr[gearToIndex(g)]),
                                         stds(udF_r_avr[gearToIndex(g)])))
+#### Alle Frequenzänderungen mit Voreichen
+udF = np.concatenate((udF_h_avr, -udF_r_avr))
 
 
+# Grafische Auswertung
 
+def y(x, m, b):
+    return m * x + b
 
+popt1, pcov1 = curve_fit(y, noms(uv), noms(udf), sigma=stds(udf))
+errors1 = np.sqrt(np.diag(pcov1))
+params1 = uarray(popt1, errors1)
 
+udF_plot = np.concatenate((udF[1:-10], udF[11:]))
+uv_plot = np.concatenate((uv[1:10], uv[11:]))
+popt2, pcov2 = curve_fit(y, noms(uv_plot), noms(udF_plot),
+                         sigma=stds(udF_plot))
+errors2 = np.sqrt(np.diag(pcov2))
+params2 = uarray(popt2, errors2)
+
+V = np.linspace(-50, 50, num=200)
+## Erstellen des Plots
+### Auftragen der df gegen v aus der Direkten Methode
+plt.clf()
+plt.grid()
+plt.xlim(-0.6, 0.6)
+plt.xlabel(r"Geschwindigkeit $v\ [\mathrm{\frac{m}{s}}]$",
+           fontsize=14, family='serif')
+plt.ylim(-30, 50)
+plt.ylabel(r"Frequenzdifferenz $\Delta \nu\ [\mathrm{Hz}]$",
+           fontsize=14, family='serif')
+plt.errorbar(noms(uv), noms(udf), yerr=stds(udf), fmt="rx", label="Messwerte")
+plt.plot(V, y(V, *popt1), label="Regressionsgerade")
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig("Grafiken/Frequenzdifferenz_direkt.pdf")
+
+### Ausftragen der Schwebungsmethode
+plt.clf()
+plt.grid()
+plt.xlim(-0.6, 0.6)
+plt.xlabel(r"Geschwindigkeit $v\ [\mathrm{\frac{m}{s}}]$",
+           fontsize=14, family='serif')
+plt.ylim(-32, 50)
+plt.ylabel(r"Frequenzdifferenz $\Delta \nu\ [\mathrm{Hz}]$",
+           fontsize=14, family='serif')
+plt.errorbar(noms(uv_plot), noms(udF_plot), yerr=stds(udF_plot),
+             fmt="rx", label="Messwerte")
+plt.plot(V, y(V, *popt2), label="Regressionsgerade")
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig("Grafiken/Frequenzdifferenz_Schwebung.pdf")
 
 ## Print Funktionen
 
+#File = open("Daten/Tabelle_Fahrtzeiten.tex", "w")
+#
+#File.write(lxtabs.toTable([G, ut_h1, ut_h2, ut_r1, ut_r2],
+#                          col_titles=["Gang", "Zeit", "Zeit", "Zeit", "Zeit"],
+#                          col_syms=[r"g", r"t_{h1}", r"t_{h2}",
+#                                    r"t_{r1}", r"t_{r2}"],
+#                          col_units=[r"", r"\second", r"\second",
+#                                     r"\second", r"\second"],
+#                          fmt=["c", "c", "c", "c", "c"],
+#                          cap="Fahrtdauern des Wagens" +
+#                              " in den verschiedenen Gängen",
+#                          label="Auswertung_Fahrtzeiten"))
+#File.close()
+#
+#File = open("Daten/Tabelle_Geschwindigkeiten.tex", "w")
+#
+#File.write(lxtabs.toTable([G, uv_h, uv_r],
+#                          col_titles=["Gang", "Geschwindigkeit",
+#                                      "Geschwindigkeit"],
+#                          col_syms=[r"g", r"v_{h1}", r"v_{h2}"],
+#                          col_units=[r"", r"\meter\per\second",
+#                                     r"\meter\per\second"],
+#                          fmt=["c", "c", "c"],
+#                          cap="Geschwindigkeiten des Wagens" +
+#                              " in den verschiedenen Gängen",
+#                          label="Auswertung_Geschwindigkeiten"))
+#File.close()
+
+#File = open("Daten/Tabelle_Direkt.tex", "w")
+#
+#File.write(lxtabs.toTable([G, uf_h1, uf_h2, uf_r1, uf_r2],
+#                          col_titles=["Gang", "Frequenz", "Frequenz",
+#                                      "Frequenz", "Frequenz"],
+#                          col_syms=[r"g", r"\nu_{h1}", r"\nu_{h2}",
+#                                    r"\nu_{r1}", r"\nu_{r2}"],
+#                          col_units=[r"", r"\hertz", r"\hertz",
+#                                     r"\hertz", r"\hertz"],
+#                          fmt=["c", "c", "c", "c", "c"],
+#                          cap="Direkt gemessene Frequenzen des Wagens" +
+#                              " in den verschiedenen Gängen",
+#                          label="Auswertung_Frequenz_Direkt"))
+#File.close()
 
 
+#File = open("Daten/Tabelle_DirektDifferenzen.tex", "w")
+#
+#File.write(lxtabs.toTable([G, udf_h, udf_r],
+#                          col_titles=["Gang", "Differenzfrequenz",
+#                                      "Differenzfrequenz"],
+#                          col_syms=[r"g", r"\Delta \nu_{h}",
+#                                    r"\Delta \nu_{r}"],
+#                          col_units=[r"", r"\hertz", r"\hertz"],
+#                          fmt=["c", "c", "c"],
+#                          cap="Frequenzänderungen des Wagens nach der" +
+#                              "Direkten Methode in den verschiedenen Gängen",
+#                          label="Auswertung_Frequenzänderung_Direkt"))
+#File.close()
 
 
+#File = open("Daten/Tabelle_Schwebung.tex", "w")
+#
+#File.write(lxtabs.toTable([G, udf_h1, udf_h2, udf_r1, udf_r2],
+#                          col_titles=["Gang", "Frequenzdifferenz",
+#                                      "Frequenzdifferenz",
+#                                       "Frequenzdifferenz",
+#                                      "Frequenzdifferenz"],
+#                          col_syms=[r"g", r"\Delta\nu_{h1}",
+#                                    r"\Delta\nu_{h2}",
+#                                    r"\Delta\nu_{r1}", r"\Delta\nu_{r2}"],
+#                          col_units=[r"", r"\hertz", r"\hertz",
+#                                     r"\hertz", r"\hertz"],
+#                          fmt=["c", "c", "c", "c", "c"],
+#                          cap="Direkt gemessene Frequenzen des Wagens" +
+#                              " in den verschiedenen Gängen",
+#                          label="Auswertung_Frequenz_Schwebung"))
+#File.close()
 
+#File = open("Daten/Tabelle_Ruhefrequenz.tex", "w")
+#
+#File.write(lxtabs.toTable([uf0],
+#                          col_titles=["Ruhefrequenz"],
+#                          col_syms=[r"\nu_{0}"],
+#                          col_units=[r"\hertz"],
+#                          fmt=["c"],
+#                          cap="Gemessene Ruhefrequenzen und Mittelwert",
+#                          label="Auswertung_Ruhefrequenz"))
+#File.close()
 
-
-
-
+#File = open("Daten/Tabelle_Wellenlaenge.tex", "w")
+#
+#File.write(lxtabs.toTable([G, us, n, uk, uk_inv],
+#                          col_titles=["Gang", "Strecke",
+#                                      "Wellenlängenanzahl", "Wellenlänge",
+#                                      "inverse Wellenlänge"],
+#                          col_syms=[r"g", r"s", "n", r"\lambda",
+#                                    r"\sfrac{1}{\lambda}"],
+#                          col_units=[r"", r"\centi\meter", r"",
+#                                     r"\centi\meter", r"\per\centi\meter"],
+#                          fmt=["c", "c", "c", "c", "c", "c"],
+#                          cap="Messdaten der Wellenlängenbstimmung und " +
+#                              "Wellenlänge sowie inverse Wellenlänge",
+#                          label="Auswertung_Wellenlänge"))
+#File.close()
