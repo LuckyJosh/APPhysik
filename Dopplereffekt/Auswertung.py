@@ -122,12 +122,16 @@ us = us1 + us0
 
 ### Berechnung der Wellenlänge
 uk = (us0 + us1)/n
+uk_avr = Umean(uk)
 uk_inv = 1/uk
 
 uk_inv_avr = Umean(uk_inv)
+k_inv_std = np.std(noms(uk_inv))/np.sqrt(len(uk_inv))
+uk_inv_avr = ufloat(noms(uk_inv_avr), k_inv_std)
 
 ## Berechnung der Schallgeschwindigkeit
 uc = uk * uf0_avr
+#uC 1/uk_inv_avr * uf0_avr  # Für den Bericht verwedet
 
 ### Bestimmung des Mittlewertes
 uc_avr = Umean(uc)
@@ -214,13 +218,23 @@ udF = np.concatenate((udF_h_avr, -udF_r_avr))
 
 def y(x, m, b):
     return m * x + b
+def y1(x, m):
+    return m * x
 
 popt1, pcov1 = curve_fit(y, noms(uv), noms(udf), sigma=stds(udf))
 errors1 = np.sqrt(np.diag(pcov1))
 params1 = uarray(popt1, errors1)
 
+popt15, pcov15 = curve_fit(y1, noms(uv), noms(udf), sigma=stds(udf))
+errors15 = np.sqrt(np.diag(pcov15))
+params15 = uarray(popt15, errors15)
+
 udF_plot = np.concatenate((udF[1:-10], udF[11:]))
 uv_plot = np.concatenate((uv[1:10], uv[11:]))
+popt25, pcov25 = curve_fit(y1, noms(uv_plot), noms(udF_plot),
+                         sigma=stds(udF_plot))
+errors25 = np.sqrt(np.diag(pcov25))
+params25 = uarray(popt25, errors25)
 popt2, pcov2 = curve_fit(y, noms(uv_plot), noms(udF_plot),
                          sigma=stds(udF_plot))
 errors2 = np.sqrt(np.diag(pcov2))
@@ -239,6 +253,7 @@ plt.ylabel(r"Frequenzdifferenz $\Delta \nu\ [\mathrm{Hz}]$",
            fontsize=14, family='serif')
 plt.errorbar(noms(uv), noms(udf), yerr=stds(udf), fmt="rx", label="Messwerte")
 plt.plot(V, y(V, *popt1), label="Regressionsgerade")
+plt.plot(V, y1(V, *popt15), label="Regressionsgerade durch den Ursprung")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Frequenzdifferenz_direkt.pdf")
@@ -255,6 +270,7 @@ plt.ylabel(r"Frequenzdifferenz $\Delta \nu\ [\mathrm{Hz}]$",
 plt.errorbar(noms(uv_plot), noms(udF_plot), yerr=stds(udF_plot),
              fmt="rx", label="Messwerte")
 plt.plot(V, y(V, *popt2), label="Regressionsgerade")
+plt.plot(V, y1(V, *popt25), label="Regressionsgerade")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Frequenzdifferenz_Schwebung.pdf")
@@ -322,17 +338,23 @@ plt.savefig("Grafiken/Frequenzdifferenz_Schwebung.pdf")
 
 #File = open("Daten/Tabelle_Schwebung.tex", "w")
 #
-#File.write(lxtabs.toTable([G, udf_h1, udf_h2, udf_r1, udf_r2],
+#File.write(lxtabs.toTable([G, udf_h1, udf_h2,udF_h_avr,
+#                           udf_r1, udf_r2, udF_r_avr],
 #                          col_titles=["Gang", "Frequenzdifferenz",
 #                                      "Frequenzdifferenz",
 #                                       "Frequenzdifferenz",
+#                                      "Frequenzdifferenz",
+#                                      "Frequenzdifferenz",
 #                                      "Frequenzdifferenz"],
 #                          col_syms=[r"g", r"\Delta\nu_{h1}",
 #                                    r"\Delta\nu_{h2}",
-#                                    r"\Delta\nu_{r1}", r"\Delta\nu_{r2}"],
+#                                    r"\left<\Delta\nu_{h}\right>",
+#                                    r"\Delta\nu_{r1}", r"\Delta\nu_{r2}",
+#                                    r"\left<\Delta\nu_{r}\right>"],
 #                          col_units=[r"", r"\hertz", r"\hertz",
+#                                     r"\hertz", r"\hertz",
 #                                     r"\hertz", r"\hertz"],
-#                          fmt=["c", "c", "c", "c", "c"],
+#                          fmt=["c", "c", "c", "c", "c", "c", "c"],
 #                          cap="Direkt gemessene Frequenzen des Wagens" +
 #                              " in den verschiedenen Gängen",
 #                          label="Auswertung_Frequenz_Schwebung"))
@@ -345,22 +367,22 @@ plt.savefig("Grafiken/Frequenzdifferenz_Schwebung.pdf")
 #                          col_syms=[r"\nu_{0}"],
 #                          col_units=[r"\hertz"],
 #                          fmt=["c"],
-#                          cap="Gemessene Ruhefrequenzen und Mittelwert",
+#                          cap="Gemessene Ruhefrequenzen",
 #                          label="Auswertung_Ruhefrequenz"))
 #File.close()
 
 #File = open("Daten/Tabelle_Wellenlaenge.tex", "w")
 #
-#File.write(lxtabs.toTable([G, us, n, uk, uk_inv],
-#                          col_titles=["Gang", "Strecke",
+#File.write(lxtabs.toTable([us, n, uk, uk_inv],
+#                          col_titles=["Strecke",
 #                                      "Wellenlängenanzahl", "Wellenlänge",
 #                                      "inverse Wellenlänge"],
-#                          col_syms=[r"g", r"s", "n", r"\lambda",
-#                                    r"\sfrac{1}{\lambda}"],
-#                          col_units=[r"", r"\centi\meter", r"",
-#                                     r"\centi\meter", r"\per\centi\meter"],
-#                          fmt=["c", "c", "c", "c", "c", "c"],
-#                          cap="Messdaten der Wellenlängenbstimmung und " +
+#                          col_syms=[r"s", "n", r"\lambda",
+#                                    r"\lambda{-1}"],
+#                          col_units=[r"\meter", r"",
+#                                     r"\meter", r"\per\meter"],
+#                          fmt=["c", "c", "c", "c"],
+#                          cap="Messdaten der Wellenlängenbestimmung und " +
 #                              "Wellenlänge sowie inverse Wellenlänge",
 #                          label="Auswertung_Wellenlänge"))
 #File.close()

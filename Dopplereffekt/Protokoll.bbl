@@ -16,5 +16,21 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \sortlist{entry}{nty}
+    \entry{SciPy}{misc}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{SciPy}
+      \field{title}{SciPy}
+      \field{urlday}{18}
+      \field{urlmonth}{01}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://docs.scipy.org/doc/
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
 

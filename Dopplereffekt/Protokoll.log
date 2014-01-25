@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  16 JAN 2014 23:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  25 JAN 2014 21:08
 entering extended mode
 **Protokoll.tex
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
-otokoll.tex"
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Protokoll.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -1493,10 +1493,45 @@ LaTeX Info: Redefining \labelcref on input line 2163.
 LaTeX Info: Redefining \labelcpageref on input line 2163.
 Package cleveref Info: `amsthm' support loaded on input line 2583.
 )
+(D:\Programme\MiKTeX\tex\latex\subfig\subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(D:\Programme\MiKTeX\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(D:\Programme\MiKTeX\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen196
+\captionmargin@=\dimen197
+\captionwidth=\dimen198
+\caption@tempdima=\dimen199
+\caption@indent=\dimen200
+\caption@parindent=\dimen201
+Normal \dimen register pool exhausted, switching to extended pool.
+\caption@hangindent=\dimen256
+)
+\c@ContinuedFloat=\count337
+Package caption Info: hyperref package is loaded.
+)
+\c@KVtest=\count338
+\sf@farskip=\skip98
+\sf@captopadj=\dimen257
+\sf@capskip=\skip99
+\sf@nearskip=\skip100
+\c@subfigure=\count339
+\c@subfigure@save=\count340
+\c@lofdepth=\count341
+\c@subtable=\count342
+\c@subtable@save=\count343
+\c@lotdepth=\count344
+\sf@top=\skip101
+\sf@bottom=\skip102
+)
 (D:\Programme\MiKTeX\tex\latex\wrapfig\wrapfig.sty
-\wrapoverhang=\dimen196
-\WF@size=\dimen197
-\c@WF@wrappedlines=\count337
+\wrapoverhang=\dimen258
+\WF@size=\dimen259
+\c@WF@wrappedlines=\count345
 \WF@box=\box54
 \WF@everypar=\toks43
 Package: wrapfig 2003/01/31  v 3.6
@@ -1530,21 +1565,20 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 (D:\Programme\MiKTeX\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks47
 ))
-\pgf@x=\dimen198
-\pgf@y=\dimen199
-\pgf@xa=\dimen200
-\pgf@ya=\dimen201
-Normal \dimen register pool exhausted, switching to extended pool.
-\pgf@xb=\dimen256
-\pgf@yb=\dimen257
-\pgf@xc=\dimen258
-\pgf@yc=\dimen259
+\pgf@x=\dimen260
+\pgf@y=\dimen261
+\pgf@xa=\dimen262
+\pgf@ya=\dimen263
+\pgf@xb=\dimen264
+\pgf@yb=\dimen265
+\pgf@xc=\dimen266
+\pgf@yc=\dimen267
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count338
-\c@pgf@countb=\count339
-\c@pgf@countc=\count340
-\c@pgf@countd=\count341
+\c@pgf@counta=\count346
+\c@pgf@countb=\count347
+\c@pgf@countc=\count348
+\c@pgf@countd=\count349
 
 (D:\Programme\MiKTeX\tex\generic\pgf\systemlayer\pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -1559,8 +1593,8 @@ File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
 (D:\Programme\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
-\pgfsyssoftpath@smallbuffer@items=\count342
-\pgfsyssoftpath@bigbuffer@items=\count343
+\pgfsyssoftpath@smallbuffer@items=\count350
+\pgfsyssoftpath@bigbuffer@items=\count351
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -1589,8 +1623,8 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathcalc.code.tex
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathutil.code.tex)
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen260
-\pgfmath@count=\count344
+\pgfmath@dimen=\dimen268
+\pgfmath@count=\count352
 \pgfmath@box=\box56
 \pgfmath@toks=\toks48
 \pgfmath@stack@operand=\toks49
@@ -1605,51 +1639,51 @@ ex) (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.random.code.tex)
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.round.code.tex)
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex)))
 (D:\Programme\MiKTeX\tex\generic\pgf\math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count345
+\c@pgfmathroundto@lastzeros=\count353
 ))
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen261
-\pgf@picmaxx=\dimen262
-\pgf@picminy=\dimen263
-\pgf@picmaxy=\dimen264
-\pgf@pathminx=\dimen265
-\pgf@pathmaxx=\dimen266
-\pgf@pathminy=\dimen267
-\pgf@pathmaxy=\dimen268
-\pgf@xx=\dimen269
-\pgf@xy=\dimen270
-\pgf@yx=\dimen271
-\pgf@yy=\dimen272
-\pgf@zx=\dimen273
-\pgf@zy=\dimen274
+\pgf@picminx=\dimen269
+\pgf@picmaxx=\dimen270
+\pgf@picminy=\dimen271
+\pgf@picmaxy=\dimen272
+\pgf@pathminx=\dimen273
+\pgf@pathmaxx=\dimen274
+\pgf@pathminy=\dimen275
+\pgf@pathmaxy=\dimen276
+\pgf@xx=\dimen277
+\pgf@xy=\dimen278
+\pgf@yx=\dimen279
+\pgf@yy=\dimen280
+\pgf@zx=\dimen281
+\pgf@zy=\dimen282
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen275
-\pgf@path@lasty=\dimen276
+\pgf@path@lastx=\dimen283
+\pgf@path@lasty=\dimen284
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen277
-\pgf@shorten@start@additional=\dimen278
+\pgf@shorten@end@additional=\dimen285
+\pgf@shorten@start@additional=\dimen286
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box57
 \pgf@hbox=\box58
 \pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count346
+\pgf@picture@serial@count=\count354
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen279
+\pgflinewidth=\dimen287
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen280
-\pgf@pt@y=\dimen281
-\pgf@pt@temp=\dimen282
+\pgf@pt@x=\dimen288
+\pgf@pt@y=\dimen289
+\pgf@pt@temp=\dimen290
 ) (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
@@ -1663,8 +1697,8 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen283
-\pgf@sys@shading@range@num=\count347
+\pgf@max=\dimen291
+\pgf@sys@shading@range@num=\count355
 )
 (D:\Programme\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
@@ -1691,8 +1725,8 @@ File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
 (D:\Programme\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen284
-\pgf@nodesepend=\dimen285
+\pgf@nodesepstart=\dimen292
+\pgf@nodesepend=\dimen293
 )
 (D:\Programme\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
@@ -1702,8 +1736,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 (D:\Programme\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex))
 (D:\Programme\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen286
-\pgffor@skip=\dimen287
+\pgffor@iter=\dimen294
+\pgffor@skip=\dimen295
 \pgffor@stack=\toks51
 \pgffor@toks=\toks52
 ))
@@ -1712,28 +1746,28 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
 (D:\Programme\MiKTeX\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
-\pgf@plot@mark@count=\count348
-\pgfplotmarksize=\dimen288
+\pgf@plot@mark@count=\count356
+\pgfplotmarksize=\dimen296
 )
-\tikz@lastx=\dimen289
-\tikz@lasty=\dimen290
-\tikz@lastxsaved=\dimen291
-\tikz@lastysaved=\dimen292
-\tikzleveldistance=\dimen293
-\tikzsiblingdistance=\dimen294
+\tikz@lastx=\dimen297
+\tikz@lasty=\dimen298
+\tikz@lastxsaved=\dimen299
+\tikz@lastysaved=\dimen300
+\tikzleveldistance=\dimen301
+\tikzsiblingdistance=\dimen302
 \tikz@figbox=\box62
 \tikz@tempbox=\box63
-\tikztreelevel=\count349
-\tikznumberofchildren=\count350
-\tikznumberofcurrentchild=\count351
-\tikz@fig@count=\count352
+\tikztreelevel=\count357
+\tikznumberofchildren=\count358
+\tikznumberofcurrentchild=\count359
+\tikz@fig@count=\count360
 (D:\Programme\MiKTeX\tex\generic\pgf\modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
-\pgfmatrixcurrentrow=\count353
-\pgfmatrixcurrentcolumn=\count354
-\pgf@matrix@numberofcolumns=\count355
+\pgfmatrixcurrentrow=\count361
+\pgfmatrixcurrentcolumn=\count362
+\pgf@matrix@numberofcolumns=\count363
 )
-\tikz@expandcount=\count356
+\tikz@expandcount=\count364
 
 (D:\Programme\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryto
 paths.code.tex
@@ -1745,45 +1779,27 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
 
 (D:\Programme\MiKTeX\tex\generic\pgf\libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
-\arrowsize=\dimen295
+\arrowsize=\dimen303
 ))
-(D:\Programme\MiKTeX\tex\latex\caption\caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
-
-(D:\Programme\MiKTeX\tex\latex\caption\caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen296
-\captionmargin@=\dimen297
-\captionwidth=\dimen298
-\caption@tempdima=\dimen299
-\caption@indent=\dimen300
-\caption@parindent=\dimen301
-\caption@hangindent=\dimen302
-)
-\c@ContinuedFloat=\count357
-Package caption Info: hyperref package is loaded.
-Package caption Info: wrapfig package is loaded.
-)
 (D:\Programme\MiKTeX\tex\latex\ulem\ulem.sty
 \UL@box=\box64
 \UL@hyphenbox=\box65
-\UL@skip=\skip98
+\UL@skip=\skip103
 \UL@hook=\toks53
-\UL@height=\dimen303
-\UL@pe=\count358
-\UL@pixel=\dimen304
+\UL@height=\dimen304
+\UL@pe=\count365
+\UL@pixel=\dimen305
 \ULC@box=\box66
 Package: ulem 2012/05/18
-\ULdepth=\dimen305
+\ULdepth=\dimen306
 )
 (D:\Programme\MiKTeX\tex\latex\enumitem\enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip99
-\enit@outerparindent=\dimen306
+\labelindent=\skip104
+\enit@outerparindent=\dimen307
 \enit@toks=\toks54
 \enit@inbox=\box67
-\enitdp@description=\count359
+\enitdp@description=\count366
 )
 (D:\Programme\MiKTeX\tex\latex\psnfss\pifont.sty
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
@@ -1797,11 +1813,12 @@ LaTeX Font Info:    Try loading font information for U+psy on input line 64.
 (D:\Programme\MiKTeX\tex\latex\psnfss\upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 )))
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
-tex/VersuchDaten.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Latex/VersuchDaten.tex")
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
- (D:\Programme\MiKTeX\tex\latex\biblatex\lbx\ngerman.lbx
+
+(D:\Programme\MiKTeX\tex\latex\biblatex\lbx\ngerman.lbx
 File: ngerman.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
@@ -1812,8 +1829,8 @@ File: german.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
-otokoll.aux")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Protokoll.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
@@ -1879,22 +1896,22 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Protokoll.bbl' found.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
-otokoll.bbl")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Protokoll.bbl")
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
  (D:\Programme\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count360
-\scratchdimen=\dimen307
+\scratchcounter=\count367
+\scratchdimen=\dimen308
 \scratchbox=\box68
-\nofMPsegments=\count361
-\nofMParguments=\count362
+\nofMPsegments=\count368
+\nofMParguments=\count369
 \everyMPshowfont=\toks55
-\MPscratchCnt=\count363
-\MPscratchDim=\dimen308
-\MPnumerator=\count364
-\makeMPintoPDFobject=\count365
+\MPscratchCnt=\count370
+\MPscratchDim=\dimen309
+\MPnumerator=\count371
+\makeMPintoPDFobject=\count372
 \everyMPtoPDFconversion=\toks56
 )
 (D:\Programme\MiKTeX\tex\latex\beamer\base\translator\dicts\translator-basic-di
@@ -1967,21 +1984,23 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (D:\Programme\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count366
+\c@section@level=\count373
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
-otokoll.out")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
-otokoll.out")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Protokoll.out")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Protokoll.out")
 \@outlinefile=\write5
- ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c__siunitx_mathsf_int=\count367
+ ABD: EveryShipout initializing macros
+\c__siunitx_mathsf_int=\count374
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\lm\ot1lmr.fd
@@ -2028,7 +2047,7 @@ LaTeX Font Info:    Try loading font information for OT1+lmss on input line 3.
 (D:\Programme\MiKTeX\tex\latex\lm\ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\c__siunitx_mathtt_int=\count368
+\c__siunitx_mathtt_int=\count375
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 3.
 
 (D:\Programme\MiKTeX\tex\latex\lm\ot1lmtt.fd
@@ -2038,55 +2057,141 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 atex\Deckblatt.tex" [1
 
 {C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
-tex/Einleitung.tex")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
-tex/Theorie.tex")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
-tex/Durchführung.tex")
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
-tex/Auswertung.tex")pdfTeX warning (ext4): destination with the same identifier
- (name{page.1}) has been already used, duplicate ignored
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Latex/Einleitung.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Latex/Theorie.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Latex/Durchführung.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Latex/Auswertung.tex"
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Daten/Tabelle_Wellenlaenge.tex")pdfTeX warning (ext4): destination with the 
+same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.32 	\end{empheq}
+                   [1]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Daten/Tabelle_Fahrtzeiten.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Daten/Tabelle_Geschwindigkeiten.tex")
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Daten/Tabelle_Ruhefrequenz.tex" [2])
+
+LaTeX Warning: Reference `eq:Theorie_BewegterEmpf�nger' on page 1 undefined on 
+input line 72.
+
+
+LaTeX Warning: Reference `eq:Theorie_BewegterSender' on page 1 undefined on inp
+ut line 72.
+
+
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Daten/Tabelle_Direkt.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [3]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Daten/Tabelle_DirektDifferenzen.tex")
+<Grafiken/Frequenzdifferenz_direkt.pdf, id=109, 578.16pt x 431.81326pt>
+File: Grafiken/Frequenzdifferenz_direkt.pdf Graphic file (type pdf)
+
+<use Grafiken/Frequenzdifferenz_direkt.pdf>
+Package pdftex.def Info: Grafiken/Frequenzdifferenz_direkt.pdf used on input li
+ne 106.
+(pdftex.def)             Requested size: 404.70924pt x 302.26721pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4]
+
+LaTeX Warning: Reference `eq:Theorie_BewegterEmpf�nger' on page 1 undefined on 
+input line 130.
+
+
+LaTeX Warning: Reference `eq:Theorie_BewegterEmpf�nger' on page 1 undefined on 
+input line 144.
+
+
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Daten/Tabelle_Schwebung.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+
+LaTeX Warning: Reference `fig:' on page 1 undefined on input line 157.
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{equation.0.
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.163 	\end{empheq}
+                    <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/Prakti
+kumRepo/Dopplereffekt/Grafiken/Frequenzdifferenz_direkt.pdf>]) [6pdfTeX warning
+ (ext4): destination with the same identifier (name{equation.0.8}) has been alr
+eady used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
 l.24 	\newpage
-               [1]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
-tex/Fehlerrechnung.tex") [2]
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\La
-tex/Diskussion.tex") [3]
-
-LaTeX Warning: Empty bibliography on input line 34.
-
+              ]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Latex/Fehlerrechnung.tex") [7]
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Latex/Diskussion.tex") [8]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 34.
+ (D:\Programme\MiKTeX\tex\latex\lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 
 AED: lastpage setting LastPage
+[9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
 
-("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_vorlage\Pr
-otokoll.aux"
+("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Dopplereffe
+kt\Protokoll.aux"
 Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: F48E8469A38BF8AFB39FA42DABA1BAE8;296.
+(rerunfilecheck)             Checksum: B5B3F70DEDC06A210BFDACAD37A13EAC;777.
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34428 strings out of 493921
- 652748 string characters out of 3150494
- 1061147 words of memory out of 3000000
- 37056 multiletter control sequences out of 15000+200000
- 59526 words of font info for 55 fonts, out of 3000000 for 9000
+ 34909 strings out of 493921
+ 663167 string characters out of 3150494
+ 1085442 words of memory out of 3000000
+ 37454 multiletter control sequences out of 15000+200000
+ 86169 words of font info for 70 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 67i,11n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<D:/Programme/MiKTeX/fonts/
-type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmcsc10.p
-fb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
-Output written on Protokoll.pdf (4 pages, 88726 bytes).
+ 67i,22n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{D:/Programme/MiKTeX/fonts/
+enc/dvips/lm/lm-mathit.enc}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
+c}{D:/Programme/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/Programme/MiKTeX/fo
+nts/enc/dvips/lm/lm-rm.enc}<D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+b><D:/Programme/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><D:/Programme/MiKTeX/fo
+nts/type1/public/lm/lmcsc10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmex
+10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><D:/Programme/MiKT
+eX/fonts/type1/public/lm/lmmi8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
+mr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiK
+TeX/fonts/type1/public/lm/lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
+mri12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/M
+iKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Programme/MiKTeX/fonts/type1/public/l
+m/lmtt12.pfb>
+Output written on Protokoll.pdf (10 pages, 295343 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 322 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
