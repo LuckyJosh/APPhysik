@@ -5,9 +5,9 @@ Rechnungen gegeben. Die jeweils mit aufgeführten Fehler der Ergebnisse
 wurden mit den mit römischen Zahlen nummerierten Gleichungen in \cref{sec:Fehlerrechnung}
 berechnet, die jeweilige Gleichung ist dabei angegeben.
 
-\subsection{Direkte Bestimmung der Wellenlänge}
+\subsection{Direkte Bestimmung der Ruhewellenlänge}
 	
-	Die Messwerte zur Bestimmung der Wellenlänge, des verwendeten Signals 
+	Die Messwerte zur Bestimmung der Ruhewellenlänge, des verwendeten Signals 
 	sind in \cref{tab:Auswertung_Wellenlänge} zusammen mit den daraus bestimmten Werten für die Wellenlänge
 	und deren Inverses eingetragen.
 	
@@ -16,7 +16,7 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
 	Für die zu untersuchende inverse Wellenlänge erhält man daraus den Mittelwert
 	\begin{empheq}{equation}
 		\label{eq:Auswertung_Wellenlaenge_direkt}
-		\left<\lambda^{-1}\right> = \SI{56(2)}{\per\meter}.
+		\left<\lambda_{0}^{-1}\right> = \SI{56(2)}{\per\meter}.
 	\end{empheq}
 	Dabei ist der angegebene Fehler
 	die Abweichung vom Mittelwert und nicht durch Fehlerfortpflanzung bestimmt, da
@@ -62,7 +62,7 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
 	Aus dieser Ruhefrequenz $\left< \nu_{0} \right>$ und der zuvor bestimmten inversen Wellenlänge 
 	\cref{eq:Auswertung_Wellenlaenge_direkt} kann nun die Schallgeschwindigkeit $c$ zu
 	\begin{empheq}{equation}
-		c =\left<  \lambda \right> \cdot \left< \nu_{0} \right> = \SI{362(15)}{\meter\per\second}
+		c =\left<  \lambda_{0} \right> \cdot \left< \nu_{0} \right> = \SI{362(15)}{\meter\per\second}
 	\end{empheq}
 	berechnet werde. 
 	
@@ -105,7 +105,7 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
 		\centering
 		\includegraphics[scale=0.7]{Grafiken/Frequenzdifferenz_direkt.pdf}
 		\label{fig:Auswertung_Frequenzänderung_direkt}
-		\caption{Frequenzänderung in Abhängigkeit der Geschwindigkeit\\\hspace*{2.6cm} mit entsprechenden Regressionsgeraden}
+		\caption{Direkt bestimmte Frequenzänderung in Abhängigkeit der Geschwindigkeit\\\hspace*{2.6cm} mit entsprechenden Regressionsgeraden}
 	\end{figure}  
 	
 	Die ebenfalls in \cref*{fig:Auswertung_Frequenzänderung_direkt} aufgetragene Regressionsgerade
@@ -142,9 +142,14 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
 	\end{subequations}  
 	
 	Im Vergleich mit \cref{eq:Theorie_BewegterEmpfänger} ist nun offensichtlich, dass
-	der Regressionsparameter $ A $ der inversen Ruhewellenlänge entspricht.   
-	
-	
+	der Regressionsparameter $ A $ der inversen Ruhewellenlänge entspricht.
+	Aufgrund der geringen Abweichung der Steigung $ A' $ von $ A $, wird hier der
+	Wert mit dem geringeren Fehler für den späteren Vergleich als inverse Wellenlänge     
+	\begin{empheq}{equation}
+		\label{eq:Auswertung_InverseWellenlänge_direkt}
+		\lambda_{0,direkt} = A = \SI{57.9(2)}{\per\meter}
+	\end{empheq}
+	verwendet.
 	
 \subsection{Bestimmung der Frequenzänderung mit der Schwebungsmethode}
  	
@@ -159,22 +164,91 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
  	Dabei sind diese analog zu der in \cref{sec:Auswertung_Direkt} beschrieben Weise mit Hilfe
  	\emph{SciPy} bestimmt worden und die entsprechenden Parameter des Ansatzes
 	\begin{empheq}{equation}
-		g(v) =  A \cdot v + B
+		g(v) =  C \cdot v + D
 	\end{empheq} 
 	sind
 	\addtocounter{equation}{-1}
 	\begin{subequations}
 		\begin{empheq}{align}
 				\label{eq:Auswertung_Paramter_C1}
-				A &= \SI{80(5)}{\per\meter}\\ 
+				C &= \SI{80(5)}{\per\meter}\\ 
 				\label{eq:Auswertung_Paramter_D1}
-				B &= \SI{-1(2)}{\hertz} \\
-				\text{beziehungsweise} \nonumber\\
-				\label{eq:Auswertung_Paramter_C2}
-				A' &= \SI{80(5)}{\per\meter}\\ 
-				\label{eq:Auswertung_Paramter_D2}
-				B' &= \SI{0}{\hertz} 
+				D &= \SI{-1(2)}{\hertz}
 			\end{empheq} 
 	\end{subequations}
- 	
- 	
+	beziehungsweise
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\addtocounter{equation}{2}
+		\begin{empheq}{align}
+				\label{eq:Auswertung_Paramter_C2}
+				C' &= \SI{80(5)}{\per\meter}\\ 
+				\label{eq:Auswertung_Paramter_D2}
+				D' &= \SI{0}{\hertz}. 
+			\end{empheq} 
+	\end{subequations}
+	
+ 	\begin{figure}[!h]
+ 	 			\centering
+ 	 			\includegraphics[scale=0.7]{Grafiken/Frequenzdifferenz_Schwebung.pdf}
+ 	 			\label{fig:Auswertung_Frequenzänderung_Schwebung}
+ 	 			\caption{Mit der Schwebungsmethode bestimmte Frequenzänderung in Abhängigkeit der\\\hspace*{2.6cm} Geschwindigkeit mit entsprechenden Regressionsgeraden}
+ 	 		\end{figure} 
+ 	 		
+ 	Da auch diese Regressionsgerade die Form von \cref{eq:Theorie_BewegterEmpfänger} besitzt zeigt
+ 	sich, dass die Steigung der Geraden der inversen Ruhewellenlänge entspricht. 
+	Da die beiden Geraden keinen Unterschied in ihrer Steigung aufweisen ergibt sich aus der Schwebungsmethode
+	die inverse Wellenlänge
+	\begin{empheq}{equation}
+		\label{eq:Auswertung_InverseWellenlänge_Schwebung}
+		\lambda_{0,Schwebung} = C = \SI{80(5)}{\per\meter}.
+	\end{empheq}
+
+\subsection{Beurteilung der Messergebnisse durch einen t-Test}
+	
+	Zur Beurteilung, ob zwischen zwei Messreihen $x_{i}$ und $y_{i}$ vom Umfang $n_{x}$ bzw. $n_{y}$ 
+	der selben Messgröße ein systematischer Fehler besteht, kann der sogenannte studentsche t-Test verwendete werden.
+	Für diesen benötigt man die Prüfgröße $t$ mit der Definition
+	\begin{empheq}{equation}
+		\label{eq:Auswertung_tTest_t}
+		t = \dfrac{\mean{x} - \mean{y}}{\sigma_{\mean{x} - \mean{y}}}.
+	\end{empheq} 	
+	Die benötigten Größen sind dabei die Mittelwerte $\mean{x}$ und $\mean{y}$ der zwei zu vergleichenden Messreihen,
+	sowie die Standardabweichung der Differenz dieser Mittelwerte $\sigma_{\mean{x} - \mean{y}}$, die unter der 
+	Verwendung der Standardabweichungen der Mittelwerte $\sigma_{x}$ und $\sigma_{y}$ wie folgt definiert ist.
+	\begin{empheq}{equation}
+		\label{eq:Auswertung_tTest_s}
+		s = \sqrt{\dfrac{(n_{x} - 1)  \sigma_{x}^{2} + (n_{y} - 1)  \sigma_{y}^{2}}{(n_{x} - 1) + (n_{y} - 1)} \cdot 
+		\dfrac{n_{x} + n_{y}}{n_{x}n_{y}}}
+	\end{empheq} 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 

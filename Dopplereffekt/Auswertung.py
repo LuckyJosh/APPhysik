@@ -213,7 +213,6 @@ for g in G:
 #### Alle Frequenzänderungen mit Voreichen
 udF = np.concatenate((udF_h_avr, -udF_r_avr))
 
-
 # Grafische Auswertung
 
 def y(x, m, b):
@@ -270,10 +269,30 @@ plt.ylabel(r"Frequenzdifferenz $\Delta \nu\ [\mathrm{Hz}]$",
 plt.errorbar(noms(uv_plot), noms(udF_plot), yerr=stds(udF_plot),
              fmt="rx", label="Messwerte")
 plt.plot(V, y(V, *popt2), label="Regressionsgerade")
-plt.plot(V, y1(V, *popt25), label="Regressionsgerade")
+plt.plot(V, y1(V, *popt25), label="Regressionsgerade durch den Ursprung")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Frequenzdifferenz_Schwebung.pdf")
+
+# Student t-Test
+
+
+def S(nx, ny, sx, sy):
+    return np.sqrt(((((nx - 1) * sx**2 + (ny - 1) * sy**2) * (nx + ny)) /
+                  ((nx + ny - 2) * (nx * ny))))
+
+
+def T(x_avr, y_avr, s):
+    return (x_avr - y_avr)/s
+
+S1 = S(len(uk_inv), len(udf), stds(uk_inv_avr), stds(params1[0]))
+T1 = T(noms(uk_inv_avr), noms(params1[0]), S1)
+
+S2 = S(len(uk_inv), len(udF), stds(uk_inv_avr), stds(params2[0]))
+T2 = T(noms(uk_inv_avr), noms(params2[0]), S2)
+
+S3 = S(len(udf), len(udF), stds(params1[0]), stds(params2[0]))
+T3 = T(noms(params1[0]), noms(params2[0]), S3)
 
 ## Print Funktionen
 
