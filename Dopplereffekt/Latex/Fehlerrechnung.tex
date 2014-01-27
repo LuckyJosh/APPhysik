@@ -1,0 +1,35 @@
+\setcounter{equation}{0}
+\renewcommand{\theequation}{\Roman{equation}}
+In diesem Abschnitt sind die mit Hilfe der gaußschen
+Fehlerfortpflanzung berechneten Fehlergleichungen gegeben,
+mit denen die Abweichungen der in \cref{sec:Auswertung} 
+erhaltenen Messergebnisse berechnet wurden.
+ 
+Der allgemeine Fehler, des Mittelwerts $\mathbb{M}(x_{i})\, \text{mit}\, i \in \{1, \dots, n\}$ durch Gaußsche Fortpflanzung ergibt sich aus der Gleichung:
+ \begin{empheq}{equation}
+ \sigma_{\mathbb{M}} = \dfrac{1}{n} \sqrt{\sum_{i = 1}^{n} \sigma_{x_{i}}^{2}}
+ \label{std:Mittel}
+ \end{empheq}  
+ 
+Die Fehler der Wellenlängen in \cref{tab:Auswertung_Wellenlänge} berechnen sich nach:
+\begin{empheq}{equation}
+\sigma_{\lambda} = \dfrac{\sigma_{s}}{n}
+\end{empheq} 
+ 
+Der Fehler der inversen Wellenlängen in \cref{tab:Auswertung_Wellenlänge} ergibt sich vereinfacht 
+aus:
+\begin{empheq}{equation}
+	\sigma_{\lambda^{-1}} = \dfrac{\sigma_{\lambda}}{\lambda^{2}}
+\end{empheq} 
+ 
+ \begin{empheq}{equation}
+ \sigma_{v} = \sqrt{\frac{l^{2} \sigma_{t}^{2}}{t^{4}} + \frac{\sigma_{l}^{2}}{t^{2}}}
+ \end{empheq} 
+ 
+ 
+ \begin{empheq}{equation}
+ \sigma_{c} =\sqrt{\lambda^{2} \sigma_{\nu}^{2} + \nu^{2} \sigma_{\lambda}^{2}}
+ \end{empheq} 
+ \begin{empheq}{equation}
+ \sigma_{\Delta\nu} = \sqrt{\sigma_{\nu}^{2} + \sigma_{\nu_0}^{2}} 
+ \end{empheq} 

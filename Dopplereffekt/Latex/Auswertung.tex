@@ -6,7 +6,7 @@ wurden mit den mit römischen Zahlen nummerierten Gleichungen in \cref{sec:Fehle
 berechnet, die jeweilige Gleichung ist dabei angegeben.
 
 \subsection{Direkte Bestimmung der Ruhewellenlänge}
-	
+\label{sec:Auswertung_Wellenlänge}	
 	Die Messwerte zur Bestimmung der Ruhewellenlänge, des verwendeten Signals 
 	sind in \cref{tab:Auswertung_Wellenlänge} zusammen mit den daraus bestimmten Werten für die Wellenlänge
 	und deren Inverses eingetragen.
@@ -44,7 +44,7 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
  	
 	
 \subsection{Bestimmung von Ruhefrequenz und Schallgeschwindigkeit}
-	
+\label{sec:Auswertung_FrequenzSchall}
 	Zur direkten Bestimmung der Frequenzänderung muss zunächst die Ruhefrequenz
 	des verwendeten Signals bestimmt werden, die dafür genommenen Messwerte  
 	sind in \cref{tab:Auswertung_Ruhefrequenz} zu finden.  
@@ -152,7 +152,7 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
 	verwendet.
 	
 \subsection{Bestimmung der Frequenzänderung mit der Schwebungsmethode}
- 	
+\label{sec:Auswertung_Schwebung}
  	Die Messwerte, die für die Frequenzänderung mit Hilfe der Schwebungsmethode aufgenommen wurden 
  	befinden sich in \cref{tab:Auswertung_Frequenz_Schwebung} in der auch die Mittelwerte dieser 
  	Messwerte angegeben sind.
@@ -218,11 +218,24 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
 	Verwendung der Standardabweichungen der Mittelwerte $\sigma_{x}$ und $\sigma_{y}$ wie folgt definiert ist.
 	\begin{empheq}{equation}
 		\label{eq:Auswertung_tTest_s}
-		s = \sqrt{\dfrac{(n_{x} - 1)  \sigma_{x}^{2} + (n_{y} - 1)  \sigma_{y}^{2}}{(n_{x} - 1) + (n_{y} - 1)} \cdot 
+		\sigma_{\mean{x} - \mean{y}} = \sqrt{\dfrac{(n_{x} - 1)  \sigma_{x}^{2} + (n_{y} - 1)  \sigma_{y}^{2}}{(n_{x} - 1) + (n_{y} - 1)} \cdot 
 		\dfrac{n_{x} + n_{y}}{n_{x}n_{y}}}
 	\end{empheq} 
+	In \cref{tab:} sind die auf diese Weise berechneten Werte für  $\sigma_{\mean{x} - \mean{y}}$ und $t$ für die drei Vergleiche
+	der Ergebnisse aus \cref{sec:Auswertung_Wellenlänge}, \ref{sec:Auswertung_Direkt} und \ref{sec:Auswertung_Schwebung} zu finden.
+	Um eine Aussage über die Wahrscheinlichkeit eines systematischen Fehlers zwischen den Werten treffen zu können muss, ein aus der 
+	Literatur \cite{Bortz10} entnommener Referenzwert $t_{ref}$ bekannt sein. Wird dieser von dem Betrag der Testgröße \envert{t} 
+	überschritten so besteht mit der Wahrscheinlichkeit $1 - \alpha$ ein systematischer Fehler zwischen den Versuchsergebnissen.  
+	Die Größe $\alpha$ ist damit die vor dem Test festzulegende Irrtumswahrscheinlichkeit, für diesen Test sei $\alpha = 0.01$. 	
+	Die zu vergleichenden Werte seien hier noch einmal gegeben:
+	\begin{empheq}{align*}
+		\lambda_{0}   &= \SI{56(2)}{\per\meter} \\
+		\lambda_{0,d} &=\SI{57.9(2)}{\per\meter}\\
+		\lambda_{0,s} &=\SI{80(5)}{\per\meter}
+	\end{empheq}
 	
 	
+	\input{Daten/Tabelle_Signifikanz.tex}
 	
 	
 	

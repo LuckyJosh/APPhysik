@@ -112,13 +112,15 @@ s0, s1, n = np.loadtxt("Messdaten/Wellenlaengen.txt", unpack=True)
 s_err = np.loadtxt("Messdaten/Fehler_Wellenlaengen.txt")
 
 #### Fehlerbehaftete Messwerte
+s = s0 + s1
 us0 = uarray(s0, s_err)
 us1 = uarray(s1, s_err)
 
 us0 *= 1e-02  # [cm]-->[m]
 us1 *= 1e-02  # [cm]-->[m]
 us = us1 + us0
-
+us_alt = uarray(s, s_err)
+us_alt *= 1e-02
 
 ### Berechnung der Wellenlänge
 uk = (us0 + us1)/n
@@ -294,7 +296,27 @@ T2 = T(noms(uk_inv_avr), noms(params2[0]), S2)
 S3 = S(len(udf), len(udF), stds(params1[0]), stds(params2[0]))
 T3 = T(noms(params1[0]), noms(params2[0]), S3)
 
+S = np.array([S1, S2, S3])
+T = np.array([T1, T2, T3])
+T_ref = np.array([2.81, 2.81, 2.70])
+P = np.array([99, 99, 99])
 ## Print Funktionen
+
+#File = open("Daten/Tabelle_Signifikanz.tex", "w")
+#
+#File.write(lxtabs.toTable([G[0:3], S, T, T_ref, P],
+#                          col_titles=["Vergleich zwischen",
+#                                      "gewichtete Abweichung",
+#                                      "Prüfgröße", "Referenzwert",
+#                                      "Wahrscheinlichkeit"],
+#                          col_syms=[r"", r"\sigma_{\mean{x} - \mean{y}}",
+#                                    r"t", "t_{ref}", r"P"],
+#                          col_units=[r"", r"\per\meter", r"",
+#                                     r"", r"\percent"],
+#                          fmt=["c", "c", "c", "c", "c"],
+#                          cap="Ergebnisse des Studentschen T-Tests",
+#                          label="Auswertung_StudentTest"))
+#File.close()
 
 #File = open("Daten/Tabelle_Fahrtzeiten.tex", "w")
 #
