@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.23)  27 JAN 2014 17:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.23)  29 JAN 2014 16:47
 entering extended mode
 **Protokoll.tex
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dopplereffekt\Protokoll.tex
@@ -2150,29 +2150,30 @@ _Fahrtzeiten.tex")
 _Geschwindigkeiten.tex")
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dopplereffekt\Daten/Tabelle
 _Ruhefrequenz.tex" [2])
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 69.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 69.
+
 
 LaTeX Warning: Reference `eq:Theorie_BewegterEmpfänger' on page 1 undefined on 
-input line 72.
+input line 74.
 
 
 LaTeX Warning: Reference `eq:Theorie_BewegterSender' on page 1 undefined on inp
-ut line 72.
+ut line 74.
 
 
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dopplereffekt\Daten/Tabelle
-_Direkt.tex"
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [3]
+_Direkt.tex" [3])
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dopplereffekt\Daten/Tabelle
 _DirektDifferenzen.tex")
-<Grafiken/Frequenzdifferenz_direkt.pdf, id=113, 578.16pt x 431.81326pt>
+<Grafiken/Frequenzdifferenz_direkt.pdf, id=129, 578.16pt x 431.81326pt>
 File: Grafiken/Frequenzdifferenz_direkt.pdf Graphic file (type pdf)
 
 <use Grafiken/Frequenzdifferenz_direkt.pdf>
 Package pdftex.def Info: Grafiken/Frequenzdifferenz_direkt.pdf used on input li
-ne 106.
+ne 108.
 (pdftex.def)             Requested size: 404.70924pt x 302.26721pt.
 
 
@@ -2181,31 +2182,31 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [4]
 
 LaTeX Warning: Reference `eq:Theorie_BewegterEmpfänger' on page 1 undefined on 
-input line 130.
+input line 132.
 
 
 LaTeX Warning: Reference `eq:Theorie_BewegterEmpfänger' on page 1 undefined on 
-input line 144.
+input line 146.
 
 [5pdfTeX warning (ext4): destination with the same identifier (name{equation.0.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.159 
-       <D:/Eigene Dateien/Studium/Physik/AP/PraktikumRepo/Dopplereffekt/Grafike
-n/Frequenzdifferenz_direkt.pdf>]
+l.153 	\end{empheq}
+                    <D:/Eigene Dateien/Studium/Physik/AP/PraktikumRepo/Dopplere
+ffekt/Grafiken/Frequenzdifferenz_direkt.pdf>]
 ("D:\Eigene Dateien\Studium\Physik\AP\PraktikumRepo\Dopplereffekt\Daten/Tabelle
 _Schwebung.tex")
 
-LaTeX Warning: Reference `fig:' on page 1 undefined on input line 162.
+LaTeX Warning: Reference `fig:' on page 1 undefined on input line 164.
 
-<Grafiken/Frequenzdifferenz_Schwebung.pdf, id=238, 578.16pt x 431.81326pt>
+<Grafiken/Frequenzdifferenz_Schwebung.pdf, id=255, 578.16pt x 431.81326pt>
 File: Grafiken/Frequenzdifferenz_Schwebung.pdf Graphic file (type pdf)
 
 <use Grafiken/Frequenzdifferenz_Schwebung.pdf>
 Package pdftex.def Info: Grafiken/Frequenzdifferenz_Schwebung.pdf used on input
- line 193.
+ line 195.
 (pdftex.def)             Requested size: 404.70924pt x 302.26721pt.
 
 
@@ -2213,23 +2214,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: Reference `eq:Theorie_BewegterEmpfänger' on page 1 undefined on 
-input line 198.
+input line 200.
 
 [6pdfTeX warning (ext4): destination with the same identifier (name{equation.0.
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.215 	\end{empheq}
+l.207 	\end{empheq}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{equation.0.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.215 	\end{empheq}
+l.207 	\end{empheq}
                    ]
 
-LaTeX Warning: Reference `tab:' on page 1 undefined on input line 224.
+LaTeX Warning: Reference `tab:' on page 1 undefined on input line 226.
 
 [7 <D:/Eigene Dateien/Studium/Physik/AP/PraktikumRepo/Dopplereffekt/Grafiken/Fr
 equenzdifferenz_Schwebung.pdf>]
@@ -2285,11 +2286,11 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34955 strings out of 493921
- 673454 string characters out of 3148871
- 1084358 words of memory out of 3000000
- 37476 multiletter control sequences out of 15000+200000
- 86169 words of font info for 70 fonts, out of 3000000 for 9000
+ 34999 strings out of 493921
+ 674148 string characters out of 3148871
+ 1084785 words of memory out of 3000000
+ 37510 multiletter control sequences out of 15000+200000
+ 107137 words of font info for 90 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,22n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
@@ -2309,10 +2310,11 @@ lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb>
-Output written on Protokoll.pdf (12 pages, 384277 bytes).
+/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.
+pfb>
+Output written on Protokoll.pdf (12 pages, 389881 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
+ 500 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,24 +12,36 @@ Der allgemeine Fehler, des Mittelwerts $\mathbb{M}(x_{i})\, \text{mit}\, i \in \
  \end{empheq}  
  
 Die Fehler der Wellenlängen in \cref{tab:Auswertung_Wellenlänge} berechnen sich nach:
-\begin{empheq}{equation}
+\begin{empheq}{equation} 
+\label{std:Wellenlaenge}
 \sigma_{\lambda} = \dfrac{\sigma_{s}}{n}
 \end{empheq} 
  
 Der Fehler der inversen Wellenlängen in \cref{tab:Auswertung_Wellenlänge} ergibt sich vereinfacht 
 aus:
 \begin{empheq}{equation}
+	 \label{std:inverseWellenlaenge}
 	\sigma_{\lambda^{-1}} = \dfrac{\sigma_{\lambda}}{\lambda^{2}}
 \end{empheq} 
  
+Zur Berechnung des Fehlers der Geschwindigkeiten in
+\cref{tab:Auswertung_Geschwindigkeiten} wurde 
  \begin{empheq}{equation}
+ \label{std:Geschwindigkeit}
  \sigma_{v} = \sqrt{\frac{l^{2} \sigma_{t}^{2}}{t^{4}} + \frac{\sigma_{l}^{2}}{t^{2}}}
  \end{empheq} 
+ verwendet.
  
- 
+ Der Fehler der Schallgeschwindigkeit \cref{eq:Auswertung_Schallgeschwindigkeit} ergibt sich nach
  \begin{empheq}{equation}
- \sigma_{c} =\sqrt{\lambda^{2} \sigma_{\nu}^{2} + \nu^{2} \sigma_{\lambda}^{2}}
+ \label{std:Schallgeschwinigkeit}
+ \sigma_{c} =\sqrt{\lambda^{2} \sigma_{\nu}^{2} + \nu^{2} \sigma_{\lambda}^{2}}.
  \end{empheq} 
+ 
+ Die Frequenzdifferenzen in \cref{tab:Auswertung_Frequenzänderung_Direkt} besitzen 
+ den durch 
  \begin{empheq}{equation}
+ \label{std:Frequenzänderung}
  \sigma_{\Delta\nu} = \sqrt{\sigma_{\nu}^{2} + \sigma_{\nu_0}^{2}} 
  \end{empheq} 
+ berechenbaren Fehler.
