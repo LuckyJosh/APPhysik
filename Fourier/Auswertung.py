@@ -96,19 +96,18 @@ A_tri = 0.2 * const.pi**2
 A_saw = 0.4 * const.pi
 
 ## Rechteck
-amps_rect_syn = np.zeros(10)
-for n in range(10):
-    n += 1
+idx = np.arange(2, 11)
+amps_rect_syn = np.zeros(11)
+for n in idx:
     if n % 2 != 0:
-        amps_rect_syn[n] = bn_rect(A_rect, n)
+        amps_rect_syn[n] = bn_rect(0.80, n)
 
 # Filtern der Nullen
 #amps_rect_syn = NullFilter(amps_rect_syn)
 
 ## Dreieck
-amps_tri_syn = np.zeros(10)
-for n in range(10):
-    n += 1
+amps_tri_syn = np.zeros(11)
+for n in idx:
     if n % 2 != 0:
         amps_tri_syn[n] = bn_tri(A_tri, n)
 
@@ -117,8 +116,7 @@ for n in range(10):
 
 ## Sägezahn
 amps_saw_syn = np.zeros(11)
-for n in range(10):
-    n += 1
+for n in idx:
     amps_saw_syn[n] = bn_saw(A_saw, n)
 
 # Filtern der Nullen
@@ -232,20 +230,20 @@ if PRINT:
 #    f.close()
 
 #
-#    f = open("Daten/Tabelle_Synthese.tex", "w")
-#    f.write(lxtabs.toTable([np.append(amps_rect_syn, 0),
-#                            np.append(amps_tri_syn, 0),
-#                            amps_saw_syn],
-#        col_titles=["Rechteck Amplitude",
-#                    "Dreieck Amplitude",
-#                    "Sägezahn Amplitude"],
-#        col_syms=[r"b_{n,r}", r"b_{n,d}", r"b_{n,s}"],
-#        col_units=[r"\volt", r"\volt", r"\volt"],
-#        fmt=["c", "c", "c"],
-#        cap="Zur Synthese verwandte Amplituden der ersten 10 Oberwellen",
-#        label="Synthese"))
-#
-#    f.close()
+    f = open("Daten/Tabelle_Synthese.tex", "w")
+    f.write(lxtabs.toTable([amps_rect_syn,
+                            amps_tri_syn,
+                            amps_saw_syn],
+        col_titles=["Rechteck Amplitude",
+                    "Dreieck Amplitude",
+                    "Sägezahn Amplitude"],
+        col_syms=[r"b_{n,r}", r"b_{n,d}", r"b_{n,s}"],
+        col_units=[r"\volt", r"\volt", r"\volt"],
+        fmt=["c", "c", "c"],
+        cap="Zur Synthese verwandte Amplituden der ersten 10 Oberwellen",
+        label="Synthese"))
+
+    f.close()
 
 ### Erstellen der Spannungsbilder
 
