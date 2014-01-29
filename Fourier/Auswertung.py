@@ -230,20 +230,20 @@ if PRINT:
 #    f.close()
 
 #
-    f = open("Daten/Tabelle_Synthese.tex", "w")
-    f.write(lxtabs.toTable([amps_rect_syn,
-                            amps_tri_syn,
-                            amps_saw_syn],
-        col_titles=["Rechteck Amplitude",
-                    "Dreieck Amplitude",
-                    "Sägezahn Amplitude"],
-        col_syms=[r"b_{n,r}", r"b_{n,d}", r"b_{n,s}"],
-        col_units=[r"\volt", r"\volt", r"\volt"],
-        fmt=["c", "c", "c"],
-        cap="Zur Synthese verwandte Amplituden der ersten 10 Oberwellen",
-        label="Synthese"))
-
-    f.close()
+#    f = open("Daten/Tabelle_Synthese.tex", "w")
+#    f.write(lxtabs.toTable([amps_rect_syn,
+#                            amps_tri_syn,
+#                            amps_saw_syn],
+#        col_titles=["Rechteck Amplitude",
+#                    "Dreieck Amplitude",
+#                    "Sägezahn Amplitude"],
+#        col_syms=[r"b_{n,r}", r"b_{n,d}", r"b_{n,s}"],
+#        col_units=[r"\volt", r"\volt", r"\volt"],
+#        fmt=["c", "c", "c"],
+#        cap="Zur Synthese verwandte Amplituden der ersten 10 Oberwellen",
+#        label="Synthese"))
+#
+#    f.close()
 
 ### Erstellen der Spannungsbilder
 
