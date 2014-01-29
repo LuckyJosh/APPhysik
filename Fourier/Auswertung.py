@@ -47,7 +47,7 @@ def bn_rect(A, n):
 
 
 def bn_tri(A, n):
-    return 4 * A / (n * const.pi)**2
+    return ((4 * A) / (n * const.pi)**2)
 
 
 def bn_saw(A, n):
@@ -63,7 +63,7 @@ amps_rect = np.zeros(12)
 for n in range(12):
     n += 1
     if n % 2 != 0:
-        amps_rect[n] = bn_rect(U, n)
+        amps_rect[n] = bn_rect(0.45*const.pi, n)
 
 # Filtern der Nullen
 amps_rect = NullFilter(amps_rect)
@@ -73,16 +73,17 @@ amps_tri = np.zeros(11)
 for n in range(10):
     n += 1
     if n % 2 != 0:
-        amps_tri[n] = bn_tri(U, n)
+        amps_tri[n] = bn_tri(0.29*const.pi**2, n)
 
 # Filtern der Nullen
 amps_tri = NullFilter(amps_tri)
+
 
 ## Sägezahn
 amps_saw = np.zeros(8)
 for n in range(7):
     n += 1
-    amps_saw[n] = bn_saw(U, n)
+    amps_saw[n] = bn_saw(0.44*const.pi, n)
 
 # Filtern der Nullen
 amps_saw = NullFilter(amps_saw)
@@ -149,8 +150,12 @@ Amps_saw_rel = np.abs(1 - Amps_saw/amps_saw)
 
 # Ungerade Frequenzen
 F = 100  # [Hz]
-freqs = np.array([1, 3, 5, 7, 9, 11])
-freqs *= F
+freqs1 = np.array([1, 3, 5, 7, 9, 11])
+freqs2 = np.array([1, 3, 5, 7, 9])
+freqs3 = np.array([1, 2, 3, 4, 5, 6, 7])
+freqs1 *= F
+freqs2 *= F
+freqs3 *= F
 
 # Die N's
 N = np.arange(1, 11, 1)
@@ -180,21 +185,52 @@ if PRINT:
 
 #if TABS:
 #    f = open("Daten/Tabelle_Analyse1.tex", "w")
-#    f.write(lxtabs.toTable([freqs, Amps_rect, amps_rect,
-#                            Amps_tri, amps_tri],
+#    f.write(lxtabs.toTable([freqs1, Amps_rect, amps_rect, Amps_rect_rel],
 #        col_titles=["Frequenzen",
 #                    "Gemessene Amplitude",
 #                    "Berechnete Amplitude",
-#                    "Gemessene Amplitude",
-#                    "Berechnete Amplitude"],
-#        col_syms=[r"\nu", r"b_{n}", r"b_{n}", r"b_{n}", r"b_{n}"],
-#        col_units=[r"\hertz", r"\volt", r"\volt", r"\volt", r"\volt"],
-#        fmt=["c", "c", "c", "c", "c"],
-#        cap="Gemessene und Berechnete Amplituden der Oberschwingung für " +
-#        "Recht- und Dreieckspannung",
+#                    "Relative Abweichung"],
+#        col_syms=[r"\nu", r"b_{n}", r"b_{n}",
+#                  r"\envert{1 - \tfrac{b_{n}}{b_{n,theo}}}"],
+#        col_units=[r"\hertz", r"\volt", r"\volt", ""],
+#        fmt=["c", "c", "c", "c"],
+#        cap="Gemessene und Berechnete Amplituden der Oberschwingung der" +
+#            "Rechtspannung",
 #        label="Analyse1"))
 #
 #    f.close()
+#
+#    f = open("Daten/Tabelle_Analyse2.tex", "w")
+#    f.write(lxtabs.toTable([freqs2, Amps_tri, amps_tri, Amps_tri_rel],
+#        col_titles=["Frequenzen",
+#                    "Gemessene Amplitude",
+#                    "Berechnete Amplitude",
+#                    "relative Abweichung"],
+#        col_syms=[r"\nu", r"b_{n}", r"b_{n}",
+#                  r"\envert{1 - \tfrac{b_{n}}{b_{n,theo}}}"],
+#        col_units=[r"\hertz", r"\volt", r"\volt", ""],
+#        fmt=["c", "c", "c", "c"],
+#        cap="Gemessene und Berechnete Amplituden der Oberschwingung der " +
+#            "Dreieckspannung",
+#        label="Analyse2"))
+#
+#    f.close()
+#    f = open("Daten/Tabelle_Analyse3.tex", "w")
+#    f.write(lxtabs.toTable([freqs3, Amps_saw, amps_saw, Amps_saw_rel],
+#        col_titles=["Frequenzen",
+#                    "Gemessene Amplitude",
+#                    "Berechnete Amplitude",
+#                    "relative Abweichung"],
+#        col_syms=[r"\nu", r"b_{n}", r"b_{n}",
+#                  r"\envert{1 - \tfrac{b_{n}}{b_{n,theo}}}"],
+#        col_units=[r"\hertz", r"\volt", r"\volt", ""],
+#        fmt=["c", "c", "c", "c"],
+#        cap="Gemessene und Berechnete Amplituden der Oberschwingung der " +
+#            "Sägezahnspannung",
+#        label="Analyse3"))
+#
+#    f.close()
+
 #
 #    f = open("Daten/Tabelle_Synthese.tex", "w")
 #    f.write(lxtabs.toTable([np.append(amps_rect_syn, 0),
@@ -213,46 +249,46 @@ if PRINT:
 
 ### Erstellen der Spannungsbilder
 
-
-plt.clf()
-plt.grid()
-plt.xlim(-2, 2)
-plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
-plt.yticks((-1, 0, 1), ("-A", "0", "A"))
-plt.ylim(-2, 2)
-t = np.linspace(-10, 10, 1000, endpoint=False)
-plt.plot(t, signal.square(np.pi * t), label="Rechteckspannung $f_{r}(t)$")
-plt.legend(loc="best")
-plt.tight_layout()
-
-plt.savefig("Grafiken/RechteckSpannung.pdf")
 #
-plt.clf()
-plt.grid()
-plt.xlim(-2, 2)
-plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
-plt.yticks((-1, 0, 1), ("-A", "0", "A"))
-plt.ylim(-2, 2)
-t1 = np.linspace(-2, -1, 1000)
-t2 = np.linspace(-1, 1, 1000)
-t3= np.linspace(1, 2, 1000)
-plt.plot(t1, -3 - 2 * t1, color="blue")
-plt.plot(t2, 1- 2 * np.abs(t2), color="blue", label="Dreieckspannung $f_{d}(t)$")
-plt.plot(t3, -3 + 2 * t3, color="blue")
-plt.legend(loc="best")
-plt.tight_layout()
-
-plt.savefig("Grafiken/DreieckSpannung.pdf")
-
-plt.clf()
-plt.grid()
-plt.xlim(-2, 2)
-plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
-plt.yticks((-1, 0, 1), ("-A", "0", "A"))
-plt.ylim(-2, 2)
-t = np.linspace(-10, 10, 1000, endpoint=False)
-plt.plot(t, signal.sawtooth(np.pi * t + np.pi), label="Sägezahnspannung $f_{s}(t)$")
-plt.legend(loc="best")
-plt.tight_layout()
-
-plt.savefig("Grafiken/SaegezahnSpannung.pdf")
+#plt.clf()
+#plt.grid()
+#plt.xlim(-2, 2)
+#plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
+#plt.yticks((-1, 0, 1), ("-A", "0", "A"))
+#plt.ylim(-2, 2)
+#t = np.linspace(-10, 10, 1000, endpoint=False)
+#plt.plot(t, signal.square(np.pi * t), label="Rechteckspannung $f_{r}(t)$")
+#plt.legend(loc="best")
+#plt.tight_layout()
+#
+#plt.savefig("Grafiken/RechteckSpannung.pdf")
+##
+#plt.clf()
+#plt.grid()
+#plt.xlim(-2, 2)
+#plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
+#plt.yticks((-1, 0, 1), ("-A", "0", "A"))
+#plt.ylim(-2, 2)
+#t1 = np.linspace(-2, -1, 1000)
+#t2 = np.linspace(-1, 1, 1000)
+#t3= np.linspace(1, 2, 1000)
+#plt.plot(t1, -3 - 2 * t1, color="blue")
+#plt.plot(t2, 1- 2 * np.abs(t2), color="blue", label="Dreieckspannung $f_{d}(t)$")
+#plt.plot(t3, -3 + 2 * t3, color="blue")
+#plt.legend(loc="best")
+#plt.tight_layout()
+#
+#plt.savefig("Grafiken/DreieckSpannung.pdf")
+#
+#plt.clf()
+#plt.grid()
+#plt.xlim(-2, 2)
+#plt.xticks((-2, -1, 0, 1, 2), ("-2T", "-T", "0", "T", "2T"))
+#plt.yticks((-1, 0, 1), ("-A", "0", "A"))
+#plt.ylim(-2, 2)
+#t = np.linspace(-10, 10, 1000, endpoint=False)
+#plt.plot(t, signal.sawtooth(np.pi * t + np.pi), label="Sägezahnspannung $f_{s}(t)$")
+#plt.legend(loc="best")
+#plt.tight_layout()
+#
+#plt.savefig("Grafiken/SaegezahnSpannung.pdf")
