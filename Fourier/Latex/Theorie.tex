@@ -1,8 +1,8 @@
 \begin{equation} 
 f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty (a_n cos(n\frac{2\pi}{T}t) + b_n sin(n\frac{2\pi}{T}t)) 
 \end{equation}
-Mithilfe von Fourier-Reihen (1) lassen sich periodische Funktionen sehr gut approximieren. Eine Einschränkung ist hierbei das Gibb'sche Phänomen, es tritt an Unstetigkeiten der ursprünglichen Funktion auf. An diesen Stellen tritt eine endlich große Abweichung auf, welche durch erhöhte Anzahl der Polynome auch nicht verschwindet. \\
-Für die Fourier-Koeffizienten gilt:
+Mithilfe von Fourier-Reihen (1) lassen sich periodische Funktionen sehr gut approximieren, wobei T die Periodendauer und $a_n$ bzw. $b_n$ die Fourier-Koeffizienten sind. Eine Einschränkung ist hierbei das Gibb'sche Phänomen, es tritt an Unstetigkeiten der ursprünglichen Funktion auf. An diesen Stellen tritt eine endlich große Abweichung auf, welche durch erhöhte Anzahl der Polynome auch nicht verschwindet. \\
+Für die Fourier-Koeffizienten $a_n$ und $b_n$ gilt:
 \begin{equation}
 a_n = \frac{T}{2}\int_{0}^{T} f(t) \cos(n\frac{2\pi}{T}t) dt
 \end{equation}
@@ -10,7 +10,7 @@ und
 \begin{equation}
 b_n = \frac{T}{2}\int_{0}^{T} f(t) \sin(n\frac{2\pi}{T}t) dt
 \end{equation}
-Die Fourier-Transformation einer Funktion ist gegeben durch
+Die Fourier-Transformation einer Funktion $f(t)$ ist gegeben durch:
 \begin{equation}
 g(v) = \int_{-\infty}^{\infty} f(t) e^{ivt} dt.
 \end{equation}
