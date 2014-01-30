@@ -1,3 +1,4 @@
+
 Im Folgenden sind die während des Versuchs aufgenommenen Messwerte sowie
 die aus diesen berechneten Messergebnisse tabellarisch aufgeführt. An 
 entsprechender Stelle sind Anmerkungen und Erklärungen zu den 
@@ -161,7 +162,8 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
  	
  	\input{Daten/Tabelle_Schwebung.tex}
  	
- 	In \cref{fig:} sind die Mittelwerte der Frequenzänderungen gegen die Geschwindigkeiten aus 
+ 	In \cref{fig:Auswertung_Frequenzaenderung_Schwebung} sind die Mittelwerte der 
+ 	Frequenzänderungen gegen die Geschwindigkeiten aus 
  	\cref{tab:Auswertung_Geschwindigkeiten} zusammen mit zwei Regressionsgeraden aufgetragen.
  	Dabei sind diese analog zu der in \cref{sec:Auswertung_Direkt} beschrieben Weise mit Hilfe
  	\emph{SciPy} bestimmt worden und die entsprechenden Parameter des Ansatzes
@@ -193,8 +195,8 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
  	\begin{figure}[!h]
  	 			\centering
  	 			\includegraphics[scale=0.7]{Grafiken/Frequenzdifferenz_Schwebung.pdf}
- 	 			\label{fig:Auswertung_Frequenzänderung_Schwebung}
- 	 			\caption{Mit der Schwebungsmethode bestimmte Frequenzänderung in Abhängigkeit der\\\hspace*{2.6cm} Geschwindigkeit mit entsprechenden Regressionsgeraden}
+ 	 			
+ 	 			\caption{Mit der Schwebungsmethode bestimmte Frequenzänderung in Abhängigkeit der\\\hspace*{2.6cm} Geschwindigkeit mit entsprechenden Regressionsgeraden \label{fig:Auswertung_Frequenzaenderung_Schwebung}}
  	 		\end{figure} 
  	 		
  	Da auch diese Regressionsgerade die Form von \cref{eq:Theorie_BewegterEmpfänger} besitzt zeigt
@@ -223,13 +225,13 @@ berechnet, die jeweilige Gleichung ist dabei angegeben.
 		\sigma_{\mean{x} - \mean{y}} = \sqrt{\dfrac{(n_{x} - 1)  \sigma_{x}^{2} + (n_{y} - 1)  \sigma_{y}^{2}}{(n_{x} - 1) + (n_{y} - 1)} \cdot 
 		\dfrac{n_{x} + n_{y}}{n_{x}n_{y}}}
 	\end{empheq} 
-	In \cref{tab:} sind die auf diese Weise berechneten Werte für  $\sigma_{\mean{x} - \mean{y}}$ und $t$ für die drei Vergleiche
+	In \cref{tab:Auswertung_StudentTest} sind die auf diese Weise berechneten Werte für  $\sigma_{\mean{x} - \mean{y}}$ und $t$ für die drei Vergleiche
 	der Ergebnisse aus \cref{sec:Auswertung_Wellenlänge}, \ref{sec:Auswertung_Direkt} und \ref{sec:Auswertung_Schwebung} zu finden.
 	Um eine Aussage über die Wahrscheinlichkeit eines systematischen Fehlers zwischen den Werten treffen zu können muss, ein aus der 
 	Literatur \cite{Bortz10} entnommener Referenzwert $t_{ref}$ bekannt sein. Wird dieser von dem Betrag der Testgröße \envert{t} 
 	überschritten so besteht mit der Wahrscheinlichkeit $1 - \alpha$ ein systematischer Fehler zwischen den Versuchsergebnissen.  
 	Die Größe $\alpha$ ist damit die vor dem Test festzulegende Irrtumswahrscheinlichkeit, für diesen Test sei $\alpha = 0.01$. 	
-	Die zu vergleichenden Werte seien hier noch einmal gegeben:
+	Die zu vergleichenden Werte seien hier noch einmal angegeben:
 	\begin{empheq}{align*}
 		\lambda_{0}   &= \SI{56(2)}{\per\meter} \\
 		\lambda_{0,d} &=\SI{57.9(2)}{\per\meter}\\

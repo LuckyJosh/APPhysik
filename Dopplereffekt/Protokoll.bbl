@@ -67,6 +67,18 @@
       \verb http://docs.scipy.org/doc/
       \endverb
     \endentry
+    \entry{V104}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V104 Der Doppler-Effekt}
+      \field{title}{Versuchsanleitung}
+      \field{urlday}{30}
+      \field{urlmonth}{01}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V104.pdf
+      \endverb
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
