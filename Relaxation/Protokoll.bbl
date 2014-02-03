@@ -30,6 +30,14 @@
       \verb http://docs.scipy.org/doc/
       \endverb
     \endentry
+    \entry{Versuchsanleitung}{misc}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{title}{Versuchsanleitung}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V353.pdf
+      \endverb
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
