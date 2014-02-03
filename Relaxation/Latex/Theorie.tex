@@ -1,20 +1,22 @@
+Relaxation beschreibt den Übergang eines Systems in den Gleichgewichtszustand, mit Hilfe der Zeitkonstanten $RC$ macht dies durch ein RC-Glied messbar. 
 Zunächst lässt sich die Entladung des RC-Kreises beschreiben durch:
 \begin{equation} 
-Q(t) = Q_0\cdot \exp(-\frac{t}{RC})
+Q(t) = Q_0\cdot \exp(-\frac{t}{RC}).
 \label{eq:Theorie_Entladung}
 \end{equation}
 Die Aufladung durch:
 \begin{equation} 
-Q(t) = C U_0 (1 - \exp(-\frac{t}{RC}))
+Q(t) = C U_0 (1 - \exp(-\frac{t}{RC})).
 \end{equation}
+mit der Kapazität C, der Ladung Q bzw $Q_0$ der Ladung zum Zeitpunkt $t=0$ und der Spannung $U_0$ zum Zeitpunkt $t=0$
 Beim Wechsel von Gleich- auf Wechselstrom wird eine Spannung mit der Frequenz $\omega$ angelegt:
 \begin{equation} 
-U(t) = U_0 \cos(\omega t)
+U(t) = U_0 \cos(\omega t),
 \end{equation}
 mit $\omega << \frac{1}{RC}$. \\
 Für die Amplitude gilt nun:
 \begin{equation} 
-A(\omega) = \frac{U_0}{\sqrt{1 + \omega ^2R^2C^2}}
+A(\omega) = \frac{U_0}{\sqrt{1 + \omega ^2R^2C^2}},
 \label{eq:Theorie_Amplitude}
 \end{equation}
 Wegen der gesteigerten Frequenz lässt nun die resultierende Phasenverschiebung bestimmen durch:
@@ -23,8 +25,9 @@ Wegen der gesteigerten Frequenz lässt nun die resultierende Phasenverschiebung 
 \end{equation}
 bzw.
 \begin{equation} 
-\varphi = \frac{a}{b}\cdot 360 
+\varphi = \frac{a}{b}\cdot 360 ,
 \end{equation}
+mit dem zeitlichen Abstand a und der Länge der Schwingungsdauer b.
 Auch die Phasendifferenz zwischen Generator- und Kondensatorspannung unterliegt einer Frequenzabhängigkeit
 die mit der Gleichung
 \begin{empheq}{equation}
@@ -34,7 +37,7 @@ die mit der Gleichung
 beschrieben werden kann.
 Auch lässt sich die Abhängigkeit der Amplitude von Frequenz und Phase durch 
 \begin{empheq}{equation}
-	A(\omega) = - \dfrac{\sin(\varphi)}{\omega RC}U_{0} 
+	A(\omega) = - \dfrac{\sin(\varphi)}{\omega RC}U_{0} ,
 	\label{eq:Theorie_Amplitude_Phase}
 \end{empheq}
 bestimmen.
@@ -43,3 +46,4 @@ bestimmen.
 \begin{equation} 
 U_c(t) = \frac{1}{RC}\int_{0}^{t} U(t') dt'
 \end{equation}
+für $\omega >> \frac{1}{RC}$
