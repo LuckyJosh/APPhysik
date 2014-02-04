@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  23 JAN 2014 01:43
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  4 FEB 2014 13:26
 entering extended mode
 **Protokoll.tex
 
@@ -2059,13 +2059,19 @@ atex\Deckblatt.tex" [1
 {C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
 Latex/Einleitung.tex")
+Overfull \hbox (12.56018pt too wide) in paragraph at lines 1--7
+\T1/lmr/m/n/12 stan-te, im zwei-ten Teil die Am-pli-tu-de und da-nach die Pha-s
+en-dif-fe-renz zwi-schen Kondensator-
+ []
+
+
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
 Latex/Theorie.tex"pdfTeX warning (ext4): destination with the same identifier (
 name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.45 \end{equation}
-                    [1])
+l.43 \end{empheq}
+                  [1])
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
 Latex/Durchführung.tex"
 <Grafiken/V353_Abb1.jpg, id=94, 654.19406pt x 227.34938pt>
@@ -2075,12 +2081,24 @@ File: Grafiken/V353_Abb1.jpg Graphic file (type jpg)
 Package pdftex.def Info: Grafiken/V353_Abb1.jpg used on input line 8.
 (pdftex.def)             Requested size: 318.66948pt x 110.7465pt.
 
+
+LaTeX Warning: Citation 'Versuchsaufbau' on page 2 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Versuchsaufbau' on page 2 undefined on input line 10.
+
 <Grafiken/V353_Abb2.jpg, id=95, 522.45187pt x 253.69781pt>
 File: Grafiken/V353_Abb2.jpg Graphic file (type jpg)
 
 <use Grafiken/V353_Abb2.jpg>
-Package pdftex.def Info: Grafiken/V353_Abb2.jpg used on input line 18.
+Package pdftex.def Info: Grafiken/V353_Abb2.jpg used on input line 19.
 (pdftex.def)             Requested size: 318.66948pt x 154.74382pt.
+
+
+LaTeX Warning: Citation 'Versuchsaufbau' on page 2 undefined on input line 20.
+
+
+LaTeX Warning: Citation 'Versuchsaufbau' on page 2 undefined on input line 20.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2089,16 +2107,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Grafiken/V353_Abb3.jpg Graphic file (type jpg)
 
 <use Grafiken/V353_Abb3.jpg>
-Package pdftex.def Info: Grafiken/V353_Abb3.jpg used on input line 28.
+Package pdftex.def Info: Grafiken/V353_Abb3.jpg used on input line 29.
 (pdftex.def)             Requested size: 318.66948pt x 130.71545pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Citation 'Versuchsaufbau' on page 2 undefined on input line 30.
 
-) [2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxat
-ion/Grafiken/V353_Abb1.jpg>] [3 <D:/Eigene Dateien/Studium/Physik/AnfängerPrak
-tikum/PraktikumRepo/Relaxation/Grafiken/V353_Abb2.jpg> <D:/Eigene Dateien/Studi
-um/Physik/AnfängerPraktikum/PraktikumRepo/Relaxation/Grafiken/V353_Abb3.jpg>]
+
+LaTeX Warning: Citation 'Versuchsaufbau' on page 2 undefined on input line 30.
+
+[2 <D:/Eigene Dateien/Studium/Physik/AnfängerPraktikum/PraktikumRepo/Relaxatio
+n/Grafiken/V353_Abb1.jpg>]) [3 <D:/Eigene Dateien/Studium/Physik/AnfängerPrakt
+ikum/PraktikumRepo/Relaxation/Grafiken/V353_Abb2.jpg> <D:/Eigene Dateien/Studiu
+m/Physik/AnfängerPraktikum/PraktikumRepo/Relaxation/Grafiken/V353_Abb3.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\Relaxation\
 Latex/Auswertung.tex"
 
@@ -2286,13 +2307,21 @@ Package rerunfilecheck Info: File `Protokoll.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.90001pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                Protokoll
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 35150 strings out of 493921
- 666796 string characters out of 3150494
- 1083021 words of memory out of 3000000
- 37656 multiletter control sequences out of 15000+200000
+ 35148 strings out of 493921
+ 666785 string characters out of 3150494
+ 1083101 words of memory out of 3000000
+ 37653 multiletter control sequences out of 15000+200000
  181349 words of font info for 162 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,22n,71p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2316,9 +2345,9 @@ fonts/type1/public/lm/lmri12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lms
 y10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Programme/MiKT
 eX/fonts/type1/public/lm/lmtt12.pfb><D:/Programme/MiKTeX/fonts/type1/urw/zapfdi
 ng/uzdr.pfb>
-Output written on Protokoll.pdf (14 pages, 997322 bytes).
+Output written on Protokoll.pdf (14 pages, 1008018 bytes).
 PDF statistics:
- 602 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
+ 605 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

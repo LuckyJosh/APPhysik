@@ -1,12 +1,13 @@
-Relaxation beschreibt den Übergang eines Systems in den Gleichgewichtszustand, mit Hilfe der Zeitkonstanten $RC$ macht dies durch ein RC-Glied messbar. 
+Relaxation beschreibt den Übergang eines Systems in den Gleichgewichtszustand, mit Hilfe der Zeitkonstanten $RC$ ist dieser bei ein RC-Glied messbar. Die Zeitkonstante stellt dabei eine charakteristische Größe dar, die 
+die Geschwindigkeit dieses Übergangs beschreibt.
 Zunächst lässt sich die Entladung des RC-Kreises beschreiben durch:
 \begin{equation} 
-Q(t) = Q_0\cdot \exp(-\frac{t}{RC}).
+Q(t) = Q_0\cdot \exp\del{-\frac{t}{RC}}.
 \label{eq:Theorie_Entladung}
 \end{equation}
 Die Aufladung durch:
 \begin{equation} 
-Q(t) = C U_0 (1 - \exp(-\frac{t}{RC})).
+Q(t) = C U_0 \del{1 - \exp\del{-\frac{t}{RC}}}\ .
 \end{equation}
 mit der Kapazität C, der Ladung Q bzw $Q_0$ der Ladung zum Zeitpunkt $t=0$ und der Spannung $U_0$ zum Zeitpunkt $t=0$
 Beim Wechsel von Gleich- auf Wechselstrom wird eine Spannung mit der Frequenz $\omega$ angelegt:
@@ -46,4 +47,4 @@ bestimmen.
 \begin{equation} 
 U_c(t) = \frac{1}{RC}\int_{0}^{t} U(t') dt'
 \end{equation}
-für $\omega >> \frac{1}{RC}$
+für $\omega >> \frac{1}{RC}$.
