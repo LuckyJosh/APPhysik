@@ -62,8 +62,9 @@
 
 \usepackage{commath}																% Fügt Differentialoperatoren und -quotienten ein 
 
- \usepackage{calc}
-
+\usepackage{calc}
+\usepackage{bm}																		
+% bessere Möglichkeit für Fett-Gedruckte Zeichen mit \bm 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % 
 % Referenzen 
@@ -120,6 +121,8 @@
 \usepackage{pifont}																    % Fügt neue Symbole und Zeichen ein
 \renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}                      % Fußnoten mit Zahlen in Kreisen
 
+
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %
 % Steuerelemente 
@@ -146,15 +149,35 @@
 \newcommand{\eqctr}{%
 \refstepcounter{equation}\tag{\theequation}}
 
-\renewcommand{\i}{\ensuremath{\textsc{i}}}
-\newcommand{\e}{\ensuremath{\textsl{e}}}
-\renewcommand{\Im}{\mathrm{Im}\,}
-\renewcommand{\Re}{\mathrm{Re}\,}
+\renewcommand{\i}{\ensuremath{\mathrm{i}}}
+\newcommand{\e}{\ensuremath{\mathrm{e}}}
+\renewcommand{\Im}{\mathcal{I}\!\mathit{m}\,}
+\renewcommand{\Re}{\mathcal{R}\!\mathit{e}\,}
 
 \newcolumntype{C}{ >{\centering\arraybackslash} m{2.5 cm}}
 %\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \DeclarePairedDelimiter{\mean}{\langle}{\rangle}
-\newcommand{\Cos}[1]{\ensuremath{\cos\del{#1}}}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+
+
+% Funktionsmakros mit größenvariablen Klammern benötigt \usepackage{commath}
+\newcommand{\E}[1]{\e^{#1}}
+\newcommand{\Exp}[1]{\exp\!\del{#1}}
+\newcommand{\Sin}[1]{\sin\!\del{#1}}
+\newcommand{\Cos}[1]{\cos\!\del{#1}}
+\newcommand{\Tan}[1]{\tan\!\del{#1}}
+\newcommand{\Sinh}[1]{\sinh\!\del{#1}}
+\newcommand{\Cosh}[1]{\cosh\!\del{#1}}
+\newcommand{\Tanh}[1]{\tanh\!\del{#1}}
+\newcommand{\Arcsin}[1]{\arcsin\!\del{#1}}
+\newcommand{\Arccos}[1]{\arccos\!\del{#1}}
+\newcommand{\Arctan}[1]{\arctan\!\del{#1}}
+\newcommand{\Arsinh}[1]{\arsinh\!\del{#1}}
+\newcommand{\Arcosh}[1]{\arcosh\!\del{#1}}
+\newcommand{\Artanh}[1]{\artanh\!\del{#1}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

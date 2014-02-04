@@ -81,7 +81,7 @@
       <file>Protokoll.bcf</file>
     </requires>
     <requires type="editable">
-      <file>../globales/latex/Literatur.bib</file>
+      <file>../_globales/latex/Literatur.bib</file>
     </requires>
   </external>
 </requests>
