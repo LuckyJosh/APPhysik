@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  4 FEB 2014 14:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  4 FEB 2014 17:19
 entering extended mode
 **Protokoll.tex
 
@@ -2078,34 +2078,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--7
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_test\Latex
 /Auswertung.tex"
 \plotpoint=\box70
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.25 		\subsection
-                  {Fehlerrechnung}\label{sec:Fehlerrechnung} [1]
+)
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_test\Latex
 /Fehlerrechnung.tex")
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_test\Latex
 /Diskussion.tex") 
 AED: lastpage setting LastPage
-[2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
+[3] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 31.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 31.
 
 ("D:\Eigene Dateien\Studium\Physik\AnfängerPraktikum\PraktikumRepo\_test\Proto
 koll.aux"
 Package cleveref Info: loaded `ngerman' language definitions on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 31.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 31.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
 (rerunfilecheck)             Checksum: 30B85AC51E8D60B4235DD2BEC4FAF7C5;353.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 34704 strings out of 493921
- 656370 string characters out of 3150494
+ 34705 strings out of 493921
+ 656376 string characters out of 3150494
  1172880 words of memory out of 3000000
  37309 multiletter control sequences out of 15000+200000
  94953 words of font info for 71 fonts, out of 3000000 for 9000
@@ -2123,9 +2118,9 @@ mr10.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmr12.pfb><D:/Programme/MiK
 TeX/fonts/type1/public/lm/lmr6.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
 mr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmri12.pfb><D:/Programme/MiK
 TeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Protokoll.pdf (3 pages, 220286 bytes).
+Output written on Protokoll.pdf (3 pages, 220116 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 12 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 
