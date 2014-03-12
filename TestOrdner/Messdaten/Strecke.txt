@@ -1,2 +1,0 @@
-#Abstand Transistoren[cm]	#Abstand Dioden[cm]
-45.9						45.7
