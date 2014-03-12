@@ -5,3 +5,5 @@ new:
 
 done:
 	mv $(filter-out $@,$(MAKECMDGOALS))[' '] $(filter-out $@,$(MAKECMDGOALS))[X]
+
+	
