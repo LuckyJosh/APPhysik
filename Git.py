@@ -14,7 +14,6 @@ PATH = os.getcwd()
 folders = [f for f in os.listdir(PATH) if os.path.isdir(f) and (not f[0] == "_"
            and not f == ".git")]
 
-testfolders = [f for f in os.listdir(PATH) if "TestOrdner" in f]
 
 class Make:
     def __init__(self, path):
@@ -28,7 +27,7 @@ class Make:
         os.chdir(PATH)
 
 
-for folder in testfolders:
+for folder in folders:
     make = Make(folder)
     make.clean()
 
