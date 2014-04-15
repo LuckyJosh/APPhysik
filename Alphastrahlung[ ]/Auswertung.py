@@ -20,11 +20,27 @@ from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
-if not "..\_globales\python" in sys.path:
-	sys.path.append("..\_globales\python")
-
-from aputils.utils import Quantity, ErrorEquation
 from aputils.latextables.tables import Table
 
+pulse = np.loadtxt("Messdaten/MessreiheIII.txt")
+ranges = np.arange(0, 13087, 500)
+Lists = []
+for i in range(len(ranges)):
+    if i == len(ranges) -1:
+        break
+    List = []
+    for p in pulse:
+        if ranges[i] < p < ranges[i + 1]:
+            List.append(p)
+    Lists.append(List)
+
+for l in Lists:
+    print(l, len(l))
+
+
+for j in range(len(ranges)):
+    if not j == len(ranges) - 1:
+        plt.bar(ranges[j], len(Lists[j]))
 
 ## Print Funktionen
+T = Table()

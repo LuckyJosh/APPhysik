@@ -31,7 +31,7 @@ class Quantity:
             self.avr_err_gauss = Umean(self.list_err)*factor
 
 
-class error:
+class ErrorEquation:
     def __init__(f, symbol="", err_vars=None):
         self.var_equation = 0
         self.latex_names = dict()
