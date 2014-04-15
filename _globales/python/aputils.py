@@ -17,18 +17,6 @@ import uncertainties as unc
 import uncertainties.unumpy as unp
 from sympy import *
 
-from __future__ import (print_function,
-                        division,
-                        unicode_literals,
-                        absolute_import)
-
-import math
-import numpy as np
-import uncertainties as unc
-import uncertainties.unumpy as unp
-from sympy import *
-
-
 class Quantity:
     def __init__(self, list_, err=None, factor=1):
         self.avr = np.mean(list_)*factor

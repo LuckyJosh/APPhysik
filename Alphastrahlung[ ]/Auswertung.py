@@ -25,6 +25,7 @@ from aputils.latextables.tables import Table
 pulse = np.loadtxt("Messdaten/MessreiheIII.txt")
 ranges = np.arange(0, 13087, 500)
 Lists = []
+
 for i in range(len(ranges)):
     if i == len(ranges) -1:
         break
@@ -37,10 +38,13 @@ for i in range(len(ranges)):
 for l in Lists:
     print(l, len(l))
 
-
+Sum = 0
 for j in range(len(ranges)):
     if not j == len(ranges) - 1:
+        Sum += len(Lists[j])
         plt.bar(ranges[j], len(Lists[j]))
-
+plt.show()
+plt.e
+print(Sum)
 ## Print Funktionen
 T = Table()
