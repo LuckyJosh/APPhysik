@@ -6,14 +6,12 @@ Created on Wed Mar 12 12:29:48 2014
 """
 
 import os
-import subprocess as sp
 import sys
 
 PATH = os.getcwd()
 
 folders = [f for f in os.listdir(PATH) if os.path.isdir(f) and (not f[0] == "_"
            and not f == ".git")]
-
 
 class Make:
     def __init__(self, path):
