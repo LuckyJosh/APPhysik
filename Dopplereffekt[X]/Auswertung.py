@@ -22,7 +22,7 @@ from uncertainties import ufloat
 from uncertainties.unumpy import uarray
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
-
+import sys
 sys.path.append("..\_globales\python")
 import latextables as lxtabs
 
@@ -257,6 +257,7 @@ plt.plot(V, y(V, *popt1), label="Regressionsgerade")
 plt.plot(V, y1(V, *popt15), label="Regressionsgerade durch den Ursprung")
 plt.legend(loc="best")
 plt.tight_layout()
+plt.show()
 plt.savefig("Grafiken/Frequenzdifferenz_direkt.pdf")
 
 ### Ausftragen der Schwebungsmethode

@@ -77,11 +77,3 @@ class Converter:
         self._dviToPngFile()
         return self._temppath + "\\" + self._tempfoldername \
                + "\\" + self._id + "\\" + "temp.png"
-
-
-
-if __name__ == '__main__':
-#    C = Converter("Tex/table.tex")
-#    C.texToPng()
-#    C.preview("Tex/table.png")
-    	print(__package__)

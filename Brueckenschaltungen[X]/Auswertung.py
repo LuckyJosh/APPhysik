@@ -21,10 +21,11 @@ import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
+import sys
 # Eigene Funktionen
-sys.path.append("..\globales\python")
-from latextables import toTable as tab
-from erroreqs import error
+#sys.path.append("..\globales\python")
+#from latextables import toTable as tab
+#from erroreqs import error
 
 ### Uncertianties Funktionen
 umean = unc.wrap(np.mean)
@@ -261,7 +262,8 @@ plt.ylim(0, 0.4)
 X = uf/uf_min
 Y = uU/uUq
 
-uX = unp.uarray(noms(X), stds(X))def FWHM(x, y):
+uX = unp.uarray(noms(X), stds(X))
+def FWHM(x, y):
     hm = max(y)/2
     x1, x2 = np.where(y==hm)[0]
     fw = sign(sign(x1) - sign(x2))
@@ -276,7 +278,6 @@ plt.plot(x, TKurve(x), color="grey",
 
 plt.legend(loc="lower left")
 plt.tight_layout()
-
 plt.savefig("Grafiken/WienRobinson.pdf")
 
 
@@ -405,11 +406,11 @@ def AusgabeEqs():
     r, c = var("R C")
     v0 = 1/(r * c)
     print("\nNullfrequenz:\n", error(v0))
-    
+
     f2, u = var("f_2 U_Br")
     u2 = u / f2
     print("\nOberwelle:\n", error(u2))
-   
+
     U, U2 = var("U_1 U_2")
     k = U2 / U
     print("\nKlirrfaktor:\n", error(k))
@@ -418,4 +419,4 @@ def AusgabeEqs():
 
 AusgabeWerte()
 #AusgabeTabs()
-AusgabeEqs()
+#AusgabeEqs()
