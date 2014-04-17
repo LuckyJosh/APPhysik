@@ -170,19 +170,24 @@ for j in range(len(ranges)):
     if not j == len(ranges) - 1 and not len(Lists[j]) == 0:
         Sum += len(Lists[j])
         rect = plt.bar(ranges[j], len(Lists[j]),
-                       width=40, color="gray", alpha=0.5)
-        autolabel(rect)
+                       width=20, color="gray", alpha=0.5)#, label="Messwerte")
+#        autolabel(rect)
+else:
+    plt.bar(1400, 0, color="gray", alpha=0.5, label="Messwerte")
 plt.xlabel(r"Gesamtzahl der Zerfälle $N$",
            fontsize=14, family='serif')
 plt.ylabel(r"Häufigkeit $p\ [\%]$",
            fontsize=14, family='serif')
 
-X_III = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-poi = [poisson(x, Pulse_ges.avr/100) * 100 for x in X_III]
+X_III = np.arange(50, 140, 4)
+poi = np.array([poisson(x, Pulse_ges.avr/10) * 100 for x in X_III])
 
-plt.clf()
-plt.bar(X_III, poi)
-
+#plt.clf()
+rect = plt.bar((X_III*10)-100, poi*5, width=20, color="black", alpha=0.6,
+               label="Poissonverteilung")
+#autolabel(rect)
+plt.tight_layout()
+plt.legend(loc="best")
 plt.show()
 #print(Sum)
 
