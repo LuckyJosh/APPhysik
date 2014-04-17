@@ -67,6 +67,7 @@ distance_avr_I = intercept_x
 energy_I = distanceToEnergy(distance_avr_I)
 print("Energie der Alphateilchen:", energy_I)
 
+
 plt.clf()
 plt.xlim(-5, 20)
 plt.ylim(0, 400)
@@ -75,7 +76,7 @@ plt.xlabel("Effektive Länge $x\ [\mathrm{mm}]$", fontsize=14, family='serif')
 plt.ylabel("Zerfallsrate $A\ [\mathrm{s^{-1}}]$", fontsize=14, family='serif')
 plt.plot(X, len(X)*[half_max_I])
 plt.plot(X, func(X, popt[0], popt[1]), label="Regressionsgerade", color="gray")
-plt.bar(intercept_x, half_max_I, width=0.1, alpha=0.3)
+plt.plot(intercept_x, half_max_I, "r^")
 plt.plot(x_eff, rate_I, "rx", label="Messwerte")
 plt.tight_layout()
 plt.legend(loc="best")
