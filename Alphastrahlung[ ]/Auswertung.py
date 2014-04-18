@@ -34,6 +34,7 @@ def distanceToEnergy(R):
     return (R/(3.1))**(2/3)
 
 PRINT=True
+SHOW = False
 
 ###########################################################################
 #
@@ -103,7 +104,7 @@ plt.plot(intercept_x, rate_max_half_I, "ro",
 
 plt.tight_layout()
 plt.legend(loc="best")
-#plt.show()
+plt.show() if SHOW else plt.savefig("Grafiken/MittlereReichweiteI.pdf")
 
 ###########################################################################
 #
@@ -169,7 +170,7 @@ plt.plot(intercept_x, rate_max_half_II, "ro",
 
 plt.tight_layout()
 plt.legend(loc="best")
-#plt.show()
+plt.show() if SHOW else plt.savefig("Grafiken/MittlereReichweiteII.pdf")
 
 
 # Bestimmung der Energieänderung für II statt für I
@@ -205,11 +206,15 @@ plt.clf()
 plt.grid()
 plt.xlim(-1, 25)
 plt.ylim(2.75, 4.2)
-plt.plot(eff_length, func_II(eff_length, popt[0], popt[1]))
+
 plt.plot(effectiveLength(p_II, 25), channelToEnergy(ch_II), "rx",
          label="Messwerte")
+plt.plot(eff_length, func_II(eff_length, popt[0], popt[1]),
+         label="Regressionskurve")
 
-plt.show()
+plt.tight_layout()
+plt.legend(loc="best")
+plt.show() if SHOW else plt.savefig("Grafiken/EnergieVerlauf.pdf")
 
 
 
@@ -232,6 +237,7 @@ def autolabel(rects):
 
 def poisson(x, mu):
     return mu**x * np.exp(-mu)/m.factorial(x)
+
 
 #Bestimmung der der mittleren Zerfallsrate
 pulse = np.loadtxt("Messdaten/MessreiheIII.txt")
@@ -269,7 +275,7 @@ else:
     plt.ylim(0, 18)
     plt.tight_layout()
     plt.legend(loc="best")
-    plt.show()
+    plt.show() if SHOW else plt.savefig("Grafiken/AktivitaetHistogramm.pdf")
 print("Summe der Messungen:", Sum)
 
 
@@ -301,7 +307,11 @@ rect = plt.bar((X_III*10)-110, poi*3.5, width=10, color="blue", alpha=0.6,
 plt.xlim(350, 1300)
 plt.tight_layout()
 plt.legend(loc="best")
-plt.show()
+plt.show() if SHOW else plt.savefig("Grafiken/VergleichPoisson.pdf")
 
+
+#Erstellen der Gauss-Verteilung
+def gauss(x, mu, sig):
+    return 1/(sqrt(2*const.pi)*sig) * np.exp(- (x - mu)**2/(2 * sig**2))
 
 ## Print Funktionen
