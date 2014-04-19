@@ -1,0 +1,11 @@
+FitparameterI: -20.7+/-1.1 280+/-10
+Schnittpunkt x / Mittlere Reichweite: 6.56406564066
+Schnittpunkt y: 143.8625 (143.86543901978209, 143.8592249524601)
+Energie der Alphateilchen: 1.64894997716
+FitparameterII: -15.2+/-0.9 271+/-12
+Schnittpunkt x / Mittlere Reichweite: 8.39723397234
+Schnittpunkt y: 143.8625 (143.86427013692798, 143.85895862369773)
+Energie der Alphateilchen: 1.94319495166
+Logarithmuns Parameter: 0.42+/-0.06 (4+/-4)e-05
+Mittelwert, Abweichung: 681.721 135.518975273
+Summe der Messungen: 100

@@ -42,14 +42,48 @@ SHOW = False
 #
 ###########################################################################
 
+#Berechnung der Energie der Channels
+
+
+def channelToEnergy(ch, ch_list):
+    channel_max = max(ch_list)
+    channel_min = 0
+    energy_slope = 4/(channel_max - channel_min)
+    energy_intercept = 4 - (channel_max*energy_slope)
+    return energy_slope * ch + energy_intercept
+
+
 #Laden der Messdaten
-p_I, ch_I, pulse_I = np.loadtxt("Messdaten/MessreiheI.txt", unpack=True)
+p_I_all, ch_I_all, pulse_I_all = np.loadtxt("Messdaten/MessreiheI.txt", unpack=True)
+p_I = np.delete(p_I_all, 3)
+ch_I = np.delete(ch_I_all, 3)
+pulse_I = np.delete(pulse_I_all, 3)
+
+
 #Berechnung der effektiven Längen
 x_eff = effectiveLength(p_I, 20)
 #Berechnung der Zerfallsrate
 rate_I = pulse_I/120
 #Bestimmung der halben maximal Rate
 rate_max_half_I = max(rate_I)/2
+#Bestimmung der Energien der Channels
+energy_I_all = [channelToEnergy(ch, ch_I) for ch in ch_I_all]
+energy_I = [channelToEnergy(ch, ch_I) for ch in ch_I]
+
+# Tabelle der Messdaten
+T_I = Table(siunitx=True)
+T_I.layout(seperator="column", titlerowseperator="double", border="true")
+T_I.caption = r"Messwerte der Messung im Abstand von $20 \si{mm}$"
+T_I.label = "Messwerte_I"
+T_I.addColumn([int(p) for p in p_I_all], title="Druck", symbol="p",
+               unit=r"\milli\bar")
+T_I.addColumn([int(ch) for ch in ch_I_all], title="Channel Maximum",
+               symbol="Ch_{max}")
+T_I.addColumn(energy_I_all, title="Energie Maximum", symbol="E_{max}",
+              unit=r"\mega\eV")
+T_I.addColumn([int(p) for p in pulse_I_all], title="Anzahl Pulse", symbol="N")
+T_I.show() if SHOW else T_I.save("Tabellen/Messwerte_I.tex")
+
 
 #Berechnung der Fit-Parameter (gerade)
 popt, pcov = curve_fit(func, x_eff[0:-7], rate_I[0:-7])
@@ -96,15 +130,18 @@ plt.plot(x_eff[-7:], rate_I[-7:], "kx")
 #Fit
 plt.plot(X, func(X, popt[0], popt[1]), label="Regressionsgerade", color="gray")
 #Halbesmaximum
-plt.plot(X, len(X)*[rate_max_half_I], label="Halbe maximal Zerfallsrate")
+plt.plot(X, len(X)*[rate_max_half_I],"r--", alpha=0.7, label="Halbe maximal Zerfallsrate")
 #Schnittpunkt
-plt.plot(intercept_x, rate_max_half_I, "ro",
+plt.plot(intercept_x, rate_max_half_I, "ko", alpha=0.7,
          label="Schnittpunkt ({}|{})".format(round(intercept_x, 2),
                                              round(rate_max_half_I, 2)))
 
 plt.tight_layout()
 plt.legend(loc="best")
 plt.show() if SHOW else plt.savefig("Grafiken/MittlereReichweiteI.pdf")
+
+
+
 
 ###########################################################################
 #
@@ -120,6 +157,24 @@ x_eff_II = effectiveLength(p_I, 25)
 rate_II = pulse_I/120
 #Bestimmung der halben maximal Rate
 rate_max_half_II = max(rate_II)/2
+# Berechnung der Energie der Channels
+energy_II = channelToEnergy(ch_II, ch_II)
+
+# Tabelle  der Messwerte
+T_II = Table(siunitx = True)
+T_II.layout(seperator="column", titlerowseperator="double", border="true")
+T_II.caption = r"Messwerte der Messung im Abstand von $25 \si{mm}$"
+T_II.label = "Messwerte_II"
+T_II.addColumn([int(p) for p in p_II], title="Druck", symbol="p", unit=r"\milli\bar")
+T_II.addColumn([int(ch) for ch in ch_II], title="Channel Maximum",
+                symbol="Ch_{max}")
+T_II.addColumn(energy_II, title="Energie Maximum", symbol="E_{max}", unit=r"\mega\eV")
+T_II.addColumn([int(p) for p in pulse_II], title="Anzahl Pulse", symbol="N")
+T_II.show() if SHOW else T_II.save("Tabellen/Messwerte_II.tex")
+
+
+
+
 
 popt, pcov = curve_fit(func, x_eff_II[0:-5], rate_II[0:-5])
 errors = np.sqrt(np.diag(pcov))
@@ -162,9 +217,9 @@ plt.plot(x_eff_II[-5:], rate_II[-5:], "kx")
 #Fit
 plt.plot(X, func(X, popt[0], popt[1]), label="Regressionsgerade", color="gray")
 #Halbe maximal Rate
-plt.plot(X, len(X)*[rate_max_half_II], label="Halbe maximal Zerfallsrate")
+plt.plot(X, len(X)*[rate_max_half_II], "r--", alpha=0.7, label="Halbe maximal Zerfallsrate")
 #Schnittpunkt
-plt.plot(intercept_x, rate_max_half_II, "ro",
+plt.plot(intercept_x, rate_max_half_II, "ko", alpha=0.7,
          label="Schnittpunkt ({}|{})".format(round(intercept_x, 2),
                                              round(rate_max_half_II, 2)))
 
@@ -176,23 +231,11 @@ plt.show() if SHOW else plt.savefig("Grafiken/MittlereReichweiteII.pdf")
 # Bestimmung der Energieänderung für II statt für I
 
 
-energy_max = 4
-channel_max = max(ch_II)
-energy_min = 0
-channel_min = 0
-energy_slope = 4/(channel_max - channel_min)
-energy_intercept = 4 - (channel_max*energy_slope)
-
 
 def func_II(x, a, b):
     return - a * np.log(b * x)
-
-
-def channelToEnergy(ch):
-    return energy_slope * ch + energy_intercept
-
 popt, pcov = curve_fit(func_II, effectiveLength(p_II, 25)[1:],
-                       channelToEnergy(ch_II)[1:])
+                       channelToEnergy(ch_II, ch_II)[1:])
 error = np.sqrt(np.diag(pcov))
 param_a_III = ufloat(popt[0], error[0])
 param_b_III = ufloat(popt[1], error[1])
@@ -207,7 +250,7 @@ plt.grid()
 plt.xlim(-1, 25)
 plt.ylim(2.75, 4.2)
 
-plt.plot(effectiveLength(p_II, 25), channelToEnergy(ch_II), "rx",
+plt.plot(effectiveLength(p_II, 25), channelToEnergy(ch_II, ch_II), "rx",
          label="Messwerte")
 plt.plot(eff_length, func_II(eff_length, popt[0], popt[1]),
          label="Regressionskurve")
@@ -215,12 +258,6 @@ plt.plot(eff_length, func_II(eff_length, popt[0], popt[1]),
 plt.tight_layout()
 plt.legend(loc="best")
 plt.show() if SHOW else plt.savefig("Grafiken/EnergieVerlauf.pdf")
-
-
-
-
-
-
 
 
 #####################################
@@ -241,9 +278,23 @@ def poisson(x, mu):
 
 #Bestimmung der der mittleren Zerfallsrate
 pulse = np.loadtxt("Messdaten/MessreiheIII.txt")
+pulse_III = pulse
 pulse /= 10
 Pulse_ges = Quantity(pulse)
 print("Mittelwert, Abweichung:",Pulse_ges.avr, Pulse_ges.std)
+
+
+# Tabelle  der Messwerte
+t = range(101)[1:]
+T_III = Table(siunitx = True)
+T_III.layout(seperator="column", titlerowseperator="double", border="true")
+T_III.caption = r"Anzahl der gemessenen Impulse"
+T_III.label = "Messwerte_III"
+T_III.addColumn(t[:], title="Versuch Nr.")
+T_III.addColumn([int(p) for p in pulse_III[:]], title="Anzahl Pulse", symbol="N")
+T_III.show() if SHOW else T_III.save("Tabellen/Messwerte_III.tex")
+
+
 
 # Sortierung der Messergebnisse in N balken der Breite dN
 ranges = np.arange(500, 1400, 20)
@@ -269,10 +320,12 @@ for j in range(len(ranges)):
         Sum += len(Lists[j])
         rect = plt.bar(ranges[j], len(Lists[j]),
                        width=20, color="red", alpha=0.7)
-        autolabel(rect)
+        #autolabel(rect)
 else:
     plt.bar(1400, 0, color="red", alpha=0.7, label="Messwerte")
+    #plt.bar(Pulse_ges.avr, 6, width=5, color="blue", label="Mittelwert")
     plt.ylim(0, 18)
+    plt.grid(axis="y")
     plt.tight_layout()
     plt.legend(loc="best")
     plt.show() if SHOW else plt.savefig("Grafiken/AktivitaetHistogramm.pdf")
@@ -288,11 +341,11 @@ plt.ylabel(r"Häufigkeit $p\ [\%]$",
 
 
 # Erstellen einer Poissonverteilung
-X_III = np.arange(50, 140, 2)
+X_III = np.arange(0, 140, 2)
 poi = np.array([poisson(x, Pulse_ges.avr/10) * 100 for x in X_III])
 
 plt.clf()
-Sum = 0
+
 for j in range(len(ranges)):
     if not j == len(ranges) - 1 and not len(Lists[j]) == 0:
         Sum += len(Lists[j])
@@ -302,16 +355,46 @@ else:
     plt.bar(1400, 0, color="red", alpha=0.7, label="Messwerte")
 
 
-rect = plt.bar((X_III*10)-110, poi*3.5, width=10, color="blue", alpha=0.6,
+rect = plt.bar((X_III*10)-10, poi*3.5, width=10, color="blue", alpha=0.6,
                label="Poissonverteilung")
 plt.xlim(350, 1300)
+plt.xlabel(r"Gesamtzahl der Zerfälle $N$",
+           fontsize=14, family='serif')
+plt.ylabel(r"Häufigkeit $p\ [\%]$",
+           fontsize=14, family='serif')
 plt.tight_layout()
 plt.legend(loc="best")
 plt.show() if SHOW else plt.savefig("Grafiken/VergleichPoisson.pdf")
 
 
-#Erstellen der Gauss-Verteilung
+#Erstellen der Gaussverteilung
 def gauss(x, mu, sig):
     return 1/(sqrt(2*const.pi)*sig) * np.exp(- (x - mu)**2/(2 * sig**2))
+X_IV = np.arange(0, 140, 0.2)
+gau = np.array([gauss(x, Pulse_ges.avr/10, Pulse_ges.std/10) for x in X_IV])
 
+plt.clf()
+
+for j in range(len(ranges)):
+    if not j == len(ranges) - 1 and not len(Lists[j]) == 0:
+        Sum += len(Lists[j])
+        rect = plt.bar(ranges[j], len(Lists[j]),
+                       width=10, color="red", alpha=0.7)#, label="Messwerte")
+else:
+    plt.bar(1400, 0, color="red", alpha=0.7, label="Messwerte")
+
+
+#rect = plt.bar((X_IV*10)-10, gau*500, width=10, color="blue", alpha=0.6,
+#               label="Gaussverteilung")
+plt.plot((X_IV*10)-10, gau*500, "b-", label="Gaussverteilung")
+
+plt.xlim(350, 1300)
+plt.ylim(0, 18)
+plt.xlabel(r"Gesamtzahl der Zerfälle $N$",
+           fontsize=14, family='serif')
+plt.ylabel(r"Häufigkeit $p\ [\%]$",
+           fontsize=14, family='serif')
+plt.tight_layout()
+plt.legend(loc="best")
+plt.show() if SHOW else plt.savefig("Grafiken/VergleichGauss.pdf")
 ## Print Funktionen

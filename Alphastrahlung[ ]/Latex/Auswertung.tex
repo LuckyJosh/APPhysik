@@ -1,0 +1,88 @@
+In folgendem Abschnitt sind die während des Versuche aufgenommenen Daten, 
+so wie die aus diesen gewonnenen Ergebnisse tabellarisch und mit Hilfe 
+von Grafiken dargestellt. An entsprechender Stelle werden Erklärungen zu den 
+Messdaten, Rechnungen und Ergebnissen gegeben.
+
+\subsection{Messung der mittleren Reichweite im Abstand 20mm}\label{sec:Messung_I}
+
+	Die Messergebnisse der ersten Messung zu Bestimmung der mittleren Reichweite $R_{m}$
+	sind in \cref{tab:Messwerte_I} aufgeführt. Wobei die hervorgehobene Zeile wegen der
+	großen Abweichung nicht für die folgende Auswertung genutzt wurde.
+	
+	\input{Tabellen/Messwerte_I.tex}
+	
+	In \cref{fig:Messdaten_I} sind diese Messwerte grafisch dargestellt, wobei die Gesamtzahl der gemessenen Pulse
+	durch Division mit der Messdauer $t = 120 \si{s}$ in die Zerfallsrate umgerechnet wurde. 
+	Die effektive Länge, die Strecke die die Alphastrahlung relativ zu Atmosphärendruck,
+	zurück gelegt hat berechnet sich nach \cref{eq:}.   
+	
+	Die mittlere Reichweite $R_{m}$ der Alphastrahlung erhält man nun, indem zunächst eine lineare 
+	Regression der Messwerte durchgeführt wird. Die in \cref{fig:Messdaten_I} grau eingezeichneten Messwerte wurden 
+	bei dieser Regression nicht verwendet. Mit Hilfe der Python-Bibliothek \emph{SciPy} \cite{SciPy} 
+	erhält man aus den Messdaten mit dem Ansatz
+	\begin{empheq}{equation}
+		A(x) = a \cdot x + b,
+	\end{empheq}
+	die Regressionsparameter
+	\addtocounter{equation}{-1}	
+	\begin{subequations}
+		\begin{empheq}{align}
+			a &= \SI{-20(1)}{\per\second\per\milli\meter} \\
+			b &= \SI{280(10)}{\per\second}.
+		\end{empheq}
+	\end{subequations}
+	
+	
+	Im folgenden Schritt wird eine zur x-Achse parallele Gerade auf halber Höhe des Maximalwerts,
+	der gemessenen Zerfallsraten, hier gestrichelt, eingezeichnet.\\
+	 
+	Die zu bestimmende Reichweite $R_{m}$ lässt sich damit als x-Koordinate des Schnittpunktes dieser beiden Geraden 
+	ablesen. Die auf diese Weise ermittelte, mittlere Reichweite beträgt für diese Messdaten 
+	$R_{m} = \SI{6.65(1)}{\milli\meter}$.      
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/MittlereReichweiteI.pdf}
+		\caption{Darstellung der Messdaten aus \cref{tab:Messwerte_I} und Bestimmung von $R_{m}$}
+		\label{fig:Messdaten_I}
+	\end{figure}
+	
+	Der aus diesen Versuchsdaten zu berechnende Energieverlust $-\od{E}{x}$ wird wegen der besseren
+	Messergebnisse im folgenden Unterabschnitt vorgenommen.  
+	
+	
+\subsection{Messung der mittleren Reichweite im Abstand $25$\si{\mm}}\label{sec:Messung_II}
+
+
+	\input{Tabellen/Messwerte_II.tex}
+	
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/MittlereReichweiteII.pdf}
+		\caption{Darstellung der Messdaten aus \cref{tab:Messwerte_II} und Bestimmung von $R_{m}$}
+		\label{fig:Messdaten_II}
+	\end{figure}
+
+\subsection{Statistik des radioaktiven Zerfalls}\label{sec:Messung_III}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/AktivitaetHistogramm.pdf}
+		\caption{Darstellung der Messdaten aus \cref{tab:Messwerte_II} und Bestimmung von $R_{m}$}
+		\label{fig:Messdaten_III}
+	\end{figure}
+		
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/VergleichPoisson.pdf}
+		\caption{Vergleiche der Messdaten mit der diskreten Poissonverteilung}
+		\label{fig:Messdaten_III_Poisson}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/VergleichGauss.pdf}
+		\caption{Vergleich der Messdaten mit der kontinuierlichen Gaussverteilung}
+		\label{fig:Messdaten_III_Gauss}
+	\end{figure}
