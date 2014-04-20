@@ -21,7 +21,7 @@ import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
 from aputils.latextables.tables import Table
-from aputils.utils import Quantity
+from aputils.utils import Quantity, ErrorEquation
 
 
 def func(x, a, b):
@@ -72,13 +72,13 @@ energy_I = [channelToEnergy(ch, ch_I) for ch in ch_I]
 
 # Tabelle der Messdaten
 T_I = Table(siunitx=True)
-T_I.layout(seperator="column", titlerowseperator="double", border="true")
-T_I.caption = r"Messwerte der Messung im Abstand von $20 \si{mm}$"
-T_I.label = "Messwerte_I"
+T_I.layout(seperator="column", title_row_seperator="double", border="true")
+T_I.caption(r"Messwerte der Messung im Abstand von $20 \si{mm}$")
+T_I.label("Messwerte_I")
 T_I.addColumn([int(p) for p in p_I_all], title="Druck", symbol="p",
-               unit=r"\milli\bar")
+              unit=r"\milli\bar")
 T_I.addColumn([int(ch) for ch in ch_I_all], title="Channel Maximum",
-               symbol="Ch_{max}")
+              symbol="Ch_{max}")
 T_I.addColumn(energy_I_all, title="Energie Maximum", symbol="E_{max}",
               unit=r"\mega\eV")
 T_I.addColumn([int(p) for p in pulse_I_all], title="Anzahl Pulse", symbol="N")
@@ -112,7 +112,8 @@ print("Schnittpunkt y:", rate_max_half_I, intercept_y)
 
 #Bestimmung der Energie, ausgehend von der mittleren Reichweite
 distance_avr_I = intercept_x
-energy_I = distanceToEnergy(distance_avr_I)
+#energy_I = distanceToEnergy(distance_avr_I)
+energy_I = distanceToEnergy(ufloat(distance_avr_I, 0.01))
 print("Energie der Alphateilchen:", energy_I)
 
 # Erstellen des Plots
@@ -162,9 +163,9 @@ energy_II = channelToEnergy(ch_II, ch_II)
 
 # Tabelle  der Messwerte
 T_II = Table(siunitx = True)
-T_II.layout(seperator="column", titlerowseperator="double", border="true")
-T_II.caption = r"Messwerte der Messung im Abstand von $25 \si{mm}$"
-T_II.label = "Messwerte_II"
+T_II.layout(seperator="column", title_row_seperator="double", border="true")
+T_II.caption(r"Messwerte der Messung im Abstand von $25 \si{mm}$")
+T_II.label("Messwerte_II")
 T_II.addColumn([int(p) for p in p_II], title="Druck", symbol="p", unit=r"\milli\bar")
 T_II.addColumn([int(ch) for ch in ch_II], title="Channel Maximum",
                 symbol="Ch_{max}")
@@ -201,6 +202,7 @@ print("Schnittpunkt y:", rate_max_half_II, intercept_y)
 #Bestimmung der Energie aus der mittleren Reichweite
 distance_avr_I = intercept_x
 energy_I = distanceToEnergy(distance_avr_I)
+energy_I = distanceToEnergy(ufloat(distance_avr_I, 0.01))
 print("Energie der Alphateilchen:", energy_I)
 
 #Erstellen des zweiten Plots
@@ -217,7 +219,8 @@ plt.plot(x_eff_II[-5:], rate_II[-5:], "kx")
 #Fit
 plt.plot(X, func(X, popt[0], popt[1]), label="Regressionsgerade", color="gray")
 #Halbe maximal Rate
-plt.plot(X, len(X)*[rate_max_half_II], "r--", alpha=0.7, label="Halbe maximal Zerfallsrate")
+plt.plot(X, len(X)*[rate_max_half_II], "r--", alpha=0.7,
+         label="Halbe maximal Zerfallsrate")
 #Schnittpunkt
 plt.plot(intercept_x, rate_max_half_II, "ko", alpha=0.7,
          label="Schnittpunkt ({}|{})".format(round(intercept_x, 2),
@@ -254,7 +257,9 @@ plt.plot(effectiveLength(p_II, 25), channelToEnergy(ch_II, ch_II), "rx",
          label="Messwerte")
 plt.plot(eff_length, func_II(eff_length, popt[0], popt[1]),
          label="Regressionskurve")
-
+plt.xlabel("Effektive Länge $x\ [\mathrm{mm}]$", fontsize=14, family='serif')
+plt.ylabel("maximal Energie $E_{max}\ [\mathrm{MeV}]$",
+           fontsize=14, family='serif')
 plt.tight_layout()
 plt.legend(loc="best")
 plt.show() if SHOW else plt.savefig("Grafiken/EnergieVerlauf.pdf")
@@ -281,18 +286,18 @@ pulse = np.loadtxt("Messdaten/MessreiheIII.txt")
 pulse_III = pulse
 pulse /= 10
 Pulse_ges = Quantity(pulse)
-print("Mittelwert, Abweichung:",Pulse_ges.avr, Pulse_ges.std)
+print("Mittelwert, Abweichung:",Pulse_ges.avr, Pulse_ges.std, Pulse_ges.avr_err)
 
 
 # Tabelle  der Messwerte
-t = range(101)[1:]
-T_III = Table(siunitx = True)
-T_III.layout(seperator="column", titlerowseperator="double", border="true")
-T_III.caption = r"Anzahl der gemessenen Impulse"
-T_III.label = "Messwerte_III"
-T_III.addColumn(t[:], title="Versuch Nr.")
-T_III.addColumn([int(p) for p in pulse_III[:]], title="Anzahl Pulse", symbol="N")
-T_III.show() if SHOW else T_III.save("Tabellen/Messwerte_III.tex")
+#t = range(101)[1:]
+#T_III = Table(siunitx = True)
+#T_III.layout(seperator="column", title_row_seperator="double", border="true")
+#T_III.caption(r"Anzahl der gemessenen Impulse")
+#T_III.label("Messwerte_III")
+#T_III.addColumn(t[:], title="Versuch Nr.")
+#T_III.addColumn([int(p) for p in pulse_III[:]], title="Anzahl Pulse", symbol="N")
+#T_III.show() if SHOW else T_III.save("Tabellen/Messwerte_III.tex")
 
 
 
@@ -325,6 +330,10 @@ else:
     plt.bar(1400, 0, color="red", alpha=0.7, label="Messwerte")
     #plt.bar(Pulse_ges.avr, 6, width=5, color="blue", label="Mittelwert")
     plt.ylim(0, 18)
+    plt.xlabel(r"Zerfallsrate $A \ [\mathrm{s^{-1}}] $",
+               fontsize=14, family='serif')
+    plt.ylabel(r"Häufigkeit $P\ [\mathrm{\%}] $",
+               fontsize=14, family='serif')
     plt.grid(axis="y")
     plt.tight_layout()
     plt.legend(loc="best")
@@ -332,14 +341,7 @@ else:
 print("Summe der Messungen:", Sum)
 
 
-plt.clf()
 #Erstellen des Plots Poisson & Messwerte
-plt.xlabel(r"Gesamtzahl der Zerfälle $N$",
-           fontsize=14, family='serif')
-plt.ylabel(r"Häufigkeit $p\ [\%]$",
-           fontsize=14, family='serif')
-
-
 # Erstellen einer Poissonverteilung
 X_III = np.arange(0, 140, 2)
 poi = np.array([poisson(x, Pulse_ges.avr/10) * 100 for x in X_III])
@@ -358,12 +360,13 @@ else:
 rect = plt.bar((X_III*10)-10, poi*3.5, width=10, color="blue", alpha=0.6,
                label="Poissonverteilung")
 plt.xlim(350, 1300)
-plt.xlabel(r"Gesamtzahl der Zerfälle $N$",
+plt.xlabel(r"Zerfallsrate $A \ [\mathrm{s^{-1}}] $",
            fontsize=14, family='serif')
-plt.ylabel(r"Häufigkeit $p\ [\%]$",
+plt.ylabel(r"Häufigkeit $P \ [\%]$",
            fontsize=14, family='serif')
 plt.tight_layout()
 plt.legend(loc="best")
+plt.grid(axis="y")
 plt.show() if SHOW else plt.savefig("Grafiken/VergleichPoisson.pdf")
 
 
@@ -390,11 +393,17 @@ plt.plot((X_IV*10)-10, gau*500, "b-", label="Gaussverteilung")
 
 plt.xlim(350, 1300)
 plt.ylim(0, 18)
-plt.xlabel(r"Gesamtzahl der Zerfälle $N$",
+plt.xlabel(r"Zerfallsrate $A \ [\mathrm{s^{-1}}] $",
            fontsize=14, family='serif')
-plt.ylabel(r"Häufigkeit $p\ [\%]$",
+plt.ylabel(r"Häufigkeit $P\ [\%]$",
            fontsize=14, family='serif')
 plt.tight_layout()
 plt.legend(loc="best")
+plt.grid(axis="y")
 plt.show() if SHOW else plt.savefig("Grafiken/VergleichGauss.pdf")
 ## Print Funktionen
+
+## Fehler
+R = var("R_m")
+EnergieError = ErrorEquation((R/3.1)**(2/3), name="E")
+print(EnergieError.std)

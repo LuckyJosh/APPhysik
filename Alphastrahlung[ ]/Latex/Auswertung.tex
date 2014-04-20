@@ -38,7 +38,9 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 	 
 	Die zu bestimmende Reichweite $R_{m}$ lässt sich damit als x-Koordinate des Schnittpunktes dieser beiden Geraden 
 	ablesen. Die auf diese Weise ermittelte, mittlere Reichweite beträgt für diese Messdaten 
-	$R_{m} = \SI{6.65(1)}{\milli\meter}$.      
+	$R_{m} = \SI{6.56(1)}{\milli\meter}$. Durch Umstellen der \cref{eq:} kann aus diesem Wert 
+	die Energie der Alphastrahlung zu $E_{\alpha} = \SI{1.648(2)}{\mega\eV} $ berechnet 
+	werden.\footnote{Der Fehler wurde hierbei durch \eqref{std:Energie} bestimmt.}    
 	
 	\begin{figure}[!h]
 		\centering
@@ -47,15 +49,37 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 		\label{fig:Messdaten_I}
 	\end{figure}
 	
+	\vspace*{0.5cm}
 	Der aus diesen Versuchsdaten zu berechnende Energieverlust $-\od{E}{x}$ wird wegen der besseren
 	Messergebnisse im folgenden Unterabschnitt vorgenommen.  
 	
 	
 \subsection{Messung der mittleren Reichweite im Abstand $25$\si{\mm}}\label{sec:Messung_II}
-
+	
+	Die bei der Messung im Abstand von \SI{25}{\milli\meter} aufgenommenen Daten sind in \cref{tab:Messwerte_II} 
+	dargestellt.
 
 	\input{Tabellen/Messwerte_II.tex}
-	
+		
+	Wie in \cref{sec:Messung_I} beschrieben, sind auch die aus diesen Daten berechneten Zerfallsraten
+	(Messzeit $ t = \SI{120}{\second}$) in \cref{fig:Messdaten_II} gegen die effektive Länge aufgetragen, um die 
+	mittlere Reichweite $R_{m}$ der Alphastrahlung zu bestimmen.\\
+	Die dafür notwendige lineare Regression mit dem Ansatz
+	\begin{empheq}{equation}
+		A(x) = c \cdot x + d, 
+	\end{empheq}
+	ergibt die Regressionsparameter 
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{align}
+			c &= \SI{-15.2(9)}{\per\second\per\milli\meter}\\
+			d &= \SI{271(12)}{\per\second}.
+		\end{empheq}
+	\end{subequations}
+	Aus diesen Daten ergibt sich die mittlere Reichweite von $R_{m} = \SI{8.39(1)}{\milli\meter}$.
+	Auch aus diesem Wert lässt sich durch Umstellen der \cref{eq:} die Energie der 
+	Alphastrahlung zu $E_{\alpha} = \SI{1.943(2)}{\mega\eV} $ bestimmen.
+	\footnote{Der Fehler wurde hierbei durch \cref{std:Energie} bestimmt.} 
 	
 	\begin{figure}[!h]
 		\centering
@@ -64,7 +88,52 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 		\label{fig:Messdaten_II}
 	\end{figure}
 
+	Durch  das Auftragen der maximal Energien $E_{max}$ aus \cref{tab:Messwerte_II} gegen die effektive Länge $x$,
+	in \cref{fig:Messdaten_II_Energie}, ist es möglich mit einem der Bethe-Bloch-Gleichung \cref{eq:} 
+	ähnlichen Regressionsansatz 
+	\begin{empheq}{equation}
+		E(x) = e \cdot \Ln{f \cdot x}, 
+	\end{empheq}
+	die Funktion des Energieverlaufs mit den Regressionsparametern
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{align}
+			e &= \SI{-0.42(6)}{\mega\eV}\\
+			f &= \SI{4(4)e-05}{\per\milli\meter}
+		\end{empheq}
+	\end{subequations}	
+	zu bestimmen.\\
+	Durch Differentiation der auf diese Weise bestimmten Funktion $E(x)$ erhält man die gesuchte Energieänderung
+	$\od{E}{x} = \frac{e}{x}  = \frac{\num{-0.42}}{x} \si{\mega\eV\per\milli\meter} $ und daraus der Energieverlust 
+	$-\od{E}{x} = \frac{\num{0.42}}{x} \si{\mega\eV\per\milli\meter}$.
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.7]{Grafiken/EnergieVerlauf.pdf}
+		\caption{Darstellung der maximal Energie in Abhängigkeit der effektiven Länge}
+		\label{fig:Messdaten_II_Energie}
+	\end{figure}
+	
+
 \subsection{Statistik des radioaktiven Zerfalls}\label{sec:Messung_III}
+	
+	In \cref{tab:Messwerte_III} sind die  während der Messzeit 
+	$\Delta t = \SI{10}{\second}$ aufgenommenen Zerfallsraten aufgelistet.
+	\input{Tabellen/Messwerte_III.tex}
+	Der Mittelwert und die Standardabweichung dieser Messwerte berechnen sich zu
+	\begin{empheq}{align}
+		\mean{A} &= \SI{681(14)}{\per\second}\\
+		\sigma_{A} &= \SI{136}{\per\second}\\
+	\end{empheq}
+	
+	Diese Messwert sind in \cref{fig:Messdaten_III} in einem Histogramm aufgetragen,
+	in dem die Balkenbreite $\Delta N = \SI{20}{\per\second}$ gewählt wurde.
+	
+	In den Abbildungen \ref{fig:Messdaten_III_Poisson} und \ref{fig:Messdaten_III_Gauss}
+	ist das Histogramm aus \cref{fig:Messdaten_III} noch einmal im Vergleich zu einer 
+	diskreten Poisson- bzw. kontinuierlichen Gauß-Verteilung mit dem Mittelwert der 
+	Messdaten dargestellt.
+	
 	
 	\begin{figure}[!h]
 		\centering

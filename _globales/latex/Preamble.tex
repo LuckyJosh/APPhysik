@@ -165,6 +165,7 @@
 % Funktionsmakros mit größenvariablen Klammern benötigt \usepackage{commath}
 \newcommand{\E}[1]{\e^{#1}}
 \newcommand{\Exp}[1]{\exp\!\del{#1}}
+\newcommand{\Ln}[1]{\ln\!\del{#1}}
 \newcommand{\Sin}[1]{\sin\!\del{#1}}
 \newcommand{\Cos}[1]{\cos\!\del{#1}}
 \newcommand{\Tan}[1]{\tan\!\del{#1}}
@@ -182,6 +183,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Verbesserungen hervorheben
-
+\newcounter{errorEquation}
+\newenvironment{errorEquation}{\refstepcounter{errorEquation}\equation}{\tag{\theerrorEquation}\endequation}
 
 
