@@ -237,8 +237,10 @@ plt.show() if SHOW else plt.savefig("Grafiken/MittlereReichweiteII.pdf")
 
 def func_II(x, a, b):
     return - a * np.log(b * x)
-popt, pcov = curve_fit(func_II, effectiveLength(p_II, 25)[1:],
-                       channelToEnergy(ch_II, ch_II)[1:])
+#popt, pcov = curve_fit(func_II, effectiveLength(p_II, 25)[1:],
+#                       channelToEnergy(ch_II, ch_II)[1:])
+popt, pcov = curve_fit(func, effectiveLength(p_II, 25)[:-7],
+                       channelToEnergy(ch_II, ch_II)[:-7])
 error = np.sqrt(np.diag(pcov))
 param_a_III = ufloat(popt[0], error[0])
 param_b_III = ufloat(popt[1], error[1])
@@ -246,17 +248,23 @@ param_b_III = ufloat(popt[1], error[1])
 print("Logarithmuns Parameter:", param_a_III, param_b_III)
 
 
-eff_length = np.linspace(0.1, 25, 500)
+eff_length = np.linspace(-10, 25, 500)
 
 plt.clf()
 plt.grid()
 plt.xlim(-1, 25)
 plt.ylim(2.75, 4.2)
 
-plt.plot(effectiveLength(p_II, 25), channelToEnergy(ch_II, ch_II), "rx",
-         label="Messwerte")
-plt.plot(eff_length, func_II(eff_length, popt[0], popt[1]),
-         label="Regressionskurve")
+#plt.plot(effectiveLength(p_II, 25), channelToEnergy(ch_II, ch_II), "rx",
+#         label="Messwerte")
+plt.plot(effectiveLength(p_II, 25)[:-7], channelToEnergy(ch_II, ch_II)[:-7],
+         "rx", label="Messwerte")
+plt.plot(effectiveLength(p_II, 25)[-7:], channelToEnergy(ch_II, ch_II)[-7:],
+         "kx")
+#plt.plot(eff_length, func_II(eff_length, popt[0], popt[1]),
+#         label="Regressionskurve")
+plt.plot(eff_length, func(eff_length, popt[0], popt[1]),
+         label="Regressionsgerade")
 plt.xlabel("Effektive Länge $x\ [\mathrm{mm}]$", fontsize=14, family='serif')
 plt.ylabel("maximal Energie $E_{max}\ [\mathrm{MeV}]$",
            fontsize=14, family='serif')
