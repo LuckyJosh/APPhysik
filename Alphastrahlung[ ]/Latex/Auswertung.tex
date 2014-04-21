@@ -14,7 +14,7 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 	In \cref{fig:Messdaten_I} sind diese Messwerte grafisch dargestellt, wobei die Gesamtzahl der gemessenen Pulse
 	durch Division mit der Messdauer $\Delta t = 120 \si{s}$ in die Zerfallsrate umgerechnet wurde. 
 	Die effektive Länge, die Strecke die die Alphastrahlung relativ zu Atmosphärendruck,
-	zurück gelegt hat berechnet sich nach \cref{eq:}.   
+	zurück gelegt hat berechnet sich nach \cref{eq:effektive_laenge}.   
 	
 	Die mittlere Reichweite $R_{m}$ der Alphastrahlung erhält man nun, indem zunächst eine lineare 
 	Regression der Messwerte durchgeführt wird. Die in \cref{fig:Messdaten_I} grau eingezeichneten Messwerte wurden 
@@ -38,17 +38,19 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 	 
 	Die zu bestimmende Reichweite $R_{m}$ lässt sich damit als x-Koordinate des Schnittpunktes dieser beiden Geraden 
 	ablesen. Die auf diese Weise ermittelte, mittlere Reichweite beträgt für diese Messdaten 
+
 	\begin{empheq}{equation}
 		R_{m} = \SI{6.56(1)}{\milli\meter}.
 		\label{eq:Messergebnis_I_R}
 	\end{empheq} 
-	Durch Umstellen von \cref{eq:} kann aus diesem Wert 
+	Durch Umstellen von \cref{eq:reichweite} kann aus diesem Wert 
 	die Energie der Alphastrahlung zu 
 	\begin{empheq}{equation}
 		E_{\alpha} = \SI{1.648(2)}{\mega\eV} 
 		\label{eq:Messergebnis_I_E}
 	\end{empheq}	
 	berechnet werden.\footnote{Der Fehler wurde hierbei durch \eqref{std:Energie} bestimmt.}    
+
 	
 	\begin{figure}[!h]
 		\centering
@@ -84,19 +86,21 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 			d &= \SI{271(12)}{\per\second}.
 		\end{empheq}
 	\end{subequations}
+
 	
 	Aus diesen Daten ergibt sich die mittlere Reichweite von 
 	\begin{empheq}{equation}
 		R_{m} = \SI{8.39(1)}{\milli\meter}.
 		\label{eq:Messergebnis_II_R}
 	\end{empheq}
-	Auch aus diesem Wert lässt sich durch Umstellen der \cref{eq:} die Energie der 
+	Auch aus diesem Wert lässt sich durch Umstellen der \cref{eq:reichweite} die Energie der 
 	Alphastrahlung zu 
 	\begin{empheq}{equation}
 		E_{\alpha} = \SI{1.943(2)}{\mega\eV} 
 		\label{eq:Messergebnis_II_E}
 	\end{empheq}
 	bestimmen.
+
 	\footnote{Der Fehler wurde hierbei durch \cref{std:Energie} bestimmt.} 
 	
 	\begin{figure}[!h]
@@ -106,8 +110,10 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 		\label{fig:Messdaten_II}
 	\end{figure}
 
+
 	Durch  das Auftragen der maximal Energien $E_{max}$ aus \cref{tab:Messwerte_II} gegen die effektive Länge $x$,
 	in \cref{fig:Messdaten_II_Energie}, ist es möglich mit dem Regressionsansatz 
+
 	\begin{empheq}{equation}
 		E(x) = e \cdot x + f, 
 	\end{empheq}
