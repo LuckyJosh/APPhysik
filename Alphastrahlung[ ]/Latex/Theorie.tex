@@ -1,0 +1,42 @@
+\subsection{Entstehung der $\alpha$-Strahlung}
+
+Im Versuch wird ein Americium-Präparat als $\alpha$-Strahlungsquelle
+verwendet, es gehört zu den Actanoiden und die Halbwertszeit beträgt $T_{1/2}$ = 458 a.
+
+Ein Americium-Atom zerfällt in ein Neptunium-Atom und in ein
+zweifach positiv geladenes Helium-Atom (Heliumkern). Diese emittierten Heliumkerne sind die verwendeten $\alpha$-Teilchen.
+
+Die Strahlung, die durch den Zerfall von Neptunium und deren Zerfallsprodukten entsteht, kann vernachlässigt werden, da diese immer höhere Halbwertszeiten haben und daraus folgt, dass noch weniger $\alpha$-Teilchen emittiert werden.
+
+\subsection{Reichweite der Strahlung bei hohen Energien}
+
+Beim Durchlaufen eines $\alpha$-Teilchen in einem Medium, kann es zu elastischen Stößen mit den dort befindlichen Teilchen kommen, wobei das
+$\alpha$-Teilchen vernachlässigbar wenig Energie verliert. Die meiste Energie verliert das $\alpha$-Teilchen durch die Anregung oder Dissoziation von Molekülen. Bei hoher Energie der $\alpha$-Strahlung kann man den Energieverlust mithilfe der Bethe-Bloch-Gleichung \eqref{eq:bethe-bloch} beschreiben.
+\begin{equation}
+  \label{eq:bethe-bloch}
+  -\frac{d E_\alpha}{dx} = \frac{z^2 e^4}{4 \pi \epsilon_0 m_e} \cdot 
+  \frac{n Z}{v^2} \cdot \ln \left(\frac{2 m_e v^2}{I}\right)
+\end{equation}
+\begin{align*}
+  z\colon &\text{Ladung der Strahlung}\\
+  n\colon &\text{Teilchendichte des Mediums}\\
+  Z\colon &\text{Ordnungszahl}\\
+  v\colon &\text{Geschwindigkeit der Strahlung}\\
+  I\colon &\text{Ionisierungsenergie des Mediums}
+\end{align*}
+
+\subsection{Reichweite der Strahlung bei geringen Energien}
+
+Da die Energie bei der in diesem Versuch untersuchten $\alpha$-Strahlung zu gering ist, um den Energieverlust mithilfe der Bethe-Bloch-Gleichung zu bestimmen, wird die mittlere Reichweite in Luft empirisch bestimmt. (Im niedrigen Energiebereich kommt es vermehrt zu Ladungsaustauschprozessen):
+
+\begin{equation}
+\label{eq:reichweite}
+R_m = 3.1 \cdot {E_\alpha} ^{\frac{3}{2}}
+\end{equation}
+Gilt für $E_{\alpha}$ $\le$ \SI{2.5}{\mega\electronvolt}.
+
+\subsection{Funktionsweise eines Halbleiter-Sperrschichtzählers}
+
+Zur Messung wird ein Halbleiter-Sperrschichtzähler verwendet, um
+die Anzahl der $\alpha$-Teilchen und deren Energie zu messen. Trifft ein $\alpha$-Teilchen auf den Detektor, so entstehen Elektronen-Loch
+Paare, da die $\alpha$-Teilchen zweifach positiv geladen sind. Es kommt kurzzeitig zu einem Stromfluss, welcher als Impuls an den Multichannel Analyzer zur Verarbeitung der Information weitergegeben wird. Die Stärke des Impulses ist dabei proportional zur Energie des $\alpha$-Teilchen, welches auf den Sperrschichtzähler trifft.
