@@ -90,108 +90,136 @@ class TableColumn(TableElement):
 
 
 class Table:
-    def __init__(self, siunitx=False):
-        self._titlerows = []
-        self._titlecols = []
+    def __init__(self, position="!h", centered=True, siunitx=False):
+        """
+        Parameters
+        ----------
+        *position* :  "h"|"t"|"b" with or without leading "!",
+        used to define the position of the table on the documentpage
+
+        *centered* : True|False,
+        used to define whether or not the table is centerd
+
+        """
+        self._title_rows = []
+        self._title_columns = []
         self._rows = []
         self._columns = []
-        self._rowcount = 0
-        self._columncount = 0
-        self.rowseperator = False
-        self.titlerowseperator = "single"
-        self.border = False  # either True or False
-        self.centered = True  # either True or False
-        self.position = "!h"    # h,b,t with or without !
-        self.globalalign = ""
-        self.columnseparator = False
-        self._columnalignment = []
-        self.labelprefix = "tab:"
-        self.label = ""
-        self.caption = ""
+        self._row_count = 0
+        self._column_count = 0
+        self._row_seperator = False
+        self._title_row_seperator = "single"
+        self._border = False  # either True or False
+        self._centered = centered  # either True or False
+        self._position = position    # h,b,t with or without !
+#        self.globalalign = ""
+        self._column_separator = False
+        self._column_alignment = []
+        self._label_prefix = "tab:"
+        self._label = ""
+        self._caption = ""
         self._tablepath = ""
         self._siunitx = siunitx
 # TODO: possibility to add colums and rows of differnet length
 
     def addColumn(self, column, align="c", title=None, symbol=None, unit=None):
         # processing of the column title row
-        if not unit is None and not symbol is None:
+        if not symbol is None:
+            symbol = '$' + symbol + '$'
+        if not unit is None:
             symbol = symbol + (" [\\si{{{}}}]" if self._siunitx
                                else " [{}]").format(unit)
         titlecolumn = [title, symbol]
-        if not self._titlerows:
+        if not self._title_rows:
             for item in titlecolumn:
                 if not item is None:
-                    self._titlerows.append(TableRow(item))
+                    self._title_rows.append(TableRow(item))
         else:
-            for (trow, item) in zip(self._titlerows, titlecolumn):
+            for (trow, item) in zip(self._title_rows, titlecolumn):
                 if not item is None:
                     trow.append(TableCell(item))
 
         # processing of the table columns
-        self._columnalignment.append(align)
+        self._column_alignment.append(align)
         self._columns.append(TableColumn(column))
-        self._columncount += 1
+        self._column_count += 1
 
         # processing of the table rows
         if not self._rows:
             for item in column:
                 self._rows.append(TableRow(item))
-            self._rowcount += len(column)
+            self._row_count += len(column)
         else:
             for (row, item) in zip(self._rows, column):
                 row.append(TableCell(item))
 
     def addRow(self, row):
         self._rows.append(TableRow(row))
-        self._rowcount += 1
+        self._row_count += 1
         if not self._columns:
             for item in row:
                 self._columns.append(TableColumn(item))
-            self._columncount += len(row)
+            self._column_count += len(row)
         else:
             for (col, item) in zip(self._columns, row):
                 col.append(TableCell(item))
 
-    def layout(self, seperator="none", titlerowseperator="single",
-               border=False):
+    def layout(self, seperator="none",
+               title_row_seperator="single", border=False):
         """
-        Method to set the wanted seperators and border layout:
+        Method to set the grid and border layout of the table
 
-            - seperator = "none"|"row"|"column"|"both"
-            - titlerowseperator = "single"|"double"|"none"
-            - border = False|True
+        Parameters
+        ----------
+        *seperator* = "none"|"row"|"column"|"both",
+        used to set the gridstyle of the table
+
+        *title_row_seperator* = "single"|"double"|"none",
+        used to set the style of the seperatorline beneath the title row
+
+        *border* = False|True,
+        used to en- or disable the border of the table
         """
+
         if seperator == "none":
-            self.rowseperator = self.columnseparator = False
+            self._row_seperator = self._column_separator = False
         elif seperator == "both":
-            self.rowseperator = self.columnseparator = True
+            self._row_seperator = self._column_separator = True
         elif seperator == "row":
-            self.rowseperator = True
-            self.columnseparator = False
+            self._row_seperator = True
+            self._column_separator = False
         elif seperator == "column":
-            self.rowseperator = False
-            self.columnseparator = True
-        self.titlerowseperator = titlerowseperator
-        self.border = border
+            self._row_seperator = False
+            self._column_separator = True
+        self._title_row_seperator = title_row_seperator
+        self._border = border
+
+    def caption(self, caption):
+        self._caption = caption
+
+    def label(self, label, label_prefix="tab:"):
+        self._label = label
+        self._label_prefix = label_prefix
 
 
 
     def _latexColumns(self):
-        columnsettings = "|{}|" if self.border else "{}"
-        seperator = "|" if self.columnseparator else ""
-        columnsettings = columnsettings.format(join(self._columnalignment,
+        column_settings = "|{}|" if self._border else "{}"
+        seperator = "|" if self._column_separator else ""
+        column_settings = column_settings.format(join(self._column_alignment,
                                                     sep=seperator))
-        return columnsettings
+        self._column_settings = column_settings
+        return column_settings
 
     def _rowEnd(self):
-        return "\\\\\hline" if self.rowseperator else "\\\\"
+        return "\\\\\hline" if self._row_seperator else "\\\\"
 
     def _latexTitleRows(self):
         trows = []
-        if self._titlerows:
-            for trow in self._titlerows:
+        if self._title_rows:
+            for trow in self._title_rows:
                 trows.append(join(map(lambda s: str(s), trow.element),
-                            sep=" & ") + "\\\\" + "\n")
+                             sep=" & ") + "\\\\" + "\n")
         return trows
 
     def _latexRows(self):
@@ -205,56 +233,67 @@ class Table:
                 rows.append(join(map(lambda s: str(s), row.element), sep=" & ")
                             + self._rowEnd() + "\n")
 
-        if self.rowseperator:
+        if self._row_seperator:
             rows[-1] = rows[-1].replace("\\hline", "")
         return rows
 
     def _latexTable(self, path):
-        tablebegin = "\\begin{table}" + "[{}]\n".format(self.position)
+        tablebegin = "\\begin{table}" + "[{}]\n".format(self._position)
         tableend = "\\end{table}\n"
         tabularbegin = "\t\\begin{tabular}" + \
                        "{{{}}}\n".format(self._latexColumns())
         tabularend = "\t\\end{tabular}\n"
-        label = "\\label{{{}}}".format(self.labelprefix + self.label)
-        caption = "\t\\caption{{{} {}}}\n".format(self.caption, label)
+        label = "\\label{{{}}}".format(self._label_prefix + self._label)
+        caption = "\t\\caption{{{} {}}}\n".format(self._caption, label)
 #        print(tablebegin, tableend, tabularbegin, tabularend, label, caption)
         texfile = open(path, "w")
-        texfile.write(tablebegin + ("\t\\centering\n" if self.centered else "")
+        texfile.write(tablebegin +
+                      ("\t\\centering\n" if self._centered else "")
                       + tabularbegin)
-        if self.border:
+        if self._border:
             texfile.write("\t\t\\hline\n")
-        if self._titlerows:
+        if self._title_rows:
             for line in self._latexTitleRows():
                 texfile.write("\t\t" + line)
-            if self.titlerowseperator == "single":
+            if self._title_row_seperator == "single":
                 texfile.write("\\hline")
                 texfile.write("\n")
-            elif self.titlerowseperator == "double":
+            elif self._title_row_seperator == "double":
                 texfile.write("\\hline")
                 texfile.write("\\hline")
                 texfile.write("\n")
 
         for line in self._latexRows():
             texfile.write("\t\t" + line)
-        if self.border:
+        if self._border:
             texfile.write("\t\t\\hline\n")
         texfile.write(tabularend + caption + tableend)
         texfile.close()
 
-    def save(self, tablepath, temp=False):
-        #TODO: If reset the tablepath when in TEMP dir
-        if not temp:
-            self._tablepath = tablepath
-            self._latexTable(self._tablepath)
-        self._latexTable(tablepath)
+    def save(self, savepath):
+        """
+        Saves the table ".tex" file in the
+        designated *savepath*
+
+        """
+        self._tablepath = savepath
+        self._latexTable(self._tablepath)
+        self._latexTable(savepath)
+
+    def _tempsave(self, savepath):
+        self._latexTable(savepath)
 
     def show(self):
+        """
+        Opens a GUI displaying a ".png" file representation of the table.
+        PyQt4 is needed to use this method.
+        """
         if not self._tablepath:
             conv = conversion.Converter(tableobj=self)
-            gui._show(conv.texToPng(), conv)
         else:
             conv = conversion.Converter(self._tablepath)
-            gui._show(conv.texToPng(), conv)
+        gui._show(conv.texToPng(), conv)
+
 
     def __repr__(self):
         return join(map(lambda row: row.display(), self._rows), sep="\n")

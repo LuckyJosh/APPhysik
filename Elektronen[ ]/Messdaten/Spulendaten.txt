@@ -1,0 +1,2 @@
+# Radius [m] # Windungszahl N
+0.282			20

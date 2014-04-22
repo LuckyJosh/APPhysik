@@ -11,6 +11,9 @@ import conversion
 from PyQt4 import QtGui
 
 
+
+
+
 class Previewer(QtGui.QWidget):
 
     def __init__(self, imgpath, obj):

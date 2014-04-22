@@ -1,0 +1,2 @@
+#Spannung U_B [V]	# Spulen Strom I_hor [A] # Inklinationswinkel [°]
+200					0.28						70

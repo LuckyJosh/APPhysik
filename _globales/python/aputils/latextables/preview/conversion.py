@@ -9,7 +9,7 @@ from string import join
 import tempfile
 import shutil
 import datetime
-from ..core import _ChDir
+from core import _ChDir
 
 class Converter:
 
@@ -51,7 +51,7 @@ class Converter:
                      self._tempfoldername + "\\" + self._id)
 
         if not self._tableobj is None:
-            self._tableobj.save(self._tablepath, temp=True)
+            self._tableobj._tempsave(self._tablepath)
 
         texfile = open(self._temppath + "\\" + self._tempfoldername +
                        "\\" + self._id + "\\" + "temp.tex", "w")

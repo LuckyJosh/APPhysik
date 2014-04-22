@@ -32,22 +32,22 @@ class Quantity:
 
 
 class ErrorEquation:
-    def __init__(f, symbol="", err_vars=None):
-        self.var_equation = 0
+    def __init__(self, f, name="", err_vars=None):
+        self.error_equation = 0
         self.latex_names = dict()
         self.err_vars = err_vars
         self.function = f
 
         if self.err_vars is None:
-            self.err_vars = function.free_symbols
+            self.err_vars = self.function.free_symbols
 
         for v in self.err_vars:
             err = Symbol('latex_std_' + v.name)
             self.error_equation += self.function.diff(v)**2 * err**2
             self.latex_names[err] = '\\sigma_{' + latex(v) + '}'
 
-        self.std = ('\\sigma_{' + symbol + '}=' +
-                    latex(sqrt(s), symbol_names=latex_names))
+        self.std = ('\\sigma_{' + name + '}=' +
+                    latex(sqrt(self.error_equation), symbol_names=self.latex_names))
 
     def show():
         pass

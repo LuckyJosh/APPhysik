@@ -1,0 +1,2 @@
+# Fehler Frequenz f_sz [Hz]
+0.01

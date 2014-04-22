@@ -1,0 +1,5 @@
+# Sägezahnfrequenz f_sz [Hz] # Faktor n
+19.96							3
+39.94							2
+79.84							1
+159.68							0.5
