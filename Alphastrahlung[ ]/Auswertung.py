@@ -58,10 +58,14 @@ p_I_all, ch_I_all, pulse_I_all = np.loadtxt("Messdaten/MessreiheI.txt", unpack=T
 p_I = np.delete(p_I_all, 3)
 ch_I = np.delete(ch_I_all, 3)
 pulse_I = np.delete(pulse_I_all, 3)
-
+p_I_all_err = unp.uarray(p_I_all, [10]*len(p_I_all))
+p_I_err = unp.uarray(p_I, [10]*len(p_I))
 
 #Berechnung der effektiven Längen
 x_eff = effectiveLength(p_I, 20)
+x_eff_err = effectiveLength(p_I_err, ufloat(20,1))
+x_eff_all_err = effectiveLength(p_I_all_err, ufloat(20,1))
+print("Fehler x_err:", len(x_eff_err), len(x_eff_all_err))
 #Berechnung der Zerfallsrate
 rate_I = pulse_I/120
 #Bestimmung der halben maximal Rate
@@ -71,18 +75,22 @@ energy_I_all = [channelToEnergy(ch, ch_I) for ch in ch_I_all]
 energy_I = [channelToEnergy(ch, ch_I) for ch in ch_I]
 
 # Tabelle der Messdaten
-T_I = Table(siunitx=True)
-T_I.layout(seperator="column", title_row_seperator="double", border="true")
-T_I.caption(r"Messwerte der Messung im Abstand von $20 \si{mm}$")
-T_I.label("Messwerte_I")
-T_I.addColumn([int(p) for p in p_I_all], title="Druck", symbol="p",
-              unit=r"\milli\bar")
-T_I.addColumn([int(ch) for ch in ch_I_all], title="Channel Maximum",
-              symbol="Ch_{max}")
-T_I.addColumn(energy_I_all, title="Energie Maximum", symbol="E_{max}",
-              unit=r"\mega\eV")
-T_I.addColumn([int(p) for p in pulse_I_all], title="Anzahl Pulse", symbol="N")
-T_I.show() if SHOW else T_I.save("Tabellen/Messwerte_I.tex")
+#T_I = Table(siunitx=True)
+#T_I.layout(seperator="column", title_row_seperator="double", border="true")
+#T_I.caption(r"Messwerte der Messung im Abstand von $20 \si{mm}$")
+#T_I.label("Messwerte_I")
+#T_I.addColumn([p for p in p_I_all_err], title="Druck", symbol="p",
+#              unit=r"\milli\bar")
+#T_I.addColumn([int(ch) for ch in ch_I_all], title="Channel Maximum",
+#              symbol="Ch_{max}")
+#T_I.addColumn(energy_I_all, title="Energie Maximum", symbol="E_{max}",
+#              unit=r"\mega\eV")
+#T_I.addColumn([int(p) for p in pulse_I_all], title="Anzahl Pulse", symbol="N")
+#T_I.show() if SHOW else T_I.save("Tabellen/Messwerte_I.tex")
+
+T_I_eff =Table(siunitx=True)
+T_I_eff.addColumn(x_eff_all_err, title="effektive Länge", symbol="x", unit=r"\milli\meter")
+T_I_eff.save("Tabellen/MesswerteI_extra.tex")
 
 
 #Berechnung der Fit-Parameter (gerade)
@@ -113,7 +121,7 @@ print("Schnittpunkt y:", rate_max_half_I, intercept_y)
 #Bestimmung der Energie, ausgehend von der mittleren Reichweite
 distance_avr_I = intercept_x
 #energy_I = distanceToEnergy(distance_avr_I)
-energy_I = distanceToEnergy(ufloat(distance_avr_I, 0.01))
+energy_I = distanceToEnergy(ufloat(distance_avr_I, 0.5))
 print("Energie der Alphateilchen:", energy_I)
 
 # Erstellen des Plots
@@ -125,7 +133,8 @@ plt.xlabel("Effektive Länge $x\ [\mathrm{mm}]$", fontsize=14, family='serif')
 plt.ylabel("Zerfallsrate $A\ [\mathrm{s^{-1}}]$", fontsize=14, family='serif')
 
 #Messwerte für Regression
-plt.plot(x_eff[0:-7], rate_I[0:-7], "rx", label="Messwerte")
+#plt.plot(x_eff[0:-7], rate_I[0:-7], "rx", label="Messwerte")
+plt.errorbar(x_eff[0:-7], rate_I[0:-7], xerr=stds(x_eff_err[0:-7]) ,fmt="rx", label="Messwerte")
 #Messwerte ohne Regression
 plt.plot(x_eff[-7:], rate_I[-7:], "kx")
 #Fit
@@ -152,32 +161,38 @@ plt.show() if SHOW else plt.savefig("Grafiken/MittlereReichweiteI.pdf")
 
 #Laden der Messdaten
 p_II, ch_II, pulse_II = np.loadtxt("Messdaten/MessreiheII.txt", unpack=True)
+p_II_err = unp.uarray(p_II, [10]*len(p_II))
 #Bestimmung der effektiven Länge
-x_eff_II = effectiveLength(p_I, 25)
+x_eff_II = effectiveLength(p_II, 25)
+x_eff_II_err = effectiveLength(p_II_err, ufloat(25,1))
+print("Fehler x_eff:", x_eff_II_err)
 #Bestimmung der Zerfallsrate
-rate_II = pulse_I/120
+rate_II = pulse_II/120
 #Bestimmung der halben maximal Rate
 rate_max_half_II = max(rate_II)/2
 # Berechnung der Energie der Channels
 energy_II = channelToEnergy(ch_II, ch_II)
 
 # Tabelle  der Messwerte
-T_II = Table(siunitx = True)
-T_II.layout(seperator="column", title_row_seperator="double", border="true")
-T_II.caption(r"Messwerte der Messung im Abstand von $25 \si{mm}$")
-T_II.label("Messwerte_II")
-T_II.addColumn([int(p) for p in p_II], title="Druck", symbol="p", unit=r"\milli\bar")
-T_II.addColumn([int(ch) for ch in ch_II], title="Channel Maximum",
-                symbol="Ch_{max}")
-T_II.addColumn(energy_II, title="Energie Maximum", symbol="E_{max}", unit=r"\mega\eV")
-T_II.addColumn([int(p) for p in pulse_II], title="Anzahl Pulse", symbol="N")
-T_II.show() if SHOW else T_II.save("Tabellen/Messwerte_II.tex")
+#T_II = Table(siunitx = True)
+#T_II.layout(seperator="column", title_row_seperator="double", border="true")
+#T_II.caption(r"Messwerte der Messung im Abstand von $25 \si{mm}$")
+#T_II.label("Messwerte_II")
+#T_II.addColumn([p for p in p_II_err], title="Druck", symbol="p", unit=r"\milli\bar")
+#T_II.addColumn([int(ch) for ch in ch_II], title="Channel Maximum",
+#                symbol="Ch_{max}")
+#T_II.addColumn(energy_II, title="Energie Maximum", symbol="E_{max}", unit=r"\mega\eV")
+#T_II.addColumn([int(p) for p in pulse_II], title="Anzahl Pulse", symbol="N")
+#T_II.show() if SHOW else T_II.save("Tabellen/Messwerte_II.tex")
+
+T_II_eff =Table(siunitx=True)
+T_II_eff.addColumn(x_eff_II_err, title="effektive Länge", symbol="x", unit=r"\milli\meter")
+T_II_eff.save("Tabellen/MesswerteII_extra.tex")
 
 
 
-
-
-popt, pcov = curve_fit(func, x_eff_II[0:-5], rate_II[0:-5])
+#popt, pcov = curve_fit(func, x_eff_II[0:-5], rate_II[0:-5])
+popt, pcov = curve_fit(func, x_eff_II[:], rate_II[:])
 errors = np.sqrt(np.diag(pcov))
 param_a_II = ufloat(popt[0], errors[0])
 param_b_II = ufloat(popt[1], errors[1])
@@ -202,20 +217,21 @@ print("Schnittpunkt y:", rate_max_half_II, intercept_y)
 #Bestimmung der Energie aus der mittleren Reichweite
 distance_avr_I = intercept_x
 energy_I = distanceToEnergy(distance_avr_I)
-energy_I = distanceToEnergy(ufloat(distance_avr_I, 0.01))
+energy_I = distanceToEnergy(ufloat(distance_avr_I, 0.5))
 print("Energie der Alphateilchen:", energy_I)
 
 #Erstellen des zweiten Plots
 plt.clf()
 plt.xlim(-5, 25)
-plt.ylim(0, 300)
+plt.ylim(0, 700)
 plt.grid()
 plt.xlabel("Effektive Länge $x\ [\mathrm{mm}]$", fontsize=14, family='serif')
 plt.ylabel("Zerfallsrate $A\ [\mathrm{s^{-1}}]$", fontsize=14, family='serif')
 #Messwerte mit Regression
-plt.plot(x_eff_II[0:-5], rate_II[0:-5], "rx", label="Messwerte")
+#plt.plot(x_eff_II[0:-5], rate_II[0:-5], "rx", label="Messwerte")
+plt.errorbar(x_eff_II[:], rate_II[:], xerr=stds(x_eff_II_err[:]),fmt="rx", label="Messwerte")
 #Messwerte ohne Regression
-plt.plot(x_eff_II[-5:], rate_II[-5:], "kx")
+#plt.plot(x_eff_II[-5:], rate_II[-5:], "kx")
 #Fit
 plt.plot(X, func(X, popt[0], popt[1]), label="Regressionsgerade", color="gray")
 #Halbe maximal Rate
@@ -234,7 +250,7 @@ plt.show() if SHOW else plt.savefig("Grafiken/MittlereReichweiteII.pdf")
 # Bestimmung der Energieänderung für II statt für I
 
 
-
+x_eff_III_err = effectiveLength(p_II_err, ufloat(25,1))
 def func_II(x, a, b):
     return - a * np.log(b * x)
 #popt, pcov = curve_fit(func_II, effectiveLength(p_II, 25)[1:],
@@ -257,14 +273,15 @@ plt.ylim(2.75, 4.2)
 
 #plt.plot(effectiveLength(p_II, 25), channelToEnergy(ch_II, ch_II), "rx",
 #         label="Messwerte")
-plt.plot(effectiveLength(p_II, 25)[:-7], channelToEnergy(ch_II, ch_II)[:-7],
-         "rx", label="Messwerte")
+plt.errorbar(effectiveLength(p_II, 25)[:-7], channelToEnergy(ch_II, ch_II)[:-7],
+        xerr=stds(x_eff_III_err)[:-7],
+         fmt="rx", label="Messwerte")
 plt.plot(effectiveLength(p_II, 25)[-7:], channelToEnergy(ch_II, ch_II)[-7:],
          "kx")
 #plt.plot(eff_length, func_II(eff_length, popt[0], popt[1]),
 #         label="Regressionskurve")
 plt.plot(eff_length, func(eff_length, popt[0], popt[1]),
-         label="Regressionsgerade")
+         label="Regressionsgerade", color="gray")
 plt.xlabel("Effektive Länge $x\ [\mathrm{mm}]$", fontsize=14, family='serif')
 plt.ylabel("maximal Energie $E_{max}\ [\mathrm{MeV}]$",
            fontsize=14, family='serif')
@@ -380,9 +397,11 @@ plt.show() if SHOW else plt.savefig("Grafiken/VergleichPoisson.pdf")
 
 #Erstellen der Gaussverteilung
 def gauss(x, mu, sig):
-    return 1/(sqrt(2*const.pi)*sig) * np.exp(- (x - mu)**2/(2 * sig**2))
-X_IV = np.arange(0, 140, 0.2)
+    return (1/(m.sqrt(2*const.pi)*sig) * (m.exp(- (x - mu)**2/(2 * sig**2))))
+
+X_IV = np.linspace(0, 140, num=700)
 gau = np.array([gauss(x, Pulse_ges.avr/10, Pulse_ges.std/10) for x in X_IV])
+Gau = gau*500
 
 plt.clf()
 
@@ -390,14 +409,19 @@ for j in range(len(ranges)):
     if not j == len(ranges) - 1 and not len(Lists[j]) == 0:
         Sum += len(Lists[j])
         rect = plt.bar(ranges[j], len(Lists[j]),
-                       width=10, color="red", alpha=0.7)#, label="Messwerte")
+                       width=10, color="red", alpha=0.7)  # , label="Messwerte")
 else:
     plt.bar(1400, 0, color="red", alpha=0.7, label="Messwerte")
 
 
+
+
 #rect = plt.bar((X_IV*10)-10, gau*500, width=10, color="blue", alpha=0.6,
 #               label="Gaussverteilung")
-plt.plot((X_IV*10)-10, gau*500, "b-", label="Gaussverteilung")
+plt.plot((X_IV*10)-10, Gau, "b-")
+plt.bar(0, 0, color="blue", alpha=0.4, label="Gaussverteilung")
+plt.fill_between((X_IV*10)-10, Gau, color="blue", alpha=0.4)
+
 
 plt.xlim(350, 1300)
 plt.ylim(0, 18)
@@ -414,4 +438,4 @@ plt.show() if SHOW else plt.savefig("Grafiken/VergleichGauss.pdf")
 ## Fehler
 R = var("R_m")
 EnergieError = ErrorEquation((R/3.1)**(2/3), name="E")
-print(EnergieError.std)
+#print(EnergieError.std)
