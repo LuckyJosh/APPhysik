@@ -1,0 +1,11 @@
+Ausgleichsgerade I: m, b: 0.1733+/-0.0024 3.686+/-0.028
+Ausgleichsgerade II: m, b: 0.1082+/-0.0008 3.648+/-0.014
+Ausgleichsgerade III: m, b: 0.0930+/-0.0009 3.289+/-0.017
+Ausgleichsgerade IV: m, b: 0.0840+/-0.0011 3.716+/-0.022
+Ausgleichsgerade V: m, b: 0.0657+/-0.0012 3.668+/-0.025
+Ausgleichsgerade VI: m, b: 30.3+/-0.8 0.0067+/-0.0025
+0.5225 0.50825
+Theoriewert: 25.0 31.8181818182 32.7102803738
+Unterschied der Ergebnisse: 1.5+/-0.8 0.047+/-0.027 2.4+/-0.8 0.073+/-0.026
+Sinusspannung: 79.84 79.88 79.84 79.84
+Totale Intensität B: 6.10710585665e-06

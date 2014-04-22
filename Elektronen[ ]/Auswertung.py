@@ -15,17 +15,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.constants as const
 from scipy.optimize import curve_fit
-from sympy import *
+import sympy as sp
+import sys
 import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
-#if not "..\_globales\python" in sys.path:
-#	sys.path.append("..\_globales\python")
 
-from aputils.utils import Quantity, ErrorEquation
+from aputils.utils import Quantity, ErrorEquation, OutputFile
 from aputils.latextables.tables import Table
+
+# Erzeugen eines logs des stdout
+sys.stdout = OutputFile("Daten/log.txt")
 
 PRINT = True
 
@@ -302,16 +304,24 @@ plt.savefig("Grafiken/Messreihe_VI.pdf")
 L, P, d_1, d_2 = np.loadtxt("Messdaten/Kathodendaten.txt")
 
 # Berechnung des mittleren Abstandes
-#TODO: Vllt auch noch mit den Längen gewichten
+
 d = (d_1 + d_2)/2
 d_kplx = (d_1 + (d_1 + d_2)/2)/2
-
+d_kplx_kplx = ((d_1 * 0.55) + (((d_1 + d_2)/2) * 0.45))
+print(d_kplx, d_kplx_kplx)
 
 # Berechnung des theoretischen Vergleichswerts
 theo = L * P /(2 * d)
 theo_kplx = L * P /(2 * d_kplx)
-print("Theoriewert:", theo, theo_kplx)
+theo_kplx_kplx = L * P /(2 * d_kplx_kplx)
+print("Theoriewert:", theo, theo_kplx, theo_kplx_kplx)
 
+# Vergleich des Theoriewerts mit dem berechnten
+diff = np.abs(param_m_6 - theo_kplx)
+diff_rel = diff / theo_kplx
+diff_kplx = np.abs(param_m_6 - theo_kplx_kplx)
+diff_rel_kplx = diff_kplx / theo_kplx_kplx
+print("Unterschied der Ergebnisse:", diff, diff_rel, diff_kplx, diff_rel_kplx)
 
 
 #==============================================================================
@@ -319,7 +329,12 @@ print("Theoriewert:", theo, theo_kplx)
 # Oszilloskop
 #
 #==============================================================================
+#Laden der Frequenz und Verhältnisse
+f_sz, n = np.loadtxt("Messdaten/Oszilloskop.txt", unpack=True)
 
+#Berechnung der Sinusfrequenz
+f_sin = f_sz * n
+print("Sinusspannung:", f_sin[0], f_sin[1], f_sin[2], f_sin[3])
 
 
 #==============================================================================
@@ -328,6 +343,14 @@ print("Theoriewert:", theo, theo_kplx)
 #
 #==============================================================================
 
+# Laden der Spulendaten
+R_sp, N_sp = np.loadtxt("Messdaten/Spulendaten.txt")
+
+
+# Berechnung des Magnetfeldes
+def magenetfeld(I):
+    global R_sp, N_sp
+    return const.mu_0 * (8/m.sqrt(125)) * (N_sp * I/R_sp)
 
 
 #==============================================================================
@@ -335,6 +358,24 @@ print("Theoriewert:", theo, theo_kplx)
 # Erdmagnetfeld
 #
 #==============================================================================
+
+# Laden der Spannung, Stroms, Winkel
+U_B_sp, I_hor, phi = np.loadtxt("Messdaten/Erdmagnetfeld.txt", unpack=True)
+
+# Berechnung des horizontalen Magnetfelds
+B_hor = magenetfeld(I_hor)
+
+# Berechnung des Totalen Magnetfeldes
+B_tot = B_hor * m.cos(np.deg2rad(70))
+
+print("Totale Intensität B:", B_tot)
+
+
+
+
+
+
+
 
 
 ## Print Funktionen
