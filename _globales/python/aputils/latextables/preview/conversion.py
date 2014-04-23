@@ -11,6 +11,9 @@ import shutil
 import datetime
 from core import _ChDir
 
+
+
+
 class Converter:
 
     def __init__(self, tablepath=None, tableobj=None):
@@ -65,8 +68,8 @@ class Converter:
            converting it to the png file"""
         cdir = _ChDir(self._temppath + "\\" +
                       self._tempfoldername + "\\" + self._id)
-        os.system("latex {}".format("temp.tex"))
-        os.system("dvipng -T tight -D 240 -o temp.png {}".format("temp"))
+        os.system("latex {} > NUL".format("temp.tex"))
+        os.system("dvipng -T tight -D 240 -o temp.png {} > NUL".format("temp"))
         del cdir
 
     def deleteTemp(self):

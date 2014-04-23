@@ -77,6 +77,23 @@ d_err = 0.2 * (const.inch/4) * 1e02  # cm
 # Berechnung der fehlerbehafteten Größen
 D_err = unp.uarray(D, [d_err]*len(D))
 
+##Erstellen der Tabelle der Messwerte
+#T_E_1 = Table(siunitx=True)
+#T_E_1.caption("Messdaten zur Bestimmung des Zusammenhangs zwischen $U_d$ und $D$")
+#T_E_1.label("Auswertung_Messdaten_I")
+#T_E_1.layout(seperator="column", border=True)
+#T_E_1.addColumn(U_B_err)
+##T_E_1.addColumn(U_D_1_err, title="1", symbol="")
+##T_E_1.addColumn(U_D_2_err, title="2", symbol="")
+##T_E_1.addColumn(U_D_3_err, title="3", symbol="")
+##T_E_1.addColumn(np.concatenate((U_D_4_err, [0])), title="4", symbol="")
+##T_E_1.addColumn(np.concatenate((U_D_5_err, [0,0])), title="5", symbol="")
+##T_E_1.addColumn(D_err, title="Verschiebung", symbol="D", unit=r"\centi\meter")
+##T_E_1.save("Tabellen/Messwerte_I.tex")
+##T_E_1.show()
+#T_E_1.save("Tabellen/Messwerte_I_Ub.tex")
+
+
 # Erstellen des Plots zur Bestimmung der Empfindlichkeit
 
 # Definition einer Geraden
@@ -85,7 +102,8 @@ def gerade(x, m, b):
 
 
 #==============================================================================
-# Messreihe I
+class EMessreiheI:
+    pass
 #==============================================================================
 
 ## Berechnung der Ausgleichsgerade
@@ -120,7 +138,8 @@ plt.savefig("Grafiken/EFeld_Messreihe_I.pdf")
 plt.clf()
 
 #==============================================================================
-# Messreihe II
+class EMessreiheII:
+    pass
 #==============================================================================
 
 ## Berechnung der Ausgleichsgerade
@@ -154,8 +173,9 @@ plt.tight_layout()
 plt.savefig("Grafiken/EFeld_Messreihe_II.pdf")
 plt.clf()
 
-#=============================================================================
-#  Messreihe III
+#==============================================================================
+class EMessreiheIII:
+    pass
 #==============================================================================
 
 ## Berechnung der Ausgleichsgerade
@@ -190,7 +210,8 @@ plt.savefig("Grafiken/EFeld_Messreihe_III.pdf")
 plt.clf()
 
 #==============================================================================
-#  Messreihe IV
+class EMessreiheIV:
+    pass
 #==============================================================================
 
 ## Berechnung der Ausgleichsgerade
@@ -226,7 +247,8 @@ plt.savefig("Grafiken/EFeld_Messreihe_IV.pdf")
 plt.clf()
 
 #==============================================================================
-#  Messreihe V
+class EMessreiheV:
+    pass
 #==============================================================================
 
 ## Berechnung der Ausgleichsgerade
@@ -266,7 +288,29 @@ plt.clf()
 Empf_err = np.array([param_m_1, param_m_2,
                      param_m_3, param_m_4,
                      param_m_5])
+## Speichen der Abschnitte
+param_b_err = np.array([param_b_1, param_b_2,
+                        param_b_3, param_b_4,
+                        param_b_5])
 
+# Speichern der Fitparamter in Tabelle
+T_params_E = Table(siunitx=True)
+T_params_E.label("Auswertung_Parameter_E")
+T_params_E.caption("Fit-Parameter der Daten aus den fünf Messreihen")
+T_params_E.layout(seperator="column", title_row_seperator="double",
+                  border=True)
+T_params_E.addColumn(Empf_err, title="Steigung",
+                     symbol="m", unit=r"\meter\per\volt")
+T_params_E.addColumn(param_b_err, title="y-Achsenabschnitt",
+                     symbol="b", unit=r"\meter")
+#T_params_E.show()
+#T_params_E.save("Tabellen/Parameter_E.tex")
+
+
+#==============================================================================
+class EMessreiheVI:
+    pass
+#==============================================================================
 ## Berechnung der Regressionsgraden
 popt_6, pcov_6 = curve_fit(gerade, noms(1/U_B_err), noms(Empf_err),
                            sigma=stds(Empf_err))
@@ -290,14 +334,13 @@ plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x, _:
     float(x * 1e3)))
 plt.xlabel(r"Reziproke Beschleunigungsspannung $U_{B}^{-1} \ [\mathrm{mV^{-1}}]$",
            fontsize=14, family="serif")
-plt.ylabel(r"Empfindlichkeit $\frac{D}{U_{d}} \ [\mathrm{\frac{m}{V}}]$",
+plt.ylabel(r"Empfindlichkeit $\frac{D}{U_{d}} \ [\mathrm{\frac{cm}{V}}]$",
            fontsize=14, family="serif")
 plt.legend(loc="best")
 plt.tight_layout()
 #plt.show()
 plt.savefig("Grafiken/Messreihe_VI.pdf")
-
-
+plt.clf()
 
 
 # Laden der Kathodenstrahlröhren Daten
@@ -348,9 +391,239 @@ R_sp, N_sp = np.loadtxt("Messdaten/Spulendaten.txt")
 
 
 # Berechnung des Magnetfeldes
-def magenetfeld(I):
+def magnetfeld(I):
     global R_sp, N_sp
     return const.mu_0 * (8/m.sqrt(125)) * (N_sp * I/R_sp)
+
+# Laden der Ablenkströme
+I_D_1, I_D_2, I_D_3, I_D_4 = np.loadtxt("Messdaten/Ablenkstrom.txt",
+                                        unpack=True)
+
+I_D_2 = np.delete(I_D_2, (np.where(I_D_2 == -100)[0]))
+I_D_3 = np.delete(I_D_3, (np.where(I_D_3 == -100)[0]))
+I_D_4 = np.delete(I_D_4, (np.where(I_D_4 == -100)[0]))
+
+
+# Laden des Stromfehlers
+i_d_err = np.loadtxt("Messdaten/Fehler_Ablenkstrom.txt")
+
+# Erstellen der fehlerbehafteten Größe
+I_D_1_err = unp.uarray(I_D_1, [i_d_err]*len(I_D_1))
+I_D_2_err = unp.uarray(I_D_2, [i_d_err]*len(I_D_2))
+I_D_3_err = unp.uarray(I_D_3, [i_d_err]*len(I_D_3))
+I_D_4_err = unp.uarray(I_D_4, [i_d_err]*len(I_D_4))
+
+# Berechnung der Ablenkmagnetfelder
+B_D_1_err = magnetfeld(I_D_1_err)
+B_D_2_err = magnetfeld(I_D_2_err)
+B_D_3_err = magnetfeld(I_D_3_err)
+B_D_4_err = magnetfeld(I_D_4_err)
+
+
+# Berechnung der Distanzen
+D = np.arange(0, 8, 1) * (const.inch/4) * 1e02  # cm
+
+#Fehler der Distanzen
+d_err = 0.2 * (const.inch/4) * 1e02  # cm
+
+# Berechnung der fehlerbehafteten Größen
+D_err = unp.uarray(D, [d_err]*len(D))
+
+
+# Bestimmung des Quotienten D/(L² + D²)
+Quot_err = D_err/(L**2 + D_err**2)
+
+# Erstellen des Plots
+
+
+#==============================================================================
+class MessreiheI:
+    pass
+#==============================================================================
+
+## Berechnung der Ausgleichsgerade
+popt_7, pcov_7 = curve_fit(gerade, noms(B_D_1_err), noms(Quot_err),
+                           sigma=stds(B_D_1_err))
+error_7 = np.sqrt(np.diag(pcov_7))
+param_m_7 = ufloat(popt_7[0], error_7[0])
+param_b_7 = ufloat(popt_7[1], error_7[1])
+
+print("Ausgleichsgerade VII:", param_m_7, param_b_7)
+
+
+## Plot der Messwerte
+plt.errorbar(noms(B_D_1_err), noms(Quot_err),
+             xerr=stds(B_D_1_err), yerr=stds(Quot_err),
+             fmt="rx", label="Messwerte")
+
+## Plot der Regressionsgerade
+X = np.linspace(-2e-05, 16e-05, 100)
+#X = np.linspace(-2e-03, 16e-03, 100)
+plt.plot(X, gerade(X, *popt_7), color="gray", label="Regressionsgerade")
+
+## Ploteinstellungen
+plt.grid()
+plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                    (lambda x, _: float(x * 1e02)))  # 1/m
+plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                    (lambda x, _: float(x * 1e03)))  # µm
+#plt.xlim(-40, 25)
+#plt.ylim(-1, 6)
+plt.ylabel(r"$\frac{D}{L^{2} + D^{2}} \ [\mathrm{m^{-1}}]$",
+           fontsize=14, family='serif')
+plt.xlabel(r"Magnetfeld $B \ [\mathrm{mT}]$",
+           fontsize=14, family='serif')
+plt.legend(loc="best")
+plt.tight_layout()
+#plt.show()
+plt.savefig("Grafiken/BFeld_Messreihe_I.pdf")
+plt.clf()
+
+#==============================================================================
+class MessreiheII:
+    pass
+#==============================================================================
+
+## Berechnung der Ausgleichsgerade
+popt_8, pcov_8 = curve_fit(gerade, noms(B_D_2_err), noms(Quot_err[:-1]),
+                           sigma=stds(Quot_err[:-1]))
+error_8 = np.sqrt(np.diag(pcov_8))
+param_m_8 = ufloat(popt_8[0], error_8[0])
+param_b_8 = ufloat(popt_8[1], error_8[1])
+
+print("Ausgleichsgerade VIII:", param_m_8, param_b_8)
+
+## Plot der Messwerte
+plt.errorbar(noms(B_D_2_err), noms(Quot_err[:-1]),
+             xerr=stds(B_D_2_err), yerr=stds(Quot_err[:-1]),
+             fmt="rx", label="Messwerte")
+
+## Plot der Regressionsgerade
+X = np.linspace(-2e-05, 16e-05, 100)
+plt.plot(X, gerade(X, *popt_8), color="gray", label="Regressionsgerade")
+
+## Ploteinstellungen
+plt.grid()
+plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                    (lambda x, _: float(x * 1e02)))  # 1/m
+plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                    (lambda x, _: float(x * 1e03)))  # µm
+#plt.xlim(-40, 25)
+#plt.ylim(-1, 6)
+plt.ylabel(r"$\frac{D}{L^{2} + D^{2}} \ [\mathrm{m^{-1}}]$",
+           fontsize=14, family='serif')
+plt.xlabel(r"Magnetfeld $B \ [\mathrm{mT}]$",
+           fontsize=14, family='serif')
+plt.legend(loc="best")
+plt.tight_layout()
+#plt.show()
+plt.savefig("Grafiken/BFeld_Messreihe_II.pdf")
+plt.clf()
+
+#==============================================================================
+class MessreiheIII:
+    pass
+#==============================================================================
+
+## Berechnung der Ausgleichsgerade
+popt_9, pcov_9 = curve_fit(gerade, noms(B_D_3_err), noms(Quot_err[:-2]),
+                           sigma=stds(Quot_err[:-2]))
+error_9 = np.sqrt(np.diag(pcov_9))
+param_m_9 = ufloat(popt_9[0], error_9[0])
+param_b_9 = ufloat(popt_9[1], error_9[1])
+
+print("Ausgleichsgerade IX:", param_m_9, param_b_9)
+
+## Plot der Messwerte
+plt.errorbar(noms(B_D_3_err), noms(Quot_err[:-2]),
+             xerr=stds(B_D_3_err), yerr=stds(Quot_err[:-2]),
+             fmt="rx", label="Messwerte")
+
+## Plot der Regressionsgerade
+X = np.linspace(-2e-05, 16e-05, 100)
+plt.plot(X, gerade(X, *popt_9), color="gray", label="Regressionsgerade")
+
+## Ploteinstellungen
+plt.grid()
+plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                    (lambda x, _: float(x * 1e02)))  # 1/m
+plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                    (lambda x, _: float(x * 1e03)))  # µm
+#plt.xlim(-40, 25)
+#plt.ylim(-1, 6)
+plt.ylabel(r"$\frac{D}{L^{2} + D^{2}} \ [\mathrm{m^{-1}}]$",
+           fontsize=14, family='serif')
+plt.xlabel(r"Magnetfeld $B \ [\mathrm{mT}]$",
+           fontsize=14, family='serif')
+plt.legend(loc="best")
+plt.tight_layout()
+#plt.show()
+plt.savefig("Grafiken/BFeld_Messreihe_III.pdf")
+plt.clf()
+
+#==============================================================================
+class MessreiheIV:
+    pass
+#==============================================================================
+
+## Berechnung der Ausgleichsgerade
+popt_10, pcov_10 = curve_fit(gerade, noms(B_D_4_err), noms(Quot_err[:-2]),
+                             sigma=stds(Quot_err[:-2]))
+error_10 = np.sqrt(np.diag(pcov_10))
+param_m_10 = ufloat(popt_10[0], error_10[0])
+param_b_10 = ufloat(popt_10[1], error_10[1])
+
+print("Ausgleichsgerade X:", param_m_10, param_b_10)
+
+## Plot der Messwerte
+plt.errorbar(noms(B_D_4_err), noms(Quot_err[:-2]),
+             xerr=stds(B_D_4_err), yerr=stds(Quot_err[:-2]),
+             fmt="rx", label="Messwerte")
+
+## Plot der Regressionsgerade
+X = np.linspace(-2e-05, 16e-05, 100)
+plt.plot(X, gerade(X, *popt_10), color="gray", label="Regressionsgerade")
+
+## Ploteinstellungen
+plt.grid()
+plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                    (lambda x, _: float(x * 1e02)))  # 1/m
+plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
+                                    (lambda x, _: float(x * 1e03)))  # µm
+#plt.xlim(-40, 25)
+#plt.ylim(-1, 6)
+plt.ylabel(r"$\frac{D}{L^{2} + D^{2}} \ [\mathrm{m^{-1}}]$",
+           fontsize=14, family='serif')
+plt.xlabel(r"Magnetfeld $B \ [\mathrm{mT}]$",
+           fontsize=14, family='serif')
+plt.legend(loc="best")
+plt.tight_layout()
+#plt.show()
+plt.savefig("Grafiken/BFeld_Messreihe_IV.pdf")
+plt.clf()
+
+
+# Laden der Beschleunigungsspannung
+U_B = np.loadtxt("Messdaten/Beschleunigungsspannung_B.txt", unpack=True)
+
+# Laden des Fehlers
+u_b_err = np.loadtxt("Messdaten/Fehler_Beschleunigungsspannung.txt")
+
+# Erstellen der fehlerbehafteten Größen
+U_B_err = unp.uarray(U_B, len(U_B)*[u_b_err])
+
+
+# Berechnung der spezifischen Ladung
+def spezLadung(m, UB):
+    return 8 * m**2 * UB
+
+Q_spez_1_err = spezLadung(param_m_7, U_B_err[0]) * 1e04
+Q_spez_2_err = spezLadung(param_m_8, U_B_err[1]) * 1e04
+Q_spez_3_err = spezLadung(param_m_9, U_B_err[2]) * 1e04
+Q_spez_4_err = spezLadung(param_m_10, U_B_err[3]) * 1e04
+
+print("Spezifische Ladung:", Q_spez_1_err, Q_spez_2_err,
+      Q_spez_3_err, Q_spez_4_err)
 
 
 #==============================================================================
@@ -363,7 +636,7 @@ def magenetfeld(I):
 U_B_sp, I_hor, phi = np.loadtxt("Messdaten/Erdmagnetfeld.txt", unpack=True)
 
 # Berechnung des horizontalen Magnetfelds
-B_hor = magenetfeld(I_hor)
+B_hor = magnetfeld(I_hor)
 
 # Berechnung des Totalen Magnetfeldes
 B_tot = B_hor * m.cos(np.deg2rad(70))
