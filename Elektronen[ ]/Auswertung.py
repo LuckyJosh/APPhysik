@@ -655,18 +655,7 @@ param_B_m_err = np.array([param_m_7, param_m_8,
 param_B_b_err = np.array([param_b_7, param_b_8,
                         param_b_9, param_b_10])
 
-# Speichern der Fitparamter in Tabelle
-T_params_B = Table(siunitx=True)
-T_params_B.label("Auswertung_Parameter_E")
-T_params_B.caption("Fit-Parameter der Daten aus den vier Messreihen")
-T_params_B.layout(seperator="column", title_row_seperator="double",
-                  border=True)
-T_params_B.addColumn(param_B_m_err, title="Steigung",
-                     symbol="m", unit=r"\meter\per\volt")
-T_params_B.addColumn(param_B_b_err, title="y-Achsenabschnitt",
-                     symbol="b", unit=r"\per\centi\meter")
-#T_params_B.show()
-T_params_B.save("Tabellen/Parameter_B.tex")
+
 
 
 # Laden der Beschleunigungsspannung
@@ -688,10 +677,24 @@ Q_spez_2_err = spezLadung(param_m_8, U_B_err[1]) * 1e04
 Q_spez_3_err = spezLadung(param_m_9, U_B_err[2]) * 1e04
 Q_spez_4_err = spezLadung(param_m_10, U_B_err[3]) * 1e04
 
+Q_spez_err = np.array([Q_spez_1_err, Q_spez_2_err, Q_spez_3_err, Q_spez_4_err])
 print("Spezifische Ladung:", Q_spez_1_err, Q_spez_2_err,
       Q_spez_3_err, Q_spez_4_err)
 
-
+# Speichern der Fitparamter in Tabelle
+T_params_B = Table(siunitx=True)
+T_params_B.label("Auswertung_Parameter_E")
+T_params_B.caption("Fit-Parameter der Daten aus den vier Messreihen")
+T_params_B.layout(seperator="column", title_row_seperator="double",
+                  border=True)
+T_params_B.addColumn(param_B_m_err, title="Steigung",
+                     symbol=r"\gamma", unit=r"\meter\per\volt")
+T_params_B.addColumn(param_B_b_err, title="y-Achsenabschnitt",
+                     symbol=r"\delta", unit=r"\per\centi\meter")
+T_params_B.addColumn(Q_spez_err, title="spezifische Ladung",
+                     symbol=r"\frac{e_0}{m_e}", unit=r"\coulomb\per\kilo\gram")
+#T_params_B.show()
+#T_params_B.save("Tabellen/Parameter_B.tex")
 #==============================================================================
 #
 # Erdmagnetfeld
@@ -701,13 +704,18 @@ print("Spezifische Ladung:", Q_spez_1_err, Q_spez_2_err,
 # Laden der Spannung, Stroms, Winkel
 U_B_sp, I_hor, phi = np.loadtxt("Messdaten/Erdmagnetfeld.txt", unpack=True)
 
+# Fehlerbehaftete Größe
+I_hor_err = ufloat(I_hor, i_d_err)
+
 # Berechnung des horizontalen Magnetfelds
-B_hor = magnetfeld(I_hor)
+B_hor_err = magnetfeld(I_hor_err)
 
 # Berechnung des Totalen Magnetfeldes
-B_tot = B_hor * m.cos(np.deg2rad(70))
+B_tot_err = B_hor_err / m.cos(np.deg2rad(phi))
 
-print("Totale Intensität B:", B_tot)
+print("Horizontaler Strom I:", I_hor_err)
+print("Horizontal Intensität B:", B_hor_err)
+print("Totale Intensität B:", B_tot_err)
 
 
 

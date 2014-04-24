@@ -13,4 +13,6 @@ Ausgleichsgerade VIII: 85.3+/-1.1 0.00011+/-0.00010
 Ausgleichsgerade IX: 80.0+/-0.8 (2+/-6)e-05
 Ausgleichsgerade X: 78.8+/-1.7 0.00009+/-0.00014
 Spezifische Ladung: (1.77+/-0.05)e+11 (1.75+/-0.05)e+11 (1.79+/-0.04)e+11 (1.98+/-0.09)e+11
-Totale Intensität B: 6.10710585665e-06
+Horizontaler Strom I: 0.280+/-0.010
+Horizontal Intensität B: (1.79+/-0.06)e-05
+Totale Intensität B: (5.22+/-0.19)e-05
