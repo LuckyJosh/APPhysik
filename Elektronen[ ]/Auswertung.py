@@ -413,6 +413,12 @@ def magnetfeld(I):
     global R_sp, N_sp
     return const.mu_0 * (8/m.sqrt(125)) * (N_sp * I/R_sp)
 
+# Fehler des Magnetfeldes
+M, N, I, R = sp.var("M N I R")
+func_B = M * 8/sp.sqrt(125) * N * I/R
+error_B = ErrorEquation(func_B, name="B_d", err_vars=[I])
+print("B Fehler:", error_B.std)
+
 # Laden der Ablenkströme
 I_D_1, I_D_2, I_D_3, I_D_4 = np.loadtxt("Messdaten/Ablenkstrom.txt",
                                         unpack=True)
@@ -671,6 +677,13 @@ U_B_err = unp.uarray(U_B, len(U_B)*[u_b_err])
 # Berechnung der spezifischen Ladung
 def spezLadung(m, UB):
     return 8 * m**2 * UB
+
+# Fehlergleichung
+U = sp.var("U_b")
+func_Q = 8 * M**2 * U
+error_Q = ErrorEquation(func_Q)
+print("Fehler spez. Ladung:", error_Q.std)
+
 
 Q_spez_1_err = spezLadung(param_m_7, U_B_err[0]) * 1e04
 Q_spez_2_err = spezLadung(param_m_8, U_B_err[1]) * 1e04

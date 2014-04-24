@@ -1,0 +1,25 @@
+\renewcommand{\theerrorEquation}{\Roman{errorEquation}}
+
+In diesem Abschnitt sind die zur Berechnung der Fehler in \cref{sec:Auswertung} 
+verwendeten Fehlergleichungen aufgelistet, die mittels der Gaußschen Fehlerfortpflanzung
+berechnet wurden.\\
+
+Den Fehler der berechneten Sinusfrequenz $f_{sin}$ erhält man vereinfacht durch:
+\begin{errorEquation}
+	\sigma_{f_{sin}} = n \cdot \sigma_{f_{sz}}
+\end{errorEquation}
+
+Der Fehler der magnetischen Flussdichte $B_{d}$ berechnet sich durch die Gleichung:
+\begin{errorEquation}
+	\sigma_{B_d}=\frac{8}{\sqrt{125}} \frac{\mu_{0} N}{R} \sigma_{I}
+\end{errorEquation}
+
+Der Fehler der spezifischen Ladung $e_{spez} = \frac{e_{0}}{m_{e}}$ ergibt sich aus:
+\begin{errorEquation}
+	\sigma_{e_{spez}}= 8\sqrt{\gamma^{4} \sigma_{U_{b}}^{2} + 4 \gamma^{2} U_{b}^{2} \sigma_{M}^{2}}
+\end{errorEquation}
+
+Den Fehler des totalen Magnetfelds $B_{total}$ der Erde wurde bestimmt durch:
+\begin{errorEquation}
+	\sigma_{B_{total}} = \frac{\sigma_{B_{hor}}}{\Cos{\varphi}}
+\end{errorEquation}
