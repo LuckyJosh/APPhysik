@@ -62,14 +62,14 @@
 		
 		Die durch Regression mit dem  Ansatz
 		\begin{empheq}{equation}
-		e(U_{b}^{-1}) = \frac{c}{U_{b}} + d,
+		e(U_{b}^{-1}) = \frac{\alpha}{U_{b}} + \beta ,
 		\end{empheq} 		
 		erhält man die Parameter
 		\addtocounter{equation}{-1}
 		\begin{subequations}
 			\begin{empheq}{align} 
-				c &= \SI{30.3(8)}{\centi\meter}\\ 
-				d &= \SI{0.006(3)}{\centi\meter\per\volt}.
+				\alpha &= \SI{30.3(8)}{\centi\meter}\\ 
+				\beta &= \SI{0.006(3)}{\centi\meter\per\volt}.
 			\end{empheq}
 		\end{subequations}
 		
@@ -89,16 +89,64 @@
 		Aus den genannten Größen berechnet sich die theoretische Steigung der 
 		Geraden in \cref{fig:Auswertung_Messdaten_I_VI} zu
 		\begin{empheq}{equation} 
-			c_{theo} = \SI{32.71}{\centi\meter}.
+			\alpha_{theo} = \SI{32.71}{\centi\meter}.
 		\end{empheq}	
 		\begin{figure}[!h]
 			\centering
 			\includegraphics[scale=0.7]{Grafiken/Bauplan.PNG}
-			\caption{Bauplan der x-Ablenkung}\label{fig:Auswertung_Bauplan}
+			\caption{Bauplan der x-Ablenkung, bearbeitet aus \cite{V501}}\label{fig:Auswertung_Bauplan}
 		\end{figure}
 		
 	\subsubsection{Stehende Sinuswellen am rudimentären Oszilloskop}
 
+		Die zur Erzeugung eingestellten Sägezahn-Frequenzen $f_{sz}$ sind
+		mit den Verhältnissen $n$ und der aus diesen berechneten Sinus-Frequenz
+		$f_{sin}$ in \cref{tab:Auswertung_Oszilloskop} eingetragen.
 		
-
+		\input{Tabellen/Oszilloskop.tex} 
+		
 \subsection{Auswertung des Versuchs Elektronen im magnetischen Feld}
+
+	\subsubsection{Ablenkung von Elektronen im magnetischen Feld}
+	
+		Die in den vier Messreihen aufgenommenen Werte für Ablenkstrom $I_{d}$,
+		die daraus resultierende Verschiebung $D$ und die und die jeweilige 
+		Beschleunigungsspannung $U_{b}$ befinden sich in 
+		\cref{tab:Auswertung_Messdaten_II} und das von dem Strom $I_{d}$ 
+		erzeugte und mit \cref{eq:Theorie_Magnetfeld} berechnete Magnetfeld $B_{d}$ in \cref{tab:Auswertung_Messdaten_II_B}.
+		
+		\input{Tabellen/Messwerte_II.tex}
+		\input{Tabellen/Messwerte_II_B.tex}
+		
+		In den \crefrange{fig:Auswertung_Messdaten_II_I}{fig:Auswertung_Messdaten_II_IV} 
+		ist der Quotient $D'=\frac{D}{D^{2} + L^{2}}$ mit der Länge der Kathodenstrahlröhre 
+		$L = \SI{17.5}{\centi\meter}$ und der gemessenen Verschiebung $D$ gegen die
+		jeweilige Magnetfeldstärke $B_{d}$ aufgetragen.
+		Die Regressionsparameter der linearen Regression mit dem Ansatz
+		\begin{empheq}{equation}
+			D'(B_{d}) = \gamma \cdot B_{d} + \delta,
+		\end{empheq} 
+		befinden sich in \cref{tab:Auswertung_Parameter_B}.
+		
+		\input{Tabellen/Parameter_B.tex}
+		
+		\begin{figure}[!h]
+				\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_I.pdf}
+				\caption{Grafische Darstellung der ersten Messreihe}\label{fig:Auswertung_Messdaten_II_I}
+		\end{figure}
+		\begin{figure}[!h]
+				\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_II.pdf}
+				\caption{Grafische Darstellung der zweiten Messreihe}\label{fig:Auswertung_Messdaten_II_II}
+		\end{figure}
+		\begin{figure}[!h]
+				\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_III.pdf}
+				\caption{Grafische Darstellung der dritten Messreihe}\label{fig:Auswertung_Messdaten_II_III}
+		\end{figure}
+		\begin{figure}[!h]
+				\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_IV.pdf}
+				\caption{Grafische Darstellung der vierten Messreihe}\label{fig:Auswertung_Messdaten_II_IV}
+		\end{figure}
+		
+		
+		
+		

@@ -375,10 +375,28 @@ print("Unterschied der Ergebnisse:", diff, diff_rel, diff_kplx, diff_rel_kplx)
 #Laden der Frequenz und Verhältnisse
 f_sz, n = np.loadtxt("Messdaten/Oszilloskop.txt", unpack=True)
 
-#Berechnung der Sinusfrequenz
-f_sin = f_sz * n
-print("Sinusspannung:", f_sin[0], f_sin[1], f_sin[2], f_sin[3])
+# Laden des Frequenzfehlers
+f_err = np.loadtxt("Messdaten/Fehler_Saegezahn.txt")
 
+# Berechnung der fehlerbehafteten Größe
+f_sz_err = unp.uarray(f_sz, [f_err]*len(f_sz))
+
+#Berechnung der Sinusfrequenz
+f_sin_err = f_sz_err * n
+print("Sinusspannung:", f_sin_err[0], f_sin_err[1], f_sin_err[2], f_sin_err[3])
+
+# Erstellen der Tabelle
+T_osz = Table(siunitx=True)
+T_osz.label("Auswertung_Oszilloskop")
+T_osz.caption("Frequenzen $f_{sz}$ und $f_{sin}$ für stehende Wellen")
+T_osz.layout(seperator="column", title_row_seperator="double", border=True)
+T_osz.addColumn(f_sz_err, title="Sägezahn-Frequenz",
+                symbol="f_{sz}", unit="\hertz")
+T_osz.addColumn(n, title="Verhältnis", symbol="n")
+T_osz.addColumn(f_sin_err, title="Sinus-Frequenz",
+                symbol="f_{sin}", unit="\hertz")
+#T_osz.save("Tabellen/Oszilloskop.tex")
+#T_osz.show()
 
 #==============================================================================
 #
@@ -433,6 +451,32 @@ D_err = unp.uarray(D, [d_err]*len(D))
 # Bestimmung des Quotienten D/(L² + D²)
 Quot_err = D_err/(L**2 + D_err**2)
 
+# Erstellen der Tabelle
+T_Mag = Table(siunitx=True)
+T_Mag.caption("Messdaten zur Bestimmung des Zusammenhangs zwischen $I_d$ und $D$")
+T_Mag.label("Auswertung_Messdaten_II")
+T_Mag.layout(seperator="column", border=True)
+T_Mag.addColumn(I_D_1_err, title="1", symbol="")
+T_Mag.addColumn(np.concatenate((I_D_2_err, [0])), title="2", symbol="")
+T_Mag.addColumn(np.concatenate((I_D_3_err, [0,0])), title="3", symbol="")
+T_Mag.addColumn(np.concatenate((I_D_4_err, [0,0])), title="4", symbol="")
+T_Mag.addColumn(D_err, title="Verschiebung", symbol="D", unit="\centi\meter")
+#T_Mag.show()
+#T_Mag.save("Tabellen/Messwerte_II.tex")
+T_Mag_2 = Table(siunitx=True)
+T_Mag_2.caption("Messdaten zur Bestimmung des Zusammenhangs zwischen $B_d$ und $D$")
+T_Mag_2.label("Auswertung_Messdaten_II_B")
+T_Mag_2.layout(seperator="column", border=True)
+T_Mag_2.addColumn(B_D_1_err, title="1", symbol="")
+T_Mag_2.addColumn(np.concatenate((B_D_2_err, [0])), title="2", symbol="")
+T_Mag_2.addColumn(np.concatenate((B_D_3_err, [0,0])), title="3", symbol="")
+T_Mag_2.addColumn(np.concatenate((B_D_4_err, [0,0])), title="4", symbol="")
+T_Mag_2.addColumn(D_err, title="Verschiebung", symbol="D", unit="\centi\meter")
+#T_Mag_2.show()
+#T_Mag_2.save("Tabellen/Messwerte_II_B.tex")
+
+
+
 # Erstellen des Plots
 
 
@@ -471,7 +515,7 @@ plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
 #plt.ylim(-1, 6)
 plt.ylabel(r"$\frac{D}{L^{2} + D^{2}} \ [\mathrm{m^{-1}}]$",
            fontsize=14, family='serif')
-plt.xlabel(r"Magnetfeld $B \ [\mathrm{mT}]$",
+plt.xlabel(r"Magnetfeld $B_d \ [\mathrm{mT}]$",
            fontsize=14, family='serif')
 plt.legend(loc="best")
 plt.tight_layout()
@@ -512,7 +556,7 @@ plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
 #plt.ylim(-1, 6)
 plt.ylabel(r"$\frac{D}{L^{2} + D^{2}} \ [\mathrm{m^{-1}}]$",
            fontsize=14, family='serif')
-plt.xlabel(r"Magnetfeld $B \ [\mathrm{mT}]$",
+plt.xlabel(r"Magnetfeld $B_d  \ [\mathrm{mT}]$",
            fontsize=14, family='serif')
 plt.legend(loc="best")
 plt.tight_layout()
@@ -553,7 +597,7 @@ plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
 #plt.ylim(-1, 6)
 plt.ylabel(r"$\frac{D}{L^{2} + D^{2}} \ [\mathrm{m^{-1}}]$",
            fontsize=14, family='serif')
-plt.xlabel(r"Magnetfeld $B \ [\mathrm{mT}]$",
+plt.xlabel(r"Magnetfeld $B_d  \ [\mathrm{mT}]$",
            fontsize=14, family='serif')
 plt.legend(loc="best")
 plt.tight_layout()
@@ -594,13 +638,35 @@ plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter
 #plt.ylim(-1, 6)
 plt.ylabel(r"$\frac{D}{L^{2} + D^{2}} \ [\mathrm{m^{-1}}]$",
            fontsize=14, family='serif')
-plt.xlabel(r"Magnetfeld $B \ [\mathrm{mT}]$",
+plt.xlabel(r"Magnetfeld $B_d  \ [\mathrm{mT}]$",
            fontsize=14, family='serif')
 plt.legend(loc="best")
 plt.tight_layout()
 #plt.show()
 plt.savefig("Grafiken/BFeld_Messreihe_IV.pdf")
 plt.clf()
+
+# Tabelle der Regeressionsparameter
+
+## Speichern der Empfindlichleiten
+param_B_m_err = np.array([param_m_7, param_m_8,
+                     param_m_9, param_m_10])
+## Speichen der Abschnitte
+param_B_b_err = np.array([param_b_7, param_b_8,
+                        param_b_9, param_b_10])
+
+# Speichern der Fitparamter in Tabelle
+T_params_B = Table(siunitx=True)
+T_params_B.label("Auswertung_Parameter_E")
+T_params_B.caption("Fit-Parameter der Daten aus den vier Messreihen")
+T_params_B.layout(seperator="column", title_row_seperator="double",
+                  border=True)
+T_params_B.addColumn(param_B_m_err, title="Steigung",
+                     symbol="m", unit=r"\meter\per\volt")
+T_params_B.addColumn(param_B_b_err, title="y-Achsenabschnitt",
+                     symbol="b", unit=r"\per\centi\meter")
+#T_params_B.show()
+T_params_B.save("Tabellen/Parameter_B.tex")
 
 
 # Laden der Beschleunigungsspannung

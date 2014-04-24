@@ -7,7 +7,7 @@ Ausgleichsgerade VI: m, b: 30.3+/-0.8 0.0067+/-0.0025
 0.5225 0.50825
 Theoriewert: 25.0 31.8181818182 32.7102803738
 Unterschied der Ergebnisse: 1.5+/-0.8 0.047+/-0.027 2.4+/-0.8 0.073+/-0.026
-Sinusspannung: 79.84 79.88 79.84 79.84
+Sinusspannung: 79.84+/-0.04 79.880+/-0.020 79.840+/-0.010 79.840+/-0.005
 Ausgleichsgerade VII: 94.1+/-1.0 0.00010+/-0.00009
 Ausgleichsgerade VIII: 85.3+/-1.1 0.00011+/-0.00010
 Ausgleichsgerade IX: 80.0+/-0.8 (2+/-6)e-05
