@@ -6,6 +6,7 @@ Ausgleichsgerade V: m, b: 0.0657+/-0.0012 3.668+/-0.025
 Ausgleichsgerade VI: m, b: 30.3+/-0.8 0.0067+/-0.0025
 0.5225 0.50825
 Theoriewert: 25.0 31.8181818182 32.7102803738
+Abweichung vom Theoriewert: 0.073+/-0.026
 Unterschied der Ergebnisse: 1.5+/-0.8 0.047+/-0.027 2.4+/-0.8 0.073+/-0.026
 Sinusspannung: 79.84+/-0.04 79.880+/-0.020 79.840+/-0.010 79.840+/-0.005
 B Fehler: \sigma_{B_d}=\frac{8 \sqrt{5}}{25} \sqrt{\frac{M^{2} N^{2}}{R^{2}} \sigma_{I}^{2}}
@@ -15,6 +16,10 @@ Ausgleichsgerade IX: 80.0+/-0.8 (2+/-6)e-05
 Ausgleichsgerade X: 78.8+/-1.7 0.00009+/-0.00014
 Fehler spez. Ladung: \sigma_{}=\sqrt{64 M^{4} \sigma_{U_{b}}^{2} + 256 M^{2} U_{b}^{2} \sigma_{M}^{2}}
 Spezifische Ladung: (1.77+/-0.05)e+11 (1.75+/-0.05)e+11 (1.79+/-0.04)e+11 (1.98+/-0.09)e+11
+Abweichung vom Lit-wert: [0.006027175879116612+/-0.029750410513696715
+ 0.0073432866073042755+/-0.03143272853572764
+ 0.018909361722653856+/-0.02364172375388433
+ 0.1139320009485939+/-0.0400085009282335]
 Horizontaler Strom I: 0.280+/-0.010
 Horizontal Intensität B: (1.79+/-0.06)e-05
 Totale Intensität B: (5.22+/-0.19)e-05

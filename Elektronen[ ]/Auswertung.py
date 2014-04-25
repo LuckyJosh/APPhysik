@@ -358,6 +358,8 @@ theo = L * P /(2 * d)
 theo_kplx = L * P /(2 * d_kplx)
 theo_kplx_kplx = L * P /(2 * d_kplx_kplx)
 print("Theoriewert:", theo, theo_kplx, theo_kplx_kplx)
+print("Abweichung vom Theoriewert:", np.abs(param_m_6 - theo_kplx_kplx)/theo_kplx_kplx)
+
 
 # Vergleich des Theoriewerts mit dem berechnten
 diff = np.abs(param_m_6 - theo_kplx)
@@ -693,6 +695,9 @@ Q_spez_4_err = spezLadung(param_m_10, U_B_err[3]) * 1e04
 Q_spez_err = np.array([Q_spez_1_err, Q_spez_2_err, Q_spez_3_err, Q_spez_4_err])
 print("Spezifische Ladung:", Q_spez_1_err, Q_spez_2_err,
       Q_spez_3_err, Q_spez_4_err)
+
+Q_spez_theo = 1.7588e11
+print("Abweichung vom Lit-wert:", np.abs(Q_spez_err - Q_spez_theo)/Q_spez_err)
 
 # Speichern der Fitparamter in Tabelle
 T_params_B = Table(siunitx=True)
