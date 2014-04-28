@@ -1,30 +1,73 @@
 \section{Theorie}
-Zunächst lässt sich die Entladung des RC-Kreises beschreiben durch:
-\begin{equation} 
-Q(t) = Q_0\cdot exp(-\frac{t}{RC})
+
+\subsection{Ablenkung des Strahls im elektrischen Feld}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Grafiken/V501(2)_Abb1.jpg}
+  \caption{Strahlablenkung in der Kathodenstrahlröhre}
+\end{figure}
+Bewegt sich ein Elektron im homogenen elektrischen Feld wirkt eine Kraft am Elektron. \\
+Diese Kraft ist betragsmäßig gleich dem Produkt von Feldstärke und
+Ladung:
+\begin{equation}
+  \label{eq:force}
+  |\vec{F}| = |e_0\vec{E}|
 \end{equation}
-Die Aufladung durch:
-\begin{equation} 
-Q(t) = C U_0 (1 - exp(-\frac{t}{RC}))
+
+Nach mehreren Umrechnungsschritten ($E = \frac{U_d}{d}$) gilt für die Ablenkgeschwindigkeit $v_{ab}$:
+\begin{equation}
+  v_{ab} = \frac{F\Delta t}{m_0} = \frac{e_0 U_d\Delta t}{d m_0}
 \end{equation}
-Beim Wechsel von Gleich- auf Wechselstrom wird eine Spannung mit der Frequenz $\omega$ angelegt:
-\begin{equation} 
-U(t) = U_0 cos(\omega t)
+mit $\Delta t =\frac{p}{v}$:
+\begin{equation}
+	v_{ab} = \frac{F\Delta t}{m_0} = \frac{e_0 U_d p}{d m_0 v}
 \end{equation}
-mit $\omega << \frac{1}{RC}$. \\
-Für die Amplitude gilt nun:
-\begin{equation} 
-A(\omega) = \frac{U_0}{\sqrt{1 + \omega ^2R^2C^2}}
+
+Die Position des Leuchtflecks lässt sich dabei beschreiben durch:
+
+\begin{equation}
+	\frac{D}{L} = tan(\theta) =  \frac{v_{ab}}{v}
 \end{equation}
-Wegen der gesteigerten Frequenz lässt nun die resultierende Phasenverschiebung bestimmen durch:
-\begin{equation} 
-\varphi = \frac{a}{b}\cdot 2\pi 
+Mit D:
+\begin{equation}
+	D = \frac{e_0\cdot U_d\cdot p\cdot L}{d\cdot m_0\cdot v^2}
 \end{equation}
-bzw.
-\begin{equation} 
-\varphi = \frac{a}{b}\cdot 360 
+
+
+\subsection{Ablenkung des Strahls im magnetischen Feld}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Grafiken/V501(2)_Abb2.jpg}
+  \caption{Skizze zur Ableitung einer Beziehung zwischen L, D und r}
+\end{figure}
+Befindet sich ein Elektron nun in einem magnetischen Feld, wirkt auf das Elektron die Lorentz-Kraft $\vec{F}_L$:
+
+\begin{equation}
+  \vec{F} = e_0 (\vec{v} \times \vec{B})
 \end{equation}
-Über die Theorie zur Integration des RC-Kreises lässt sich folgendes sagen:
-\begin{equation} 
-U_c(t) = \frac{1}{RC}\int_{0}^{t} U(t') dt'
+
+Für die Betrachtung entlang der Z-Achse gilt:
+
+\begin{equation}
+  F = e_0 v_0 B
 \end{equation}
+
+Wenn man nun die Lorentz- und Zentrifugal-Kraft gleichsetzt gilt für den Radius $r$:
+
+\begin{equation}
+  r = \frac{m_0v_0}{e_0B}
+\end{equation}
+
+Die Verschiebung des Leuchtflecks lässt sich auch Darstellen als:
+
+\begin{equation}
+  r = \frac{L^2 + D^2}{2D}
+\end{equation}
+
+Damit gilt:
+
+\begin{equation}
+  \frac{L^2 + D^2}{2D} = \frac{m_0v_0}{e_0B}
+\end{equation}
+
+Hiermit lässt sich nun die spezifische Ladung $\frac{m_0}{e_0}$ bestimmen.
