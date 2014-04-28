@@ -1,0 +1,30 @@
+\section{Theorie}
+Zunächst lässt sich die Entladung des RC-Kreises beschreiben durch:
+\begin{equation} 
+Q(t) = Q_0\cdot exp(-\frac{t}{RC})
+\end{equation}
+Die Aufladung durch:
+\begin{equation} 
+Q(t) = C U_0 (1 - exp(-\frac{t}{RC}))
+\end{equation}
+Beim Wechsel von Gleich- auf Wechselstrom wird eine Spannung mit der Frequenz $\omega$ angelegt:
+\begin{equation} 
+U(t) = U_0 cos(\omega t)
+\end{equation}
+mit $\omega << \frac{1}{RC}$. \\
+Für die Amplitude gilt nun:
+\begin{equation} 
+A(\omega) = \frac{U_0}{\sqrt{1 + \omega ^2R^2C^2}}
+\end{equation}
+Wegen der gesteigerten Frequenz lässt nun die resultierende Phasenverschiebung bestimmen durch:
+\begin{equation} 
+\varphi = \frac{a}{b}\cdot 2\pi 
+\end{equation}
+bzw.
+\begin{equation} 
+\varphi = \frac{a}{b}\cdot 360 
+\end{equation}
+Über die Theorie zur Integration des RC-Kreises lässt sich folgendes sagen:
+\begin{equation} 
+U_c(t) = \frac{1}{RC}\int_{0}^{t} U(t') dt'
+\end{equation}
