@@ -7,14 +7,16 @@
 	Die für die Fehlerrechnung verwendeten Fehlergleichungen befinden 
 	sich in \cref{sec:Fehlerrechnung} und sind mit römischen Ziffern nummeriert.
 
-	\subsubsection{Ablenkung von Elektronen in Abhängigkeit der Spannung}
+	\subsubsection{Ablenkung von Elektronen im elektrischen Feld}
 	
 		Die während den fünf Messdurchgängen aufgenommenen Werte für die
 		Ablenk- und Beschleunigungsspannung sowie die Verschiebung sind in \cref{tab:Auswertung_Messdaten_I} zu finden.
 				
 			\input{Tabellen/Messwerte_I.tex}   
 		
-		In den folgenden \crefrange{fig:Auswertung_Messdaten_I_I}{fig:Auswertung_Messdaten_I_V} sind die 
+		In den Abbildungen \ref{fig:Auswertung_Messdaten_I_I}, \ref{fig:Auswertung_Messdaten_I_II},
+		\ref{fig:Auswertung_Messdaten_I_III}, \ref{fig:Auswertung_Messdaten_I_IV} und
+		\ref{fig:Auswertung_Messdaten_I_V} sind die 
 		gemessenen Verschiebungen $D$ gegen die entsprechenden Ablenkspannungen $U_{d}$ aufgetragen.
 		Die mittels lineare Ausgleichsrechnung mit dem Ansatz 
 		\begin{empheq}{equation}
@@ -28,31 +30,13 @@
 		
 		\begin{figure}[!h]
 				\includegraphics[scale=0.7]{Grafiken/EFeld_Messreihe_I.pdf}
-				\caption{Grafische Darstellung der ersten Messreihe}\label{fig:Auswertung_Messdaten_I_I}
+				\caption{Grafische Darstellung der ersten Messreihe im E-Feld}\label{fig:Auswertung_Messdaten_I_I}
 		\end{figure}
 		
-		\begin{figure}[!h]
-				\includegraphics[scale=0.7]{Grafiken/EFeld_Messreihe_II.pdf}
-				\caption{Grafische Darstellung der zweiten Messreihe}\label{fig:Auswertung_Messdaten_I_II}
-		\end{figure}
 		
-		\begin{figure}[!h]
-				\includegraphics[scale=0.7]{Grafiken/EFeld_Messreihe_III.pdf}
-				\caption{Grafische Darstellung der dritten Messreihe}\label{fig:Auswertung_Messdaten_I_III}
-		\end{figure}
-		
-		\begin{figure}[!h]
-				\includegraphics[scale=0.7]{Grafiken/EFeld_Messreihe_IV.pdf}
-				\caption{Grafische Darstellung der vierten Messreihe}\label{fig:Auswertung_Messdaten_I_IV}
-		\end{figure}
-		
-		\begin{figure}[!h]
-				\includegraphics[scale=0.7]{Grafiken/EFeld_Messreihe_V.pdf}
-				\caption{Grafische Darstellung der fünften Messreihe}\label{fig:Auswertung_Messdaten_I_V}
-		\end{figure}
 		
 		Die Steigung dieser Graphen stellt die Empfindlichkeit $\frac{D}{U_{d}}$
-		der Apparatur dar, die in \cref{fig:Auswertung_} gegen die reziproke 
+		der Apparatur dar, die in \cref{fig:Auswertung_Messdaten_I_VI} gegen die reziproke 
 		Beschleunigungsspannung aus \cref{tab:Auswertung_Messdaten_I} aufgetragen ist.
 		
 		\begin{figure}[!h]
@@ -75,7 +59,7 @@
 		\end{subequations}
 		
 		Ein theoretischer Vergleichswert zu dem in \cref{fig:Auswertung_Messdaten_I_VI} 
-		dargestellten Zusammenhang erhält man mittels \cref{eq:Theorie_} und den
+		dargestellten Zusammenhang erhält man mittels \cref{eq:Theorie_D} und den
 		Angaben im Bauplan \cite{V501} der Kathodenstrahlröhre zu den Maßen
 		$L = \SI{17.5}{\centi\meter}$ und $p = \SI{1.9}{\centi\meter}$.
 		Da der Abstand der Platten nicht auf der ganzen Länge des Kondensators
@@ -120,7 +104,8 @@
 		\input{Tabellen/Messwerte_II.tex}
 		\input{Tabellen/Messwerte_II_B.tex}
 		
-		In den \crefrange{fig:Auswertung_Messdaten_II_I}{fig:Auswertung_Messdaten_II_IV} 
+		In den Abbildungen \ref{fig:Auswertung_Messdaten_II_I}, \ref{fig:Auswertung_Messdaten_II_II}
+		\ref{fig:Auswertung_Messdaten_II_III} und \ref{fig:Auswertung_Messdaten_II_IV}
 		ist der Quotient $D'=\frac{D}{D^{2} + L^{2}}$ mit der Länge der Kathodenstrahlröhre 
 		$L = \SI{17.5}{\centi\meter}$ und der gemessenen Verschiebung $D$ gegen die
 		jeweilige Magnetfeldstärke $B_{d}$ aufgetragen.
@@ -134,23 +119,12 @@
 		
 		\begin{figure}[!h]
 				\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_I.pdf}
-				\caption{Grafische Darstellung der ersten Messreihe}\label{fig:Auswertung_Messdaten_II_I}
-		\end{figure}
-		\begin{figure}[!h]
-				\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_II.pdf}
-				\caption{Grafische Darstellung der zweiten Messreihe}\label{fig:Auswertung_Messdaten_II_II}
-		\end{figure}
-		\begin{figure}[!h]
-				\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_III.pdf}
-				\caption{Grafische Darstellung der dritten Messreihe}\label{fig:Auswertung_Messdaten_II_III}
-		\end{figure}
-		\begin{figure}[!h]
-				\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_IV.pdf}
-				\caption{Grafische Darstellung der vierten Messreihe}\label{fig:Auswertung_Messdaten_II_IV}
+				\caption{Grafische Darstellung der ersten Messreihe im B-Feld}\label{fig:Auswertung_Messdaten_II_I}
 		\end{figure}
 		
 		
-		Die ebenfalls in \cref{tab:Auswertung_Parameter_B} angegebene spezifische Ladung des Elektrons lässt sich nun unter Umformung von \cref{eq:Theorie_} zu 
+		
+		Die ebenfalls in \cref{tab:Auswertung_Parameter_B} angegebene spezifische Ladung des Elektrons lässt sich nun unter Umformung von \cref{eq:Theorie_Qspez} zu 
 		\begin{empheq}{equation} 
 			\frac{e_{0}}{m_{e}} = 8 \cdot \gamma^{2} \cdot U_{b}  
 		\end{empheq}	
