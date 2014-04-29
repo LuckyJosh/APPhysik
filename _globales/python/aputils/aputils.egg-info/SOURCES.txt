@@ -1,0 +1,14 @@
+setup.py
+aputils/__init__.py
+aputils/utils.py
+aputils.egg-info/PKG-INFO
+aputils.egg-info/SOURCES.txt
+aputils.egg-info/dependency_links.txt
+aputils.egg-info/not-zip-safe
+aputils.egg-info/top_level.txt
+aputils/latextables/__init__.py
+aputils/latextables/tables.py
+aputils/latextables/preview/__init__.py
+aputils/latextables/preview/conversion.py
+aputils/latextables/preview/core.py
+aputils/latextables/preview/gui.py

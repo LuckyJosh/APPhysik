@@ -1,0 +1,2 @@
+# Brennweite f [cm]
+10.0 
