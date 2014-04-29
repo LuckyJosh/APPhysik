@@ -13,8 +13,6 @@ clean:
 	rm -f *.synctex	
 	rm -f Latex/*.synctex.gz
 	rm -f *.synctex.gz
-	rm -f Latex/*.bbl
-	rm -f *.bbl
 	rm -f Latex/*.bcf
 	rm -f *.bcf
 	rm -f Latex/*.blg
