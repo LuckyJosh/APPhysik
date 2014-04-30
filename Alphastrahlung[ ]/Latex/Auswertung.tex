@@ -14,7 +14,7 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 	\input{Tabellen/Messwerte_I.tex}
 	
 	In \cref{fig:Messdaten_I} sind diese Messwerte grafisch dargestellt, wobei die Gesamtzahl der gemessenen Pulse
-	durch Division mit der Messdauer $\Delta t = 120 \si{s}$ in die Zerfallsrate umgerechnet wurde. 
+	durch Division mit der Messdauer $\Delta t = \SI{120}{\second}$ in die Zerfallsrate umgerechnet wurde. 
 	Die effektive Länge, die Strecke die die Alphastrahlung relativ zu Atmosphärendruck,
 	zurück gelegt hat berechnet sich nach \cref{eq:effektive_laenge}.   
 	
@@ -35,8 +35,9 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 	\end{subequations}
 	
 	
-	Im folgenden Schritt wird eine zur x-Achse parallele Gerade auf halber Höhe des Maximalwerts,
-	der gemessenen Zerfallsraten, hier gestrichelt, eingezeichnet.\\
+	Im folgenden Schritt wird eine zur x-Achse parallele Gerade auf halber Höhe des 
+	Maximalwerts, $\frac{1}{2} A_{max} = \SI{143.86}{\mega\eV}$ 
+	der gemessenen Zerfallsraten, hier gestrichelt, bei  eingezeichnet.\\
 	 
 	Die zu bestimmende Reichweite $R_{m}$ lässt sich damit als x-Koordinate des Schnittpunktes dieser beiden Geraden 
 	ablesen. Die auf diese Weise ermittelte, mittlere Reichweite beträgt für diese Messdaten 
@@ -91,7 +92,8 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 	\end{subequations}
 
 	
-	Aus diesen Daten ergibt sich die mittlere Reichweite von 
+	Aus diesen Daten ergibt sich die mittlere Reichweite von und er halben Maximalzerfallsrate
+	$\frac{1}{2} A_{max} = \SI{321.62}{\mega\eV}$ 
 	\addtocounter{equation}{1}
 	\begin{empheq}{equation}
 		R_{m} = \SI{13.9(5)}{\milli\meter}.
@@ -115,7 +117,7 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 	\end{figure}
 
 
-	Durch  das Auftragen der maximal Energien $E_{max}$ aus \cref{tab:Messwerte_II} gegen die effektive Länge $x$,
+	Durch  das Auftragen der Maximalenergien $E_{max}$ aus \cref{tab:Messwerte_II} gegen die effektive Länge $x$,
 	in \cref{fig:Messdaten_II_Energie}, ist es möglich mit dem Regressionsansatz 
 
 	\begin{empheq}{equation}
@@ -132,7 +134,7 @@ Messdaten, Rechnungen und Ergebnissen gegeben.
 	zu bestimmen.\\
 	Durch Differentiation der auf diese Weise bestimmten Funktion $E(x)$ erhält man den gesuchten Energieverlust 
 	\begin{empheq}{equation}
-		-\od{E}{x} = \num{0.066(6)} \si{\mega\eV\per\milli\meter}.
+		-\od{E}{x} = \SI{0.066(6)}{\mega\eV\per\milli\meter}.
 	\end{empheq}	
 
 	\begin{figure}[!h]

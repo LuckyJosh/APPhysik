@@ -327,7 +327,7 @@ print("Mittelwert, Abweichung:",Pulse_ges.avr, Pulse_ges.std, Pulse_ges.avr_err)
 
 
 # Sortierung der Messergebnisse in N balken der Breite dN
-ranges = np.arange(500, 1400, 20)
+ranges = np.arange(min(pulse), max(pulse), 70)
 Lists = []
 #print(min(pulse), max(pulse), max(pulse) - min(pulse))
 for i in range(len(ranges)):
@@ -349,12 +349,12 @@ for j in range(len(ranges)):
     if not j == len(ranges) - 1 and not len(Lists[j]) == 0:
         Sum += len(Lists[j])
         rect = plt.bar(ranges[j], len(Lists[j]),
-                       width=20, color="red", alpha=0.7)
+                       width=70, color="red", alpha=0.7)
         #autolabel(rect)
 else:
     plt.bar(1400, 0, color="red", alpha=0.7, label="Messwerte")
     #plt.bar(Pulse_ges.avr, 6, width=5, color="blue", label="Mittelwert")
-    plt.ylim(0, 18)
+    plt.ylim(0, 50)
     plt.xlabel(r"Zerfallsrate $A \ [\mathrm{s^{-1}}] $",
                fontsize=14, family='serif')
     plt.ylabel(r"Häufigkeit $P\ [\mathrm{\%}] $",
@@ -368,7 +368,7 @@ print("Summe der Messungen:", Sum)
 
 #Erstellen des Plots Poisson & Messwerte
 # Erstellen einer Poissonverteilung
-X_III = np.arange(0, 140, 2)
+X_III = np.arange(0, 140, 7)
 poi = np.array([poisson(x, Pulse_ges.avr/10) * 100 for x in X_III])
 
 plt.clf()
@@ -377,12 +377,12 @@ for j in range(len(ranges)):
     if not j == len(ranges) - 1 and not len(Lists[j]) == 0:
         Sum += len(Lists[j])
         rect = plt.bar(ranges[j], len(Lists[j]),
-                       width=10, color="red", alpha=0.7)#, label="Messwerte")
+                       width=35, color="red", alpha=0.7)#, label="Messwerte")
 else:
     plt.bar(1400, 0, color="red", alpha=0.7, label="Messwerte")
 
 
-rect = plt.bar((X_III*10)-10, poi*3.5, width=10, color="blue", alpha=0.6,
+rect = plt.bar((X_III*10)-33.3, poi*9, width=35, color="blue", alpha=0.6,
                label="Poissonverteilung")
 plt.xlim(350, 1300)
 plt.xlabel(r"Zerfallsrate $A \ [\mathrm{s^{-1}}] $",
@@ -401,7 +401,7 @@ def gauss(x, mu, sig):
 
 X_IV = np.linspace(0, 140, num=700)
 gau = np.array([gauss(x, Pulse_ges.avr/10, Pulse_ges.std/10) for x in X_IV])
-Gau = gau*500
+Gau = gau*1500
 
 plt.clf()
 
@@ -409,7 +409,7 @@ for j in range(len(ranges)):
     if not j == len(ranges) - 1 and not len(Lists[j]) == 0:
         Sum += len(Lists[j])
         rect = plt.bar(ranges[j], len(Lists[j]),
-                       width=10, color="red", alpha=0.7)  # , label="Messwerte")
+                       width=35, color="red", alpha=0.7)  # , label="Messwerte")
 else:
     plt.bar(1400, 0, color="red", alpha=0.7, label="Messwerte")
 
@@ -418,13 +418,13 @@ else:
 
 #rect = plt.bar((X_IV*10)-10, gau*500, width=10, color="blue", alpha=0.6,
 #               label="Gaussverteilung")
-plt.plot((X_IV*10)-10, Gau, "b-")
+plt.plot((X_IV*10)-10, Gau, color = "blue", alpha=0.4)
 plt.bar(0, 0, color="blue", alpha=0.4, label="Gaussverteilung")
 plt.fill_between((X_IV*10)-10, Gau, color="blue", alpha=0.4)
 
 
 plt.xlim(350, 1300)
-plt.ylim(0, 18)
+plt.ylim(0, 50)
 plt.xlabel(r"Zerfallsrate $A \ [\mathrm{s^{-1}}] $",
            fontsize=14, family='serif')
 plt.ylabel(r"Häufigkeit $P\ [\%]$",
