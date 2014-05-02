@@ -70,6 +70,9 @@ g_I_err = dist(L_x_err, l_x_I_err)
 
 print("Bild-& GegenstandsweiteI:", g_I_err, b_I_err)
 print("Brennweiten:\n", umean(1/(1/g_I_err + 1/b_I_err)))
+print("Abbildungsgesetz:", g_I_err[1]/b_I_err[1], g_I_err[4]/b_I_err[4])
+print("Abbildungsgesetz:", ufloat(3, 0.1)/ufloat(2, 0.1),
+      ufloat(3, 0.1)/ufloat(1, 0.1))
 # Plot der Geraden durch b und g
 X = np.linspace(0, 70, 1000)
 
