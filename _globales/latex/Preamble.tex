@@ -184,6 +184,7 @@
 
 % Verbesserungen hervorheben
 \newcounter{errorEquation}
+\renewcommand{\theerrorEquation}{\Roman{errorEquation}}
 \newenvironment{errorEquation}{\refstepcounter{errorEquation}\equation}{\tag{\theerrorEquation}\endequation}
 
 \usepackage{colortbl}

@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.constants as const
 from scipy.optimize import curve_fit
-from sympy import *
+import sympy as sp
 import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
@@ -193,7 +193,7 @@ T_II.addColumn(b_II_err, title="Bildweite",
                symbol="b", unit="\centi\meter")
 
 #T_II.show()
-T_II.save("Tabellen/Messwerte_II.tex")
+#T_II.save("Tabellen/Messwerte_II.tex")
 
 #==============================================================================
 class Messung_III():
@@ -251,6 +251,14 @@ T_III.addColumn(e_III_err, title="Gesamtabstand",
 T_III.addColumn(f_III_err, title="Brennweite",
                 symbol="f", unit="\centi\meter")
 #T_III.save("Tabellen/Messwerte_III.tex")
+
+# Fehlergleichung
+err_e, err_d = sp.var("e d")
+err_func_f = (err_e**2 - err_d**2)/(4 * err_e)
+err_f = ErrorEquation(err_func_f, name="f")
+print(err_f.std)
+
+
 #==============================================================================
 class Messung_IV():
     pass
@@ -480,4 +488,11 @@ plt.plot(X, gerade(X, *popt_VI_g), color="gray", label="Regressionsgerade")
 plt.legend(loc="best")
 #plt.show()
 plt.savefig("Grafiken/Messwerte_Abbe2.pdf")
-## Print Funktionen
+
+
+
+# Fehlergleichung
+err_G, err_B = sp.var("G B")
+err_func_V = (err_B)/(err_G)
+err_V= ErrorEquation(err_func_V, name="V")
+print(err_V.std)
