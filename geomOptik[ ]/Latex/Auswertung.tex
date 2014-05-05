@@ -23,7 +23,8 @@ referenziert.
 	\end{figure}  
 	 
 	 Der Schnittpunkt\footnote{Tatsächlich schneiden sich die Geraden nicht in einem Punkt, der Wert
-	 des eingezeichneten Schnittpunktes ist der Mittelwert der Brennweiten, die mit der Linsengleichung berechnet
+	 des eingezeichneten Schnittpunktes ist der Mittelwert der Brennweiten, die mit der Linsengleichung
+	 \cref{eq:Theorie_Linsengln} berechnet
 	 wurden.} der Geraden liegt bei $(9.82|9.82)$ erhält man für die Brennweite der Linse
 	 \begin{empheq}{equation}
 		\label{val:Auswertung_Bekannt}
@@ -51,13 +52,13 @@ referenziert.
 	
 	\input{Tabellen/Messwerte_II} 
 	
-	In \cref{fig:Auswertung_UnbekannteLinse} sind die Werte aus \cref{tab:} und der gemittelte Schnittpunkt
+	In \cref{fig:Auswertung_UnbekannteLinse} sind die Werte aus \cref{tab:Auswertung_Messwerte_II} und der gemittelte Schnittpunkt
 	$(7.52|7.52)$ aufgetragen.
 	
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=.7]{Grafiken/Messwerte_Unbekannt.pdf}
-		\caption{Regression der gestrichenen Bildweite\label{fig:Auswertung_UnbekannteLinse}}
+		\caption{Regression der gestrichenen Bildweite \label{fig:Auswertung_UnbekannteLinse}}
 	\end{figure}  
 	
 	
@@ -76,7 +77,7 @@ referenziert.
 		die beiden Positionen der Linse $x_{L,1}$ und $x_{L,2}$ in \cref{tab:Auswertung_Messwerte_III} eingetragen. 
 		Aus diesen wurden, mit der festen Position des Gegenstands $x_{G} = \SI{129.0(1)}{\centi\meter}$,
 		Linsenabstand $d = \envert{x_{L,1} - x_{L,2}}$ und Gesamtabstand $e = \envert{x_{G}- x_{B}}$ 
-		berechnet. Mit \cref{eq:Theorie_} lässt sich aus diesen die Brennweite $f$ der Linse bestimmen.
+		berechnet. Mit \cref{eq:Theorie_Bessel} lässt sich aus diesen die Brennweite $f$ der Linse bestimmen.
 		
 		\input{Tabellen/Messwerte_III}
 		
@@ -128,7 +129,8 @@ referenziert.
 	
 	Die Werte für $g'$ bzw. $b'$ aus \cref{tab:Auswertung_Messwerte_VI} sind in
 	\cref{fig:Auswertung_AbbeG} bzw. \cref{fig:Auswertung_AbbeB}  gegen $(1 + V^{-1})$ bzw. $(1 + V)$ aufgetragen.
-	Durch lineare Regression beider Messwertepaare mit dem Ansatz
+	Durch lineare Regression, mittels der Pythonbibliothek \emph{SciPy} \cite{SciPy}, beider Messwertepaare 
+	mit dem Ansatz
 	\begin{empheq}{equation}
 		m(x) = f\cdot x + b
 	\end{empheq}
@@ -162,10 +164,10 @@ referenziert.
 	
 	
 	
-	Da die Steigungen dieser Geraden die Brennweite des Linsensystems sind ergibt sich
+	Da die Steigungen dieser Geraden jeweils die Brennweite des Linsensystems darstellt ergibt sich
 	diese im Mittel zu
  	\begin{empheq}{equation}
- 		\label{val:Auswertung Abbe}
+ 		\label{val:Auswertung_Abbe}
  		\mean{f} = \SI{25.5(7)}{\centi\meter}.
  	\end{empheq}
  	
