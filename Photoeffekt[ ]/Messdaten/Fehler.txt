@@ -1,0 +1,2 @@
+#Strom[pA]	 #Spannung [V]
+0.5 		 0.001

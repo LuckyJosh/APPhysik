@@ -1,0 +1,11 @@
+Regressionsparameter Orange: -9.5+/-0.5 3.59+/-0.05
+Nullstelle: 0.378657865787
+Regressionsparameter Gruen: -20.66+/-0.27 8.29+/-0.04
+Nullstelle: 0.401240124012
+Regressionsparameter Cyan: -3.51+/-0.11 2.473+/-0.021
+Nullstelle: 0.704870487049
+Regressionsparameter Violett1: -18.33+/-0.18 17.39+/-0.05
+Nullstelle: 0.948894889489
+Regressionsparameter Violett2: -8.54+/-0.13 9.37+/-0.04
+Nullstelle: 1.09735973597
+Regressionsparameter Violett2: (3.43+/-0.24)e-15 -1.43+/-0.15
