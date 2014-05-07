@@ -1,2 +1,2 @@
-# Röhrenlänge L[cm]  #Plattenlänge P # Plattenabstand d_1 # Plattenabstand d_2 
-17.5					1.9				0.38			0.95
+# RÃ¶hrenlÃ¤nge L[cm]  #PlattenlÃ¤nge P # Plattenabstand d_1 # Plattenabstand d_2
+14.5					1.9				0.38			0.95

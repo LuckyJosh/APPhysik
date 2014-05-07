@@ -6,11 +6,14 @@
 	durchgeführten Rechnungen und Ergebnissen gegeben.
 	Die für die Fehlerrechnung verwendeten Fehlergleichungen befinden 
 	sich in \cref{sec:Fehlerrechnung} und sind mit römischen Ziffern nummeriert.
+	
 
 	\subsubsection{Ablenkung von Elektronen im elektrischen Feld}
 	
 		Die während den fünf Messdurchgängen aufgenommenen Werte für die
 		Ablenk- und Beschleunigungsspannung sowie die Verschiebung sind in \cref{tab:Auswertung_Messdaten_I} zu finden.
+		Die Fehler der Messwerte, wurden dabei mit der kleinsten Skaleneinteilung des 
+		jeweiligen Messgerätes abgeschätzt.
 				
 			\input{Tabellen/Messwerte_I.tex}   
 		
@@ -33,7 +36,29 @@
 				\caption{Grafische Darstellung der ersten Messreihe im E-Feld}\label{fig:Auswertung_Messdaten_I_I}
 		\end{figure}
 		
+		\begin{figure}[!h]
+		\centering
+				\includegraphics[scale=0.7]{Grafiken/EFeld_Messreihe_II.pdf}
+				\caption{Grafische Darstellung der zweiten Messreihe im E-Feld}\label{fig:Auswertung_Messdaten_I_II}
+		\end{figure}
 		
+		\begin{figure}[!h]
+		\centering
+				\includegraphics[scale=0.7]{Grafiken/EFeld_Messreihe_III.pdf}
+				\caption{Grafische Darstellung der dritten Messreihe im E-Feld}\label{fig:Auswertung_Messdaten_I_III}
+		\end{figure}
+		
+		\begin{figure}[!h]
+		\centering
+				\includegraphics[scale=0.7]{Grafiken/EFeld_Messreihe_IV.pdf}
+				\caption{Grafische Darstellung der vierten Messreihe im E-Feld}\label{fig:Auswertung_Messdaten_I_IV}
+		\end{figure}
+		
+		\begin{figure}[!h]
+		\centering
+				\includegraphics[scale=0.7]{Grafiken/EFeld_Messreihe_V.pdf}
+				\caption{Grafische Darstellung der fünften Messreihe im E-Feld}\label{fig:Auswertung_Messdaten_I_V}
+		\end{figure}
 		
 		Die Steigung dieser Graphen stellt die Empfindlichkeit $\frac{D}{U_{d}}$
 		der Apparatur dar, die in \cref{fig:Auswertung_Messdaten_I_VI} gegen die reziproke 
@@ -61,29 +86,21 @@
 		Ein theoretischer Vergleichswert zu dem in \cref{fig:Auswertung_Messdaten_I_VI} 
 		dargestellten Zusammenhang erhält man mittels \cref{eq:Theorie_D} und den
 		Angaben im Bauplan \cite{V501} der Kathodenstrahlröhre zu den Maßen
-		$L = \SI{17.5}{\centi\meter}$ und $p = \SI{1.9}{\centi\meter}$.
-		Da der Abstand der Platten nicht auf der ganzen Länge des Kondensators
-		gleich ist, wird für die angestellte Berechnung der Mittelwert
-		\begin{empheq}{equation}
-			d = d_{1} \cdot \frac{p_{1}}{p} + 
-				\del{\frac{d_{1} + d_{2}}{2}}\cdot \frac{p_{2}}{p} = \SI{0.508}{cm} 
-		\end{empheq}
-		verwendet. Die für die Berechnung verwendeten Größen sind in 
-		\cref{fig:Auswertung_Bauplan} dargestellt. 
+		$L = \SI{14.5}{\centi\meter}$, $p = \SI{1.9}{\centi\meter}$ und $d = \SI{0.38}{\centi\meter}$.
 		
 		Aus den genannten Größen berechnet sich die theoretische Steigung der 
 		Geraden in \cref{fig:Auswertung_Messdaten_I_VI} zu
 		\begin{empheq}{equation}
 			\label{eq:Auswertung_Ergebnis_I_theo} 
-			\alpha_{theo} = \SI{32.71}{\centi\meter}.
+			\alpha_{theo} = \SI{36.25}{\centi\meter}.
 		\end{empheq}	
-		\begin{figure}[!h]
-			\centering
-			\includegraphics[scale=0.7]{Grafiken/Bauplan.PNG}
-			\caption{Bauplan der x-Ablenkung, bearbeitet aus \cite{V501}}\label{fig:Auswertung_Bauplan}
-		\end{figure}
+%		\begin{figure}[!h]
+%			\centering
+%			\includegraphics[scale=0.7]{Grafiken/Bauplan.PNG}
+%			\caption{Bauplan der x-Ablenkung, bearbeitet aus \cite{V501}}\label{fig:Auswertung_Bauplan}
+%		\end{figure}
 		
-	\subsubsection{Stehende Sinuswellen am rudimentären Oszilloskop}
+	\subsubsection{Stehende Sinuswellen am Oszilloskop}
 
 		Die zur Erzeugung eingestellten Sägezahn-Frequenzen $f_{sz}$ sind
 		mit den Verhältnissen $n$ und der aus diesen berechneten Sinus-Frequenz
@@ -91,15 +108,24 @@
 		
 		\input{Tabellen/Oszilloskop.tex} 
 		
+		Der Mittelwert der berechneten Frequenzen ergibt sich zu
+		\begin{empheq}{equation}
+			\label{eq:Auswertung_Frequenz} 
+			f = \SI{79.85(1)}{\centi\meter}.
+		\end{empheq} 
+		
+		
 \subsection{Auswertung des Versuchs Elektronen im magnetischen Feld}
 
 	\subsubsection{Ablenkung von Elektronen im magnetischen Feld}
 	
 		Die in den vier Messreihen aufgenommenen Werte für Ablenkstrom $I_{d}$,
-		die daraus resultierende Verschiebung $D$ und die und die jeweilige 
+		die daraus resultierende Verschiebung $D$ und die jeweilige 
 		Beschleunigungsspannung $U_{b}$ befinden sich in 
 		\cref{tab:Auswertung_Messdaten_II} und das von dem Strom $I_{d}$ 
-		erzeugte und mit \cref{eq:Theorie_Magnetfeld} berechnete Magnetfeld $B_{d}$ in \cref{tab:Auswertung_Messdaten_II_B}.
+		erzeugte und mit \cref{eq:Theorie_Magnetfeld} berechnete Magnetfeld $B_{d}$ in 
+		\cref{tab:Auswertung_Messdaten_II_B}. Auch hier wurde der Fehler des Stroms 
+		mit der kleinsten Skaleneinheit des Messgerätes abgeschätzt.
 		
 		\input{Tabellen/Messwerte_II.tex}
 		\input{Tabellen/Messwerte_II_B.tex}
@@ -122,8 +148,22 @@
 				\caption{Grafische Darstellung der ersten Messreihe im B-Feld}\label{fig:Auswertung_Messdaten_II_I}
 		\end{figure}
 		
-		
-		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_II.pdf}
+			\caption{Grafische Darstellung der zweiten Messreihe im B-Feld}\label{fig:Auswertung_Messdaten_II_II}
+		\end{figure}
+		\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_III.pdf}
+			\caption{Grafische Darstellung der dritten Messreihe im B-Feld}\label{fig:Auswertung_Messdaten_II_III}
+		\end{figure}
+		\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.7]{Grafiken/BFeld_Messreihe_IV.pdf}
+			\caption{Grafische Darstellung der vierten Messreihe im B-Feld}\label{fig:Auswertung_Messdaten_II_IV}
+		\end{figure}
+
 		Die ebenfalls in \cref{tab:Auswertung_Parameter_B} angegebene spezifische Ladung des Elektrons lässt sich nun unter Umformung von \cref{eq:Theorie_Qspez} zu 
 		\begin{empheq}{equation} 
 			\frac{e_{0}}{m_{e}} = 8 \cdot \gamma^{2} \cdot U_{b}  

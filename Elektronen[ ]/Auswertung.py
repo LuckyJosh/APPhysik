@@ -29,6 +29,8 @@ from aputils.latextables.tables import Table
 # Erzeugen eines logs des stdout
 sys.stdout = OutputFile("Daten/log.txt")
 
+Umean = unc.wrap(np.mean)
+
 PRINT = True
 
 #==============================================================================
@@ -354,11 +356,11 @@ d_kplx_kplx = ((d_1 * 0.55) + (((d_1 + d_2)/2) * 0.45))
 print(d_kplx, d_kplx_kplx)
 
 # Berechnung des theoretischen Vergleichswerts
-theo = L * P /(2 * d)
+theo = L * P /(2 * d_1)
 theo_kplx = L * P /(2 * d_kplx)
 theo_kplx_kplx = L * P /(2 * d_kplx_kplx)
 print("Theoriewert:", theo, theo_kplx, theo_kplx_kplx)
-print("Abweichung vom Theoriewert:", np.abs(param_m_6 - theo_kplx_kplx)/theo_kplx_kplx)
+print("Abweichung vom Theoriewert:", np.abs(param_m_6 - theo)/theo)
 
 
 # Vergleich des Theoriewerts mit dem berechnten
@@ -386,6 +388,7 @@ f_sz_err = unp.uarray(f_sz, [f_err]*len(f_sz))
 #Berechnung der Sinusfrequenz
 f_sin_err = f_sz_err * n
 print("Sinusspannung:", f_sin_err[0], f_sin_err[1], f_sin_err[2], f_sin_err[3])
+print(Umean([f_sin_err[0], f_sin_err[1], f_sin_err[2], f_sin_err[3]]))
 
 # Erstellen der Tabelle
 T_osz = Table(siunitx=True)

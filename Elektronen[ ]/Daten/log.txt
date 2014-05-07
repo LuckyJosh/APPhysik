@@ -5,21 +5,22 @@ Ausgleichsgerade IV: m, b: 0.0840+/-0.0011 3.716+/-0.022
 Ausgleichsgerade V: m, b: 0.0657+/-0.0012 3.668+/-0.025
 Ausgleichsgerade VI: m, b: 30.3+/-0.8 0.0067+/-0.0025
 0.5225 0.50825
-Theoriewert: 25.0 31.8181818182 32.7102803738
-Abweichung vom Theoriewert: 0.073+/-0.026
-Unterschied der Ergebnisse: 1.5+/-0.8 0.047+/-0.027 2.4+/-0.8 0.073+/-0.026
+Theoriewert: 36.25 26.3636363636 27.1028037383
+Abweichung vom Theoriewert: 0.163+/-0.023
+Unterschied der Ergebnisse: 4.0+/-0.8 0.150+/-0.032 3.2+/-0.8 0.119+/-0.031
 Sinusspannung: 79.84+/-0.04 79.880+/-0.020 79.840+/-0.010 79.840+/-0.005
+79.850+/-0.012
 B Fehler: \sigma_{B_d}=\frac{8 \sqrt{5}}{25} \sqrt{\frac{M^{2} N^{2}}{R^{2}} \sigma_{I}^{2}}
-Ausgleichsgerade VII: 94.1+/-1.0 0.00010+/-0.00009
-Ausgleichsgerade VIII: 85.3+/-1.1 0.00011+/-0.00010
-Ausgleichsgerade IX: 80.0+/-0.8 (2+/-6)e-05
-Ausgleichsgerade X: 78.8+/-1.7 0.00009+/-0.00014
+Ausgleichsgerade VII: 133.5+/-1.9 0.00025+/-0.00016
+Ausgleichsgerade VIII: 121.6+/-2.1 0.00024+/-0.00019
+Ausgleichsgerade IX: 114.9+/-1.0 (7+/-8)e-05
+Ausgleichsgerade X: 113.0+/-2.6 0.00017+/-0.00021
 Fehler spez. Ladung: \sigma_{}=\sqrt{64 M^{4} \sigma_{U_{b}}^{2} + 256 M^{2} U_{b}^{2} \sigma_{M}^{2}}
-Spezifische Ladung: (1.77+/-0.05)e+11 (1.75+/-0.05)e+11 (1.79+/-0.04)e+11 (1.98+/-0.09)e+11
-Abweichung vom Lit-wert: [0.006027175879116612+/-0.029750410513696715
- 0.0073432866073042755+/-0.03143272853572764
- 0.018909361722653856+/-0.02364172375388433
- 0.1139320009485939+/-0.0400085009282335]
+Spezifische Ladung: (3.57+/-0.12)e+11 (3.55+/-0.13)e+11 (3.70+/-0.08)e+11 (4.09+/-0.20)e+11
+Abweichung vom Lit-wert: [0.506720329813593+/-0.016896170211216737
+ 0.5042097322576564+/-0.01883726405905137
+ 0.5244802501274118+/-0.01070559036425427
+ 0.5696878188029972+/-0.020789566268231807]
 Horizontaler Strom I: 0.280+/-0.010
 Horizontal Intensität B: (1.79+/-0.06)e-05
 Totale Intensität B: (5.22+/-0.19)e-05
