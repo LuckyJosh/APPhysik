@@ -1,5 +1,5 @@
 # Stromstärke in pA #Spannung in V
-#00	0.368
+00	0.368
 01	0.293
 02	0.25
 03	0.183

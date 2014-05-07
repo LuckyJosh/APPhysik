@@ -65,8 +65,8 @@ I_1_err = unp.uarray(I_1, len(I_1)*[I_err])
 U_1_err = unp.uarray(U_1, len(U_1)*[U_err])
 
 # Wurzel des Stroms
-Iw_1 = np.sqrt(noms(I_1_err))
-iw_1_err = (0.5 * stds(I_1_err)/Iw_1)
+Iw_1 = np.sqrt(noms(I_1_err[1:]))
+iw_1_err = (0.5 * stds(I_1_err[1:])/Iw_1)
 Iw_1_err = unp.uarray(Iw_1, iw_1_err)
 
 #iw_1_err = (0.5 * stds(I_1_err[1:])/Iw_1[1:])
@@ -76,7 +76,7 @@ Iw_1_err = unp.uarray(Iw_1, iw_1_err)
 
 
 # Regression
-popt_1, pcov_1 = curve_fit(gerade, noms(U_1_err), noms(Iw_1_err),
+popt_1, pcov_1 = curve_fit(gerade, noms(U_1_err[1:]), noms(Iw_1_err),
                            sigma=stds(Iw_1_err))
 errors_1 = np.sqrt(np.diag(pcov_1))
 param_1_m = ufloat(popt_1[0], errors_1[0])
@@ -93,7 +93,7 @@ plt.ylim(-0.5, 4)
 
 
 # Messwerte
-plt.errorbar(noms(U_1_err), noms(Iw_1_err), xerr=stds(U_1_err),
+plt.errorbar(noms(U_1_err[1:]), noms(Iw_1_err), xerr=stds(U_1_err[1:]),
              yerr=stds(Iw_1_err),
              label="Messwerte", fmt="x", color="red")
 
@@ -112,6 +112,17 @@ plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Orange.pdf")
 
+# Tabelle
+Tab_1 = Table(siunitx=True)
+Tab_1.caption("Messwerte der orangenen Spektrallinie")
+Tab_1.label("Messwerte_Orange")
+Tab_1.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_1.addColumn(I_1_err[:5], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_1.addColumn(U_1_err[:5], title="Bremsspannung", symbol="U", unit=r"\volt")
+Tab_1.addColumn(I_1_err[5:], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_1.addColumn(U_1_err[5:], title="Bremsspannung", symbol="U", unit=r"\volt")
+#Tab_1.show()
+#Tab_1.save("Tabellen/Messwerte_Orange.tex")
 
 #==============================================================================
 class gruen:
@@ -128,15 +139,15 @@ I_2_err = unp.uarray(I_2, len(I_2)*[I_err])
 U_2_err = unp.uarray(U_2, len(U_2)*[U_err])
 
 # Wurzel des Stroms
-Iw_2 = np.sqrt(noms(I_2_err))
-iw_2_err = (0.5 * stds(I_2_err)/Iw_2)
+Iw_2 = np.sqrt(noms(I_2_err[1:]))
+iw_2_err = (0.5 * stds(I_2_err[1:])/Iw_2)
 Iw_2_err = unp.uarray(Iw_2, iw_2_err)
 #iw_2_err = (0.5 * stds(I_2_err[1:])/Iw_2[1:])
 #Iw_2_err = unp.uarray(Iw_2[1:], iw_2_err)
 #Iw_2_err = np.concatenate((unp.uarray([0], [0]), Iw_2_err))
 
 # Regression
-popt_2, pcov_2 = curve_fit(gerade, noms(U_2_err), noms(Iw_2_err),
+popt_2, pcov_2 = curve_fit(gerade, noms(U_2_err[1:]), noms(Iw_2_err),
                            sigma=stds(Iw_2_err))
 errors_2 = np.sqrt(np.diag(pcov_2))
 param_2_m = ufloat(popt_2[0], errors_2[0])
@@ -153,7 +164,7 @@ plt.ylim(-0.5, 9)
 
 
 # Messwerte
-plt.errorbar(noms(U_2_err), noms(Iw_2_err), xerr=stds(U_2_err),
+plt.errorbar(noms(U_2_err[1:]), noms(Iw_2_err), xerr=stds(U_2_err[1:]),
              yerr=stds(Iw_2_err),
              label="Messwerte", fmt="x", color="red")
 
@@ -172,6 +183,17 @@ plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Gruen.pdf")
 
+# Tabelle
+Tab_2 = Table(siunitx=True)
+Tab_2.caption("Messwerte der grünen Spektrallinie")
+Tab_2.label("Messwerte_Gruen")
+Tab_2.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_2.addColumn(I_2_err[:8], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_2.addColumn(U_2_err[:8], title="Bremsspannung", symbol="U", unit=r"\volt")
+Tab_2.addColumn(np.append(I_2_err[8:], 0), title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_2.addColumn(np.append(U_2_err[8:], 0), title="Bremsspannung", symbol="U", unit=r"\volt")
+#Tab_2.show()
+Tab_2.save("Tabellen/Messwerte_Gruen.tex")
 #==============================================================================
 class cyan:
     pass
@@ -187,8 +209,8 @@ I_3_err = unp.uarray(I_3, len(I_3)*[I_err])
 U_3_err = unp.uarray(U_3, len(U_3)*[U_err])
 
 # Wurzel des Stroms
-Iw_3 = np.sqrt(noms(I_3_err))
-iw_3_err = (0.5 * stds(I_3_err)/Iw_3)
+Iw_3 = np.sqrt(noms(I_3_err[1:]))
+iw_3_err = (0.5 * stds(I_3_err[1:])/Iw_3)
 Iw_3_err = unp.uarray(Iw_3, iw_3_err)
 
 #iw_3_err = (0.5 * stds(I_3_err[1:])/Iw_3[1:])
@@ -196,7 +218,7 @@ Iw_3_err = unp.uarray(Iw_3, iw_3_err)
 #Iw_3_err = np.concatenate((unp.uarray([0], [0]), Iw_3_err))
 
 # Regression
-popt_3, pcov_3 = curve_fit(gerade, noms(U_3_err), noms(Iw_3_err),
+popt_3, pcov_3 = curve_fit(gerade, noms(U_3_err[1:]), noms(Iw_3_err),
                            sigma=stds(Iw_3_err))
 errors_3 = np.sqrt(np.diag(pcov_3))
 param_3_m = ufloat(popt_3[0], errors_3[0])
@@ -213,7 +235,7 @@ plt.ylim(-0.5, 3)
 
 
 # Messwerte
-plt.errorbar(noms(U_3_err), noms(Iw_3_err), xerr=stds(U_3_err),
+plt.errorbar(noms(U_3_err[1:]), noms(Iw_3_err), xerr=stds(U_3_err[1:]),
              yerr=stds(Iw_3_err),
              label="Messwerte", fmt="x", color="red")
 
@@ -232,7 +254,17 @@ plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Cyan.pdf")
 
-
+# Tabelle
+Tab_3 = Table(siunitx=True)
+Tab_3.caption("Messwerte der cyanen Spektrallinie")
+Tab_3.label("Messwerte_Cyan")
+Tab_3.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_3.addColumn(I_3_err[:5], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_3.addColumn(U_3_err[:5], title="Bremsspannung", symbol="U", unit=r"\volt")
+Tab_3.addColumn(I_3_err[5:], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_3.addColumn(U_3_err[5:], title="Bremsspannung", symbol="U", unit=r"\volt")
+#Tab_3.show()
+Tab_3.save("Tabellen/Messwerte_Cyan.tex")
 #==============================================================================
 class violett1:
     pass
@@ -248,8 +280,8 @@ I_4_err = unp.uarray(I_4, len(I_4)*[I_err])
 U_4_err = unp.uarray(U_4, len(U_4)*[U_err])
 
 # Wurzel des Stroms
-Iw_4 = np.sqrt(noms(I_4_err))
-iw_4_err = (0.5 * stds(I_4_err)/Iw_4)
+Iw_4 = np.sqrt(noms(I_4_err[1:]))
+iw_4_err = (0.5 * stds(I_4_err[1:])/Iw_4)
 Iw_4_err = unp.uarray(Iw_4, iw_4_err)
 
 #iw_4_err = (0.5 * stds(I_4_err[1:])/Iw_4[1:])
@@ -257,7 +289,7 @@ Iw_4_err = unp.uarray(Iw_4, iw_4_err)
 #Iw_4_err = np.concatenate((unp.uarray([0], [0]), Iw_4_err))
 
 # Regression
-popt_4, pcov_4 = curve_fit(gerade, noms(U_4_err), noms(Iw_4_err),
+popt_4, pcov_4 = curve_fit(gerade, noms(U_4_err[1:]), noms(Iw_4_err),
                            sigma=stds(Iw_4_err))
 errors_4 = np.sqrt(np.diag(pcov_4))
 param_4_m = ufloat(popt_4[0], errors_4[0])
@@ -274,7 +306,7 @@ plt.ylim(-0.5, 20)
 
 
 # Messwerte
-plt.errorbar(noms(U_4_err), noms(Iw_4_err), xerr=stds(U_4_err),
+plt.errorbar(noms(U_4_err[1:]), noms(Iw_4_err), xerr=stds(U_4_err[1:]),
              yerr=stds(Iw_4_err),
              label="Messwerte", fmt="x", color="red")
 
@@ -293,6 +325,19 @@ plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Violett1.pdf")
 
+
+
+# Tabelle
+Tab_4 = Table(siunitx=True)
+Tab_4.caption("Messwerte der ersten violetten Spektrallinie")
+Tab_4.label("Messwerte_Violett1")
+Tab_4.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_4.addColumn(I_4_err[:5], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_4.addColumn(U_4_err[:5], title="Bremsspannung", symbol="U", unit=r"\volt")
+Tab_4.addColumn(I_4_err[5:], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_4.addColumn(U_4_err[5:], title="Bremsspannung", symbol="U", unit=r"\volt")
+#Tab_4.show()
+Tab_4.save("Tabellen/Messwerte_Violett1.tex")
 #==============================================================================
 class violett2:
     pass
@@ -308,8 +353,8 @@ I_5_err = unp.uarray(I_5, len(I_5)*[I_err])
 U_5_err = unp.uarray(U_5, len(U_5)*[U_err])
 
 # Wurzel des Stroms
-Iw_5 = np.sqrt(noms(I_5_err))
-iw_5_err = (0.5 * stds(I_5_err)/Iw_5)
+Iw_5 = np.sqrt(noms(I_5_err[1:]))
+iw_5_err = (0.5 * stds(I_5_err[1:])/Iw_5)
 Iw_5_err = unp.uarray(Iw_5, iw_5_err)
 
 #iw_5_err = (0.5 * stds(I_5_err[1:])/Iw_5[1:])
@@ -317,7 +362,7 @@ Iw_5_err = unp.uarray(Iw_5, iw_5_err)
 #Iw_5_err = np.concatenate((unp.uarray([0], [0]), Iw_5_err))
 
 # Regression
-popt_5, pcov_5 = curve_fit(gerade, noms(U_5_err), noms(Iw_5_err),
+popt_5, pcov_5 = curve_fit(gerade, noms(U_5_err[1:]), noms(Iw_5_err),
                            sigma=stds(Iw_5_err))
 errors_5 = np.sqrt(np.diag(pcov_5))
 param_5_m = ufloat(popt_5[0], errors_5[0])
@@ -334,7 +379,7 @@ plt.ylim(-0.5, 10)
 
 
 # Messwerte
-plt.errorbar(noms(U_5_err), noms(Iw_5_err), xerr=stds(U_5_err),
+plt.errorbar(noms(U_5_err[1:]), noms(Iw_5_err), xerr=stds(U_5_err[1:]),
              yerr=stds(Iw_5_err),
              label="Messwerte", fmt="x", color="red")
 
@@ -354,7 +399,17 @@ plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Violett2.pdf")
 
 
-
+# Tabelle
+Tab_5 = Table(siunitx=True)
+Tab_5.caption("Messwerte der zweiten violetten Spektrallinie")
+Tab_5.label("Messwerte_Violett2")
+Tab_5.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_5.addColumn(I_5_err[:5], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_5.addColumn(U_5_err[:5], title="Bremsspannung", symbol="U", unit=r"\volt")
+Tab_5.addColumn(I_5_err[5:], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_5.addColumn(U_5_err[5:], title="Bremsspannung", symbol="U", unit=r"\volt")
+#Tab_5.show()
+Tab_5.save("Tabellen/Messwerte_Violett2.tex")
 #==============================================================================
 class orange2:
     pass
@@ -403,7 +458,17 @@ plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Orange2.pdf")
 
-
+# Tabelle
+Tab_6 = Table(siunitx=True)
+Tab_6.caption("Messwerte der orangenen Spektrallinie bei verschiedenen Bremsspannungen")
+Tab_6.label("Messwerte_Messung2")
+Tab_6.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_6.addColumn(I_6_err[:20], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_6.addColumn(U_6_err[:20], title="Bremsspannung", symbol="U", unit=r"\volt")
+Tab_6.addColumn(I_6_err[20:], title="Photostrom", symbol="I", unit=r"\pico\ampere")
+Tab_6.addColumn(U_6_err[20:], title="Bremsspannung", symbol="U", unit=r"\volt")
+#Tab_6.show()
+Tab_6.save("Tabellen/Messwerte_Messung2.tex")
 #==============================================================================
 class bunt:
     pass
@@ -441,5 +506,14 @@ plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Messreihe2.pdf")
 
-
+# Tabelle
+Tab_7 = Table(siunitx=True)
+Tab_7.caption("Bestimmte Grenzspannungen mit zugehöriger Wellenlänge bzw. Frequenz")
+Tab_7.label("Messwerte_Bunt")
+Tab_7.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_7.addColumn([int(w) for w in wl], title="Wellenlänge", symbol=r"\lambda", unit=r"\nano\meter")
+Tab_7.addColumn(f*1e-15, title="Frequenz", symbol="f", unit=r"\peta\hertz")
+Tab_7.addColumn(U_g, title="Grenzspannung", symbol=r"U_{g}", unit=r"\volt")
+#Tab_7.show()
+Tab_7.save("Tabellen/Messwerte_Bunt.tex")
 ## Print Funktionen
