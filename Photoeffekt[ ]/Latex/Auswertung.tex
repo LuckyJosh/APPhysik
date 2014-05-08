@@ -1,0 +1,90 @@
+Im folgenden Abschnitt sind die während des Versuches aufgenommenen Messwerte und die 
+aus diesen berechneten Ergebnisse tabellarisch aufgeführt. An entsprechender Stelle
+sind Erklärungen und Anmerkungen zu den angestellten Rechnungen und Ergebnissen gegeben.
+Die Fehler der Messwerte wurden allgemein mit der kleinsten Skaleneinteilung des jeweiligen 
+Messgerätes abgeschätzt.
+Die für die Fehlerrechnung verwendeten Fehlergleichungen befinden sich im \cref{sec:Fehlerrechnung}
+und werden mit römischen Ziffern referenziert.
+
+
+\subsection{Messung des Photostroms für die Spektrallinien von Quecksilber}
+
+		
+		Die Messwerte für die fünf untersuchten Spektrallinie des Quecksilbers sind
+		in den Tabellen \ref{tab:Messwerte_Orange} bis \ref{tab:Messwerte_Violett2} aufgeführt.
+		
+		\input{Tabellen/Messwerte_Orange}
+		\input{Tabellen/Messwerte_Gruen}
+		\input{Tabellen/Messwerte_Cyan}
+		\input{Tabellen/Messwerte_Violett1}
+		\input{Tabellen/Messwerte_Violett2}
+		
+		In den Abbildungen \ref{fig:Messwerte_Orange} bis \ref{fig:Messwerte_Violett2} sind die 
+		radizierten Messwerte des Photostroms gegen die Bremsspannung und die 
+		mit Hilfe der Python-Bibliothek \emph{SciPy} \cite{SciPy} erstellte Regressiongerade 
+		eingetragen. 
+		Die Regressionsparameter für den Ansatz
+		\begin{empheq}{equation}
+			I_{w}(U) = a \cdot U + b
+		\end{empheq}
+		sind für die fünf Spektrallinien in \cref{tab:Messwerte_ParameterSpektrum} zusammen mit  
+		den ebenfalls eingezeichneten Grenzspannungen zu finden.
+		
+		\input{Tabellen/Messwerte_Parameter}
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.7]{Grafiken/Orange.pdf}
+			\caption{Messwerte und Regeression der orangenen Linie \label{fig:Messwerte_Orange}}
+		\end{figure}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.7]{Grafiken/Gruen.pdf}
+			\caption{Messwerte und Regeression der grünen Linie \label{fig:Messwerte_Gruen}}
+		\end{figure}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.7]{Grafiken/Cyan.pdf}
+			\caption{Messwerte und Regeression der cyanen Linie \label{fig:Messwerte_Cyan}}
+		\end{figure}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.7]{Grafiken/Violett1.pdf}
+			\caption{Messwerte und Regeression der ersten violetten Linie \label{fig:Messwerte_Violett1}}
+		\end{figure}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.7]{Grafiken/Violett2.pdf}
+			\caption{Messwerte und Regeression der zweiten violetten Linie \label{fig:Messwerte_Violett2}}
+		\end{figure}
+		
+		Die berechneten Werte für die Grenzspannungen aus \cref{tab:Messwerte_ParameterSpektrum} 
+		sind in \cref{fig:Messwerte_2} gegen die jeweilige Frequenz der Spektrallinie aufgetragen
+		und wiederum eine lineare Regression durchgeführt.	
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.7]{Grafiken/Messreihe2.pdf}
+			\caption{Grenzspannung in Abhängigkeit der Frequenz \label{fig:Messwerte_Messwert2}}
+		\end{figure}
+		
+		Die Regression mit dem Ansatz
+		\begin{empheq}{equation}
+		U_{g}(f) = c \cdot f + d
+		\end{empheq}	 
+		\addtocounter{equation}{-1}
+		\begin{subequations}
+			\begin{empheq}{align}
+			c &= \SI{3.4(2)e-15}{\volt\second}\\
+			d &= \SI{-1.4(2)}{\volt}
+			\end{empheq}
+		\end{subequations}
+		
+		Durch Umformung von \cref{eq:} erhält man eine Gerade der Form $U_{g} = \frac{h}{e_{0}}f - \frac{A_{k}}{e_{0}}$. Daraus ergibt sich,
+		dass die Steigung der Regressionsgeraden $c$ dem gesuchten Wert für $\tfrac{h}{e_{0}}$ und der Betrag des berechneten
+		y-Achsenabschnitts $d$, dem des Quotienten aus Auslösearbeit und Elementarladung entspricht.
+		\begin{empheq}{align}
+			\frac{h}{e_{0}} &= \SI{3.4(2)e-15}{\volt\second} \\
+			A_{k} &= \SI{1.4(2)}{\eV}
+		\end{empheq}
+		

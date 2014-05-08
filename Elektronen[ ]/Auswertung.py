@@ -460,6 +460,7 @@ D_err = unp.uarray(D, [d_err]*len(D))
 
 
 # Bestimmung des Quotienten D/(L² + D²)
+L = ufloat(17.5, 0.1)
 Quot_err = D_err/(L**2 + D_err**2)
 
 # Erstellen der Tabelle
@@ -683,11 +684,11 @@ U_B_err = unp.uarray(U_B, len(U_B)*[u_b_err])
 def spezLadung(m, UB):
     return 8 * m**2 * UB
 
-# Fehlergleichung
-U = sp.var("U_b")
-func_Q = 8 * M**2 * U
-error_Q = ErrorEquation(func_Q)
-print("Fehler spez. Ladung:", error_Q.std)
+## Fehlergleichung
+#U = sp.var("U_b")
+#func_Q = 8 * M**2 * U
+#error_Q = ErrorEquation(func_Q)
+#print("Fehler spez. Ladung:", error_Q.std)
 
 
 Q_spez_1_err = spezLadung(param_m_7, U_B_err[0]) * 1e04
@@ -698,7 +699,7 @@ Q_spez_4_err = spezLadung(param_m_10, U_B_err[3]) * 1e04
 Q_spez_err = np.array([Q_spez_1_err, Q_spez_2_err, Q_spez_3_err, Q_spez_4_err])
 print("Spezifische Ladung:", Q_spez_1_err, Q_spez_2_err,
       Q_spez_3_err, Q_spez_4_err)
-
+print("Mittelwert:", Umean([Q_spez_1_err, Q_spez_2_err, Q_spez_3_err]))
 Q_spez_theo = 1.7588e11
 print("Abweichung vom Lit-wert:", np.abs(Q_spez_err - Q_spez_theo)/Q_spez_err)
 

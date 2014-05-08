@@ -111,6 +111,7 @@ print("Nullstelle:", x_0_1)
 plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Orange.pdf")
+plt.clf()
 
 # Tabelle
 Tab_1 = Table(siunitx=True)
@@ -182,7 +183,7 @@ print("Nullstelle:", x_0_2)
 plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Gruen.pdf")
-
+plt.clf()
 # Tabelle
 Tab_2 = Table(siunitx=True)
 Tab_2.caption("Messwerte der grünen Spektrallinie")
@@ -193,7 +194,7 @@ Tab_2.addColumn(U_2_err[:8], title="Bremsspannung", symbol="U", unit=r"\volt")
 Tab_2.addColumn(np.append(I_2_err[8:], 0), title="Photostrom", symbol="I", unit=r"\pico\ampere")
 Tab_2.addColumn(np.append(U_2_err[8:], 0), title="Bremsspannung", symbol="U", unit=r"\volt")
 #Tab_2.show()
-Tab_2.save("Tabellen/Messwerte_Gruen.tex")
+#Tab_2.save("Tabellen/Messwerte_Gruen.tex")
 #==============================================================================
 class cyan:
     pass
@@ -253,7 +254,7 @@ print("Nullstelle:", x_0_3)
 plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Cyan.pdf")
-
+plt.clf()
 # Tabelle
 Tab_3 = Table(siunitx=True)
 Tab_3.caption("Messwerte der cyanen Spektrallinie")
@@ -264,7 +265,7 @@ Tab_3.addColumn(U_3_err[:5], title="Bremsspannung", symbol="U", unit=r"\volt")
 Tab_3.addColumn(I_3_err[5:], title="Photostrom", symbol="I", unit=r"\pico\ampere")
 Tab_3.addColumn(U_3_err[5:], title="Bremsspannung", symbol="U", unit=r"\volt")
 #Tab_3.show()
-Tab_3.save("Tabellen/Messwerte_Cyan.tex")
+#Tab_3.save("Tabellen/Messwerte_Cyan.tex")
 #==============================================================================
 class violett1:
     pass
@@ -324,7 +325,7 @@ print("Nullstelle:", x_0_4)
 plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Violett1.pdf")
-
+plt.clf()
 
 
 # Tabelle
@@ -337,7 +338,7 @@ Tab_4.addColumn(U_4_err[:5], title="Bremsspannung", symbol="U", unit=r"\volt")
 Tab_4.addColumn(I_4_err[5:], title="Photostrom", symbol="I", unit=r"\pico\ampere")
 Tab_4.addColumn(U_4_err[5:], title="Bremsspannung", symbol="U", unit=r"\volt")
 #Tab_4.show()
-Tab_4.save("Tabellen/Messwerte_Violett1.tex")
+#Tab_4.save("Tabellen/Messwerte_Violett1.tex")
 #==============================================================================
 class violett2:
     pass
@@ -397,7 +398,7 @@ print("Nullstelle:", x_0_5)
 plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Violett2.pdf")
-
+plt.clf()
 
 # Tabelle
 Tab_5 = Table(siunitx=True)
@@ -409,7 +410,33 @@ Tab_5.addColumn(U_5_err[:5], title="Bremsspannung", symbol="U", unit=r"\volt")
 Tab_5.addColumn(I_5_err[5:], title="Photostrom", symbol="I", unit=r"\pico\ampere")
 Tab_5.addColumn(U_5_err[5:], title="Bremsspannung", symbol="U", unit=r"\volt")
 #Tab_5.show()
-Tab_5.save("Tabellen/Messwerte_Violett2.tex")
+#Tab_5.save("Tabellen/Messwerte_Violett2.tex")
+
+
+
+
+#==============================================================================
+# Alle Parameter
+#==============================================================================
+Param_M = np.array([param_1_m, param_2_m, param_3_m, param_4_m, param_5_m,])
+Param_B = np.array([param_1_b, param_2_b, param_3_b, param_4_b, param_5_b,])
+wl = np.loadtxt("Messdaten/Wellenlaengen.txt")
+f = const.speed_of_light/(wl * 1e-09)
+U_g = np.array([x_0_1, x_0_2, x_0_3, x_0_4, x_0_5])
+
+Tab_param = Table(siunitx=True)
+Tab_param.caption("Regressionsparameter der Untersuchung der Spektrallinien")
+Tab_param.label("Messwerte_ParameterSpektrum")
+Tab_param.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_param.addColumn([int(w) for w in wl], title="Wellenlänge",
+                 symbol=r"\lambda", unit=r"\nano\meter")
+Tab_param.addColumn(f*1e-15, title="Frequenz", symbol="f", unit=r"\peta\hertz")
+Tab_param.addColumn(Param_M, title="Steigung", symbol="a")
+Tab_param.addColumn(Param_B, title="y-Achsenabschnitt", symbol="b")
+Tab_param.addColumn(U_g, title="Grenzspannung", symbol=r"U_{g}", unit=r"\volt")
+#Tab_param.show()
+#Tab_param.save("Tabellen/Messwerte_Parameter.tex")
+
 #==============================================================================
 class orange2:
     pass
@@ -457,7 +484,7 @@ plt.errorbar(noms(U_6_err), noms(I_6_err), xerr=stds(U_6_err),
 plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Orange2.pdf")
-
+plt.clf()
 # Tabelle
 Tab_6 = Table(siunitx=True)
 Tab_6.caption("Messwerte der orangenen Spektrallinie bei verschiedenen Bremsspannungen")
@@ -483,7 +510,8 @@ errors_7 = np.sqrt(np.diag(pcov_7))
 param_7_m = ufloat(popt_7[0], errors_7[0])
 param_7_b = ufloat(popt_7[1], errors_7[1])
 
-print("Regressionsparameter Violett2:", param_7_m, param_7_b)
+print("Regressionsparameter Bunt:", param_7_m, param_7_b)
+print("Regressionsparameter Bunt:", param_7_m/const.elementary_charge, param_7_b)
 # Einstellungen
 plt.grid()
 plt.ylabel(r"Bremsspannung $\frac{U}{\mathrm{V}}$", fontsize=14, family="serif")
@@ -505,7 +533,7 @@ plt.plot(X, gerade(X, *popt_7), label="Regressionsgerade", color="gray")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.show() if SHOW else plt.savefig("Grafiken/Messreihe2.pdf")
-
+plt.clf()
 # Tabelle
 Tab_7 = Table(siunitx=True)
 Tab_7.caption("Bestimmte Grenzspannungen mit zugehöriger Wellenlänge bzw. Frequenz")
