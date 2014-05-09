@@ -19,6 +19,25 @@
 
 \refsection{0}
   \sortlist{entry}{nty}
+    \entry{Mende09}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=d9b5d1cc313e3d56430176f478f309df}{Dietmar\bibnamedelima Mende}{D\bibinitperiod\bibinitdelim M\bibinitperiod}{Günther\bibnamedelima Simon}{G\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=d9b5d1cc313e3d56430176f478f309df}{Dietmar\bibnamedelima Mende}{D\bibinitperiod\bibinitdelim M\bibinitperiod}{Günther\bibnamedelima Simon}{G\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Fachbuchverlag Leibzig im Carl Hanser Verlag München}%
+      }
+      \strng{namehash}{d9b5d1cc313e3d56430176f478f309df}
+      \strng{fullhash}{d9b5d1cc313e3d56430176f478f309df}
+      \field{sortinit}{D}
+      \field{labeltitle}{Physik}
+      \field{edition}{16}
+      \field{subtitle}{Gleichungen und Tabellen}
+      \field{title}{Physik}
+      \field{year}{2009}
+    \endentry
     \entry{SciPy}{misc}{}
       \field{sortinit}{S}
       \field{labeltitle}{SciPy}
@@ -28,6 +47,18 @@
       \field{urlyear}{2014}
       \verb{url}
       \verb http://docs.scipy.org/doc/
+      \endverb
+    \endentry
+    \entry{V500}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V501 Photoeffekt}
+      \field{title}{Versuchsanleitung}
+      \field{urlday}{09}
+      \field{urlmonth}{05}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V500.pdf
       \endverb
     \endentry
   \endsortlist

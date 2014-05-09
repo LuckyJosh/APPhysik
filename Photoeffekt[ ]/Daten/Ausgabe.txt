@@ -10,3 +10,4 @@ Regressionsparameter Violett2: -8.54+/-0.13 9.37+/-0.04
 Nullstelle: 1.09735973597
 Regressionsparameter Bunt: (3.43+/-0.24)e-15 -1.43+/-0.15
 Regressionsparameter Bunt: (2.14+/-0.15)e+04 -1.43+/-0.15
+Theoriewert, Abweichung: 4.13566751302e-15 -0.17+/-0.06

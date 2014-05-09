@@ -495,7 +495,7 @@ Tab_6.addColumn(U_6_err[:20], title="Bremsspannung", symbol="U", unit=r"\volt")
 Tab_6.addColumn(I_6_err[20:], title="Photostrom", symbol="I", unit=r"\pico\ampere")
 Tab_6.addColumn(U_6_err[20:], title="Bremsspannung", symbol="U", unit=r"\volt")
 #Tab_6.show()
-Tab_6.save("Tabellen/Messwerte_Messung2.tex")
+#Tab_6.save("Tabellen/Messwerte_Messung2.tex")
 #==============================================================================
 class bunt:
     pass
@@ -509,9 +509,10 @@ popt_7, pcov_7 = curve_fit(gerade, f, U_g)
 errors_7 = np.sqrt(np.diag(pcov_7))
 param_7_m = ufloat(popt_7[0], errors_7[0])
 param_7_b = ufloat(popt_7[1], errors_7[1])
-
+theo = const.h/const.elementary_charge
 print("Regressionsparameter Bunt:", param_7_m, param_7_b)
 print("Regressionsparameter Bunt:", param_7_m/const.elementary_charge, param_7_b)
+print("Theoriewert, Abweichung:", theo, (param_7_m-theo)/theo)
 # Einstellungen
 plt.grid()
 plt.ylabel(r"Bremsspannung $\frac{U}{\mathrm{V}}$", fontsize=14, family="serif")
@@ -543,5 +544,5 @@ Tab_7.addColumn([int(w) for w in wl], title="Wellenlänge", symbol=r"\lambda", u
 Tab_7.addColumn(f*1e-15, title="Frequenz", symbol="f", unit=r"\peta\hertz")
 Tab_7.addColumn(U_g, title="Grenzspannung", symbol=r"U_{g}", unit=r"\volt")
 #Tab_7.show()
-Tab_7.save("Tabellen/Messwerte_Bunt.tex")
+#Tab_7.save("Tabellen/Messwerte_Bunt.tex")
 ## Print Funktionen
