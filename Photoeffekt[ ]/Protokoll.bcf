@@ -1964,10 +1964,20 @@
     <bcf:datasource type="file" datatype="bibtex">../_globales/latex/Literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">SciPy</bcf:citekey>
-    <bcf:citekey order="2">SciPy</bcf:citekey>
-    <bcf:citekey order="3">Mende09</bcf:citekey>
+    <bcf:citekey order="1">V500</bcf:citekey>
+    <bcf:citekey order="2">V500</bcf:citekey>
+    <bcf:citekey order="3">V500</bcf:citekey>
     <bcf:citekey order="4">V500</bcf:citekey>
+    <bcf:citekey order="5">V500</bcf:citekey>
+    <bcf:citekey order="6">V500</bcf:citekey>
+    <bcf:citekey order="7">V500</bcf:citekey>
+    <bcf:citekey order="8">V500</bcf:citekey>
+    <bcf:citekey order="9">V500</bcf:citekey>
+    <bcf:citekey order="10">V500</bcf:citekey>
+    <bcf:citekey order="11">SciPy</bcf:citekey>
+    <bcf:citekey order="12">SciPy</bcf:citekey>
+    <bcf:citekey order="13">Mende09</bcf:citekey>
+    <bcf:citekey order="14">V500</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="nty">
   <bcf:sorting>
