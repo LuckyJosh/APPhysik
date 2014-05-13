@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  9 MAY 2014 17:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  13 MAY 2014 10:11
 entering extended mode
 **Protokoll.tex
 
@@ -2124,16 +2124,106 @@ kblatt.tex" [1
 {C:/Users/Josh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 ("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Late
 x/Einleitung.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 1--7
+
+ []
+
+
 ("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Late
-x/Theorie.tex")
+x/Theorie.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 \begin{equation}
+                      [1]
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
+
+ []
+
+)
 ("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Late
-x/Durchf√ºhrung.tex")
+x/Durchf√ºhrung.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+<Grafiken/V500_Abb1.jpg, id=74, 473.51906pt x 214.55156pt>
+File: Grafiken/V500_Abb1.jpg Graphic file (type jpg)
+
+<use Grafiken/V500_Abb1.jpg>
+Package pdftex.def Info: Grafiken/V500_Abb1.jpg used on input line 12.
+(pdftex.def)             Requested size: 284.11362pt x 128.73192pt.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+<Grafiken/V500_Abb2.jpg, id=83, 269.50688pt x 243.15843pt>
+File: Grafiken/V500_Abb2.jpg Graphic file (type jpg)
+
+<use Grafiken/V500_Abb2.jpg>
+Package pdftex.def Info: Grafiken/V500_Abb2.jpg used on input line 23.
+(pdftex.def)             Requested size: 161.70537pt x 145.89618pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+[3 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/Gr
+afiken/V500_Abb1.jpg> <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRep
+o/Photoeffekt[ ]/Grafiken/V500_Abb2.jpg>]
+<Grafiken/V500_Abb3.jpg, id=93, 636.12656pt x 261.97874pt>
+File: Grafiken/V500_Abb3.jpg Graphic file (type jpg)
+
+<use Grafiken/V500_Abb3.jpg>
+Package pdftex.def Info: Grafiken/V500_Abb3.jpg used on input line 32.
+(pdftex.def)             Requested size: 381.67888pt x 157.18845pt.
+
+<Grafiken/V500_Abb4.jpg, id=94, 593.21625pt x 184.43906pt>
+File: Grafiken/V500_Abb4.jpg Graphic file (type jpg)
+
+<use Grafiken/V500_Abb4.jpg>
+Package pdftex.def Info: Grafiken/V500_Abb4.jpg used on input line 43.
+(pdftex.def)             Requested size: 355.9325pt x 110.66428pt.
+
+<Grafiken/V500_Abb5.jpg, id=95, 575.90157pt x 389.20406pt>
+File: Grafiken/V500_Abb5.jpg Graphic file (type jpg)
+
+<use Grafiken/V500_Abb5.jpg>
+Package pdftex.def Info: Grafiken/V500_Abb5.jpg used on input line 52.
+(pdftex.def)             Requested size: 345.54361pt x 233.52423pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
 ("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Late
-x/Auswertung.tex"
+x/Auswertung.tex" [4 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo
+/Photoeffekt[ ]/Grafiken/V500_Abb3.jpg> <D:/Eigene Dateien/Studium/Physik/APrak
+tikum/PraktikumRepo/Photoeffekt[ ]/Grafiken/V500_Abb4.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Tabe
 llen/Messwerte_Orange.tex")
 ("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Tabe
-llen/Messwerte_Gruen.tex")
+llen/Messwerte_Gruen.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
 ("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Tabe
 llen/Messwerte_Cyan.tex"
 
@@ -2151,27 +2241,17 @@ llen/Messwerte_Violett2.tex"
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.29 		\end{empheq}
-                    [1]
+) [5 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/
+Grafiken/V500_Abb5.jpg>]
 ("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Tabe
-llen/Messwerte_Parameter.tex"
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) <Grafiken/Orange.pdf, id=63, 578.16pt x 433.62pt>
+llen/Messwerte_Parameter.tex" [6])
+<Grafiken/Orange.pdf, id=132, 578.16pt x 433.62pt>
 File: Grafiken/Orange.pdf Graphic file (type pdf)
  <use Grafiken/Orange.pdf>
 Package pdftex.def Info: Grafiken/Orange.pdf used on input line 37.
 (pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Grafiken/Gruen.pdf, id=64, 578.16pt x 433.62pt>
+<Grafiken/Gruen.pdf, id=133, 578.16pt x 433.62pt>
 File: Grafiken/Gruen.pdf Graphic file (type pdf)
  <use Grafiken/Gruen.pdf>
 Package pdftex.def Info: Grafiken/Gruen.pdf used on input line 42.
@@ -2180,7 +2260,7 @@ Package pdftex.def Info: Grafiken/Gruen.pdf used on input line 42.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Cyan.pdf, id=65, 578.16pt x 433.62pt>
+<Grafiken/Cyan.pdf, id=134, 578.16pt x 433.62pt>
 File: Grafiken/Cyan.pdf Graphic file (type pdf)
  <use Grafiken/Cyan.pdf>
 Package pdftex.def Info: Grafiken/Cyan.pdf used on input line 47.
@@ -2189,7 +2269,7 @@ Package pdftex.def Info: Grafiken/Cyan.pdf used on input line 47.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Violett1.pdf, id=66, 578.16pt x 433.62pt>
+<Grafiken/Violett1.pdf, id=135, 578.16pt x 433.62pt>
 File: Grafiken/Violett1.pdf Graphic file (type pdf)
 
 <use Grafiken/Violett1.pdf>
@@ -2199,7 +2279,7 @@ Package pdftex.def Info: Grafiken/Violett1.pdf used on input line 52.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Violett2.pdf, id=67, 578.16pt x 433.62pt>
+<Grafiken/Violett2.pdf, id=136, 578.16pt x 433.62pt>
 File: Grafiken/Violett2.pdf Graphic file (type pdf)
 
 <use Grafiken/Violett2.pdf>
@@ -2213,7 +2293,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: Reference `fig:Messwerte_2' on page 1 undefined on input line 62
 .
 
-<Grafiken/Messreihe2.pdf, id=69, 578.16pt x 433.62pt>
+<Grafiken/Messreihe2.pdf, id=138, 578.16pt x 433.62pt>
 File: Grafiken/Messreihe2.pdf Graphic file (type pdf)
 
 <use Grafiken/Messreihe2.pdf>
@@ -2223,29 +2303,15 @@ Package pdftex.def Info: Grafiken/Messreihe2.pdf used on input line 67.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2]
 
 LaTeX Warning: Reference `eq:' on page 1 undefined on input line 83.
 
+[7 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/Gr
+afiken/Orange.pdf>]
 
-Overfull \hbox (17.16219pt too wide) in paragraph at lines 93--93
-[]\T1/lmr/bx/n/14.4 Messung der Ab-h‰n-gig-keit des Pho-to-stroms von der Bremm
-ss-
- []
+LaTeX Warning: Text page 8 contains only floats.
 
-<Grafiken/Orange2.pdf, id=87, 578.16pt x 433.62pt>
-File: Grafiken/Orange2.pdf Graphic file (type pdf)
- <use Grafiken/Orange2.pdf>
-Package pdftex.def Info: Grafiken/Orange2.pdf used on input line 100.
-(pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
-
-("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Tabe
-llen/Messwerte_Messung2.tex") [3 <D:/Eigene Dateien/Studium/Physik/APraktikum/P
-raktikumRepo/Photoeffekt[ ]/Grafiken/Orange.pdf>]
-
-LaTeX Warning: Text page 4 contains only floats.
-
-[4 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/Gr
+[8 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/Gr
 afiken/Gruen.pdf> <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Ph
 otoeffekt[ ]/Grafiken/Cyan.pdf
 
@@ -2254,9 +2320,9 @@ PraktikumRepo/Photoeffekt[ ]/Grafiken/Cyan.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
 >]
 
-LaTeX Warning: Text page 5 contains only floats.
+LaTeX Warning: Text page 9 contains only floats.
 
-[5 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/Gr
+[9 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/Gr
 afiken/Violett1.pdf> <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo
 /Photoeffekt[ ]/Grafiken/Violett2.pdf
 
@@ -2264,14 +2330,27 @@ pdfTeX warning: pdflatex.exe (file D:/Eigene Dateien/Studium/Physik/APraktikum/
 PraktikumRepo/Photoeffekt[ ]/Grafiken/Violett2.pdf): PDF inclusion: multiple pd
 fs with page group included in a single page
 >]
+Overfull \hbox (17.16219pt too wide) in paragraph at lines 93--93
+[]\T1/lmr/bx/n/14.4 Messung der Ab-h‰n-gig-keit des Pho-to-stroms von der Bremm
+ss-
+ []
+
+<Grafiken/Orange2.pdf, id=650, 578.16pt x 433.62pt>
+File: Grafiken/Orange2.pdf Graphic file (type pdf)
+ <use Grafiken/Orange2.pdf>
+Package pdftex.def Info: Grafiken/Orange2.pdf used on input line 100.
+(pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
+
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Tabe
+llen/Messwerte_Messung2.tex")
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [6 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/
-Grafiken/Messreihe2.pdf>]
+) [10 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]
+/Grafiken/Messreihe2.pdf>]
 ("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Photoeffekt[ ]\Late
 x/Diskussion.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--4
@@ -2288,15 +2367,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--29
 
  []
 
-[7 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/Gr
-afiken/Orange2.pdf>] [8]) [9]
+[11 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Photoeffekt[ ]/G
+rafiken/Orange2.pdf>] [12]) [13]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 34.
  (D:\Programme\MiKTeX\tex\latex\lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 AED: lastpage setting LastPage
-[10]
+[14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
 
@@ -2307,7 +2386,7 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 25.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
-(rerunfilecheck)             Checksum: 6DBAF6AE611DFA99B0DADB7A802783B6;463.
+(rerunfilecheck)             Checksum: A2716D9B90DCBBE155A0023FF2BF2FC2;901.
 
 
 LaTeX Warning: There were undefined references.
@@ -2315,10 +2394,10 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 35865 strings out of 493921
- 676735 string characters out of 3150494
- 1109443 words of memory out of 3000000
- 38361 multiletter control sequences out of 15000+200000
+ 35915 strings out of 493921
+ 677690 string characters out of 3150494
+ 1109469 words of memory out of 3000000
+ 38388 multiletter control sequences out of 15000+200000
  97576 words of font info for 81 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,16n,75p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2335,9 +2414,9 @@ onts/type1/public/lm/lmmi12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmmi
 12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/MiKT
 eX/fonts/type1/public/lm/lmsy8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
 mtt12.pfb>
-Output written on Protokoll.pdf (11 pages, 519957 bytes).
+Output written on Protokoll.pdf (15 pages, 740218 bytes).
 PDF statistics:
- 905 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 104 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 961 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 
