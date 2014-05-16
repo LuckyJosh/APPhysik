@@ -1,10 +1,10 @@
-Protokoll.pdf: Protokoll.tex  Latex/*.tex Latex/Literatur.bib Grafiken/*.pdf
+Protokoll.pdf: Protokoll.tex  Latex/*.tex ../globales/latex/Literatur.bib Plots/*.pdf
 	pdflatex Protokoll.tex
 	biber Protokoll
 	pdflatex Protokoll.tex
-	open Protokoll.pdf
-Plots/*.pdf: Auswertung.py Messdaten/*.txt	
-	python Auswertung.py
+	
+Plots/*.pdf: *.py Messdaten/*.txt	
+	python *.py
 	
 clean:  
 	rm -f Latex/*.aux
@@ -13,10 +13,6 @@ clean:
 	rm -f *.synctex	
 	rm -f Latex/*.synctex.gz
 	rm -f *.synctex.gz
-	rm -f Latex/*.bbl
-	rm -f *.bbl
-	rm -f Latex/*.bcf
-	rm -f *.bcf
 	rm -f Latex/*.blg
 	rm -f *.blg
 	rm -f Latex/*.log
