@@ -9,30 +9,35 @@ referenziert.
 
 	Die Messwerte, die für die Berechnung und Überprüfung der Brennweite $f=\SI{10}{\centi\meter}$ aufgenommen wurden 
 	befinden sich in \cref{tab:Auswertung_Messwerte_I}.
+	Aus diesen wurden die Bildweiten nach $b = \envert{x_{B} - x_{L}}$ und die Gegenstandsweitenh 
+	nach  $g = \envert{x_{G} - x_{L}}$ berechnet. Für die Position des Gegenstands wurde dazu $x_{G} = \SI{129.0(1)}{\cm}$ gemessen.
+	
 	
 	\input{Tabellen/Messwerte_I}  			
 	
 	In \cref{fig:Auswertung_BekannteLinse} sind die Geraden durch den Wert von $b$ auf der y-Achse und den Wert von $g$
 	auf der x-Achse eingezeichnet. Der Schnittpunkt dieser Geraden liegt im Punkt $(f|f)$, wobei $f$
-	die Brennweite der Linse ist.
+	die Brennweite der Linse ist. 
 	  
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=.7]{Grafiken/Messwerte_Bekannt.pdf}
-		\caption{Regression der gestrichenen Bildweite\label{fig:Auswertung_BekannteLinse}}
+		\caption{Graphische Auswertung der Messwerte der Messreihe mit bekannter Linse \label{fig:Auswertung_BekannteLinse}}
 	\end{figure}  
 	 
-	 Der Schnittpunkt\footnote{Tatsächlich schneiden sich die Geraden nicht in einem Punkt, der Wert
+	 Der Schnittpunkt, tatsächlich schneiden sich die Geraden nicht in einem Punkt, der Wert
 	 des eingezeichneten Schnittpunktes ist der Mittelwert der Brennweiten, die mit der Linsengleichung
 	 \cref{eq:Theorie_Linsengln} berechnet
-	 wurden.} der Geraden liegt bei $(9.82|9.82)$ erhält man für die Brennweite der Linse
+	 wurden, der Geraden liegt bei $(9.82|9.82)$ erhält man für die Brennweite der Linse
 	 \begin{empheq}{equation}
 		\label{val:Auswertung_Bekannt}
 		\mean{f} = \SI{9.81(2)}{\centi\meter}.
 	 \end{empheq}
+	 Der Fehler der Brennweite wurde dabei durch Gaußsche Fehlerfortpflanzung bestimmt, da dieser Fehler größer als
+	 die Abweichung vom Mittelwert ist.	 
 	 
 	 Zur Überprüfung der Abbildungsgesetzes \cref{eq:Theorie_Abbildungsgesetz} wurden in 
-	 Messung 2 mit $g_{2} = \SI{25.0(1)}{\cm}$ und $b_{2} = \SI{19.4(1)}{\cm}$ sowie
+	 Messung 2 mit $g_{2} = \SI{25.0(1)}{\cm}$ und $b_{2} = \SI{16.2(1)}{\cm}$ sowie
 	 bei Messung 5 mit $g_{5} = \SI{40.0(1)}{\cm}$ und $b_{5} = \SI{13.0(1)}{\cm}$
 	 die Bildgröße $B_{2} = \SI{2.0(1)}{\cm}$ bzw. $B_{5} = \SI{1.0(1)}{\cm}$ und 
 	 die Gegenstandsgröße $G = \SI{3.0(1)}{\centi\meter}$ gemessen.
@@ -58,7 +63,7 @@ referenziert.
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=.7]{Grafiken/Messwerte_Unbekannt.pdf}
-		\caption{Regression der gestrichenen Bildweite \label{fig:Auswertung_UnbekannteLinse}}
+		\caption{Graphische Auswertung der Messwerte der Messreihe mit unbekannter Linse \label{fig:Auswertung_UnbekannteLinse}}
 	\end{figure}  
 	
 	
@@ -67,7 +72,8 @@ referenziert.
 			\label{val:Auswertung_Unbekannt}
 			\mean{f} = \SI{7.52(3)}{\centi\meter}.
 	 \end{empheq}
-	
+	Auch der hier bestimmte Fehler der Brennweite wurde mit Hilfe der gaußschen Fehlerfortpflanzung bestimmt,
+	da dieser die Abweichung vom Mittelwert übersteigt. 
 
 \subsection{Überprüfung der bekannten Brennweite einer Linse nach Bessel}
 
@@ -81,10 +87,11 @@ referenziert.
 		
 		\input{Tabellen/Messwerte_III}
 		
-		Daraus ergibt sich der Mittelwert für die Brennweite der Linse zu
+		Daraus ergibt sich der Mittelwert für die Brennweite der Linse,
+		mit dem durch gaußschen Fortpflanzung bestimmten Fehler,  zu
 		\begin{empheq}{equation}
 			\label{val:Auswertung_BesselWeis}
-			\mean{f_{weiß}} = \SI{9.93(4)}{\centi\meter}.
+			\mean{f_{weiss}} = \SI{9.93(4)}{\centi\meter}.
 		\end{empheq}
 		
 	\subsubsection{Unter Verwendung von rotem Licht}	
@@ -112,7 +119,7 @@ referenziert.
 		Für blaues Licht ergibt sich der Mittelwert der Brennweite zu
 		\begin{empheq}{equation}
 			\label{val:Auswertung_BesselBlau}
-			\mean{f_{blau}} = \SI{9.88(4)}{\centi\meter}.
+			\mean{f_{blau}} = \SI{9.89(4)}{\centi\meter}.
 		\end{empheq}		
 		
 		
@@ -152,13 +159,13 @@ referenziert.
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=.7]{Grafiken/Messwerte_Abbe2.pdf}
-		\caption{Regression der gestrichenen Bildweite\label{fig:Auswertung_AbbeG}}
+		\caption{Regression der Messwerte der gestrichenen Gegenstandsweiten\label{fig:Auswertung_AbbeG}}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=.7]{Grafiken/Messwerte_Abbe1.pdf}
-		\caption{Regression der gestrichenen Bildweite\label{fig:Auswertung_AbbeB}}
+		\caption{Regression der Messwerte der gestrichenen Bildweite\label{fig:Auswertung_AbbeB}}
 	\end{figure}
 	
 	
