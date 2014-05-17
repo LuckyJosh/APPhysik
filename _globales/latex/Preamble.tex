@@ -190,3 +190,11 @@
 \usepackage{colortbl}
 \usepackage{multirow}
 \usepackage{adjustbox}
+
+% Eigener Figuren Befehl
+\newcommand{\includeFigure}[4][]{
+\begin{figure}[!h]%
+\centering%
+\includegraphics[#1]{#2}%
+\caption{#3 #4}%
+\end{figure}}
