@@ -38,6 +38,18 @@
       \verb http://www.dpg-physik.de/presse/veranstaltungen/tagungen/2014/pdf/Franck-Hertz-Experiment-VH1914.pdf
       \endverb
     \endentry
+    \entry{V601}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V701 Franck-Hertz-Versuch}
+      \field{title}{Versuchsanleitung}
+      \field{urlday}{18}
+      \field{urlmonth}{05}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V601.pdf
+      \endverb
+    \endentry
   \endsortlist
 \endrefsection
 \endinput

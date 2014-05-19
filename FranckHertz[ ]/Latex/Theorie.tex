@@ -7,7 +7,7 @@ Im Versuch wird ermittelt: Die Energiedifferenz zwischen den Anregungszuständen
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale = 0.45]{Grafiken/V601_Abb1.jpg}
-	\caption{Versuchsaufbau}
+	\caption{Versuchsaufbau\cite{V601}}
 \end{figure}
 
 Der Franck-Hertz-Versuch besteht grundsätzlich aus einer mit Quecksilberdampf gefüllten Kammer. Man reguliert den Dampfdruck über die innerhalb der Kammer herrschende Temperatur. Diese lässt sich wiederum über einen Heizgenerator steuern.\\
@@ -37,8 +37,8 @@ U_1 := \frac{1}{e_0}(E_1 - E_0)
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale = 0.6]{Grafiken/V601_Abb2.jpg}
-	\caption{Idealisierte Franck-Hertz-Kurve}
+	\includegraphics[scale = 0.5]{Grafiken/V601_Abb2.jpg}
+	\caption{Idealisierte Franck-Hertz-Kurve\cite{V601}}
 \end{figure}
 \newpage
 \subsection{Einflüsse auf die Gestalt der Kurve}
@@ -48,7 +48,7 @@ Es gibt allerdings noch weitere Effekte, die die vorher beschriebene, idealisier
 Um hohe Elektronenemissionsraten zu erreichen, verwendet man für Glühdraht und Beschleunigungselektrode Materialien, die beide unterschiedliche Austrittsarbeiten besitzen, wobei der Glühdraht die deutlich kleinere Austrittsarbeit besitzen sollte. Damit kommt es durch die verschieden Potentiale zu einer Verschiebung der Franck-Hertz-Kurve um das Kontaktpotential:
 
 \begin{equation}
-K = \frac{1}{e_0}{\Phi_B - \Phi_G}
+K = \frac{\Phi_B - \Phi_G}{e_0}
 \end{equation}
 
 \subsubsection{Einfluss des Energie-Spektrums der Elektronen}
@@ -59,12 +59,14 @@ Dies führt dazu, dass es keine Unstetigkeiten in der Kurve gibt, sondern die Ab
 Um aussagekräftige Kurven zu erhalten, ist es nötig die Stoßwahrscheinlichkeit der Elektronen mit den Hg-Atomen ausreichend hoch zu halten. Dazu ist es nötig, dass die mittlere freie Weglänge $\overline{w}$ klein gegen den Abstand $a$ der Glühkathode zur Auffängerelektrode ist.\\
 Dabei hängen $\overline{w}$ und der Sättigungsdruck über
 \begin{equation}
-\overline{w} [cm] = \frac{0,0029}{p_{sät}} [p \, in \, mbar]
+\label{eq:Theorie_Weglaenge}
+\overline{w} [cm] = \frac{0,0029}{p_{sät}} \quad [p \, \text{in} \, mbar]
 \end{equation}
 zusammen.\\
 
 Wobei gilt
 \begin{equation}
-p_{sät}(T) = 5,5 \cdot 10^{7} exp(-6876/T) [p \, in \, mbar, \, T \, in \, K]
+\label{eq:Theorie_Dampfdruck}
+p_{sät}(T) = 5,5 \cdot 10^{7} \exp(-6876/T)\quad [p \, \text{in} \, \si{\milli\bar}, \, T \, \text{in} \, \si{\kelvin}]
 \end{equation}
 $\overline{w}$ sollte dabei um einen Faktor 1000 bis 4000 kleiner sein als der Abstand $a$.
