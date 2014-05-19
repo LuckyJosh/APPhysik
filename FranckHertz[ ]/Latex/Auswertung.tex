@@ -1,7 +1,39 @@
 Im folgenden Abschnitt sind die während des Versuchs aufgenommenen Daten 
 und die daraus berechneten Ergebnisse tabellarisch und graphisch dargestellt.
 An entsprechender Stelle sind Erklärungen zu den Berechnungen
-und Ergebnissen gegeben.  
+und Ergebnissen gegeben. Die Fehler der Messwerte wurden allgemein als die 
+kleinste Skaleneinheit des jeweiligen Messgeräts angenommen.
+
+\subsection{Fehlerrechnung}\label{sec:Fehlerrechnung}
+	
+	In diesem Abschnitt sind die in der Auswertung zur Berechnung der
+	Messfehler verwendeten Fehlergleichungen zu finden. Diese wurden
+	mit Hilfe der gaußschen Fehlerrechnung bestimmt.\\
+	
+	Der allgemeine gaußsche Fehler eines Mittelwerts ergibt sich nach
+	\begin{errorEquation}
+		\sigma_{M} = \dfrac{1}{n} \sqrt{\sum_{i = 1}^{n} \sigma_{x_{i}}^{2}}.
+		 \label{std:Mittel}
+	\end{errorEquation}
+	
+	Den Fehler des Dampfdruckes $p_{sat}$ erhält man vereinfacht aus
+	\begin{errorEquation}
+		\sigma_{p} = \num{3.8e11}  \cdot \dfrac{\Exp{\frac{-6876}{T}}}{T^{2}} \cdot \sigma_{T}.
+	    \label{std:Dampfdruck}
+	\end{errorEquation}  
+	
+	Für die mittlere freie Wegstrecke $\bar{w}$ erhält man den Fehler durch
+	\begin{errorEquation}
+		\sigma_{\bar{w}} = \dfrac{0.0029 \sigma_{p_{sat}}}{p_{sat}^{2}} .
+    \label{std:Wegstrecke}
+	\end{errorEquation}  
+
+	Die Wellenlänge $\lambda$ hat den Fehler
+	\begin{errorEquation}
+		\sigma_{\lambda} = \dfrac{hc \sigma_{E}}{E^{2}} .
+		 \label{std:Wellenlänge}
+	\end{errorEquation}  
+	
 
 \subsection{Messung der integralen Energieverteilung bei Raumtemperatur}
 	
@@ -63,6 +95,7 @@ und Ergebnissen gegeben.
 	Der Mittelwert Anregungsenergien hat damit den Wert
 	
 	\begin{empheq}{equation}
+		\label{val:Auswertung_Anregungsenergie}
 		\mean{E} = \SI{4.9(1)}{\eV}.
 	\end{empheq}
 	
@@ -100,8 +133,13 @@ und Ergebnissen gegeben.
     Die Nullstelle dieser Geraden hat den Wert $U_{0} = U_{ion} + K$, wobei $K$ das zuvor berechnete Kontaktpotential
     der beiden Elektroden ist. Mit dem aus \cref{fig:Auswertung_Ionisierungsspannung} bestimmten 
     Wert  $U_{0} = \SI{12.5(2)}{\volt}$ errechnet sich, unter Verwendung des Mittelwerts 
-    $\mean{K} = \SI{2.0(6)}{\volt}$ aus 
+    \begin{empheq}{equation}
+    	\mean{K} = \SI{2.0(6)}{\volt}
+    	\label{val:Auswertung_K_Mittel}
+    \end{empheq}
+     aus 
     \cref{val:Auswertung_K_1} und \cref{val:Auswertung_K_2}, die Ionisierungsspannung zu
    	\begin{empheq}{equation}
+   			\label{val:Asuwertung_U_Ion}
    			U_{ion} = \SI{10.5(6)}{\volt}.  
    	\end{empheq}
