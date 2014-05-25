@@ -389,6 +389,7 @@ f_sz_err = unp.uarray(f_sz, [f_err]*len(f_sz))
 f_sin_err = f_sz_err * n
 print("Sinusspannung:", f_sin_err[0], f_sin_err[1], f_sin_err[2], f_sin_err[3])
 print(Umean([f_sin_err[0], f_sin_err[1], f_sin_err[2], f_sin_err[3]]))
+print(np.std(noms(np.array([f_sin_err[0], f_sin_err[1], f_sin_err[2], f_sin_err[3]]))) / 2)
 
 # Erstellen der Tabelle
 T_osz = Table(siunitx=True)
@@ -700,6 +701,7 @@ Q_spez_err = np.array([Q_spez_1_err, Q_spez_2_err, Q_spez_3_err, Q_spez_4_err])
 print("Spezifische Ladung:", Q_spez_1_err, Q_spez_2_err,
       Q_spez_3_err, Q_spez_4_err)
 print("Mittelwert:", Umean([Q_spez_1_err, Q_spez_2_err, Q_spez_3_err]))
+print("Mittelwert:", np.std(noms([Q_spez_1_err, Q_spez_2_err, Q_spez_3_err]))/2e11)
 Q_spez_theo = 1.7588e11
 print("Abweichung vom Lit-wert:", np.abs(Q_spez_err - Q_spez_theo)/Q_spez_err)
 

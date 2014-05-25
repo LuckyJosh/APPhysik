@@ -1,0 +1,90 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{nty}
+    \entry{GGU}{online}{}
+      \field{sortinit}{D}
+      \field{labeltitle}{Die Geomagnetik}
+      \field{title}{Die Geomagnetik}
+      \field{urlday}{25}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.ggukarlsruhe.de/Messverfahren_Geophysik_zersto/Geomagnetik_Magnetik_Erdmagnet/hauptteil_geomagnetik_magnetik_erdmagnet.html
+      \endverb
+    \endentry
+    \entry{SciPy}{misc}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{SciPy}
+      \field{title}{SciPy}
+      \field{urlday}{21}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://docs.scipy.org/doc/
+      \endverb
+    \endentry
+    \entry{Mende09}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=bb71354d54c5d626dfa90290798fdc72}{Simon}{S\bibinitperiod}{Dietmar\bibnamedelimb Mende{,}\bibnamedelima Günther}{D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=bb71354d54c5d626dfa90290798fdc72}{Simon}{S\bibinitperiod}{Dietmar\bibnamedelimb Mende{,}\bibnamedelima Günther}{D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Fachbuchverlag Leibzig im Carl Hanser Verlag München}%
+      }
+      \strng{namehash}{bb71354d54c5d626dfa90290798fdc72}
+      \strng{fullhash}{bb71354d54c5d626dfa90290798fdc72}
+      \field{sortinit}{S}
+      \field{labeltitle}{Physik}
+      \field{edition}{16}
+      \field{subtitle}{Gleichungen und Tabellen}
+      \field{title}{Physik}
+      \field{year}{2009}
+    \endentry
+    \entry{V501}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V501 Elektronen im elektrischen Feld}
+      \field{title}{Versuchsanleitung}
+      \field{urlday}{23}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V501.pdf
+      \endverb
+    \endentry
+    \entry{V502}{manual}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V502 Elektronen im Magnetfeld}
+      \field{title}{Versuchsanleitung}
+      \field{urlday}{23}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V502.pdf
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
