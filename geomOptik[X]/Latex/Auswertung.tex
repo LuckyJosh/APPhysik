@@ -1,0 +1,184 @@
+Im folgenden Abschnitt sind die während des Versuchs aufgenommenen 
+und die daraus berechneten Daten tabellarisch und grafisch dargestellt.
+An entsprechender Stelle sind Erklärungen zu den vorgenommenen Berechnungen 
+und Ergebnissen gegeben. Die für die Fehlerrechnung verwendeten Gleichungen
+befinden sich in \cref{sec:Fehlerrechnung} und werden mit römischen Ziffern
+referenziert.
+
+\subsection{Überprüfung der bekannten Brennweite einer Linse}
+
+	Die Messwerte, die für die Berechnung und Überprüfung der Brennweite $f=\SI{10}{\centi\meter}$ aufgenommen wurden 
+	befinden sich in \cref{tab:Auswertung_Messwerte_I}.
+	Aus diesen wurden die Bildweiten nach $b = \envert{x_{B} - x_{L}}$ und die Gegenstandsweitenh 
+	nach  $g = \envert{x_{G} - x_{L}}$ berechnet. Für die Position des Gegenstands wurde dazu $x_{G} = \SI{129.0(1)}{\cm}$ gemessen.
+	
+	
+	\input{Tabellen/Messwerte_I}  			
+	
+	In \cref{fig:Auswertung_BekannteLinse} sind die Geraden durch den Wert von $b$ auf der y-Achse und den Wert von $g$
+	auf der x-Achse eingezeichnet. Der Schnittpunkt dieser Geraden liegt im Punkt $(f|f)$, wobei $f$
+	die Brennweite der Linse ist. 
+	  
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=.7]{Grafiken/Messwerte_Bekannt.pdf}
+		\caption{Graphische Auswertung der Messwerte der Messreihe mit bekannter Linse \label{fig:Auswertung_BekannteLinse}}
+	\end{figure}  
+	 
+	 Der Schnittpunkt, tatsächlich schneiden sich die Geraden nicht in einem Punkt, der Wert
+	 des eingezeichneten Schnittpunktes ist der Mittelwert der Brennweiten, die mit der Linsengleichung
+	 \cref{eq:Theorie_Linsengln} berechnet
+	 wurden, der Geraden liegt bei $(9.82|9.82)$ erhält man für die Brennweite der Linse
+	 \begin{empheq}{equation}
+		\label{val:Auswertung_Bekannt}
+		\mean{f} = \SI{9.81(2)}{\centi\meter}.
+	 \end{empheq}
+	 Der Fehler der Brennweite wurde dabei durch Gaußsche Fehlerfortpflanzung bestimmt, da dieser Fehler größer als
+	 die Abweichung vom Mittelwert ist.	 
+	 
+	 Zur Überprüfung der Abbildungsgesetzes \cref{eq:Theorie_Abbildungsgesetz} wurden in 
+	 Messung 2 mit $g_{2} = \SI{25.0(1)}{\cm}$ und $b_{2} = \SI{16.2(1)}{\cm}$ sowie
+	 bei Messung 5 mit $g_{5} = \SI{40.0(1)}{\cm}$ und $b_{5} = \SI{13.0(1)}{\cm}$
+	 die Bildgröße $B_{2} = \SI{2.0(1)}{\cm}$ bzw. $B_{5} = \SI{1.0(1)}{\cm}$ und 
+	 die Gegenstandsgröße $G = \SI{3.0(1)}{\centi\meter}$ gemessen.
+	 Die beiden Seiten des Abbildungsgesetz ergeben damit jeweils:
+	 \begin{empheq}{alignat* = 2}
+%	 	&\text{Messung 2:} \qquad &\text{Messung 5:}	\\
+	 	&\dfrac{g_{2}}{b_{2}} = \SI{1.54(2)}{\cm} \qquad	&\dfrac{g_{5}}{b_{5}} = \SI{3.08(4)}{\cm}\\  
+	 	&\dfrac{G}{B_{2}} = \SI{1.50(9)}{\cm}	\qquad     &\dfrac{G}{B_{5}} = \SI{3.0(3)}{\cm}
+	 \end{empheq}
+	 
+	 
+	  
+\subsection{Bestimmung der unbekannten Brennweite einer Linse}
+	
+	Die zur Bestimmung der Brennweite der unbekannten Linse aufgenommenen Daten sind in 
+	\cref{tab:Auswertung_Messwerte_II} zu finden.
+	
+	\input{Tabellen/Messwerte_II} 
+	
+	In \cref{fig:Auswertung_UnbekannteLinse} sind die Werte aus \cref{tab:Auswertung_Messwerte_II} und der gemittelte Schnittpunkt
+	$(7.52|7.52)$ aufgetragen.
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=.7]{Grafiken/Messwerte_Unbekannt.pdf}
+		\caption{Graphische Auswertung der Messwerte der Messreihe mit unbekannter Linse \label{fig:Auswertung_UnbekannteLinse}}
+	\end{figure}  
+	
+	
+	Daraus erhält man die unbekannte Brennweite der Linse mit 
+	 \begin{empheq}{equation}
+			\label{val:Auswertung_Unbekannt}
+			\mean{f} = \SI{7.52(3)}{\centi\meter}.
+	 \end{empheq}
+	Auch der hier bestimmte Fehler der Brennweite wurde mit Hilfe der gaußschen Fehlerfortpflanzung bestimmt,
+	da dieser die Abweichung vom Mittelwert übersteigt. 
+
+\subsection{Überprüfung der bekannten Brennweite einer Linse nach Bessel}
+
+	\subsubsection{Unter Verwendung von weißem Licht}
+	
+		Die während des Versuchs gemessenen Position des Bildschirms $x_{B}$ und
+		die beiden Positionen der Linse $x_{L,1}$ und $x_{L,2}$ in \cref{tab:Auswertung_Messwerte_III} eingetragen. 
+		Aus diesen wurden, mit der festen Position des Gegenstands $x_{G} = \SI{129.0(1)}{\centi\meter}$,
+		Linsenabstand $d = \envert{x_{L,1} - x_{L,2}}$ und Gesamtabstand $e = \envert{x_{G}- x_{B}}$ 
+		berechnet. Mit \cref{eq:Theorie_Bessel} lässt sich aus diesen die Brennweite $f$ der Linse bestimmen.
+		
+		\input{Tabellen/Messwerte_III}
+		
+		Daraus ergibt sich der Mittelwert für die Brennweite der Linse,
+		mit dem durch gaußschen Fortpflanzung bestimmten Fehler,  zu
+		\begin{empheq}{equation}
+			\label{val:Auswertung_BesselWeis}
+			\mean{f_{weiss}} = \SI{9.93(4)}{\centi\meter}.
+		\end{empheq}
+		
+	\subsubsection{Unter Verwendung von rotem Licht}	
+		
+		In \cref{tab:Auswertung_Messwerte_III_r} sind die Messwerte der mit rotem
+		Licht durchgeführten Methode von Bessel sowie die aus diesen berechneten
+		Größen zu finden.
+		
+		\input{Tabellen/Messwerte_IIIr}
+		
+		 Der Mittelwert der Brennweite von rotem Licht ergibt sich aus diesen Daten zu
+		\begin{empheq}{equation}
+			\label{val:Auswertung_BesselRot}
+			\mean{f_{rot}} = \SI{9.99(4)}{\centi\meter}.
+		\end{empheq}		 
+		
+	
+	\subsubsection{Unter Verwendung von blauem Licht}	
+		
+		Die Messung nach der Methode von Bessel mit blauem Licht ergab die 
+		in \cref{tab:Auswertung_Messwerte_III_b}  dargestellten Messwerte und Ergebnisse.	
+		
+		\input{Tabellen/Messwerte_IIIb}		
+		
+		Für blaues Licht ergibt sich der Mittelwert der Brennweite zu
+		\begin{empheq}{equation}
+			\label{val:Auswertung_BesselBlau}
+			\mean{f_{blau}} = \SI{9.89(4)}{\centi\meter}.
+		\end{empheq}		
+		
+		
+
+\subsection{Bestimmung der unbekannten Brennweite eines Linsensystems nach Abbe}
+	
+	Die für die Bestimmung der Brennweite des Linsensystems aus konkaver und konvexer Linse
+	aufgenommenen Messwerte für Bild- und Referenzpunktposition $x_{B}$ und $x_{A}$ sowie 
+	der Bildgröße $B$ sind in \cref{tab:Auswertung_Messwerte_VI} zu finden. Für die Berechnung der nötigen Werte
+	wurden noch die Gegenstandsgröße $G = \SI{3.0(1)}{\centi\meter}$ und 
+	-position $x_{G} = \SI{129.0(1)}{\centi\meter}$ verwandt.   
+	
+	\input{Tabellen/Messwerte_VI}
+	
+	Die Werte für $g'$ bzw. $b'$ aus \cref{tab:Auswertung_Messwerte_VI} sind in
+	\cref{fig:Auswertung_AbbeG} bzw. \cref{fig:Auswertung_AbbeB}  gegen $(1 + V^{-1})$ bzw. $(1 + V)$ aufgetragen.
+	Durch lineare Regression, mittels der Pythonbibliothek \emph{SciPy} \cite{SciPy}, beider Messwertepaare 
+	mit dem Ansatz
+	\begin{empheq}{equation}
+		m(x) = f\cdot x + b
+	\end{empheq}
+	erhält man die Geradenparameter für $g'$ \cref{eq:Theorie_g'}
+	\begin{subequations}
+	 	\begin{empheq}{align}
+	 		f_{g} &= \SI{25(1)}{\centi\meter}\\
+	 		b &= h = \SI{-11(2)}{\centi\meter}
+	 	\end{empheq}
+	\end{subequations}
+	und für $b'$ \cref{eq:Theorie_b'} 
+	\begin{subequations}
+	 	\begin{empheq}{align}
+	 		f_{b} &= \SI{26(1)}{\centi\meter}\\
+	 		b &= h' = \SI{11(4)}{\centi\meter}.
+	 	\end{empheq}
+	\end{subequations}
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=.7]{Grafiken/Messwerte_Abbe2.pdf}
+		\caption{Regression der Messwerte der gestrichenen Gegenstandsweiten\label{fig:Auswertung_AbbeG}}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=.7]{Grafiken/Messwerte_Abbe1.pdf}
+		\caption{Regression der Messwerte der gestrichenen Bildweite\label{fig:Auswertung_AbbeB}}
+	\end{figure}
+	
+	
+	
+	
+	Da die Steigungen dieser Geraden jeweils die Brennweite des Linsensystems darstellt ergibt sich
+	diese im Mittel zu
+ 	\begin{empheq}{equation}
+ 		\label{val:Auswertung_Abbe}
+ 		\mean{f} = \SI{25.5(7)}{\centi\meter}.
+ 	\end{empheq}
+ 	
+ 	Die eine der beiden Hauptebenen des Systems liegt ca. \SI{11}{\centi\meter} vor,
+ 	und die zweite Hauptebene ca. \SI{11(2)}{\centi\meter} hinter dem gewählten 
+ 	Referenzpunkt (der Position der konkaven Linse).  
+ 	

@@ -1,0 +1,2 @@
+# Zeit t[s] # Anzahl der Zerfälle N
+900			 306

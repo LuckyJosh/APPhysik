@@ -1,0 +1,29 @@
+Die für die Auswertung verwendeten Fehlergleichungen, welche Mittels
+der gaußschen Fehlerfortpflanzung bestimmt wurden, befinden ich im 
+Folgenden aufgelistet.\\
+
+Die Fehlergleichung des allgemeinen Mittelwerts ergibt ich zu:
+\begin{errorEquation} 
+	\sigma_{M} = \dfrac{1}{n} \sqrt{\sum_{i = 1}^{n} \sigma_{x_{i}}^{2}}
+	\label{std:Mittel}
+\end{errorEquation} 
+
+Die Fehler von Summation und Differenz $z = x \pm y$ erhält man im allgemeinen durch:
+\begin{errorEquation} 
+	\sigma_{z} = \sqrt{\sigma_{x}^{2} \pm \sigma_{y}^{2}}
+	\label{std:SummeDiff}
+\end{errorEquation}
+
+Der Fehler der Gleichung für die Brennweite nach Bessel \cref{eq:Theorie_Bessel}
+ergibt sich aus:
+\begin{errorEquation} 
+	\sigma_{f}=\sqrt{\frac{d^{2} \sigma_{d}^{2}}{4 e^{2}} +  \left( 
+					 \frac{d^{2} + e^{2}}{4 e^{2}}\right)^{2}\sigma_{e}^{2}}
+	\label{std:Bessel}
+\end{errorEquation}
+
+Den Fehler des Abbildungsmaßstabes erhält man durch:
+\begin{errorEquation} 
+	\sigma_{V}=\sqrt{\frac{B^{2} \sigma_{G}^{2}}{G^{4}} + \frac{\sigma_{B}^{2}}{G^{2}}}
+	\label{std:Abbildung}
+\end{errorEquation}

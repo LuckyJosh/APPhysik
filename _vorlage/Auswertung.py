@@ -20,9 +20,6 @@ from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
-if not "..\_globales\python" in sys.path:
-	sys.path.append("..\_globales\python")
-
 from aputils.utils import Quantity, ErrorEquation
 from aputils.latextables.tables import Table
 

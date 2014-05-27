@@ -1,0 +1,2 @@
+# L_x Position des Gegenstands [cm] # G Größe des Gegenstands
+129										3

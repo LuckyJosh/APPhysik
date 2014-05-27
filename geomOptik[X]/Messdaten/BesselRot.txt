@@ -1,0 +1,6 @@
+# b_x pos. Bildschirm 	#l_x_1 Position Linse 1 	# l_x_2 Position Linse 2
+88.2						105.2						111.4
+85.0						100.0						113.5							
+80.0						93.7						114.7
+75.0						88.0						115.5							
+70.0						82.5						115.9												

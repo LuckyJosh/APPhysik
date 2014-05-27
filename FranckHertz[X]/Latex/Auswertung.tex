@@ -1,0 +1,151 @@
+Im folgenden Abschnitt sind die während des Versuchs aufgenommenen Daten 
+und die daraus berechneten Ergebnisse tabellarisch und graphisch dargestellt.
+An entsprechender Stelle sind Erklärungen zu den Berechnungen
+und Ergebnissen gegeben. Die Fehler der Messwerte wurden allgemein als die 
+kleinste Skaleneinheit des jeweiligen Messgeräts angenommen.
+
+\subsection{Fehlerrechnung}\label{sec:Fehlerrechnung}
+	
+	In diesem Abschnitt sind die in der Auswertung zur Berechnung der
+	Messfehler verwendeten Fehlergleichungen zu finden. Diese wurden
+	mit Hilfe der gaußschen Fehlerrechnung bestimmt.\\
+	
+	Der allgemeine gaußsche Fehler eines Mittelwerts ergibt sich nach
+	\begin{errorEquation}
+		\sigma_{M} = \dfrac{1}{n} \sqrt{\sum_{i = 1}^{n} \sigma_{x_{i}}^{2}}.
+		 \label{std:Mittel}
+	\end{errorEquation}
+	
+	Den Fehler des Dampfdruckes $p_{sat}$ erhält man vereinfacht aus
+	\begin{errorEquation}
+		\sigma_{p} = \num{3.8e11}  \cdot \dfrac{\Exp{\frac{-6876}{T}}}{T^{2}} \cdot \sigma_{T}.
+	    \label{std:Dampfdruck}
+	\end{errorEquation}  
+	
+	Für die mittlere freie Wegstrecke $\bar{w}$ erhält man den Fehler durch
+	\begin{errorEquation}
+		\sigma_{\bar{w}} = \dfrac{0.0029 \sigma_{p_{sat}}}{p_{sat}^{2}} .
+    \label{std:Wegstrecke}
+	\end{errorEquation}  
+
+	Die Wellenlänge $\lambda$ hat den Fehler
+	\begin{errorEquation}
+		\sigma_{\lambda} = \dfrac{hc \sigma_{E}}{E^{2}} .
+		 \label{std:Wellenlänge}
+	\end{errorEquation}  
+	
+
+\subsection{Messung der integralen Energieverteilung bei Raumtemperatur}
+	
+	Die Mittels XY-Schreiber aufgenommenen Kurve der Integralen Energieverteilung ist 
+	in \cref{fig:Auswertung_Int_Energie_Verteilung_20C} dargestellt. Bei der Temperatur
+	$T =\SI{25.0(1)}{\degreeCelsius} = \SI{298.2(1)}{\kelvin}$ herrscht nach \cref{eq:Theorie_Dampfdruck} in der 
+	Franck-Hertz-Röhre der Dampfdruck $p_{sat} = \SI{0.00530(4)}{\milli\bar}$. Durch \cref{eq:Theorie_Weglaenge}
+	lässt sich daraus die mittlere freie Weglänge der Elektronen zu $\overline{w} = \SI{0.547(4)}{\cm}$ berechnen.
+	
+	\includeFigure[scale=0.6]{Grafiken/Raumtemperatur}{Kurve der Integralen Energieverteilung bei Raumtemperatur}{\label{fig:Auswertung_Int_Energie_Verteilung_20C}} 
+	
+	Durch grafische Differentiation, der integralen Energieverteilung erhält man die in
+	\cref{fig:Auswertung_Diff_Energie_Verteilung_20C} dargestellte differentielle Energieverteilung
+	der Elektronen. \\
+	
+	\noindent
+	Die dafür aus \cref{fig:Auswertung_Int_Energie_Verteilung_20C} genommenen Werte
+	befinden sich in \cref{tab:Auswertung_Diff_Energie_Verteilung_20C}. Der Wert des Auffängerstoms
+	ist dabei in der Anzahl der Kästchen über der x-Achse angegeben. 
+	
+	\input{Tabellen/Diff_EVerteilung_20C.tex}
+	
+	\includeFigure[scale=0.7]{Grafiken/Diff_EVerteilung_20.pdf}{Kurve der differentiellen Energieverteilung bei Raumtemperatur}{\label{fig:Auswertung_Diff_Energie_Verteilung_20C}} 
+	
+	Aus der Lage des Maximums der differentiellen Energieverteilung $U_{A,max} = \SI{9.20(5)}{\volt}$ 
+	ergibt sich mit dem Wert der eingestellten Beschleunigungsspannung $U_{B} = \SI{11(1)}{\volt}$ das
+	Kontaktpotential der Elektroden zu 
+	\begin{empheq}{equation}
+			K = U_{B} - U_{A,max} = \SI{2(1)}{\volt}.  
+		    \label{val:Auswertung_K_1}
+	\end{empheq}
+	
+			
+\subsection{Messung der integralen Energieverteilung bei 150°C}
+	
+	Die für die Temperatur $T =\SI{150.0(1)}{\degreeCelsius} = \SI{423.2(1)}{\kelvin}$
+	aufgenommene integrale Energieverteilung ist in \cref{fig:Auswertung_Int_Energie_Verteilung_150C}
+	zu finden. Bei diesen Temperaturen sind die Werte für Dampfdruck und mittlere freie Weglänge
+	$p_{sat} = \SI{4.82(2)}{\milli\bar}$ und $\overline{w} = \SI{0.000601(2)}{\cm}$. 
+	
+	\includeFigure[scale=0.6]{Grafiken/Grad100}{Kurve der Integralen Energieverteilung bei \SI{150}{\degreeCelsius}}{\label{fig:Auswertung_Int_Energie_Verteilung_150C}} 
+	
+	Aus dieser Kurve wurden zur grafischen Differentiation Werte entnommen die in \cref{tab:Auswertung_Diff_Energie_Verteilung_150C} gelistet sind. Die grafische
+	Darstellung selbst befindet sich in \cref{fig:Auswertung_Diff_Energie_Verteilung_150C}.
+	
+	\input{Tabellen/Diff_EVerteilung_150C.tex}
+	
+	\includeFigure[scale=0.7]{Grafiken/Diff_EVerteilung_150.pdf}{Kurve der differentiellen Energieverteilung bei Raumtemperatur}{\label{fig:Auswertung_Diff_Energie_Verteilung_150C}} 
+	
+\subsection{Bestimmung der Anregungsenergie des Quecksilbers}
+	
+	Zur Bestimmung der Anregungsenergie des Quecksilbers wurde die in \cref{fig:Auswertung_FranckHertz_Kurve}
+	dargestellt Franck-Hertz-Kurve aufgenommen. Aus den Abständen der Maxima lässt sich die zur
+	Anregung nötige Beschleunigungsspannung $U_{B}$ und daraus die Anregungsenergie bestimmen, diese sind in 
+	\cref{tab:Auswertung_FranckHertz_Maxima} eingetragen. Diese Messung wurde bei einer Temperatur
+	$T =\SI{165.0(1)}{\degreeCelsius} = \SI{438.2(1)}{\kelvin}$ und daraus folgend unter einem Dampfdruck
+	von $p_{sat} = \SI{8.41(3)}{\milli\bar}$ und einer mittleren freien Weglänge der Elektronen 
+	von $\overline{w} = \SI{0.000344(1)}{\cm}$ durchgeführt.
+	
+	\includeFigure[scale=0.5]{Grafiken/Franck_Hertz_Kurve.png}{Franck-Hertz-Kurve zur Bestimmung der Anregungsenergie von Quecksilber}{\label{fig:Auswertung_FranckHertz_Kurve}} 
+	
+	
+	\input{Tabellen/FranckHertz_Kurve.tex}
+	
+	Der Mittelwert Anregungsenergien hat damit den Wert
+	
+	\begin{empheq}{equation}
+		\label{val:Auswertung_Anregungsenergie}
+		\mean{E} = \SI{4.9(1)}{\eV}.
+	\end{empheq}
+	
+	Über die Energiegleichung des Photons $E = hc\lambda^{-1}$ lässt sich aus der
+	erhaltenen, gemittelten Energie, die Wellenlänge $\lambda$ des nach der Anregung emittierten Photons
+	zu
+	\begin{empheq}{equation}
+		\lambda = \SI{252(6)}{\nm}
+	\end{empheq}	 	
+	bestimmen.
+		 	
+	Durch Subtraktion des Mittelwertes der Anregungsenergie, von der Energie des ersten Maximums
+	ergibt sich für das Kontaktpotential der Elektroden der Wert
+	\begin{empheq}{equation}
+			K = \SI{2.3(6)}{\volt}.  
+			\label{val:Auswertung_K_2}
+	\end{empheq}
+	  
+\subsection{Bestimmung der Ionisierungsspannung des Quecksilbers}
+	
+	Die Messung zur Bestimmung der Ionisierungsspannung $U_{ion}$ des Quecksilbers wurde mit einer Temperatur 
+	von $T =\SI{100.0(1)}{\degreeCelsius} = \SI{373.2(1)}{\kelvin}$ bei dem Dampfdruck
+    $p_{sat} = \SI{0.547(3)}{\milli\bar}$ durchgeführt. Unter diesen Bedingungen beträgt die 
+    mittlere freie Weglänge der Elektronen $\overline{w} = \SI{0.00531(3)}{\cm}$.
+    Zur Bestimmung der Ionisierungsspannung $U_{ion}$ wird eine tangentiale Gerade an die aufgenommenen
+    Kurve, in \cref{fig:Auswertung_Ionisierungsspannung} gelegt.
+    
+   
+    
+    \includeFigure[scale=0.5]{Grafiken/Ionisierungsspannung}{Grafische Bestimmung der Ionisierungsspannung }{\label{fig:Auswertung_Ionisierungsspannung}} 
+    
+    
+    
+    
+    Die Nullstelle dieser Geraden hat den Wert $U_{0} = U_{ion} + K$, wobei $K$ das zuvor berechnete Kontaktpotential
+    der beiden Elektroden ist. Mit dem aus \cref{fig:Auswertung_Ionisierungsspannung} bestimmten 
+    Wert  $U_{0} = \SI{12.5(2)}{\volt}$ errechnet sich, unter Verwendung des Mittelwerts 
+    \begin{empheq}{equation}
+    	\mean{K} = \SI{2.0(6)}{\volt}
+    	\label{val:Auswertung_K_Mittel}
+    \end{empheq}
+     aus 
+    \cref{val:Auswertung_K_1} und \cref{val:Auswertung_K_2}, die Ionisierungsspannung zu
+   	\begin{empheq}{equation}
+   			\label{val:Asuwertung_U_Ion}
+   			U_{ion} = \SI{10.5(6)}{\volt}.  
+   	\end{empheq}
