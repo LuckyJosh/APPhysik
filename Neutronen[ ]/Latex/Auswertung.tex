@@ -1,0 +1,63 @@
+Im folgenden Abschnitt sind die während des Versuchs aufgenommenen Messwerte,
+sowie die daraus berechneten Ergebnisse tabellarisch und graphisch dargestellt.
+Die erhaltenen Fehler der Ergebnisse wurden mit Hilfe der in \cref{sec:Fehlerrechnung}
+aufgestellten Fehlergleichungen berechnet.
+
+\subsection{Bestimmung der Halbwertszeiten der zwei möglichen Zerfälle von Rhodium}
+	
+	Die bei der Messung des Zerfalls von Rhodium aufgenommenen Messwerte
+	für die Zeit $t$ und die Anzahl der gemessenen Zerfälle $N$ in \cref{tab:Auswertung_Messwerte_Rhodium}
+	eingetragen. Auch die um den, vor dem Versuch bestimmte Nulleffekt 
+	\begin{empheq}{align}
+		N_{0} &= \dfrac{306}{900}\ \si{\per\second} \cdot \Delta t\\    
+		&= \SI{0.34}{\per\second}  \cdot \Delta t 
+	\end{empheq} 
+    verringerte Anzahl an Zerfällen ist zusammen mit dem natürlichen Logarithmus
+    aus diesen Werten in \cref{tab:Auswertung_Messwerte_Rhodium} zu finden.
+    
+   	\input{Tabellen/Messwerte_Rhodium.tex} 
+   	
+   	In \cref{fig:} ist die logarithmierten Anzahl der Zerfälle $\Ln{N - N_{0}}$ aus \cref{tab:Auswertung_Messwerte_Rhodium} gegen die Zeit $t$ aufgetragen.  
+   	
+    \includeFigure[scale=0.7]{Grafiken/Messwerte_Rh.pdf}{Graphische Darstellung der logarithmierten Zerfälle ohne den Nulleffekt}{\label{fig:Auswertung_Messwerte_Rh}}
+     
+    Der Zeitpunkt ab dem nur noch der Zerfall mit der höheren Halbwertzeit messbar ist
+    wurde für die folgenden Berechnungen $t^{*} = \SI{400}{\second}$ gewählt.
+    Die Messwerte für $t > t*$ sind noch einmal in \cref{tab:Auswertung_Messwerte_Rhodium_lang} gelistet und 
+    in  \cref{fig:Auswertung_Messwerte_Rh_lang} graphisch dargestellt. Diese Darstellung ist um die Regressiongerade
+    dieser Messwerte ergänzt dir mittels \emph{SciPy} \cite{SciPy} berechnet wurde.
+    Die lineare Regression für den Ansatz
+    \begin{empheq}{equation}
+    \Ln{N} = \lambda_{l} \cdot t + c_{l},
+    \end{empheq}
+    ergibt die Parameter
+    \addtocounter{equation}{-1}
+    \begin{subequations}
+    	\begin{empheq}{align}
+    		\lambda_{l} &= \SI{0.003(2)}{\per\second} \quad \text{und} \\
+    		c_{l} &= \SI{4.4(9)}{}.
+    	\end{empheq}
+    \end{subequations}
+
+	\input{Tabellen/Messwerte_Rhodium_lang.tex}
+
+    \includeFigure[scale=0.7]{Grafiken/Messwerte_Rh_langlebig.pdf}{Graphische Darstellung der logarithmierten Zerfälle für $t > t^{*}$ }{\label{fig:Auswertung_Messwerte_Rh_lang}}
+    
+    Dabei gilt $c_{l} = \Ln{N_{a}(1 - \E{-\lambda_{l}\Delta t})}$ und somit erhält man hieraus
+    die gesuchte Konstante
+   	\begin{empheq}{equation}
+   		\E{c_{l}} = N_{a}(1 - \E{-\lambda_{l}\Delta t}) = \SI{ 70(70)}.
+   	\end{empheq}
+   	
+   	Aus der erhaltenen Steigung $\lambda_{l}$ der Regressionsgerade, welche der 
+   	Zerfallskonstante des langlebigeren Zerfalls entspricht, lässt sich mit 
+   	Hilfe von \cref{eq:Theorie_Halbwertzeit} dessen Halbwertzeit zu
+  	\begin{empheq}{equation}
+  		t_{\sfrac{1}{2}} =  \SI{277(168)}{\second}
+  	\end{empheq}
+    bestimmen.
+    
+     
+     
+     
+   

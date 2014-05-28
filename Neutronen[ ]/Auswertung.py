@@ -54,6 +54,7 @@ N_Rh = np.loadtxt("Messdaten/Rhodium.txt")
 dt_Rh, t_Rh_max = np.loadtxt("Messdaten/Rh_Zeit.txt", unpack=True)
 
 # Subtraktion des Nulleffekts
+N_Rh_Null = np.copy(N_Rh)
 N_Rh -= A_null*dt_Rh
 
 
@@ -79,7 +80,7 @@ plt.grid()
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Messwerte_Rh.pdf")
-plt.show()
+#plt.show()
 plt.clf()
 
 
@@ -111,7 +112,7 @@ plt.grid()
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Messwerte_Rh_langlebig.pdf")
-plt.show()
+#plt.show()
 plt.clf()
 
 
@@ -158,7 +159,7 @@ plt.grid()
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Messwerte_Rh_kurzlebig.pdf")
-plt.show()
+#plt.show()
 plt.clf()
 
 
@@ -183,9 +184,13 @@ print("Halbwertzeiten", HWZ_Rh_lang.format("%.3f"), HWZ_Rh_kurz)
 
 
 # Test ob  N_k << N_l gilt
+
 N_Rh_lang = np.array(np.exp(-popt_Rh_2[0]*T_Rh[:])*exp(popt_Rh_2[1]))
 N_Rh_kurz = np.array(np.exp(-popt_Rh_1[0]*T_Rh[:])*exp(popt_Rh_1[1]))
 
+
+# Plot der einzelnen Zerfallskurven und Summe
+#plt.plot(T_Rh, N_Rh, "xk", label="Messwerte")
 plt.plot(T_Rh, N_Rh_lang, "xr", label="Zerfall mit höherer HWZ")
 plt.plot(T_Rh, N_Rh_kurz, "xb", label="Zerfall mit geringerer HWZ")
 plt.plot(T_Rh, N_Rh_lang + N_Rh_kurz, "xg", label="Summer beider Zerfälle")
@@ -193,7 +198,52 @@ plt.grid()
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Theoriekurven.pdf")
-plt.show()
+#plt.show()
 plt.clf()
 
-## Print Funktionen
+
+
+######
+n_Rh_Null_err = np.sqrt(N_Rh_Null)
+N_Rh_Null_err = unp.uarray(N_Rh_Null, n_Rh_Null_err)
+
+lnN_Rh = np.log(noms(N_Rh_err))
+lnn_Rh_err = stds(N_Rh_err)/(N_Rh)
+lnN_Rh_err = unp.uarray(lnN_Rh, lnn_Rh_err)
+
+lnn_Rh_kurz_err = stds(N_Rh_kurz_err)/(noms(N_Rh_kurz_err))
+lnN_Rh_kurz_err = unp.uarray(lnN_Rh_kurz, lnn_Rh_kurz_err)
+
+# Tabellen
+T_1 = Table(siunitx=True)
+T_1.layout(seperator="column", title_row_seperator="double", border=True)
+T_1.label("Auswertung_Messwerte_Rhodium")
+T_1.caption("Gemessene Anzahl der Zerfäll, Anzahl der Zerfälle nach Subtraktion\
+ des Nulleffekts und Werte des natürlichen Logarithmusses von diesen")
+T_1.addColumn([int(t) for t in T_Rh],align="r", title="Zeit", symbol="t", unit=r"\second")
+T_1.addColumn(N_Rh_Null_err,align="c", title="Zerfälle", symbol="N")
+T_1.addColumn(N_Rh_err,align="c", title="Zerfälle", symbol="N - N_{0}")
+T_1.addColumn(lnN_Rh_err,align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{0})")
+#T_1.show()
+#T_1.save("Tabellen/Messwerte_Rhodium.tex")
+
+T_2 = Table(siunitx=True)
+T_2.layout(seperator="column", title_row_seperator="double", border=True)
+T_2.label("Auswertung_Messwerte_Rhodium_lang")
+T_2.caption("Messwerte zur Bestimmung der Halbwertszeit des langlebigen Zerfalls für t > t*")
+T_2.addColumn([int(t) for t in T_Rh[20:]],align="r", title="Zeit", symbol="t", unit=r"\second")
+T_2.addColumn(N_Rh_err[20:],align="c", title="Zerfälle", symbol="N_{l}")
+T_2.addColumn(lnN_Rh_err[20:],align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{0})")
+#T_2.show()
+#T_2.save("Tabellen/Messwerte_Rhodium_lang.tex")
+
+T_3 = Table(siunitx=True)
+T_3.layout(seperator="column", title_row_seperator="double", border=True)
+T_3.label("Auswertung_Messwerte_Rhodium_kurz")
+T_3.caption("Messwerte zur Bestimmung der Halbwertszeit des langlebigen Zerfalls für t << t*")
+T_3.addColumn([int(t) for t in T_Rh[:10]],align="r", title="Zeit", symbol="t", unit=r"\second")
+T_3.addColumn(N_Rh_err[:10],align="c", title="Zerfälle", symbol="N")
+T_3.addColumn(N_Rh_kurz_err,align="c", title="Zerfälle", symbol="N - N_{l}")
+T_3.addColumn(lnN_Rh_kurz_err,align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{0})")
+#T_3.show()
+#T_3.save("Tabellen/Messwerte_Rhodium_kurz.tex")
