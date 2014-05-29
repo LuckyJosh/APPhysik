@@ -1,0 +1,68 @@
+
+% 
+%
+% Allgemeine Theorie
+%
+%
+
+\subsection{Elemente mit einem Zerfall}
+
+
+
+
+\subsection{Elemente mit zwei unterschiedlichen Zerfällen}
+	Neben den Elementen die durch die Aktivierung mit Neutronen nur einfach zerfallen, 
+	wie das in diesem Versuch untersuchte \ce{^{116}_{49}In}, existieren auch Elemente
+	die durch die Aktivierung in zwei unterschiedlichen weisen zerfallen.
+	Als Beispiele sollen hier Silber und das in diesem Versuch untersuchte Rhodium 
+	betrachtet werden um zwei unterschiedliche Begründungen für diesen Umstand zu 
+	klären.
+	
+	Einen Grund für zwei unterschiedliche Zerfälle ist die Zusammensetzung
+	der natürlichen Elemente aus verschiedenen Isotopen. So besteht das natürliche 
+    Silber zu ungefähr gleichen Teilen aus den Isotopen \ce{^{107}_{47}Ag} und \ce{^{109}_{47}Ag},
+    die beide durch die Neutronen aktiviert werden und sich für die dabei entstandenen 
+    instabilen Kerne die beiden Zerfälle 
+	\begin{subequations}
+	 	\begin{empheq}{align}
+	 	      &\ce{^{108}_{47}Ag -> ^{108}_{48}Cd + \beta - + \overline{\nu_{e}}}\\
+	 	      &\ce{^{110}_{47}Ag -> ^{110}_{48}Cd + \beta - + \overline{\nu_{e}}}
+	 	\end{empheq}
+	\end{subequations}
+    ergeben.
+    
+    Neben dieser gibt es noch eine weitere Begründung für das Ablaufen von zwei
+    unterschiedlichen Zerfällen. Diese tritt bei dem in diesem Versuch untersuchtem
+    Rhodium \ce{^{103}_{45}Rh} auf, welches nur aus einem natürlichen Isotop besteht.
+    Bei der Aktivierung der Kerne dieses Elements entsteht in \SI{10}{\percent} der
+    Fälle ein, zum sonst entstehenden \ce{^{104}_{45}Rh}, isomerer Kern \ce{^{104i}_{45}Rh}.
+    Dieser unterscheidet sich nicht in der Anzahl sondern in der Konfiguration der 
+    Nukleonen und damit in der Energie des Kerns. Es ergeben sich somit die 
+    zwei möglichen Zerfälle der aktivierten Kerne
+   	\begin{subequations}
+   	 	\begin{empheq}{align}
+   	 		  &\ce{^{104}_{45}Rh -> ^{104}_{46}Pd + \beta - + \overline{\nu_{e}}} \quad \text{und}\\
+	 	      &\cee{^{104i}_{45}Rh -> ^{104}_{45}Rh + \gamma  \longrightarrow  ^{104}_{46}Pd + \beta - + \overline{\nu_{e}}}. 
+   	 	\end{empheq}
+   	\end{subequations}
+
+	In beiden Fällen, sowohl bei Silber als auch bei Rhodium, können beide Zefälle gleichzeitig Untersucht werden.
+	Dies ist zum einen möglich da, das verwendete Geiger-Müller-Zählrohr sowohl die  Betazerfälle der Silberisotope
+    und des Rhodiumisotops \ce{^{104}_{45}Rh} als auch die Gammastrahlung des isomeren Kerns \ce{^{104i}_{45}Rh}
+    nachweisen kann. Zum anderen besitzen die beiden Zerfälle jeweils eines Elements unterschiedliche Halbwertszeiten,
+    so dass sie sich in der Auswertung des Versuchs  lassen und so getrennt von einander bestimmen lassen.\\   
+    
+    Zur Auswertung beider Zerfälle werden die logarithmierten Messwerte $\Ln{N(t)}$, wie in
+     \cref{fig:Theorie_DoppelteAuswertung}, gegen die Zeit $t$ aufgetragen. 
+    Da einer der beiden Zerfälle, wegen der unterschiedlichen Halbwertszeit, jeweils schneller abklingt
+    als der andere, lässt sich ein Übergang des zunächst gekrümmten Verlaufs der Messwerte in ein linearen beobachten.
+    An der Stelle dieses Übergangs wird der Zeitpunkt $t^{*}$ gewählt, ab dem die Messwerte wie bei einem 
+    einfachen Zerfall linear ausgeglichen werden.
+    
+    Mit dem so bestimmten langlebigen Zerfall $N_{l}(t)$ lässt sich nun durch Subtraktion der Werte $N_{l}(t_{i})$
+    für $t_{i} << t^{*}$ von den Messwerten $N(t)$ der Verlauf des kurzlebigen Zerfalls bestimmen, der analog 
+ 	zum langlebigen Zerfall linear ausgeglichen wird. Durch dieses Vorgehen erhält man nun den das Zerfallsgesetz
+ 	$N_{k}(t)$ der kurzlebigen Kerne.   
+       
+    \includeFigure[scale=0.7]{Grafiken/DoppelteAuswertung.png}{Graphische Darstellung des Vorgehens zur Auswertung von
+    zwei gleichzeitig ablaufenden Zerfällen}{\label{fig:Theorie_DoppelteAuswertung}}
