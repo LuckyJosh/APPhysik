@@ -93,3 +93,28 @@ aufgestellten Fehlergleichungen berechnet.
     
     \includeFigure[scale=0.7]{Grafiken/Theoriekurven.pdf}{Graphische Darstellung der in der Auswertung bestimmten Zerfallsgesetze und deren summierter Zerfall im Vergleich zu den Messwerten}{\label{fig:Auswertung_Rh_Ergebniss}} 
      
+\subsection{Bestimmung der Halbwertszeit von Indium}
+Ziel dieses Abschnitts ist es, die Halbwertszeit von $^{115}$In zu ermitteln. Die notwendigen Messdaten und Ergebnisse sind im Folgenden sowohl tabellarisch als auch grafisch dargestellt. Bei diesem Teil des Experiments wurden die Zerfälle N nach Zeitintervallen von $\Delta t$=200s über einen Zeitraum von 60min notiert. Wie schon zuvor, ergibt sich der statistische Fehler eines radioaktiven Zerfallsprozesses nach $\sigma =\sqrt{N}$. Bei der Korrektur um den Nulleffekt ergibt sich der Wert des resultierenden Fehlers erneut nach der Fehlerfortpflanzung zu $\sigma=\sqrt{\sigma_N^2+\sigma_{N_0}^2}$.
+
+\input{Tabellen/Indium.tex}
+
+\begin{figure}[htbp]
+\centering{\includegraphics[scale=0.3]{Grafiken/702_Indium.PNG}}
+\caption{Messdaten der Indium-Zerfälle mit Ausgleichsgerader}
+\label{fig:Abbildung}
+\end{figure}
+Um nun die Zerfallskonstante $\lambda$ zu bestimmen wird eine lineare Ausgleichsrechnung durchgeführt. Hierbei werden die logarthmisierten Zerfälle als Funktion der Zeit aufgetragen und mithilfe von Gnuplot die Parameter einer Regressionsgeraden mit der Form f(x)=a$\cdot$x+b errechnet. Diese Form leitet sich aus der folgenden Gleichung her:
+\begin{align*}
+\ln(N-N_0)=\ln N_a(1-e^{-\lambda\Delta t})-\lambda t
+\end{align*}
+Hier ist $N_a$ die unbekannte Anzahl an Kernen der Indium Probe und $\Delta$t das Zeitintervall während der Messung. Die Parameter der Regressionsgeraden lauten:
+\begin{align*}
+\lambda&=0.000218\pm 0.000007s^{-1}\\
+\ln N_0(1-e^{-\lambda\Delta t})&=7.946\pm0.0159\\
+\end{align*}
+
+Daraus lässt sich nun gemäß der Relation $T_{1/2}=ln(2)/\lambda$ die Halbzeit von Indium berechnen. Der Fehler ergibt sich durch Anwendung der Gauß'schen Fehlerfortpflanzung zu $\Delta T_{1/2}=\frac{ln(2)}{\lambda^2}\cdot \Delta\lambda$:
+
+\begin{align*}
+\rightarrow T_{1/2}=(3179.6\pm 102.1)s
+\end{align*}
