@@ -18,9 +18,21 @@
 
 
 \refsection{0}
-  \sortlist{entry}{nty}
+  \sortlist{entry}{none}
+    \entry{V702}{manual}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{V701 Reichweite von Alphastrahlung}
+      \field{title}{Versuchsanleitung}
+      \field{urlday}{29}
+      \field{urlmonth}{05}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V702.pdf
+      \endverb
+    \endentry
     \entry{SciPy}{misc}{}
-      \field{sortinit}{S}
+      \field{sortinit}{0}
       \field{labeltitle}{SciPy}
       \field{title}{SciPy}
       \field{urlday}{21}
