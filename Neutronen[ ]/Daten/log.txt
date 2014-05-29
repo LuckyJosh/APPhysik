@@ -1,0 +1,4 @@
+Parameter Exp. Regression a,b : 0.0025+/-0.0015 4.4+/-0.9
+Parameter Exp. Regression a,b : 0.0128+/-0.0032 4.9+/-0.4
+Konstanten C_l, C_k: 77.552+/-72.102 128.092+/-50.400
+Halbwertzeiten 277.606+/-168.382 54+/-13

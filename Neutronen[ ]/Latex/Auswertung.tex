@@ -46,18 +46,50 @@ aufgestellten Fehlergleichungen berechnet.
     Dabei gilt $c_{l} = \Ln{N_{a}(1 - \E{-\lambda_{l}\Delta t})}$ und somit erhält man hieraus
     die gesuchte Konstante
    	\begin{empheq}{equation}
-   		\E{c_{l}} = N_{a}(1 - \E{-\lambda_{l}\Delta t}) = \SI{ 70(70)}.
+   		\E{c_{l}} = N_{a}(1 - \E{-\lambda_{l}\Delta t}) = \SI{70(70)}{}.
    	\end{empheq}
    	
    	Aus der erhaltenen Steigung $\lambda_{l}$ der Regressionsgerade, welche der 
    	Zerfallskonstante des langlebigeren Zerfalls entspricht, lässt sich mit 
    	Hilfe von \cref{eq:Theorie_Halbwertzeit} dessen Halbwertzeit zu
   	\begin{empheq}{equation}
-  		t_{\sfrac{1}{2}} =  \SI{277(168)}{\second}
+  		t_{\sfrac{1}{2},l} =  \SI{277(168)}{\second}
   	\end{empheq}
-    bestimmen.
+    bestimmen.\\
     
+    Durch die zuvor bestimmten Parameter ist es nun möglich, das Zerfallsgesetz für die langlebigeren Kerne
+    aufzustellen und somit die Zerfallskurve vor dem Zeitpunkt $t*$ zu bestimmen. Durch Subtraktion dieser
+    Zerfälle von den Messwerten für $t << t*$ erhält man die Zerfälle der kurzlebigen Kerne. Die Ergebnisse
+    dieses Vorgehens sind in \cref{tab:Auswertung_Messwerte_Rhodium_kurz} zu finden und in \cref{fig:Auswertung_Messwerte_Rh_kurz} graphisch dargestellt.
+    
+    \input{Tabellen/Messwerte_Rhodium_kurz}
+    
+    \includeFigure[scale=0.7]{Grafiken/Messwerte_Rh_kurzlebig.pdf}{Graphische Darstellung der logarithmierten Zerfälle% 
+    für $t << t^{*}$ }{\label{fig:Auswertung_Messwerte_Rh_kurz}} 
      
+    Aus der, mit \emph{SciPy} durchgeführten, linearen Regression mit dem Ansatz
+    \begin{empheq}{equation}
+    \Ln{N} = \lambda_{k} \cdot t + c_{k},
+    \end{empheq}
+    ergeben sich die Parameter zu
+    \addtocounter{equation}{-1}
+    \begin{subequations}
+       	\begin{empheq}{align}
+       		\lambda_{k} &= \SI{0.013(3)}{\per\second} \quad \text{und} \\
+       		c_{k} &= \SI{4.9(4)}{}.
+       	\end{empheq}
+    \end{subequations}  
+    Die daraus erhaltene Gerade ist ebenfalls in \cref{fig:Auswertung_Messwerte_Rh_kurz} eingezeichnet.
+    
+    Analog zu dem Zerfall der langlebigeren Kerne, erhält man aus den bestimmten Regressionsparametern
+    die gesuchte Konstante $\E{c_{k}}$ und die Halbwertzeit $t_{\sfrac{1}{2},k}$ dieses Zerfalls zu
+    \begin{empheq}{align}
+   		\E{c_{k}} &= N_{a}(1 - \E{-\lambda_{k}\Delta t}) = \SI{128(50)}{} \quad \text{und}\\
+   		t_{\sfrac{1}{2},k} &=  \SI{54(13)}{\second}.
+   	\end{empheq}
+    
+    Die auf diese Weise bestimmten Zerfallsgesetze sind in \cref{fig:} zusammen mit der Summe beider Zerfäll
+    und den ursprünglichen Messwerten ohne den Nulleffekt aufgetragen.
+    
+    \includeFigure[scale=0.7]{Grafiken/Theoriekurven.pdf}{Graphische Darstellung der in der Auswertung bestimmten Zerfallsgesetze und deren summierter Zerfall im Vergleich zu den Messwerten}{\label{fig:Auswertung_Rh_Ergebniss}} 
      
-     
-   
