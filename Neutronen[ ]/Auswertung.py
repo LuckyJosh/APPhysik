@@ -194,14 +194,16 @@ N_Rh_kurz = np.array(np.exp(-popt_Rh_1[0]*T_RH[:])*exp(popt_Rh_1[1]))
 # Plot der einzelnen Zerfallskurven und Summe
 
 #plt.plot(T_Rh, N_Rh, "xk", label="Messwerte")
-plt.plot(T_RH, [m.log(x) for x in N_Rh_lang], "-g", label="Zerfall mit höherer HWZ")
-plt.plot(T_RH, [m.log(x) for x in N_Rh_kurz], "-b", label="Zerfall mit geringerer HWZ")
+plt.plot(T_RH, [m.log(x) for x in N_Rh_lang], "-g", label="Zerfall mit hoher $T_{1/2}$")
+plt.plot(T_RH, [m.log(x) for x in N_Rh_kurz], "-b", label="Zerfall mit niedriger $T_{1/2}$")
 plt.plot(T_RH, [m.log(x) for x in (N_Rh_lang + N_Rh_kurz)], "-k", label="Summer beider Zerfälle")
 # Messdaten
 plt.errorbar(T_Rh, np.log(N_Rh), yerr=stds(N_Rh_err)/N_Rh, fmt="rx", label="Messwerte")
 plt.grid()
 plt.xlim(0,730)
 plt.ylim(0,6)
+plt.xlabel(r"Zeit $t\ [s]$", fontsize=14, family="serif")
+plt.ylabel(r"Logarithmierte Zerfälle $\ln(N)$", fontsize=14, family="serif")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Theoriekurven.pdf")

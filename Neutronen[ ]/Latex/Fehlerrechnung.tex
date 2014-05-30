@@ -5,17 +5,26 @@ Größen wurden dabei mit Hilfe der gaußschen Fehlerrechnung bestimmt. \\
 Der Fehler der Messwerte für die Anzahl der Zerfälle $N$ ergibt sich  aus
 \begin{errorEquation}
 	\sigma_{N} = \sqrt{N}.
+	\label{std:Abweichung Messwerte}
 \end{errorEquation}
 
 
 Den Fehler des Logarithmus  $\Ln{x}$ einer fehlerbehafteten Größe $x$ erhält man aus
 \begin{errorEquation}
-	 \sigma_{\ln} = \dfrac{\sigma_{x}}{x} 
+	 \sigma_{\ln} = \dfrac{\sigma_{x}}{x}. 
+	 \label{std:ln}
 \end{errorEquation}
 
 
 Für den Wert der Exponentialfunktion $\E{x}$ berechnet sich der Fehler durch
 \begin{errorEquation}
-	 \sigma_{\exp} = \E{x} \cdot \sigma_{x} 
+	 \sigma_{\exp} = \E{x} \cdot \sigma_{x}. 
+	 \label{std:Exp}
 \end{errorEquation}
  
+ 
+ Der Fehler der Halbwertszeiten berechnet sich durch
+ \begin{errorEquation}
+ 	 \sigma_{t_{\sfrac{1}{2}}} = \dfrac{\sigma_{\lambda} \cdot \Ln{2}}{\lambda^{2}}. 
+ 	 \label{std:Halbwertszeit}
+ \end{errorEquation}

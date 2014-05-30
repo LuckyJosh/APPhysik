@@ -42,6 +42,25 @@
       \verb http://docs.scipy.org/doc/
       \endverb
     \endentry
+    \entry{NuklidKarte_Rh}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=c5fa17d2a3e35a147173c46b17b9ea8d}{Center}{C\bibinitperiod}{National\bibnamedelimb Nuclear\bibnamedelima Data}{N\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c5fa17d2a3e35a147173c46b17b9ea8d}{Center}{C\bibinitperiod}{National\bibnamedelimb Nuclear\bibnamedelima Data}{N\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c5fa17d2a3e35a147173c46b17b9ea8d}
+      \strng{fullhash}{c5fa17d2a3e35a147173c46b17b9ea8d}
+      \field{sortinit}{0}
+      \field{labeltitle}{Interactive Chart of Nuclides: Rhodium}
+      \field{title}{Interactive Chart of Nuclides: Rhodium}
+      \field{urlday}{30}
+      \field{urlmonth}{05}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.nndc.bnl.gov/chart/reCenter.jsp?z=45&n=59
+      \endverb
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
