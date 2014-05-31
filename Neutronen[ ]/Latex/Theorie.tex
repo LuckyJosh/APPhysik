@@ -1,9 +1,61 @@
 
-% 
-%
-% Allgemeine Theorie
-%
-%
+\subsection{Aktivierung mit Neutronen}
+In diesem Versuch sollen stabile Kerne durch Absorption eines zusätzlichen Neutrons in instabile Isotope verwandelt werden. Ein auf diese Weise erzeugter Kern wird als Zwischenkern oder Compoundkern bezeichnet, dessen Gesamtenergie um den Betrag der kinetischen Energie und Bindungsenergie des eingefangenen Neutrons erhöht ist. Dadurch, dass die gewonnene Energie schnell auf alle Nukleonen verteilt wird, kann der Kern, um in wieder in seinen energetischen Grundzustand überzugehen, nur ein $\gamma$-Quant emittieren. Die stattfindene Reaktion hat folgende Gestalt:
+\begin{empheq}{align*}
+^m_zA+^1_0n\rightarrow _z^{m+1} A^\ast \rightarrow _z^{m+1} A+\gamma.
+\end{empheq}
+\begin{empheq}{align*}
+m&=\text{Massenzahl}\\
+z&=\text{Ordnungszahl}\\
+\end{empheq}
+
+Der neue Kern $_z^{m+1}A$ ist zwar nicht stabil, da er zu viele Neutronen enthält, aber aufgrund der $\gamma$-Emmission langlebiger als $_z^{m+1}A^\ast$. Eine weiter Kernreaktion ermöglicht dann die Rückkehr in einen stabileren Zustand. Hierbei wird gemäß der folgenden Reaktionsgleichung ein Neutron in ein Elektron und Proton verwandelt. 
+\begin{empheq}{equation*}
+_z^{m+1}A\rightarrow _{z+1}^{m+1}C+\beta^-+E_{kin}+\overline{\nu_e}
+\end{empheq}
+\begin{empheq}{align*}
+\overline{\nu_e}&= \text{Antineutrino}\\
+\beta^-&=\text{Elektron}\\
+\end{empheq}
+\newline
+%\newline
+Der Wirkungsquerschnitt $\sigma$ ist ein Maß für die Wahrscheinlickkeit mit der ein stabiler Kern ein freies Neutron einfängt. Anschaulich ist damit eine Trefferfläche gemeint, die dem jeweiligen Targetteilchen zugeordnet wird. Zur Definition des Wirkungsquerschnitts zieht man \SI{1}{\square\centi\meter} einer dünnen Folie heran, in einer Sekunde von $n$ Elektronen getroffen wird. Die Anzahl der Einfänge wird mit $u$ bezeichnet.
+\begin{empheq}{equation*}
+\sigma=\frac{u}{nKd}
+\end{empheq}
+
+\begin{empheq}{align*}
+K&=\text{Atome}/\si{\centi\meter\cubed}\\
+d&=\text{Dicke der Goldfolie}\\
+\end{empheq}
+Die Wahrscheinlichkeit, dass ein Neutron eingefangen wird ist in hohem Maße abhängig von der Neutronengeschwindigkeit. Ein Kriterium zur Unterscheidung zwischen schnellen und langsamen Neutronen lässt sich mithilfe der De-Broglie Relation formulieren. Ein Neutron mit der Geschwindigkeit v hat folgende De-Broglie Wellenlänge:
+\begin{empheq}{equation*}
+\lambda=\frac{h}{m_n\cdot v}
+\end{empheq}
+Ist hierbei die Wellenlänge $\lambda$ klein gegenüber dem Radius R des Atomkerns, so kann die Streuung der Neutronen, ähnlich wie in der Optik, geometrisch betrachtet werden. Diese Herangehensweise verliert jedoch ihre Gültigkeit bei langsamen Elektronen mit $R\le \lambda$, da hier ebenfalls in Analogie zur Optik, Interferenzeffekte bei Streuungen berücksichtigt werden.
+\newline
+\newline
+Der Wirkungsquerschnitt lässt sich als Funktion der Neutronenenergie angeben, wie Breit und Wigner herausfanden:
+\begin{empheq}{equation*}
+\sigma=(E)=\sigma_0\sqrt{\frac{E_{r_i}}{E}}\frac{\tilde c}{(E-E_{r_i})^2+\tilde c}
+\end{empheq}
+Hierbei stellen $\tilde c$ und $\sigma_0$ charakteristische Konstanten und $E_{r_i}$ die Energieniveaus des Compoundkerns dar. Unter der Annahme, dass $E_{r_i}\gg E$ folgt eine einfache Regel für die Abhängigkeit des Wirkungsquerschnitts von der Neutronenenergie:
+\begin{empheq}{equation*}
+\sigma \propto \frac{1}{\sqrt{E}} \propto \frac{1}{v}
+\end{empheq}
+
+Dieses Ergebnis ist konsistent mit der intuitiven Vorstellung, dass ein langsames Neutron sich längere Zeit in dem 
+Wirkungsbereich der starken Kernkraft aufhält, was zu einer Erhöhung der Einfangwahrscheinlichkeit führt. 
+
+\section{Erzeugung thermischer Neutronen}
+Aufgrund der genannten Argumente erscheint es nun sinnvoll in diesem Versuch niedrig energetische Neutronen zu verwenden, da hier eine optimale Ausbeute an Kernreaktionen wahrscheinlich ist. Derartige Neutronen müssen allerdings zunächst durch einen geeigneten Prozess erzeugt werden. In diesem Fall werden durch Beschuss von $^9Be$ mit $\alpha$-Teilchen Neutronen freigesetzt.
+
+\begin{empheq}{align*}
+_4^9Be+_2^4\alpha \rightarrow _6^{12}Be+_0^1n 
+\end{empheq}
+
+Um die kinetische Energie der Neutronen zu senken, ist die Neutronenquelle mit einem Mantel aus Paraffin umgeben. Beim Diffundieren durch diese Schicht geben die Neutronen Energie durch Stoßprozesse ab, bis ihre mittlere kinetische Energie etwa \SI{0.025}{\eV} bei ca. $T= \SI{290}{\kelvin}$ beträgt. Diese Neutronen werden als thermische Neutronen bezeichnet.
+
 
 \subsection{Elemente mit einem Zerfall}
 
