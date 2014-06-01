@@ -2,7 +2,7 @@
 \subsection{Aktivierung mit Neutronen}
 In diesem Versuch sollen stabile Kerne durch Absorption eines zusätzlichen Neutrons in instabile Isotope verwandelt werden. Ein auf diese Weise erzeugter Kern wird als Zwischenkern oder Compoundkern bezeichnet, dessen Gesamtenergie um den Betrag der kinetischen Energie und Bindungsenergie des eingefangenen Neutrons erhöht ist. Dadurch, dass die gewonnene Energie schnell auf alle Nukleonen verteilt wird, kann der Kern, um in wieder in seinen energetischen Grundzustand überzugehen, nur ein $\gamma$-Quant emittieren. Die stattfindene Reaktion hat folgende Gestalt:
 \begin{empheq}{align*}
-^m_zA+^1_0n\rightarrow _z^{m+1} A^\ast \rightarrow _z^{m+1} A+\gamma.
+\ce{^m_zA + ^1_0n -> _z^{m+1} A^\ast}\ce{-> _z^{m+1} A +\gamma}.
 \end{empheq}
 \begin{empheq}{align*}
 m&=\text{Massenzahl}\\
@@ -11,7 +11,7 @@ z&=\text{Ordnungszahl}\\
 
 Der neue Kern $_z^{m+1}A$ ist zwar nicht stabil, da er zu viele Neutronen enthält, aber aufgrund der $\gamma$-Emmission langlebiger als $_z^{m+1}A^\ast$. Eine weiter Kernreaktion ermöglicht dann die Rückkehr in einen stabileren Zustand. Hierbei wird gemäß der folgenden Reaktionsgleichung ein Neutron in ein Elektron und Proton verwandelt. 
 \begin{empheq}{equation*}
-_z^{m+1}A\rightarrow _{z+1}^{m+1}C+\beta^-+E_{kin}+\overline{\nu_e}
+\ce{_z^{m+1}A -> _{z+1}^{m+1}C + \beta^- + E_{kin} + \overline{\nu_e}}
 \end{empheq}
 \begin{empheq}{align*}
 \overline{\nu_e}&= \text{Antineutrino}\\
@@ -47,18 +47,45 @@ Hierbei stellen $\tilde c$ und $\sigma_0$ charakteristische Konstanten und $E_{r
 Dieses Ergebnis ist konsistent mit der intuitiven Vorstellung, dass ein langsames Neutron sich längere Zeit in dem 
 Wirkungsbereich der starken Kernkraft aufhält, was zu einer Erhöhung der Einfangwahrscheinlichkeit führt. 
 
-\section{Erzeugung thermischer Neutronen}
+\subsection{Erzeugung thermischer Neutronen}
 Aufgrund der genannten Argumente erscheint es nun sinnvoll in diesem Versuch niedrig energetische Neutronen zu verwenden, da hier eine optimale Ausbeute an Kernreaktionen wahrscheinlich ist. Derartige Neutronen müssen allerdings zunächst durch einen geeigneten Prozess erzeugt werden. In diesem Fall werden durch Beschuss von $^9Be$ mit $\alpha$-Teilchen Neutronen freigesetzt.
 
-\begin{empheq}{align*}
-_4^9Be+_2^4\alpha \rightarrow _6^{12}Be+_0^1n 
-\end{empheq}
+\begin{equation*}
+	\ce{_4^9Be + _2^4\alpha}\ce{->} \ce{_6^{12}Be +_0^1n} 
+\end{equation*}
 
 Um die kinetische Energie der Neutronen zu senken, ist die Neutronenquelle mit einem Mantel aus Paraffin umgeben. Beim Diffundieren durch diese Schicht geben die Neutronen Energie durch Stoßprozesse ab, bis ihre mittlere kinetische Energie etwa \SI{0.025}{\eV} bei ca. $T= \SI{290}{\kelvin}$ beträgt. Diese Neutronen werden als thermische Neutronen bezeichnet.
 
 
 \subsection{Elemente mit einem Zerfall}
 
+Ein Ziel dieses Versuchs ist es die Halbwertszeit des Isotops $^{115}In$ zu ermitteln. Dazu wird zunächst eine Probe des Indiums mithilfe der Neutronenquelle aktiviert, bevor die Zerfälle mit dem Geiger-Müller Zählrohr gezählt werden können. Die Aktivierung und der Zerfall laufen nach folgender Reaktion ab:
+\begin{align*}
+\ce{_{49}^{115}In + _0^1n} \ce{->} \ce{_{49}^{116}In -> _{50}^{116}Sn + \beta^- +\overline{\nu_e}}
+\end{align*}
+Für radioaktive Zerfälle gilt das Zerfallsgesetz:
+\begin{align*}
+N(t)&=N_0\cdot e^{-\lambda t}\\
+N_0&=\text{Anzahl der Kerne bei t=0}\\
+\lambda&=\text{Zerfallskonstante}
+\end{align*}
+Aus dieser Gleichung lässt sich durch Logarithmisierung die Halbwertzeit $T_{1/2}$ gewinnnen:
+\begin{align}
+\notag
+\frac{1}{2}N_0&=N_0\cdot e^{-\lambda t}\\
+\Rightarrow T_{1/2}&=\frac{ln2}{\lambda}
+\label{eq:Theorie_Halbwertszeit}
+\end{align}
+Zwar ließe sich aus dieser Beziehung die Halbwertszeit errechnen, jedoch ist es schwierig einen guten Wert für N(t) zu bestimmen. Daher wählt man ein Zeitintervall $\Delta t$ und ermittelt $N_{\Delta t}(t)$ in Abhängigkeit von der Zeit mithilfe eines Strahlungsdetektors. Die Definition von $N_{\Delta t}(t)$ lautet:
+\begin{align*}
+N_{\Delta t}(t)=N(t)-N(t+\Delta t)
+\end{align*}
+Mithilfe des bereits genannten Zerfallsgesetz folgt daraus:
+\begin{align*}
+N_{\Delta t}(t)&=N_0e^{-\lambda t}-N_0e^{-\lambda(t+\Delta t)}\\
+\Longleftrightarrow \ln N_{\Delta t}(t)&=\ln N_0(1-e^{-\lambda \Delta t})-\lambda\cdot t\\
+\end{align*}
+Die Wahl des richtigen Zeitintervalls $\Delta t$ ist sensibel und muss gegebenenfalls durch Vorversuche ermittelt werden. In diesem Versuch sind nützliche Werte im Labor angegeben. 
 
 
 
@@ -94,7 +121,7 @@ Um die kinetische Energie der Neutronen zu senken, ist die Neutronenquelle mit e
    	\begin{subequations}
    	 	\begin{empheq}{align}
    	 		  &\ce{^{104}_{45}Rh -> ^{104}_{46}Pd + \beta - + \overline{\nu_{e}}} \quad \text{und}\\
-	 	      &\cee{^{104i}_{45}Rh -> ^{104}_{45}Rh + \gamma  \longrightarrow  ^{104}_{46}Pd + \beta - + \overline{\nu_{e}}}. 
+	 	      &\cee{^{104i}_{45}Rh -> ^{104}_{45}Rh + \gamma}\ce{->  ^{104}_{46}Pd + \beta - + \overline{\nu_{e}}}. 
    	 	\end{empheq}
    	\end{subequations}
 

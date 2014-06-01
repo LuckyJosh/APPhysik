@@ -25,7 +25,7 @@ aufgestellten Fehlergleichungen berechnet.
     
    	\input{Tabellen/Messwerte_Rhodium.tex} 
    	
-   	In \cref{fig:} ist die logarithmierten Anzahl der Zerfälle $\Ln{N - N_{0}}$ aus \cref{tab:Auswertung_Messwerte_Rhodium} gegen die Zeit $t$ aufgetragen.  
+   	In \cref{fig:Auswertung_Messwerte_Rh} ist die logarithmierten Anzahl der Zerfälle $\Ln{N - N_{0}}$ aus \cref{tab:Auswertung_Messwerte_Rhodium} gegen die Zeit $t$ aufgetragen.  
    	
     \includeFigure[scale=0.7]{Grafiken/Messwerte_Rh.pdf}{Graphische Darstellung der logarithmierten Zerfälle ohne den Nulleffekt}{\label{fig:Auswertung_Messwerte_Rh}}
      
@@ -59,7 +59,7 @@ aufgestellten Fehlergleichungen berechnet.
    	
    	Aus der erhaltenen Steigung $\lambda_{l}$ der Regressionsgerade, welche der 
    	Zerfallskonstante des langlebigeren Zerfalls entspricht, lässt sich mit 
-   	Hilfe von \cref{eq:Theorie_Halbwertzeit} dessen Halbwertzeit zu
+   	Hilfe von \cref{eq:Theorie_Halbwertszeit} dessen Halbwertzeit zu
   	\begin{empheq}{equation}
   		t_{\sfrac{1}{2},l} =  \SI{277(168)}{\second}
   	\end{empheq}
@@ -119,13 +119,15 @@ Um nun die Zerfallskonstante $\lambda$ zu bestimmen wird eine lineare Ausgleichs
 \begin{align*}
 \ln(N-N_0)=\ln N_a(1-e^{-\lambda\Delta t})-\lambda t
 \end{align*}
-Hier ist $N_a$ die unbekannte Anzahl an Kernen der Indium Probe und $\Delta$t das Zeitintervall während der Messung. Die Parameter der Regressionsgeraden lauten:
+Hier ist $N_a$ die unbekannte Anzahl an Kernen der Indium Probe und $\Delta$t das Zeitintervall während der Messung. 
+Die Parameter der Regressionsgeraden lauten:
 \begin{align*}
 \lambda&=0.000218\pm 0.000007s^{-1}\\
 \ln N_0(1-e^{-\lambda\Delta t})&=7.946\pm0.0159\\
 \end{align*}
 
-Daraus lässt sich nun gemäß der Relation \cref{eq:Theorie_Halbwertzeit} die Halbzeit von Indium berechnen. Der Fehler ergibt sich durch Anwendung von \cref{std:Halbwertszeit}:
+Daraus lässt sich nun gemäß der Relation \cref{eq:Theorie_Halbwertszeit} die Halbzeit von Indium berechnen. Der Fehler 
+ergibt sich durch Anwendung von \cref{std:Halbwertszeit}:
 
 \begin{align*}
 \rightarrow T_{1/2}=(3179.6\pm 102.1)s
