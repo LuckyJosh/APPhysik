@@ -1946,8 +1946,9 @@
     <bcf:citekey order="3">V702</bcf:citekey>
     <bcf:citekey order="4">V702</bcf:citekey>
     <bcf:citekey order="5">SciPy</bcf:citekey>
-    <bcf:citekey order="6">NuklidKarte_Rh</bcf:citekey>
-    <bcf:citekey order="7">NuklidKarte_In</bcf:citekey>
+    <bcf:citekey order="6">SciPy</bcf:citekey>
+    <bcf:citekey order="7">NuklidKarte_Rh</bcf:citekey>
+    <bcf:citekey order="8">NuklidKarte_In</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="none">
   <bcf:sorting>
