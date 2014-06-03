@@ -9,8 +9,8 @@ Theoriewert: 36.25 26.3636363636 27.1028037383
 Abweichung vom Theoriewert: 0.163+/-0.023
 Unterschied der Ergebnisse: 4.0+/-0.8 0.150+/-0.032 3.2+/-0.8 0.119+/-0.031
 Sinusspannung: 79.84+/-0.04 79.880+/-0.020 79.840+/-0.010 79.840+/-0.005
-79.850+/-0.012
-0.00866025403784
+Mittelwert: 79.850+/-0.012
+Mittelwert_std: 0.00866025403784
 B Fehler: \sigma_{B_d}=\frac{8 \sqrt{5}}{25} \sqrt{\frac{M^{2} N^{2}}{R^{2}} \sigma_{I}^{2}}
 Ausgleichsgerade VII: 94.1+/-1.0 0.00010+/-0.00009
 Ausgleichsgerade VIII: 85.4+/-1.1 0.00010+/-0.00010
@@ -18,7 +18,7 @@ Ausgleichsgerade IX: 80.0+/-0.8 (3+/-6)e-05
 Ausgleichsgerade X: 78.8+/-1.7 0.00008+/-0.00013
 Spezifische Ladung: (1.77+/-0.05)e+11 (1.75+/-0.05)e+11 (1.79+/-0.04)e+11 (1.99+/-0.09)e+11
 Mittelwert: (1.770+/-0.029)e+11
-Mittelwert: 0.00869012306313
+Mittelwert_std: 0.00869012306313 e+11
 Abweichung vom Lit-wert: [0.006027175879116612+/-0.029750410513696715
  0.005431969635975007+/-0.030992872352792907
  0.018445343649974393+/-0.02372794510854169
