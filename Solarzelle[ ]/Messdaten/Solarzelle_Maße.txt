@@ -1,0 +1,2 @@
+#Anzahl	#Seitenlänge[cm]	# Offset der Solarzelle[cm] # Offset_Lampe[cm]
+8		2.5					3.5							14  	
