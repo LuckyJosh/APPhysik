@@ -117,7 +117,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortscheme</bcf:key>
-      <bcf:value>nty</bcf:value>
+      <bcf:value>none</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
@@ -165,6 +165,7 @@
         <bcf:map_step map_field_set="type" map_field_value="techreport"/>
       </bcf:map>
       <bcf:map>
+        <bcf:map_step map_field_source="hyphenation" map_field_target="langid"/>
         <bcf:map_step map_field_source="address" map_field_target="location"/>
         <bcf:map_step map_field_source="school" map_field_target="institution"/>
         <bcf:map_step map_field_source="annote" map_field_target="annotation"/>
@@ -598,30 +599,7 @@
   <bcf:sorting>
     <bcf:presort>mm</bcf:presort>
     <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
-      <bcf:sortitem order="2">0000</bcf:sortitem>
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
     </bcf:sort>
   </bcf:sorting>
   <!-- DATA MODEL -->
@@ -713,7 +691,6 @@
       <bcf:field fieldtype="field" datatype="literal">eventtitleaddon</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">gender</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">howpublished</bcf:field>
-      <bcf:field fieldtype="field" datatype="literal">hyphenation</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">indexsorttitle</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">indextitle</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">isan</bcf:field>
@@ -728,6 +705,8 @@
       <bcf:field fieldtype="field" datatype="literal">journalsubtitle</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">journaltitle</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">label</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">langid</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">langidopts</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">library</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">mainsubtitle</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">maintitle</bcf:field>
@@ -848,7 +827,6 @@
       <bcf:field>execute</bcf:field>
       <bcf:field>file</bcf:field>
       <bcf:field>gender</bcf:field>
-      <bcf:field>hyphenation</bcf:field>
       <bcf:field>ids</bcf:field>
       <bcf:field>indextitle</bcf:field>
       <bcf:field>indexsorttitle</bcf:field>
@@ -857,6 +835,8 @@
       <bcf:field>iswc</bcf:field>
       <bcf:field>keywords</bcf:field>
       <bcf:field>label</bcf:field>
+      <bcf:field>langid</bcf:field>
+      <bcf:field>langidopts</bcf:field>
       <bcf:field>library</bcf:field>
       <bcf:field>lista</bcf:field>
       <bcf:field>listb</bcf:field>
@@ -1056,8 +1036,10 @@
       <bcf:field>note</bcf:field>
       <bcf:field>number</bcf:field>
       <bcf:field>origlanguage</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
       <bcf:field>publisher</bcf:field>
       <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
       <bcf:field>subtitle</bcf:field>
       <bcf:field>titleaddon</bcf:field>
       <bcf:field>translator</bcf:field>
@@ -1959,35 +1941,19 @@
     <bcf:datasource type="file" datatype="bibtex">../_globales/latex/Literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">SciPy</bcf:citekey>
+    <bcf:citekey order="1">V702</bcf:citekey>
+    <bcf:citekey order="2">V702</bcf:citekey>
+    <bcf:citekey order="3">V702</bcf:citekey>
+    <bcf:citekey order="4">V702</bcf:citekey>
+    <bcf:citekey order="5">SciPy</bcf:citekey>
+    <bcf:citekey order="6">SciPy</bcf:citekey>
+    <bcf:citekey order="7">NuklidKarte_Rh</bcf:citekey>
+    <bcf:citekey order="8">NuklidKarte_In</bcf:citekey>
   </bcf:section>
-  <bcf:sortlist section="0" type="entry" label="nty">
+  <bcf:sortlist section="0" type="entry" label="none">
   <bcf:sorting>
     <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
-      <bcf:sortitem order="2">0000</bcf:sortitem>
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
     </bcf:sort>
   </bcf:sorting>
   </bcf:sortlist>

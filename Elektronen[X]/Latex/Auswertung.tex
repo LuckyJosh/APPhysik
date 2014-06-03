@@ -112,12 +112,15 @@
 		\input{Tabellen/Oszilloskop.tex} 
 		
 		Der Mittelwert der berechneten Frequenzen ergibt sich zu
-		\begin{empheq}{equation}
-			\label{eq:Auswertung_Frequenz} 
-			f = \SI{79.85(1)}{\centi\meter}.
-		\end{empheq} 
-		Der Fehler wurde dabei Mittels gaußscher Fehlerfortpflanzung berechnet, da der so erhaltene
-		Fehler größer als die Abweichung vom Mittelwert ist.
+		\begin{subequations}
+			\begin{empheq}{align}
+				\label{eq:Auswertung_Frequenz} 
+				f &= \SI{79.85(1)}{\centi\meter} \quad \text{bzw.}\\
+				f &= \SI{79.850(9)}{\centi\meter}.
+			\end{empheq} 
+		\end{subequations}
+		Der erste Fehler wurde dabei Mittels gaußscher Fehlerfortpflanzung berechnet, und der des zweiten 
+		Wertes stellt die Standardabweichung des Mittelwerts dar.
 		
 \subsection{Auswertung des Versuchs Elektronen im magnetischen Feld}
 
@@ -177,13 +180,17 @@
 		
 		Der Mittelwert der drei Messwerte mit der geringsten Abweichung vom Literaturwert
 		ergeben im Mittel
-		\begin{empheq}{equation}
-			\label{eq:Auswertung_Qspez} 
-			\frac{e_{0}}{m_{e}} = \SI{1.77(3)e11}{\coulomb\per\kg}.
-		\end{empheq}
-		Auch der Fehler dieses Wertes wurde mit Hilfe der gaußschen Fehlerfortpflanzung bestimmt, 
-		da dieser Fehler der im Vergleich zur Abweichung vom Mittelwert größer ist. 
-\newpage		
+		\begin{subequations}
+			\begin{empheq}{align}
+				\label{eq:Auswertung_Qspez} 
+				\frac{e_{0}}{m_{e}} &= \SI{1.77(3)e11}{\coulomb\per\kg} \quad \text{bzw.}\\
+				\frac{e_{0}}{m_{e}} &= \SI{1.770(9)e11}{\coulomb\per\kg}.
+			\end{empheq}
+	    \end{subequations}
+	    
+		Auch der Fehler des ersten Wertes wurde mit Hilfe der gaußschen Fehlerfortpflanzung bestimmt, 
+		wohin gegen der zweite Fehler die Standardabweichung des Mittelwerts darstellt. 
+	
 	\subsubsection{Bestimmung der Intensität des Erdmagnetfeldes}
 	
 		Für den Ausgleich der von dem Erdmagnetfeld verursachten Verschiebung wurde die Stromstärke

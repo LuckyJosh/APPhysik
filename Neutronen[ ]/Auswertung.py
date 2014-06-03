@@ -19,11 +19,12 @@ import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
+import sys as sys
 
 
-from aputils.utils import Quantity, ErrorEquation
+from aputils.utils import Quantity, ErrorEquation, OutputFile
 from aputils.latextables.tables import Table
-
+sys.stdout = OutputFile("Daten/log.txt")
 
 # Fit Funktionen
 def f_exp(t, N, l):
@@ -89,6 +90,7 @@ t_x = 480
 
 # Regression langlebig für t >= t*
 popt_Rh_2, pcov_Rh_2 = curve_fit(f_gerade, T_Rh[t_x/20:], np.log(N_Rh[t_x/20:]))
+#                                 sigma=stds(N_Rh_err[t_x/20:])/N_Rh[t_x/20:])
 errors_Rh_2 = np.sqrt(np.diag(pcov_Rh_2))
 param_a_Rh_2 = ufloat(popt_Rh_2[0], errors_Rh_2[0])
 param_b_Rh_2 = ufloat(popt_Rh_2[1], errors_Rh_2[1])
@@ -126,14 +128,14 @@ n_Rh_lang_err = np.array([m.sqrt(x) for x in N_Rh_lang])
 N_Rh_lang_err = unp.uarray(N_Rh_lang, n_Rh_lang_err)
 
 N_Rh_kurz_err= np.array(np.subtract(N_Rh_err[:10], N_Rh_lang_err))
-#print(N_Rh_kurz)
+#print(N_Rh_kurz_err)
 lnN_Rh_kurz = np.array([m.log(x) for x in noms(N_Rh_kurz_err)])
 #print(lnN_Rh_kurz)
 
 
 
 # Regression kurzlebig
-popt_Rh_1, pcov_Rh_1 = curve_fit(f_gerade, T_Rh[:10], lnN_Rh_kurz)
+popt_Rh_1, pcov_Rh_1 = curve_fit(f_gerade, T_Rh[:10], lnN_Rh_kurz) #sigma=stds(N_Rh_kurz_err)/noms(N_Rh_kurz_err))
 errors_Rh_1 = np.sqrt(np.diag(pcov_Rh_1))
 param_a_Rh_1 = ufloat(popt_Rh_1[0], errors_Rh_1[0])
 param_b_Rh_1 = ufloat(popt_Rh_1[1], errors_Rh_1[1])
@@ -184,17 +186,24 @@ print("Halbwertzeiten", HWZ_Rh_lang.format("%.3f"), HWZ_Rh_kurz)
 
 
 # Test ob  N_k << N_l gilt
-
-N_Rh_lang = np.array(np.exp(-popt_Rh_2[0]*T_Rh[:])*exp(popt_Rh_2[1]))
-N_Rh_kurz = np.array(np.exp(-popt_Rh_1[0]*T_Rh[:])*exp(popt_Rh_1[1]))
+T_RH = np.linspace(-10,750, 100)
+N_Rh_lang = np.array(np.exp(-popt_Rh_2[0]*T_RH[:])*exp(popt_Rh_2[1]))
+N_Rh_kurz = np.array(np.exp(-popt_Rh_1[0]*T_RH[:])*exp(popt_Rh_1[1]))
 
 
 # Plot der einzelnen Zerfallskurven und Summe
+
 #plt.plot(T_Rh, N_Rh, "xk", label="Messwerte")
-plt.plot(T_Rh, N_Rh_lang, "xr", label="Zerfall mit höherer HWZ")
-plt.plot(T_Rh, N_Rh_kurz, "xb", label="Zerfall mit geringerer HWZ")
-plt.plot(T_Rh, N_Rh_lang + N_Rh_kurz, "xg", label="Summer beider Zerfälle")
+plt.plot(T_RH, [m.log(x) for x in N_Rh_lang], "-g", label="Zerfall mit hoher $T_{1/2}$")
+plt.plot(T_RH, [m.log(x) for x in N_Rh_kurz], "-b", label="Zerfall mit niedriger $T_{1/2}$")
+plt.plot(T_RH, [m.log(x) for x in (N_Rh_lang + N_Rh_kurz)], "-k", label="Summer beider Zerfälle")
+# Messdaten
+plt.errorbar(T_Rh, np.log(N_Rh), yerr=stds(N_Rh_err)/N_Rh, fmt="rx", label="Messwerte")
 plt.grid()
+plt.xlim(0,730)
+plt.ylim(0,6)
+plt.xlabel(r"Zeit $t\ [s]$", fontsize=14, family="serif")
+plt.ylabel(r"Logarithmierte Zerfälle $\ln(N)$", fontsize=14, family="serif")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Theoriekurven.pdf")
@@ -220,10 +229,14 @@ T_1.layout(seperator="column", title_row_seperator="double", border=True)
 T_1.label("Auswertung_Messwerte_Rhodium")
 T_1.caption("Gemessene Anzahl der Zerfäll, Anzahl der Zerfälle nach Subtraktion\
  des Nulleffekts und Werte des natürlichen Logarithmusses von diesen")
-T_1.addColumn([int(t) for t in T_Rh],align="r", title="Zeit", symbol="t", unit=r"\second")
-T_1.addColumn(N_Rh_Null_err,align="c", title="Zerfälle", symbol="N")
-T_1.addColumn(N_Rh_err,align="c", title="Zerfälle", symbol="N - N_{0}")
-T_1.addColumn(lnN_Rh_err,align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{0})")
+T_1.addColumn([int(t) for t in T_Rh[:18]],align="r", title="Zeit", symbol="t", unit=r"\second")
+T_1.addColumn(N_Rh_Null_err[:18],align="c", title="Zerfälle", symbol="N")
+T_1.addColumn(N_Rh_err[:18],align="c", title="Zerfälle", symbol="N - N_{0}")
+T_1.addColumn(lnN_Rh_err[:18],align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{0})")
+T_1.addColumn([int(t) for t in T_Rh[18:]],align="r", title="Zeit", symbol="t", unit=r"\second")
+T_1.addColumn(N_Rh_Null_err[18:],align="c", title="Zerfälle", symbol="N")
+T_1.addColumn(N_Rh_err[18:],align="c", title="Zerfälle", symbol="N - N_{0}")
+T_1.addColumn(lnN_Rh_err[18:],align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{0})")
 #T_1.show()
 #T_1.save("Tabellen/Messwerte_Rhodium.tex")
 
@@ -231,9 +244,9 @@ T_2 = Table(siunitx=True)
 T_2.layout(seperator="column", title_row_seperator="double", border=True)
 T_2.label("Auswertung_Messwerte_Rhodium_lang")
 T_2.caption("Messwerte zur Bestimmung der Halbwertszeit des langlebigen Zerfalls für t > t*")
-T_2.addColumn([int(t) for t in T_Rh[20:]],align="r", title="Zeit", symbol="t", unit=r"\second")
-T_2.addColumn(N_Rh_err[20:],align="c", title="Zerfälle", symbol="N_{l}")
-T_2.addColumn(lnN_Rh_err[20:],align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{0})")
+T_2.addColumn([int(t) for t in T_Rh[t_x/20:]],align="r", title="Zeit", symbol="t", unit=r"\second")
+T_2.addColumn(N_Rh_err[t_x/20:],align="c", title="Zerfälle", symbol="N_{l}")
+T_2.addColumn(lnN_Rh_err[t_x/20:],align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{0})")
 #T_2.show()
 #T_2.save("Tabellen/Messwerte_Rhodium_lang.tex")
 
@@ -242,8 +255,9 @@ T_3.layout(seperator="column", title_row_seperator="double", border=True)
 T_3.label("Auswertung_Messwerte_Rhodium_kurz")
 T_3.caption("Messwerte zur Bestimmung der Halbwertszeit des langlebigen Zerfalls für t << t*")
 T_3.addColumn([int(t) for t in T_Rh[:10]],align="r", title="Zeit", symbol="t", unit=r"\second")
-T_3.addColumn(N_Rh_err[:10],align="c", title="Zerfälle", symbol="N")
-T_3.addColumn(N_Rh_kurz_err,align="c", title="Zerfälle", symbol="N - N_{l}")
-T_3.addColumn(lnN_Rh_kurz_err,align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{0})")
+T_3.addColumn(N_Rh_err[:10], align="c", title="Zerfälle", symbol="N")
+T_3.addColumn(N_Rh_lang_err, align="c", title="Zerfälle", symbol="N_{l}")
+T_3.addColumn(N_Rh_kurz_err, align="c", title="Zerfälle", symbol="N - N_{l}")
+T_3.addColumn(lnN_Rh_kurz_err, align="c", title="ln der Zerfälle", symbol=r"\ln(N - N_{l})")
 #T_3.show()
 #T_3.save("Tabellen/Messwerte_Rhodium_kurz.tex")

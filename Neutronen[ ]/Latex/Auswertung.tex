@@ -3,26 +3,34 @@ sowie die daraus berechneten Ergebnisse tabellarisch und graphisch dargestellt.
 Die erhaltenen Fehler der Ergebnisse wurden mit Hilfe der in \cref{sec:Fehlerrechnung}
 aufgestellten Fehlergleichungen berechnet.
 
+
+\subsection{Messung des Nulleffekts}
+
+	Die Messung des Nulleffekt über einen Zeitraum von $T = \SI{900}{\second}$ 
+	ergab die Anzahl der Zerfälle pro Intervall $\Delta t$ 
+	\begin{empheq}{align}
+		\notag
+		N_{0} &= \dfrac{306}{900}\ \si{\per\second} \cdot \Delta t\\    
+		&= \SI{0.34}{\per\second}  \cdot \Delta t. 
+	\end{empheq} 
+
 \subsection{Bestimmung der Halbwertszeiten der zwei möglichen Zerfälle von Rhodium}
 	
 	Die bei der Messung des Zerfalls von Rhodium aufgenommenen Messwerte
 	für die Zeit $t$ und die Anzahl der gemessenen Zerfälle $N$ in \cref{tab:Auswertung_Messwerte_Rhodium}
-	eingetragen. Auch die um den, vor dem Versuch bestimmte Nulleffekt 
-	\begin{empheq}{align}
-		N_{0} &= \dfrac{306}{900}\ \si{\per\second} \cdot \Delta t\\    
-		&= \SI{0.34}{\per\second}  \cdot \Delta t 
-	\end{empheq} 
+	eingetragen. Auch die um den, vor dem Versuch bestimmte Nulleffekt $N_{0}$
     verringerte Anzahl an Zerfällen ist zusammen mit dem natürlichen Logarithmus
     aus diesen Werten in \cref{tab:Auswertung_Messwerte_Rhodium} zu finden.
+    Die angegebenen Messfehler wurden mittels \cref{std:Abweichung Messwerte} berechnet.
     
    	\input{Tabellen/Messwerte_Rhodium.tex} 
    	
-   	In \cref{fig:} ist die logarithmierten Anzahl der Zerfälle $\Ln{N - N_{0}}$ aus \cref{tab:Auswertung_Messwerte_Rhodium} gegen die Zeit $t$ aufgetragen.  
+   	In \cref{fig:Auswertung_Messwerte_Rh} ist die logarithmierten Anzahl der Zerfälle $\Ln{N - N_{0}}$ aus \cref{tab:Auswertung_Messwerte_Rhodium} gegen die Zeit $t$ aufgetragen.  
    	
     \includeFigure[scale=0.7]{Grafiken/Messwerte_Rh.pdf}{Graphische Darstellung der logarithmierten Zerfälle ohne den Nulleffekt}{\label{fig:Auswertung_Messwerte_Rh}}
      
     Der Zeitpunkt ab dem nur noch der Zerfall mit der höheren Halbwertzeit messbar ist
-    wurde für die folgenden Berechnungen $t^{*} = \SI{400}{\second}$ gewählt.
+    wurde für die folgenden Berechnungen $t^{*} = \SI{480}{\second}$ gewählt.
     Die Messwerte für $t > t*$ sind noch einmal in \cref{tab:Auswertung_Messwerte_Rhodium_lang} gelistet und 
     in  \cref{fig:Auswertung_Messwerte_Rh_lang} graphisch dargestellt. Diese Darstellung ist um die Regressiongerade
     dieser Messwerte ergänzt dir mittels \emph{SciPy} \cite{SciPy} berechnet wurde.
@@ -44,20 +52,83 @@ aufgestellten Fehlergleichungen berechnet.
     \includeFigure[scale=0.7]{Grafiken/Messwerte_Rh_langlebig.pdf}{Graphische Darstellung der logarithmierten Zerfälle für $t > t^{*}$ }{\label{fig:Auswertung_Messwerte_Rh_lang}}
     
     Dabei gilt $c_{l} = \Ln{N_{a}(1 - \E{-\lambda_{l}\Delta t})}$ und somit erhält man hieraus
-    die gesuchte Konstante
+    die gesuchte Konstante, mit dem Fehler nach \cref{std:Exp},
    	\begin{empheq}{equation}
-   		\E{c_{l}} = N_{a}(1 - \E{-\lambda_{l}\Delta t}) = \SI{ 70(70)}.
+   		\E{c_{l}} = N_{a}(1 - \E{-\lambda_{l}\Delta t}) = \SI{70(70)}{}.
    	\end{empheq}
    	
    	Aus der erhaltenen Steigung $\lambda_{l}$ der Regressionsgerade, welche der 
    	Zerfallskonstante des langlebigeren Zerfalls entspricht, lässt sich mit 
-   	Hilfe von \cref{eq:Theorie_Halbwertzeit} dessen Halbwertzeit zu
+   	Hilfe von \cref{eq:Theorie_Halbwertszeit} dessen Halbwertzeit zu
   	\begin{empheq}{equation}
-  		t_{\sfrac{1}{2}} =  \SI{277(168)}{\second}
+  		t_{\sfrac{1}{2},l} =  \SI{277(168)}{\second}
   	\end{empheq}
-    bestimmen.
+    bestimmen. Der angegebene Fehler errechnet sich \cref{std:Halbwertszeit}.\\
     
+    Durch die zuvor bestimmten Parameter ist es nun möglich, das Zerfallsgesetz für die langlebigeren Kerne
+    aufzustellen und somit die Zerfallskurve vor dem Zeitpunkt $t*$ zu bestimmen. Durch Subtraktion dieser
+    Zerfälle von den Messwerten für $t << t*$ erhält man die Zerfälle der kurzlebigen Kerne. Die Ergebnisse
+    dieses Vorgehens sind in \cref{tab:Auswertung_Messwerte_Rhodium_kurz} zu finden und in \cref{fig:Auswertung_Messwerte_Rh_kurz} graphisch dargestellt.
+    
+    \input{Tabellen/Messwerte_Rhodium_kurz}
+    
+    \includeFigure[scale=0.7]{Grafiken/Messwerte_Rh_kurzlebig.pdf}{Graphische Darstellung der logarithmierten Zerfälle% 
+    für $t << t^{*}$ }{\label{fig:Auswertung_Messwerte_Rh_kurz}} 
      
-     
-     
-   
+    Aus der, mit \emph{SciPy} \cite{SciPy} durchgeführten, linearen Regression mit dem Ansatz
+    \begin{empheq}{equation}
+    \Ln{N} = \lambda_{k} \cdot t + c_{k},
+    \end{empheq}
+    ergeben sich die Parameter zu
+    \addtocounter{equation}{-1}
+    \begin{subequations}
+       	\begin{empheq}{align}
+       		\lambda_{k} &= \SI{0.013(3)}{\per\second} \quad \text{und} \\
+       		c_{k} &= \SI{4.9(4)}{}.
+       	\end{empheq}
+    \end{subequations}  
+    Die daraus erhaltene Gerade ist ebenfalls in \cref{fig:Auswertung_Messwerte_Rh_kurz} eingezeichnet.
+    
+    Analog zu dem Zerfall der langlebigeren Kerne, erhält man aus den bestimmten Regressionsparametern
+    die gesuchte Konstante $\E{c_{k}}$ und die Halbwertzeit $t_{\sfrac{1}{2},k}$ dieses Zerfalls zu
+    \begin{empheq}{align}
+   		\E{c_{k}} &= N_{a}(1 - \E{-\lambda_{k}\Delta t}) = \SI{128(50)}{} \quad \text{und}\\
+   		t_{\sfrac{1}{2},k} &=  \SI{54(13)}{\second}.
+   	\end{empheq}
+    Die angegebenen Fehler ergeben sich jeweils aus \cref{std:Exp} bzw. \cref{std:Halbwertszeit}. 
+    
+    
+    Die auf diese Weise bestimmten Zerfallsgesetze sind in \cref{fig:Auswertung_Rh_Ergebniss} zusammen mit der Summe beider Zerfälle
+    und den ursprünglichen Messwerten ohne den Nulleffekt aufgetragen.
+    
+    \includeFigure[scale=0.7]{Grafiken/Theoriekurven.pdf}{Graphische Darstellung der in der Auswertung bestimmten Zerfallsgesetze und deren summierter Zerfall im Vergleich zu den Messwerten}{\label{fig:Auswertung_Rh_Ergebniss}} 
+\newpage     
+\subsection{Bestimmung der Halbwertszeit von Indium}
+Ziel dieses Abschnitts ist es, die Halbwertszeit von $^{116}$In zu ermitteln. Die notwendigen Messdaten und Ergebnisse sind im Folgenden sowohl tabellarisch als auch grafisch dargestellt. Bei diesem Teil des Experiments wurden die Zerfälle N nach Zeitintervallen von $\Delta t$=200s über einen Zeitraum von 60min notiert. 
+Die Fehler der aufgenommenen und korrigierten Messwerte errechnen sich nach \cref{std:Abweichung Messwerte}.
+%Bei der Korrektur um den Nulleffekt ergibt sich der Wert des resultierenden Fehlers erneut nach der Fehlerfortpflanzung zu $\sigma=\sqrt{\sigma_N^2+\sigma_{N_0}^2}$.
+
+\input{Tabellen/Indium.tex}
+
+\begin{figure}[htbp]
+\centering{\includegraphics[scale=0.3]{Grafiken/702_Indium.PNG}}
+\caption{Messdaten der Indium-Zerfälle mit Ausgleichsgerader}
+\label{fig:Abbildung}
+\end{figure}
+Um nun die Zerfallskonstante $\lambda$ zu bestimmen wird eine lineare Ausgleichsrechnung durchgeführt. Hierbei werden die logarthmisierten Zerfälle als Funktion der Zeit aufgetragen und mithilfe von Gnuplot die Parameter einer Regressionsgeraden mit der Form f(x)=a$\cdot$x+b errechnet. Diese Form leitet sich aus der folgenden Gleichung her:
+\begin{align*}
+\ln(N-N_0)=\ln N_a(1-e^{-\lambda\Delta t})-\lambda t
+\end{align*}
+Hier ist $N_a$ die unbekannte Anzahl an Kernen der Indium Probe und $\Delta$t das Zeitintervall während der Messung. 
+Die Parameter der Regressionsgeraden lauten:
+\begin{align*}
+\lambda&=0.000218\pm 0.000007s^{-1}\\
+\ln N_0(1-e^{-\lambda\Delta t})&=7.946\pm0.0159\\
+\end{align*}
+
+Daraus lässt sich nun gemäß der Relation \cref{eq:Theorie_Halbwertszeit} die Halbzeit von Indium berechnen. Der Fehler 
+ergibt sich durch Anwendung von \cref{std:Halbwertszeit}:
+
+\begin{align*}
+\rightarrow T_{1/2}=(3179.6\pm 102.1)s
+\end{align*}
