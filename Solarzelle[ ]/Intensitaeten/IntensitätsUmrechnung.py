@@ -77,10 +77,12 @@ L_logfmt = np.round(distToLogFmt(L, d_X), 2)
 
 dists = LogFmtToDist(I, d_Y)
 
+#np.savetxt("../Messdaten/Abstand_Intensitaet.txt", np.transpose([L, dists]))
+
 plt.loglog(L, dists, "xr", basex=10, basey=10)
 plt.grid(which="both")
-plt.ylim(1, 30)
-plt.xlim(10, 200)
+plt.ylim(4, 20)
+plt.xlim(50, 100)
 plt.show()
 
 #print(d_X)

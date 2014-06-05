@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.constants as const
 from scipy.optimize import curve_fit
-from sympy import *
+import sympy as sym
 import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
