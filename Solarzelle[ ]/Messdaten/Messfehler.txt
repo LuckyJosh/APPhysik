@@ -1,2 +1,2 @@
-# Fehler der L�ngen [cm] #Fehler des Stroms [mA] # Fehler der Spannung [V]
-0.1						  0.1						0.01
+# Fehler der Längen [cm] #Fehler des Stroms [mA] # Fehler der Spannung [V] # Fehler der Intensität1 [mW/cm^2] #Fehler der Intensität2 [mW/cm^2]
+0.1						  0.1						0.01        				0.1								1									

@@ -1,0 +1,73 @@
+In folgendem Abschnitt werden der Aufbau und die Funktionsweise einer Solarzelle erläutert.
+Zunächst werden jedoch die, für die Funktionsweise der Solarzelle wichtigen,
+Eigenschaften von Halbleitern, sowie die Auswirkung von Dotierung auf Halbleiter betrachtet.\\
+
+
+
+\subsection{Eigenschaften von Halbleitern und Dotierung}\label{sec:Theorie_Halbleiter}
+Bei Halbleiten (z.B. Silizium) handelt es sich um Elemente, die sich aufgrund ihrer 
+Eigenschaften in Bezug auf die elektrische Leitfähigkeit zwischen Leitern und Nichtleitern 
+einordnen lassen. 
+Diese Eigenschaft lässt sich mit Hilfe des Bändermodells beschreiben, welches 
+zwei Elektronenbänder, das Valenzband und das Leiterband unterscheidet.
+Das Valenzband ist dabei das oberste vollständig mit Elektronen besetzte Band. 
+Ein elektrischer Strom wird von einem Material
+jedoch nur im Leitungsband transportiert. Bei Leitern berühren sich diese beiden Bänder,
+so dass diese jeder Zeit elektrischen Strom leiten können. Bei Nichtleitern ist das genaue
+Gegenteil der Fall hier ist die Bandlücke zwischen Leiter- und Valenzband so groß,
+dass diese nicht überwunden werden kann.
+Bei Halbleitern berühren sich die beiden Bänder 
+zwar nicht, doch ist die Bandlücke so klein, dass sie 
+schon durch thermische Energie überwunden werden kann. Geschieht dies, so entsteht im 
+Valenzband eine Elektronenfehlstelle, ein sogenanntes Loch, welches ebenfalls zu Leitung beiträgt.
+
+Durch Dotierung mit Fremdatomen kann man die Leitungseigenschaften von Halbleiten noch weiter 
+verbessern.
+\emph{N}-dotierten Halbleitern, wie in diesem Fall Silizium, wurde ein Fremdatom 
+eingebracht, welches einen Elektron mehr besitzt (z.B. Phosphor).
+Entsprechend verhält es sich bei \emph{p}-dotierten Halbleitern, mit dem Unterschied,  
+dass in diese ein Fremdatom mit weniger Elektronen eingebracht wurde (z.B. Aluminium). 
+
+Werden nun zwei unterschiedlich dotierte Halbleiter zusammen gebracht, rekombinieren die
+Elektronen aus dem \emph{n}-dotierten mit den Löchern aus dem \emph{p}-dotiertem Teil 
+an der Kontaktfläche, dem sogenannten \emph{p}-\emph{n}-Übergang, und bilden die Raumladungszone. 
+Durch diese, Diffusion genannte, Bewegung der Elektronen in die \emph{p}-dotierten Teil 
+wird dieser, in der Nähe des \emph{p}-\emph{n}-Übergangs, negativ und der \emph{n}-dotierte Teil 
+positiv geladen. 
+Durch diese Ladungstrennung wird ein elektrisches Feld $E$ erzeugt, welches wiederum zu einem 
+Strom $I_{D}$in Richtung der Feldlinien führt. Dieser lässt sich in Abhängigkeit des 
+Sättigungsstroms $I_{0}$ und der Diffusionsspannung $U$ mit der Strom-Spannungscharakteristik
+einer Diode
+\begin{empheq}{equation}
+	I_{D} = I_{0}\del{\Exp{\dfrac{eU}{kT}}- 1}
+\end{empheq} 
+beschreiben.
+
+
+\subsection{Aufbau und Funktionsweise einer Solarzelle}
+Bei einer Solarzelle handelte es um ein Halbleiterbauelement, dessen grundsätzlicher
+Aufbau dem einer Diode gleicht. So besteht die Solarzelle aus einer \emph{n}-dotierten Ober- und 
+einem \emph{p}-dotierten Unterseite. Dabei ist die \emph{n}-dotierte Oberseite so dünn, dass sie 
+Lichtdurchlässig ist.\\
+
+In einer nicht bestrahlten Solarzelle stellt sich ein, wie in \cref{sec:Theorie_Halbleiter} 
+beschriebener Strom in \emph{np}-Richtung ein. Da die \emph{n}-dotierte Schicht 
+Lichtdurchlässig ist, werden durch den photoelektrischen Effekt Elektronen-Loch-Paare in 
+der Raumladungszone erzeugt. Dies führt zu einem dem Strom $I_{D}$ entgegen gerichtetem 
+Photostrom $I_{Ph}$ so dass sich die Strom-Spannungscharakteristik einer Solarzelle zu
+\begin{empheq}{equation}
+I_{SZ} = I_{0}\del{\Exp{\dfrac{eU}{kT}}- 1}-I_{Ph}
+\end{empheq} 
+ergibt.\\
+
+Die Strom-Spannung-Kennlinie (siehe \cref{fig:Theorie_Kennlinie}) einer Solarzelle
+wird durch die drei Größen Kurzschlussstrom $I_{K}$, Leerlaufspannung $U_{L}$ und
+den Wirkungsgrad $\eta$ beschrieben.
+% % % % % %
+%Geht besser
+% % % % % %
+
+Der  Kurzschlussstrom  stellt dabei den maximalen, bei kurzgeschlossener Solarzelle  
+fließenden Strom dar. Entsprechend ist die Leerlaufspannung die maximal anliegende Spannung,
+wenn kein Verbraucher an die Solarzelle angeschlossen ist.
+

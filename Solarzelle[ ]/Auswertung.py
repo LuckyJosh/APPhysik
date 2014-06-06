@@ -36,7 +36,7 @@ N_zelle, s_zelle, off_zelle, off_lampe = np.loadtxt("Messdaten/AufbauDaten.txt",
                                                     unpack=True)
 
 # Fehler der Messgrößen: Länge, Strom, Spannung
-l_err, i_err, u_err = np.loadtxt("Messdaten/Messfehler.txt", unpack=True)
+l_err, i_err, u_err, j_err1, j_err2 = np.loadtxt("Messdaten/Messfehler.txt", unpack=True)
 
 # Fehlerbehaftete Länge
 l_zelle_err = ufloat(s_zelle, l_err)
@@ -57,32 +57,6 @@ def AbstandOhneOffset(L):
     return L - l_offset_err
 
 
-# Intensität im Abstand L
-L_intens, I_intens = np.loadtxt("Messdaten/Abstand_Intensitaet.txt",
-                                unpack=True)
-
-# Intensität im Abstand L  IL_intens(L) => I(L)
-#print("\nIntensitäten im Abstand:")
-IL_intens = np.zeros(100)
-for (i,k) in zip(L_intens, I_intens):
-    IL_intens[int(i)] = k
-#    print("I({}) = {}".format(int(i), k))
-
-def Intens(x, a):
-    return a/x**2
-
-popt, pcov = curve_fit(Intens, L_intens, I_intens)
-#print(popt)
-plt.loglog(L_intens, I_intens, "rx")
-plt.loglog(L_intens, Intens(L_intens, *popt))
-##plt.show()
-plt.clf()
-
-L = np.linspace(50, 100, 5000)
-I = Intens(L, popt[0])
-
-#for (l, i) in zip(L, I):
-#    print("I({}) = {}".format(round(l,2), round(i,2)))
 
 #==============================================================================
 class KurzschlussStrom:
@@ -101,13 +75,43 @@ I_k_1_err = unp.uarray(I_k_1, [i_err]*len(I_k_1))
 L_1_err = AbstandOhneOffset(L_1_err)
 #print("Abstände ohne", L_1_err)
 
-# Intensitäten bei den verwendeten Abständen
-I_1_err = Intens(L_1_err, popt[0])
-#print(L_1_err)
-print(I_1_err)
+# Laden der Intensitäten, l nicht gebraucht
+l , J_1 = np.loadtxt("Messdaten/Abstand_Intensitaet_1.txt", unpack=True)
+
+# Fehlerbehaftete Intensitäten
+J_1_err = unp.uarray(J_1, [j_err1 if J_1[i] < 10 else j_err2 for i in range(len(J_1))])
 
 
+# Auftragen des Stroms gegen die Intensität
+# linearer Fit der Messwerte
+func_gerade = lambda x,a,b: a*x+b
+popt_1, pcov_1 = curve_fit(func_gerade, noms(J_1_err), noms(I_k_1_err))
+error_1 = np.sqrt(np.diag(pcov_1))
+param_a_1 = ufloat(popt_1[0], error_1[0])
+param_b_1 = ufloat(popt_1[1], error_1[1])
+print("Kurzschlussstrom-Fit:")
+print("Steigung:", param_a_1)
+print("Y-Achsenabschnitt:", param_b_1)
 
+
+# Plot der Wertepaare (J/I)
+plt.plot(noms(J_1_err), noms(I_k_1_err), "xr", label="Messwerte")
+
+# Plot der Fit-Gerade
+X = np.linspace(1,30, 300)
+plt.plot(X, func_gerade(X, *popt_1), color="gray", label="Regressionsgerade")
+
+# Plot-Einstellungen
+plt.grid()
+plt.xlim(6,22)
+plt.ylim(-100,-30)
+plt.xlabel(r"Lichtintensität $J\ [\mathrm{\frac{mW}{cm^{2}}}] $", family="serif", fontsize="14")
+plt.ylabel("Kurzschlussstrom $I_{K}\ [\mathrm{mA}] $", family="serif", fontsize="14")
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig("Grafiken/Kurzschlussstrom.pdf")
+#plt.show()
+plt.clf()
 
 
 
@@ -121,12 +125,31 @@ L_2, U_2 = np.loadtxt("Messdaten/Leerlaufspannung.txt", unpack=True)
 
 # Fehlerbehaftet: Abstand, Spannung
 L_2_err = unp.uarray(L_2, len(L_2)*[l_err])
-U_2_err = unp.uarray(U_2, len(U_2)*[u_err])
+U_2_err = unp.uarray(-U_2, len(U_2)*[u_err])
 
 # Umrechnung der Abstände
 L_2_err = AbstandOhneOffset(L_2_err)
 
+# Laden der Intensitäten, l nicht gebraucht
+l , J_2 = np.loadtxt("Messdaten/Abstand_Intensitaet_2.txt", unpack=True)
 
+# Fehlerbehaftete Intensitäten
+J_2_err = unp.uarray(J_2, [j_err1 if J_2[i] < 10 else j_err2 for i in range(len(J_2))])
+#print(J_2_err)
+#print(L_2_err)
+# Auftragen der Leerlaufspannung gegen die Intensität
+
+plt.plot(noms(J_2_err), noms(U_2_err), "xr", label="Messwerte")
+
+# Plot-Einstellungen
+plt.grid()
+plt.xlabel(r"Lichtintensität $J\ [\mathrm{\frac{mW}{cm^{2}}}] $", family="serif", fontsize="14")
+plt.ylabel("Leerlaufspannung $U_{L}\ [\mathrm{V}] $", family="serif", fontsize="14")
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig("Grafiken/Leerlaufspannung.pdf")
+#plt.show()
+plt.clf()
 
 
 #==============================================================================
@@ -198,7 +221,7 @@ plt.ylabel("Leistung $P\ [\mathrm{mA}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Leistung_30mA.pdf")
-##plt.show()
+#plt.show()
 plt.clf()
 
 
@@ -269,7 +292,7 @@ plt.ylabel("Leistung $P\ [\mathrm{mA}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Leistung_75mA.pdf")
-##plt.show()
+#plt.show()
 plt.clf()
 
 #==============================================================================
@@ -338,7 +361,7 @@ plt.ylabel("Leistung $P\ [\mathrm{mA}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Leistung_75mA.pdf")
-##plt.show()
+#plt.show()
 plt.clf()
 #==============================================================================
 class Kennkurve_100mA:
@@ -411,7 +434,7 @@ plt.ylabel("Leistung $P\ [\mathrm{mA}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Leistung_100mA.pdf")
-##plt.show()
+#plt.show()
 plt.clf()
 
 
