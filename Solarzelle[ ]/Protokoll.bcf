@@ -1943,6 +1943,8 @@
   <bcf:section number="0">
     <bcf:citekey order="1">NHV1</bcf:citekey>
     <bcf:citekey order="2">NHV1</bcf:citekey>
+    <bcf:citekey order="3">NHV1</bcf:citekey>
+    <bcf:citekey order="4">NHV1</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="none">
   <bcf:sorting>
