@@ -1,0 +1,101 @@
+Im folgenden Abschnitt sind die während des Versuchs aufgenommenen Messwerte und die 
+daraus berechneten Ergebnisse tabellarisch und graphisch dargestellt.
+An entsprechender Stelle sind Anmerkungen und Erklärungen zu den Rechnungen und
+Ergebnissen gegeben.
+Als Messfehler wurde allgemein die kleinste Skaleneinteilung bzw. die
+letzte angezeigte Stelle des jeweils verwendeten Messinstruments angenommen. 
+Die für die Fehlerrechnung verwendeten Gleichungen sind in \cref{sec:Fehlerrechnung}
+aufgeführt und werden mit römischen Ziffern referenziert. 
+
+\includeFigure[scale=0.3]{Grafiken/Intensitaet}{Intensität des Lichtes einer Halogenlampe $J_{Ph}$ %
+	in Abhängigkeit des Abstand $d$ \cite[verändert]{NHV1}}{\label{fig:Auswertung_Intensitaet}}
+
+Die in der Auswertung benötigten Fläche der Solarzelle $A_{SZ}$ berechnet sich aus der Anzahl $n = \num{8}$
+der quadratischen Elemente, mit der jeweiligen Seitenlänge $a = \SI{2.5(1)}{\cm}$ zu
+\begin{empheq}{equation}
+	\label{val:Auswertung_Solarzelle_Flaeche}
+	A_{SZ} = n \cdot a^{2} = \SI{5(4)}{\square\cm}.
+\end{empheq} 
+
+
+\subsection{Bestimmung des Kurzschlussstroms der Solarzelle}
+	
+	Die aufgenommenen Messwerte für den Abstand $d'$ den offsetbereinigen Abstand\\
+	$d = d' - \del{d_{\text{off}, 1} + d_{\text{off}, 2}}$ mit
+	$d_{\text{off}, 1} = \SI{3.5(1)}{\cm}$ und $d_{\text{off}, 1} = \SI{14.0(1)}{\cm}$ 
+	und der in diesem Abstand gemessene Kurzschlussstrom $I_{K}$ sind in \cref{tab:Auswertung_Kurzschlussstrom}
+	eingetragen. Außerdem sind die für den jeweiligen Abstand die aus \cref{fig:Auswertung_Intensitaet}
+	abgelesenen Werte für die Lichtintensität der Halogenlampe angegeben.
+	
+
+	
+%	\input{Tabellen/Kurzschlussstrom.tex}	
+	
+	In \cref{fig:Auswertung_Kurzschlussstrom} sind die Messwerte für den Kurzschlussstrom $I_{K}$ gegen die 
+	Lichtintensität $J$ aufgetragen. Die Parameter der ebenfalls eingezeichnete und mit Hilfe des \emph{Python}-Pakets
+	\emph{SciPy} \cite{SciPy} bestimmte Regressionsgerade der Form
+	\begin{empheq}{equation}
+		I_{K}(J) = A \cdot J + I_{K,0}
+	\end{empheq} sind
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{align}
+			A &= \SI{-4.8(2)}{\ampere\per\watt}\quad \text{und}\\
+			I_{K,0} &= \SI{1(2)}{\ampere}.
+		\end{empheq}
+	\end{subequations}
+	
+	\includeFigure[scale=0.7]{Grafiken/Kurzschlussstrom.pdf}{Grafische Darstellung des Zusammenhangs zwischen dem % 
+	Kurzschlussstrom $ I_{K} $ und der Lichtintensität $J_{Ph}$}{\label{fig:Auswertung_Kurzschlussstrom}}
+	
+\subsection{Bestimmung der Leerlaufspannung der Solarzelle}
+	
+	\cref{tab:Auswertung_Leerlaufspannung} enthält die Messwerte der Leerlaufspannung $ U_{L} $,
+	des Abstandes $ d $ und die entsprechenden, aus \cref{fig:Auswertung_Intensitaet} abgelesenen,
+	Lichtintensitäten $ J_{Ph} $. Die grafische Darstellung der Abhängigkeit von Leerlaufspannung $ U_{L} $
+	und Intensität $ J_{Ph} $ ist in \cref{fig:Auswertung_Leerlaufspannung} gegeben.
+
+
+%	\input{Tabellen/Leerlaufspannung.tex}
+	
+	\includeFigure[scale=0.7]{Grafiken/Leerlaufspannung.pdf}{Grafische Darstellung des Zusammenhangs zwischen der % 
+	Leerlaufspannung $ U_{L} $ und der Lichtintensität $J_{Ph}$}{\label{fig:Auswertung_Leerlaufspannung}}	
+	
+\subsection{Bestimmung der I-U-Kennlinie}
+	In den folgenden Abschnitten befinden sich die Auswertungen der jeweils für
+	einen festen Abstand $d$ aufgenommenen Messwerte für die Bestimmung der $I \text{-}U$-Kennlinien
+	der untersuchen Solarzelle.  
+	
+	Die Messwerte der $I\text{-}U$-Kennlinie für den jeweils festen Abstand $d = \SI{81.5}{\cm}$
+	befinden sich in \cref{tab:Auswertung_Kennlinie_30mA} bis \ref{tab:Auswertung_Kennlinie_100mA}.
+    Bei diesen Messwerten handelte es
+	sich um den an der Widerstandsdekade eingestellten Widerstand $R$ und die jeweils aufgenommenen 
+	Spannungen $U$ und der Strom $I$. Desweiteren sind die durch $P_{SZ} = U \cdot I$ bestimmte
+	Leistung der Solarzelle, der daraus berechnete Wirkungsgrad $\eta$ nach \cref{eq:Theorie_Wirkungsgrad} 
+	und der Lastwiderstand $R_{\text{last}} = \sfrac{U}{I}$ aufgeführt.
+	Die für die Berechnung des Wirkungsgrades nötigen Leistungen $P_{Ph}$ und die dafür verwendeten 
+	Intensitäten $J_{Ph}$ sind in \cref{tab:Auswertung_Kennlinien_Leistung} angegeben.   
+	
+
+		
+ 
+		
+		
+		\includeFigure[scale=0.7]{Grafiken/Kennlinie_30mA.pdf}{Grafische Darstellung der Messwerte der %
+		    $I\text{-}U$-Kennlinie im Abstand \SI{81.5}{\cm}}{\label{fig:Auswertung_Kennlinie_30mA}}	
+	
+
+	
+		\includeFigure[scale=0.7]{Grafiken/Kennlinie_50mA.pdf}{Grafische Darstellung der Messwerte der %
+		    $I\text{-}U$-Kennlinie im Abstand \SI{60.5}{\cm}}{\label{fig:Auswertung_Kennlinie_50mA}}			
+	
+
+	
+		\includeFigure[scale=0.7]{Grafiken/Kennlinie_75mA.pdf}{Grafische Darstellung der Messwerte der %
+			$I\text{-}U$-Kennlinie im Abstand \SI{48.0}{\cm}}{\label{fig:Auswertung_Kennlinie_75mA}}	
+	
+
+	
+ 		\includeFigure[scale=0.7]{Grafiken/Kennlinie_100mA.pdf}{Grafische Darstellung der Messwerte der %
+		 	$I\text{-}U$-Kennlinie im Abstand \SI{40.0}{\cm}}{\label{fig:Auswertung_Kennlinie_100mA}}	
+	

@@ -31,6 +31,17 @@
       \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/SolarzelleMP.pdf
       \endverb
     \endentry
+    \entry{SciPy}{misc}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{SciPy}
+      \field{title}{SciPy}
+      \field{urlday}{02}
+      \field{urlmonth}{06}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://docs.scipy.org/doc/
+      \endverb
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
