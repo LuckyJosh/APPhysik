@@ -1,0 +1,37 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{none}
+    \entry{NHV1}{manual}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Versuchsanleitung}
+      \field{subtitle}{NHV1: Die Solarzelle}
+      \field{title}{Versuchsanleitung}
+      \field{urlday}{07}
+      \field{urlmonth}{06}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/SolarzelleMP.pdf
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

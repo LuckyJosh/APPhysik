@@ -23,14 +23,14 @@ Valenzband eine Elektronenfehlstelle, ein sogenanntes Loch, welches ebenfalls zu
 
 Durch Dotierung mit Fremdatomen kann man die Leitungseigenschaften von Halbleiten noch weiter 
 verbessern.
-\emph{N}-dotierten Halbleitern, wie in diesem Fall Silizium, wurde ein Fremdatom 
-eingebracht, welches einen Elektron mehr besitzt (z.B. Phosphor).
+\emph{N}-dotierten Halbleitern, wie beispielsweise Silizium, wurde ein Fremdatom 
+eingebracht, welches ein Elektron mehr besitzt als eine Atom des Halbleiters (z.B. Phosphor).
 Entsprechend verhält es sich bei \emph{p}-dotierten Halbleitern, mit dem Unterschied,  
-dass in diese ein Fremdatom mit weniger Elektronen eingebracht wurde (z.B. Aluminium). 
+dass in diese ein Fremdatom mit einem Elektron weniger eingebracht wurde (z.B. Aluminium). 
 
 Werden nun zwei unterschiedlich dotierte Halbleiter zusammen gebracht, rekombinieren die
 Elektronen aus dem \emph{n}-dotierten mit den Löchern aus dem \emph{p}-dotiertem Teil 
-an der Kontaktfläche, dem sogenannten \emph{p}-\emph{n}-Übergang, und bilden die Raumladungszone. 
+an der Kontaktfläche, dem sogenannten \emph{p}-\emph{n}-Übergang und bilden die Raumladungszone. 
 Durch diese, Diffusion genannte, Bewegung der Elektronen in die \emph{p}-dotierten Teil 
 wird dieser, in der Nähe des \emph{p}-\emph{n}-Übergangs, negativ und der \emph{n}-dotierte Teil 
 positiv geladen. 
@@ -42,7 +42,11 @@ einer Diode
 	I_{D} = I_{0}\del{\Exp{\dfrac{eU}{kT}}- 1}
 \end{empheq} 
 beschreiben.
-
+% % % %
+%
+% Skizze
+% 
+% % % %
 
 \subsection{Aufbau und Funktionsweise einer Solarzelle}
 Bei einer Solarzelle handelte es um ein Halbleiterbauelement, dessen grundsätzlicher
@@ -60,14 +64,25 @@ I_{SZ} = I_{0}\del{\Exp{\dfrac{eU}{kT}}- 1}-I_{Ph}
 \end{empheq} 
 ergibt.\\
 
+\includeFigure[scale=0.3]{Grafiken/Kennlinie}{Qualitative Darstellung der $I\text{-}U$-Kennlinie%
+ einer bestrahlen und einer unbestrahlten Solarzelle \cite{NHV1}}{\label{fig:Theorie_Kennlinie}}
+
 Die Strom-Spannung-Kennlinie (siehe \cref{fig:Theorie_Kennlinie}) einer Solarzelle
 wird durch die drei Größen Kurzschlussstrom $I_{K}$, Leerlaufspannung $U_{L}$ und
-den Wirkungsgrad $\eta$ beschrieben.
-% % % % % %
-%Geht besser
-% % % % % %
-
-Der  Kurzschlussstrom  stellt dabei den maximalen, bei kurzgeschlossener Solarzelle  
-fließenden Strom dar. Entsprechend ist die Leerlaufspannung die maximal anliegende Spannung,
-wenn kein Verbraucher an die Solarzelle angeschlossen ist.
-
+den Wirkungsgrad $\eta$ charakterisiert.\\
+Der Kurzschlussstrom, welcher bei konstanter Temperatur proportional zu Fläche der Solarzelle
+$A_{SZ}$ und der Intensität des Lichtes $J_{Ph}$ verläuft, stellt den maximalen Strom dar,
+der bei kurzgeschlossener Solarzelle ($U = 0$) fließt.
+Analog dazu ist die Leerlaufspannung die maximale Spannung der Solarzelle, wenn
+an diese kein Verbraucher  angeschlossen ist ($I_{SZ} = 0$). Die Leerlaufspannung
+hängt, bei ebenfalls konstanter Temperatur logarithmisch von der Lichtintensität $J_{Ph}$ 
+ab, bis ein Sättigungswert erreicht ist und ist unabhängig von der Solarzellenfläche $A_{SZ}$.
+Der Wirkungsgrad beschreibt das Verhältnis von gelieferter elektrischer Leistung der Solarzelle $P_{SZ}$
+und der eingestrahlten Lichtleistung $P_{Ph}$
+\begin{empheq}{equation}
+	\label{eq:Theorie_Wirkungsgrad}
+	\eta = \dfrac{P_{aus}}{P_{ein}}= \dfrac{P_{SZ}}{P_{Ph}} = \dfrac{U \cdot I_{SZ}}{J_{Ph} \cdot A_{SZ}}.
+\end{empheq}
+Das Maximum der Solarzellenleistung $I_{SZ}$ kann als Flächeninhalt des größtmöglichen Rechtecks bestimmt werden,
+welches sich zwischen x- und y-Achse und der $I\text{-}U$-Kennlinie einzeichnen lässt 
+(siehe \cref{fig:Theorie_Kennlinie}).
