@@ -1,0 +1,40 @@
+In diesem Abschnitt sind die für die Fehlerrechnung in \cref{sec:Auswertung} verwendeten Fehlergleichungen angegeben.
+Diese wurden mit Hilfe der gaußschen Fehlerfortpflanzung bestimmt.\\
+
+Der Fehler der Solarzellenfläche $A_{SZ}$ ergibt sich aus der vereinfachten Gleichung
+\begin{errorEquation}
+	\label{std:Fläche}
+	\sigma_{A_{SZ}} = n\cdot 2a \cdot \sigma_{a}.
+\end{errorEquation}  
+Für den Fehler des Abstands $d$ wurde die Gleichung
+\begin{errorEquation}
+	\label{std:Abstand}
+	\sigma_{d}=\sqrt{\sigma_{d'}^{2} + \sigma_{d_{\text{off},1}}^{2} + \sigma_{d_{\text{off},2}}^{2}}
+\end{errorEquation}
+verwendet.
+
+Der Fehler der Lichtleistung $P_{Ph}$ ist aus der Gleichung  
+\begin{errorEquation}
+	\label{std:Lichtleistung}
+	\sigma_{P_{Ph}} =\sqrt{A_{SZ}^{2} \sigma_{J_{Ph}}^{2} + J_{Ph}^{2} \sigma_{A_{SZ}}^{2}} 
+\end{errorEquation}
+berechnet worden.
+
+Der Fehler der Solarzellenleistung $P$ ergibt sich aus der Gleichung
+\begin{errorEquation}
+	\label{std:Solarzellenleistung}
+	\sigma_{P}=\sqrt{I^{2} \sigma_{U}^{2} + U^{2} \sigma_{I}^{2}}
+\end{errorEquation}
+
+Der Lastwiderstand $R_{\text{last}}$ hat den Fehler
+\begin{errorEquation}
+	\label{std:Lastwiderstand}
+	\sigma_{R_{\text{last}}}=\sqrt{\frac{\sigma_{U}^{2}}{I^{2}} + \frac{U^{2} \sigma_{I}^{2}}{I^{4}}}
+\end{errorEquation}
+
+Der Fehler des Wirkungsgrads $\eta$ wurde mit der Gleichung
+\begin{errorEquation}
+	\label{std:Wirkungsgrad}
+	\sigma_{\eta}=\sqrt{\frac{P^{2} \sigma_{P_{Ph}}^{2}}{P_{Ph}^{4}} + \frac{\sigma_{P}^{2}}{P_{Ph}^{2}}}
+\end{errorEquation}
+berechnet.

@@ -239,39 +239,6 @@ print(j_max)
 plt.bar(0, noms(I_1_err[j_max]), width=noms(U_1_err[j_max]), alpha=0.2, label="Maximale Leistung")
 
 
-#==============================================================================
-# Zum Glück nicht nötig
-#==============================================================================
-# Fit der Kennkurve
-#U = np.linspace(0, 35, 350)
-#popt_30mA, pcov_30mA = curve_fit(func_Kennlinie, noms(U_1_err), noms(I_1_err))
-#error_30mA = np.sqrt(np.diag(pcov_30mA))
-#
-#
-## Berechnung der maximalen Leistung P_max aus Fit
-#P_err = np.zeros(len(U))
-#j = 0
-#j_max = 0
-#for (u,i) in zip(U, func_Kennlinie(U, *popt_30mA)):
-#    P_err[j] = -(noms(u) * noms(i))
-#    if j > 0:
-#        if P_err[j] > P_err[j-1]:
-#            p_max = P_err[j]
-#            j_max = j
-#    else:
-#        p_max = P_err[j]
-#        j_max = j
-#    j += 1
-#
-#print("\nMaximal Leistungaus Fit 30mA:")
-#print(U[j_max] * func_Kennlinie(U, *popt_30mA)[j_max])
-#print("Wirkungsgrad", U * func_Kennlinie(U, *popt_30mA)*100/(J_30mA_err * A_zelle_err))
-#
-#
-#
-## Plot der Fit-Kurve
-#plt.plot(U, func_Kennlinie(U, *popt_30mA), label="Regressionskurve")
-
 
 # Plot der Messwerte (U/I)
 plt.plot(noms(U_1_err), noms(I_1_err), "xr", label="Messwerte")
@@ -303,8 +270,8 @@ plt.plot(noms(R_last_1_err), noms(P_1_err), "xr", label="Messwerte")
 
 # Plot-Einstellungen
 plt.grid()
-plt.xlabel("Widerstand $R_{last}\ [\mathrm{V}] $", family="serif", fontsize="14")
-plt.ylabel("Leistung $P\ [\mathrm{mA}] $", family="serif", fontsize="14")
+plt.xlabel("Widerstand $R_{last}\ [\mathrm{k\Omega}] $", family="serif", fontsize="14")
+plt.ylabel("Leistung $P\ [\mathrm{mW}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Leistung_30mA.pdf")
@@ -385,43 +352,6 @@ plt.bar(0, noms(I_2_err[j_max]), width=noms(U_2_err[j_max]), alpha=0.2, label="M
 
 
 
-#==============================================================================
-# Zum Glück nicht nötig
-#==============================================================================
-## Fit der Kennkurve
-#U = np.linspace(0, 60, 600)
-#popt_50mA, pcov_50mA = curve_fit(func_Kennlinie, noms(U_2_err), noms(I_2_err))
-#error_50mA = np.sqrt(np.diag(pcov_50mA))
-#
-#
-## Berechnung der maximalen Leistung P_max aus Fit
-#P_err = np.zeros(len(U))
-#j = 0
-#j_max = 0
-#for (u,i) in zip(U, func_Kennlinie(U, *popt_50mA)):
-#    P_err[j] = -(noms(u) * noms(i))
-#    if j > 0:
-#        if P_err[j] > P_err[j-1]:
-#            p_max = P_err[j]
-#            j_max = j
-#    else:
-#        p_max = P_err[j]
-#        j_max = j
-#    j += 1
-#
-#print("\nMaximal Leistungaus Fit 30mA:")
-#print(U[j_max] * func_Kennlinie(U, *popt_50mA)[j_max])
-#print("Wirkungsgrad", U * func_Kennlinie(U, *popt_50mA)*100/(J_50mA_err * A_zelle_err))
-#
-#
-#
-## Plot der Fit-Kurve
-#plt.plot(U, func_Kennlinie(U, *popt_50mA), label="Regressionskurve")
-
-
-
-
-
 # Plot der Messwerte (U/I)
 plt.plot(noms(U_2_err), noms(I_2_err), "xr", label="Messwerte")
 
@@ -452,8 +382,8 @@ plt.plot(noms(R_last_2_err), noms(P_2_err), "xr", label="Messwerte")
 
 # Plot-Einstellungen
 plt.grid()
-plt.xlabel("Widerstand $R_{last}\ [\mathrm{V}] $", family="serif", fontsize="14")
-plt.ylabel("Leistung $P\ [\mathrm{mA}] $", family="serif", fontsize="14")
+plt.xlabel("Widerstand $R_{last}\ [\mathrm{k\Omega}] $", family="serif", fontsize="14")
+plt.ylabel("Leistung $P\ [\mathrm{mW}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Leistung_50mA.pdf")
@@ -524,35 +454,6 @@ plt.bar(0, noms(I_3_err[j_max]), width=noms(U_3_err[j_max]), alpha=0.2, label="M
 
 
 
-#==============================================================================
-# Zum Glück nicht nötig
-#==============================================================================
-## Fit der Kennkurve
-#U = np.linspace(0, 80, 800)
-#popt_75mA, pcov_75mA = curve_fit(func_Kennlinie, noms(U_3_err), noms(I_3_err))
-#error_75mA = np.sqrt(np.diag(pcov_75mA))
-#
-#
-## Berechnung der maximalen Leistung P_max aus Fit
-#P_err = np.zeros(len(U))
-#j = 0
-#j_max = 0
-#for (u,i) in zip(U, func_Kennlinie(U, *popt_75mA)):
-#    P_err[j] = -(noms(u) * noms(i))
-#    if j > 0:
-#        if P_err[j] > P_err[j-1]:
-#            p_max = P_err[j]
-#            j_max = j
-#    else:
-#        p_max = P_err[j]
-#        j_max = j
-#    j += 1
-#
-#print("\nMaximal Leistungaus Fit 75mA:")
-#print(U[j_max] * func_Kennlinie(U, *popt_75mA)[j_max])
-#print("Wirkungsgrad", U * func_Kennlinie(U, *popt_75mA)*100/(J_75mA_err * A_zelle_err))
-## Plot der Fit-Kurve
-#plt.plot(U, func_Kennlinie(U, *popt_75mA), label="Regressionskurve")
 
 
 # Plot der Messwerte (U/I)
@@ -585,8 +486,8 @@ plt.plot(noms(R_last_3_err), noms(P_3_err), "xr", label="Messwerte")
 
 # Plot-Einstellungen
 plt.grid()
-plt.xlabel("Widerstand $R_{last}\ [\mathrm{V}] $", family="serif", fontsize="14")
-plt.ylabel("Leistung $P\ [\mathrm{mA}] $", family="serif", fontsize="14")
+plt.xlabel("Widerstand $R_{last}\ [\mathrm{k\Omega}] $", family="serif", fontsize="14")
+plt.ylabel("Leistung $P\ [\mathrm{mW}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Leistung_75mA.pdf")
@@ -688,8 +589,8 @@ plt.plot(noms(R_last_4_err), noms(P_4_err), "xr", label="Messwerte")
 
 # Plot-Einstellungen
 plt.grid()
-plt.xlabel("Widerstand $R_{last}\ [\mathrm{V}] $", family="serif", fontsize="14")
-plt.ylabel("Leistung $P\ [\mathrm{mA}] $", family="serif", fontsize="14")
+plt.xlabel("Widerstand $R_{last}\ [\mathrm{k\Omega}] $", family="serif", fontsize="14")
+plt.ylabel("Leistung $P\ [\mathrm{mW}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Leistung_100mA.pdf")
@@ -726,5 +627,26 @@ Tab.label("Auswertung_Intensitaet_Leistung")
 Tab.addColumn([L_30mA_err, L_50mA_err, L_75mA_err, L_100mA_err], title="Abstand", symbol="d", unit=r"\cm")
 Tab.addColumn([J_30mA_err, J_50mA_err, J_75mA_err, J_100mA_err], title="Lichtintensität", symbol="J_{Ph}", unit=r"\milli\watt\per\cm\squared")
 Tab.addColumn([P_ein_30mA, P_ein_50mA, P_ein_75mA, P_ein_100mA], title="Lichtleistung", symbol="P_{Ph}", unit=r"\milli\watt")
-Tab.save("Tabellen/Intensitaet_Leistung.tex")
+#Tab.save("Tabellen/Intensitaet_Leistung.tex")
 #Tab.show()
+
+print("Fehlergleichungen:")
+D, o1, o2 = sym.var("d, d_1, d_2")
+d = D - o1 - o2
+d_Err = ErrorEquation(d, name="d")
+print(d_Err.std)
+A, J = sym.var("A, J")
+P = A * J
+P_Err = ErrorEquation(P, name="P")
+print(P_Err.std)
+I, U = sym.var("I, U")
+P = I * U
+P_Err = ErrorEquation(P, name="P")
+print(P_Err.std)
+R = U/I
+R_Err = ErrorEquation(R, name="R")
+print(R_Err.std)
+P1, P2 = sym.var("P_Ph, P")
+ETA= P2/P1
+ETA_Err = ErrorEquation(ETA, name="\eta")
+print(ETA_Err.std)

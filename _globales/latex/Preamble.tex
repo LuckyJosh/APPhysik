@@ -90,6 +90,8 @@
 % Grafiken, Tabellen und Zeichnungen 
 %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\usepackage{float}
+\floatstyle{plain}
 
 \usepackage{graphicx}                                                               % Ermöglicht das Einbinden Grafiken '\includegraphics[<Optionen>]{<Grafikpfad>}' und Veränderungen im Text, wie z.B. Schriftfarbe 
                                                         
@@ -193,7 +195,7 @@
 
 % Eigener Figuren Befehl
 \newcommand{\includeFigure}[4][]{
-\begin{figure}[!h]%
+\begin{figure}[H]%
 \centering%
 \includegraphics[#1]{#2}%
 \caption{#3 #4}%

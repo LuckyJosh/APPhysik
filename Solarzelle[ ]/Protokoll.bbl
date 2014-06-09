@@ -42,6 +42,17 @@
       \verb http://docs.scipy.org/doc/
       \endverb
     \endentry
+    \entry{Gar07}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Bachlorarbeit zum Thema Solarzellen}
+      \field{title}{Bachlorarbeit zum Thema Solarzellen}
+      \field{urlday}{09}
+      \field{urlmonth}{06}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.solalbert.info/downloads/files/BachelorarbeitSolarzellen.pdf
+      \endverb
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
