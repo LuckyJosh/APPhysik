@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  9 JUN 2014 09:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.5)  9 JUN 2014 09:54
 entering extended mode
 **Protokoll.tex
 
@@ -2188,6 +2188,8 @@ on input line 26.
 
 [4 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Solarzelle[ ]/Gra
 fiken/Intensitaet.png>]
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Tabel
+len/Kurzschlussstrom.tex")
 <Grafiken/Kurzschlussstrom.pdf, id=122, 578.16pt x 433.62pt>
 File: Grafiken/Kurzschlussstrom.pdf Graphic file (type pdf)
 
@@ -2196,10 +2198,15 @@ Package pdftex.def Info: Grafiken/Kurzschlussstrom.pdf used on input line 49.
 (pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
 
-LaTeX Warning: Reference `tab:Auswertung_Leerlaufspannung' on page 1 undefined 
-on input line 53.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Leerlaufspannung.pdf, id=125, 578.16pt x 433.62pt>
+
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Tabel
+len/Leerlaufspannung.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) <Grafiken/Leerlaufspannung.pdf, id=126, 578.16pt x 433.62pt>
 File: Grafiken/Leerlaufspannung.pdf Graphic file (type pdf)
 
 <use Grafiken/Leerlaufspannung.pdf>
@@ -2209,16 +2216,8 @@ Package pdftex.def Info: Grafiken/Leerlaufspannung.pdf used on input line 62.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Solarzelle[ ]/Gra
-fiken/Kurzschlussstrom.pdf>]
-
-LaTeX Warning: Reference `tab:Auswertung_Kennlinie_30mA' on page 1 undefined on
- input line 70.
-
-
-LaTeX Warning: Reference `tab:Auswertung_Kennlinie_100mA' on page 6 undefined o
-n input line 70.
-
+[5] [6 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Solarzelle[ ]
+/Grafiken/Kurzschlussstrom.pdf>]
 LaTeX Font Info:    Calculating math sizes for size <8.39996> on input line 75.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -2228,6 +2227,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <4.19998> on input line 75.
 
+
 LaTeX Font Warning: Font shape `U/esvect/m/n' in size <4.19998> not available
 (Font)              size <5> substituted on input line 75.
 
@@ -2235,81 +2235,102 @@ LaTeX Font Warning: Font shape `U/esvect/m/n' in size <4.19998> not available
 LaTeX Warning: Reference `tab:Auswertung_Kennlinien_Leistung' on page 1 undefin
 ed on input line 77.
 
-<Grafiken/Kennlinie_30mA.pdf, id=214, 578.16pt x 433.62pt>
+
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Tabel
+len/Intensitaet_Leistung.tex")
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Tabel
+len/Kennlinie_30mA.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Tabel
+len/Kennlinie_50mA.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Tabel
+len/Kennlinie_75mA.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Tabel
+len/Kennlinie_100mA.tex"
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) <Grafiken/Kennlinie_30mA.pdf, id=225, 578.16pt x 433.62pt>
 File: Grafiken/Kennlinie_30mA.pdf Graphic file (type pdf)
 
 <use Grafiken/Kennlinie_30mA.pdf>
-Package pdftex.def Info: Grafiken/Kennlinie_30mA.pdf used on input line 85.
+Package pdftex.def Info: Grafiken/Kennlinie_30mA.pdf used on input line 91.
 (pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Kennlinie_50mA.pdf, id=215, 578.16pt x 433.62pt>
+<Grafiken/Kennlinie_50mA.pdf, id=226, 578.16pt x 433.62pt>
 File: Grafiken/Kennlinie_50mA.pdf Graphic file (type pdf)
 
 <use Grafiken/Kennlinie_50mA.pdf>
-Package pdftex.def Info: Grafiken/Kennlinie_50mA.pdf used on input line 90.
+Package pdftex.def Info: Grafiken/Kennlinie_50mA.pdf used on input line 96.
 (pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Kennlinie_75mA.pdf, id=216, 578.16pt x 433.62pt>
+<Grafiken/Kennlinie_75mA.pdf, id=227, 578.16pt x 433.62pt>
 File: Grafiken/Kennlinie_75mA.pdf Graphic file (type pdf)
 
 <use Grafiken/Kennlinie_75mA.pdf>
-Package pdftex.def Info: Grafiken/Kennlinie_75mA.pdf used on input line 95.
+Package pdftex.def Info: Grafiken/Kennlinie_75mA.pdf used on input line 101.
 (pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Grafiken/Kennlinie_100mA.pdf, id=217, 578.16pt x 433.62pt>
+<Grafiken/Kennlinie_100mA.pdf, id=228, 578.16pt x 433.62pt>
 File: Grafiken/Kennlinie_100mA.pdf Graphic file (type pdf)
 
 <use Grafiken/Kennlinie_100mA.pdf>
-Package pdftex.def Info: Grafiken/Kennlinie_100mA.pdf used on input line 100.
+Package pdftex.def Info: Grafiken/Kennlinie_100mA.pdf used on input line 106.
 (pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [6 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Solarzelle[ ]/G
+) [7 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Solarzelle[ ]/G
 rafiken/Leerlaufspannung.pdf>]
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Latex
+/Fehlerrechnung.tex") [8]
 
-LaTeX Warning: Text page 7 contains only floats.
+LaTeX Warning: Text page 9 contains only floats.
 
-[7 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Solarzelle[ ]/Gra
-fiken/Kennlinie_30mA.pdf> <D:/Eigene Dateien/Studium/Physik/APraktikum/Praktiku
-mRepo/Solarzelle[ ]/Grafiken/Kennlinie_50mA.pdf
+[9]
+("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Latex
+/Diskussion.tex") [10 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRep
+o/Solarzelle[ ]/Grafiken/Kennlinie_30mA.pdf>]
+
+LaTeX Warning: Text page 11 contains only floats.
+
+[11 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Solarzelle[ ]/Gr
+afiken/Kennlinie_50mA.pdf> <D:/Eigene Dateien/Studium/Physik/APraktikum/Praktik
+umRepo/Solarzelle[ ]/Grafiken/Kennlinie_75mA.pdf
 
 pdfTeX warning: pdflatex.exe (file D:/Eigene Dateien/Studium/Physik/APraktikum/
-PraktikumRepo/Solarzelle[ ]/Grafiken/Kennlinie_50mA.pdf): PDF inclusion: multip
+PraktikumRepo/Solarzelle[ ]/Grafiken/Kennlinie_75mA.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >]
-
-LaTeX Warning: Text page 8 contains only floats.
-
-[8 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Solarzelle[ ]/Gra
-fiken/Kennlinie_75mA.pdf> <D:/Eigene Dateien/Studium/Physik/APraktikum/Praktiku
-mRepo/Solarzelle[ ]/Grafiken/Kennlinie_100mA.pdf
-
-pdfTeX warning: pdflatex.exe (file D:/Eigene Dateien/Studium/Physik/APraktikum/
-PraktikumRepo/Solarzelle[ ]/Grafiken/Kennlinie_100mA.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->]
-("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Latex
-/Fehlerrechnung.tex") [9]
-("D:\Eigene Dateien\Studium\Physik\APraktikum\PraktikumRepo\Solarzelle[ ]\Latex
-/Diskussion.tex") [10]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 34.
  (D:\Programme\MiKTeX\tex\latex\lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 AED: lastpage setting LastPage
-[11]
+[12 <D:/Eigene Dateien/Studium/Physik/APraktikum/PraktikumRepo/Solarzelle[ ]/Gr
+afiken/Kennlinie_100mA.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
 
@@ -2332,10 +2353,10 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'Protokoll.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 35984 strings out of 493921
- 678317 string characters out of 3150494
- 1088598 words of memory out of 3000000
- 38487 multiletter control sequences out of 15000+200000
+ 36044 strings out of 493921
+ 681138 string characters out of 3150494
+ 1185618 words of memory out of 3000000
+ 38522 multiletter control sequences out of 15000+200000
  205629 words of font info for 177 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  67i,22n,79p,881b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2354,9 +2375,9 @@ TeX/fonts/type1/public/lm/lmr8.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/l
 mri12.pfb><D:/Programme/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/Programme/M
 iKTeX/fonts/type1/public/lm/lmsy8.pfb><D:/Programme/MiKTeX/fonts/type1/public/l
 m/lmtt12.pfb>
-Output written on Protokoll.pdf (12 pages, 627301 bytes).
+Output written on Protokoll.pdf (13 pages, 645753 bytes).
 PDF statistics:
- 651 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 669 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

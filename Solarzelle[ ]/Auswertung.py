@@ -75,6 +75,7 @@ I_k_1_err = unp.uarray(I_k_1, [i_err]*len(I_k_1))
 #print("Abstände mit", L_1_err)
 
 # Umrechnung der Messwerte
+L_1_off_err = L_1_err[:]
 L_1_err = AbstandOhneOffset(L_1_err)
 #print("Abstände ohne", L_1_err)
 
@@ -116,7 +117,17 @@ plt.savefig("Grafiken/Kurzschlussstrom.pdf")
 #plt.show()
 plt.clf()
 
-
+# Tabelle
+Tab = Table(siunitx=True)
+Tab.layout(seperator="column", title_row_seperator="double", border=True)
+Tab.caption(r"Messwerte zur Bestimmung der Abhängigkeit des Kurzschlussstrom $I_{K}$ von der Lichtintensität $J_{Ph}$")
+Tab.label("Auswertung_Kurzschlussstorm")
+Tab.addColumn(I_k_1_err, title="Kurzschlussstrom", symbol="I_{K}", unit=r"\milli\ampere")
+Tab.addColumn(L_1_off_err, title="Abstand+Offset", symbol="d'", unit=r"\cm")
+Tab.addColumn(L_1_err, title="Abstand", symbol="d", unit=r"\cm")
+Tab.addColumn(J_1_err, title="Lichtintensität", symbol="J_{Ph}", unit=r"\milli\watt")
+#Tab.save("Tabellen/Kurzschlussstrom.tex")
+#Tab.show()
 
 #==============================================================================
 class LeerlaufSpannung:
@@ -131,6 +142,7 @@ L_2_err = unp.uarray(L_2, len(L_2)*[l_err])
 U_2_err = unp.uarray(-U_2, len(U_2)*[u_err])
 
 # Umrechnung der Abstände
+L_2_off_err = L_2_err[:]
 L_2_err = AbstandOhneOffset(L_2_err)
 
 # Laden der Intensitäten, l nicht gebraucht
@@ -151,8 +163,25 @@ plt.ylabel("Leerlaufspannung $U_{L}\ [\mathrm{V}] $", family="serif", fontsize="
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Leerlaufspannung.pdf")
-#plt.show()
+##plt.show()
 plt.clf()
+
+
+
+# Tabelle
+Tab = Table(siunitx=True)
+Tab.layout(seperator="column", title_row_seperator="double", border=True)
+Tab.caption(r"Messwerte zur Bestimmung der Abhängigkeit der Leerlaufspannung $U_{L}$ von der Lichtintensität $J_{Ph}$")
+Tab.label("Auswertung_Leerlaufspannung")
+Tab.addColumn(U_2_err, title="Leerlaufspannung", symbol="U_{L}", unit=r"\volt")
+Tab.addColumn(L_2_off_err, title="Abstand+Offset", symbol="d'", unit=r"\cm")
+Tab.addColumn(L_2_err, title="Abstand", symbol="d", unit=r"\cm")
+Tab.addColumn(J_2_err, title="Lichtintensität", symbol="J_{Ph}", unit=r"\milli\watt")
+#Tab.save("Tabellen/Leerlaufspannung.tex")
+#Tab.show()
+
+
+
 
 
 
@@ -256,7 +285,7 @@ plt.ylabel("Stromstärke $I\ [\mathrm{mA}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Kennlinie_30mA.pdf")
-plt.show()
+#plt.show()
 plt.clf()
 
 
@@ -291,6 +320,25 @@ W_30mA_err = P_1_err/(J_30mA_err * A_zelle_err)
 print("Wirkungsgrade 30mA:")
 for w in W_30mA_err:
     print(w * 100, "%")
+
+
+# Tabelle
+Tab = Table(siunitx=True)
+Tab.layout(seperator="column", title_row_seperator="double", border=True)
+Tab.caption(r"Messwerte für die Bestimmung der $I$-$U$-Kennlinie der Solarzelle im Abstand $d = 81{,}5$cm")
+Tab.label("Auswertung_Kennlinie_30mA")
+Tab.addColumn([int(R) for R in R_1], title="Widerstand", symbol="R", unit=r"\ohm", align="r")
+Tab.addColumn(U_1_err, title="Spannung", symbol="U", unit=r"\volt")
+Tab.addColumn(I_1_err, title="Strom", symbol="I", unit=r"\milli\ampere")
+Tab.addColumn(P_1_err, title="Leistung", symbol="J_{Ph}", unit=r"\milli\watt")
+Tab.addColumn(R_last_1_err, title="Lastwiderstand", symbol=r"R_{\text{last}}", unit=r"\kilo\ohm")
+Tab.addColumn(W_30mA_err*100, title="Wirkungsgrad", symbol=r"\eta", unit=r"\percent")
+#Tab.save("Tabellen/Kennlinie_30mA.tex")
+#Tab.show()
+
+
+
+
 
 
 #==============================================================================
@@ -387,7 +435,7 @@ plt.ylabel("Stromstärke $I\ [\mathrm{mA}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Kennlinie_50mA.pdf")
-plt.show()
+#plt.show()
 plt.clf()
 
 
@@ -421,6 +469,19 @@ print("Wirkungsgrade 50mA:")
 for w in W_50mA_err:
     print(w * 100, "%")
 
+# Tabelle
+Tab = Table(siunitx=True)
+Tab.layout(seperator="column", title_row_seperator="double", border=True)
+Tab.caption(r"Messwerte für die Bestimmung der $I$-$U$-Kennlinie der Solarzelle im Abstand $d = 68{,}5$cm")
+Tab.label("Auswertung_Kennlinie_50mA")
+Tab.addColumn([int(R) for R in R_2], title="Widerstand", symbol="R", unit=r"\ohm", align="r")
+Tab.addColumn(U_2_err, title="Spannung", symbol="U", unit=r"\volt")
+Tab.addColumn(I_2_err, title="Strom", symbol="I", unit=r"\milli\ampere")
+Tab.addColumn(P_2_err, title="Leistung", symbol="J_{Ph}", unit=r"\milli\watt")
+Tab.addColumn(R_last_2_err, title="Lastwiderstand", symbol=r"R_{\text{last}}", unit=r"\kilo\ohm")
+Tab.addColumn(W_50mA_err*100, title="Wirkungsgrad", symbol=r"\eta", unit=r"\percent")
+#Tab.save("Tabellen/Kennlinie_50mA.tex")
+#Tab.show()
 #==============================================================================
 class Kennkurve_75mA:
     pass
@@ -507,7 +568,7 @@ plt.ylabel("Stromstärke $I\ [\mathrm{mA}] $", family="serif", fontsize="14")
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig("Grafiken/Kennlinie_75mA.pdf")
-plt.show()
+#plt.show()
 plt.clf()
 
 
@@ -541,6 +602,21 @@ W_75mA_err = P_3_err/(J_75mA_err * A_zelle_err)
 print("Wirkungsgrade 75mA:")
 for w in W_75mA_err:
     print(w * 100, "%")
+
+
+# Tabelle
+Tab = Table(siunitx=True)
+Tab.layout(seperator="column", title_row_seperator="double", border=True)
+Tab.caption(r"Messwerte für die Bestimmung der $I$-$U$-Kennlinie der Solarzelle im Abstand $d = 48{,}0$cm")
+Tab.label("Auswertung_Kennlinie_75mA")
+Tab.addColumn([int(R) for R in R_3], title="Widerstand", symbol="R", unit=r"\ohm", align="r")
+Tab.addColumn(U_3_err, title="Spannung", symbol="U", unit=r"\volt")
+Tab.addColumn(I_3_err, title="Strom", symbol="I", unit=r"\milli\ampere")
+Tab.addColumn(P_3_err, title="Leistung", symbol="J_{Ph}", unit=r"\milli\watt")
+Tab.addColumn(R_last_3_err, title="Lastwiderstand", symbol=r"R_{\text{last}}", unit=r"\kilo\ohm")
+Tab.addColumn(W_75mA_err*100, title="Wirkungsgrad", symbol=r"\eta", unit=r"\percent")
+#Tab.save("Tabellen/Kennlinie_75mA.tex")
+#Tab.show()
 #==============================================================================
 class Kennkurve_100mA:
     pass
@@ -628,4 +704,27 @@ print("Wirkungsgrade 100mA:")
 for w in W_100mA_err:
     print(w * 100, "%")
 
-## Print Funktionen
+# Tabelle
+Tab = Table(siunitx=True)
+Tab.layout(seperator="column", title_row_seperator="double", border=True)
+Tab.caption(r"Messwerte für die Bestimmung der $I$-$U$-Kennlinie der Solarzelle im Abstand $d = 40{,}0$cm")
+Tab.label("Auswertung_Kennlinie_100mA")
+Tab.addColumn([int(R) for R in R_4], title="Widerstand", symbol="R", unit=r"\ohm", align="r")
+Tab.addColumn(U_4_err, title="Spannung", symbol="U", unit=r"\volt")
+Tab.addColumn(I_4_err, title="Strom", symbol="I", unit=r"\milli\ampere")
+Tab.addColumn(P_4_err, title="Leistung", symbol="J_{Ph}", unit=r"\milli\watt")
+Tab.addColumn(R_last_4_err, title="Lastwiderstand", symbol=r"R_{\text{last}}", unit=r"\kilo\ohm")
+Tab.addColumn(W_100mA_err*100, title="Wirkungsgrad", symbol=r"\eta", unit=r"\percent")
+#Tab.save("Tabellen/Kennlinie_100mA.tex")
+#Tab.show()
+
+# Tabelle Lichtleistung bei Kennlinien
+Tab = Table(siunitx=True)
+Tab.layout(seperator="column", title_row_seperator="double", border=True)
+Tab.caption(r"Lichtintensität und -leistung bei den vier Messungen der Kennlinien")
+Tab.label("Auswertung_Intensitaet_Leistung")
+Tab.addColumn([L_30mA_err, L_50mA_err, L_75mA_err, L_100mA_err], title="Abstand", symbol="d", unit=r"\cm")
+Tab.addColumn([J_30mA_err, J_50mA_err, J_75mA_err, J_100mA_err], title="Lichtintensität", symbol="J_{Ph}", unit=r"\milli\watt\per\cm\squared")
+Tab.addColumn([P_ein_30mA, P_ein_50mA, P_ein_75mA, P_ein_100mA], title="Lichtleistung", symbol="P_{Ph}", unit=r"\milli\watt")
+Tab.save("Tabellen/Intensitaet_Leistung.tex")
+#Tab.show()
