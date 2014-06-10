@@ -1,0 +1,23 @@
+Geradenparameter Blau:
+Steigung:28.3+/-0.7  y-Achsenabschnitt:-109.8+/-3.0
+'Nullstelle' der Regressiosngeraden: 3.88682773655 -0.000301042912213
+Geradenparameter Gruen:
+Steigung:54.4+/-2.7  y-Achsenabschnitt:-103+/-6
+'Nullstelle' der Regressiosngeraden: 1.89808796176 0.000600709877112
+Geradenparameter Gelb:
+Steigung:66.6+/-3.0  y-Achsenabschnitt:-121+/-6
+'Nullstelle' der Regressiosngeraden: 1.81258625173 -0.00175563510313
+Geradenparameter Orange:
+Steigung:66.6+/-3.0  y-Achsenabschnitt:-117+/-6
+'Nullstelle' der Regressiosngeraden: 1.76258525171 -0.00182223683314
+Geradenparameter Rot:
+Steigung:46.9+/-1.7  y-Achsenabschnitt:-87.5+/-3.5
+'Nullstelle' der Regressiosngeraden: 1.86488729775 -0.000155599139454
+Wellenlaenge	Frequenz
+465.0		6.44714963441e+14
+565.0		5.30606120354e+14
+585.0		5.12465740171e+14
+635.0		4.72114107087e+14
+657.0		4.56305111111e+14
+Geradenparameter Dispersionsspannung:
+Steigung:(1.14+/-0.28)e-14  y-Achsenabschnitt:-3.7+/-1.5

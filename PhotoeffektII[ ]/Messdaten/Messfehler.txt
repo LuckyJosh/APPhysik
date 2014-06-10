@@ -1,0 +1,2 @@
+# Fehler des Stroms[mA]	# Fehler der Spannung [V]
+0.5						  0.05
