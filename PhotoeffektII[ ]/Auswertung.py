@@ -349,7 +349,9 @@ param_b_6 = ufloat(popt_6[1], error_6[1])
 
 print("Geradenparameter Dispersionsspannung:")
 print("Steigung:{}  y-Achsenabschnitt:{}".format(param_m_6, param_b_6))
-
+print("Theoriewert:", const.h/const.elementary_charge)
+print("Abweichung vom Theoriewert:", ((param_m_6 - const.h/const.elementary_charge)
+/(const.h/const.elementary_charge)))
 
 # Plot der Regressionsgeraden
 X = np.linspace(0, 1e15, num=5e4)
@@ -452,6 +454,8 @@ Tab.addColumn([int(l) for l in wl], title="Wellenlänge", symbol="\lambda", unit
 Tab.addColumn(f*1e-15, title="Frequenz", symbol="f", unit=r"\peta\hertz")
 Tab.addColumn(param_m, title="Steigung", symbol="m", unit=r"\milli\ampere\per\volt")
 Tab.addColumn(param_b, title="y-Achsenabschnitt", symbol="b", unit=r"\milli\ampere")
+Tab.addColumn(U_D, title="Dispersionsspannung", symbol="U_{D}", unit=r"\volt")
+
 
 #Tab.show()
 #Tab.save("Tabellen/Dioden_Regression_Parameter.tex")

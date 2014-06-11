@@ -1,0 +1,103 @@
+Im folgenden Abschnitt sind während des Versuchs aufgenommenen Messwerte
+und die aus diesen berechneten Ergebnisse sowohl tabellarisch als auch grafische 
+dargestellt. An entsprechender Stelle sind Anmerkungen und Erklärungen zu den Rechnungen 
+und Ergebnissen gegeben. 
+
+Die Messfehler der aufgenommenen Größen wurden allgemein mit der kleinsten 
+Skaleneinteilung des jeweiligen Messgeräts angenommen.
+
+
+
+\subsection{Bestimmung der Dispersionsspannung von Dioden}
+
+	Die für die fünf Dioden aufgenommenen Messwerte für Strom $I$ und Spannung $U$
+	sind für jeweils eine Diode in den Tabellen \ref{tab:Auswertung_Diode_Blau},
+	\ref{tab:Auswertung_Diode_Gruen}, \ref{tab:Auswertung_Diode_Gelb},
+	 \ref{tab:Auswertung_Diode_Orange} und \ref{tab:Auswertung_Diode_Rot} aufgelistet.
+	
+	In den Abbildungen \ref{fig:Auswertung_Diode_Blau} bis \ref{fig:Auswertung_Diode_Rot}
+	sind die
+	Messwerte für die Stromstärke $I$ gegen die der Spannung, der jeweiligen Diode, 
+	aufgetragen. In diesen Abbildungen befinden sich auch die jeweiligen Regressionsgeraden 
+	der Messwerte für den annähernd linearen Teil der $I$-$U$-Kennlinie. Diese Regressionen
+	wurde mit Hilf der \emph{Python}-Bibliothek \emph{SciPy} \cite{SciPy} und dem Ansatz
+	\begin{empheq}{equation}
+		I(U) = A \cdot U + I_{0}
+	\end{empheq}  
+	bestimmt.
+	
+	Die Parameter der fünf Regressionsgeraden sind in \cref{tab:Auswertung_Parameter} zu 
+	finden. In dieser Tabelle befinden sich ebenfalls die, als Nullstellen der 
+	Regressionsgeraden bestimmten, Dispersionsspannungen der jeweiligen Diode.
+	
+	
+	\input{Tabellen/Diode_Blau.tex}  
+	
+	\includeFigure[scale=0.7]{Grafiken/Diode_Blau.pdf}{Grafische % 
+		Darstellung der Messwerte für die $I$-$U$-Kennlinie der %
+		 blauen Diode und der Bestimmung der Dispersionsspannung %
+		 }{\label{fig:Auswertung_Diode_Blau}}
+	
+	\input{Tabellen/Diode_Gruen.tex}  
+	
+		\includeFigure[scale=0.7]{Grafiken/Diode_Gruen.pdf}{Grafische % 
+			Darstellung der Messwerte für die $I$-$U$-Kennlinie der %
+			grünen Diode und der Bestimmung der Dispersionsspannung %
+		}{\label{fig:Auswertung_Diode_Gruen}}
+	
+	
+	\input{Tabellen/Diode_Gelb.tex}  
+	
+			\includeFigure[scale=0.7]{Grafiken/Diode_Gelb.pdf}{Grafische % 
+				Darstellung der Messwerte für die $I$-$U$-Kennlinie der %
+				gelben Diode und der Bestimmung der Dispersionsspannung%
+			}{\label{fig:Auswertung_Diode_Gelb}}
+	
+	\input{Tabellen/Diode_Orange.tex}  
+	
+		\includeFigure[scale=0.7]{Grafiken/Diode_Orange.pdf}{Grafische % 
+			Darstellung der Messwerte für die $I$-$U$-Kennlinie der %
+			orangefarbenen Diode und der Bestimmung der Dispersionsspannung%
+		}{\label{fig:Auswertung_Diode_Orange}}
+	
+	\input{Tabellen/Diode_Rot.tex}  
+	
+		\includeFigure[scale=0.7]{Grafiken/Diode_Rot.pdf}{Grafische % 
+			Darstellung der Messwerte für die $I$-$U$-Kennlinie der %
+			roten Diode und der Bestimmung der Dispersionsspannung%
+		}{\label{fig:Auswertung_Diode_Rot}}
+
+		\input{Tabellen/Dioden_Regression_Parameter.tex}
+		
+\subsection{Bestimmung des Abhängigkeit der Dispersionsspannung von der Lichtfrequenz}
+
+
+	Die Werte für die Dispersionsspannung $U_{D}$ aus \cref{tab:Auswertung_Parameter} 
+	sind in \cref{fig:Auswertung_Dispersion_Frequenz} gegen die Frequenzen des emittierten Lichtes der jeweiligen 
+	Diode aufgetragen.
+
+	\includeFigure[scale=0.7]{Grafiken/Dispersion_Frequenz.pdf}{%
+	Grafische Darstellung des Zusammenhangs zwischen der Dispersionsspannung 
+	und der Frequenz einer Diode mit Regressionsgerade %
+	}{\label{fig:Auswertung_Dispersion_Frequenz}}  
+	
+	Die lineare Regression wurde wiederum mit \emph{SciPy} berechnet, wodurch sich
+	die Parameter für den Ansatz 
+	\begin{empheq}{equation}
+		U(f) = B \cdot f + U_{0}
+	\end{empheq}  
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{align}
+			B &= \SI{1.1(3)e-14}{\volt\second} \\
+			U_{0} &= \SI{-4(2)}{\volt} 
+		\end{empheq}  
+	\end{subequations}
+	ergeben.
+	Der Theorie nach entspricht die Steigung dieser Geraden gerade dem Quotienten 
+	aus dem planckschen Wirkungsquantum $h$ und der Elementarladung  $e_{0}$, sodass 
+		\begin{empheq}{equation}
+			\label{val:Auswertung_h_e0}
+			\dfrac{h}{e_{0}} = B = \SI{1.1(3)e-14}{\volt\second}
+		\end{empheq}  
+	gilt.

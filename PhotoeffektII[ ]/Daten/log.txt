@@ -21,3 +21,5 @@ Wellenlaenge	Frequenz
 657.0		4.56305111111e+14
 Geradenparameter Dispersionsspannung:
 Steigung:(1.14+/-0.28)e-14  y-Achsenabschnitt:-3.7+/-1.5
+Theoriewert: 4.13566751302e-15
+Abweichung vom Theoriewert: 1.8+/-0.7
