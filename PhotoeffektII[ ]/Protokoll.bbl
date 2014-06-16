@@ -19,6 +19,24 @@
 
 \refsection{0}
   \sortlist{entry}{none}
+    \entry{Metzler07}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=30a34908dec034760dce1ec73b38d630}{Krause}{K\bibinitperiod}{Joachim\bibnamedelimb Grehn\bibnamedelimb {,}\bibnamedelima Joachim}{J\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim ,\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=30a34908dec034760dce1ec73b38d630}{Krause}{K\bibinitperiod}{Joachim\bibnamedelimb Grehn\bibnamedelimb {,}\bibnamedelima Joachim}{J\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim ,\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Bildungshaus Schulbuchverlage}%
+      }
+      \strng{namehash}{30a34908dec034760dce1ec73b38d630}
+      \strng{fullhash}{30a34908dec034760dce1ec73b38d630}
+      \field{sortinit}{0}
+      \field{labeltitle}{Metzler Physik}
+      \field{edition}{4}
+      \field{title}{Metzler Physik}
+      \field{year}{2007}
+    \endentry
     \entry{SciPy}{misc}{}
       \field{sortinit}{0}
       \field{labeltitle}{SciPy}
