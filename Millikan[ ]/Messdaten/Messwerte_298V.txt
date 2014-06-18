@@ -1,8 +1,8 @@
-#Fallzeit1 t1_ab  #Steigzeit1 t1_auf	#Fallzeit2 t2_ab #Steigzeit2 t2_auf #Thermowiderstand[MOhm]	
-4.412	4.635	    0	    0	1.87
-3.569	3.384	3.656	    0	1.87
-7.759	6.753	8.199	6.712	1.84
-3.447	3.981	    0	    0	1.83
+#Fallzeit1 t1_ab  #Steigzeit1 t1_auf	#Fallzeit2 t2_ab #Steigzeit2 t2_auf #Thermowiderstand[MOhm]	# Temperatur[°C] 	#Viskosität der Luft[10^-5 Ns/m^2]
+4.412	4.635	    0	    0	1.87	28
+3.569	3.384	3.656	    0	1.87	28
+7.759	6.753	8.199	6.712	1.84	28
+3.447	3.981	    0	    0	1.83	29
 
 
 
