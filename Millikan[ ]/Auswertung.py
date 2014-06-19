@@ -432,11 +432,30 @@ plt.xlim(0,15)
 plt.ylim(0,9e-19)
 plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x,_: float(x)*1e19))
 
-
 plt.legend(loc="best")
 plt.savefig("Grafiken/Messwerte.pdf")
-plt.show()
+#plt.show()
 
 
 
+# Tabelle
+e_0 = np.array([popt_1[0], popt_2[0], q[9]])
+n = np.array([1,2,4])
+de_0 = np.zeros(3)
 
+for i in range(3):
+    de_0[i] = np.abs((const.elementary_charge - (e_0[i]/n[i]))*100/const.elementary_charge)
+print(de_0)
+
+
+Tab_Ladung = Table(siunitx=True)
+Tab_Ladung.layout(seperator="column", title_row_seperator="double",
+                     border=True)
+Tab_Ladung.label("Auswertung_Ladung")
+Tab_Ladung.caption("Abweichung der berechneten Vielfachen der Elementarladung vom Literaturwert")
+Tab_Ladung.addColumn(e_0*1e19, title="Ladung", symbol=r"n\cdot e_{0}", unit=r"\coulomb")
+Tab_Ladung.addColumn(n, title="Faktor", symbol="n")
+Tab_Ladung.addColumn(de_0, title="Abweichung", symbol=r"1-\frac{e_0}{e_{0,\text{lit}}}", unit=r"\percent")
+
+#Tab_Ladung.save("Tabellen/Ladung.tex")
+#Tab_Ladung.show(quiet=False)

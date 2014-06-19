@@ -42,6 +42,25 @@
       \verb http://docs.scipy.org/doc/
       \endverb
     \endentry
+    \entry{Mende09}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=bb71354d54c5d626dfa90290798fdc72}{Simon}{S\bibinitperiod}{Dietmar\bibnamedelimb Mende{,}\bibnamedelima Günther}{D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=bb71354d54c5d626dfa90290798fdc72}{Simon}{S\bibinitperiod}{Dietmar\bibnamedelimb Mende{,}\bibnamedelima Günther}{D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Fachbuchverlag Leibzig im Carl Hanser Verlag München}%
+      }
+      \strng{namehash}{bb71354d54c5d626dfa90290798fdc72}
+      \strng{fullhash}{bb71354d54c5d626dfa90290798fdc72}
+      \field{sortinit}{0}
+      \field{labeltitle}{Physik}
+      \field{edition}{16}
+      \field{subtitle}{Gleichungen und Tabellen}
+      \field{title}{Physik}
+      \field{year}{2009}
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
