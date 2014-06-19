@@ -265,6 +265,87 @@ print("Ladung 3 korregiert", q_korr_201V)
 
 
 
+#==============================================================================
+class Tabellen:
+    pass
+#==============================================================================
+# Spannungen
+U1 = np.ones(len(T_298V)) * U_298V
+U2 = np.ones(len(T_297V)) * U_297V
+U3 = np.ones(len(T_201V)) * U_201V
+U = np.concatenate([U1, U2, U3])
+R = np.concatenate([R_th_298V, R_th_297V, R_th_201V])
+
+
+t1auf = np.concatenate([t1_auf_298V,t1_auf_297V,t1_auf_201V])
+t2auf = np.concatenate([t2_auf_298V, t2_auf_297V, t2_auf_201V])
+t1ab = np.concatenate([t1_ab_298V,t1_ab_297V,t1_ab_201V])
+t2ab = np.concatenate([t2_ab_298V, t2_ab_297V, t2_ab_201V])
+tauf = np.concatenate([t_auf_298V, t_auf_297V, t_auf_201V])
+tab = np.concatenate([t_ab_298V, t_ab_297V, t_ab_201V])
+
+
+Tab_Messwerte = Table(siunitx=True)
+Tab_Messwerte.layout(seperator="column", title_row_seperator="double",
+                     border=True)
+Tab_Messwerte.label("Auswertung_Messwerte")
+Tab_Messwerte.caption("Die aufgenommenen Messwerte für die Auf- und Abwärtsgeschwindigkeiten der Öltröpfchen, "+
+                      "deren Mittelwert und der Wert des Thermowiderstands während der jeweiligen Messung")
+Tab_Messwerte.addColumn([int(u) for u in U], title="Spannung", symbol="U", unit=r"\volt")
+Tab_Messwerte.addColumn(t1auf, title="Steigzeit 1", symbol="t_{1,\\text{auf}}", unit=r"\second")
+Tab_Messwerte.addColumn(t2auf, title="Steigzeit 2", symbol="t_{2,\\text{auf}}", unit=r"\second")
+Tab_Messwerte.addColumn(t1ab, title="Fallzeit 1", symbol="t_{1,\\text{ab}}", unit=r"\second")
+Tab_Messwerte.addColumn(t2ab, title="Fallzeit 2", symbol="t_{2,\\text{ab}}", unit=r"\second")
+Tab_Messwerte.addColumn(tauf, title="Steigzeit Mittel", symbol="\overline{t_{\\text{auf}}}", unit=r"\second")
+Tab_Messwerte.addColumn(tab, title="Fallzeit Mittel", symbol="\overline{t_{\\text{ab}}}", unit=r"\second")
+Tab_Messwerte.addColumn(R, title="Thermistor", symbol="R", unit=r"\mega\ohm")
+#Tab_Messwerte.save("Tabellen/Messwerte.tex")
+#Tab_Messwerte.show()
+
+
+
+# Ergebnisse
+vauf = np.concatenate([v_auf_298V, v_auf_297V, v_auf_201V])
+vab = np.concatenate([v_ab_298V, v_ab_297V, v_ab_201V])
+T = np.concatenate([T_298V, T_297V, T_201V])
+ETA = np.concatenate([eta_298V, eta_297V, eta_201V])
+
+
+Tab_Ergebnisse = Table(siunitx=True)
+Tab_Ergebnisse.layout(seperator="column", title_row_seperator="double",
+                     border=True)
+Tab_Ergebnisse.label("Auswertung_Ergebnisse")
+Tab_Ergebnisse.caption("Aus den Messwerten berechnete Steig- und Fallgeschwindigkeiten,"+
+                      "sowie die Temperatur und unkorrigierte sowie korrigierte Viskosität der Luft")
+Tab_Ergebnisse.addColumn(vauf*1e03, title="Steiggeschwindigkeit", symbol="v_{\\text{auf}}", unit=r"\milli\meter\per\second")
+Tab_Ergebnisse.addColumn(vab*1e03, title="Fallgeschwindigkeit", symbol="v_{\\text{ab}}", unit=r"\milli\meter\per\second")
+Tab_Ergebnisse.addColumn(vab*1e03 - vauf*1e03, title="Differenzgeschwindigkeit", symbol="v_{\\text{ab}} - v_{\\text{auf}}", unit=r"\milli\meter\per\second")
+Tab_Ergebnisse.addColumn([int(t) for t in T], title="Lufttemperatur", symbol="T", unit=r"\celsius")
+Tab_Ergebnisse.addColumn(ETA*1e06, title="Luftviskosität", symbol="\eta_{L}", unit=r"\micro\newton\second\per\square\meter")
+#Tab_Ergebnisse.addColumn(ETA_korr*1e06, title="korrigierte Luftviskosität", symbol="\eta_{L, eff}", unit=r"\micro\newton\second\per\square\meter")
+#Tab_Ergebnisse.save("Tabellen/Ergebnisse.tex")
+#Tab_Ergebnisse.show()
+
+# Ergebnisse2
+r = np.concatenate([R_298V, R_297V, R_201V])
+r = np.delete(r, np.where(r == 0)[0])
+Q = np.concatenate([q_korr_298V, q_korr_297V, q_korr_201V])
+Q = np.delete(Q, np.where(Q == 0)[0])
+ETA_korr = np.concatenate([eta_korr_298V, eta_korr_297V, eta_korr_201V])
+ETA_korr = np.delete(ETA_korr, np.where(ETA_korr == 0)[0])
+
+Tab_Ergebnisse2 = Table(siunitx=True)
+Tab_Ergebnisse2.layout(seperator="column", title_row_seperator="double",
+                     border=True)
+Tab_Ergebnisse2.label("Auswertung_Ergebnisse")
+Tab_Ergebnisse2.caption("Aus den brauchbaren Messwerten berechnete Radien und Ladungen der Tröpfchen,"+
+                      "sowie die korrigierte Viskosität der Luft")
+Tab_Ergebnisse2.addColumn(r*1e06, title="Radius", symbol="r", unit=r"\micro\meter")
+Tab_Ergebnisse2.addColumn(ETA_korr*1e06, title="korrigierte Viskosität", symbol="\\eta_{\\text{L,eff}}", unit=r"\micro\newton\second\per\square\meter")
+Tab_Ergebnisse2.addColumn(Q*1e19, title="Ladung", symbol="q", unit=r"\coulomb")
+
+#Tab_Ergebnisse2.save("Tabellen/Ergebnisse2.tex")
+#Tab_Ergebnisse2.show()
 
 #==============================================================================
 class Plots:
@@ -319,7 +400,13 @@ n = np.linspace(-1, 16, 20)
 
 
 #Plot der Messwerte
-plt.plot(N, q, "rx", label="Messwerte")
+#plt.plot(N, q, "rx", label="Ladungen")
+plt.plot(-1,-1 , "kx", label="Ladungen")
+plt.plot(N_1, q_1, "rx")
+plt.plot(N_2, q_2, "gx")
+plt.plot(10, q[9], "bx")
+
+
 
 # Plot der ersten Fit Gerade
 plt.plot(n, func_gerade(n, popt_1[0]), color="gray", label="Regressionsgeraden")
@@ -329,6 +416,14 @@ plt.plot(n, func_gerade(n, popt_2[0]), color="gray")
 
 # Plot dritter Wert
 plt.plot(n, func_gerade(n, q[9]), color="gray")
+
+
+# Plot der Literaturwerte
+plt.plot(n, func_gerade(n, const.elementary_charge), "k--", label="Vielfache der Elementarladung")
+plt.plot(n, func_gerade(n, 2*const.elementary_charge), "k--")
+plt.plot(n, func_gerade(n, 3*const.elementary_charge), "k--")
+plt.plot(n, func_gerade(n, 4*const.elementary_charge), "k--")
+
 
 plt.grid()
 plt.xlabel(r"Messung  $N$")

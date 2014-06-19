@@ -1,0 +1,44 @@
+In folgendem Abschnitt sind er erhaltenen Messwerte und daraus berechneten
+Ergebnisse tabellarisch und grafisch dargestellt.
+An entsprechender Stelle sind Anmerkungen und Erklärungen zu den Berechnungen 
+und Ergebnissen gegeben.\\
+
+Die Messwerte\footnote{Bei der Durchführung des Versuch konnten keine brauchbaren
+Messwerte aufgenommen werden, daher wurden uns die Messwerte einer anderen Gruppe zur 
+Verfügung gestellt.} zu diesem Versuch, die Spannung $U$, die Steig- und Fallzeiten $t_{\text{auf}}$ und 
+$t_{\text{ab}}$, sowie der Thermistor $R$ sind in \cref{tab:Auswertung_Messwerte} dargestellt. 
+Wenn zwei Steig- oder Fallzeiten gemessen werden konnten wurde der Mittelwert aus diesen berechnet,
+sonst entspricht der Mittelwert dem einzelnen Messwert.
+ 
+ 
+ \input{Tabellen/Messwerte.tex}
+
+
+
+Über die Verwendete Messstrecke $s = \SI{0.5}{\mm}$ wurde aus den Zeiten $t_{\text{auf}}$ und $t_{\text{ab}}$ die
+korrespondierenden Geschwindigkeiten $v_{\text{auf}}$ und $v_{\text{ab}}$ berechnet. Die Temperaturen der Luft 
+$T$ konnten unter Verwendung der Thermistormesswerte aus der Tabelle 1 in \cite{V503} abgelesen und
+wiederum zur Bestimmung der Luftviskosität $\eta_{L}$ aus Abbildung 3 in \cite{V503} verwendet werden.
+Diese Werte befinden sich zusammen mit der im weiteren Verlauf gebrauchten Differenz der Geschwindigkeiten 
+$v_{\text{ab}} - v_{\text{auf}}$ in \cref{tab:Auswertung_Ergebnisse}.  
+ 
+	\input{Tabellen/Ergebnisse.tex}
+
+Für die Bestimmung des Radius $r$ der Öltröpfchen nach \cref{eq:} und der korrigierten Werte für 
+die Viskosität der Luft $\eta_{L,\text{eff}}$  und der Ladung $q$ der Öltröpfchen nach Cunningham \cref{eq:} und \cref{eq:} 
+können nur die Werte verwendet werden, deren Differenzgeschwindigkeit $v_{\text{ab}} - v_{\text{auf}} > 0$ ist.
+Ohne diese Einschränkung ergeben sich für den Radius $r$ und die Ladung $q$ komplexe Werte die unphysikalisch und 
+nicht zu gebrauchen sind.
+Die Werte für den Radius $r$, die korrigierte Viskosität $\eta_{L, \text{eff}}$ und Ladung $q$  befinden sich in 
+\cref{tab:Auswertung_Ergebnisse2}.
+
+	 \input{Tabellen/Ergebnisse2.tex}    
+	 
+Die Ergebnisse für die Ladung $q$ sind in \cref{fig:} aufgetragen. Mittels einer linearen Regression,
+durchgeführt mit der \emph{Python}-Bibliothek \emph{SciPy} \cite{SciPy},
+wurden Horizontalen bestimmt die den Mittelwert nah beieinander liegender Ladungen darstellt.
+Außerdem wurden weitere Horizontalen (gestrichelt) in Höhen der ersten vier Vielfachen der
+Elementarladung $e_{0} = \SI{1.602e-19}{\coulomb}$ \cite{SciPy} eingezeichnet.
+
+
+	\includeFigure[scale=0.65]{Grafiken/Messwerte.pdf}{Grafische Darstellung der erhaltenen Ladungen, und gemittelter Ladung von nahe beieinander liegender Ergebnisse}{\label{fig:Auswertung_Ladungen}}
