@@ -393,48 +393,54 @@ print(q[9])
 
 
 
-
 # Messungs Nummern
 N = np.arange(1, len(q)+1)
 n = np.linspace(-1, 16, 20)
 
 
 #Plot der Messwerte
+fig, ax1 = plt.subplots()
 #plt.plot(N, q, "rx", label="Ladungen")
-plt.plot(-1,-1 , "kx", label="Ladungen")
-plt.plot(N_1, q_1, "rx")
-plt.plot(N_2, q_2, "gx")
-plt.plot(10, q[9], "bx")
+ax1.plot(-1,-1 , "kx", label="Ladungen")
+ax1.plot(N_1, q_1, "rx")
+ax1.plot(N_2, q_2, "gx")
+ax1.plot(10, q[9], "bx")
 
 
 
 # Plot der ersten Fit Gerade
-plt.plot(n, func_gerade(n, popt_1[0]), color="gray", label="Regressionsgeraden")
+ax1.plot(n, func_gerade(n, popt_1[0]), color="gray", label="Regressionsgeraden")
 
 # Plot der zweiten Fit Gerade
-plt.plot(n, func_gerade(n, popt_2[0]), color="gray")
+ax1.plot(n, func_gerade(n, popt_2[0]), color="gray")
 
 # Plot dritter Wert
-plt.plot(n, func_gerade(n, q[9]), color="gray")
+ax1.plot(n, func_gerade(n, q[9]), color="gray")
 
 
 # Plot der Literaturwerte
-plt.plot(n, func_gerade(n, const.elementary_charge), "k--", label="Vielfache der Elementarladung")
-plt.plot(n, func_gerade(n, 2*const.elementary_charge), "k--")
-plt.plot(n, func_gerade(n, 3*const.elementary_charge), "k--")
-plt.plot(n, func_gerade(n, 4*const.elementary_charge), "k--")
+e = const.elementary_charge * 1e19
+ax2 = ax1.twinx()
+ax2.set_ylim(0,9)
+ax2.set_yticks((1*e, 2*e, 3*e, 4*e, 5*e))
+ax2.set_yticklabels(("1$e_{0}$","2$e_{0}$","3$e_{0}$","4$e_{0}$", "5$e_{0}$"))
+
+ax1.plot(n, func_gerade(n, const.elementary_charge), "k--", label="Vielfache der Elementarladung")
+ax1.plot(n, func_gerade(n, 2*const.elementary_charge), "k--")
+ax1.plot(n, func_gerade(n, 3*const.elementary_charge), "k--")
+ax1.plot(n, func_gerade(n, 4*const.elementary_charge), "k--")
 
 
-plt.grid()
-plt.xlabel(r"Messung  $N$")
-plt.ylabel(r"Ladung  $q\ [10^{-19} \mathrm{C}]$")
-plt.xlim(0,15)
-plt.ylim(0,9e-19)
-plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x,_: float(x)*1e19))
+ax1.grid()
+ax1.set_xlabel(r"Messung  $N$")
+ax1.set_ylabel(r"Ladung  $q\ [10^{-19} \mathrm{C}]$")
+ax1.set_xlim(0,15)
+ax1.set_ylim(0,9e-19)
+ax1.yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x,_: float(x)*1e19))
 
-plt.legend(loc="best")
-plt.savefig("Grafiken/Messwerte.pdf")
-#plt.show()
+ax1.legend(loc="best")
+fig.savefig("Grafiken/Messwerte.pdf")
+fig.show()
 
 
 
@@ -446,6 +452,16 @@ de_0 = np.zeros(3)
 for i in range(3):
     de_0[i] = np.abs((const.elementary_charge - (e_0[i]/n[i]))*100/const.elementary_charge)
 print(de_0)
+
+# Mittelwertberechnung
+E_0 = np.array([e_0[i]/n[i] for i in range(3)])
+E_0_err = ufloat(np.mean(E_0), np.std(E_0)/np.sqrt(len(E_0)))
+print("Elementar Ladungen", E_0)
+print("Mittelwert", np.mean(E_0))
+print("Mittelwert Abweichung", np.std(E_0)/np.sqrt(len(E_0)))
+print("Mittelwert Abweichung lit", np.abs((const.elementary_charge - np.mean(E_0))/const.elementary_charge) )
+
+
 
 
 Tab_Ladung = Table(siunitx=True)
@@ -459,3 +475,9 @@ Tab_Ladung.addColumn(de_0, title="Abweichung", symbol=r"1-\frac{e_0}{e_{0,\text{
 
 #Tab_Ladung.save("Tabellen/Ladung.tex")
 #Tab_Ladung.show(quiet=False)
+
+
+#Avogadrokonstante
+N_A = const.physical_constants["Faraday constant"][0]/E_0_err
+print(N_A)
+print("Abweichung Lit",np.abs((const.Avogadro - N_A)/const.Avogadro) )
