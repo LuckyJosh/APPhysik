@@ -24,17 +24,17 @@ $v_{\text{ab}} - v_{\text{auf}}$ in \cref{tab:Auswertung_Ergebnisse}.
  
 	\input{Tabellen/Ergebnisse.tex}
 
-Für die Bestimmung des Radius $r$ der Öltröpfchen nach \cref{eq:} und der korrigierten Werte für 
-die Viskosität der Luft $\eta_{L,\text{eff}}$  und der Ladung $q$ der Öltröpfchen nach Cunningham \cref{eq:} und \cref{eq:} 
+Für die Bestimmung des Radius $r$ der Öltröpfchen nach \cref{eq:Theorie_Radius} und der korrigierten Werte für 
+die Viskosität der Luft $\eta_{L,\text{eff}}$  und der Ladung $q$ der Öltröpfchen nach Cunningham \cref{eq:Theorie_Cunningham_Viskositaet} und \cref{eq:Theorie_Cunningham_Ladung} 
 können nur die Werte verwendet werden, deren Differenzgeschwindigkeit $v_{\text{ab}} - v_{\text{auf}} > 0$ ist.
 Ohne diese Einschränkung ergeben sich für den Radius $r$ und die Ladung $q$ komplexe Werte die unphysikalisch und 
 nicht zu gebrauchen sind.
 Die Werte für den Radius $r$, die korrigierte Viskosität $\eta_{L, \text{eff}}$ und Ladung $q$  befinden sich in 
-\cref{tab:Auswertung_Ergebnisse2}.
+\cref{tab:Auswertung_Ergebnisse2}.\\
 
 	 \input{Tabellen/Ergebnisse2.tex}    
 	 
-Die Ergebnisse für die Ladung $q$ sind in \cref{fig:} aufgetragen. Mittels einer linearen Regression,
+Die Ergebnisse für die Ladung $q$ sind in \cref{fig:Auswertung_Ladungen} aufgetragen. Mittels einer linearen Regression,
 durchgeführt mit der \emph{Python}-Bibliothek \emph{SciPy} \cite{SciPy},
 wurden Horizontalen bestimmt die den Mittelwert nah beieinander liegender Ladungen darstellt.
 Außerdem wurden weitere Horizontalen (gestrichelt) in Höhen der ersten vier Vielfachen der
@@ -42,7 +42,6 @@ Elementarladung $e_{0} = \SI{1.602e-19}{\coulomb}$ \cite{Mende09} eingezeichnet.
 
 
 	\includeFigure[scale=0.65]{Grafiken/Messwerte.pdf}{Grafische Darstellung der erhaltenen Ladungen, und gemittelter Ladung von nahe beieinander liegender Ergebnisse}{\label{fig:Auswertung_Ladungen}}
-
 
 Die so gemittelten Werte für die Vielfachen der Elementarladung und deren Abweichung zu den entsprechenden, 
 tatsächlichen Vielfachen der Elementarladung sind in \cref{tab:Auswertung_Ladung} dargestellt.
@@ -53,8 +52,9 @@ Aus diesen Werten berechnet sich schlussendlich der Mittelwert für die so besti
 
 \begin{empheq}{equation}
 	\label{val:Auswertung_e0}
-	e_{0} = \SI{1.63(5)e-19}{\coulomb}.
+	e_{0} = \SI{1.63(5)e-19}{\coulomb},
 \end{empheq}
+wobei der angegebene Fehler die Abweichung vom  Mittelwert darstellt.\\
 
 Mit diesem Wert und der Farady-Konstante $F = \SI{96485.3365}{\coulomb\per\mol}$ \cite{Mende09} lässt sich 
 die Avogadrokonstante $N_{A}$ zu

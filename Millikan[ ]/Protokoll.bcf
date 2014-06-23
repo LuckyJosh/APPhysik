@@ -1943,10 +1943,14 @@
   <bcf:section number="0">
     <bcf:citekey order="1">V503</bcf:citekey>
     <bcf:citekey order="2">V503</bcf:citekey>
-    <bcf:citekey order="3">SciPy</bcf:citekey>
-    <bcf:citekey order="4">Mende09</bcf:citekey>
-    <bcf:citekey order="5">Mende09</bcf:citekey>
-    <bcf:citekey order="6">Mende09</bcf:citekey>
+    <bcf:citekey order="3">V503</bcf:citekey>
+    <bcf:citekey order="4">V503</bcf:citekey>
+    <bcf:citekey order="5">V503</bcf:citekey>
+    <bcf:citekey order="6">V503</bcf:citekey>
+    <bcf:citekey order="7">SciPy</bcf:citekey>
+    <bcf:citekey order="8">Mende09</bcf:citekey>
+    <bcf:citekey order="9">Mende09</bcf:citekey>
+    <bcf:citekey order="10">Mende09</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="none">
   <bcf:sorting>
