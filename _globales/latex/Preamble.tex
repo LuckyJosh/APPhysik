@@ -188,6 +188,7 @@
 \newcounter{errorEquation}
 \renewcommand{\theerrorEquation}{\Roman{errorEquation}}
 \newenvironment{errorEquation}{\refstepcounter{errorEquation}\equation}{\tag{\theerrorEquation}\endequation}
+\newenvironment{errorEquationAlign}{\refstepcounter{errorEquation}\align}{\tag{\theerrorEquation}\endalign}
 
 \usepackage{colortbl}
 \usepackage{multirow}

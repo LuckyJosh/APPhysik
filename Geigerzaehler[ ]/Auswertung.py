@@ -133,9 +133,31 @@ Tab_C.addColumn([int(p) for p in stds(P_C_err)][:9], title="Messfehler", symbol=
 Tab_C.addColumn(U_C_err[9:], title="Spannung", symbol="U", unit=r"\volt")
 Tab_C.addColumn([int(p) for p in noms(P_C_err)][9:], title="Anzahl der Pulse", symbol="P")
 Tab_C.addColumn([int(p) for p in stds(P_C_err)][9:], title="Messfehler", symbol=r"\sigma_{P}")
-Tab_C.show(quiet=True)
+#Tab_C.show(quiet=True)
 
-Tab_C.save("Tabellen/Charakteristik.tex")
+#Tab_C.save("Tabellen/Charakteristik.tex")
+
+Tab_T = Table(siunitx=True)
+Tab_T.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_T.label("Auswertung_Totzeit")
+Tab_T.caption("Aufgenommene Impulsraten der Einzelquellen und beider Quellen")
+Tab_T.addColumn([N_1_err], title="Impulsrate 1", symbol="N_1", unit=r"\per\second")
+Tab_T.addColumn([N_2_err], title="Impulsrate 2", symbol="N_2", unit=r"\per\second")
+Tab_T.addColumn([N_12_err], title="Impulsrate 1+2", symbol="N_{1+2}", unit=r"\per\second")
+#Tab_T.show(quiet=True)
+#Tab_T.save("Tabellen/Totzeit.tex")
+
+
+#==============================================================================
+class Fehlergleichungen:
+    pass
+#==============================================================================
+
+N1, N2, N12 = sym.var("N_1, N_2, N_{1+2}")
+T = (N1 + N2 - N12)/2*N1*N2
+T_Eq = ErrorEquation(T, name="T")
+print(T_Eq.std)
+
 
 
 
