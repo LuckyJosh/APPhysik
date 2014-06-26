@@ -1,0 +1,76 @@
+Im folgenden Abschnitt sind die während des Versuchs aufgenommenen Messwerte
+und die aus diesen berechneten Ergebnisse tabellarisch und grafisch dargestellt.
+An entsprechender Stelle sind Anmerkungen und Erklärungen zu den Berechnungen und
+Ergebnissen gegeben. 
+
+
+\subsection{Bestimmung der Plateau-Steigung des Zählrohrs}
+
+	Die für die Zählrohr-Charakteristik aufgenommenen Messwerte für
+	Spannung $U$ und Anzahl der registrierten Impulse $P$ in dem Zeitintervall
+	$\Delta t = \SI{100}{\second}$ sind in \cref{tab:} zu finden.
+	
+%	\input{Tabellen/Charakteristik.tex}
+	
+	Diese Messwerte sind in \cref{fig:} grafisch dargestellt. Die farbigen
+	Messwerte wurden für eine lineare Regression mit dem Ansatz
+	
+	\begin{empheq}{equation}
+		P(U) = A \cdot U + P_0
+	\end{empheq}  
+	verwendet. Die Durchführung der Regression unter Verwendung der \emph{Python}-Bibliothek 
+	\emph{SciPy} ergab die Parameter
+	
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{align}
+			A &= \SI{0.98(7)}{\per\volt}\quad \text{und}\\	
+			P_0 &= \SI{4631(34)}{}.	
+		\end{empheq}
+	\end{subequations}
+
+	Somit ergibt sich die Plateau-Steigung des Zählrohrs zu
+	\begin{empheq}{equation}
+		A = (\num{98(7)}) \dfrac{\si{\percent}}{100\si{\volt}}.
+	\end{empheq}	
+	
+	
+\subsection{Bestimmung des zeitlicher Abstand zwischen Primär- und Nachentladungimpuls}
+	
+	Auf dem mit dem Zählrohr verbundenen Oszilloskop, lässt sich die Primärentladung als 
+	annähernd stehendes Bild einer Kurve mit der in Abb.3 \cite{V703} dargestellten Form 
+	ausmachen. Die Nachentladungen sind ebenfalls Kurven dieser Form, mit dem Unterschiede
+	das diese nur für eine sehr kurze Zeit auf dem Bildschirm des Oszilloskops angezeigt werden.
+	
+	Der mittlere zeitliche Abstand zwischen beiden Entladungen konnte, aufgrund der kurzen Zeitspanne 
+	in der beide Entladungen zu sehen sind, nur auf den Wert
+	\begin{empheq}{equation}
+		\Delta t_{P,N} \approx \SI{150}{\micro\second}
+	\end{empheq} 
+	geschätzt werden.
+	 
+
+\subsection{Bestimmung der Totzeit mit Hilfe eines Oszilloskops}
+
+	Die Totzeit des Zählrohrs entspricht nach Abb.3 \cite{V703} in etwa der 
+	Breite des Primärladungsimpulses, diese wurde zu
+	\begin{empheq}{equation}
+		T \approx \SI{150}{\micro\second}
+	\end{empheq} 
+	bestimmt.
+	
+
+\subsection{Bestimmung der Totzeit nach der Zwei-Quellen-Methode}
+
+	In sind die aufgenommenen Werte für die Impulsraten der ersten Quelle
+	$N_{1}$, der zweiten Quelle $N_{2}$ und beider Quellen $N_{1+2}$ gelistet.
+	
+%	\input{Tabellen/Totzeit.tex}
+
+	Nach \cref{eq:Theorie_Totzeit} ergibt sich die Totzeit des Zählrohrs 
+	rechnerisch zu 
+	\begin{empheq}{equation}
+		T = \SI{900(800)}{\micro\second}.
+	\end{empheq}	
+	
+	

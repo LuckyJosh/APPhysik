@@ -1,0 +1,2 @@
+# Impulse 1. Quelle		# Impulse beide Quellen		# Impulse 2. Quelle		# Spannung[V]
+1231					9922						8863					600

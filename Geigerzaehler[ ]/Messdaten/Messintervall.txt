@@ -1,0 +1,2 @@
+# Messzeit 1[s]		# Messzeit 2[s]
+100					120
