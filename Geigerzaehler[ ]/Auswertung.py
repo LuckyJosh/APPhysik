@@ -46,7 +46,8 @@ U_C, P_C, I_Q = np.loadtxt("Messdaten/Charakteristik_Strom.txt", unpack=True)
 # Fehlerbehaftete Messwerte
 U_C_err = unp.uarray(U_C, 1)
 P_C_err = unp.uarray(P_C, np.sqrt(P_C))
-I_Q_err = unp.uarray(I_Q, len(I_Q)*[0.5]) * 1e-06  # Ampere
+mI_Q_err = unp.uarray(I_Q, len(I_Q)*[0.1])  # microAmpere
+I_Q_err = unp.uarray(I_Q, len(I_Q)*[0.1]) * 1e-06 # microAmpere
 
 # Trennung der verwendbaren und nicht verwendbaren
 U_C_n_err = np.array([U_C_err[i] for i in [4,9,10,15,17]])
@@ -97,9 +98,10 @@ class Ladungsmenge:
 #==============================================================================
 
 Q_err = (I_Q_err * t_C)/(P_C_err)
-#print(Q_err)
-#print(Q_err*1e09/const.elementary_charge)
-
+print(Q_err)
+Q_err /= const.elementary_charge*1e09
+for q in Q_err:
+    print(int(noms(q)),"(",int(stds(q)),")")
 #==============================================================================
 class Totzeit:
     pass
@@ -147,7 +149,22 @@ Tab_T.addColumn([N_12_err], title="Impulsrate 1+2", symbol="N_{1+2}", unit=r"\pe
 #Tab_T.show(quiet=True)
 #Tab_T.save("Tabellen/Totzeit.tex")
 
+Tab_Q = Table(siunitx=True)
+Tab_Q.layout(seperator="column", title_row_seperator="double", border=True)
+Tab_Q.label("Auswertung_Ladungsmenge")
+Tab_Q.caption("Aufgenommene Stromstärken und Impulsraten zu der jeweilig anliegenden Spannung")
+Tab_Q.addColumn(U_C_err[:9], title="Spannung", symbol="U", unit=r"\volt")
+Tab_Q.addColumn(mI_Q_err[:9], title="Stromstärke", symbol=r"\overline{I}", unit=r"\micro\ampere")
+Tab_Q.addColumn(P_C_err[:9]/t_C, title="Impulserate", symbol="N", unit=r"\per\second")
+Tab_Q.addColumn(Q_err[:9], title="Ladungsmenge", symbol="\Delta Q", unit=r"\giga e")
 
+Tab_Q.addColumn(U_C_err[9:], title="Spannung", symbol="U", unit=r"\volt")
+Tab_Q.addColumn(mI_Q_err[9:], title="Stromstärke", symbol=r"\overline{I}", unit=r"\micro\ampere")
+Tab_Q.addColumn(P_C_err[9:]/t_C, title="Impulsrate", symbol="N", unit=r"\per\second")
+Tab_Q.addColumn(Q_err[9:], title="Ladungsmenge", symbol="\Delta Q", unit=r"\giga e")
+
+#Tab_Q.show(quiet=True)
+#Tab_Q.save("Tabellen/Ladungsmenge.tex")
 #==============================================================================
 class Fehlergleichungen:
     pass
