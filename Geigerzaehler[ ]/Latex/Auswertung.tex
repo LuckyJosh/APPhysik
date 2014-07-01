@@ -7,7 +7,7 @@ Ergebnissen gegeben.
 \subsection{Bestimmung der Plateau-Steigung des Zählrohrs}
 
 	Die für die Zählrohr-Charakteristik aufgenommenen Messwerte für
-	Spannung $U$ und Anzahl der registrierten Impulse $P$ in dem Zeitintervall
+	Spannung $U$ und Anzahl der registrierten Impulse $Z$ in dem Zeitintervall
 	$\Delta t = \SI{100}{\second}$ sind in \cref{tab:Auswertung_Charakteristik} zu finden.
 	
 	\input{Tabellen/Charakteristik.tex}
@@ -16,7 +16,7 @@ Ergebnissen gegeben.
 	Messwerte wurden für eine lineare Regression mit dem Ansatz
 	
 	\begin{empheq}{equation}
-		P(U) = A \cdot U + P_0
+		Z(U) = A \cdot U + Z_0
 	\end{empheq}  
 	verwendet. Die Durchführung der Regression unter Verwendung der \emph{Python}-Bibliothek 
 	\emph{SciPy} ergab die Parameter
@@ -25,7 +25,7 @@ Ergebnissen gegeben.
 	\begin{subequations}
 		\begin{empheq}{align}
 			A &= \SI{0.98(7)}{\per\volt}\quad \text{und}\\	
-			P_0 &= \SI{4631(34)}{}.	
+			Z_0 &= \SI{4631(34)}{}.	
 		\end{empheq}
 	\end{subequations}
 

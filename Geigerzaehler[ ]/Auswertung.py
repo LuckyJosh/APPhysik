@@ -86,7 +86,7 @@ plt.grid()
 plt.xlim(300, 700)
 plt.ylim(4800, 5500)
 plt.xlabel("Spannung $U\ [\mathrm{V}]$")
-plt.ylabel("Anzahl der Impulse $P$")
+plt.ylabel("Anzahl der Impulse $Z$")
 
 plt.legend(loc="best")
 plt.savefig("Grafiken/Charakteristik.pdf")
