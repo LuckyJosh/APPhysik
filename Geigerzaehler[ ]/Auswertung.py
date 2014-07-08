@@ -19,10 +19,12 @@ import uncertainties as unc
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
+import sys
 
-from aputils.utils import Quantity, ErrorEquation
+from aputils.utils import Quantity, ErrorEquation, OutputFile
 from aputils.latextables.tables import Table
 
+sys.stdout = OutputFile("Daten/log.txt")
 
 #==============================================================================
 class Allgemeines:
@@ -49,33 +51,48 @@ P_C_err = unp.uarray(P_C, np.sqrt(P_C))
 mI_Q_err = unp.uarray(I_Q, len(I_Q)*[0.1])  # microAmpere
 I_Q_err = unp.uarray(I_Q, len(I_Q)*[0.1]) * 1e-06 # microAmpere
 
-# Trennung der verwendbaren und nicht verwendbaren
-U_C_n_err = np.array([U_C_err[i] for i in [4,9,10,15,17]])
-U_C_j_err = np.array([U  for U in np.setdiff1d(U_C_err, U_C_n_err)])
-P_C_n_err = np.array([P_C_err[i] for i in [4,9,10,15,17]])
-P_C_j_err = np.array([P  for P in np.setdiff1d(P_C_err, P_C_n_err)])
-
-#print(U_C_n_err)
-#print(U_C_j_err)
-#print(P_C_n_err)
-#print(P_C_j_err)
+# Werte sollten nicht rausgenommen werden
+## Trennung der verwendbaren und nicht verwendbaren
+#U_C_n_err = np.array([U_C_err[i] for i in [4,9,10,15,17]])
+#U_C_j_err = np.array([U  for U in np.setdiff1d(U_C_err, U_C_n_err)])
+#P_C_n_err = np.array([P_C_err[i] for i in [4,9,10,15,17]])
+#P_C_j_err = np.array([P  for P in np.setdiff1d(P_C_err, P_C_n_err)])
+#
+##print(U_C_n_err)
+##print(U_C_j_err)
+##print(P_C_n_err)
+##print(P_C_j_err)
+#
+## Regression der Messwerte
+#popt_C, pcov_C = curve_fit(func_gerade, noms(U_C_j_err),
+#                           noms(P_C_j_err), sigma=stds(P_C_j_err))
+#error = np.sqrt(np.diag(pcov_C))
+#param_m_C = ufloat(popt_C[0], error[0])
+#param_b_C = ufloat(popt_C[1], error[1])
+#
+#print("Steigung:", param_m_C)
+#print("Steigung in % pro 100V:", param_m_C*100,"%")
+#print("y-Abschnitt:", param_b_C)
 
 # Regression der Messwerte
-popt_C, pcov_C = curve_fit(func_gerade, noms(U_C_j_err),
-                           noms(P_C_j_err), sigma=stds(P_C_j_err))
+popt_C, pcov_C = curve_fit(func_gerade, noms(U_C_err),
+                           noms(P_C_err), sigma=stds(P_C_err))
 error = np.sqrt(np.diag(pcov_C))
 param_m_C = ufloat(popt_C[0], error[0])
 param_b_C = ufloat(popt_C[1], error[1])
 
 print("Steigung:", param_m_C)
-print("Steigung in % pro 100V:", param_m_C*100,"%")
+print(func_gerade(100, param_m_C,param_b_C))
+print(func_gerade(0, param_m_C,param_b_C))
+print((func_gerade(100, param_m_C,param_b_C)- func_gerade(0, param_m_C,param_b_C))/func_gerade(0, param_m_C,param_b_C))
+print("Steigung in % pro 100V:", 100 * (func_gerade(100, param_m_C,param_b_C)- func_gerade(0, param_m_C,param_b_C))/func_gerade(0, param_m_C,param_b_C),"%")
 print("y-Abschnitt:", param_b_C)
 
 
 
 # Plot der Messwerte
-plt.errorbar(noms(U_C_j_err), noms(P_C_j_err), yerr=stds(P_C_j_err),  fmt="rx", label="Messwerte")
-plt.errorbar(noms(U_C_n_err), noms(P_C_n_err), yerr=stds(P_C_n_err),  fmt="x", color="black", alpha=0.7)
+plt.errorbar(noms(U_C_err), noms(P_C_err), yerr=stds(P_C_err),  fmt="rx", label="Messwerte")
+
 
 # Plot der Regression
 X = np.linspace(300, 700, num=4000)
@@ -100,8 +117,8 @@ class Ladungsmenge:
 Q_err = (I_Q_err * t_C)/(P_C_err)
 print(Q_err)
 Q_err /= const.elementary_charge*1e09
-for q in Q_err:
-    print(int(noms(q)),"(",int(stds(q)),")")
+#for q in Q_err:
+#    print(int(noms(q)),"(",int(stds(q)),")")
 #==============================================================================
 class Totzeit:
     pass

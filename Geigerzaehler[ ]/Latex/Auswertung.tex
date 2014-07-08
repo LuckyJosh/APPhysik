@@ -1,8 +1,12 @@
 Im folgenden Abschnitt sind die während des Versuchs aufgenommenen Messwerte
 und die aus diesen berechneten Ergebnisse tabellarisch und grafisch dargestellt.
 An entsprechender Stelle sind Anmerkungen und Erklärungen zu den Berechnungen und
-Ergebnissen gegeben. 
+Ergebnissen gegeben. Die für die Fehlerrechnung verwendeten Gleichungen sind in 
+\cref{sec:Fehlerrechnung} angegeben. Die Fehler für Messwerte werden im Allgemeinen durch
+die kleinste Skaleneinteilung des verwendeten Messgeräts abgeschätzt.
 
+\subsection{Fehlerrechnung}\label{sec:Fehlerrechnung}
+			\input{Latex/Fehlerrechnung.tex}
 
 \subsection{Bestimmung der Plateau-Steigung des Zählrohrs}
 
@@ -12,7 +16,7 @@ Ergebnissen gegeben.
 	
 	\input{Tabellen/Charakteristik.tex}
 	
-	Diese Messwerte sind in \cref{fig:Auswertung_Charakteristik} grafisch dargestellt. Die farbigen
+	Diese Messwerte sind in \cref{fig:Auswertung_Charakteristik} grafisch dargestellt. Die 
 	Messwerte wurden für eine lineare Regression mit dem Ansatz
 	
 	\begin{empheq}{equation}
@@ -24,14 +28,15 @@ Ergebnissen gegeben.
 	\addtocounter{equation}{-1}
 	\begin{subequations}
 		\begin{empheq}{align}
-			A &= \SI{0.98(7)}{\per\volt}\quad \text{und}\\	
-			Z_0 &= \SI{4631(34)}{}.	
+			A &= \SI{0.5(2)}{\per\volt}\quad \text{und}\\	
+			Z_0 &= \SI{4860(120)}{}.	
 		\end{empheq}
 	\end{subequations}
 
-	Somit ergibt sich die Plateau-Steigung des Zählrohrs zu
+	Die prozentuale Änderung der Impulsanzahl pro \SI{100}{\volt}, welche die übliche Angabe für 
+	die Plateau-Steigung des Zählrohrs ist, ergibt sich somit zu
 	\begin{empheq}{equation}
-		A = (\num{98(7)}) \dfrac{\si{\percent}}{100\si{\volt}}.
+		\dfrac{Z(\SI{100}{\volt}) - Z_0}{Z_0} \dfrac{1}{\SI{100}{\volt}} = (\num{1.1(5)}) \dfrac{\si{\percent}}{100\si{\volt}}.
 	\end{empheq}	
 	
 	\includeFigure[scale=0.7]{Grafiken/Charakteristik.pdf}{Grafische Darstellung der
@@ -68,7 +73,7 @@ Ergebnissen gegeben.
 
 \subsection{Bestimmung der Totzeit nach der Zwei-Quellen-Methode}
 
-	In sind die aufgenommenen Werte für die Impulsraten der ersten Quelle
+	In \cref{tab:Auswertung_Totzeit} sind die aufgenommenen Werte für die Impulsraten der ersten Quelle
 	$N_{1}$, der zweiten Quelle $N_{2}$ und beider Quellen $N_{1+2}$ gelistet.
 	
 	\input{Tabellen/Totzeit.tex}
@@ -79,6 +84,7 @@ Ergebnissen gegeben.
 		T = \SI{900(800)}{\micro\second}.
 		\label{val:Totzeit_Berechnet}	
 	\end{empheq}	
+	Der Fehler wurde dabei mittels \cref{std:Totzeit} bestimmt.
 	
 \subsection{Bestimmung der Ladungsmenge pro eingefallenem Teilchen}	
 	

@@ -2,15 +2,17 @@ Im folgenden Abschnitt sind die, für die Fehlerrechnung genutzten,
 Gleichungen aufgelistet, die mit Hilfe der gaußschen Fehlerfortpflanzung
 bestimmt wurden.\\
 
-Der Fehler einer poissonverteilten Größer, wie die Anzahl der Radioaktiven Zerfälle
+Der Fehler einer poissonverteilten Größe, wie die Anzahl der radioaktiven Zerfälle
 ergibt sich durch 
 \begin{errorEquation}
-\sigma_{P} = \sqrt{P}.
+\label{std:Zerfall}
+\sigma_{Z} = \sqrt{Z}.
 \end{errorEquation}   
 
 Die Fehler der Impulsraten erhält man aus den Fehlern der Impulsanzahl
 durch
 \begin{errorEquation}
+\label{std:Impulsrate}
 \sigma_{N} = \dfrac{\sigma_{P}}{\Delta t}.
 \end{errorEquation}   
 
@@ -19,6 +21,14 @@ Der Fehler der rechnerisch bestimmten Totzeit ergibt sich
 nach
 \begin{errorEquationAlign}
 \notag
+\label{std:Totzeit}
 \sigma_{T}^{2}=\frac{N_{1}^{2} N_{2}^{2}}{4} \sigma_{N_{{1+2}}}^{2} &+ \sigma_{N_{1}}^{2} \left(\frac{N_{1} N_{2}}{2} + N_{2} \left(\frac{N_{1}}{2} + \frac{N_{2}}{2} - \frac{N_{{1+2}}}{2}\right)\right)^{2}  \\
  &+ \sigma_{N_{2}}^{2} \left(\frac{N_{1} N_{2}}{2} + N_{1} \left(\frac{N_{1}}{2} + \frac{N_{2}}{2} - \frac{N_{{1+2}}}{2}\right)\right)^{2}.
 \end{errorEquationAlign}   
+
+
+Den Fehler der freigesetzten Ladungsmenge pro einfallendem Teilchen erhält man durch
+\begin{errorEquation}
+\label{std:Ladungsmenge}
+\sigma_{\Delta Q} = \sqrt{\del{\dfrac{\sigma_{\overline{I}}}{N}}^{2}  + \del{\dfrac{\overline{I}\sigma_{N}}{N^{2}}}^{2}}.
+\end{errorEquation}
